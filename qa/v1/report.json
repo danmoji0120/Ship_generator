@@ -1,0 +1,1608 @@
+{
+  "browser": "Chromium / WebGL SwiftShader",
+  "renderedDesigns": 50,
+  "seedRepetitions": 10,
+  "blueprintIdentical": true,
+  "pixelIdentical": true,
+  "orbit": true,
+  "zoom": true,
+  "debugViews": 7,
+  "grammarFixtures": {
+    "BLOCK_ASSEMBLY": [
+      0,
+      8,
+      9
+    ],
+    "TRUSS_POD": [
+      1,
+      5,
+      6
+    ],
+    "TWIN_HULL": [
+      2,
+      3,
+      20
+    ],
+    "STACKED_BLOCKS": [
+      4,
+      30,
+      89
+    ],
+    "MONOLITHIC": [
+      7,
+      35,
+      79
+    ],
+    "SPINE_AND_MODULES": [
+      12,
+      24,
+      32
+    ],
+    "HYBRID": [
+      36,
+      43,
+      67
+    ],
+    "CORE_AND_NACELLES": [
+      41,
+      44,
+      48
+    ]
+  },
+  "jsonExport": true,
+  "mobileOverflow": false,
+  "consoleErrors": [],
+  "blueprintHash": "e8f226caa9dd8d2b469175a7fa2393552e2e69835b7a01c3b3d6f8abd516b494",
+  "results": [
+    {
+      "name": "battleship-heavy",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.1494252873563218,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7729591836734694,
+          "side": 0.8545918367346939,
+          "top": 0.5331632653061225
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 261,
+      "height": 67.02494399999999,
+      "engines": 1,
+      "hardpoints": 39,
+      "drawCalls": 180,
+      "triangles": 7272,
+      "camera": [
+        -223.6115212284446,
+        182.71928179503095,
+        -253.1747134367347
+      ],
+      "radius": 206.05222445047215,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 1.7599321797456662,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 170.46111404324344,
+      "height": 185.55264,
+      "engines": 4,
+      "hardpoints": 39,
+      "drawCalls": 180,
+      "triangles": 7272,
+      "camera": [
+        -394.7457992212861,
+        332.378357238478,
+        -451.52019545725017
+      ],
+      "radius": 200.59013559910906,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 1.6466159971137244,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 1,
+          "side": 0.8405612244897959,
+          "top": 0.7602040816326531
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 182.19184103996065,
+      "height": 81.36000467207329,
+      "engines": 2,
+      "hardpoints": 39,
+      "drawCalls": 153,
+      "triangles": 6984,
+      "camera": [
+        -238.51911839406498,
+        194.5094769053197,
+        -270.4877841412304
+      ],
+      "radius": 185.08538778556985,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 42,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.4120664929840507,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.13010204081632654,
+          "side": 0.3201530612244898,
+          "top": 0.23469387755102042
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 124.37468074474997,
+      "height": 95.48147730069039,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 443,
+      "triangles": 10256,
+      "camera": [
+        -195.73866596558256,
+        159.67710335281313,
+        -219.6373271339302
+      ],
+      "radius": 175.5063363276949,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 2718,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.0042684358466056,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.09693877551020408,
+          "side": 0.3201530612244898,
+          "top": 0.2066326530612245
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 149.68054908936367,
+      "height": 95.48147730069039,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 443,
+      "triangles": 10256,
+      "camera": [
+        -197.8963386386824,
+        161.0737953735878,
+        -222.12105550065436
+      ],
+      "radius": 180.29392116635222,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 742091,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.464670933778478,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.6785714285714286,
+          "side": 0.8545918367346939,
+          "top": 0.47959183673469385
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 86.58830975120283,
+      "height": 27.4134861,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 147,
+      "triangles": 5504,
+      "camera": [
+        -195.75835513871115,
+        160.45111534986216,
+        -219.65060604561978
+      ],
+      "radius": 163.46770281255925,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 42,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "slenderness": 1.539338956037946,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6913265306122449,
+          "side": 0.7448979591836735,
+          "top": 0.3392857142857143
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 194.88885071301004,
+      "height": 34.637476421993284,
+      "engines": 2,
+      "hardpoints": 41,
+      "drawCalls": 354,
+      "triangles": 8800,
+      "camera": [
+        -200.75346243271446,
+        164.64736273242534,
+        -226.74251066560402
+      ],
+      "radius": 184.55757054336203,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 3.5908586251754144,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 83.54547792461334,
+      "height": 101.2284,
+      "engines": 6,
+      "hardpoints": 41,
+      "drawCalls": 354,
+      "triangles": 8800,
+      "camera": [
+        -293.52215913505574,
+        246.1448674282859,
+        -334.97858299675624
+      ],
+      "radius": 169.30395417565,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 742091,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.0594358962952857,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7627551020408163,
+          "side": 0.8545918367346939,
+          "top": 0.5153061224489796
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 145.67095802285922,
+      "height": 36.56551499999999,
+      "engines": 6,
+      "hardpoints": 41,
+      "drawCalls": 235,
+      "triangles": 7280,
+      "camera": [
+        -204.17165858932213,
+        167.1749995453471,
+        -230.83169855355595
+      ],
+      "radius": 172.79316492470716,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.5256987025077975,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7525510204081632,
+          "side": 0.9119897959183674,
+          "top": 0.5994897959183674
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 85.08951708965168,
+      "height": 22.042228991032594,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 195,
+      "triangles": 6400,
+      "camera": [
+        -194.4105111964002,
+        159.3599643912396,
+        -227.62469235898885
+      ],
+      "radius": 167.1533294143076,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 2718,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 1.8729532733864591,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.46683673469387754,
+          "side": 0.8839285714285714,
+          "top": 0.5357142857142857
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 160.17484486282694,
+      "height": 21.863686936205234,
+      "engines": 4,
+      "hardpoints": 24,
+      "drawCalls": 195,
+      "triangles": 6400,
+      "camera": [
+        -236.42433786135598,
+        193.6617423459423,
+        -274.7870784375504
+      ],
+      "radius": 181.70843533068395,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 7.387522691277285,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.8903061224489796,
+          "side": 0.8443877551020408,
+          "top": 0.6505102040816326
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 40.609012322117245,
+      "height": 23.821946893474266,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 123,
+      "triangles": 5632,
+      "camera": [
+        -195.0620204912161,
+        159.39475575480742,
+        -227.03658166599206
+      ],
+      "radius": 164.31818490961027,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-A",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.5383724517330715,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7678571428571429,
+          "side": 0.8545918367346939,
+          "top": 0.5229591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 195.01129239673494,
+      "height": 45.66074309999999,
+      "engines": 1,
+      "hardpoints": 31,
+      "drawCalls": 97,
+      "triangles": 4808,
+      "camera": [
+        -211.70101224679416,
+        173.2552320772697,
+        -239.58859487775493
+      ],
+      "radius": 185.05737077252596,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-B",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.247162115452641,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7397959183673469,
+          "side": 0.7283163265306123,
+          "top": 0.5076530612244898
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 92.38836538907489,
+      "height": 36.06233399999999,
+      "engines": 4,
+      "hardpoints": 21,
+      "drawCalls": 156,
+      "triangles": 5864,
+      "camera": [
+        -188.32524823103319,
+        154.30037633875364,
+        -212.5469509415978
+      ],
+      "radius": 163.2803232778603,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-C",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.3508706187583606,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7704081632653061,
+          "side": 0.8545918367346939,
+          "top": 0.5229591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 222.07900285501955,
+      "height": 43.14730769999999,
+      "engines": 1,
+      "hardpoints": 41,
+      "drawCalls": 238,
+      "triangles": 6428,
+      "camera": [
+        -214.87394098615113,
+        175.8282159298935,
+        -243.00113817293524
+      ],
+      "radius": 192.58473345707938,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-D",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.115495295082537,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7448979591836735,
+          "side": 0.7818877551020408,
+          "top": 0.6045918367346939
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 96.2928753169734,
+      "height": 39.704994,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 238,
+      "triangles": 6428,
+      "camera": [
+        -194.29741826360382,
+        159.12941919439652,
+        -227.41498437190126
+      ],
+      "radius": 169.6138768352399,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-aegis",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.5383724517330715,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7678571428571429,
+          "side": 0.8545918367346939,
+          "top": 0.5229591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 195.01129239673494,
+      "height": 45.66074309999999,
+      "engines": 1,
+      "hardpoints": 31,
+      "drawCalls": 156,
+      "triangles": 5864,
+      "camera": [
+        -211.70101224679414,
+        173.25523207726974,
+        -239.58859487775487
+      ],
+      "radius": 185.05737077252596,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-vesper",
+      "seed": 42,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 2.292187878615729,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.3520408163265306,
+          "side": 0.8979591836734694,
+          "top": 0.45153061224489793
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 130.87932398507076,
+      "height": 26.23642432344628,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 159,
+      "triangles": 6480,
+      "camera": [
+        -243.78540036145534,
+        199.0223947164025,
+        -276.9518098525133
+      ],
+      "radius": 169.0005857881543,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-forge",
+      "seed": 42,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "slenderness": 1.669457792844703,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6428571428571429,
+          "side": 0.7448979591836735,
+          "top": 0.3086734693877551
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 179.69906234575092,
+      "height": 36.65519349511911,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 280,
+      "triangles": 8428,
+      "camera": [
+        -200.50619474128314,
+        164.19314582931798,
+        -226.77754463498613
+      ],
+      "radius": 180.4684710941787,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-serein",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.095963512297978,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7193877551020408,
+          "side": 0.7971938775510204,
+          "top": 0.5280612244897959
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 96.90036681902788,
+      "height": 21.871395000000003,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 231,
+      "triangles": 7248,
+      "camera": [
+        -186.41166081094042,
+        152.85506051107419,
+        -212.02145264971327
+      ],
+      "radius": 161.6420591431469,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 42,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.1409470912606268,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.15051020408163265,
+          "side": 0.33163265306122447,
+          "top": 0.2780612244897959
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 140.1249013694004,
+      "height": 99.67152551288132,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 231,
+      "triangles": 7248,
+      "camera": [
+        -195.31587706956537,
+        159.39113835625395,
+        -220.89038833785358
+      ],
+      "radius": 177.5212135275543,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 2718,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.7736931018151059,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.1326530612244898,
+          "side": 0.33163265306122447,
+          "top": 0.25510204081632654
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 169.1386180016123,
+      "height": 99.67152551288132,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 428,
+      "triangles": 9376,
+      "camera": [
+        -198.21411154439687,
+        161.3150374620616,
+        -224.23008504118704
+      ],
+      "radius": 183.62398276395092,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 7.238972040771474,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.5357142857142857,
+          "side": 0.8469387755102041,
+          "top": 0.6581632653061225
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 41.44234821053796,
+      "height": 18.960253525388882,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 104,
+      "triangles": 4144,
+      "camera": [
+        -188.88427014386446,
+        154.15132086171397,
+        -213.53167324042187
+      ],
+      "radius": 156.77981222438086,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.5383724517330715,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7678571428571429,
+          "side": 0.8545918367346939,
+          "top": 0.5229591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 195.01129239673494,
+      "height": 45.66074309999999,
+      "engines": 1,
+      "hardpoints": 31,
+      "drawCalls": 104,
+      "triangles": 4144,
+      "camera": [
+        -211.70101224679416,
+        173.2552320772697,
+        -239.58859487775493
+      ],
+      "radius": 185.05737077252596,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 2.719052292531939,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 110.33255992316525,
+      "height": 126.40773600000001,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 156,
+      "triangles": 5864,
+      "camera": [
+        -323.9157999617915,
+        271.65357475581004,
+        -369.65307557648583
+      ],
+      "radius": 176.91437018560222,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 2.28197046115128,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.8469387755102041,
+          "top": 0.6938775510204082
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 131.46533012028848,
+      "height": 49.17164650540413,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 131,
+      "triangles": 5616,
+      "camera": [
+        -216.10706004098444,
+        176.6698636643888,
+        -244.77098227418713
+      ],
+      "radius": 170.64846104912255,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 0,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.3043473033778343,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7627551020408163,
+          "side": 0.8290816326530612,
+          "top": 0.4846938775510204
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 130.1887087767734,
+      "height": 38.695544999999996,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 171,
+      "triangles": 7024,
+      "camera": [
+        -202.35634746358406,
+        165.71213436769546,
+        -228.9957950230135
+      ],
+      "radius": 169.5627659918428,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 8,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.4082916285907126,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7627551020408163,
+          "side": 0.8290816326530612,
+          "top": 0.4846938775510204
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 124.56963120183016,
+      "height": 38.695544999999996,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 165,
+      "triangles": 6560,
+      "camera": [
+        -201.65674410566527,
+        165.14208718716907,
+        -228.19334486820009
+      ],
+      "radius": 168.49746675126264,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 9,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.2459698530679786,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7627551020408163,
+          "side": 0.8290816326530612,
+          "top": 0.4846938775510204
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 133.57258539788597,
+      "height": 38.695544999999996,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 165,
+      "triangles": 6560,
+      "camera": [
+        -202.9459605089238,
+        166.19255981204637,
+        -229.52868778897943
+      ],
+      "radius": 170.35582141851853,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 1,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "slenderness": 1.547362893287631,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6887755102040817,
+          "side": 0.7091836734693877,
+          "top": 0.288265306122449
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 193.8782436242864,
+      "height": 36.65519349511911,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 291,
+      "triangles": 8692,
+      "camera": [
+        -200.7620075579608,
+        164.40158590216643,
+        -227.05031773532318
+      ],
+      "radius": 184.12051290681123,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 5,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "slenderness": 1.4268664485474027,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6479591836734694,
+          "side": 0.7117346938775511,
+          "top": 0.2627551020408163
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 210.25093154682412,
+      "height": 36.65519349511911,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 301,
+      "triangles": 8932,
+      "camera": [
+        -201.81061520068275,
+        165.2560069443843,
+        -228.25887095303312
+      ],
+      "radius": 188.56330986805202,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 6,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "slenderness": 1.5709019182515673,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6326530612244898,
+          "side": 0.7091836734693877,
+          "top": 0.2780612244897959
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 190.9730941915862,
+      "height": 36.65519349511911,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 301,
+      "triangles": 8932,
+      "camera": [
+        -200.61801895569425,
+        164.28426185587517,
+        -226.89678273615323
+      ],
+      "radius": 183.34878158242418,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 2,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 1.8390071309803233,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.5255102040816326,
+          "side": 0.8979591836734694,
+          "top": 0.42346938775510207
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 163.1315044657159,
+      "height": 33.636441440315735,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 299,
+      "triangles": 8884,
+      "camera": [
+        -266.7711788721024,
+        218.29348771036516,
+        -303.51579625943594
+      ],
+      "radius": 176.30015434192723,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 3,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 1.9285138688923313,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.5127551020408163,
+          "side": 0.8979591836734694,
+          "top": 0.4260204081632653
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 155.56019836782878,
+      "height": 33.636441440315735,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 197,
+      "triangles": 7416,
+      "camera": [
+        -263.7380810571441,
+        215.82207467595467,
+        -300.01963278423403
+      ],
+      "radius": 174.56819769205916,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 20,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 1.803531942659006,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.5255102040816326,
+          "side": 0.8979591836734694,
+          "top": 0.42346938775510207
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 166.34027538081762,
+      "height": 33.636441440315735,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 197,
+      "triangles": 7416,
+      "camera": [
+        -268.10712374061166,
+        219.38203538100234,
+        -305.05689532590753
+      ],
+      "radius": 177.05264218990598,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 4,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 4.754348374635923,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 63.10012989382027,
+      "height": 107.1252,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 141,
+      "triangles": 5788,
+      "camera": [
+        -287.15852564138754,
+        241.70849794449435,
+        -328.40075438487406
+      ],
+      "radius": 167.97993655757892,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 30,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 4.288514730701744,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 69.9542892676295,
+      "height": 107.1252,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 141,
+      "triangles": 5788,
+      "camera": [
+        -290.5915543258735,
+        244.34934548765676,
+        -332.1519582814115
+      ],
+      "radius": 168.64090222874103,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 89,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "slenderness": 4.351904819745994,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6658163265306123,
+          "side": 0.5892857142857143,
+          "top": 0.9158163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 68.9353311770063,
+      "height": 107.1252,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 153,
+      "triangles": 6716,
+      "camera": [
+        -289.89816689001043,
+        243.8079801188444,
+        -331.5408165699816
+      ],
+      "radius": 168.3934695137166,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 7,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 5.184908111403196,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 1,
+          "side": 0.8482142857142857,
+          "top": 0.7193877551020408
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 57.86023465685118,
+      "height": 45.56420569979918,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 133,
+      "triangles": 6000,
+      "camera": [
+        -207.97227058955895,
+        170.1226085980753,
+        -235.5262592584748
+      ],
+      "radius": 159.6745593596659,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 35,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 4.827191098974681,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 1,
+          "side": 0.8482142857142857,
+          "top": 0.7040816326530612
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 62.147943565714954,
+      "height": 39.054846230632066,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 139,
+      "triangles": 6464,
+      "camera": [
+        -205.72840982636316,
+        168.37289752417843,
+        -232.94665403603244
+      ],
+      "radius": 159.6031328771662,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 79,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "slenderness": 4.8981352516015875,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.923469387755102,
+          "side": 0.8469387755102041,
+          "top": 0.7423469387755102
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 61.24779831302255,
+      "height": 43.67056643357848,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 143,
+      "triangles": 6544,
+      "camera": [
+        -205.00363776413593,
+        167.69317130140365,
+        -232.09141136101726
+      ],
+      "radius": 159.84458130169503,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 12,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.761590327701138,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.6862244897959183,
+          "side": 0.6900510204081632,
+          "top": 0.47959183673469385
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 79.7535015418179,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 231,
+      "triangles": 7248,
+      "camera": [
+        -188.11758770659503,
+        154.1131976189163,
+        -213.954615596699
+      ],
+      "radius": 159.87685951108705,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 24,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.2028585823892057,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.6147959183673469,
+          "side": 0.6900510204081632,
+          "top": 0.44387755102040816
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 93.6663272145509,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 231,
+      "triangles": 7248,
+      "camera": [
+        -187.43202659379622,
+        153.56044494467506,
+        -213.1439784820173
+      ],
+      "radius": 161.7692488480293,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 32,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 3.6641889530237917,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.6760204081632653,
+          "side": 0.6900510204081632,
+          "top": 0.44642857142857145
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 81.87350702873321,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 231,
+      "triangles": 7248,
+      "camera": [
+        -187.39468103213596,
+        153.5241625508385,
+        -213.1255042081773
+      ],
+      "radius": 160.13725288984892,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 36,
+      "grammar": "HYBRID",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.1159538525764545,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.4362244897959184,
+          "side": 0.6900510204081632,
+          "top": 0.27040816326530615
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 141.78002967064248,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 259,
+      "triangles": 7920,
+      "camera": [
+        -187.43963884211936,
+        153.56664751738265,
+        -213.14622403943332
+      ],
+      "radius": 170.30372336225932,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 43,
+      "grammar": "HYBRID",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.2134025305530347,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.4362244897959184,
+          "side": 0.6900510204081632,
+          "top": 0.2729591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 135.53793124337074,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 259,
+      "triangles": 7920,
+      "camera": [
+        -188.14004100100337,
+        154.1373455727696,
+        -213.96869676094153
+      ],
+      "radius": 169.01763317530046,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 67,
+      "grammar": "HYBRID",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.2660618149754788,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.45153061224489793,
+          "side": 0.6900510204081632,
+          "top": 0.3112244897959184
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 132.3882685006306,
+      "height": 33.6483,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 251,
+      "triangles": 7728,
+      "camera": [
+        -188.16892097584264,
+        154.16087740412013,
+        -213.97721614167114
+      ],
+      "radius": 168.41511861657423,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 41,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 2.0048235100753806,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.23979591836734693,
+          "side": 0.36989795918367346,
+          "top": 0.30612244897959184
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 149.63910712954484,
+      "height": 112.55323783702732,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 453,
+      "triangles": 11120,
+      "camera": [
+        -204.47104240968758,
+        166.6517889747692,
+        -231.470013779577
+      ],
+      "radius": 181.33079142403088,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 44,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.8086450009112143,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.20918367346938777,
+          "side": 0.36989795918367346,
+          "top": 0.2857142857142857
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 165.87002969010328,
+      "height": 112.55323783702732,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 453,
+      "triangles": 11120,
+      "camera": [
+        -204.93300799707367,
+        167.02820537930592,
+        -231.99222099473926
+      ],
+      "radius": 184.8377102298524,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 48,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "slenderness": 1.9373529140132266,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.2423469387755102,
+          "side": 0.36989795918367346,
+          "top": 0.3163265306122449
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 154.85046520437518,
+      "height": 112.55323783702732,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 453,
+      "triangles": 11120,
+      "camera": [
+        -205.0724684940538,
+        167.1418398583269,
+        -232.14986753220813
+      ],
+      "radius": 182.43518851512405,
+      "geometryFinite": true
+    }
+  ]
+}

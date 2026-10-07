@@ -1,0 +1,1655 @@
+{
+  "schemaVersion": 2,
+  "generatorVersion": "1.0",
+  "seed": 9001,
+  "candidate": 0,
+  "shipyardId": "aegis",
+  "role": "Cruiser",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "aegis",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "designName": "Peregrine 9001",
+  "architecture": {
+    "grammar": "STACKED_BLOCKS",
+    "requestedGrammar": "STACKED_BLOCKS",
+    "components": [
+      "STACKED_BLOCKS"
+    ],
+    "rootVolumeId": "armored-keel",
+    "nose": "block nose",
+    "engineArchitecture": "Quad Cluster",
+    "selectionWeights": {
+      "MONOLITHIC": 14.4,
+      "BLOCK_ASSEMBLY": 17.4,
+      "SPINE_AND_MODULES": 2,
+      "TRUSS_POD": 0.5366666666666666,
+      "TWIN_HULL": 1.5,
+      "CORE_AND_NACELLES": 1.2,
+      "STACKED_BLOCKS": 7,
+      "HYBRID": 1
+    },
+    "parameters": {
+      "volumeBudget": 3,
+      "beamRatio": 0.30813317435549104,
+      "armorRatio": 0.135051
+    }
+  },
+  "structuralVolumes": [
+    {
+      "id": "armored-keel",
+      "type": "ARMOR_BLOCK",
+      "purpose": "propulsion",
+      "position": {
+        "x": 0,
+        "y": -36.463770000000004,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 92.43995230664731,
+        "y": 40.5153,
+        "z": 300
+      },
+      "geometry": {
+        "primitive": "Tapered Box",
+        "stations": [
+          {
+            "z": -150,
+            "width": 92.43995230664731,
+            "height": 40.5153,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": -75,
+            "width": 92.43995230664731,
+            "height": 40.5153,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 0,
+            "width": 86.10121271990577,
+            "height": 40.5153,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 75,
+            "width": 78.17778823647886,
+            "height": 40.5153,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 150,
+            "width": 70.25436375305196,
+            "height": 40.5153,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-0"
+      ]
+    },
+    {
+      "id": "magazine-deck",
+      "type": "HULL_BLOCK",
+      "purpose": "weapon",
+      "position": {
+        "x": 0,
+        "y": 10.128825,
+        "z": -25
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 73.95196184531785,
+        "y": 36.463770000000004,
+        "z": 200
+      },
+      "geometry": {
+        "primitive": "Wedge",
+        "stations": [
+          {
+            "z": -100,
+            "width": 48.06877519945661,
+            "height": 13.856232600000002,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": -50,
+            "width": 54.53957186092192,
+            "height": 30.81188565,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 0,
+            "width": 61.010368522387225,
+            "height": 36.463770000000004,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 50,
+            "width": 67.48116518385254,
+            "height": 36.463770000000004,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 100,
+            "width": 73.95196184531785,
+            "height": 36.463770000000004,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-0",
+        "link-1"
+      ]
+    },
+    {
+      "id": "command-deck",
+      "type": "ARMOR_BLOCK",
+      "purpose": "command",
+      "position": {
+        "x": 0,
+        "y": 55.10080800000001,
+        "z": 7.812500000000001
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 52.690772814788964,
+        "y": 30.386474999999997,
+        "z": 118.75000000000001
+      },
+      "geometry": {
+        "primitive": "Chamfered Box",
+        "stations": [
+          {
+            "z": -59.37500000000001,
+            "width": 52.690772814788964,
+            "height": 30.386474999999997,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": -29.687500000000004,
+            "width": 52.690772814788964,
+            "height": 30.386474999999997,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 0,
+            "width": 52.690772814788964,
+            "height": 30.386474999999997,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 29.687500000000004,
+            "width": 52.690772814788964,
+            "height": 30.386474999999997,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          },
+          {
+            "z": 59.37500000000001,
+            "width": 52.690772814788964,
+            "height": 30.386474999999997,
+            "profile": "chamfer",
+            "topSlope": 0.04,
+            "sideSlope": 0.025,
+            "bevel": 0.22
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-1"
+      ]
+    }
+  ],
+  "structuralConnectors": [
+    {
+      "id": "link-0",
+      "fromStructureId": "armored-keel",
+      "toStructureId": "magazine-deck",
+      "type": "BRIDGE",
+      "start": {
+        "x": 0,
+        "y": -17.016426000128234,
+        "z": -10.434782608626847
+      },
+      "end": {
+        "x": 0,
+        "y": -8.103059999911563,
+        "z": -15.21739130439528
+      },
+      "thickness": 24.066088200000003,
+      "style": "straight beam"
+    },
+    {
+      "id": "link-1",
+      "fromStructureId": "magazine-deck",
+      "toStructureId": "command-deck",
+      "type": "DIRECT",
+      "start": {
+        "x": 0,
+        "y": 27.631434599908914,
+        "z": -12.22972972979619
+      },
+      "end": {
+        "x": 0,
+        "y": 39.90757050005749,
+        "z": -3.2728040540121133
+      },
+      "thickness": 20.0550735,
+      "style": "armored collar"
+    }
+  ],
+  "silhouette": {
+    "slenderness": 3.2453500084554583,
+    "majorVolumeCount": 3,
+    "occupancy": {
+      "front": 0.6658163265306123,
+      "side": 0.5892857142857143,
+      "top": 0.9158163265306123
+    },
+    "symmetry": 1,
+    "disconnectedPenalty": 0
+  },
+  "dimensions": {
+    "length": 310.02,
+    "width": 92.43995230664731,
+    "height": 126.40773600000001,
+    "estimatedMass": 380964
+  },
+  "stations": [],
+  "hullSections": [
+    {
+      "id": "armored-keel/section-0",
+      "start": {
+        "z": -150,
+        "width": 92.43995230664731,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": -75,
+        "width": 92.43995230664731,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "armored-keel/section-1",
+      "start": {
+        "z": -75,
+        "width": 92.43995230664731,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 0,
+        "width": 86.10121271990577,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "armored-keel/section-2",
+      "start": {
+        "z": 0,
+        "width": 86.10121271990577,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 75,
+        "width": 78.17778823647886,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "armored-keel/section-3",
+      "start": {
+        "z": 75,
+        "width": 78.17778823647886,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 150,
+        "width": 70.25436375305196,
+        "height": 40.5153,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "magazine-deck/section-0",
+      "start": {
+        "z": -100,
+        "width": 48.06877519945661,
+        "height": 13.856232600000002,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": -50,
+        "width": 54.53957186092192,
+        "height": 30.81188565,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "magazine-deck/section-1",
+      "start": {
+        "z": -50,
+        "width": 54.53957186092192,
+        "height": 30.81188565,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 0,
+        "width": 61.010368522387225,
+        "height": 36.463770000000004,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "magazine-deck/section-2",
+      "start": {
+        "z": 0,
+        "width": 61.010368522387225,
+        "height": 36.463770000000004,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 50,
+        "width": 67.48116518385254,
+        "height": 36.463770000000004,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "magazine-deck/section-3",
+      "start": {
+        "z": 50,
+        "width": 67.48116518385254,
+        "height": 36.463770000000004,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 100,
+        "width": 73.95196184531785,
+        "height": 36.463770000000004,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "command-deck/section-0",
+      "start": {
+        "z": -59.37500000000001,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": -29.687500000000004,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "command-deck/section-1",
+      "start": {
+        "z": -29.687500000000004,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 0,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "command-deck/section-2",
+      "start": {
+        "z": 0,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 29.687500000000004,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    },
+    {
+      "id": "command-deck/section-3",
+      "start": {
+        "z": 29.687500000000004,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      },
+      "end": {
+        "z": 59.37500000000001,
+        "width": 52.690772814788964,
+        "height": 30.386474999999997,
+        "profile": "chamfer",
+        "topSlope": 0.04,
+        "sideSlope": 0.025,
+        "bevel": 0.22
+      }
+    }
+  ],
+  "secondaryStructures": [],
+  "engines": [
+    {
+      "id": "engine-0",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -9.835610925427275,
+        "y": -42.946218,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 4.608615375,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-1",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 9.835610925427275,
+        "y": -42.946218,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 4.608615375,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-2",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -9.835610925427275,
+        "y": -29.981322000000002,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 4.608615375,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-3",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 9.835610925427275,
+        "y": -29.981322000000002,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 4.608615375,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    }
+  ],
+  "hardpoints": [
+    {
+      "id": "mount-0",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 40.67357901492482,
+        "y": -18.904070659090912,
+        "z": -84.00000000000001
+      },
+      "normal": {
+        "x": 0.3780884303342884,
+        "y": 0.9257694847246554,
+        "z": 0
+      },
+      "radius": 5.1000000000000005,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-1",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 23.655753555080278,
+        "y": 22.60112824786091,
+        "z": -81
+      },
+      "normal": {
+        "x": 0.4425180375750701,
+        "y": 0.8872280486703291,
+        "z": -0.13040006163092427
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-2",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": 7.903615922218345,
+        "y": 69.686316,
+        "z": -25.437500000000007
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-3",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -40.67357901492482,
+        "y": -18.904070659090912,
+        "z": -84.00000000000001
+      },
+      "normal": {
+        "x": -0.3780884303342884,
+        "y": 0.9257694847246554,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-4",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -23.655753555080278,
+        "y": 22.60112824786091,
+        "z": -81
+      },
+      "normal": {
+        "x": -0.4425180375750701,
+        "y": 0.8872280486703291,
+        "z": -0.13040006163092427
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-5",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": -7.903615922218345,
+        "y": 69.686316,
+        "z": -25.437500000000007
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-6",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 39.44639903093165,
+        "y": -18.90407065909091,
+        "z": -42.00000000000001
+      },
+      "normal": {
+        "x": 0.3881019075222034,
+        "y": 0.9216164654440735,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-7",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 24.718689753336974,
+        "y": 24.10353612346909,
+        "z": -62.33333333333334
+      },
+      "normal": {
+        "x": 0.47116536432374595,
+        "y": 0.8809882679984447,
+        "z": -0.0431609906138894
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-8",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "command-deck",
+      "position": {
+        "x": 7.903615922218345,
+        "y": 69.686316,
+        "z": -8.812500000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-9",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -39.44639903093165,
+        "y": -18.90407065909091,
+        "z": -42.00000000000001
+      },
+      "normal": {
+        "x": -0.3881019075222034,
+        "y": 0.9216164654440735,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-10",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -24.718689753336974,
+        "y": 24.10353612346909,
+        "z": -62.33333333333334
+      },
+      "normal": {
+        "x": -0.47116536432374595,
+        "y": 0.8809882679984447,
+        "z": -0.0431609906138894
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-11",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": -7.903615922218345,
+        "y": 69.686316,
+        "z": -8.812500000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-12",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 37.884533596758544,
+        "y": -18.904070659090912,
+        "z": 0
+      },
+      "normal": {
+        "x": 0.4015651802383411,
+        "y": 0.9158304461089665,
+        "z": 0
+      },
+      "radius": 5.1000000000000005,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-13",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": 25.78162595159368,
+        "y": 66.87465272199762,
+        "z": -43.66666666666667
+      },
+      "normal": {
+        "x": 0.4733572400343013,
+        "y": 0.8808705485524583,
+        "z": 0
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-14",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": 7.903615922218345,
+        "y": 69.686316,
+        "z": 7.812500000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-15",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -37.884533596758544,
+        "y": -18.904070659090912,
+        "z": 0
+      },
+      "normal": {
+        "x": -0.4015651802383411,
+        "y": 0.9158304461089665,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-16",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "command-deck",
+      "position": {
+        "x": -25.78162595159368,
+        "y": 66.87465272199762,
+        "z": -43.66666666666667
+      },
+      "normal": {
+        "x": -0.4733572400343013,
+        "y": 0.8808705485524583,
+        "z": 0
+      },
+      "radius": 3.2857142857142856,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-17",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "command-deck",
+      "position": {
+        "x": -7.903615922218345,
+        "y": 69.686316,
+        "z": 7.812500000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.73125,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-18",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 26.84456214985038,
+        "y": 25.932554406818184,
+        "z": -25
+      },
+      "normal": {
+        "x": 0.48610533298322944,
+        "y": 0.8728533543751363,
+        "z": -0.0427624484955725
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-19",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -26.84456214985038,
+        "y": 25.932554406818184,
+        "z": -25
+      },
+      "normal": {
+        "x": -0.48610533298322944,
+        "y": 0.8728533543751363,
+        "z": -0.0427624484955725
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-20",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 27.90749834810708,
+        "y": 25.932554406818184,
+        "z": -6.333333333333336
+      },
+      "normal": {
+        "x": 0.47221405359382707,
+        "y": 0.8814839122686734,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-21",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -27.90749834810708,
+        "y": 25.932554406818184,
+        "z": -6.333333333333336
+      },
+      "normal": {
+        "x": -0.47221405359382707,
+        "y": 0.8814839122686734,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-22",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 28.970434546363784,
+        "y": 25.932554406818184,
+        "z": 12.333333333333343
+      },
+      "normal": {
+        "x": 0.4585863207862302,
+        "y": 0.8886498671511456,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-23",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 35.932201804042144,
+        "y": -18.90407065909091,
+        "z": 42.00000000000001
+      },
+      "normal": {
+        "x": 0.4196241236012391,
+        "y": 0.9076979645740604,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-24",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -28.970434546363784,
+        "y": 25.932554406818184,
+        "z": 12.333333333333343
+      },
+      "normal": {
+        "x": -0.4585863207862302,
+        "y": 0.8886498671511456,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-25",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "command-deck",
+      "position": {
+        "x": 7.903615922218345,
+        "y": 69.686316,
+        "z": 24.437500000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-26",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -35.932201804042144,
+        "y": -18.90407065909091,
+        "z": 42.00000000000001
+      },
+      "normal": {
+        "x": -0.4196241236012391,
+        "y": 0.9076979645740604,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-27",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 30.033370744620484,
+        "y": 25.932554406818184,
+        "z": 31.000000000000007
+      },
+      "normal": {
+        "x": 0.44562618777222307,
+        "y": 0.8952191356151831,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-28",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "command-deck",
+      "position": {
+        "x": -7.903615922218345,
+        "y": 69.686316,
+        "z": 24.437500000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-29",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "command-deck",
+      "position": {
+        "x": 7.903615922218345,
+        "y": 69.686316,
+        "z": 41.06250000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-30",
+      "type": "Utility",
+      "size": "S",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 33.97987001132576,
+        "y": -18.904070659090912,
+        "z": 84.00000000000001
+      },
+      "normal": {
+        "x": 0.4391864906918672,
+        "y": 0.898395918509074,
+        "z": 0
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "utility"
+      ]
+    }
+  ],
+  "trusses": [],
+  "surfaceFeatures": [
+    {
+      "id": "detail-0",
+      "kind": "panel",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -27.731985691994193,
+        "y": -16.776426000000004,
+        "z": -75
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 14.79039236906357,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-1",
+      "kind": "panel",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 27.731985691994193,
+        "y": -16.776426000000004,
+        "z": -75
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 14.79039236906357,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-2",
+      "kind": "panel",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -25.830363815971733,
+        "y": -16.776426000000004,
+        "z": 0
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 13.776194035184924,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-3",
+      "kind": "panel",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 25.830363815971733,
+        "y": -16.776426000000004,
+        "z": 0
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 13.776194035184924,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-4",
+      "kind": "hatch",
+      "parentId": "armored-keel",
+      "position": {
+        "x": -23.453336470943658,
+        "y": -16.776426000000004,
+        "z": 75
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 12.508446117836618,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-5",
+      "kind": "hatch",
+      "parentId": "armored-keel",
+      "position": {
+        "x": 23.453336470943658,
+        "y": -16.776426000000004,
+        "z": 75
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 12.508446117836618,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-6",
+      "kind": "panel",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -16.361871558276576,
+        "y": 25.158530111999998,
+        "z": -75
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9870098413062538,
+        "z": -0.1606598056907942
+      },
+      "size": {
+        "x": 8.726331497747507,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-7",
+      "kind": "panel",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 16.361871558276576,
+        "y": 25.158530111999998,
+        "z": -75
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9870098413062538,
+        "z": -0.1606598056907942
+      },
+      "size": {
+        "x": 8.726331497747507,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-8",
+      "kind": "panel",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -18.303110556716167,
+        "y": 27.871434599999997,
+        "z": -25
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9985312719391957,
+        "z": -0.05417839938104384
+      },
+      "size": {
+        "x": 9.761658963581956,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-9",
+      "kind": "panel",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 18.303110556716167,
+        "y": 27.871434599999997,
+        "z": -25
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9985312719391957,
+        "z": -0.05417839938104384
+      },
+      "size": {
+        "x": 9.761658963581956,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-10",
+      "kind": "hatch",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": -20.24434955515576,
+        "y": 27.871434599999997,
+        "z": 25
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 10.796986429416407,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-11",
+      "kind": "hatch",
+      "parentId": "magazine-deck",
+      "position": {
+        "x": 20.24434955515576,
+        "y": 27.871434599999997,
+        "z": 25
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 10.796986429416407,
+        "y": 0.24000000000000002,
+        "z": 5
+      }
+    },
+    {
+      "id": "detail-12",
+      "kind": "panel",
+      "parentId": "command-deck",
+      "position": {
+        "x": -15.80723184443669,
+        "y": 69.926316,
+        "z": -21.875000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    },
+    {
+      "id": "detail-13",
+      "kind": "panel",
+      "parentId": "command-deck",
+      "position": {
+        "x": 15.80723184443669,
+        "y": 69.926316,
+        "z": -21.875000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    },
+    {
+      "id": "detail-14",
+      "kind": "panel",
+      "parentId": "command-deck",
+      "position": {
+        "x": -15.80723184443669,
+        "y": 69.926316,
+        "z": 7.812500000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    },
+    {
+      "id": "detail-15",
+      "kind": "panel",
+      "parentId": "command-deck",
+      "position": {
+        "x": 15.80723184443669,
+        "y": 69.926316,
+        "z": 7.812500000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    },
+    {
+      "id": "detail-16",
+      "kind": "hatch",
+      "parentId": "command-deck",
+      "position": {
+        "x": -15.80723184443669,
+        "y": 69.926316,
+        "z": 37.50000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    },
+    {
+      "id": "detail-17",
+      "kind": "hatch",
+      "parentId": "command-deck",
+      "position": {
+        "x": 15.80723184443669,
+        "y": 69.926316,
+        "z": 37.50000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 8.430523650366235,
+        "y": 0.24000000000000002,
+        "z": 2.9687500000000004
+      }
+    }
+  ],
+  "materialTheme": {
+    "hull": "#98a8b6",
+    "secondary": "#526879",
+    "accent": "#e5b56b",
+    "engine": "#71dfff",
+    "roughness": 0.67,
+    "panelScale": 19.5
+  },
+  "generationStats": {
+    "firepowerScore": 80,
+    "survivabilityScore": 80,
+    "mobilityScore": 30,
+    "enduranceScore": 65,
+    "missileScore": 60,
+    "sensorScore": 45,
+    "enginePattern": "Quad Cluster"
+  }
+}

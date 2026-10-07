@@ -1,0 +1,356 @@
+{
+  "browser": "Chromium / WebGL SwiftShader",
+  "renderedDesigns": 20,
+  "seedRepetitions": 10,
+  "blueprintIdentical": true,
+  "pixelIdentical": true,
+  "orbit": true,
+  "zoom": true,
+  "debugViews": 5,
+  "jsonExport": true,
+  "mobileOverflow": false,
+  "consoleErrors": [],
+  "blueprintHash": "c87a228931342a24edf0f13128b48bc572d9c544163386c03c4260434b630948",
+  "results": [
+    {
+      "name": "battleship-heavy",
+      "seed": 42,
+      "width": 165.58574339672577,
+      "height": 83.00543711141108,
+      "engines": 4,
+      "hardpoints": 39,
+      "drawCalls": 165,
+      "triangles": 7100,
+      "camera": [
+        -211.72310530615914,
+        178.64004153422485,
+        -240.05112202095887
+      ],
+      "radius": 180.93365408436156,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 2718,
+      "width": 189.8774104604076,
+      "height": 87.48865270864934,
+      "engines": 1,
+      "hardpoints": 39,
+      "drawCalls": 165,
+      "triangles": 7100,
+      "camera": [
+        -213.30452203099213,
+        179.84171579980168,
+        -241.81677334265532
+      ],
+      "radius": 187.38730175535287,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 742091,
+      "width": 135.46173475010002,
+      "height": 87.88572608957179,
+      "engines": 2,
+      "hardpoints": 39,
+      "drawCalls": 156,
+      "triangles": 6404,
+      "camera": [
+        -212.20443574267733,
+        178.93765468070984,
+        -240.60821743359566
+      ],
+      "radius": 175.1744797429837,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 42,
+      "width": 87.05309554755897,
+      "height": 41.36131302812825,
+      "engines": 6,
+      "hardpoints": 25,
+      "drawCalls": 143,
+      "triangles": 5772,
+      "camera": [
+        -195.3593889712547,
+        163.50536858906045,
+        -219.13981818107803
+      ],
+      "radius": 164.36603960640224,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 2718,
+      "width": 62.05414048065229,
+      "height": 42.693112112107656,
+      "engines": 6,
+      "hardpoints": 25,
+      "drawCalls": 143,
+      "triangles": 5772,
+      "camera": [
+        -196.10902907010887,
+        164.28988513310713,
+        -219.97231045622345
+      ],
+      "radius": 161.64484842574024,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 742091,
+      "width": 72.24025804794208,
+      "height": 42.81106806437346,
+      "engines": 6,
+      "hardpoints": 25,
+      "drawCalls": 143,
+      "triangles": 5772,
+      "camera": [
+        -195.8940878803638,
+        164.03515706088962,
+        -219.76798967117549
+      ],
+      "radius": 162.65241541238106,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 42,
+      "width": 169.8953369587523,
+      "height": 56.71937963188805,
+      "engines": 6,
+      "hardpoints": 41,
+      "drawCalls": 143,
+      "triangles": 5772,
+      "camera": [
+        -203.93141516266354,
+        171.795366633725,
+        -233.7408940368505
+      ],
+      "radius": 176.93528375181995,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 2718,
+      "width": 160.8142827965748,
+      "height": 59.018318526852504,
+      "engines": 2,
+      "hardpoints": 41,
+      "drawCalls": 346,
+      "triangles": 10888,
+      "camera": [
+        -205.90547581883519,
+        173.55023064261135,
+        -235.8679461233383
+      ],
+      "radius": 175.13868654974522,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 742091,
+      "width": 153.63505159796486,
+      "height": 59.2219329682637,
+      "engines": 4,
+      "hardpoints": 41,
+      "drawCalls": 340,
+      "triangles": 10424,
+      "camera": [
+        -203.58155187619403,
+        171.66962682498047,
+        -233.3359596775108
+      ],
+      "radius": 173.39970596994465,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 42,
+      "width": 82.28506740188294,
+      "height": 37.86915930595808,
+      "engines": 4,
+      "hardpoints": 24,
+      "drawCalls": 114,
+      "triangles": 4960,
+      "camera": [
+        -202.90684877818228,
+        170.75215133073013,
+        -236.27830958734094
+      ],
+      "radius": 168.90895422742378,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 2718,
+      "width": 77.3982010425162,
+      "height": 38.98104783882921,
+      "engines": 1,
+      "hardpoints": 24,
+      "drawCalls": 105,
+      "triangles": 4264,
+      "camera": [
+        -202.9487993556331,
+        170.73861288073664,
+        -236.22987833512303
+      ],
+      "radius": 168.4832485409726,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 742091,
+      "width": 80.91540870425192,
+      "height": 39.07952656004619,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 108,
+      "triangles": 4496,
+      "camera": [
+        -201.18869820189735,
+        168.16654858248876,
+        -234.26071475601054
+      ],
+      "radius": 168.6899432230963,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-A",
+      "seed": 42,
+      "width": 120.60112788376655,
+      "height": 62.033696751776674,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 149,
+      "triangles": 6076,
+      "camera": [
+        -204.39083408493684,
+        172.50806292377084,
+        -231.56469699639604
+      ],
+      "radius": 169.48313506759968,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-B",
+      "seed": 42,
+      "width": 76.96084024409929,
+      "height": 58.60572980490974,
+      "engines": 4,
+      "hardpoints": 21,
+      "drawCalls": 115,
+      "triangles": 4588,
+      "camera": [
+        -204.15743762334327,
+        172.099634292124,
+        -229.31110569973208
+      ],
+      "radius": 164.55713944204254,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-C",
+      "seed": 42,
+      "width": 147.619794708968,
+      "height": 63.290617965627895,
+      "engines": 4,
+      "hardpoints": 41,
+      "drawCalls": 230,
+      "triangles": 7808,
+      "camera": [
+        -205.82604676028873,
+        173.7575218442964,
+        -232.8771166053486
+      ],
+      "radius": 175.17387209834573,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-D",
+      "seed": 42,
+      "width": 71.7949484923052,
+      "height": 53.32094742848986,
+      "engines": 4,
+      "hardpoints": 24,
+      "drawCalls": 118,
+      "triangles": 5080,
+      "camera": [
+        -203.06918084804101,
+        170.87643203805365,
+        -236.3160154949906
+      ],
+      "radius": 168.81711004536507,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-aegis",
+      "seed": 42,
+      "width": 120.60112788376655,
+      "height": 62.033696751776674,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 149,
+      "triangles": 6076,
+      "camera": [
+        -204.39083408493684,
+        172.50806292377084,
+        -231.56469699639604
+      ],
+      "radius": 169.48313506759968,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-vesper",
+      "seed": 42,
+      "width": 111.13441094395483,
+      "height": 47.857019886767645,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 149,
+      "triangles": 6076,
+      "camera": [
+        -196.36724467777853,
+        165.02900765273685,
+        -222.3596862873394
+      ],
+      "radius": 166.54341417385453,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-forge",
+      "seed": 42,
+      "width": 149.0690228887756,
+      "height": 55.65419216252261,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 267,
+      "triangles": 9108,
+      "camera": [
+        -201.8870365837482,
+        170.06175772270518,
+        -231.70471512606883
+      ],
+      "radius": 171.79450292394057,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-serein",
+      "seed": 42,
+      "width": 117.84692110986296,
+      "height": 42.515648596999675,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 145,
+      "triangles": 5956,
+      "camera": [
+        -194.6211401378502,
+        162.98463941063332,
+        -220.3545400641874
+      ],
+      "radius": 167.29862361027045,
+      "geometryFinite": true
+    }
+  ]
+}

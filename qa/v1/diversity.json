@@ -1,0 +1,425 @@
+[
+  {
+    "shipyardId": "aegis",
+    "role": "Corvette",
+    "counts": {
+      "BLOCK_ASSEMBLY": 12,
+      "SPINE_AND_MODULES": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 5
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Frigate",
+    "counts": {
+      "MONOLITHIC": 7,
+      "BLOCK_ASSEMBLY": 10,
+      "SPINE_AND_MODULES": 2,
+      "STACKED_BLOCKS": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Destroyer",
+    "counts": {
+      "BLOCK_ASSEMBLY": 12,
+      "SPINE_AND_MODULES": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 5
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Cruiser",
+    "counts": {
+      "MONOLITHIC": 7,
+      "BLOCK_ASSEMBLY": 10,
+      "SPINE_AND_MODULES": 2,
+      "STACKED_BLOCKS": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Battlecruiser",
+    "counts": {
+      "MONOLITHIC": 8,
+      "BLOCK_ASSEMBLY": 11,
+      "STACKED_BLOCKS": 1
+    },
+    "uniqueSilhouettes": 14
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Battleship",
+    "counts": {
+      "MONOLITHIC": 8,
+      "BLOCK_ASSEMBLY": 11,
+      "STACKED_BLOCKS": 1
+    },
+    "uniqueSilhouettes": 14
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Missile Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 17,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 2
+    },
+    "uniqueSilhouettes": 18
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Spinal Gun Ship",
+    "counts": {
+      "MONOLITHIC": 8,
+      "SPINE_AND_MODULES": 8,
+      "TWIN_HULL": 1,
+      "BLOCK_ASSEMBLY": 3
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "aegis",
+    "role": "Patrol Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 12,
+      "SPINE_AND_MODULES": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 5
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Corvette",
+    "counts": {
+      "SPINE_AND_MODULES": 5,
+      "CORE_AND_NACELLES": 10,
+      "MONOLITHIC": 1,
+      "TWIN_HULL": 2,
+      "TRUSS_POD": 1,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Frigate",
+    "counts": {
+      "SPINE_AND_MODULES": 4,
+      "CORE_AND_NACELLES": 7,
+      "TWIN_HULL": 4,
+      "MONOLITHIC": 2,
+      "BLOCK_ASSEMBLY": 1,
+      "TRUSS_POD": 2
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Destroyer",
+    "counts": {
+      "SPINE_AND_MODULES": 5,
+      "CORE_AND_NACELLES": 10,
+      "MONOLITHIC": 1,
+      "TWIN_HULL": 2,
+      "TRUSS_POD": 1,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Cruiser",
+    "counts": {
+      "SPINE_AND_MODULES": 4,
+      "CORE_AND_NACELLES": 7,
+      "TWIN_HULL": 4,
+      "MONOLITHIC": 2,
+      "BLOCK_ASSEMBLY": 1,
+      "TRUSS_POD": 2
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Battlecruiser",
+    "counts": {
+      "MONOLITHIC": 6,
+      "BLOCK_ASSEMBLY": 9,
+      "TRUSS_POD": 2,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 2
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Battleship",
+    "counts": {
+      "MONOLITHIC": 6,
+      "BLOCK_ASSEMBLY": 9,
+      "TRUSS_POD": 2,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 2
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Missile Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 6,
+      "TWIN_HULL": 4,
+      "CORE_AND_NACELLES": 3,
+      "TRUSS_POD": 6,
+      "MONOLITHIC": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Spinal Gun Ship",
+    "counts": {
+      "SPINE_AND_MODULES": 18,
+      "TWIN_HULL": 1,
+      "MONOLITHIC": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "vesper",
+    "role": "Patrol Ship",
+    "counts": {
+      "SPINE_AND_MODULES": 5,
+      "CORE_AND_NACELLES": 10,
+      "MONOLITHIC": 1,
+      "TWIN_HULL": 2,
+      "TRUSS_POD": 1,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Corvette",
+    "counts": {
+      "SPINE_AND_MODULES": 3,
+      "TRUSS_POD": 9,
+      "TWIN_HULL": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 1,
+      "BLOCK_ASSEMBLY": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Frigate",
+    "counts": {
+      "BLOCK_ASSEMBLY": 5,
+      "TRUSS_POD": 10,
+      "TWIN_HULL": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 1,
+      "SPINE_AND_MODULES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Destroyer",
+    "counts": {
+      "SPINE_AND_MODULES": 3,
+      "TRUSS_POD": 9,
+      "TWIN_HULL": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 1,
+      "BLOCK_ASSEMBLY": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Cruiser",
+    "counts": {
+      "BLOCK_ASSEMBLY": 5,
+      "TRUSS_POD": 10,
+      "TWIN_HULL": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 1,
+      "SPINE_AND_MODULES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Battlecruiser",
+    "counts": {
+      "BLOCK_ASSEMBLY": 13,
+      "TRUSS_POD": 3,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 2,
+      "SPINE_AND_MODULES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Battleship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 13,
+      "TRUSS_POD": 3,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 2,
+      "SPINE_AND_MODULES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Missile Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 7,
+      "TRUSS_POD": 12,
+      "STACKED_BLOCKS": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Spinal Gun Ship",
+    "counts": {
+      "SPINE_AND_MODULES": 17,
+      "HYBRID": 1,
+      "MONOLITHIC": 1,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "forge",
+    "role": "Patrol Ship",
+    "counts": {
+      "SPINE_AND_MODULES": 3,
+      "TRUSS_POD": 9,
+      "TWIN_HULL": 2,
+      "STACKED_BLOCKS": 1,
+      "MONOLITHIC": 1,
+      "BLOCK_ASSEMBLY": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Corvette",
+    "counts": {
+      "BLOCK_ASSEMBLY": 2,
+      "TWIN_HULL": 6,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 7,
+      "MONOLITHIC": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Frigate",
+    "counts": {
+      "MONOLITHIC": 7,
+      "TRUSS_POD": 2,
+      "TWIN_HULL": 4,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 5,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Destroyer",
+    "counts": {
+      "BLOCK_ASSEMBLY": 2,
+      "TWIN_HULL": 6,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 7,
+      "MONOLITHIC": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Cruiser",
+    "counts": {
+      "MONOLITHIC": 7,
+      "TRUSS_POD": 2,
+      "TWIN_HULL": 4,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 5,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Battlecruiser",
+    "counts": {
+      "MONOLITHIC": 15,
+      "BLOCK_ASSEMBLY": 4,
+      "CORE_AND_NACELLES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Battleship",
+    "counts": {
+      "MONOLITHIC": 15,
+      "BLOCK_ASSEMBLY": 4,
+      "CORE_AND_NACELLES": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Missile Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 5,
+      "TRUSS_POD": 3,
+      "TWIN_HULL": 3,
+      "STACKED_BLOCKS": 1,
+      "SPINE_AND_MODULES": 4,
+      "MONOLITHIC": 4
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Spinal Gun Ship",
+    "counts": {
+      "SPINE_AND_MODULES": 15,
+      "TWIN_HULL": 1,
+      "MONOLITHIC": 3,
+      "BLOCK_ASSEMBLY": 1
+    },
+    "uniqueSilhouettes": 20
+  },
+  {
+    "shipyardId": "serein",
+    "role": "Patrol Ship",
+    "counts": {
+      "BLOCK_ASSEMBLY": 2,
+      "TWIN_HULL": 6,
+      "CORE_AND_NACELLES": 1,
+      "SPINE_AND_MODULES": 7,
+      "MONOLITHIC": 4
+    },
+    "uniqueSilhouettes": 20
+  }
+]
