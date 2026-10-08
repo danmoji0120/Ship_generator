@@ -1,0 +1,1074 @@
+{
+  "reports": [
+    {
+      "family": "WEDGE_CITADEL",
+      "source": "qa/v1.8.2/limited-families/final-review/WEDGE_CITADEL/blueprint.json",
+      "sourceSha256": "06d08232fab9dc642f1938f823a273609ba3f12ed36430dd79d1a51f024ef45e",
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull",
+          "Sampled non-parent Hull intrusion, stored shared ventral junction contacts",
+          "Measured outward ventral tiers and open local maintenance recess"
+        ],
+        "minimumChannelDepth": 12.044932038035697,
+        "maximumMountLift": 19.348594826100854
+      },
+      "ventral": {
+        "sourceComponentIds": [
+          "fore-axial-guard",
+          "main-citadel",
+          "fore-citadel-neck",
+          "forward-shoulder--1",
+          "mid-shoulder--1",
+          "rear-shoulder--1",
+          "forward-shoulder-1",
+          "mid-shoulder-1",
+          "rear-shoulder-1",
+          "command-foundation",
+          "citadel-command-neck",
+          "command-plinth",
+          "belt-haunch--1",
+          "stern-housing--1",
+          "belt-haunch-1",
+          "stern-housing-1",
+          "belt--1-fore",
+          "belt--1-mid",
+          "belt--1-aft",
+          "belt-1-fore",
+          "belt-1-mid",
+          "belt-1-aft"
+        ],
+        "componentIds": [
+          "ventral-keel",
+          "ventral-fore-pan",
+          "belly-port-casemate",
+          "belly-starboard-fore",
+          "belly-starboard-aft",
+          "ventral-service-sill",
+          "ventral-drive-cradle"
+        ],
+        "levels": [
+          {
+            "id": "forward-pan",
+            "parentStructureId": "citadel",
+            "position": {
+              "x": 24,
+              "y": -32.55876740717228,
+              "z": -95
+            },
+            "hullY": -25.55876740717228,
+            "exteriorY": -32.55876740717228,
+            "depth": 7.0000000000000036
+          },
+          {
+            "id": "belly-casemate",
+            "parentStructureId": "citadel",
+            "position": {
+              "x": -43,
+              "y": -37.55876740717228,
+              "z": 0
+            },
+            "hullY": -25.55876740717228,
+            "exteriorY": -37.55876740717228,
+            "depth": 12.000000000000004
+          },
+          {
+            "id": "central-keel",
+            "parentStructureId": "citadel",
+            "position": {
+              "x": 0,
+              "y": -48.55876740717228,
+              "z": 0
+            },
+            "hullY": -25.55876740717228,
+            "exteriorY": -48.55876740717228,
+            "depth": 23.000000000000004
+          },
+          {
+            "id": "aft-cradle",
+            "parentStructureId": "citadel",
+            "position": {
+              "x": 0,
+              "y": -41.55876740717228,
+              "z": 112
+            },
+            "hullY": -25.55876740717228,
+            "exteriorY": -41.55876740717228,
+            "depth": 16.000000000000004
+          }
+        ],
+        "recesses": [
+          {
+            "id": "ventral-maintenance-pocket",
+            "purpose": "MAINTENANCE",
+            "floor": [
+              {
+                "x": 45.546823989628116,
+                "y": -25.55876740717228,
+                "z": 0
+              },
+              {
+                "x": 42.78641041449914,
+                "y": -25.55876740717228,
+                "z": 10
+              },
+              {
+                "x": 40.02599683937016,
+                "y": -25.55876740717228,
+                "z": 20
+              }
+            ],
+            "mouthDepth": 12.000000000000004,
+            "width": 48.13471171631152,
+            "length": 38,
+            "boundaryIds": [
+              "ventral-keel",
+              "belly-starboard-fore",
+              "belly-starboard-aft",
+              "ventral-service-sill"
+            ]
+          }
+        ],
+        "matings": [
+          {
+            "id": "mate-ventral-fore-pan-ventral-keel",
+            "fromId": "ventral-fore-pan",
+            "toId": "ventral-keel",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -26.05876740717228,
+                "z": -90
+              },
+              {
+                "x": 0,
+                "y": -26.05876740717228,
+                "z": -90
+              },
+              {
+                "x": 0.2,
+                "y": -26.05876740717228,
+                "z": -90
+              }
+            ]
+          },
+          {
+            "id": "mate-ventral-keel-belly-port-casemate",
+            "fromId": "ventral-keel",
+            "toId": "belly-port-casemate",
+            "contactPoints": [
+              {
+                "x": -14.961311593002202,
+                "y": -26.05876740717228,
+                "z": -28
+              },
+              {
+                "x": -14.761311593002203,
+                "y": -26.05876740717228,
+                "z": -28
+              },
+              {
+                "x": -14.561311593002204,
+                "y": -26.05876740717228,
+                "z": -28
+              }
+            ]
+          },
+          {
+            "id": "mate-ventral-keel-belly-starboard-fore",
+            "fromId": "ventral-keel",
+            "toId": "belly-starboard-fore",
+            "contactPoints": [
+              {
+                "x": 14.561311593002204,
+                "y": -26.05876740717228,
+                "z": -28
+              },
+              {
+                "x": 14.761311593002203,
+                "y": -26.05876740717228,
+                "z": -28
+              },
+              {
+                "x": 14.961311593002202,
+                "y": -26.05876740717228,
+                "z": -28
+              }
+            ]
+          },
+          {
+            "id": "mate-ventral-keel-belly-starboard-aft",
+            "fromId": "ventral-keel",
+            "toId": "belly-starboard-aft",
+            "contactPoints": [
+              {
+                "x": 9.640874395334802,
+                "y": -26.05876740717228,
+                "z": 46
+              },
+              {
+                "x": 9.8408743953348,
+                "y": -26.05876740717228,
+                "z": 46
+              },
+              {
+                "x": 10.0408743953348,
+                "y": -26.05876740717228,
+                "z": 46
+              }
+            ]
+          },
+          {
+            "id": "mate-ventral-keel-ventral-drive-cradle",
+            "fromId": "ventral-keel",
+            "toId": "ventral-drive-cradle",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -26.05876740717228,
+                "z": 102
+              },
+              {
+                "x": 0,
+                "y": -26.05876740717228,
+                "z": 102
+              },
+              {
+                "x": 0.2,
+                "y": -26.05876740717228,
+                "z": 102
+              }
+            ]
+          },
+          {
+            "id": "mate-belly-port-casemate-ventral-drive-cradle",
+            "fromId": "belly-port-casemate",
+            "toId": "ventral-drive-cradle",
+            "contactPoints": [
+              {
+                "x": -24.880685249379734,
+                "y": -26.05876740717228,
+                "z": 72
+              },
+              {
+                "x": -24.680685249379735,
+                "y": -26.05876740717228,
+                "z": 72
+              },
+              {
+                "x": -24.480685249379736,
+                "y": -26.05876740717228,
+                "z": 72
+              }
+            ]
+          }
+        ]
+      },
+      "sourceUnchanged": true,
+      "upperUnchanged": true,
+      "mountsUnchanged": true,
+      "macroUnchanged": true,
+      "jsonDeterminism": true,
+      "webglDeterminism": true,
+      "shots": [
+        {
+          "name": "before-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 58,
+            "triangles": 2788
+          }
+        },
+        {
+          "name": "structure-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 65,
+            "triangles": 3516
+          }
+        },
+        {
+          "name": "mounted-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 205,
+            "triangles": 9228
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 58,
+            "triangles": 2788
+          }
+        },
+        {
+          "name": "structure-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 65,
+            "triangles": 3516
+          }
+        },
+        {
+          "name": "mounted-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 205,
+            "triangles": 9228
+          }
+        },
+        {
+          "name": "before-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 58,
+            "triangles": 2788
+          }
+        },
+        {
+          "name": "structure-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 65,
+            "triangles": 3516
+          }
+        },
+        {
+          "name": "mounted-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 205,
+            "triangles": 9228
+          }
+        },
+        {
+          "name": "structure-TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 65,
+            "triangles": 3516
+          }
+        },
+        {
+          "name": "structure-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 65,
+            "triangles": 3516
+          }
+        }
+      ]
+    },
+    {
+      "family": "HAMMERHEAD",
+      "source": "qa/v1.8.2/limited-families/final-review/HAMMERHEAD/blueprint.json",
+      "sourceSha256": "21cf994ec7e19549db4a009e5426294dfbb74ee8f2847b45bd9f88d113a3a1f2",
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull",
+          "Sampled non-parent Hull intrusion, stored shared ventral junction contacts",
+          "Measured outward ventral tiers and open local maintenance recess"
+        ],
+        "minimumChannelDepth": 12.001652522207216,
+        "maximumMountLift": 19.48013269765494
+      },
+      "ventral": {
+        "sourceComponentIds": [
+          "head-citadel",
+          "head-shoulder--1",
+          "head-belt--1",
+          "head-shoulder-1",
+          "head-belt-1",
+          "command-saddle",
+          "command-cap",
+          "reactor-housing",
+          "reactor-support",
+          "magazine--1-casemate",
+          "magazine-1-casemate",
+          "head-to-command",
+          "command-to-reactor"
+        ],
+        "componentIds": [
+          "head-keel",
+          "head-underpan",
+          "head-belly--1",
+          "head-belly-1",
+          "machinery-keel",
+          "drive-undercradle",
+          "magazine--1-lower-case",
+          "magazine-1-lower-case"
+        ],
+        "levels": [
+          {
+            "id": "fore-protection",
+            "parentStructureId": "fore-armor",
+            "position": {
+              "x": -95.53002693928494,
+              "y": -32.41197649654563,
+              "z": -96.75000000000003
+            },
+            "hullY": -27.384393650541725,
+            "exteriorY": -32.41197649654563,
+            "depth": 5.027582846003902
+          },
+          {
+            "id": "head-shoulder",
+            "parentStructureId": "fore-armor",
+            "position": {
+              "x": -56.194133493697024,
+              "y": -39.384393650541725,
+              "z": -88.23000000000002
+            },
+            "hullY": -27.384393650541725,
+            "exteriorY": -39.384393650541725,
+            "depth": 12
+          },
+          {
+            "id": "dominant-keel",
+            "parentStructureId": "fore-armor",
+            "position": {
+              "x": 0,
+              "y": -50.384393650541725,
+              "z": -88.23000000000002
+            },
+            "hullY": -27.384393650541725,
+            "exteriorY": -50.384393650541725,
+            "depth": 23
+          },
+          {
+            "id": "machinery-axis",
+            "parentStructureId": "combat-core",
+            "position": {
+              "x": 0,
+              "y": -34.43063619032503,
+              "z": 6.75
+            },
+            "hullY": -16.430636190325032,
+            "exteriorY": -34.43063619032503,
+            "depth": 18
+          },
+          {
+            "id": "aft-cradle",
+            "parentStructureId": "drive-block",
+            "position": {
+              "x": 0,
+              "y": -38.26113072966113,
+              "z": 103.50000000000001
+            },
+            "hullY": -22.820328042118103,
+            "exteriorY": -38.26113072966113,
+            "depth": 15.44080268754303
+          }
+        ],
+        "recesses": [],
+        "matings": [
+          {
+            "id": "mate-head-keel-head-underpan",
+            "fromId": "head-keel",
+            "toId": "head-underpan",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -27.684393650541725,
+                "z": -102.07500000000002
+              },
+              {
+                "x": 0,
+                "y": -27.684393650541725,
+                "z": -102.07500000000002
+              },
+              {
+                "x": 0.2,
+                "y": -27.684393650541725,
+                "z": -102.07500000000002
+              }
+            ]
+          },
+          {
+            "id": "mate-head-keel-head-belly--1",
+            "fromId": "head-keel",
+            "toId": "head-belly--1",
+            "contactPoints": [
+              {
+                "x": -22.677653397478807,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              },
+              {
+                "x": -22.477653397478807,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              },
+              {
+                "x": -22.277653397478808,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              }
+            ]
+          },
+          {
+            "id": "mate-head-keel-head-belly-1",
+            "fromId": "head-keel",
+            "toId": "head-belly-1",
+            "contactPoints": [
+              {
+                "x": 22.277653397478808,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              },
+              {
+                "x": 22.477653397478807,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              },
+              {
+                "x": 22.677653397478807,
+                "y": -27.684393650541725,
+                "z": -86.10000000000002
+              }
+            ]
+          },
+          {
+            "id": "mate-head-keel-machinery-keel",
+            "fromId": "head-keel",
+            "toId": "machinery-keel",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -27.684393650541725,
+                "z": -49.890000000000015
+              },
+              {
+                "x": 0,
+                "y": -27.684393650541725,
+                "z": -49.890000000000015
+              },
+              {
+                "x": 0.2,
+                "y": -27.684393650541725,
+                "z": -49.890000000000015
+              }
+            ]
+          },
+          {
+            "id": "mate-machinery-keel-drive-undercradle",
+            "fromId": "machinery-keel",
+            "toId": "drive-undercradle",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -23.120328042118103,
+                "z": 68.16000000000001
+              },
+              {
+                "x": 0,
+                "y": -23.120328042118103,
+                "z": 68.16000000000001
+              },
+              {
+                "x": 0.2,
+                "y": -23.120328042118103,
+                "z": 68.16000000000001
+              }
+            ]
+          }
+        ]
+      },
+      "sourceUnchanged": true,
+      "upperUnchanged": true,
+      "mountsUnchanged": true,
+      "macroUnchanged": true,
+      "jsonDeterminism": true,
+      "webglDeterminism": true,
+      "shots": [
+        {
+          "name": "before-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 61,
+            "triangles": 3204
+          }
+        },
+        {
+          "name": "structure-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 69,
+            "triangles": 4000
+          }
+        },
+        {
+          "name": "mounted-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 209,
+            "triangles": 9712
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 61,
+            "triangles": 3204
+          }
+        },
+        {
+          "name": "structure-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 69,
+            "triangles": 4000
+          }
+        },
+        {
+          "name": "mounted-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 209,
+            "triangles": 9712
+          }
+        },
+        {
+          "name": "before-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 61,
+            "triangles": 3204
+          }
+        },
+        {
+          "name": "structure-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 69,
+            "triangles": 4000
+          }
+        },
+        {
+          "name": "mounted-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 209,
+            "triangles": 9712
+          }
+        },
+        {
+          "name": "structure-TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 69,
+            "triangles": 4000
+          }
+        },
+        {
+          "name": "structure-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 69,
+            "triangles": 4000
+          }
+        }
+      ]
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "source": "qa/v1.8.2/limited-families/final-review/ENGINE_DOMINANT/blueprint.json",
+      "sourceSha256": "559324fa8e86ad9d045b4344780ab0f90e9fb493dafb28540077580ad98ed7af",
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull",
+          "Sampled non-parent Hull intrusion, stored shared ventral junction contacts",
+          "Measured outward ventral tiers and open local maintenance recess"
+        ],
+        "minimumChannelDepth": 7.458699828307015,
+        "maximumMountLift": 14.657091769299385
+      },
+      "ventral": {
+        "sourceComponentIds": [
+          "forward-guard",
+          "command-saddle",
+          "command-cap",
+          "lateral-drive--1-hood--1",
+          "lateral-drive--1-belt--1",
+          "lateral-drive--1-hood-1",
+          "lateral-drive--1-belt-1",
+          "vertical-drive--1-hood--1",
+          "vertical-drive--1-belt--1",
+          "vertical-drive--1-hood-1",
+          "vertical-drive--1-belt-1",
+          "lateral-drive-1-hood--1",
+          "lateral-drive-1-belt--1",
+          "lateral-drive-1-hood-1",
+          "lateral-drive-1-belt-1",
+          "vertical-drive-1-hood--1",
+          "vertical-drive-1-belt--1",
+          "vertical-drive-1-hood-1",
+          "vertical-drive-1-belt-1"
+        ],
+        "componentIds": [
+          "core-lower-axis",
+          "core-underpan",
+          "lateral-drive--1-lower-cradle",
+          "vertical-drive--1-lower-cradle",
+          "lateral-drive-1-lower-cradle",
+          "vertical-drive-1-lower-cradle"
+        ],
+        "levels": [
+          {
+            "id": "forward-underpan",
+            "parentStructureId": "command-core",
+            "position": {
+              "x": 19.224308826791088,
+              "y": -27.81545767768451,
+              "z": -90.61500000000001
+            },
+            "hullY": -23.733141163802827,
+            "exteriorY": -27.81545767768451,
+            "depth": 4.082316513881683
+          },
+          {
+            "id": "central-keel",
+            "parentStructureId": "command-core",
+            "position": {
+              "x": 0,
+              "y": -39.73314116380283,
+              "z": -69.75
+            },
+            "hullY": -23.733141163802827,
+            "exteriorY": -39.73314116380283,
+            "depth": 16
+          },
+          {
+            "id": "independent-drive",
+            "parentStructureId": "vertical-drive--1",
+            "position": {
+              "x": 0,
+              "y": -86.30399773880397,
+              "z": 30.749999999999986
+            },
+            "hullY": -78.74249688737792,
+            "exteriorY": -86.30399773880397,
+            "depth": 7.561500851426047
+          }
+        ],
+        "recesses": [],
+        "matings": [
+          {
+            "id": "mate-core-lower-axis-core-underpan",
+            "fromId": "core-lower-axis",
+            "toId": "core-underpan",
+            "contactPoints": [
+              {
+                "x": -0.2,
+                "y": -24.033141163802828,
+                "z": -80.985
+              },
+              {
+                "x": 0,
+                "y": -24.033141163802828,
+                "z": -80.985
+              },
+              {
+                "x": 0.2,
+                "y": -24.033141163802828,
+                "z": -80.985
+              }
+            ]
+          }
+        ]
+      },
+      "sourceUnchanged": true,
+      "upperUnchanged": true,
+      "mountsUnchanged": true,
+      "macroUnchanged": true,
+      "jsonDeterminism": true,
+      "webglDeterminism": true,
+      "shots": [
+        {
+          "name": "before-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 90,
+            "triangles": 4980
+          }
+        },
+        {
+          "name": "structure-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 96,
+            "triangles": 5508
+          }
+        },
+        {
+          "name": "mounted-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 236,
+            "triangles": 11220
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 90,
+            "triangles": 4980
+          }
+        },
+        {
+          "name": "structure-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 96,
+            "triangles": 5508
+          }
+        },
+        {
+          "name": "mounted-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 236,
+            "triangles": 11220
+          }
+        },
+        {
+          "name": "before-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 90,
+            "triangles": 4980
+          }
+        },
+        {
+          "name": "structure-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 96,
+            "triangles": 5508
+          }
+        },
+        {
+          "name": "mounted-SIDE",
+          "stage": "COMPLETE",
+          "view": "SIDE",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 236,
+            "triangles": 11220
+          }
+        },
+        {
+          "name": "structure-TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 96,
+            "triangles": 5508
+          }
+        },
+        {
+          "name": "structure-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 480,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 1000,
+          "diagnostics": {
+            "calls": 96,
+            "triangles": 5508
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

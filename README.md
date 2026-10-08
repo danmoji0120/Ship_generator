@@ -15,7 +15,13 @@ npm run build
 
 QA 전용 `buildLimitedStructuralArmor(source)`는 위 세 조건만 허용합니다. `generateBlueprintV181`로 얻은 원본을 복사한 뒤 선택적 `structuralArmorPilot`에 실제 체적, 접촉점, 연결부, 채널 실측과 낮은 Foundation을 직렬화합니다. 일반 생성기 전체에 새 구조를 자동 적용하지 않으며 과거 JSON에도 소급 적용하지 않습니다.
 
-후속 하부 검토는 저장된 Seed 7 한 척에만 `buildVentralArmorReview`를 적용합니다. 266m Ventral Keel과 7/12/16/23m의 하부 구조적 깊이, 복부 보호 블록, 후방 Cradle, 국소 정비 포켓을 추가하며 기존 상부와 Mount는 보존합니다. [하부 구조 검토와 실제 3방향 비교](qa/v1.8.2/VENTRAL_REVIEW.md)를 확인하세요. `tests/ventral-structure.test.ts` 및 `tests/ventral-structure-qa.mjs`로 해당 한 척만 재검증할 수 있습니다.
+후속 하부 검토에서는 먼저 Seed 7의 기존 7개 체적을 그대로 유지하며 선수 수렴, Keel–복부 보호 블록 접합, 후방 Cradle의 유입·수렴 형상을 정리했습니다. 기존 상부와 Mount는 변경하지 않았습니다. 이어서 `buildLimitedVentralReview(source)`를 **위 세 대표 저장본에만** 적용하여, Hammerhead의 전방 보호부–기계 축–후방 연결과 Engine-dominant의 독립 나셀별 국소 Cradle을 확인했습니다. [초기 하부 승인 자료](qa/v1.8.2/VENTRAL_REVIEW.md)는 보존하며, [후속 흐름 정리 / 세 Family 실제 렌더](qa/v1.8.2/VENTRAL_FLOW_REFINEMENT.md)에 현재 결과와 한계를 기록합니다. 이는 전체 V1.8.2 출시나 다른 Seed에 대한 일반화를 의미하지 않습니다.
+
+```bash
+npx vitest run tests/ventral-structure.test.ts tests/ventral-limited.test.ts
+# dev 서버 실행 후 기존 증거를 덮어쓰지 않는 새 출력 폴더 사용
+VENTRAL_LIMITED_OUTPUT=qa/v1.8.2/ventral-flow/local-review node tests/ventral-limited-qa.mjs
+```
 
 ```bash
 npx vitest run tests/structural-armor-pilot.test.ts tests/structural-armor-limited.test.ts

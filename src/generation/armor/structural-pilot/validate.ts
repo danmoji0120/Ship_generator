@@ -6,6 +6,7 @@ import { cross, solidTriangles, area, normal, inPolygon } from '../panels';
 import { equipmentReservations, inReservedZone } from '../../integration/reservations';
 import { reservationSamples } from '../geometry';
 import {undersideHit} from './intersection';
+import {ventralBodyBuilder} from './ventral-geometry';
 /** Exact stored triangle-ray parity, including faceted nonplanar loft sides. No AABB seating test. */
 export function containsStructuralArmor(c:StructuralArmorComponent,p:Vec3,tolerance=0) {
   const ray={x:1,y:.3713907,z:.529817},hits:number[]=[];
@@ -90,11 +91,16 @@ export function validateStructuralArmorPilot(b:ShipBlueprint) {
   checks.push('Open structural channels above intact structural hull');
   if(pilot.ventral){
     const v=pilot.ventral;
-    if(b.macroDesign?.family!=='WEDGE_CITADEL'||b.architecture.grammar!=='MONOLITHIC')issues.push('Ventral review outside authorized ship');
+    if(pairs[b.macroDesign?.family??'']!==b.architecture.grammar)issues.push('Ventral review outside authorized family pairs');
     if(v.componentIds.some(id=>!ids.has(id))||v.sourceComponentIds.some(id=>!ids.has(id)))issues.push('Ventral component references');
     const lower=pilot.components.filter(c=>v.componentIds.includes(c.id));
     for(const level of v.levels){
       const hit=undersideHit(lower,level.position.x,level.position.z);
+      if(level.parentStructureId){
+        const parent=b.structuralVolumes.find(v=>v.id===level.parentStructureId);
+        if(!parent)issues.push(`Ventral level parent ${level.id}`);
+        else try{if(Math.abs(ventralBodyBuilder(parent,[],b.order.length).hullBottom(level.position.x,level.position.z)-level.hullY)>.001)issues.push(`Ventral hull surface measurement ${level.id}`);}catch{issues.push(`Ventral level outside parent ${level.id}`);}
+      }
       if(!hit||Math.abs(hit.y-level.exteriorY)>.001||Math.abs(level.hullY-level.exteriorY-level.depth)>.001)issues.push(`Ventral level measurements ${level.id}`);
     }
     const levels=[...new Set(v.levels.map(p=>Math.round(p.depth)))].sort((a,d)=>a-d);
@@ -103,6 +109,17 @@ export function validateStructuralArmorPilot(b:ShipBlueprint) {
       if(recess.boundaryIds.some(id=>!v.componentIds.includes(id)))issues.push(`Recess boundary references ${recess.id}`);
       if(recess.floor.some(p=>pilot.components.some(c=>containsStructuralArmor(c,{...p,y:p.y-.5},-.01))))issues.push(`Filled ventral recess ${recess.id}`);
     }
+    for(const c of lower){
+      const parents=[c.parentStructureId,...(c.additionalParentIds??[])];
+      const samples=solidTriangles(c.solid).flatMap(([a,d,e])=>[a,mix(a,d,.5),mix(d,e,.5),mix(e,a,.5)]);
+      for(const other of b.structuralVolumes.filter(p=>!parents.includes(p.id)))
+        if(samples.some(p=>containsVolume(other,p,-.05)))issues.push(`Ventral intrudes unrelated hull ${c.id}/${other.id}`);
+    }
+    for(const mate of v.matings??[]){
+      const a=lower.find(c=>c.id===mate.fromId),d=lower.find(c=>c.id===mate.toId);
+      if(!a||!d||mate.contactPoints.length<3||mate.contactPoints.some(p=>!containsStructuralArmor(a,p)||!containsStructuralArmor(d,p)))issues.push(`Unmated ventral junction ${mate.id}`);
+    }
+    checks.push('Sampled non-parent Hull intrusion, stored shared ventral junction contacts');
     checks.push('Measured outward ventral tiers and open local maintenance recess');
   }
   return{issues:[...new Set(issues)],checks,minimumChannelDepth:Math.min(...pilot.channels.map(c=>c.depth)),maximumMountLift:pilot.validation.maximumMountLift};

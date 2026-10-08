@@ -1,0 +1,185 @@
+{
+  "method": "Selected index exported without unrelated local drafts; rebuilt and captured on independent Vite port 5188",
+  "files": [
+    {
+      "file": "ENGINE_DOMINANT/before-BOTTOM.png",
+      "sha256": "c0be7eefa88992bf140d22835f405f07c61da831de880936db718c5f657fa7e0",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/before-LOW-ISOMETRIC.png",
+      "sha256": "9374e82cbfb2020557132b52b393aab91be9e9486f24503c83b9d85e4425f0e7",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/before-SIDE.png",
+      "sha256": "6a938b320225f3b2d72bf19a60c8e4e3a8b0ffe9fb69187798973015ea4921fa",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/blueprint.json",
+      "sha256": "cf0a09910e004fc6b1b1834798461f2f5fb7d0fef7035077423de43a823eaf82",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/mounted-BOTTOM.png",
+      "sha256": "583965d5759ea8ede98ca16e74974422c47e10737503c1793483572944a16d65",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/mounted-LOW-ISOMETRIC.png",
+      "sha256": "53a8383766484f3d28439dd46ac28034907eae6c5aa9772a165ad90527c0edce",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/mounted-SIDE.png",
+      "sha256": "18b04fd22eb2c9c2d51334627b8230a96537289b3b85cf54a645bee804cf86de",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/structure-BOTTOM.png",
+      "sha256": "583965d5759ea8ede98ca16e74974422c47e10737503c1793483572944a16d65",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/structure-ISOMETRIC.png",
+      "sha256": "e49ce632585fc4a6fc651191dd5bf59b3d0f7a8429add325be146cd7c584d72d",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/structure-LOW-ISOMETRIC.png",
+      "sha256": "53a8383766484f3d28439dd46ac28034907eae6c5aa9772a165ad90527c0edce",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/structure-SIDE.png",
+      "sha256": "d2b6d968aa3c6d6471a4eed5a49423e2d48339103653bb35a98d3207620ca14b",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "ENGINE_DOMINANT/structure-TOP.png",
+      "sha256": "378959fed1d609aefde54543047e3df2462da75cad126e168a545aa730c2800e",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/before-BOTTOM.png",
+      "sha256": "3615bc8a446a900baf50cd9dc5eaf96dd1bea079ee8f856a011c429b12069049",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/before-LOW-ISOMETRIC.png",
+      "sha256": "93cd07028ddaf833cd7bceb5960efbcc5cbd6fcfc2f0a6af395f4ea903fe9a40",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/before-SIDE.png",
+      "sha256": "a633cee928ac17e2a993023f6f897ccb0e20c6b949896121b86d0c6308631639",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/blueprint.json",
+      "sha256": "6d441ca9d787498f681a57c70fa7ce7e80630086bb0165f2990e7323453cc448",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/mounted-BOTTOM.png",
+      "sha256": "e01d1484d2670868b638c7f44164809d3bec33884506b342f38d900f9aec15a9",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/mounted-LOW-ISOMETRIC.png",
+      "sha256": "d8b0965afaddd9a0175168d84a8fd786bbcacfb134052f0a6bc36ebef4631ceb",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/mounted-SIDE.png",
+      "sha256": "1b6545e0a354eaca8644b1dd5a63d15cb562e2e02f4b1c210e535be9a96de8a5",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/structure-BOTTOM.png",
+      "sha256": "e01d1484d2670868b638c7f44164809d3bec33884506b342f38d900f9aec15a9",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/structure-ISOMETRIC.png",
+      "sha256": "76f27e1bb6b4772ee6e1b97a7468c391d46ff00e845ff2096eeb638753a74030",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/structure-LOW-ISOMETRIC.png",
+      "sha256": "d8b0965afaddd9a0175168d84a8fd786bbcacfb134052f0a6bc36ebef4631ceb",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/structure-SIDE.png",
+      "sha256": "6c54b5d686852ded05aef0c2692a3a7466a2255654b65040219c5703cabfbc00",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "HAMMERHEAD/structure-TOP.png",
+      "sha256": "544f12ea002e49ca28f27ec98fa88bf979cb65686256e6eace9f84e785911dbc",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/before-BOTTOM.png",
+      "sha256": "bf06d18f35890ed553b41096b86b95bc4c8321a876aa538481d4a1099f14285d",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/before-LOW-ISOMETRIC.png",
+      "sha256": "0c7208e9e8e9ac184375bd2ff5e62e2d21dba1e3337d010f455699b8d70f61d7",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/before-SIDE.png",
+      "sha256": "c6b304139ae3988fbd4d053567d27595eb09526d17e0143dfa3850dfa1696360",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/blueprint.json",
+      "sha256": "d47ca7bd81b9652eb6d29737bdecb60dd892ad115cb8c3f2f47d766d37d53964",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/mounted-BOTTOM.png",
+      "sha256": "21bc4513b47d367bd7ac3f1c3b7bc2434be4b73d4d71f0fe69da24fbc34a0777",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/mounted-LOW-ISOMETRIC.png",
+      "sha256": "b8249529f36e6a797dbcc07d926d6a45197666b2df8d5d19e6effc467c564017",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/mounted-SIDE.png",
+      "sha256": "66f33660708135b5b018716a01b0262bd8e138bee86e84cf3e15f74f532eb403",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/structure-BOTTOM.png",
+      "sha256": "21bc4513b47d367bd7ac3f1c3b7bc2434be4b73d4d71f0fe69da24fbc34a0777",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/structure-ISOMETRIC.png",
+      "sha256": "2485bfb898c270232b277247bb9b5bd62cade17fa2a2c0423db7e893c2262fe4",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/structure-LOW-ISOMETRIC.png",
+      "sha256": "b8249529f36e6a797dbcc07d926d6a45197666b2df8d5d19e6effc467c564017",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/structure-SIDE.png",
+      "sha256": "a3401a9ace78aecf045668cff25e6febe7facbf874e8217cb245c03c0424997a",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "WEDGE_CITADEL/structure-TOP.png",
+      "sha256": "36a6daa94e50a17642833c6d1bf3d3bbb9e4076d37fa306a67d0ac6589a527e6",
+      "matchesSelectedTree": true
+    }
+  ]
+}

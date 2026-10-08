@@ -57,3 +57,6 @@ VENTRAL_OUTPUT=qa/v1.8.2/structural-pilot/ventral/local-review node tests/ventra
 ## 한계
 
 고정된 한 척의 축 정렬 구조 시안이다. 추가 외장 체적에 대한 물리적 강도·질량·방호 계산은 하지 않는다. 정비 포켓은 기존 Hull 바깥의 열린 보호 공간이며 내부 구획이 아니다. 기존 삼각형 접촉/상호 원통 샘플 충돌 검사는 완전한 모든 Triangle 교차나 CSG 검사가 아니다. 자유 회전 Hull, 실제 무기 Bay, 다른 체급·조선소로의 일반화는 검증하지 않았다.
+
+
+후속 승인 범위의 흐름 정리와 세 Family 제한 검증은 [VENTRAL_FLOW_REFINEMENT.md](VENTRAL_FLOW_REFINEMENT.md)를 참조합니다. 이 문서와 기존 이미지/JSON은 초기 하부 승인 상태를 보존합니다.

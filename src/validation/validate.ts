@@ -10,6 +10,7 @@ import {
   volumeBounds,
   exposedVolumeSurface,
 } from "../generation/architecture/volumes";
+import {stationCacheEqual} from "./station-cache";
 import { shapeStations } from "../generation/shapes/definition";
 import { SHAPE_KINDS, JOIN_TYPES } from "../blueprint/types";
 import { hullSurfaceAt } from "../generation/hull";
@@ -59,8 +60,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       )
         errors.push(`Invalid shape ${v.id}`);
       else if (
-        JSON.stringify(shapeStations(v.shape)) !==
-        JSON.stringify(v.geometry.stations)
+        !stationCacheEqual(shapeStations(v.shape),v.geometry.stations)
       )
         errors.push(`Shape cache mismatch ${v.id}`);
       if (!v.hierarchyTier || v.hierarchyTier < 1 || v.hierarchyTier > 3)

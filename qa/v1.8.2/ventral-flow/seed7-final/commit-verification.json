@@ -1,0 +1,55 @@
+{
+  "method": "Independent selected-tree build, same fixed 360m frame and approved initial lower source",
+  "files": [
+    {
+      "file": "before-BOTTOM.png",
+      "sha256": "b1eb9d02f6398c376260487b7fb7ca55c109292721336dc85942499625e71ba3",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "before-LOW-ISOMETRIC.png",
+      "sha256": "acee68fc74b6726c8da57b76b5b9f2514c590df5a92c4dc691d222504c82bb01",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "before-SIDE.png",
+      "sha256": "bf52bf5d96d703769a4f193101397e6caabfa0d504d19e80ecad43ffda008cdb",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "blueprint.json",
+      "sha256": "d47ca7bd81b9652eb6d29737bdecb60dd892ad115cb8c3f2f47d766d37d53964",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "mounted-BOTTOM.png",
+      "sha256": "6428537ffd694dd6e83427a49801e6ee16bb3353a183b54c290d71570a143601",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "mounted-LOW-ISOMETRIC.png",
+      "sha256": "d98df942a9c897f8880152ceea5d4c650a486f3a6febe801d1f89b81405637d1",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "mounted-SIDE.png",
+      "sha256": "9d0271d30775eddafb4b26bdb852d88337e9a89c1ef1d0ed280ab63dec45311f",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "structure-BOTTOM.png",
+      "sha256": "6428537ffd694dd6e83427a49801e6ee16bb3353a183b54c290d71570a143601",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "structure-LOW-ISOMETRIC.png",
+      "sha256": "d98df942a9c897f8880152ceea5d4c650a486f3a6febe801d1f89b81405637d1",
+      "matchesSelectedTree": true
+    },
+    {
+      "file": "structure-SIDE.png",
+      "sha256": "c1bd04068ae1232df1b7289212cfa9828d6614abe8e2213d41567c101d9f2e36",
+      "matchesSelectedTree": true
+    }
+  ]
+}

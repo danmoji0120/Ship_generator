@@ -16,11 +16,12 @@ export interface StructuralArmorComponent {
 }
 export interface StructuralArmorPilot {
   status: 'one-ship-review' | 'limited-family-review';
-  revision?: 'refined-connections' | 'ventral-keel-review';
+  revision?: 'refined-connections' | 'ventral-keel-review' | 'ventral-flow-review';
   ventral?: {
+    matings?: {id:string;fromId:string;toId:string;contactPoints:Vec3[]}[];
     sourceComponentIds: string[];
     componentIds: string[];
-    levels: {id:string;position:Vec3;hullY:number;exteriorY:number;depth:number}[];
+    levels: {id:string;parentStructureId?:string;position:Vec3;hullY:number;exteriorY:number;depth:number}[];
     recesses: {id:string;purpose:'MAINTENANCE';floor:Vec3[];mouthDepth:number;width:number;length:number;boundaryIds:string[]}[];
   };
   joints?: { id:string; fromId:string; toId:string; bridgeId:string; contactPoints:Vec3[] }[];
