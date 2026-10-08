@@ -1,6 +1,6 @@
 {
   "name": "procedural-shipyard",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "qa": "node tests/browser-qa.mjs",
+    "qa:gallery": "node tests/gallery-qa.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

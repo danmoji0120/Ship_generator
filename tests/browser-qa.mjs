@@ -21,8 +21,8 @@ page.on("pageerror", (e) => errors.push(e.message));
 page.on("console", (m) => {
   if (m.type() === "error") errors.push(m.text());
 });
-await mkdir("qa", { recursive: true });
-await mkdir("qa/v1", { recursive: true });
+const output = process.env.QA_OUTPUT || "qa/v1.5/regression";
+await mkdir(output, { recursive: true });
 await page.goto(process.env.QA_URL || "http://localhost:5173");
 await page.waitForFunction(() => window.shipyardQA?.getBlueprint());
 await page.waitForTimeout(500);
@@ -167,7 +167,7 @@ for (const [i, [name, partial]] of cases.entries())
     await page.waitForTimeout(140);
     await page
       .locator(".viewer-panel")
-      .screenshot({ path: `qa/v1/${name}-${seed}.png` });
+      .screenshot({ path: `${output}/${name}-${seed}.png` });
     results.push({
       name,
       seed,
@@ -217,7 +217,7 @@ for (const mode of [
   await page.waitForTimeout(100);
   await page
     .locator(".viewer-panel")
-    .screenshot({ path: `qa/v1/debug-${mode.replaceAll(" ", "-")}.png` });
+    .screenshot({ path: `${output}/debug-${mode.replaceAll(" ", "-")}.png` });
 }
 await page.locator("#top").click();
 await page.waitForTimeout(100);
@@ -228,7 +228,7 @@ await page.locator("#rear").click();
 await page.waitForTimeout(250);
 await page
   .locator(".viewer-panel")
-  .screenshot({ path: "qa/v1/rear-engines.png" });
+  .screenshot({ path: `${output}/rear-engines.png` });
 // Exercise real OrbitControls drag and wheel, then reset.
 const canvas = page.locator("canvas"),
   bounds = await canvas.boundingBox();
@@ -269,7 +269,7 @@ const download = page.waitForEvent("download");
 await page.locator("#export").click();
 const file = await download;
 assert.match(file.suggestedFilename(), /\.blueprint\.json$/);
-await file.saveAs("qa/v1/export.blueprint.json");
+await file.saveAs(`${output}/export.blueprint.json`);
 const oldSeed = await page.locator("#seed").inputValue();
 await page.locator("#random").click();
 assert.notEqual(await page.locator("#seed").inputValue(), oldSeed);
@@ -293,7 +293,7 @@ await page.evaluate((o) => window.shipyardQA.generate(o, 742091), defaultOrder);
 await page.locator('[data-debug="Normal"]').click();
 await page.locator("#fit").click();
 await page.waitForTimeout(300);
-await page.screenshot({ path: "qa/v1/desktop.png" });
+await page.screenshot({ path: `${output}/desktop.png` });
 await page.setViewportSize({ width: 390, height: 844 });
 await page.waitForTimeout(400);
 assert.ok(
@@ -301,7 +301,7 @@ assert.ok(
     () => document.documentElement.scrollWidth <= window.innerWidth,
   ),
 );
-await page.screenshot({ path: "qa/v1/mobile.png", fullPage: true });
+await page.screenshot({ path: `${output}/mobile.png`, fullPage: true });
 assert.deepEqual(errors, []);
 const report = {
   browser: "Chromium / WebGL SwiftShader",
@@ -319,6 +319,6 @@ const report = {
   blueprintHash: createHash("sha256").update(first.json).digest("hex"),
   results,
 };
-await writeFile("qa/v1/report.json", JSON.stringify(report, null, 2));
+await writeFile(`${output}/report.json`, JSON.stringify(report, null, 2));
 console.log(JSON.stringify({ ...report, results: undefined }, null, 2));
 await browser.close();

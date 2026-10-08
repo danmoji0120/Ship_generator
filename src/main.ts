@@ -114,7 +114,9 @@ function generate() {
     const volumes = next.structuralVolumes,
       counts = (type: string) => volumes.filter((v) => v.type === type).length;
     $("architecture-summary").innerHTML =
-      `<strong>${next.architecture.grammar.replaceAll("_", " ")}</strong><span>${volumes.length} major volumes · ${next.structuralConnectors.length} connectors · ${next.trusses.length} trusses</span><span>Hull ${counts("PRIMARY_HULL") + counts("HULL_BLOCK") + counts("ARMOR_BLOCK")} / Pod ${counts("POD")} / Nacelle ${counts("NACELLE")} / Spine ${counts("SPINE")}</span>`;
+      `<strong>${next.architecture.grammar.replaceAll("_", " ")}</strong><span>${next.architecture.composition} · ${volumes.length} major volumes · ${next.structuralConnectors.length} connectors · ${next.trusses.length} trusses</span><span>Hull ${counts("PRIMARY_HULL") + counts("HULL_BLOCK") + counts("ARMOR_BLOCK")} / Pod ${counts("POD")} / Nacelle ${counts("NACELLE")} / Spine ${counts("SPINE")}</span>`;
+    $("architecture-summary").innerHTML +=
+      `<span>Shapes: ${[...new Set(volumes.map((v) => v.shape?.kind))].join(" / ")} · Joins: ${[...new Set(next.structuralConnectors.map((c) => c.join?.type))].join(" / ")}</span>`;
     $("engine-pattern").textContent =
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =
@@ -162,7 +164,10 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
     $("debug-legend").hidden = mode === "Normal";
     $("debug-legend").textContent =
       mode === "Hardpoints"
-        ? "BLUE / TURRET   ·   AMBER / MISSILE   ·   MINT / SENSOR   ·   ARROW / NORMAL"
+        ? "ARROW / NORMAL · " +
+          blueprint.hardpoints
+            .map((h) => `${h.id}: ${h.type} ${h.size} → ${h.parentId}`)
+            .join(" · ")
         : mode === "Hull Sections"
           ? "COLOR / LOGICAL HULL SECTION   ·   OUTLINE / STATION BOUNDARY"
           : mode === "Engines"

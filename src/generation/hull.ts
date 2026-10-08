@@ -79,21 +79,38 @@ export function generateHull(
 }
 /** Exact shared eight-point cross section; generation attachments and renderer use the same surface. */
 export function profileRing(s: HullStation): [number, number][] {
+  if (s.sectionRing) return s.sectionRing;
   const w = s.width / 2,
     h = s.height / 2;
   let b = s.bevel;
   if (s.profile === "box") b = 0.03;
   if (s.profile === "diamond") b = 0.93;
+  if (s.profile === "hex" && s.roundness !== undefined) {
+    // Six faces, with two collinear subdivisions on the lower diagonals to retain eight-vertex loft topology.
+    const top = h * (1 - s.topSlope),
+      bottom = -h * (1 - (s.bottomSlope ?? 0));
+    return [
+      [-0.55 * w, top],
+      [0.55 * w, top],
+      [w, 0],
+      [0.775 * w, bottom * 0.5],
+      [0.55 * w, bottom],
+      [-0.55 * w, bottom],
+      [-0.775 * w, bottom * 0.5],
+      [-w, 0],
+    ];
+  }
   if (s.profile === "hex") b = 0.45;
-  if (s.profile === "rounded") b = 0.36;
+  if (s.profile === "rounded")
+    b = s.roundness === undefined ? 0.36 : 0.4 + s.roundness * 0.25;
   if (s.profile === "flattened") b = 0.48;
   return [
     [-w * (1 - b), h * (1 - s.topSlope)],
     [w * (1 - b), h * (1 - s.topSlope)],
     [w, h * (1 - b - s.sideSlope)],
     [w, -h * (1 - b)],
-    [w * (1 - b), -h],
-    [-w * (1 - b), -h],
+    [w * (1 - b), -h * (1 - (s.bottomSlope ?? 0))],
+    [-w * (1 - b), -h * (1 - (s.bottomSlope ?? 0))],
     [-w, -h * (1 - b)],
     [-w, h * (1 - b - s.sideSlope)],
   ];
@@ -108,6 +125,13 @@ export function stationAt(stations: HullStation[], z: number): HullStation {
     t = Math.max(0, Math.min(1, (z - a.z) / (b.z - a.z)));
   return {
     ...a,
+    sectionRing: profileRing(a).map((p, i) => {
+      const q = profileRing(b)[i];
+      return [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t] as [
+        number,
+        number,
+      ];
+    }),
     z,
     width: a.width + (b.width - a.width) * t,
     height: a.height + (b.height - a.height) * t,

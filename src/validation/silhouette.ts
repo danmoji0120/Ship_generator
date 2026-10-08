@@ -97,7 +97,29 @@ export function silhouetteMetrics(
       }
     occupancy[name] = filled / (resolution * resolution);
   }
+  const sizes = volumes.map(
+      (v) => v.dimensions.x * v.dimensions.y * v.dimensions.z,
+    ),
+    mass = sizes.reduce((a, b) => a + b, 0),
+    length = bounds.max.z - bounds.min.z;
+  const foreRatio =
+    volumes.reduce((acc, v, i) => acc + (v.position.z < 0 ? sizes[i] : 0), 0) /
+    mass;
+  const joinDistribution: NonNullable<
+    SilhouetteMetrics["massHierarchy"]
+  >["joinDistribution"] = {};
+  for (const c of connectors)
+    if (c.join)
+      joinDistribution[c.join.type] = (joinDistribution[c.join.type] ?? 0) + 1;
   return {
+    massHierarchy: {
+      primaryRatio: Math.max(...sizes) / mass,
+      foreRatio,
+      aftRatio: 1 - foreRatio,
+      lateralSpread: (bounds.max.x - bounds.min.x) / length,
+      verticalSpread: (bounds.max.y - bounds.min.y) / length,
+      joinDistribution,
+    },
     slenderness: (bounds.max.z - bounds.min.z) / (bounds.max.x - bounds.min.x),
     majorVolumeCount: volumes.length,
     occupancy,
@@ -122,6 +144,12 @@ export function validateSilhouette(
     errors.push("Major volume budget");
   if (metrics.occupancy.top < 0.11 || metrics.occupancy.side < 0.12)
     errors.push("Insufficient projected occupancy");
+  if (
+    metrics.massHierarchy &&
+    metrics.majorVolumeCount >= 4 &&
+    metrics.massHierarchy.primaryRatio < 0.18
+  )
+    errors.push("No primary mass hierarchy");
   if (metrics.disconnectedPenalty !== 0) errors.push("Disconnected silhouette");
   return errors;
 }

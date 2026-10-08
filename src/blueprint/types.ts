@@ -35,12 +35,15 @@ export interface Vec3 {
 export type Profile =
   "box" | "chamfer" | "hex" | "diamond" | "flattened" | "rounded";
 export interface HullStation {
+  sectionRing?: [number, number][];
   z: number;
   width: number;
   height: number;
   profile: Profile;
   topSlope: number;
   sideSlope: number;
+  bottomSlope?: number;
+  roundness?: number;
   bevel: number;
 }
 export interface HullSection {
@@ -186,6 +189,65 @@ export type NoseArchitecture =
   | "sensor nose"
   | "block nose"
   | "tapered industrial";
+export const SHAPE_KINDS = [
+  "BOX",
+  "CHAMFERED_BOX",
+  "WEDGE",
+  "TAPERED_PRISM",
+  "HEX_PRISM",
+  "FLATTENED_HEX",
+  "ARMORED_CYLINDER",
+  "CLIPPED_BOX",
+  "SHORT_LOFT",
+  "LONG_LOFT",
+  "COMPOUND_LOFT",
+] as const;
+export type ShapeKind = (typeof SHAPE_KINDS)[number];
+/** Local +Z is aft. Stations are derived from these parameters, never from a Mesh. */
+export interface ShapeDefinition {
+  kind: ShapeKind;
+  length: number;
+  width: number;
+  height: number;
+  frontScale: number;
+  rearScale: number;
+  topSlope: number;
+  bottomSlope: number;
+  sideSlope: number;
+  chamfer: number;
+  roundness: number;
+  frontProfile: Profile;
+  rearProfile: Profile;
+  taper: number;
+  waist: number;
+  shoulder: number;
+}
+export const JOIN_TYPES = [
+  "FLUSH",
+  "OVERLAP",
+  "ARMORED_COLLAR",
+  "STRUCTURAL_NECK",
+  "TRANSITION",
+  "RECESSED",
+  "TRUSS",
+  "BOOM",
+  "BRIDGE",
+  "NACELLE_MOUNT",
+] as const;
+export type JoinType = (typeof JOIN_TYPES)[number];
+export interface JoinDefinition {
+  type: JoinType;
+  length: number;
+  width: number;
+  height: number;
+  overlap: number;
+  inset: number;
+  transitionRatio: number;
+  armorScale: number;
+  supportScale: number;
+  styleVariant: number;
+  supportLoad: number;
+}
 export interface StructuralVolume {
   id: string;
   type: VolumeType;
@@ -201,6 +263,8 @@ export interface StructuralVolume {
   position: Vec3;
   rotation: Vec3;
   dimensions: Vec3;
+  shape?: ShapeDefinition;
+  hierarchyTier?: 1 | 2 | 3;
   geometry: { primitive: VolumePrimitive; stations: HullStation[] };
   connectionIds: string[];
 }
@@ -212,6 +276,7 @@ export interface StructuralConnector {
   start: Vec3;
   end: Vec3;
   thickness: number;
+  join?: JoinDefinition;
   style:
     | "armored collar"
     | "straight beam"
@@ -220,6 +285,14 @@ export interface StructuralConnector {
     | "box truss";
 }
 export interface SilhouetteMetrics {
+  massHierarchy?: {
+    primaryRatio: number;
+    foreRatio: number;
+    aftRatio: number;
+    lateralSpread: number;
+    verticalSpread: number;
+    joinDistribution: Partial<Record<JoinType, number>>;
+  };
   slenderness: number;
   majorVolumeCount: number;
   occupancy: { front: number; side: number; top: number };
@@ -231,8 +304,10 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0";
+  generatorVersion: "1.0" | "1.5";
   architecture: {
+    composition?: string;
+    source?: "order" | "qa-fixed";
     grammar: ArchitectureGrammar;
     requestedGrammar: ArchitectureGrammar;
     components: ArchitectureGrammar[];

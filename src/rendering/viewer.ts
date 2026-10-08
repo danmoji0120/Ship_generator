@@ -74,6 +74,12 @@ export class ShipViewer {
     this.scene.add(this.ship);
     if (reset) this.fit(true);
   }
+  snapshot(b: ShipBlueprint, mode: DebugView = "Normal") {
+    this.mode = mode;
+    this.show(b);
+    this.renderer.render(this.scene, this.camera);
+    return this.renderer.domElement.toDataURL("image/png");
+  }
   setMode(mode: DebugView) {
     this.mode = mode;
     if (this.blueprint) this.show(this.blueprint, false);

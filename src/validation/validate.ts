@@ -6,6 +6,8 @@ import {
   volumeBounds,
   exposedVolumeSurface,
 } from "../generation/architecture/volumes";
+import { shapeStations } from "../generation/shapes/definition";
+import { SHAPE_KINDS, JOIN_TYPES } from "../blueprint/types";
 import { hullSurfaceAt } from "../generation/hull";
 import { connectedIds, validateSilhouette } from "./silhouette";
 function finite(v: unknown): boolean {
@@ -38,6 +40,26 @@ export function validateArchitecture(b: ShipBlueprint) {
   )
     errors.push("Unconnected major structure");
   for (const v of volumes.values()) {
+    if (b.generatorVersion === "1.5") {
+      if (
+        !v.shape ||
+        !SHAPE_KINDS.includes(v.shape.kind) ||
+        Math.min(v.shape.width, v.shape.height, v.shape.length) <= 0
+      )
+        errors.push(`Invalid shape ${v.id}`);
+      else if (
+        JSON.stringify(shapeStations(v.shape)) !==
+        JSON.stringify(v.geometry.stations)
+      )
+        errors.push(`Shape cache mismatch ${v.id}`);
+      if (!v.hierarchyTier || v.hierarchyTier < 1 || v.hierarchyTier > 3)
+        errors.push(`Invalid hierarchy ${v.id}`);
+      if (
+        v.type === "SPINE" &&
+        v.dimensions.z / Math.min(v.dimensions.x, v.dimensions.y) > 17
+      )
+        errors.push(`Spine slenderness ${v.id}`);
+    }
     if (
       Math.min(v.dimensions.x, v.dimensions.y) < l * 0.015 ||
       v.dimensions.z < l * 0.04
@@ -69,6 +91,13 @@ export function validateArchitecture(b: ShipBlueprint) {
       errors.push("Volume connection references");
   }
   for (const c of b.structuralConnectors) {
+    if (
+      b.generatorVersion === "1.5" &&
+      (!c.join ||
+        !JOIN_TYPES.includes(c.join.type) ||
+        Math.min(c.join.width, c.join.height, c.join.length) <= 0)
+    )
+      errors.push(`Invalid join ${c.id}`);
     const a = volumes.get(c.fromStructureId),
       d = volumes.get(c.toStructureId);
     if (!a || !d || a === d) {
@@ -86,12 +115,24 @@ export function validateArchitecture(b: ShipBlueprint) {
       !d.connectionIds.includes(c.id)
     )
       errors.push(`Invalid connector ${c.id}`);
+    if (
+      c.join?.type === "TRUSS" &&
+      c.thickness <
+        Math.min(
+          a.dimensions.x,
+          a.dimensions.y,
+          d.dimensions.x,
+          d.dimensions.y,
+        ) *
+          0.35
+    )
+      errors.push(`Undersized truss ${c.id}`);
     const gap = Math.hypot(
       c.end.x - c.start.x,
       c.end.y - c.start.y,
       c.end.z - c.start.z,
     );
-    if (gap < l * 0.002 || gap > l * 0.9)
+    if ((!c.join && gap < l * 0.002) || gap > l * 0.9)
       errors.push(`Invalid structural gap ${c.id}`);
   }
   const list = [...volumes.values()];
@@ -115,7 +156,17 @@ export function validateArchitecture(b: ShipBlueprint) {
           (v) => v.dimensions.x * v.dimensions.y * v.dimensions.z,
         ),
       );
-      if (overlap / smaller > 0.12)
+      const intentional = b.structuralConnectors.some(
+        (c) =>
+          ((c.fromStructureId === list[i].id &&
+            c.toStructureId === list[j].id) ||
+            (c.fromStructureId === list[j].id &&
+              c.toStructureId === list[i].id)) &&
+          c.join &&
+          c.join.type !== "TRUSS" &&
+          c.join.type !== "BOOM",
+      );
+      if (overlap / smaller > (intentional ? 0.55 : 0.12))
         errors.push(`Overlapping major volumes ${list[i].id}/${list[j].id}`);
     }
   for (const e of b.engines) {

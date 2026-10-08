@@ -1,0 +1,7 @@
+{
+  "productionMain": true,
+  "productionGallery": true,
+  "developmentOrderHooksAbsent": true,
+  "renderedThumbnails": 20,
+  "consoleErrors": []
+}

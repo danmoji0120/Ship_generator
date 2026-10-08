@@ -6,6 +6,10 @@ import type {
 } from "../blueprint/types";
 import { loftGeometry, beamBetween } from "./geometry";
 import type { DebugView } from "./ship";
+import {
+  shapeDefinition,
+  shapeStations,
+} from "../generation/shapes/definition";
 import { shipMaterials } from "./materials";
 const vector = (p: { x: number; y: number; z: number }) =>
   new THREE.Vector3(p.x, p.y, p.z);
@@ -19,7 +23,7 @@ export const VOLUME_COLORS: Record<VolumeType, number> = {
   DORSAL_STRUCTURE: 0xc9b4e0,
   VENTRAL_STRUCTURE: 0x8493a5,
 };
-function connectorGroup(
+export function connectorGroup(
   c: StructuralConnector,
   material: THREE.Material,
   scale: number,
@@ -30,6 +34,55 @@ function connectorGroup(
     delta = end.clone().sub(start),
     length = delta.length(),
     axis = delta.clone().normalize();
+  root.userData.connectorId = c.id;
+  root.userData.joinType = c.join?.type ?? c.type;
+  if (c.join && !["TRUSS", "BOOM"].includes(c.join.type)) {
+    const j = c.join;
+    const bodyLength = Math.max(length, j.length) + j.inset * 2;
+    const shape = shapeDefinition(
+      j.type === "TRANSITION" || j.type === "NACELLE_MOUNT"
+        ? "TAPERED_PRISM"
+        : "CHAMFERED_BOX",
+      { x: j.width, y: j.height, z: bodyLength },
+    );
+    shape.frontScale =
+      j.type === "TRANSITION"
+        ? Math.min(1.6, j.transitionRatio)
+        : j.type === "STRUCTURAL_NECK"
+          ? 0.78
+          : 1;
+    shape.rearScale = j.type === "NACELLE_MOUNT" ? 1.35 : 1;
+    shape.topSlope = 0.02;
+    const mesh = new THREE.Mesh(loftGeometry(shapeStations(shape)), material);
+    mesh.position.copy(start).add(end).multiplyScalar(0.5);
+    mesh.quaternion.setFromUnitVectors(
+      new THREE.Vector3(0, 0, 1),
+      length > 1e-8 ? axis : new THREE.Vector3(0, 0, 1),
+    );
+    root.add(mesh);
+    if (j.type === "ARMORED_COLLAR") {
+      for (const t of [0.18, 0.82]) {
+        const collar = new THREE.Mesh(
+          loftGeometry(
+            shapeStations(
+              shapeDefinition("CHAMFERED_BOX", {
+                x: j.width * 1.12,
+                y: j.height * 1.12,
+                z: Math.min(bodyLength * 0.22, scale * 0.018),
+              }),
+            ),
+          ),
+          material,
+        );
+        collar.position
+          .copy(mesh.position)
+          .addScaledVector(axis, (t - 0.5) * bodyLength);
+        collar.quaternion.copy(mesh.quaternion);
+        root.add(collar);
+      }
+    }
+    return root;
+  }
   if (c.style === "armored collar") {
     const collar = new THREE.Mesh(
       new THREE.BoxGeometry(c.thickness, c.thickness, length + scale * 0.003),
@@ -145,9 +198,18 @@ export function renderArchitecture(
             : materials.hull
           : ghost;
     if (mode === "Hull Sections")
-      for (let i = 0; i < v.geometry.stations.length - 1; i++) {
+      for (
+        let i = 0;
+        i < (v.shape ? shapeStations(v.shape) : v.geometry.stations).length - 1;
+        i++
+      ) {
         const mesh = new THREE.Mesh(
-          loftGeometry(v.geometry.stations.slice(i, i + 2)),
+          loftGeometry(
+            (v.shape ? shapeStations(v.shape) : v.geometry.stations).slice(
+              i,
+              i + 2,
+            ),
+          ),
           new THREE.MeshStandardMaterial({
             color: new THREE.Color().setHSL(
               0.45 + (index * 2 + i) * 0.045,
@@ -166,7 +228,10 @@ export function renderArchitecture(
         );
       }
     else {
-      const mesh = new THREE.Mesh(loftGeometry(v.geometry.stations), material);
+      const mesh = new THREE.Mesh(
+        loftGeometry(v.shape ? shapeStations(v.shape) : v.geometry.stations),
+        material,
+      );
       g.add(mesh);
       if (showStructure)
         g.add(

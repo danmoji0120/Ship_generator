@@ -1,5 +1,13 @@
-import type { Profile, ArchitectureGrammar } from "../blueprint/types";
+import type {
+  Profile,
+  ArchitectureGrammar,
+  ShapeKind,
+  JoinType,
+} from "../blueprint/types";
 export interface Shipyard {
+  shapePreferences: readonly ShapeKind[];
+  joinPreferences: readonly JoinType[];
+  structuralMultiplier: number;
   id: string;
   name: string;
   doctrine: string;
@@ -17,6 +25,14 @@ export interface Shipyard {
 export const SHIPYARDS: Shipyard[] = [
   {
     id: "aegis",
+    shapePreferences: [
+      "CHAMFERED_BOX",
+      "FLATTENED_HEX",
+      "WEDGE",
+      "COMPOUND_LOFT",
+    ],
+    joinPreferences: ["OVERLAP", "ARMORED_COLLAR", "FLUSH"],
+    structuralMultiplier: 1.35,
     architectureWeights: {
       MONOLITHIC: 8,
       BLOCK_ASSEMBLY: 9,
@@ -41,6 +57,9 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "vesper",
+    shapePreferences: ["TAPERED_PRISM", "LONG_LOFT", "WEDGE", "HEX_PRISM"],
+    joinPreferences: ["TRANSITION", "STRUCTURAL_NECK", "NACELLE_MOUNT"],
+    structuralMultiplier: 1,
     architectureWeights: {
       MONOLITHIC: 1.5,
       BLOCK_ASSEMBLY: 2,
@@ -65,6 +84,9 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "forge",
+    shapePreferences: ["BOX", "CLIPPED_BOX", "HEX_PRISM", "ARMORED_CYLINDER"],
+    joinPreferences: ["TRUSS", "BOOM", "STRUCTURAL_NECK", "FLUSH"],
+    structuralMultiplier: 1.15,
     architectureWeights: {
       MONOLITHIC: 1,
       BLOCK_ASSEMBLY: 7,
@@ -89,6 +111,14 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "serein",
+    shapePreferences: [
+      "COMPOUND_LOFT",
+      "TAPERED_PRISM",
+      "FLATTENED_HEX",
+      "WEDGE",
+    ],
+    joinPreferences: ["TRANSITION", "RECESSED", "FLUSH"],
+    structuralMultiplier: 1.05,
     architectureWeights: {
       MONOLITHIC: 8,
       BLOCK_ASSEMBLY: 2,

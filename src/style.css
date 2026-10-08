@@ -532,6 +532,10 @@ input[type="range"]::-moz-range-thumb {
   white-space: nowrap;
 }
 .debug-legend {
+  right: 28px;
+  max-height: 86px;
+  overflow: auto;
+  line-height: 1.65;
   position: absolute;
   left: 28px;
   bottom: 115px;

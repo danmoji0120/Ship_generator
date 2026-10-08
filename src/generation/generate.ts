@@ -22,6 +22,9 @@ export { DEFAULT_ORDER, generateBlueprintV0 } from "./legacy";
 export function generateBlueprint(
   input: ShipOrder,
   seed: number,
+  qaOptions?: {
+    architecture: import("../blueprint/types").ArchitectureGrammar;
+  },
 ): ShipBlueprint {
   const order = structuredClone(input),
     yard = getShipyard(order.shipyardId);
@@ -41,6 +44,7 @@ export function generateBlueprint(
   )
     throw new Error("Invalid Ship Order");
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
+  if (qaOptions) selection.grammar = qaOptions.architecture;
   let lastErrors: string[] = [];
   for (let candidate = 0; candidate < 5; candidate++) {
     const priorErrors = lastErrors;
@@ -87,7 +91,7 @@ export function generateBlueprint(
     const primary = volumes.find((v) => v.id === "citadel");
     const b: ShipBlueprint = {
       schemaVersion: 2,
-      generatorVersion: "1.0",
+      generatorVersion: "1.5",
       seed,
       candidate,
       shipyardId: yard.id,
@@ -95,6 +99,8 @@ export function generateBlueprint(
       order,
       designName: `${rng.pick(["Resolute", "Peregrine", "Citadel", "Vanguard", "Meridian", "Halcyon", "Ardent", "Nomad"])} ${String(seed % 10000).padStart(4, "0")}`,
       architecture: {
+        composition: layout.composition,
+        source: qaOptions ? "qa-fixed" : "order",
         grammar,
         requestedGrammar: selection.grammar,
         components,
@@ -129,13 +135,11 @@ export function generateBlueprint(
       },
       stations: primary?.geometry.stations ?? [],
       hullSections: volumes.flatMap((v) =>
-        v.geometry.stations
-          .slice(1)
-          .map((end, i) => ({
-            id: `${v.id}/section-${i}`,
-            start: v.geometry.stations[i],
-            end,
-          })),
+        v.geometry.stations.slice(1).map((end, i) => ({
+          id: `${v.id}/section-${i}`,
+          start: v.geometry.stations[i],
+          end,
+        })),
       ),
       secondaryStructures: [],
       engines,

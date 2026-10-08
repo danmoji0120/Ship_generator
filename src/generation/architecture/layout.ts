@@ -11,6 +11,9 @@ import type { Shipyard } from "../../shipyards/config";
 import type { SeededRng } from "../../random/rng";
 import { generateHull } from "../hull";
 import { primitiveStations, boundaryToward, volumeBounds } from "./volumes";
+import { composeLayout } from "./composition";
+import { refineConnections } from "./joins";
+import { syncShape } from "../shapes/definition";
 export function architectureLayout(
   order: ShipOrder,
   yard: Shipyard,
@@ -44,7 +47,7 @@ export function architectureLayout(
     (0.8 + p.survivability * 0.002 + p.endurance * 0.002);
   const variant = rng.int(0, 2),
     spread = rng.range(0.92, 1.1);
-  const nose: NoseArchitecture =
+  let nose: NoseArchitecture =
     order.role === "Spinal Gun Ship"
       ? "spinal muzzle"
       : grammar === "TWIN_HULL"
@@ -453,6 +456,38 @@ export function architectureLayout(
     link(keel, middle, "BRIDGE");
     link(middle, upper, "DIRECT");
   }
+  const composition = composeLayout(order, yard, grammar, volumes, rng);
+  if (
+    order.role !== "Spinal Gun Ship" &&
+    ["BLOCK_ASSEMBLY", "STACKED_BLOCKS"].includes(grammar)
+  )
+    nose =
+      yard.structure === "truss"
+        ? rng.pick(["block nose", "tapered industrial"] as const)
+        : rng.pick(["wedge", "blunt armored", "block nose"] as const);
+  if (composition === "CENTRAL_SPINAL") nose = "spinal muzzle";
+  const front = Math.min(
+    ...volumes.map((v) => v.position.z - v.dimensions.z / 2),
+  );
+  for (const v of volumes.filter(
+    (v) => v.position.z - v.dimensions.z / 2 < front + l * 0.025,
+  )) {
+    if (!v.shape) continue;
+    if (nose === "pointed") v.shape.frontScale = 0.08;
+    if (nose === "spinal muzzle") {
+      v.shape.frontScale = 0.82;
+      v.shape.rearScale = 0.95;
+    }
+    if (nose === "blunt armored" || nose === "block nose")
+      v.shape.frontScale = 0.78;
+    if (nose === "sensor nose") {
+      v.shape.frontScale = 0.6;
+      v.shape.frontProfile = "rounded";
+    }
+    if (nose === "wedge") v.shape.frontScale = 0.18;
+    if (nose === "tapered industrial") v.shape.frontScale = 0.43;
+    syncShape(v);
+  }
   // Normalize only longitudinal extent: requested length remains meaningful for every grammar.
   const min = Math.min(
       ...volumes.map((v) => v.position.z + v.geometry.stations[0].z),
@@ -483,5 +518,15 @@ export function architectureLayout(
     c.start.x *= beamFit;
     c.end.x *= beamFit;
   }
-  return { volumes, connectors, nose, components, beam: beam * beamFit, armor };
+  for (const v of volumes) syncShape(v);
+  refineConnections(order, yard, grammar, volumes, connectors, rng);
+  return {
+    composition,
+    volumes,
+    connectors,
+    nose,
+    components,
+    beam: beam * beamFit,
+    armor,
+  };
 }

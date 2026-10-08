@@ -168,6 +168,13 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   }
   for (const h of b.hardpoints) {
     const group = new THREE.Group();
+    group.userData.hardpoint = {
+      id: h.id,
+      type: h.type,
+      size: h.size,
+      parentId: h.parentId,
+      normal: h.normal,
+    };
     group.position.copy(v(h.position));
     group.quaternion.setFromUnitVectors(
       new THREE.Vector3(0, 1, 0),
@@ -213,12 +220,12 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
           new THREE.CylinderGeometry(
             h.radius * 0.86,
             h.radius * 1.16,
-            l * 0.008,
+            h.radius * 0.32,
             8,
           ),
           finish,
         );
-        barbette.position.y = l * 0.003;
+        barbette.position.y = h.radius * 0.08;
         group.add(barbette);
         const well = new THREE.Mesh(
           new THREE.CylinderGeometry(
@@ -229,14 +236,14 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
           ),
           material,
         );
-        well.position.y = l * 0.0073;
+        well.position.y = h.radius * 0.25;
         group.add(well);
         const ring = new THREE.Mesh(
           new THREE.TorusGeometry(h.radius * 0.73, h.radius * 0.095, 4, 12),
           finish,
         );
         ring.rotation.x = -Math.PI / 2;
-        ring.position.y = l * 0.0074;
+        ring.position.y = h.radius * 0.26;
         group.add(ring);
       }
     } else {
@@ -288,6 +295,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     }
     root.add(group);
     if (mode === "Hardpoints") {
+      group.userData.debugMarker = true;
       const color =
         h.type === "Missile"
           ? 0xffaf64

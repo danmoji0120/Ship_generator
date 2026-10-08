@@ -1,6 +1,6 @@
-# Procedural Shipyard V1 — Silhouette & Naval Architecture
+# Procedural Shipyard V1.5 — Shape Vocabulary & Join Quality
 
-기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.
+기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. V1.5는 기존 8개 Architecture 안에서 **덩어리의 Shape, 접합 Join, 질량 계층과 Composition**을 분화합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.
 
 ## 설치 / 실행 / 테스트
 
@@ -9,7 +9,7 @@ Node.js 22.12 이상 권장. 외부 서버와 API 키는 필요 없습니다.
 ```bash
 npm install
 npm run dev            # http://localhost:5173
-npm test               # V0 회귀 12개 + V1 구조 테스트 9개
+npm test               # V0 12개 + V1 9개 + V1.5 6개 = 27 tests
 npm run build          # 엄격한 TypeScript 검사 + production 빌드
 npm run preview        # production 미리보기
 ```
@@ -18,6 +18,7 @@ dev 서버가 실행된 상태에서:
 
 ```bash
 npm run qa             # 50개 실제 브라우저 생성물, 7개 Debug View, UI 회귀 검증
+npm run qa:gallery     # 220개 Contact Sheet 렌더 + 11 Shape / 10 Join Gallery
 # 별도 Chromium 설치 경로 또는 서버:
 CHROMIUM_PATH=/path/to/chromium QA_URL=http://localhost:5173 npm run qa
 ```
@@ -39,7 +40,46 @@ CHROMIUM_PATH=/path/to/chromium QA_URL=http://localhost:5173 npm run qa
 
 주요 Volume은 보통 1–6개이며 최대 12개를 검증 한계로 둡니다. 비일체형 문법의 `stations`는 비어 있고, 각 Volume에 자체 local Station geometry가 있습니다. 따라서 전역 Primary Hull 없이도 생성·렌더링·검증이 가능합니다.
 
-8개 Primitive(Box, Chamfered Box, Wedge, Hexagonal Prism, Tapered Box, Rounded Box, Short Loft, Long Loft)는 기존 Loft geometry를 재사용합니다. 선수는 pointed, blunt armored, wedge, split nose, spinal muzzle, sensor nose, block nose, tapered industrial로 역할/문법과 연결됩니다. Rounded Box는 낮은 폴리곤 수의 모따기 단면이며 subdivision 곡면은 아닙니다.
+V1의 8개 Primitive 인터페이스와 이전 JSON 렌더 경로는 보존합니다. V1.5 생성은 아래 ShapeDefinition을 권위 데이터로 사용하며 같은 저해상도 Loft geometry 경로를 확장합니다. 선수는 pointed, blunt armored, wedge, split nose, spinal muzzle, sensor nose, block nose, tapered industrial로 역할/문법과 연결됩니다. Rounded Box는 낮은 폴리곤 수의 모따기 단면이며 subdivision 곡면은 아닙니다.
+
+## Shape Vocabulary / Join System
+
+11개 Shape가 실제 생성에 사용됩니다: `BOX`, `CHAMFERED_BOX`, `WEDGE`, `TAPERED_PRISM`, `HEX_PRISM`, `FLATTENED_HEX`, `ARMORED_CYLINDER`, `CLIPPED_BOX`, `SHORT_LOFT`, `LONG_LOFT`, `COMPOUND_LOFT`.
+
+`src/generation/shapes/definition.ts`는 구조 목적(NOSE/CORE/MISSILE/ENGINE/SPINE/SENSOR/SUPPLY)에서 허용된 Shape 후보만 선택하며 Architecture와 Shipyard 선호를 가중합니다. Box는 보급/산업 모듈로 제한합니다. Compound는 반복적인 단면 변화, Cylinder는 팔각 장갑 케이싱과 끝단 collar, Clipped는 절단된 끝/모서리, Hex는 실제 6면 단면을 사용합니다. HullStation의 8개 정점은 유지하며 육각형의 하단 두 면에는 공선 분할점을 둡니다.
+
+기존 StructuralConnector의 `join`에 10개 접합을 추가했습니다: `FLUSH`, `OVERLAP`, `ARMORED_COLLAR`, `STRUCTURAL_NECK`, `TRANSITION`, `RECESSED`, `TRUSS`, `BOOM`, `BRIDGE`, `NACELLE_MOUNT`. 별도 중복 연결 그래프를 만들지 않았습니다. 각 Join에는 길이/폭/높이, overlap/inset, transitionRatio, armor/support scale, style variant, supportLoad를 기록합니다. Transition/Nacelle Mount는 테이퍼, Collar는 두꺼운 접합 밴드, Bridge는 넓은 횡구조, Truss는 2~4개 rail과 제한된 bay를 렌더링합니다.
+
+Stack과 제한된 측면 Battery의 Overlap/Recess는 실제 Volume 매립을 사용합니다. 완전 CSG union은 하지 않습니다. 센서 Boom과 엔진 Truss를 구분하며 `supportLoad = volume × distance × doctrine`의 4제곱근과 최소 단면 비율로 지지 두께를 결정합니다. 이 값은 시각적 구조 휴리스틱이며 물리 강도/질량 시뮬레이션이 아닙니다.
+
+## Composition / 질량 계층
+
+새 Architecture를 추가하지 않았습니다. 기존 문법 내부 Pattern은 다음과 같습니다.
+
+| Architecture | Composition patterns |
+| --- | --- |
+| MONOLITHIC | BROAD_CITADEL, FORWARD_SHOULDERS, LENS_BODY |
+| BLOCK_ASSEMBLY | FORWARD_HEAVY, CENTRAL_CORE, SIDE_BATTERIES, STEPPED, REAR_HEAVY, SPLIT_CORE |
+| SPINE_AND_MODULES | ARMORED_BREECH, MID_SPINE_CITADEL, REACTOR_SADDLE |
+| TRUSS_POD | OUTRIGGER_BATTERIES, AFT_MACHINERY, STAGGERED_PODS |
+| TWIN_HULL | CENTRAL_CORE, CENTRAL_SPINAL, FORWARD_BRIDGE, ENGINE_BRIDGE, STAGGERED_HULLS |
+| CORE_AND_NACELLES | RADIAL_DRIVES, SWEPT_NACELLES, COMPACT_CORE |
+| STACKED_BLOCKS | FORWARD_CITADEL, LOW_TERRACES, AFT_CITADEL |
+| HYBRID | AXIAL_OUTRIGGERS, ARMORED_AXIS, REACTOR_FRAME |
+
+Block의 전방/중앙/측면/후방 체적 관계를 크게 바꾸고, Twin은 상대 길이·폭·전후 offset·중앙 무장축/bridge 위치를 바꿉니다. Stack은 상부가 작아지는 30~43% 매립 성채와 낮은 테라스이며, Truss는 장거리 무장 포드·후방 대형 추진부·높이와 전후가 다른 포드를 구분합니다. Spine/Hybrid는 최소 축 단면과 보강 node를 사용하며 축 slenderness ≤17을 검증합니다. HYBRID는 Spine + Truss Pod의 두 문법 조합을 유지합니다.
+
+각 Volume의 `hierarchyTier`는 주 질량(1), 큰 보조 질량(2), 기능 구획(3)을 나타냅니다. Twin의 두 대형 Hull 같은 목적상 유사한 구획은 허용하며 전체 Primary 질량 비율과 장갑화된 접합을 확인합니다. Surface Detail 시스템은 확장하지 않았고 Normal View에는 낮은 mount foundation만 남깁니다. Debug arrow는 Hardpoints View에서만 표시하며 legend에는 타입·크기·부모가 나옵니다.
+
+## Contact Sheet / Debug Gallery
+
+앱 하단 **QA / Contact Sheets & Galleries** 또는 `/qa.html`을 여세요. Shipyard, Role, Architecture, Seed start, Count(1–40)를 선택하고 Build contact sheet를 누릅니다. 기본 20척은 4×5 grid입니다. 이 Architecture 강제 선택은 개발용 도구에만 있으며 일반 Ship Order에는 추가하지 않았습니다. `architecture.source: "qa-fixed"`로 일반 생성과 구분합니다.
+
+- **Neutral silhouette**: 동일한 회색 Material, Hardpoint/Surface Detail 제거로 구조만 비교합니다. 새 함선을 편집하는 기능이 아니라 QA 렌더 옵션입니다.
+- **Shape gallery / 11**, **Join gallery / 10**: 실제 앱 렌더러로 primitive와 접합부를 확인합니다.
+- **QA JSON**: Composition 수, quantized feature signature, 질량 비율·전후 질량·폭/높이 spread·Join/Shape 분포를 저장합니다.
+- 20개 중 Composition 2개 미만 또는 signature 12개 미만이면 QA warning을 표시합니다. Signature와 픽셀 차이는 예술적 품질의 증명이 아니므로 Contact Sheet 직접 검토를 함께 수행합니다.
+- 하나의 WebGL context를 순차 재사용해 thumbnail을 만듭니다. Gallery 생성은 20개의 live scene을 유지하지 않습니다.
 
 ## 조선소와 역할의 선택 경향
 
@@ -60,22 +100,22 @@ CHROMIUM_PATH=/path/to/chromium QA_URL=http://localhost:5173 npm run qa
 
 6개 우선순위는 여전히 비율·장갑·추진·무장 예산·보급 공간·센서에 영향을 주며, 길이와 질량 등급도 선택 확률에 반영합니다. 문법에 맞는 최대 폭 포락선으로 비정상적인 가로 큐브 형태를 방지합니다.
 
-## V1 Blueprint 계약
+## V1.5 Blueprint 계약
 
 `src/blueprint/types.ts`:
 
-- `schemaVersion: 2`, `generatorVersion: "1.0"`.
-- `architecture`: 실제/요청 문법, 최대 2개 components, rootVolumeId, nose, engineArchitecture, 선택 가중치, 주요 비율/예산, 선택적 fallbackReason.
-- `structuralVolumes`: id, type, purpose, position, rotation, dimensions, primitive + local Stations, connectionIds.
-- `structuralConnectors`: id, from/to structure IDs, 실제 접합 표면의 world-space start/end, type, thickness, style.
-- `silhouette`: slenderness, 주요 Volume 수, front/side/top 점유율, 대칭도, disconnected penalty.
+- `schemaVersion: 2`, `generatorVersion: "1.5"`. 추가 필드는 이전 V1 JSON 렌더를 위해 optional이며, V1.5 생성/검증에서는 필수입니다.
+- `architecture`: 실제/요청 문법, 최대 2개 components, rootVolumeId, nose, engineArchitecture, 선택 가중치, 주요 비율/예산, 선택적 fallbackReason, composition, source.
+- `structuralVolumes`: 기존 필드 + 권위 `shape: ShapeDefinition`, `hierarchyTier`. `geometry.stations`는 attachment/구버전 호환을 위한 파생 cache이며 검증 시 Shape에서 재생성한 값과 일치해야 합니다. 렌더러는 Shape를 직접 해석합니다.
+- `structuralConnectors`: id, from/to structure IDs, 실제 접합 표면의 world-space start/end, type, thickness, style, 상세 join.
+- `silhouette`: slenderness, 주요 Volume 수, front/side/top 점유율, 대칭도, disconnected penalty, 질량 계층·전후 질량·가로/세로 spread·Join 분포.
 - 기존 Engines, Hardpoints, SurfaceFeatures, MaterialTheme, Dimensions, Order와 generationStats 유지. V1 Engine에는 후방 방향 `direction`이 기록됩니다.
 - Hardpoint/Engine/SurfaceFeature의 parentId는 실제 StructuralVolume ID를 참조합니다.
-- `hullSections`는 모든 Volume의 단면 구간을 요약하며, 렌더러는 Volume의 local Stations와 transform을 사용합니다. `secondaryStructures`는 V1에서 비어 있는 이전 호환 필드입니다.
+- `hullSections`는 모든 Volume의 단면 구간을 요약하며, 렌더러는 Shape에서 local Stations를 파생하고 Volume transform을 사용합니다. 이전 V1 JSON에는 cached Stations를 사용하는 fallback이 있습니다. `secondaryStructures`는 V1에서 비어 있는 이전 호환 필드입니다.
 
 구조 유형: PRIMARY_HULL, HULL_BLOCK, POD, NACELLE, SPINE, ARMOR_BLOCK, DORSAL_STRUCTURE, VENTRAL_STRUCTURE. 연결 유형: DIRECT, TRUSS, BOOM, BRIDGE, NACELLE_MOUNT. 현재 생성 pose는 모두 전후 축에 정렬되어 있고 rotation은 0입니다. 임의 회전 Volume은 검증에서 거부하므로 잘못된 연결 계산을 조용히 허용하지 않습니다.
 
-V0의 데이터 계약은 `LegacyShipBlueprint`로 유지합니다. `generateBlueprintV0(order, seed)`는 V0 알고리즘과 Seed 결과를 보존하고 공용 Renderer/Validator가 schemaVersion 1도 처리합니다. 일반 UI는 V1을 생성하므로 V0 Seed로 V1을 생성한 결과는 의도적으로 다릅니다. 같은 **버전 + Order + Shipyard + Seed**는 Architecture부터 JSON과 geometry까지 완전히 동일합니다.
+V0의 데이터 계약은 `LegacyShipBlueprint`로 유지합니다. `generateBlueprintV0(order, seed)`는 V0 알고리즘과 Seed 결과를 보존하고 공용 Renderer/Validator가 schemaVersion 1도 처리합니다. 일반 UI는 V1.5를 생성하므로 V0 Seed로 V1.5를 생성한 결과는 의도적으로 다릅니다. V1 Architecture 선택 Seed fixture는 그대로 유지하지만 Shape/Join 변경으로 V1과 V1.5의 전체 JSON·형상은 의도적으로 다릅니다. 같은 **버전 + Order + Shipyard + Seed**는 Architecture부터 JSON과 geometry까지 완전히 동일합니다.
 
 ## Silhouette-first 파이프라인
 
@@ -83,8 +123,9 @@ V0의 데이터 계약은 `LegacyShipBlueprint`로 유지합니다. `generateBlu
 Order 검증
 → Doctrine + Role + Priorities + Length/Mass 가중치
 → Seed 기반 Architecture 선택
-→ Major Volume budget / 기능 구획 배치
-→ 실제 접합 표면 Connector + Truss 배치
+→ Composition Pattern / Primary mass / Secondary mass 계층
+→ 목적·Architecture·Shipyard별 Shape 선택
+→ Join 선택 / 실제 접합 표면 및 매립 / 하중 기반 Connector + Truss 배치
 → Silhouette 휴리스틱 검증
 → 부모 Volume의 후면 추진기 배치
 → 문법별 무장 면과 노출 테라스에 Hardpoint 할당
@@ -136,9 +177,12 @@ V0 12개 회귀 테스트를 삭제하지 않고 이전 생성기 경로에 적�
 | Stacked Blocks | 4, 30, 89 |
 | Hybrid | 36, 43, 67 |
 
-다양성 기록은 4개 Shipyard × 9개 Role × 20 Seeds = 720개입니다. 모든 36개 그룹에서 3개 이상 문법이 선택되었고, 투영/치수 기반 실루엣 signature는 그룹당 최소 14개였습니다. signature는 시각적 품질을 대신하지 않으므로 실제 비교 화면도 함께 검토했습니다.
+기존 V1의 720개 Architecture diversity guard를 유지합니다. V1.5 추가 테스트는 4개 Shipyard × 8개 고정 Architecture × 20 Seeds = 640개에서 Composition·Shape/Join 결정성, 그래프, 계층, 지지 비율을 확인합니다. 실제 Gallery는 11개 그룹 × 20 Seeds = 220개이며, 그룹당 3–6개 Composition, 18–20개 feature signatures, 20개 고유 thumbnail을 확인했습니다. 시각적 품질은 Contact Sheet를 직접 검토했습니다.
 
-- `qa/QA.md`: 현재 V1 검증 요약.
+- `qa/QA.md`: 현재 V1.5 검증 요약.
+- `qa/v1.5/gallery-report.json`, `contact-*.png`: 220개 구조 비교.
+- `qa/v1.5/regression/report.json`: 50개 렌더와 UI/픽셀 회귀.
+- `qa/v1/QA.md`: 이전 V1 검증 기록.
 - `qa/v1/report.json`: 50개 렌더의 문법·구조 수·치수·삼각형·draw calls.
 - `qa/v1/diversity.json`: 20 Seeds 다양성 분포.
 - `qa/v1/architecture-comparison.png`, `representatives.png`: 문법/역할 대표 비교.
@@ -146,6 +190,11 @@ V0 12개 회귀 테스트를 삭제하지 않고 이전 생성기 경로에 적�
 - `qa/v0/`: V0 문서·실행 기록·화면을 그대로 보존.
 
 ## 주요 확장 파일
+
+- `generation/shapes/definition.ts`: ShapeDefinition → Station 파생, 목적/문법 후보.
+- `generation/architecture/composition.ts`: Pattern별 질량 배치와 hierarchy.
+- `generation/architecture/joins.ts`: 접합 선호, 매립, supportLoad, 실제 endpoint.
+- `qa/gallery.ts`, `qa/fixtures.ts`, `qa/diversity.ts`: Gallery, primitive fixtures, 다양성 경고.
 
 - `generation/architecture/selection.ts`: 선언적 가중치와 결정적 선택.
 - `generation/architecture/layout.ts`: 목적별 큰 구획과 문법별 연결 배치.
@@ -160,7 +209,7 @@ V0 12개 회귀 테스트를 삭제하지 않고 이전 생성기 경로에 적�
 
 V1은 외부 구조 컨셉 생성기이며 제조 가능한 CSG 합집합, 실제 연결 강도, 내부 공간, 전투 성능, 물리 질량을 계산하지 않습니다. 현재는 축 정렬 Volume만 생성합니다. AABB 겹침과 convex 투영은 보수적인 휴리스틱이며 모든 Connector와 장착 기반의 완전한 collision solver는 아닙니다. 장갑/구획 사이의 연결 슈는 작은 접합 여유를 사용합니다. 양쪽 동일 Hull은 목적과 전후 형상이 있지만 내부 배치는 없습니다. 링/아크 추진 배열은 이번 버전에서 구현하지 않았습니다.
 
-약 4,100–11,200 triangles, 100–460 draw calls 범위의 저해상도 생성물을 검증했습니다. draw call 최적화는 남아 있습니다. GPU가 바뀌면 픽셀 안티앨리어싱 결과는 다를 수 있고, 동일 세션의 이미지 재현성만 비교합니다. Three.js 포함 번들 크기 경고는 실행 오류가 아닙니다.
+V1.5 회귀 설계에서 4,224–9,860 triangles, 108–374 draw calls 범위의 저해상도 생성물을 검증했습니다. draw call 최적화는 남아 있습니다. GPU가 바뀌면 픽셀 안티앨리어싱 결과는 다를 수 있고, 동일 세션의 이미지 재현성만 비교합니다. Three.js 포함 번들 크기 경고는 실행 오류가 아닙니다.
 
 다음 단계는 최대 3개:
 
@@ -330,3 +379,11 @@ src/
 1. **마운트 면적 예산과 간격 solver**: 표면 점유율, 충돌, 보호/노출 조건을 Blueprint 규칙으로 계산.
 2. **조선소별 추가 선체 archetype**: 쌍동선·환형 추진부·비대칭 산업형 등 일관된 실루엣 문법 추가.
 3. **버전별 Blueprint 저장/Import**: 생성기 버전 고정과 이전 설계 재로딩을 지원하고, 논리 구획 ID에 전투 시스템 데이터를 연결할 준비.
+
+## V1.5 한계 / 다음 확장
+
+축 정렬과 8-정점 단면, approximate volume/overlap 및 convex projection 휴리스틱을 사용합니다. 20척 Gallery는 설계 도구가 아니라 QA 도구입니다. 구조적 연결과 endpoint 접촉을 확인하지만 arbitrary collision / exact CSG / 실제 구조 강도를 보장하지 않습니다. 유사한 패턴 내 일부 설계는 여전히 닮을 수 있습니다. 같은 Seed의 재현성은 generatorVersion 범위에서 보장합니다. 이전 V1 Blueprint도 그대로 렌더링됩니다.
+
+이후에는 (1) Shape + purpose에서 Internal Zone envelope 생성, (2) 기존 Volume/Connector ID를 사용하는 Structural Graph 및 국부 하중 모델, (3) endpoint·면 법선과 연결된 명시적 interface socket을 우선할 수 있습니다. 내부 구획·장갑·피해 기능은 이번 버전에 구현하지 않았습니다.
+
+V1.5 기록: `qa/QA.md`, `qa/v1.5/gallery-report.json`, `qa/v1.5/regression/report.json`. V0/V1 증거와 screenshot은 `qa/v0/`, `qa/v1/`에 보존합니다.
