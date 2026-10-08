@@ -67,7 +67,7 @@ function connectedSocket(c: StructuralConnector, atEnd: boolean): PrefabSocket {
     position: atEnd ? { ...c.end } : { ...c.start },
     normal: atEnd
       ? direction
-      : { x: -direction.x, y: -direction.y, z: -direction.z },
+      : { x: direction.x === 0 ? 0 : -direction.x, y: direction.y === 0 ? 0 : -direction.y, z: direction.z === 0 ? 0 : -direction.z },
   };
 }
 
