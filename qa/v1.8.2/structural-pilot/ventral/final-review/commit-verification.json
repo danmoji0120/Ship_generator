@@ -1,0 +1,8 @@
+{
+  "stagedSubsetBuild": true,
+  "stagedVentralTests": 7,
+  "jsonSame": true,
+  "webglPngCount": 9,
+  "webglPngsSame": true,
+  "consoleErrors": 0
+}

@@ -15,6 +15,8 @@ npm run build
 
 QA 전용 `buildLimitedStructuralArmor(source)`는 위 세 조건만 허용합니다. `generateBlueprintV181`로 얻은 원본을 복사한 뒤 선택적 `structuralArmorPilot`에 실제 체적, 접촉점, 연결부, 채널 실측과 낮은 Foundation을 직렬화합니다. 일반 생성기 전체에 새 구조를 자동 적용하지 않으며 과거 JSON에도 소급 적용하지 않습니다.
 
+후속 하부 검토는 저장된 Seed 7 한 척에만 `buildVentralArmorReview`를 적용합니다. 266m Ventral Keel과 7/12/16/23m의 하부 구조적 깊이, 복부 보호 블록, 후방 Cradle, 국소 정비 포켓을 추가하며 기존 상부와 Mount는 보존합니다. [하부 구조 검토와 실제 3방향 비교](qa/v1.8.2/VENTRAL_REVIEW.md)를 확인하세요. `tests/ventral-structure.test.ts` 및 `tests/ventral-structure-qa.mjs`로 해당 한 척만 재검증할 수 있습니다.
+
 ```bash
 npx vitest run tests/structural-armor-pilot.test.ts tests/structural-armor-limited.test.ts
 # npm run dev 실행 중 별도 터미널에서 승인 범위의 세 척만 캡처

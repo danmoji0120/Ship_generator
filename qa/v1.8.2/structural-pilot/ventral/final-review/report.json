@@ -1,0 +1,259 @@
+{
+  "source": "qa/v1.8.2/structural-pilot/refinement-02/pilot.blueprint.json",
+  "sourceSha256": "06d08232fab9dc642f1938f823a273609ba3f12ed36430dd79d1a51f024ef45e",
+  "validation": {
+    "issues": [],
+    "checks": [
+      "Actual shared-volume contacts for transition necks",
+      "IDs and parent references",
+      "Actual station-root contacts",
+      "Closed nondegenerate solids and positive signed volume",
+      "Sampled exhaust, radiator, weapon and sensor corridors",
+      "Low physical foundation height and mount spacing",
+      "8-point surface-seated foundations",
+      "Every original hardpoint retained, vertical mount firing clearances",
+      "Open structural channels above intact structural hull",
+      "Measured outward ventral tiers and open local maintenance recess"
+    ],
+    "minimumChannelDepth": 12.044932038035697,
+    "maximumMountLift": 19.348594826100854
+  },
+  "ventral": {
+    "sourceComponentIds": [
+      "fore-axial-guard",
+      "main-citadel",
+      "fore-citadel-neck",
+      "forward-shoulder--1",
+      "mid-shoulder--1",
+      "rear-shoulder--1",
+      "forward-shoulder-1",
+      "mid-shoulder-1",
+      "rear-shoulder-1",
+      "command-foundation",
+      "citadel-command-neck",
+      "command-plinth",
+      "belt-haunch--1",
+      "stern-housing--1",
+      "belt-haunch-1",
+      "stern-housing-1",
+      "belt--1-fore",
+      "belt--1-mid",
+      "belt--1-aft",
+      "belt-1-fore",
+      "belt-1-mid",
+      "belt-1-aft"
+    ],
+    "componentIds": [
+      "ventral-keel",
+      "ventral-fore-pan",
+      "belly-port-casemate",
+      "belly-starboard-fore",
+      "belly-starboard-aft",
+      "ventral-service-sill",
+      "ventral-drive-cradle"
+    ],
+    "levels": [
+      {
+        "id": "forward-pan",
+        "position": {
+          "x": 24,
+          "y": -32.55876740717228,
+          "z": -95
+        },
+        "hullY": -25.55876740717228,
+        "exteriorY": -32.55876740717228,
+        "depth": 7.0000000000000036
+      },
+      {
+        "id": "belly-casemate",
+        "position": {
+          "x": -43,
+          "y": -37.55876740717228,
+          "z": 0
+        },
+        "hullY": -25.55876740717228,
+        "exteriorY": -37.55876740717228,
+        "depth": 12.000000000000004
+      },
+      {
+        "id": "central-keel",
+        "position": {
+          "x": 0,
+          "y": -48.55876740717228,
+          "z": 0
+        },
+        "hullY": -25.55876740717228,
+        "exteriorY": -48.55876740717228,
+        "depth": 23.000000000000004
+      },
+      {
+        "id": "aft-cradle",
+        "position": {
+          "x": 0,
+          "y": -41.55876740717228,
+          "z": 112
+        },
+        "hullY": -25.55876740717228,
+        "exteriorY": -41.55876740717228,
+        "depth": 16.000000000000004
+      }
+    ],
+    "recesses": [
+      {
+        "id": "ventral-maintenance-pocket",
+        "purpose": "MAINTENANCE",
+        "floor": [
+          {
+            "x": 45.546823989628116,
+            "y": -25.55876740717228,
+            "z": 0
+          },
+          {
+            "x": 42.78641041449914,
+            "y": -25.55876740717228,
+            "z": 10
+          },
+          {
+            "x": 40.02599683937016,
+            "y": -25.55876740717228,
+            "z": 20
+          }
+        ],
+        "mouthDepth": 12.000000000000004,
+        "width": 45.99539119558656,
+        "length": 38,
+        "boundaryIds": [
+          "ventral-keel",
+          "belly-starboard-fore",
+          "belly-starboard-aft",
+          "ventral-service-sill"
+        ]
+      }
+    ]
+  },
+  "sourceUnchanged": true,
+  "upperUnchanged": true,
+  "mountsUnchanged": true,
+  "jsonDeterminism": true,
+  "webglDeterminism": true,
+  "shots": [
+    {
+      "name": "before-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 58,
+        "triangles": 2788
+      }
+    },
+    {
+      "name": "structure-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 65,
+        "triangles": 3468
+      }
+    },
+    {
+      "name": "mounted-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9180
+      }
+    },
+    {
+      "name": "before-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 58,
+        "triangles": 2788
+      }
+    },
+    {
+      "name": "structure-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 65,
+        "triangles": 3468
+      }
+    },
+    {
+      "name": "mounted-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9180
+      }
+    },
+    {
+      "name": "before-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 58,
+        "triangles": 2788
+      }
+    },
+    {
+      "name": "structure-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 65,
+        "triangles": 3468
+      }
+    },
+    {
+      "name": "mounted-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9180
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,48 @@
+{
+  "source": "qa/v1.8.2/structural-pilot/refinement-02/pilot.blueprint.json",
+  "sourceSha256": "06d08232fab9dc642f1938f823a273609ba3f12ed36430dd79d1a51f024ef45e",
+  "seed": 7,
+  "family": "WEDGE_CITADEL",
+  "geometryModified": false,
+  "hardpointsVisible": true,
+  "neutral": true,
+  "views": [
+    {
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 198,
+        "triangles": 8500
+      }
+    },
+    {
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 198,
+        "triangles": 8500
+      }
+    },
+    {
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 198,
+        "triangles": 8500
+      }
+    }
+  ],
+  "errors": []
+}

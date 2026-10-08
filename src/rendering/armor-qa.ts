@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import type { ShipBlueprint } from '../blueprint/types';
-export type ArmorView='TOP'|'BOTTOM'|'LEFT'|'RIGHT'|'SIDE'|'FRONT'|'AFT'|'ISOMETRIC';
+export type ArmorView='TOP'|'BOTTOM'|'LEFT'|'RIGHT'|'SIDE'|'FRONT'|'AFT'|'ISOMETRIC'|'LOW-ISOMETRIC';
 import { createShip, disposeShip } from './ship';
 export const ARMOR_STAGES = ['HULL_ONLY','PRIMARY','SECONDARY','REINFORCEMENT','SEAMS','NO_HARDPOINTS','COMPLETE'] as const;
 export type ArmorStage = typeof ARMOR_STAGES[number];
@@ -36,18 +36,18 @@ export class ArmorQARenderer {
     this.scene.add(this.ambient,this.key,this.fill,this.ventral,this.key.target);
     this.key.castShadow=true; this.key.shadow.mapSize.set(1024,1024); this.key.shadow.bias=-.0012;
   }
-  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
-    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}`;
+  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
+    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}`;
     // QA blueprints are immutable. Reuse the exact geometry across camera views, not design data.
     if(this.cachedBlueprint!==b||this.cachedVisualKey!==visualKey) {
     if(this.ship) {this.scene.remove(this.ship);disposeShip(this.ship);}
     this.ship=createShip(armorStageBlueprint(b,stage),'Normal');
     const shared=new THREE.MeshStandardMaterial({color:options.reviewLighting?0x798b9a:0x98a4af,roughness:.82,metalness:.12});
     // A consistent neutral clay rig, equally applied to source and prototype, reveals deep structural walls.
-    this.ambient.intensity=options.reviewLighting ? .8 : 1.8;
+    this.ambient.intensity=options.underbodyLighting?1.2:options.reviewLighting ? .8 : 1.8;
     this.key.intensity=options.reviewLighting?3:4.1;
     this.fill.intensity=options.reviewLighting ? 1.25 : 1.6;
-    this.ventral.intensity=options.reviewLighting ? 1 : 2.4;
+    this.ventral.intensity=options.underbodyLighting?2.4:options.reviewLighting ? 1 : 2.4;
     this.renderer.toneMappingExposure=options.reviewLighting?1:1.3;
     const black=new THREE.MeshBasicMaterial({color:0});
     const disposed=new Set<THREE.Material>();
@@ -67,7 +67,7 @@ export class ArmorQARenderer {
     this.scene.add(this.ship); this.ship.updateMatrixWorld(true);
     this.cachedBlueprint=b;this.cachedVisualKey=visualKey;
     }
-    const direction=view==='TOP'?new THREE.Vector3(0,1,0):view==='BOTTOM'?new THREE.Vector3(0,-1,0):view==='SIDE'||view==='RIGHT'?new THREE.Vector3(1,0,0):view==='LEFT'?new THREE.Vector3(-1,0,0):view==='FRONT'?new THREE.Vector3(0,0,-1):view==='AFT'?new THREE.Vector3(0,0,1):new THREE.Vector3(-1.08,.88,-1.25).normalize();
+    const direction=view==='TOP'?new THREE.Vector3(0,1,0):view==='BOTTOM'?new THREE.Vector3(0,-1,0):view==='SIDE'||view==='RIGHT'?new THREE.Vector3(1,0,0):view==='LEFT'?new THREE.Vector3(-1,0,0):view==='FRONT'?new THREE.Vector3(0,0,-1):view==='AFT'?new THREE.Vector3(0,0,1):new THREE.Vector3(-1.08,view==='LOW-ISOMETRIC'?-.88:.88,-1.25).normalize();
     const up=view==='TOP'||view==='BOTTOM'?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
     const right=up.clone().cross(direction).normalize(), vertical=direction.clone().cross(right).normalize();
     // Use Complete's authoritative bounds for every progression stage, including fitted views.
@@ -80,7 +80,7 @@ export class ArmorQARenderer {
     }
     if(options.closeup){center.copy(options.closeup.center);extent=options.closeup.extent;}
     const l=b.order.length;
-    this.key.position.copy(center).add(new THREE.Vector3(-l,l*1.7,-l*1.2)); this.key.target.position.copy(center);
+    this.key.position.copy(center).add(new THREE.Vector3(-l,l*(options.underbodyLighting?-1.7:1.7),-l*1.2)); this.key.target.position.copy(center);
     this.fill.position.set(l,l*.6,l); this.ventral.position.set(-l,-l*1.5,-l*.7);
     const shadow=this.key.shadow.camera; shadow.left=shadow.bottom=-l*.9;shadow.right=shadow.top=l*.9;shadow.near=l*.1;shadow.far=l*5;shadow.updateProjectionMatrix();this.key.shadow.normalBias=l*.0006;
     const camera=new THREE.OrthographicCamera(-extent/2,extent/2,extent/2,-extent/2,.01,l*20);

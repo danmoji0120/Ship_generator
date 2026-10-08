@@ -4,7 +4,7 @@ import type { PanelSolid } from '../types';
  * Optional export data; never synthesized when loading a historical blueprint. */
 export interface StructuralArmorComponent {
   id: string;
-  role: 'AXIAL_PROTECTION' | 'CITADEL' | 'SHOULDER' | 'SIDE_BELT' | 'SUPERSTRUCTURE_BASE' | 'COMMAND_PLINTH' | 'TRANSITION_NECK' | 'BELT_HAUNCH' | 'REAR_HOUSING';
+  role: 'AXIAL_PROTECTION' | 'CITADEL' | 'SHOULDER' | 'SIDE_BELT' | 'SUPERSTRUCTURE_BASE' | 'COMMAND_PLINTH' | 'TRANSITION_NECK' | 'BELT_HAUNCH' | 'REAR_HOUSING' | 'VENTRAL_KEEL' | 'BELLY_CITADEL' | 'LOWER_HOUSING' | 'VENTRAL_TRANSITION';
   parentStructureId: string;
   parentArmorId?: string;
   additionalParentIds?: string[];
@@ -16,7 +16,13 @@ export interface StructuralArmorComponent {
 }
 export interface StructuralArmorPilot {
   status: 'one-ship-review' | 'limited-family-review';
-  revision?: 'refined-connections';
+  revision?: 'refined-connections' | 'ventral-keel-review';
+  ventral?: {
+    sourceComponentIds: string[];
+    componentIds: string[];
+    levels: {id:string;position:Vec3;hullY:number;exteriorY:number;depth:number}[];
+    recesses: {id:string;purpose:'MAINTENANCE';floor:Vec3[];mouthDepth:number;width:number;length:number;boundaryIds:string[]}[];
+  };
   joints?: { id:string; fromId:string; toId:string; bridgeId:string; contactPoints:Vec3[] }[];
   source: { seed: number; generatorVersion: string; structuralDataUnchanged: true };
   components: StructuralArmorComponent[];

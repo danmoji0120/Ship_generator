@@ -1,11 +1,22 @@
 import type {StructuralArmorComponent} from './types';
-import {solidTriangles,normal,verticalHit} from '../panels';
+import {solidTriangles,normal,verticalHit,inPolygon} from '../panels';
 /** Intersect real stored triangle planes, supporting non-flat faceted decks. */
 export function surfaceHit(components:StructuralArmorComponent[],x:number,z:number) {
   let best:{y:number;id:string}|undefined;
   for(const c of components)for(const t of solidTriangles(c.solid)){
     const n=normal(t);if(n.y<.1)continue;
     const p=verticalHit(t,n,x,z);if(p&&(!best||p.y>best.y))best={y:p.y,id:c.id};
+  }
+  return best;
+}
+
+/** Lowest outward-facing underside triangle, independently of the upper mounting surface. */
+export function undersideHit(components:StructuralArmorComponent[],x:number,z:number) {
+  let best:{y:number;id:string}|undefined;
+  for(const c of components)for(const t of solidTriangles(c.solid)){
+    const n=normal(t);if(n.y>-.1)continue;
+    const p={x,y:t[0].y-(n.x*(x-t[0].x)+n.z*(z-t[0].z))/n.y,z};
+    if(inPolygon(t,p,n,1e-6)&&(!best||p.y<best.y))best={y:p.y,id:c.id};
   }
   return best;
 }
