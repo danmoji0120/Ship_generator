@@ -205,6 +205,8 @@ export const SHAPE_KINDS = [
 export type ShapeKind = (typeof SHAPE_KINDS)[number];
 /** Local +Z is aft. Stations are derived from these parameters, never from a Mesh. */
 export interface ShapeDefinition {
+  /** Optional V1.8 longitudinal envelope, sampled by the existing Station Ring loft. */
+  stationScales?: { t: number; width: number; height: number }[];
   kind: ShapeKind;
   length: number;
   width: number;
@@ -288,6 +290,7 @@ export interface SilhouetteMetrics {
   massHierarchy?: {
     primaryRatio: number;
     foreRatio: number;
+    midRatio?: number;
     aftRatio: number;
     lateralSpread: number;
     verticalSpread: number;
@@ -409,7 +412,7 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -428,6 +431,7 @@ export interface ShipBlueprint extends Omit<
   /** Optional: V1/V1.5 exports without prefabs remain loadable. */
   prefabPlacements?: PrefabPlacement[];
   hullIntegration?: HullIntegration;
+  macroDesign?: import("../generation/macro/types").MacroDesignPlan;
   silhouette: SilhouetteMetrics;
 }
 export type AnyShipBlueprint = ShipBlueprint | LegacyShipBlueprint;

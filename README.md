@@ -1,4 +1,4 @@
-# Procedural Shipyard V1.7 — Hull Integration & External Superstructure
+# Procedural Shipyard V1.8 — Macro Silhouette & Design Grammar
 
 기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. V1.5는 기존 8개 Architecture 안에서 **덩어리의 Shape, 접합 Join, 질량 계층과 Composition**을 분화합니다. V1.7은 실제 단면 접촉과 장비 예약 영역을 기반으로 접합부·선수·선미·장갑 및 기능 외장을 통합합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.
 
@@ -9,7 +9,7 @@ Node.js 22.12 이상 권장. 외부 서버와 API 키는 필요 없습니다.
 ```bash
 npm install
 npm run dev            # http://localhost:5173
-npm test               # 기존 30개 + V1.7 Integration 8개 = 38 tests
+npm test               # 기존 38개 + V1.8 Macro 9개 = 47 tests
 npm run build          # 엄격한 TypeScript 검사 + production 빌드
 npm run preview        # production 미리보기
 ```
@@ -19,13 +19,53 @@ dev 서버가 실행된 상태에서:
 ```bash
 npm run qa             # 50개 실제 브라우저 생성물, 10개 Debug View, UI 회귀 검증
 npm run qa:gallery     # 220개 Contact Sheet 렌더 + 11 Shape / 10 Join Gallery
-npm run qa:integration # 220 designs × 5 views, V1.6 JSON/pixel compatibility, paired comparison
-python3 tests/compose-integration-qa.py # Pillow: 실제 WebGL PNG를 비교 Gallery로 조합
+npm run qa:integration # 과거 V1.7 pipeline 회귀; 새 qa/v1.8/legacy-integration에 출력
+INTEGRATION_OUTPUT=qa/v1.8/legacy-integration INTEGRATION_RAW=/tmp/shipyard-v17-regression-images python3 tests/compose-integration-qa.py # 역사 회귀 이미지 합성
 # 별도 Chromium 설치 경로 또는 서버:
 CHROMIUM_PATH=/path/to/chromium QA_URL=http://localhost:5173 npm run qa
 ```
 
 브라우저 QA는 `playwright-core`와 설치된 Chromium을 사용합니다. 일반 앱 실행에는 별도 브라우저 설치 스크립트나 외부 리소스가 필요하지 않습니다. 기존 발주서, 직접 Seed 입력, Random Seed, Same Seed 재생성, 새 설계, Orbit/Zoom/Fit, JSON Export를 유지합니다. Architecture 선택 UI는 추가하지 않았으며 선택은 주문서와 Seed에 의해 이루어집니다.
+
+
+## V1.8 Macro Design
+
+Architecture는 **연결 문법**, Macro Family는 **주요 질량의 비례와 배치**를 결정합니다. 8 Architecture, 29 Composition, 11 Shape, 10 Join, 기존 Kitbash와 V1.7 Integration을 보존합니다. `schemaVersion: 2`, `generatorVersion: "1.8"`이며 저장된 V0–V1.7 Blueprint에는 Macro 규칙을 소급 적용하지 않습니다. V1.6/V1.7 기준 생성기는 각각 `generateBlueprintV16` / `generateBlueprintV17`로 재현할 수 있습니다.
+
+| Macro Family | 실제 구조 변화 | 지원 Architecture |
+| --- | --- | --- |
+| WEDGE_CITADEL | 광폭·낮은 장갑 질량, 전체 단면의 비대칭적인 전후 폭 분포 | MONOLITHIC, BLOCK_ASSEMBLY, STACKED_BLOCKS |
+| HAMMERHEAD | 넓고 지배적인 전방 장갑, 가는 전투 연결부와 작은 후방 | BLOCK_ASSEMBLY, STACKED_BLOCKS |
+| SPLIT_FRAME | 복수의 질량 중심, 기능 포드 사이의 트러스/축과 열린 공간 | SPINE_AND_MODULES, TRUSS_POD, HYBRID |
+| WIDE_CARRIER | 큰 측면 구획·쌍동선, 짧은 중앙 연결부와 접근 채널 | BLOCK_ASSEMBLY, TWIN_HULL, HYBRID |
+| ENGINE_DOMINANT | 대형 후방 기계 구획 또는 독립 나셀 질량 | BLOCK_ASSEMBLY, TWIN_HULL, CORE_AND_NACELLES |
+| WEAPON_DOMINANT | 무장축과 후방 breech/추진 지지 질량이 전체 폭 분포 결정 | MONOLITHIC, SPINE_AND_MODULES, HYBRID |
+
+파이프라인: Order / Shipyard·Role Doctrine → Architecture → **Macro Family / Composition / major-mass recipe** → 계획된 Station envelope와 구역별 부피 예산 → 기존 StructuralVolume/Connector 문법 → Shape/Join → Engine/Hardpoint와 Kitbash 예약 → V1.7 Integration / Armor / Equipment → 계획 일치·간섭·그래프·실루엣 검증 → Blueprint → Renderer. Macro는 렌더 후 스케일 변경이나 장식이 아니며, 장비 배치 전에 실제 주요 구조물의 위치·크기·단면을 결정합니다.
+
+선택적 `macroDesign`은 Family, Architecture, Composition, dominant region, fore/mid/aft 및 primary mass 비율, lateral/vertical spread, +Z 후방 축 규칙, negative-space targets, 구조물별 role/position/dimensions/Shape, symmetry policy, priority별 silhouette budget, variant와 생성 Seed를 보존합니다. `realized`는 최종 구조의 독립 측정이고 `attempts`는 후보 실패 이유와 구조 ID를 기록합니다. V1.8은 실패 후 몰래 기존 바늘형이나 다른 Grammar로 변경하지 않습니다. 동일 Family/Architecture에서 최대 5개 후보를 시도하고 실패를 명시합니다.
+
+`ShapeDefinition.stationScales`는 기존 Station Ring 메시 경로의 선택적 종방향 envelope입니다. 새로운 Shape 종류나 별도 Renderer 생성기는 아닙니다. 구형 Shape에는 이 필드가 없고 기존 계산을 그대로 사용합니다. 부피는 실제 8점 Station Ring의 선형 loft 단면을 Simpson 적분하며 전방/중앙/후방 경계는 요청 길이의 ±1/6입니다. 단위는 m³, 밀도 근사는 t/m³, 추정 질량은 t입니다. 서로 매립된 구조물의 부피 합이므로 정확한 CSG 합집합 질량은 아닙니다. X/Y 질량 중심은 구조물 중심 근사이고 종방향 중심은 단면 적분입니다.
+
+Aegis는 넓고 두꺼운 장갑 질량, Vesper는 좁고 큰 후방 추진 구획, Forge는 분리 모듈·큰 서비스 간격·제한적인 센서 오프셋, Serein은 넓고 낮은 연속 외곽선을 선택합니다. Firepower/Missile은 주요 기능 구획, Survivability는 폭·두께, Mobility는 기계 구획, Endurance는 보급 모듈, Sensor는 센서 forebody 공간에 반영합니다. 모든 수치 변경이 Family를 바꾸지는 않습니다.
+
+### 실제 실루엣 QA
+
+`/qa.html`의 **Macro Family**는 개발용 강제 선택이며 일반 Ship Order에는 없습니다. 지원하지 않는 조합은 명시적인 오류를 표시합니다. **Projection**에서 Normal / TOP / SIDE / FRONT / ISOMETRIC / MASS를 선택하고 **Scale**에서 normalized / fixed를 비교합니다. 동일한 Architecture, Role, Shipyard, 연속 Seed 20척을 Contact Sheet로 확인할 수 있습니다. Shape/Join/Bow/Integration Gallery도 유지합니다.
+
+실루엣은 실제 함선 Geometry와 의미 있는 외피/추진부를 검정색 unlit material로 렌더링합니다. mount marker, surface detail, 장비 greeble과 line overlay는 제거합니다. 모든 비교는 흰 배경의 정사영과 동일 해상도를 사용합니다. normalized는 종횡비를 유지하며 가장 긴 투영축을 맞추고, fixed는 300m 함선에 495m 정사각형 frame을 적용합니다. MASS는 dominant / supporting / functional / connection을 구분합니다. 실루엣 IoU·contour IoU·aspect ratio·pixel centroid·convex-envelope 빈 공간은 **반복 디자인 경고**이며 예술적 합격 점수가 아닙니다. Gallery의 Blueprint feature signature 역시 실제 이미지 다양성을 증명하는 지표로 사용하지 않습니다.
+
+```bash
+npm run qa:macro                 # 220척, 정사영 4방향 + fixed TOP, 15개 V1.7 비교, WebGL 재현성
+python3 tests/compose-macro-qa.py # Pillow + NumPy: 실제 PNG 분석 및 Contact Sheet 합성
+npm run qa                      # 주문서 / Seed / Orbit / Zoom / Fit / Debug / Export 회귀
+```
+
+Chromium 경로는 `CHROMIUM_PATH`, 서버는 `QA_URL`, Macro 출력은 `MACRO_OUTPUT`, raw 이미지 임시 경로는 `MACRO_RAW`로 지정합니다. 기존 QA 자료를 덮어쓰지 않습니다. 이미지 합성의 기본 경로는 `qa/v1.8`와 `/tmp/shipyard-v18-images`입니다. 일반 앱은 Python을 요구하지 않습니다. `qa:integration`은 버전 고정 V1.7 회귀를 새 `qa/v1.8/legacy-integration` 경로에, `qa:gallery`는 최신 Gallery를 새 `qa/v1.8/gallery` 경로에 기록합니다. 최신 Macro 검증은 위 명령을 사용합니다.
+
+의도적 한계: 축 정렬·자유 회전 제한, 실제 Boolean 없이 중첩 부피 합, 기존 샘플 기반 외피 간섭 검사, 정적 주포/추진 경로 검사, 정밀 내부 질량·장갑·피해·함재기 시뮬레이션 제외. 모바일 레이아웃 검증과 실제 모바일 GPU 성능 검증은 다릅니다. 동일 환경의 WebGL 픽셀 재현성을 확인해도 서로 다른 GPU의 픽셀 일치를 보장하지 않습니다. 이후 V1.9 Art-directed Prefab은 Macro module role·Shape envelope·Connector/Socket 계약을 소비하도록 확장할 수 있습니다.
+
+최신 결과: [qa/v1.8/QA.md](qa/v1.8/QA.md). 아래 V1.7과 이전 버전의 구조 설명 및 QA는 역사 자료로 보존합니다.
 
 ## V1.7 외형 통합
 

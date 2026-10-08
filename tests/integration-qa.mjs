@@ -2,11 +2,16 @@ import { renderSession, png } from "./helpers/render-session.mjs";
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import assert from "node:assert/strict";
-const dir = process.env.INTEGRATION_OUTPUT || "qa/v1.7";
-const raw = process.env.INTEGRATION_RAW || "/tmp/shipyard-v17-images";
+const dir = process.env.INTEGRATION_OUTPUT || "qa/v1.8/legacy-integration";
+const raw = process.env.INTEGRATION_RAW || "/tmp/shipyard-v17-regression-images";
 await mkdir(raw, { recursive: true });
 await mkdir(dir, { recursive: true });
 const { browser, page, errors } = await renderSession();
+// This historical regression command explicitly exercises the immutable V1.7 pipeline.
+await page.evaluate(async () => {
+  const { generateBlueprint } = await import("/src/generation/generate.ts");
+  window.integrationQA.generate = (order, seed, options) => generateBlueprint(order, seed, { ...options, version: options?.version ?? "1.7" });
+});
 const records = [],
   comparisons = [],
   benchmarks = [];
@@ -112,15 +117,15 @@ try {
         console.log(`${yard}: 20 identical-order seeds × 5 views rendered`);
     }
   const manifest = JSON.parse(
-    await readFile(`${dir}/before/manifest.json`, "utf8"),
+    await readFile(`qa/v1.7/before/manifest.json`, "utf8"),
   );
   await mkdir(`${dir}/after`, { recursive: true });
   for (const row of manifest.result) {
     const old = JSON.parse(
-      await readFile(`${dir}/before/${row.yard}-${row.seed}.json`, "utf8"),
+      await readFile(`qa/v1.7/before/${row.yard}-${row.seed}.json`, "utf8"),
     );
     const originalPng = await readFile(
-      `${dir}/before/${row.yard}-${row.seed}.png`,
+      `qa/v1.7/before/${row.yard}-${row.seed}.png`,
     );
     const data = await page.evaluate(
       async ({ old, pose }) => {

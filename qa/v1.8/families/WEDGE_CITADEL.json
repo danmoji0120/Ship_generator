@@ -1,0 +1,6594 @@
+{
+  "schemaVersion": 2,
+  "generatorVersion": "1.8",
+  "macroDesign": {
+    "family": "WEDGE_CITADEL",
+    "architecture": "MONOLITHIC",
+    "composition": "FORWARD_SHOULDERS",
+    "dominantMassRegion": "mid",
+    "structuralAxis": "+Z aft; -Z bow; X lateral; Y dorsal",
+    "negativeSpaceTargets": [],
+    "majorModuleRoles": [
+      {
+        "id": "citadel",
+        "purpose": "habitat",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "dimensions": {
+          "x": 249.70846485541736,
+          "y": 31.296449886333402,
+          "z": 300
+        },
+        "shape": {
+          "kind": "COMPOUND_LOFT",
+          "length": 300,
+          "width": 249.70846485541736,
+          "height": 31.296449886333402,
+          "frontScale": 0.66,
+          "rearScale": 0.78,
+          "topSlope": 0.025,
+          "bottomSlope": 0.02,
+          "sideSlope": 0.02,
+          "chamfer": 0.19314299280755223,
+          "roundness": 0.15,
+          "frontProfile": "chamfer",
+          "rearProfile": "chamfer",
+          "taper": 0.1997144892113283,
+          "waist": 0.6414287410094403,
+          "shoulder": 0.2731429928075522,
+          "stationScales": [
+            {
+              "t": 0,
+              "width": 0.42560000000000003,
+              "height": 0.82
+            },
+            {
+              "t": 0.1,
+              "width": 0.6608,
+              "height": 1
+            },
+            {
+              "t": 0.2,
+              "width": 0.9520000000000001,
+              "height": 1
+            },
+            {
+              "t": 0.3,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "t": 0.4,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "t": 0.5,
+              "width": 0.88,
+              "height": 1
+            },
+            {
+              "t": 0.6,
+              "width": 0.72,
+              "height": 1
+            },
+            {
+              "t": 0.7,
+              "width": 0.61,
+              "height": 1
+            },
+            {
+              "t": 0.8,
+              "width": 0.53,
+              "height": 1
+            },
+            {
+              "t": 0.9,
+              "width": 0.44,
+              "height": 1
+            },
+            {
+              "t": 1,
+              "width": 0.4,
+              "height": 1
+            }
+          ]
+        },
+        "role": "dominant"
+      }
+    ],
+    "symmetryPolicy": "BILATERAL",
+    "silhouetteParameters": {
+      "beam": 1.1890879278829398,
+      "depth": 0.7451535687222238,
+      "neckRatio": 0.18,
+      "machineryBudget": 0.9,
+      "weaponBudget": 1.1500000000000001,
+      "supplyBudget": 1.045,
+      "sensorBudget": 0.94
+    },
+    "selectedVariant": "FORWARD_SHOULDERS/3",
+    "generationSeed": 7,
+    "source": "qa-fixed",
+    "approximateVolumeM3": 1611659.5464300034,
+    "densityTonnesPerM3": 0.336,
+    "estimatedMassTonnes": 541517.6076004811,
+    "primaryMassRatio": 1,
+    "foreMassRatio": 0.36501197352788917,
+    "midMassRatio": 0.39973830796484777,
+    "aftMassRatio": 0.23524971850726292,
+    "lateralSpread": 0.8323615495180579,
+    "verticalSpread": 0.10197426587963633,
+    "centerOfVolume": {
+      "x": 0,
+      "y": 0,
+      "z": -12.814218517815046
+    },
+    "moduleVolumesM3": {
+      "citadel": 1611659.5464300034
+    },
+    "realized": {
+      "approximateVolumeM3": 1611659.5464300034,
+      "densityTonnesPerM3": 0.336,
+      "estimatedMassTonnes": 541517.6076004811,
+      "primaryMassRatio": 1,
+      "foreMassRatio": 0.36501197352788917,
+      "midMassRatio": 0.39973830796484777,
+      "aftMassRatio": 0.23524971850726292,
+      "lateralSpread": 0.8323615495180579,
+      "verticalSpread": 0.10197426587963633,
+      "centerOfVolume": {
+        "x": 0,
+        "y": 0,
+        "z": -12.814218517815046
+      },
+      "moduleVolumesM3": {
+        "citadel": 1611659.5464300034
+      }
+    },
+    "attempts": []
+  },
+  "seed": 7,
+  "candidate": 0,
+  "shipyardId": "serein",
+  "role": "Cruiser",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "serein",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "designName": "Resolute 0007",
+  "architecture": {
+    "composition": "FORWARD_SHOULDERS",
+    "source": "qa-fixed",
+    "grammar": "MONOLITHIC",
+    "requestedGrammar": "MONOLITHIC",
+    "components": [
+      "MONOLITHIC"
+    ],
+    "rootVolumeId": "citadel",
+    "nose": "pointed",
+    "engineArchitecture": "Twin Integrated",
+    "selectionWeights": {
+      "MONOLITHIC": 14.4,
+      "BLOCK_ASSEMBLY": 3.8666666666666667,
+      "SPINE_AND_MODULES": 8,
+      "TRUSS_POD": 1.5333333333333332,
+      "TWIN_HULL": 7,
+      "CORE_AND_NACELLES": 4.8,
+      "STACKED_BLOCKS": 1.5,
+      "HYBRID": 1.5
+    },
+    "parameters": {
+      "volumeBudget": 1,
+      "beamRatio": 0.8323615495180579,
+      "armorRatio": 0.10197426587963633
+    }
+  },
+  "structuralVolumes": [
+    {
+      "id": "citadel",
+      "type": "PRIMARY_HULL",
+      "purpose": "habitat",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 249.70846485541736,
+        "y": 31.296449886333402,
+        "z": 300
+      },
+      "geometry": {
+        "primitive": "Long Loft",
+        "stations": [
+          {
+            "z": -150,
+            "width": 106.27592264246563,
+            "height": 25.663088906793387,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -120,
+            "width": 165.0073535764598,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -90,
+            "width": 237.72245854235734,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -60,
+            "width": 249.70846485541736,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -29.999999999999993,
+            "width": 249.70846485541736,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 219.74344907276728,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 29.999999999999993,
+            "width": 179.7900946959005,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 59.999999999999986,
+            "width": 152.3221635618046,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 90.00000000000001,
+            "width": 132.34548637337122,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 120,
+            "width": 109.87172453638364,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 150,
+            "width": 99.88338594216695,
+            "height": 31.296449886333402,
+            "profile": "chamfer",
+            "bevel": 0.19314299280755223,
+            "topSlope": 0.025,
+            "sideSlope": 0.02,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [],
+      "shape": {
+        "kind": "COMPOUND_LOFT",
+        "length": 300,
+        "width": 249.70846485541736,
+        "height": 31.296449886333402,
+        "frontScale": 0.66,
+        "rearScale": 0.78,
+        "topSlope": 0.025,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.02,
+        "chamfer": 0.19314299280755223,
+        "roundness": 0.15,
+        "frontProfile": "chamfer",
+        "rearProfile": "chamfer",
+        "taper": 0.1997144892113283,
+        "waist": 0.6414287410094403,
+        "shoulder": 0.2731429928075522,
+        "stationScales": [
+          {
+            "t": 0,
+            "width": 0.42560000000000003,
+            "height": 0.82
+          },
+          {
+            "t": 0.1,
+            "width": 0.6608,
+            "height": 1
+          },
+          {
+            "t": 0.2,
+            "width": 0.9520000000000001,
+            "height": 1
+          },
+          {
+            "t": 0.3,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "t": 0.4,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "t": 0.5,
+            "width": 0.88,
+            "height": 1
+          },
+          {
+            "t": 0.6,
+            "width": 0.72,
+            "height": 1
+          },
+          {
+            "t": 0.7,
+            "width": 0.61,
+            "height": 1
+          },
+          {
+            "t": 0.8,
+            "width": 0.53,
+            "height": 1
+          },
+          {
+            "t": 0.9,
+            "width": 0.44,
+            "height": 1
+          },
+          {
+            "t": 1,
+            "width": 0.4,
+            "height": 1
+          }
+        ]
+      },
+      "hierarchyTier": 1
+    }
+  ],
+  "structuralConnectors": [],
+  "prefabPlacements": [
+    {
+      "id": "kit-radiator-2",
+      "kind": "RADIATOR_BANK",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "citadel",
+        "position": {
+          "x": -69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 21.000000000000004,
+        "y": 6,
+        "z": 43.5
+      },
+      "variant": 0,
+      "functionality": "thermal"
+    },
+    {
+      "id": "kit-radiator-3",
+      "kind": "RADIATOR_BANK",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "citadel",
+        "position": {
+          "x": 69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 21.000000000000004,
+        "y": 6,
+        "z": 43.5
+      },
+      "variant": 2,
+      "functionality": "thermal"
+    },
+    {
+      "id": "exterior-bow-citadel-0",
+      "kind": "WEDGE_BOW",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": -150
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      },
+      "dimensions": {
+        "x": 108.93282070852726,
+        "y": 25.712811141550297,
+        "z": 5.099999999999994
+      },
+      "variant": 1,
+      "functionality": "structural",
+      "exterior": {
+        "phase": "bow",
+        "rings": [
+          [
+            {
+              "x": -53.72527563057275,
+              "y": 10.14091716186453,
+              "z": -149.4
+            },
+            {
+              "x": -53.72527563057275,
+              "y": -10.398674723128373,
+              "z": -149.4
+            },
+            {
+              "x": -43.34861510587328,
+              "y": -12.630120501928252,
+              "z": -149.4
+            },
+            {
+              "x": 43.34861510587328,
+              "y": -12.630120501928252,
+              "z": -149.4
+            },
+            {
+              "x": 53.72527563057275,
+              "y": -10.398674723128373,
+              "z": -149.4
+            },
+            {
+              "x": 53.72527563057275,
+              "y": 10.14091716186453,
+              "z": -149.4
+            },
+            {
+              "x": 43.34861510587328,
+              "y": 12.56568111161229,
+              "z": -149.4
+            },
+            {
+              "x": -43.34861510587328,
+              "y": 12.56568111161229,
+              "z": -149.4
+            }
+          ],
+          [
+            {
+              "x": -54.46641035426363,
+              "y": 10.351010361733833,
+              "z": -151.575
+            },
+            {
+              "x": -54.46641035426363,
+              "y": -10.610047165386778,
+              "z": -151.575
+            },
+            {
+              "x": -43.9466048509569,
+              "y": -12.887281474616135,
+              "z": -151.575
+            },
+            {
+              "x": 43.9466048509569,
+              "y": -12.887281474616135,
+              "z": -151.575
+            },
+            {
+              "x": 54.46641035426363,
+              "y": -10.610047165386778,
+              "z": -151.575
+            },
+            {
+              "x": 54.46641035426363,
+              "y": 10.351010361733833,
+              "z": -151.575
+            },
+            {
+              "x": 43.9466048509569,
+              "y": 12.825529666934163,
+              "z": -151.575
+            },
+            {
+              "x": -43.9466048509569,
+              "y": 12.825529666934163,
+              "z": -151.575
+            }
+          ],
+          [
+            {
+              "x": -9.564833037821904,
+              "y": 1.7516246546025254,
+              "z": -154.5
+            },
+            {
+              "x": -9.564833037821904,
+              "y": -1.92934154528207,
+              "z": -154.5
+            },
+            {
+              "x": -7.71745255919243,
+              "y": -2.3292461069028345,
+              "z": -154.5
+            },
+            {
+              "x": 7.7174525591924334,
+              "y": -2.3292461069028345,
+              "z": -154.5
+            },
+            {
+              "x": 9.564833037821908,
+              "y": -1.92934154528207,
+              "z": -154.5
+            },
+            {
+              "x": 9.564833037821908,
+              "y": 1.7516246546025254,
+              "z": -154.5
+            },
+            {
+              "x": 7.7174525591924334,
+              "y": 2.186174386247462,
+              "z": -154.5
+            },
+            {
+              "x": -7.71745255919243,
+              "y": 2.186174386247462,
+              "z": -154.5
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -53.72527563057275,
+              "y": 10.14091716186453,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -53.72527563057275,
+              "y": -10.398674723128373,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -43.34861510587328,
+              "y": -12.630120501928252,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 43.34861510587328,
+              "y": -12.630120501928252,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 53.72527563057275,
+              "y": -10.398674723128373,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 53.72527563057275,
+              "y": 10.14091716186453,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 43.34861510587328,
+              "y": 12.56568111161229,
+              "z": -149.4
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -43.34861510587328,
+              "y": 12.56568111161229,
+              "z": -149.4
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "EDGE",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": -150
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-engine-engine-0-1",
+      "kind": "ENGINE_HOUSING",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "dimensions": {
+        "x": 19.3029548132263,
+        "y": 19.3029548132263,
+        "z": 6.412800000000004
+      },
+      "variant": 1,
+      "functionality": "propulsion",
+      "exterior": {
+        "phase": "stern",
+        "tube": {
+          "center": {
+            "x": -13.983674031903375,
+            "y": 0,
+            "z": 152.6061
+          },
+          "length": 6.4128,
+          "innerRadius": 8.647723756325382,
+          "outerRadius": 9.65147740661315
+        },
+        "equipmentZoneId": "zone-engine-0",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -13.983674031903375,
+              "y": 0,
+              "z": 149.3997
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -13.983674031903375,
+              "y": 0,
+              "z": 149.9997
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-engine-engine-1-2",
+      "kind": "ENGINE_HOUSING",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "dimensions": {
+        "x": 19.3029548132263,
+        "y": 19.3029548132263,
+        "z": 6.412800000000004
+      },
+      "variant": 1,
+      "functionality": "propulsion",
+      "exterior": {
+        "phase": "stern",
+        "tube": {
+          "center": {
+            "x": 13.983674031903375,
+            "y": 0,
+            "z": 152.6061
+          },
+          "length": 6.4128,
+          "innerRadius": 8.647723756325382,
+          "outerRadius": 9.65147740661315
+        },
+        "equipmentZoneId": "zone-engine-1",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 13.983674031903375,
+              "y": 0,
+              "z": 149.3997
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 13.983674031903375,
+              "y": 0,
+              "z": 149.9997
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-rear-citadel-3",
+      "kind": "REAR_TRANSITION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 150
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "dimensions": {
+        "x": 104.40945175105733,
+        "y": 31.96893235326599,
+        "z": 1.1099999999999852
+      },
+      "variant": 1,
+      "functionality": "structural",
+      "exterior": {
+        "phase": "stern",
+        "rings": [
+          [
+            {
+              "x": -40.45698814447161,
+              "y": 15.257019319587533,
+              "z": 148.8
+            },
+            {
+              "x": 40.45698814447161,
+              "y": 15.257019319587533,
+              "z": 148.8
+            },
+            {
+              "x": 50.14145974296781,
+              "y": 12.312915446654362,
+              "z": 148.8
+            },
+            {
+              "x": 50.14145974296781,
+              "y": -12.625879945517696,
+              "z": 148.8
+            },
+            {
+              "x": 40.45698814447161,
+              "y": -15.335260444303367,
+              "z": 148.8
+            },
+            {
+              "x": -40.45698814447161,
+              "y": -15.335260444303367,
+              "z": 148.8
+            },
+            {
+              "x": -50.14145974296781,
+              "y": -12.625879945517696,
+              "z": 148.8
+            },
+            {
+              "x": -50.14145974296781,
+              "y": 12.312915446654362,
+              "z": 148.8
+            }
+          ],
+          [
+            {
+              "x": -42.1217488812312,
+              "y": 15.947986252234237,
+              "z": 149.91
+            },
+            {
+              "x": 42.1217488812312,
+              "y": 15.947986252234237,
+              "z": 149.91
+            },
+            {
+              "x": 52.204725875528666,
+              "y": 12.871397705019072,
+              "z": 149.91
+            },
+            {
+              "x": 52.204725875528666,
+              "y": -13.189643479800726,
+              "z": 149.91
+            },
+            {
+              "x": 42.1217488812312,
+              "y": -16.020946101031754,
+              "z": 149.91
+            },
+            {
+              "x": -42.1217488812312,
+              "y": -16.020946101031754,
+              "z": 149.91
+            },
+            {
+              "x": -52.204725875528666,
+              "y": -13.189643479800726,
+              "z": 149.91
+            },
+            {
+              "x": -52.204725875528666,
+              "y": 12.871397705019072,
+              "z": 149.91
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -40.45698814447161,
+              "y": 15.257019319587533,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.45698814447161,
+              "y": 15.257019319587533,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 50.14145974296781,
+              "y": 12.312915446654362,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 50.14145974296781,
+              "y": -12.625879945517696,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.45698814447161,
+              "y": -15.335260444303367,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -40.45698814447161,
+              "y": -15.335260444303367,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -50.14145974296781,
+              "y": -12.625879945517696,
+              "z": 148.8
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -50.14145974296781,
+              "y": 12.312915446654362,
+              "z": 148.8
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "EDGE",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 150
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-frame-engine-0-4",
+      "kind": "THRUSTER_FRAME",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "dimensions": {
+        "x": 20.847191198284403,
+        "y": 20.847191198284403,
+        "z": 0.7200000000000273
+      },
+      "variant": 1,
+      "functionality": "propulsion",
+      "exterior": {
+        "phase": "stern",
+        "tube": {
+          "center": {
+            "x": -13.983674031903375,
+            "y": 0,
+            "z": 149.75969999999998
+          },
+          "length": 0.72,
+          "innerRadius": 8.570511937072478,
+          "outerRadius": 10.423595599142201
+        },
+        "equipmentZoneId": "zone-engine-0",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -13.983674031903375,
+              "y": 0,
+              "z": 149.3997
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -13.983674031903375,
+              "y": 0,
+              "z": 149.9997
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-frame-engine-1-5",
+      "kind": "THRUSTER_FRAME",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "dimensions": {
+        "x": 20.847191198284403,
+        "y": 20.847191198284403,
+        "z": 0.7200000000000273
+      },
+      "variant": 1,
+      "functionality": "propulsion",
+      "exterior": {
+        "phase": "stern",
+        "tube": {
+          "center": {
+            "x": 13.983674031903375,
+            "y": 0,
+            "z": 149.75969999999998
+          },
+          "length": 0.72,
+          "innerRadius": 8.570511937072478,
+          "outerRadius": 10.423595599142201
+        },
+        "equipmentZoneId": "zone-engine-1",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 13.983674031903375,
+              "y": 0,
+              "z": 149.3997
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 13.983674031903375,
+              "y": 0,
+              "z": 149.9997
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-armor-citadel--1-forward-6",
+      "kind": "ARMOR_ENVELOPE",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -124.67423242770867,
+          "y": -0.1564822494316669,
+          "z": -51
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 21.86352414970952,
+        "y": 24.938795392172057,
+        "z": 102
+      },
+      "variant": 1,
+      "functionality": "protection",
+      "exterior": {
+        "phase": "armor",
+        "rings": [
+          [
+            {
+              "x": -104.13820827799915,
+              "y": -12.625879945517696,
+              "z": -102
+            },
+            {
+              "x": -105.46570827799916,
+              "y": -12.625879945517696,
+              "z": -102
+            },
+            {
+              "x": -105.46570827799916,
+              "y": 12.312915446654362,
+              "z": -102
+            },
+            {
+              "x": -104.13820827799915,
+              "y": 12.312915446654362,
+              "z": -102
+            }
+          ],
+          [
+            {
+              "x": -124.67423242770867,
+              "y": -12.625879945517696,
+              "z": -51
+            },
+            {
+              "x": -126.00173242770867,
+              "y": -12.625879945517696,
+              "z": -51
+            },
+            {
+              "x": -126.00173242770867,
+              "y": 12.312915446654362,
+              "z": -51
+            },
+            {
+              "x": -124.67423242770867,
+              "y": 12.312915446654362,
+              "z": -51
+            }
+          ],
+          [
+            {
+              "x": -109.69172453638363,
+              "y": -12.625879945517696,
+              "z": 0
+            },
+            {
+              "x": -111.01922453638363,
+              "y": -12.625879945517696,
+              "z": 0
+            },
+            {
+              "x": -111.01922453638363,
+              "y": 12.312915446654362,
+              "z": 0
+            },
+            {
+              "x": -109.69172453638363,
+              "y": 12.312915446654362,
+              "z": 0
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -104.13820827799915,
+              "y": -0.1564822494316669,
+              "z": -102
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -124.67423242770867,
+              "y": -0.1564822494316669,
+              "z": -51
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -109.69172453638363,
+              "y": -0.1564822494316669,
+              "z": 0
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -124.67423242770867,
+              "y": -0.1564822494316669,
+              "z": -51
+            },
+            "normal": {
+              "x": -1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-armor-citadel-1-forward-7",
+      "kind": "ARMOR_ENVELOPE",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 124.67423242770867,
+          "y": -0.1564822494316669,
+          "z": -51
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 21.86352414970952,
+        "y": 24.938795392172057,
+        "z": 102
+      },
+      "variant": 1,
+      "functionality": "protection",
+      "exterior": {
+        "phase": "armor",
+        "rings": [
+          [
+            {
+              "x": 104.13820827799915,
+              "y": 12.312915446654362,
+              "z": -102
+            },
+            {
+              "x": 105.46570827799916,
+              "y": 12.312915446654362,
+              "z": -102
+            },
+            {
+              "x": 105.46570827799916,
+              "y": -12.625879945517696,
+              "z": -102
+            },
+            {
+              "x": 104.13820827799915,
+              "y": -12.625879945517696,
+              "z": -102
+            }
+          ],
+          [
+            {
+              "x": 124.67423242770867,
+              "y": 12.312915446654362,
+              "z": -51
+            },
+            {
+              "x": 126.00173242770867,
+              "y": 12.312915446654362,
+              "z": -51
+            },
+            {
+              "x": 126.00173242770867,
+              "y": -12.625879945517696,
+              "z": -51
+            },
+            {
+              "x": 124.67423242770867,
+              "y": -12.625879945517696,
+              "z": -51
+            }
+          ],
+          [
+            {
+              "x": 109.69172453638363,
+              "y": 12.312915446654362,
+              "z": 0
+            },
+            {
+              "x": 111.01922453638363,
+              "y": 12.312915446654362,
+              "z": 0
+            },
+            {
+              "x": 111.01922453638363,
+              "y": -12.625879945517696,
+              "z": 0
+            },
+            {
+              "x": 109.69172453638363,
+              "y": -12.625879945517696,
+              "z": 0
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 104.13820827799915,
+              "y": -0.1564822494316669,
+              "z": -102
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 124.67423242770867,
+              "y": -0.1564822494316669,
+              "z": -51
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 109.69172453638363,
+              "y": -0.1564822494316669,
+              "z": 0
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 124.67423242770867,
+              "y": -0.1564822494316669,
+              "z": -51
+            },
+            "normal": {
+              "x": 1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-0-8",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 36.0179489707454,
+          "y": 15.257019319587533,
+          "z": -84.00000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.1000289989999885
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            },
+            {
+              "x": 36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -87.38096619000001
+            },
+            {
+              "x": 38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            },
+            {
+              "x": 39.3989151607454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            },
+            {
+              "x": 38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            },
+            {
+              "x": 36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -80.61903381000002
+            },
+            {
+              "x": 33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            },
+            {
+              "x": 32.6369827807454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          ],
+          [
+            {
+              "x": 33.50770964483838,
+              "y": 15.451081819587532,
+              "z": -86.51023932590704
+            },
+            {
+              "x": 36.0179489707454,
+              "y": 15.451081819587532,
+              "z": -87.55001449950001
+            },
+            {
+              "x": 38.528188296652424,
+              "y": 15.451081819587532,
+              "z": -86.51023932590704
+            },
+            {
+              "x": 39.5679634702454,
+              "y": 15.451081819587532,
+              "z": -84.00000000000001
+            },
+            {
+              "x": 38.528188296652424,
+              "y": 15.451081819587532,
+              "z": -81.48976067409299
+            },
+            {
+              "x": 36.0179489707454,
+              "y": 15.451081819587532,
+              "z": -80.44998550050002
+            },
+            {
+              "x": 33.50770964483838,
+              "y": 15.451081819587532,
+              "z": -81.48976067409299
+            },
+            {
+              "x": 32.4679344712454,
+              "y": 15.451081819587532,
+              "z": -84.00000000000001
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-0",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -87.38096619000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.3989151607454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -80.61903381000002
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 32.6369827807454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 36.0179489707454,
+              "y": 15.257019319587533,
+              "z": -84.00000000000001
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-1-9",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -36.0179489707454,
+          "y": 15.257019319587533,
+          "z": -84.00000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.1000289989999885
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            },
+            {
+              "x": -36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -87.38096619000001
+            },
+            {
+              "x": -33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            },
+            {
+              "x": -32.6369827807454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            },
+            {
+              "x": -33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            },
+            {
+              "x": -36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -80.61903381000002
+            },
+            {
+              "x": -38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            },
+            {
+              "x": -39.3989151607454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          ],
+          [
+            {
+              "x": -38.528188296652424,
+              "y": 15.451081819587532,
+              "z": -86.51023932590704
+            },
+            {
+              "x": -36.0179489707454,
+              "y": 15.451081819587532,
+              "z": -87.55001449950001
+            },
+            {
+              "x": -33.50770964483838,
+              "y": 15.451081819587532,
+              "z": -86.51023932590704
+            },
+            {
+              "x": -32.4679344712454,
+              "y": 15.451081819587532,
+              "z": -84.00000000000001
+            },
+            {
+              "x": -33.50770964483838,
+              "y": 15.451081819587532,
+              "z": -81.48976067409299
+            },
+            {
+              "x": -36.0179489707454,
+              "y": 15.451081819587532,
+              "z": -80.44998550050002
+            },
+            {
+              "x": -38.528188296652424,
+              "y": 15.451081819587532,
+              "z": -81.48976067409299
+            },
+            {
+              "x": -39.5679634702454,
+              "y": 15.451081819587532,
+              "z": -84.00000000000001
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-1",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -87.38096619000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -86.39070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -32.6369827807454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -33.627244850833954,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -36.0179489707454,
+              "y": 15.047019319587532,
+              "z": -80.61903381000002
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -38.40865309065685,
+              "y": 15.047019319587532,
+              "z": -81.60929588008857
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.3989151607454,
+              "y": 15.047019319587532,
+              "z": -84.00000000000001
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -36.0179489707454,
+              "y": 15.257019319587533,
+              "z": -84.00000000000001
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-2-10",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 36.68916532427676,
+          "y": 15.257019319587533,
+          "z": -72.80000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.1000289989999885
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 34.29846120436531,
+              "y": 15.047019319587532,
+              "z": -75.19070411991146
+            },
+            {
+              "x": 36.68916532427676,
+              "y": 15.047019319587532,
+              "z": -76.18096619
+            },
+            {
+              "x": 39.079869444188205,
+              "y": 15.047019319587532,
+              "z": -75.19070411991146
+            },
+            {
+              "x": 40.07013151427676,
+              "y": 15.047019319587532,
+              "z": -72.80000000000001
+            },
+            {
+              "x": 39.079869444188205,
+              "y": 15.047019319587532,
+              "z": -70.40929588008856
+            },
+            {
+              "x": 36.68916532427676,
+              "y": 15.047019319587532,
+              "z": -69.41903381000002
+            },
+            {
+              "x": 34.29846120436531,
+              "y": 15.047019319587532,
+              "z": -70.40929588008856
+            },
+            {
+              "x": 33.308199134276755,
+              "y": 15.047019319587532,
+              "z": -72.80000000000001
+            }
+          ],
+          [
+            {
+              "x": 34.178925998369735,
+              "y": 15.451081819587532,
+              "z": -75.31023932590703
+            },
+            {
+              "x": 36.68916532427676,
+              "y": 15.451081819587532,
+              "z": -76.3500144995
+            },
+            {
+              "x": 39.19940465018378,
+              "y": 15.451081819587532,
+              "z": -75.31023932590703
+            },
+            {
+              "x": 40.23917982377676,
+              "y": 15.451081819587532,
+              "z": -72.80000000000001
+            },
+            {
+              "x": 39.19940465018378,
+              "y": 15.451081819587532,
+              "z": -70.28976067409299
+            },
+            {
+              "x": 36.68916532427676,
+              "y": 15.451081819587532,
+              "z": -69.24998550050002
+            },
+            {
+              "x": 34.178925998369735,
+              "y": 15.451081819587532,
+              "z": -70.28976067409299
+            },
+            {
+              "x": 33.139150824776756,
+              "y": 15.451081819587532,
+              "z": -72.80000000000001
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-2",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.29846120436531,
+              "y": 15.047019319587532,
+              "z": -75.19070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 36.68916532427676,
+              "y": 15.047019319587532,
+              "z": -76.18096619
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.079869444188205,
+              "y": 15.047019319587532,
+              "z": -75.19070411991146
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.07013151427676,
+              "y": 15.047019319587532,
+              "z": -72.80000000000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.079869444188205,
+              "y": 15.047019319587532,
+              "z": -70.40929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 36.68916532427676,
+              "y": 15.047019319587532,
+              "z": -69.41903381000002
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.29846120436531,
+              "y": 15.047019319587532,
+              "z": -70.40929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.308199134276755,
+              "y": 15.047019319587532,
+              "z": -72.80000000000001
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 36.68916532427676,
+              "y": 15.257019319587533,
+              "z": -72.80000000000001
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-4-11",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 37.36038167780812,
+          "y": 15.257019319587533,
+          "z": -61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028998999996
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            },
+            {
+              "x": 37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -64.98096619
+            },
+            {
+              "x": 39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            },
+            {
+              "x": 40.74134786780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            },
+            {
+              "x": 39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            },
+            {
+              "x": 37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -58.219033810000006
+            },
+            {
+              "x": 34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            },
+            {
+              "x": 33.97941548780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          ],
+          [
+            {
+              "x": 34.8501423519011,
+              "y": 15.451081819587532,
+              "z": -64.11023932590703
+            },
+            {
+              "x": 37.36038167780812,
+              "y": 15.451081819587532,
+              "z": -65.1500144995
+            },
+            {
+              "x": 39.870621003715144,
+              "y": 15.451081819587532,
+              "z": -64.11023932590703
+            },
+            {
+              "x": 40.91039617730812,
+              "y": 15.451081819587532,
+              "z": -61.60000000000001
+            },
+            {
+              "x": 39.870621003715144,
+              "y": 15.451081819587532,
+              "z": -59.089760674092986
+            },
+            {
+              "x": 37.36038167780812,
+              "y": 15.451081819587532,
+              "z": -58.04998550050001
+            },
+            {
+              "x": 34.8501423519011,
+              "y": 15.451081819587532,
+              "z": -59.089760674092986
+            },
+            {
+              "x": 33.81036717830812,
+              "y": 15.451081819587532,
+              "z": -61.60000000000001
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-4",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -64.98096619
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.74134786780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -58.219033810000006
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.97941548780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 37.36038167780812,
+              "y": 15.257019319587533,
+              "z": -61.60000000000001
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-5-12",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -37.36038167780812,
+          "y": 15.257019319587533,
+          "z": -61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028998999996
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            },
+            {
+              "x": -37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -64.98096619
+            },
+            {
+              "x": -34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            },
+            {
+              "x": -33.97941548780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            },
+            {
+              "x": -34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            },
+            {
+              "x": -37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -58.219033810000006
+            },
+            {
+              "x": -39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            },
+            {
+              "x": -40.74134786780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          ],
+          [
+            {
+              "x": -39.870621003715144,
+              "y": 15.451081819587532,
+              "z": -64.11023932590703
+            },
+            {
+              "x": -37.36038167780812,
+              "y": 15.451081819587532,
+              "z": -65.1500144995
+            },
+            {
+              "x": -34.8501423519011,
+              "y": 15.451081819587532,
+              "z": -64.11023932590703
+            },
+            {
+              "x": -33.81036717830812,
+              "y": 15.451081819587532,
+              "z": -61.60000000000001
+            },
+            {
+              "x": -34.8501423519011,
+              "y": 15.451081819587532,
+              "z": -59.089760674092986
+            },
+            {
+              "x": -37.36038167780812,
+              "y": 15.451081819587532,
+              "z": -58.04998550050001
+            },
+            {
+              "x": -39.870621003715144,
+              "y": 15.451081819587532,
+              "z": -59.089760674092986
+            },
+            {
+              "x": -40.91039617730812,
+              "y": 15.451081819587532,
+              "z": -61.60000000000001
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-5",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -64.98096619
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -63.990704119911456
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -33.97941548780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -34.969677557896674,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.36038167780812,
+              "y": 15.047019319587532,
+              "z": -58.219033810000006
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.75108579771957,
+              "y": 15.047019319587532,
+              "z": -59.20929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -40.74134786780812,
+              "y": 15.047019319587532,
+              "z": -61.60000000000001
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -37.36038167780812,
+              "y": 15.257019319587533,
+              "z": -61.60000000000001
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-7-13",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -50.400000000000006
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028999000003
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -52.79070411991145
+            },
+            {
+              "x": -37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -53.78096619000001
+            },
+            {
+              "x": -35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -52.79070411991145
+            },
+            {
+              "x": -34.0753035383126,
+              "y": 15.047019319587532,
+              "z": -50.400000000000006
+            },
+            {
+              "x": -35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -48.00929588008856
+            },
+            {
+              "x": -37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -47.01903381
+            },
+            {
+              "x": -39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -48.00929588008856
+            },
+            {
+              "x": -40.83723591831261,
+              "y": 15.047019319587532,
+              "z": -50.400000000000006
+            }
+          ],
+          [
+            {
+              "x": -39.96650905421963,
+              "y": 15.451081819587532,
+              "z": -52.91023932590703
+            },
+            {
+              "x": -37.456269728312606,
+              "y": 15.451081819587532,
+              "z": -53.95001449950001
+            },
+            {
+              "x": -34.94603040240558,
+              "y": 15.451081819587532,
+              "z": -52.91023932590703
+            },
+            {
+              "x": -33.906255228812604,
+              "y": 15.451081819587532,
+              "z": -50.400000000000006
+            },
+            {
+              "x": -34.94603040240558,
+              "y": 15.451081819587532,
+              "z": -47.88976067409298
+            },
+            {
+              "x": -37.456269728312606,
+              "y": 15.451081819587532,
+              "z": -46.849985500500004
+            },
+            {
+              "x": -39.96650905421963,
+              "y": 15.451081819587532,
+              "z": -47.88976067409298
+            },
+            {
+              "x": -41.00628422781261,
+              "y": 15.451081819587532,
+              "z": -50.400000000000006
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-7",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -52.79070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -53.78096619000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -52.79070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -34.0753035383126,
+              "y": 15.047019319587532,
+              "z": -50.400000000000006
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -48.00929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -47.01903381
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -48.00929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -40.83723591831261,
+              "y": 15.047019319587532,
+              "z": -50.400000000000006
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -37.456269728312606,
+              "y": 15.257019319587533,
+              "z": -50.400000000000006
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-8-14",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -39.2
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028999000003
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -41.59070411991145
+            },
+            {
+              "x": 37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -42.580966190000005
+            },
+            {
+              "x": 39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -41.59070411991145
+            },
+            {
+              "x": 40.83723591831261,
+              "y": 15.047019319587532,
+              "z": -39.2
+            },
+            {
+              "x": 39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -36.809295880088555
+            },
+            {
+              "x": 37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -35.81903381
+            },
+            {
+              "x": 35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -36.809295880088555
+            },
+            {
+              "x": 34.0753035383126,
+              "y": 15.047019319587532,
+              "z": -39.2
+            }
+          ],
+          [
+            {
+              "x": 34.94603040240558,
+              "y": 15.451081819587532,
+              "z": -41.710239325907025
+            },
+            {
+              "x": 37.456269728312606,
+              "y": 15.451081819587532,
+              "z": -42.750014499500004
+            },
+            {
+              "x": 39.96650905421963,
+              "y": 15.451081819587532,
+              "z": -41.710239325907025
+            },
+            {
+              "x": 41.00628422781261,
+              "y": 15.451081819587532,
+              "z": -39.2
+            },
+            {
+              "x": 39.96650905421963,
+              "y": 15.451081819587532,
+              "z": -36.68976067409298
+            },
+            {
+              "x": 37.456269728312606,
+              "y": 15.451081819587532,
+              "z": -35.6499855005
+            },
+            {
+              "x": 34.94603040240558,
+              "y": 15.451081819587532,
+              "z": -36.68976067409298
+            },
+            {
+              "x": 33.906255228812604,
+              "y": 15.451081819587532,
+              "z": -39.2
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-8",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -41.59070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -42.580966190000005
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -41.59070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.83723591831261,
+              "y": 15.047019319587532,
+              "z": -39.2
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.84697384822405,
+              "y": 15.047019319587532,
+              "z": -36.809295880088555
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.456269728312606,
+              "y": 15.047019319587532,
+              "z": -35.81903381
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 35.06556560840116,
+              "y": 15.047019319587532,
+              "z": -36.809295880088555
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.0753035383126,
+              "y": 15.047019319587532,
+              "z": -39.2
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 37.456269728312606,
+              "y": 15.257019319587533,
+              "z": -39.2
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-10-15",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 37.1566195704861,
+          "y": 15.257019319587533,
+          "z": -28.000000000000007
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028999000003
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -30.390704119911454
+            },
+            {
+              "x": 37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -31.38096619000001
+            },
+            {
+              "x": 39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -30.39070411991145
+            },
+            {
+              "x": 40.5375857604861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            },
+            {
+              "x": 39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -25.609295880088563
+            },
+            {
+              "x": 37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -24.619033810000005
+            },
+            {
+              "x": 34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -25.60929588008856
+            },
+            {
+              "x": 33.7756533804861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          ],
+          [
+            {
+              "x": 34.64638024457908,
+              "y": 15.451081819587532,
+              "z": -30.510239325907026
+            },
+            {
+              "x": 37.1566195704861,
+              "y": 15.451081819587532,
+              "z": -31.55001449950001
+            },
+            {
+              "x": 39.66685889639312,
+              "y": 15.451081819587532,
+              "z": -30.510239325907023
+            },
+            {
+              "x": 40.7066340699861,
+              "y": 15.451081819587532,
+              "z": -28.000000000000007
+            },
+            {
+              "x": 39.66685889639312,
+              "y": 15.451081819587532,
+              "z": -25.48976067409299
+            },
+            {
+              "x": 37.1566195704861,
+              "y": 15.451081819587532,
+              "z": -24.449985500500006
+            },
+            {
+              "x": 34.64638024457908,
+              "y": 15.451081819587532,
+              "z": -25.489760674092988
+            },
+            {
+              "x": 33.6066050709861,
+              "y": 15.451081819587532,
+              "z": -28.000000000000007
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-10",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -30.390704119911454
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -31.38096619000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -30.39070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 40.5375857604861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -25.609295880088563
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -24.619033810000005
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -25.60929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.7756533804861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 37.1566195704861,
+              "y": 15.257019319587533,
+              "z": -28.000000000000007
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-11-16",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -37.1566195704861,
+          "y": 15.257019319587533,
+          "z": -28.000000000000007
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028999000003
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -30.390704119911454
+            },
+            {
+              "x": -37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -31.38096619000001
+            },
+            {
+              "x": -34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -30.39070411991145
+            },
+            {
+              "x": -33.7756533804861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            },
+            {
+              "x": -34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -25.609295880088563
+            },
+            {
+              "x": -37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -24.619033810000005
+            },
+            {
+              "x": -39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -25.60929588008856
+            },
+            {
+              "x": -40.5375857604861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          ],
+          [
+            {
+              "x": -39.66685889639312,
+              "y": 15.451081819587532,
+              "z": -30.510239325907026
+            },
+            {
+              "x": -37.1566195704861,
+              "y": 15.451081819587532,
+              "z": -31.55001449950001
+            },
+            {
+              "x": -34.64638024457908,
+              "y": 15.451081819587532,
+              "z": -30.510239325907023
+            },
+            {
+              "x": -33.6066050709861,
+              "y": 15.451081819587532,
+              "z": -28.000000000000007
+            },
+            {
+              "x": -34.64638024457908,
+              "y": 15.451081819587532,
+              "z": -25.48976067409299
+            },
+            {
+              "x": -37.1566195704861,
+              "y": 15.451081819587532,
+              "z": -24.449985500500006
+            },
+            {
+              "x": -39.66685889639312,
+              "y": 15.451081819587532,
+              "z": -25.489760674092988
+            },
+            {
+              "x": -40.7066340699861,
+              "y": 15.451081819587532,
+              "z": -28.000000000000007
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-11",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -30.390704119911454
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -31.38096619000001
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -30.39070411991145
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -33.7756533804861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -34.76591545057465,
+              "y": 15.047019319587532,
+              "z": -25.609295880088563
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -37.1566195704861,
+              "y": 15.047019319587532,
+              "z": -24.619033810000005
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -39.54732369039755,
+              "y": 15.047019319587532,
+              "z": -25.60929588008856
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -40.5375857604861,
+              "y": 15.047019319587532,
+              "z": -28.000000000000007
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -37.1566195704861,
+              "y": 15.257019319587533,
+              "z": -28.000000000000007
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-mount-mount-12-17",
+      "kind": "WEAPON_FOUNDATION",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 35.4785786866577,
+          "y": 15.257019319587533,
+          "z": -16.799999999999997
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 7.100028999000003,
+        "y": 0.4040625000000002,
+        "z": 7.100028999000003
+      },
+      "variant": 1,
+      "functionality": "weapon",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 33.08787456674625,
+              "y": 15.047019319587532,
+              "z": -19.190704119911445
+            },
+            {
+              "x": 35.4785786866577,
+              "y": 15.047019319587532,
+              "z": -20.18096619
+            },
+            {
+              "x": 37.869282806569146,
+              "y": 15.047019319587532,
+              "z": -19.19070411991144
+            },
+            {
+              "x": 38.8595448766577,
+              "y": 15.047019319587532,
+              "z": -16.799999999999997
+            },
+            {
+              "x": 37.869282806569146,
+              "y": 15.047019319587532,
+              "z": -14.409295880088552
+            },
+            {
+              "x": 35.4785786866577,
+              "y": 15.047019319587532,
+              "z": -13.419033809999997
+            },
+            {
+              "x": 33.08787456674625,
+              "y": 15.047019319587532,
+              "z": -14.409295880088552
+            },
+            {
+              "x": 32.097612496657696,
+              "y": 15.047019319587532,
+              "z": -16.799999999999997
+            }
+          ],
+          [
+            {
+              "x": 32.968339360750676,
+              "y": 15.451081819587532,
+              "z": -19.310239325907016
+            },
+            {
+              "x": 35.4785786866577,
+              "y": 15.451081819587532,
+              "z": -20.3500144995
+            },
+            {
+              "x": 37.98881801256472,
+              "y": 15.451081819587532,
+              "z": -19.310239325907013
+            },
+            {
+              "x": 39.0285931861577,
+              "y": 15.451081819587532,
+              "z": -16.799999999999997
+            },
+            {
+              "x": 37.98881801256472,
+              "y": 15.451081819587532,
+              "z": -14.289760674092978
+            },
+            {
+              "x": 35.4785786866577,
+              "y": 15.451081819587532,
+              "z": -13.249985500499996
+            },
+            {
+              "x": 32.968339360750676,
+              "y": 15.451081819587532,
+              "z": -14.289760674092978
+            },
+            {
+              "x": 31.928564187157697,
+              "y": 15.451081819587532,
+              "z": -16.799999999999997
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-mount-12",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.08787456674625,
+              "y": 15.047019319587532,
+              "z": -19.190704119911445
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 35.4785786866577,
+              "y": 15.047019319587532,
+              "z": -20.18096619
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.869282806569146,
+              "y": 15.047019319587532,
+              "z": -19.19070411991144
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 38.8595448766577,
+              "y": 15.047019319587532,
+              "z": -16.799999999999997
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 37.869282806569146,
+              "y": 15.047019319587532,
+              "z": -14.409295880088552
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 35.4785786866577,
+              "y": 15.047019319587532,
+              "z": -13.419033809999997
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 33.08787456674625,
+              "y": 15.047019319587532,
+              "z": -14.409295880088552
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 32.097612496657696,
+              "y": 15.047019319587532,
+              "z": -16.799999999999997
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "JOINT",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 35.4785786866577,
+              "y": 15.257019319587533,
+              "z": -16.799999999999997
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-thermal-kit-radiator-2-18",
+      "kind": "RADIATOR_MOUNT",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": -69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 0.7560000000000002,
+        "y": 23.133368664000006,
+        "z": 23.623412239932343
+      },
+      "variant": 1,
+      "functionality": "thermal",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -68.98924476495061,
+              "y": 7.8620284633147985,
+              "z": 65.0054045571142
+            },
+            {
+              "x": -68.98924476495061,
+              "y": 11.183404350568336,
+              "z": 81
+            },
+            {
+              "x": -68.98924476495061,
+              "y": 0.11445164608820735,
+              "z": 81.54043427836504
+            },
+            {
+              "x": -68.98924476495061,
+              "y": -0.1564822494316669,
+              "z": 81.54028466425781
+            },
+            {
+              "x": -68.98924476495061,
+              "y": -0.4274161449515411,
+              "z": 81.54043427836504
+            },
+            {
+              "x": -68.98924476495061,
+              "y": -11.49636884943167,
+              "z": 81
+            },
+            {
+              "x": -68.98924476495061,
+              "y": -8.174992962178132,
+              "z": 65.0054045571142
+            },
+            {
+              "x": -68.98924476495061,
+              "y": -0.15648224943166827,
+              "z": 58.380226199999996
+            }
+          ],
+          [
+            {
+              "x": -69.74524476495061,
+              "y": 8.022398677569727,
+              "z": 64.81798217691845
+            },
+            {
+              "x": -69.74524476495061,
+              "y": 11.410202082568336,
+              "z": 81.13246952866196
+            },
+            {
+              "x": -69.74524476495061,
+              "y": 0.11987032399860481,
+              "z": 81.6837124925943
+            },
+            {
+              "x": -69.74524476495061,
+              "y": -0.1564822494316669,
+              "z": 81.68355988620493
+            },
+            {
+              "x": -69.74524476495061,
+              "y": -0.43283482286193864,
+              "z": 81.6837124925943
+            },
+            {
+              "x": -69.74524476495061,
+              "y": -11.72316658143167,
+              "z": 81.13246952866196
+            },
+            {
+              "x": -69.74524476495061,
+              "y": -8.335363176433061,
+              "z": 64.81798217691845
+            },
+            {
+              "x": -69.74524476495061,
+              "y": -0.1564822494316683,
+              "z": 58.06030025266195
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-kit-radiator-2",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": 7.8620284633147985,
+              "z": 65.0054045571142
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": 11.183404350568336,
+              "z": 81
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": 0.11445164608820735,
+              "z": 81.54043427836504
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": -0.1564822494316669,
+              "z": 81.54028466425781
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": -0.4274161449515411,
+              "z": 81.54043427836504
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": -11.49636884943167,
+              "z": 81
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": -8.174992962178132,
+              "z": 65.0054045571142
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -68.98924476495061,
+              "y": -0.15648224943166827,
+              "z": 58.380226199999996
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": -69.16924476495062,
+              "y": -0.1564822494316669,
+              "z": 81
+            },
+            "normal": {
+              "x": -1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-thermal-kit-radiator-3-19",
+      "kind": "RADIATOR_MOUNT",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 0.7560000000000002,
+        "y": 23.133368664000006,
+        "z": 23.623412239932343
+      },
+      "variant": 1,
+      "functionality": "thermal",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": 68.98924476495061,
+              "y": 0.1144516460882074,
+              "z": 81.54043427836504
+            },
+            {
+              "x": 68.98924476495061,
+              "y": 11.183404350568336,
+              "z": 81
+            },
+            {
+              "x": 68.98924476495061,
+              "y": 7.862028463314797,
+              "z": 65.00540455711419
+            },
+            {
+              "x": 68.98924476495061,
+              "y": -0.1564822494316669,
+              "z": 58.380226199999996
+            },
+            {
+              "x": 68.98924476495061,
+              "y": -8.17499296217813,
+              "z": 65.00540455711419
+            },
+            {
+              "x": 68.98924476495061,
+              "y": -11.49636884943167,
+              "z": 81
+            },
+            {
+              "x": 68.98924476495061,
+              "y": -0.4274161449515412,
+              "z": 81.54043427836504
+            },
+            {
+              "x": 68.98924476495061,
+              "y": -0.15648224943166691,
+              "z": 81.54028466425781
+            }
+          ],
+          [
+            {
+              "x": 69.74524476495061,
+              "y": 0.11987032399860484,
+              "z": 81.6837124925943
+            },
+            {
+              "x": 69.74524476495061,
+              "y": 11.410202082568336,
+              "z": 81.13246952866196
+            },
+            {
+              "x": 69.74524476495061,
+              "y": 8.022398677569726,
+              "z": 64.81798217691843
+            },
+            {
+              "x": 69.74524476495061,
+              "y": -0.1564822494316669,
+              "z": 58.06030025266195
+            },
+            {
+              "x": 69.74524476495061,
+              "y": -8.33536317643306,
+              "z": 64.81798217691843
+            },
+            {
+              "x": 69.74524476495061,
+              "y": -11.72316658143167,
+              "z": 81.13246952866196
+            },
+            {
+              "x": 69.74524476495061,
+              "y": -0.43283482286193875,
+              "z": 81.6837124925943
+            },
+            {
+              "x": 69.74524476495061,
+              "y": -0.15648224943166691,
+              "z": 81.68355988620493
+            }
+          ]
+        ],
+        "equipmentZoneId": "zone-kit-radiator-3",
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": 0.1144516460882074,
+              "z": 81.54043427836504
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": 11.183404350568336,
+              "z": 81
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": 7.862028463314797,
+              "z": 65.00540455711419
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": -0.1564822494316669,
+              "z": 58.380226199999996
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": -8.17499296217813,
+              "z": 65.00540455711419
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": -11.49636884943167,
+              "z": 81
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": -0.4274161449515412,
+              "z": 81.54043427836504
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 68.98924476495061,
+              "y": -0.15648224943166691,
+              "z": 81.54028466425781
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 69.16924476495062,
+              "y": -0.1564822494316669,
+              "z": 81
+            },
+            "normal": {
+              "x": 1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-service-citadel-0.67-20",
+      "kind": "MACHINERY_HOUSING",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 0,
+          "y": 15.257019319587533,
+          "z": 51
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 14.99985,
+        "y": 2.4750000000000014,
+        "z": 19.49980500000001
+      },
+      "variant": 1,
+      "functionality": "machinery",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 44.105777826342326
+            },
+            {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 41.250097499999995
+            },
+            {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 44.105777826342326
+            },
+            {
+              "x": 7.499925,
+              "y": 15.017019319587533,
+              "z": 51
+            },
+            {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 57.894222173657674
+            },
+            {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 60.749902500000005
+            },
+            {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 57.894222173657674
+            },
+            {
+              "x": -7.499925,
+              "y": 15.017019319587533,
+              "z": 51
+            }
+          ],
+          [
+            {
+              "x": -4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 45.76039114802017
+            },
+            {
+              "x": 4.556022578776332e-16,
+              "y": 17.492019319587534,
+              "z": 43.590074099999995
+            },
+            {
+              "x": 4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 45.76039114802017
+            },
+            {
+              "x": 5.699942999999999,
+              "y": 17.492019319587534,
+              "z": 51
+            },
+            {
+              "x": 4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 56.23960885197983
+            },
+            {
+              "x": 4.556022578776332e-16,
+              "y": 17.492019319587534,
+              "z": 58.409925900000005
+            },
+            {
+              "x": -4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 56.23960885197983
+            },
+            {
+              "x": -5.699943000000001,
+              "y": 17.492019319587534,
+              "z": 51
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 44.105777826342326
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 41.250097499999995
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 44.105777826342326
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 7.499925,
+              "y": 15.017019319587533,
+              "z": 51
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 57.894222173657674
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 60.749902500000005
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 57.894222173657674
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -7.499925,
+              "y": 15.017019319587533,
+              "z": 51
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 0,
+              "y": 15.257019319587533,
+              "z": 51
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    },
+    {
+      "id": "exterior-service-citadel-0.81-21",
+      "kind": "MACHINERY_HOUSING",
+      "socket": {
+        "kind": "HULL_FACE",
+        "hostId": "citadel",
+        "position": {
+          "x": 0,
+          "y": 15.257019319587533,
+          "z": 93.00000000000003
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 14.99985,
+        "y": 2.4750000000000014,
+        "z": 19.49980500000001
+      },
+      "variant": 1,
+      "functionality": "machinery",
+      "exterior": {
+        "phase": "equipment",
+        "rings": [
+          [
+            {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 86.10577782634236
+            },
+            {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 83.25009750000002
+            },
+            {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 86.10577782634236
+            },
+            {
+              "x": 7.499925,
+              "y": 15.017019319587533,
+              "z": 93.00000000000003
+            },
+            {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 99.8942221736577
+            },
+            {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 102.74990250000003
+            },
+            {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 99.8942221736577
+            },
+            {
+              "x": -7.499925,
+              "y": 15.017019319587533,
+              "z": 93.00000000000003
+            }
+          ],
+          [
+            {
+              "x": -4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 87.7603911480202
+            },
+            {
+              "x": 4.556022578776332e-16,
+              "y": 17.492019319587534,
+              "z": 85.59007410000002
+            },
+            {
+              "x": 4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 87.7603911480202
+            },
+            {
+              "x": 5.699942999999999,
+              "y": 17.492019319587534,
+              "z": 93.00000000000003
+            },
+            {
+              "x": 4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 98.23960885197985
+            },
+            {
+              "x": 4.556022578776332e-16,
+              "y": 17.492019319587534,
+              "z": 100.40992590000003
+            },
+            {
+              "x": -4.030468347676793,
+              "y": 17.492019319587534,
+              "z": 98.23960885197985
+            },
+            {
+              "x": -5.699943000000001,
+              "y": 17.492019319587534,
+              "z": 93.00000000000003
+            }
+          ]
+        ],
+        "contactSamples": [
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 86.10577782634236
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 83.25009750000002
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 86.10577782634236
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 7.499925,
+              "y": 15.017019319587533,
+              "z": 93.00000000000003
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 5.303247825890518,
+              "y": 15.017019319587533,
+              "z": 99.8942221736577
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": 4.592379572547607e-16,
+              "y": 15.017019319587533,
+              "z": 102.74990250000003
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -5.303247825890517,
+              "y": 15.017019319587533,
+              "z": 99.8942221736577
+            }
+          },
+          {
+            "parentId": "citadel",
+            "position": {
+              "x": -7.499925,
+              "y": 15.017019319587533,
+              "z": 93.00000000000003
+            }
+          }
+        ],
+        "inset": 0.6,
+        "armorClass": "MACHINERY",
+        "matingSockets": [
+          {
+            "kind": "HULL_FACE",
+            "hostId": "citadel",
+            "position": {
+              "x": 0,
+              "y": 15.257019319587533,
+              "z": 93.00000000000003
+            },
+            "normal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "parentIds": [
+          "citadel"
+        ],
+        "protectionGrade": 0.6
+      }
+    }
+  ],
+  "silhouette": {
+    "massHierarchy": {
+      "primaryRatio": 1,
+      "foreRatio": 0.36501197352788917,
+      "aftRatio": 0.23524971850726292,
+      "lateralSpread": 0.8323615495180579,
+      "verticalSpread": 0.10197426587963633,
+      "joinDistribution": {},
+      "midRatio": 0.39973830796484777
+    },
+    "slenderness": 1.2014010024598154,
+    "majorVolumeCount": 1,
+    "occupancy": {
+      "front": 0.9846938775510204,
+      "side": 0.9923469387755102,
+      "top": 0.7551020408163265
+    },
+    "symmetry": 1,
+    "disconnectedPenalty": 0
+  },
+  "dimensions": {
+    "length": 310.0197,
+    "width": 249.70846485541736,
+    "height": 30.5922797638909,
+    "estimatedMass": 541518
+  },
+  "stations": [
+    {
+      "z": -150,
+      "width": 106.27592264246563,
+      "height": 25.663088906793387,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": -120,
+      "width": 165.0073535764598,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": -90,
+      "width": 237.72245854235734,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": -60,
+      "width": 249.70846485541736,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": -29.999999999999993,
+      "width": 249.70846485541736,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 0,
+      "width": 219.74344907276728,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 29.999999999999993,
+      "width": 179.7900946959005,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 59.999999999999986,
+      "width": 152.3221635618046,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 90.00000000000001,
+      "width": 132.34548637337122,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 120,
+      "width": 109.87172453638364,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    },
+    {
+      "z": 150,
+      "width": 99.88338594216695,
+      "height": 31.296449886333402,
+      "profile": "chamfer",
+      "bevel": 0.19314299280755223,
+      "topSlope": 0.025,
+      "sideSlope": 0.02,
+      "bottomSlope": 0.02,
+      "roundness": 0.15
+    }
+  ],
+  "hullSections": [
+    {
+      "id": "citadel/section-0",
+      "start": {
+        "z": -150,
+        "width": 106.27592264246563,
+        "height": 25.663088906793387,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -120,
+        "width": 165.0073535764598,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-1",
+      "start": {
+        "z": -120,
+        "width": 165.0073535764598,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -90,
+        "width": 237.72245854235734,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-2",
+      "start": {
+        "z": -90,
+        "width": 237.72245854235734,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -60,
+        "width": 249.70846485541736,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-3",
+      "start": {
+        "z": -60,
+        "width": 249.70846485541736,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -29.999999999999993,
+        "width": 249.70846485541736,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-4",
+      "start": {
+        "z": -29.999999999999993,
+        "width": 249.70846485541736,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 219.74344907276728,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-5",
+      "start": {
+        "z": 0,
+        "width": 219.74344907276728,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 29.999999999999993,
+        "width": 179.7900946959005,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-6",
+      "start": {
+        "z": 29.999999999999993,
+        "width": 179.7900946959005,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 59.999999999999986,
+        "width": 152.3221635618046,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-7",
+      "start": {
+        "z": 59.999999999999986,
+        "width": 152.3221635618046,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 90.00000000000001,
+        "width": 132.34548637337122,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-8",
+      "start": {
+        "z": 90.00000000000001,
+        "width": 132.34548637337122,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 120,
+        "width": 109.87172453638364,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "citadel/section-9",
+      "start": {
+        "z": 120,
+        "width": 109.87172453638364,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 150,
+        "width": 99.88338594216695,
+        "height": 31.296449886333402,
+        "profile": "chamfer",
+        "bevel": 0.19314299280755223,
+        "topSlope": 0.025,
+        "sideSlope": 0.02,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    }
+  ],
+  "secondaryStructures": [],
+  "engines": [
+    {
+      "id": "engine-0",
+      "parentId": "citadel",
+      "position": {
+        "x": -13.983674031903375,
+        "y": 0,
+        "z": 149.9997
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 6.328837643680754,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-1",
+      "parentId": "citadel",
+      "position": {
+        "x": 13.983674031903375,
+        "y": 0,
+        "z": 149.9997
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 6.328837643680754,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    }
+  ],
+  "hardpoints": [
+    {
+      "id": "mount-0",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "citadel",
+      "position": {
+        "x": 36.0179489707454,
+        "y": 15.257019319587533,
+        "z": -84.00000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-1",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -36.0179489707454,
+        "y": 15.257019319587533,
+        "z": -84.00000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-2",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": 36.68916532427676,
+        "y": 15.257019319587533,
+        "z": -72.80000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-3",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -36.68916532427676,
+        "y": 15.257019319587533,
+        "z": -72.80000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-4",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "citadel",
+      "position": {
+        "x": 37.36038167780812,
+        "y": 15.257019319587533,
+        "z": -61.60000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-5",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -37.36038167780812,
+        "y": 15.257019319587533,
+        "z": -61.60000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-6",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 37.456269728312606,
+        "y": 15.257019319587533,
+        "z": -50.400000000000006
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-7",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -37.456269728312606,
+        "y": 15.257019319587533,
+        "z": -50.400000000000006
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-8",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "citadel",
+      "position": {
+        "x": 37.456269728312606,
+        "y": 15.257019319587533,
+        "z": -39.2
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-9",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -37.456269728312606,
+        "y": 15.257019319587533,
+        "z": -39.2
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-10",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": 37.1566195704861,
+        "y": 15.257019319587533,
+        "z": -28.000000000000007
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-11",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -37.1566195704861,
+        "y": 15.257019319587533,
+        "z": -28.000000000000007
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-12",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "citadel",
+      "position": {
+        "x": 35.4785786866577,
+        "y": 15.257019319587533,
+        "z": -16.799999999999997
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-13",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -35.4785786866577,
+        "y": 15.257019319587533,
+        "z": -16.799999999999997
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-14",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": 33.8005378028293,
+        "y": 15.257019319587533,
+        "z": -5.6
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-15",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -33.8005378028293,
+        "y": 15.257019319587533,
+        "z": -5.6
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-16",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "citadel",
+      "position": {
+        "x": 31.84282343836282,
+        "y": 15.257019319587533,
+        "z": 5.6
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-17",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "citadel",
+      "position": {
+        "x": -31.84282343836282,
+        "y": 15.257019319587533,
+        "z": 5.6
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-18",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 29.60543559325828,
+        "y": 15.257019319587533,
+        "z": 16.799999999999997
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-19",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -29.60543559325828,
+        "y": 15.257019319587533,
+        "z": 16.799999999999997
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-20",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 27.368047748153742,
+        "y": 15.257019319587533,
+        "z": 27.999999999999996
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-21",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -27.368047748153742,
+        "y": 15.257019319587533,
+        "z": 27.999999999999996
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-22",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 25.704989372216662,
+        "y": 15.257019319587533,
+        "z": 39.199999999999996
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-23",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -25.704989372216662,
+        "y": 15.257019319587533,
+        "z": 39.199999999999996
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-24",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 24.166785228707287,
+        "y": 15.257019319587533,
+        "z": 50.40000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-25",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -24.166785228707287,
+        "y": 15.257019319587533,
+        "z": 50.40000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-26",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 22.68851111676322,
+        "y": 15.257019319587533,
+        "z": 61.60000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-27",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -22.68851111676322,
+        "y": 15.257019319587533,
+        "z": 61.60000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-28",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 21.569817194210952,
+        "y": 15.257019319587533,
+        "z": 72.80000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-29",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": -21.569817194210952,
+        "y": 15.257019319587533,
+        "z": 72.80000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-30",
+      "type": "Utility",
+      "size": "S",
+      "parentId": "citadel",
+      "position": {
+        "x": 20.45112327165868,
+        "y": 15.257019319587533,
+        "z": 84.00000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.15625,
+      "allowedCategories": [
+        "utility"
+      ]
+    }
+  ],
+  "trusses": [],
+  "surfaceFeatures": [
+    {
+      "id": "detail-0",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -49.50220607293794,
+        "y": 15.497019319587533,
+        "z": -120
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9958361718397847,
+        "z": -0.09116095027742213
+      },
+      "size": {
+        "x": 26.401176572233567,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-1",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 49.50220607293794,
+        "y": 15.497019319587533,
+        "z": -120
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9958361718397847,
+        "z": -0.09116095027742213
+      },
+      "size": {
+        "x": 26.401176572233567,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-2",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -71.3167375627072,
+        "y": 15.497019319587533,
+        "z": -90
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 38.03559336677718,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-3",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 71.3167375627072,
+        "y": 15.497019319587533,
+        "z": -90
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 38.03559336677718,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-4",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": -74.91253945662521,
+        "y": 15.497019319587533,
+        "z": -60
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 39.95335437686678,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-5",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": 74.91253945662521,
+        "y": 15.497019319587533,
+        "z": -60
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 39.95335437686678,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-6",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -74.91253945662521,
+        "y": 15.497019319587533,
+        "z": -29.999999999999993
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 39.95335437686678,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-7",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 74.91253945662521,
+        "y": 15.497019319587533,
+        "z": -29.999999999999993
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 39.95335437686678,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-8",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -65.92303472183018,
+        "y": 15.497019319587533,
+        "z": 0
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 35.15895185164276,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-9",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 65.92303472183018,
+        "y": 15.497019319587533,
+        "z": 0
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 35.15895185164276,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-10",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": -53.93702840877015,
+        "y": 15.497019319587533,
+        "z": 29.999999999999993
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 28.76641515134408,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-11",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": 53.93702840877015,
+        "y": 15.497019319587533,
+        "z": 29.999999999999993
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 28.76641515134408,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-12",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -45.696649068541376,
+        "y": 15.497019319587533,
+        "z": 59.999999999999986
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 24.371546169888735,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-13",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 45.696649068541376,
+        "y": 15.497019319587533,
+        "z": 59.999999999999986
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 24.371546169888735,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-14",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": -39.70364591201136,
+        "y": 15.497019319587533,
+        "z": 90.00000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 21.175277819739396,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-15",
+      "kind": "panel",
+      "parentId": "citadel",
+      "position": {
+        "x": 39.70364591201136,
+        "y": 15.497019319587533,
+        "z": 90.00000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 21.175277819739396,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-16",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": -32.96151736091509,
+        "y": 15.497019319587533,
+        "z": 120
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 17.57947592582138,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    },
+    {
+      "id": "detail-17",
+      "kind": "hatch",
+      "parentId": "citadel",
+      "position": {
+        "x": 32.96151736091509,
+        "y": 15.497019319587533,
+        "z": 120
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "x": 17.57947592582138,
+        "y": 0.24000000000000002,
+        "z": 7.5
+      }
+    }
+  ],
+  "materialTheme": {
+    "hull": "#d6dddc",
+    "secondary": "#7b949a",
+    "accent": "#89e2c9",
+    "engine": "#71dfff",
+    "roughness": 0.34,
+    "panelScale": 19.5
+  },
+  "generationStats": {
+    "firepowerScore": 80,
+    "survivabilityScore": 80,
+    "mobilityScore": 30,
+    "enduranceScore": 65,
+    "missileScore": 60,
+    "sensorScore": 45,
+    "enginePattern": "Twin Integrated"
+  },
+  "hullIntegration": {
+    "axisAlignedVolumes": true,
+    "reservedZones": [
+      {
+        "id": "zone-mount-0",
+        "parentId": "citadel",
+        "equipmentId": "mount-0",
+        "kind": "weapon",
+        "position": {
+          "x": 36.0179489707454,
+          "y": 15.257019319587533,
+          "z": -84.00000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-1",
+        "parentId": "citadel",
+        "equipmentId": "mount-1",
+        "kind": "weapon",
+        "position": {
+          "x": -36.0179489707454,
+          "y": 15.257019319587533,
+          "z": -84.00000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-2",
+        "parentId": "citadel",
+        "equipmentId": "mount-2",
+        "kind": "weapon",
+        "position": {
+          "x": 36.68916532427676,
+          "y": 15.257019319587533,
+          "z": -72.80000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-3",
+        "parentId": "citadel",
+        "equipmentId": "mount-3",
+        "kind": "weapon",
+        "position": {
+          "x": -36.68916532427676,
+          "y": 15.257019319587533,
+          "z": -72.80000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-4",
+        "parentId": "citadel",
+        "equipmentId": "mount-4",
+        "kind": "weapon",
+        "position": {
+          "x": 37.36038167780812,
+          "y": 15.257019319587533,
+          "z": -61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-5",
+        "parentId": "citadel",
+        "equipmentId": "mount-5",
+        "kind": "weapon",
+        "position": {
+          "x": -37.36038167780812,
+          "y": 15.257019319587533,
+          "z": -61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-6",
+        "parentId": "citadel",
+        "equipmentId": "mount-6",
+        "kind": "weapon",
+        "position": {
+          "x": 37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -50.400000000000006
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-7",
+        "parentId": "citadel",
+        "equipmentId": "mount-7",
+        "kind": "weapon",
+        "position": {
+          "x": -37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -50.400000000000006
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-8",
+        "parentId": "citadel",
+        "equipmentId": "mount-8",
+        "kind": "weapon",
+        "position": {
+          "x": 37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -39.2
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-9",
+        "parentId": "citadel",
+        "equipmentId": "mount-9",
+        "kind": "weapon",
+        "position": {
+          "x": -37.456269728312606,
+          "y": 15.257019319587533,
+          "z": -39.2
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-10",
+        "parentId": "citadel",
+        "equipmentId": "mount-10",
+        "kind": "weapon",
+        "position": {
+          "x": 37.1566195704861,
+          "y": 15.257019319587533,
+          "z": -28.000000000000007
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-11",
+        "parentId": "citadel",
+        "equipmentId": "mount-11",
+        "kind": "weapon",
+        "position": {
+          "x": -37.1566195704861,
+          "y": 15.257019319587533,
+          "z": -28.000000000000007
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-12",
+        "parentId": "citadel",
+        "equipmentId": "mount-12",
+        "kind": "weapon",
+        "position": {
+          "x": 35.4785786866577,
+          "y": 15.257019319587533,
+          "z": -16.799999999999997
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-13",
+        "parentId": "citadel",
+        "equipmentId": "mount-13",
+        "kind": "weapon",
+        "position": {
+          "x": -35.4785786866577,
+          "y": 15.257019319587533,
+          "z": -16.799999999999997
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-14",
+        "parentId": "citadel",
+        "equipmentId": "mount-14",
+        "kind": "weapon",
+        "position": {
+          "x": 33.8005378028293,
+          "y": 15.257019319587533,
+          "z": -5.6
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-15",
+        "parentId": "citadel",
+        "equipmentId": "mount-15",
+        "kind": "weapon",
+        "position": {
+          "x": -33.8005378028293,
+          "y": 15.257019319587533,
+          "z": -5.6
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-16",
+        "parentId": "citadel",
+        "equipmentId": "mount-16",
+        "kind": "weapon",
+        "position": {
+          "x": 31.84282343836282,
+          "y": 15.257019319587533,
+          "z": 5.6
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-17",
+        "parentId": "citadel",
+        "equipmentId": "mount-17",
+        "kind": "weapon",
+        "position": {
+          "x": -31.84282343836282,
+          "y": 15.257019319587533,
+          "z": 5.6
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-18",
+        "parentId": "citadel",
+        "equipmentId": "mount-18",
+        "kind": "missile",
+        "position": {
+          "x": 29.60543559325828,
+          "y": 15.257019319587533,
+          "z": 16.799999999999997
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.7734375,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-19",
+        "parentId": "citadel",
+        "equipmentId": "mount-19",
+        "kind": "missile",
+        "position": {
+          "x": -29.60543559325828,
+          "y": 15.257019319587533,
+          "z": 16.799999999999997
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.7734375,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-20",
+        "parentId": "citadel",
+        "equipmentId": "mount-20",
+        "kind": "missile",
+        "position": {
+          "x": 27.368047748153742,
+          "y": 15.257019319587533,
+          "z": 27.999999999999996
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.7734375,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-21",
+        "parentId": "citadel",
+        "equipmentId": "mount-21",
+        "kind": "missile",
+        "position": {
+          "x": -27.368047748153742,
+          "y": 15.257019319587533,
+          "z": 27.999999999999996
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.7734375,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-22",
+        "parentId": "citadel",
+        "equipmentId": "mount-22",
+        "kind": "missile",
+        "position": {
+          "x": 25.704989372216662,
+          "y": 15.257019319587533,
+          "z": 39.199999999999996
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.7734375,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-23",
+        "parentId": "citadel",
+        "equipmentId": "mount-23",
+        "kind": "weapon",
+        "position": {
+          "x": -25.704989372216662,
+          "y": 15.257019319587533,
+          "z": 39.199999999999996
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-24",
+        "parentId": "citadel",
+        "equipmentId": "mount-24",
+        "kind": "weapon",
+        "position": {
+          "x": 24.166785228707287,
+          "y": 15.257019319587533,
+          "z": 50.40000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-25",
+        "parentId": "citadel",
+        "equipmentId": "mount-25",
+        "kind": "weapon",
+        "position": {
+          "x": -24.166785228707287,
+          "y": 15.257019319587533,
+          "z": 50.40000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-26",
+        "parentId": "citadel",
+        "equipmentId": "mount-26",
+        "kind": "weapon",
+        "position": {
+          "x": 22.68851111676322,
+          "y": 15.257019319587533,
+          "z": 61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-27",
+        "parentId": "citadel",
+        "equipmentId": "mount-27",
+        "kind": "weapon",
+        "position": {
+          "x": -22.68851111676322,
+          "y": 15.257019319587533,
+          "z": 61.60000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-28",
+        "parentId": "citadel",
+        "equipmentId": "mount-28",
+        "kind": "sensor",
+        "position": {
+          "x": 21.569817194210952,
+          "y": 15.257019319587533,
+          "z": 72.80000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-29",
+        "parentId": "citadel",
+        "equipmentId": "mount-29",
+        "kind": "sensor",
+        "position": {
+          "x": -21.569817194210952,
+          "y": 15.257019319587533,
+          "z": 72.80000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-mount-30",
+        "parentId": "citadel",
+        "equipmentId": "mount-30",
+        "kind": "weapon",
+        "position": {
+          "x": 20.45112327165868,
+          "y": 15.257019319587533,
+          "z": 84.00000000000001
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "radius": 3.01875,
+        "depth": 6.46875,
+        "rootClearance": 0.2803125
+      },
+      {
+        "id": "zone-engine-0",
+        "parentId": "citadel",
+        "equipmentId": "engine-0",
+        "kind": "exhaust",
+        "position": {
+          "x": -13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "radius": 8.338876479313761,
+        "depth": 29.52,
+        "rootClearance": 0
+      },
+      {
+        "id": "zone-engine-1",
+        "parentId": "citadel",
+        "equipmentId": "engine-1",
+        "kind": "exhaust",
+        "position": {
+          "x": 13.983674031903375,
+          "y": 0,
+          "z": 149.9997
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "radius": 8.338876479313761,
+        "depth": 29.52,
+        "rootClearance": 0
+      },
+      {
+        "id": "zone-kit-radiator-2",
+        "parentId": "citadel",
+        "equipmentId": "kit-radiator-2",
+        "kind": "thermal",
+        "position": {
+          "x": -69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 24.151863282156924,
+        "depth": 6,
+        "rootClearance": 0.72
+      },
+      {
+        "id": "zone-kit-radiator-3",
+        "parentId": "citadel",
+        "equipmentId": "kit-radiator-3",
+        "kind": "thermal",
+        "position": {
+          "x": 69.16924476495062,
+          "y": -0.1564822494316669,
+          "z": 81
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 24.151863282156924,
+        "depth": 6,
+        "rootClearance": 0.72
+      }
+    ],
+    "decisions": [
+      {
+        "sourceId": "bow-citadel",
+        "status": "accepted",
+        "reason": "WEDGE_BOW: station-fitted interface"
+      },
+      {
+        "sourceId": "engine-engine-0",
+        "status": "accepted",
+        "reason": "ENGINE_HOUSING: station-fitted interface"
+      },
+      {
+        "sourceId": "engine-engine-1",
+        "status": "accepted",
+        "reason": "ENGINE_HOUSING: station-fitted interface"
+      },
+      {
+        "sourceId": "rear-citadel",
+        "status": "accepted",
+        "reason": "REAR_TRANSITION: station-fitted interface"
+      },
+      {
+        "sourceId": "frame-engine-0",
+        "status": "accepted",
+        "reason": "THRUSTER_FRAME: station-fitted interface"
+      },
+      {
+        "sourceId": "frame-engine-1",
+        "status": "accepted",
+        "reason": "THRUSTER_FRAME: station-fitted interface"
+      },
+      {
+        "sourceId": "armor-citadel--1",
+        "status": "omitted",
+        "reason": "Reserved thermal clearance zone-kit-radiator-2"
+      },
+      {
+        "sourceId": "armor-citadel--1-forward",
+        "status": "accepted",
+        "reason": "ARMOR_ENVELOPE: station-fitted interface"
+      },
+      {
+        "sourceId": "armor-citadel-1",
+        "status": "omitted",
+        "reason": "Reserved thermal clearance zone-kit-radiator-3"
+      },
+      {
+        "sourceId": "armor-citadel-1-forward",
+        "status": "accepted",
+        "reason": "ARMOR_ENVELOPE: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-0",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-1",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-2",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-4",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-5",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-7",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-8",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-10",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-11",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "mount-mount-12",
+        "status": "accepted",
+        "reason": "WEAPON_FOUNDATION: station-fitted interface"
+      },
+      {
+        "sourceId": "thermal-kit-radiator-2",
+        "status": "accepted",
+        "reason": "RADIATOR_MOUNT: station-fitted interface"
+      },
+      {
+        "sourceId": "thermal-kit-radiator-3",
+        "status": "accepted",
+        "reason": "RADIATOR_MOUNT: station-fitted interface"
+      },
+      {
+        "sourceId": "service-citadel-0.67",
+        "status": "accepted",
+        "reason": "MACHINERY_HOUSING: station-fitted interface"
+      },
+      {
+        "sourceId": "service-citadel-0.81",
+        "status": "accepted",
+        "reason": "MACHINERY_HOUSING: station-fitted interface"
+      }
+    ],
+    "exteriorBounds": {
+      "min": {
+        "x": -126.00173242770867,
+        "y": -16.020946101031754,
+        "z": -154.5
+      },
+      "max": {
+        "x": 126.00173242770867,
+        "y": 17.492019319587534,
+        "z": 155.8125
+      }
+    },
+    "overallBounds": {
+      "min": {
+        "x": -126.00173242770867,
+        "y": -16.020946101031754,
+        "z": -154.5
+      },
+      "max": {
+        "x": 126.00173242770867,
+        "y": 18.257019319587535,
+        "z": 160.77916051724168
+      }
+    }
+  }
+}

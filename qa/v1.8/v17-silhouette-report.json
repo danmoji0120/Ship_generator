@@ -1,0 +1,207 @@
+{
+  "version": "1.7",
+  "renderer": "same Chromium ANGLE SwiftShader / orthographic 320px / normalized",
+  "records": [
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 0,
+      "composition": "BROAD_CITADEL"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 1,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 2,
+      "composition": "BROAD_CITADEL"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 3,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 4,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 5,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 6,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 7,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 8,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 9,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 10,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 11,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 12,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 13,
+      "composition": "FORWARD_SHOULDERS"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 14,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 15,
+      "composition": "BROAD_CITADEL"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 16,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 17,
+      "composition": "BROAD_CITADEL"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 18,
+      "composition": "BROAD_CITADEL"
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 19,
+      "composition": "LENS_BODY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 0,
+      "composition": "SPLIT_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 1,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 2,
+      "composition": "SPLIT_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 3,
+      "composition": "REAR_HEAVY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 4,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 5,
+      "composition": "STEPPED"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 6,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "composition": "SIDE_BATTERIES"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 8,
+      "composition": "SIDE_BATTERIES"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 9,
+      "composition": "STEPPED"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 10,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 11,
+      "composition": "REAR_HEAVY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 12,
+      "composition": "SPLIT_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 13,
+      "composition": "REAR_HEAVY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 14,
+      "composition": "REAR_HEAVY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 15,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 16,
+      "composition": "SPLIT_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 17,
+      "composition": "REAR_HEAVY"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 18,
+      "composition": "CENTRAL_CORE"
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 19,
+      "composition": "SIDE_BATTERIES"
+    }
+  ],
+  "errors": []
+}

@@ -124,6 +124,11 @@ function generate() {
       $("architecture-summary").innerHTML +=
         `<span>V1.7 exterior: ${next.prefabPlacements?.filter((p) => p.exterior).length} fitted structures · ${next.hullIntegration.reservedZones.length} equipment zones · envelope ${(bounds.max.z - bounds.min.z).toFixed(1)} × ${(bounds.max.x - bounds.min.x).toFixed(1)} × ${(bounds.max.y - bounds.min.y).toFixed(1)} m</span>`;
     }
+    if (next.macroDesign) {
+      const m = next.macroDesign;
+      $("architecture-summary").innerHTML +=
+        `<strong>${m.family.replaceAll("_", " ")}</strong><span>Mass F / M / A: ${[m.foreMassRatio, m.midMassRatio, m.aftMassRatio].map((x) => Math.round(x * 100) + "%").join(" / ")} · ${m.negativeSpaceTargets.length} intentional channels · ${m.attempts?.length ?? 0} retries</span>`;
+    }
     $("engine-pattern").textContent =
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =

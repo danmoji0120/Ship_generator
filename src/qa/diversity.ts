@@ -17,14 +17,17 @@ export function designFeatures(b: ShipBlueprint) {
     total = sizes.reduce((a, b) => a + b, 0);
   return {
     composition: b.architecture.composition,
+    macroFamily: b.macroDesign?.family,
     shapes: vs.map((v) => v.shape?.kind),
     joins: b.structuralConnectors.map((c) => c.join?.type),
     nose: b.architecture.nose,
     engineLayout: b.architecture.engineArchitecture,
-    primaryRatio: Math.max(...sizes) / total,
+    primaryRatio: b.macroDesign?.primaryMassRatio ?? Math.max(...sizes) / total,
     foreMass:
+      b.macroDesign?.foreMassRatio ??
       vs.reduce((s, v, i) => s + (v.position.z < 0 ? sizes[i] : 0), 0) / total,
     aftMass:
+      b.macroDesign?.aftMassRatio ??
       vs.reduce((s, v, i) => s + (v.position.z >= 0 ? sizes[i] : 0), 0) / total,
     lateralSpread: b.dimensions.width / b.order.length,
     verticalSpread: b.dimensions.height / b.order.length,

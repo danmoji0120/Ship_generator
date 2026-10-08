@@ -1,3 +1,5 @@
+import type { MacroDesignPlan } from "../macro/types";
+import { realizeMacroLayout } from "../macro/layout";
 import type {
   ArchitectureGrammar,
   StructuralVolume,
@@ -44,7 +46,9 @@ export function composeLayout(
   grammar: ArchitectureGrammar,
   volumes: StructuralVolume[],
   rng: SeededRng,
+  macro?: MacroDesignPlan,
 ) {
+  if (macro) return realizeMacroLayout(order, volumes, macro);
   const l = order.length,
     pattern = rng.pick(COMPOSITIONS[grammar]),
     variation = rng.range(0.85, 1.15);

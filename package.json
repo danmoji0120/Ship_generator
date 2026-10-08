@@ -1,6 +1,6 @@
 {
   "name": "procedural-shipyard",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,6 +10,7 @@
     "qa": "node tests/browser-qa.mjs",
     "qa:gallery": "node tests/gallery-qa.mjs",
     "preview": "vite preview --host 0.0.0.0",
+    "qa:macro": "node tests/macro-qa.mjs",
     "qa:integration": "node tests/integration-qa.mjs"
   },
   "dependencies": {

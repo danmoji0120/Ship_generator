@@ -178,6 +178,14 @@ export function shapeStations(s: ShapeDefinition): HullStation[] {
         h = 0.82;
         break;
     }
+    if (s.stationScales) {
+      const scales = s.stationScales;
+      const a = [...scales].reverse().find((p) => p.t <= t) ?? scales[0];
+      const b = scales.find((p) => p.t > t) ?? scales.at(-1)!;
+      const f = a.t === b.t ? 0 : (t - a.t) / (b.t - a.t);
+      w = a.width + (b.width - a.width) * f;
+      h = a.height + (b.height - a.height) * f;
+    }
     return {
       z: (t - 0.5) * s.length,
       width: s.width * w,

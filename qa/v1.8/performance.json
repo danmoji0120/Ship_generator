@@ -1,0 +1,36 @@
+{
+  "1.7": {
+    "medianGenerationMs": 6.799999997019768,
+    "p95GenerationMs": 15.600000001490116,
+    "meanDrawCalls": 238.08333333333334,
+    "meanTriangles": 9194.333333333334,
+    "maxDrawCalls": 260,
+    "maxTriangles": 10684,
+    "cpuSamples": 80,
+    "renderSamples": 12
+  },
+  "1.8": {
+    "medianGenerationMs": 6.649999998509884,
+    "p95GenerationMs": 8.100000001490116,
+    "meanDrawCalls": 235.5,
+    "meanTriangles": 9263.333333333334,
+    "maxDrawCalls": 247,
+    "maxTriangles": 10224,
+    "cpuSamples": 80,
+    "renderSamples": 12
+  },
+  "fullMatrix": {
+    "scope": "220 identical order / architecture / yard / continuous-seed configurations. V1.7 from archived render-report; V1.8 from this run.",
+    "1.7": {
+      "meanDrawCalls": 284.0409090909091,
+      "meanTriangles": 9586.854545454546,
+      "maxDrawCalls": 532
+    },
+    "1.8": {
+      "meanDrawCalls": 289.8909090909091,
+      "meanTriangles": 9798.545454545454,
+      "maxDrawCalls": 590,
+      "maxTriangles": 14348
+    }
+  }
+}

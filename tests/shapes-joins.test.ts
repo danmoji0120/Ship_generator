@@ -6,7 +6,7 @@ import {
   JOIN_TYPES,
   ROLES,
 } from "../src/blueprint/types";
-import { generateBlueprint, DEFAULT_ORDER } from "../src/generation/generate";
+import { generateBlueprintV17 as generateBlueprint, DEFAULT_ORDER } from "../src/generation/generate";
 import { SHIPYARDS } from "../src/shipyards/config";
 import {
   shapeDefinition,

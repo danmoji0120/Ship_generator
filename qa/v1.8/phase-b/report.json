@@ -1,0 +1,473 @@
+{
+  "errors": [],
+  "report": [
+    {
+      "family": "WEDGE_CITADEL",
+      "seed": 0,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1721418.5058436012,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 578396.61796345,
+        "primaryMassRatio": 0.5359411331727943,
+        "foreMassRatio": 0.200958519149915,
+        "midMassRatio": 0.5315479730817568,
+        "aftMassRatio": 0.26749350776832825,
+        "lateralSpread": 0.9990418643209711,
+        "verticalSpread": 0.14023226352598744,
+        "centerOfVolume": {
+          "x": -0.1973591306816521,
+          "y": 0,
+          "z": 7.92148933472654
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 303431.79692208103,
+          "combat-core": 922578.9846864381,
+          "drive-block": 303922.8125975668,
+          "magazine--1": 97051.02410516428,
+          "magazine-1": 94433.887532351
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 237,
+        "triangles": 9976,
+        "camera": [
+          -241.8371920143528,
+          197.6507585432475,
+          -276.9430750006901
+        ],
+        "radius": 218.47361145319448,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "WEDGE_CITADEL",
+      "seed": 7,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1664998.0216861719,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 559439.3352865538,
+        "primaryMassRatio": 0.5411459854131587,
+        "foreMassRatio": 0.19872842243067534,
+        "midMassRatio": 0.5325012533855129,
+        "aftMassRatio": 0.2687703241838117,
+        "lateralSpread": 0.9550651453498957,
+        "verticalSpread": 0.13767876484594213,
+        "centerOfVolume": {
+          "x": 0.2545575839484052,
+          "y": 0,
+          "z": 8.252411902303745
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 290314.96332712215,
+          "combat-core": 901006.9951563233,
+          "drive-block": 294616.98420760874,
+          "magazine--1": 87821.97062441695,
+          "magazine-1": 91237.1083707006
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 219,
+        "triangles": 8176,
+        "camera": [
+          -233.78056306899538,
+          191.0910467332276,
+          -267.4290835316478
+        ],
+        "radius": 214.10315066484355,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "WEDGE_CITADEL",
+      "seed": 13,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1690370.8559585654,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 567964.607602078,
+        "primaryMassRatio": 0.5408848483416392,
+        "foreMassRatio": 0.198050272818373,
+        "midMassRatio": 0.5323698778910622,
+        "aftMassRatio": 0.2695798492905647,
+        "lateralSpread": 1.0105641394534652,
+        "verticalSpread": 0.13509761047435664,
+        "centerOfVolume": {
+          "x": 0.09566637166192621,
+          "y": 0,
+          "z": 8.405155304665023
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 293584.11496012413,
+          "combat-core": 914295.9840662754,
+          "drive-block": 300549.9385600633,
+          "magazine--1": 90354.63713171352,
+          "magazine-1": 91586.18124038892
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 247,
+        "triangles": 10224,
+        "camera": [
+          -240.60205927807024,
+          196.65430528151236,
+          -275.52088591613347
+        ],
+        "radius": 219.58197666534784,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "HAMMERHEAD",
+      "seed": 0,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1675851.4699892509,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 563086.0939163883,
+        "primaryMassRatio": 0.7047218526568088,
+        "foreMassRatio": 0.6683724534733689,
+        "midMassRatio": 0.18123038402320285,
+        "aftMassRatio": 0.1503971625034282,
+        "lateralSpread": 0.8462829403190314,
+        "verticalSpread": 0.16827871623118493,
+        "centerOfVolume": {
+          "x": 0.015031682899367696,
+          "y": 0,
+          "z": -50.496979348007194
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 1181009.1527084613,
+          "combat-core": 155287.49680978686,
+          "drive-block": 242845.3836974294,
+          "magazine--1": 48077.66930357975,
+          "magazine-1": 48631.767469993676
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 247,
+        "triangles": 10176,
+        "camera": [
+          -302.38088589639614,
+          246.92830436251447,
+          -347.02372863950495
+        ],
+        "radius": 204.69556039935978,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "HAMMERHEAD",
+      "seed": 7,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1651209.6611376225,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 554806.4461422412,
+        "primaryMassRatio": 0.6843202224304331,
+        "foreMassRatio": 0.649023134876462,
+        "midMassRatio": 0.17770682605597263,
+        "aftMassRatio": 0.17327003906756536,
+        "lateralSpread": 0.8087297870403605,
+        "verticalSpread": 0.16521451781513055,
+        "centerOfVolume": {
+          "x": -0.011212275359468204,
+          "y": 0,
+          "z": -46.21349029910431
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 1129956.162588978,
+          "combat-core": 151656.52286507137,
+          "drive-block": 277122.30861361255,
+          "magazine--1": 46450.142412687426,
+          "magazine-1": 46024.52465727313
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 219,
+        "triangles": 8176,
+        "camera": [
+          -299.6408945160399,
+          244.70165641420886,
+          -343.61363531197776
+        ],
+        "radius": 201.34436615984433,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "HAMMERHEAD",
+      "seed": 13,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1485246.0361483363,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 499042.668145841,
+        "primaryMassRatio": 0.6068145757673884,
+        "foreMassRatio": 0.6180962423530532,
+        "midMassRatio": 0.17350114613361248,
+        "aftMassRatio": 0.20840261151333433,
+        "lateralSpread": 0.8561221864995884,
+        "verticalSpread": 0.162117132569228,
+        "centerOfVolume": {
+          "x": 0.013499625043353088,
+          "y": 0,
+          "z": -43.726613301564655
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 901268.9433355479,
+          "combat-core": 174565.54692459217,
+          "drive-block": 315719.73572660424,
+          "magazine--1": 46627.860501291754,
+          "magazine-1": 47063.94966030017
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 245,
+        "triangles": 10136,
+        "camera": [
+          -308.50613669047675,
+          251.93119030984386,
+          -354.0846214832126
+        ],
+        "radius": 205.5294106301661,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "WIDE_CARRIER",
+      "seed": 0,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1456900.81734435,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 489518.67462770164,
+        "primaryMassRatio": 0.2672917369719133,
+        "foreMassRatio": 0.22673956999492798,
+        "midMassRatio": 0.5630124265755571,
+        "aftMassRatio": 0.2102480034295152,
+        "lateralSpread": 0.98411194246497,
+        "verticalSpread": 0.14023226352598744,
+        "centerOfVolume": {
+          "x": 0.40228697067343516,
+          "y": 0,
+          "z": 0.27241861093659525
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 106369.81613207198,
+          "combat-core": 378418.4900146362,
+          "drive-block": 199537.9569380544,
+          "magazine--1": 383157.004195816,
+          "magazine-1": 389417.5500637715
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 245,
+        "triangles": 10088,
+        "camera": [
+          -281.2387004553225,
+          229.25702532192867,
+          -321.8743964722436
+        ],
+        "radius": 217.33438582746305,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "WIDE_CARRIER",
+      "seed": 7,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1471633.993754798,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 494469.02190161217,
+        "primaryMassRatio": 0.264388638270853,
+        "foreMassRatio": 0.22494495378671148,
+        "midMassRatio": 0.5488681667166876,
+        "aftMassRatio": 0.22618687949660096,
+        "lateralSpread": 0.9625139723357938,
+        "verticalSpread": 0.13767876484594213,
+        "centerOfVolume": {
+          "x": -0.429062010246973,
+          "y": 0,
+          "z": 2.1417319258552183
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 103122.70643490733,
+          "combat-core": 369570.20727668505,
+          "drive-block": 227702.16357751834,
+          "magazine--1": 389083.3076419281,
+          "magazine-1": 382155.60882375936
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 217,
+        "triangles": 8088,
+        "camera": [
+          -279.0920027047417,
+          227.51281480281304,
+          -319.17352129031786
+        ],
+        "radius": 215.25753171147565,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "WIDE_CARRIER",
+      "seed": 13,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1326281.7747401185,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 445630.67631267983,
+        "primaryMassRatio": 0.2827611903258259,
+        "foreMassRatio": 0.1537379459577894,
+        "midMassRatio": 0.5356840992423028,
+        "aftMassRatio": 0.3105779547999079,
+        "lateralSpread": 0.9870896090722439,
+        "verticalSpread": 0.13509761047435664,
+        "centerOfVolume": {
+          "x": 0.27165770691121316,
+          "y": 0,
+          "z": 15.908325556195514
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 102628.22670706882,
+          "combat-core": 375021.01333296485,
+          "drive-block": 236526.7020151811,
+          "magazine--1": 304137.7479176549,
+          "magazine-1": 307968.0847672489
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 245,
+        "triangles": 10136,
+        "camera": [
+          -236.3791643946819,
+          192.71475979198294,
+          -269.92939394973854
+        ],
+        "radius": 217.58063328809047,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "seed": 0,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1322787.4826994846,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 444456.59418702684,
+        "primaryMassRatio": 0.6632787818207478,
+        "foreMassRatio": 0.16087664518662814,
+        "midMassRatio": 0.4060680811290342,
+        "aftMassRatio": 0.4330552736843375,
+        "lateralSpread": 0.6061167500979674,
+        "verticalSpread": 0.16827871623118493,
+        "centerOfVolume": {
+          "x": 0.023617536990660864,
+          "y": 0,
+          "z": 31.69713923122878
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 94843.67506512921,
+          "combat-core": 260743.93121046296,
+          "drive-block": 877376.8701326477,
+          "magazine--1": 44654.18201570875,
+          "magazine-1": 45168.82427553591
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 247,
+        "triangles": 10144,
+        "camera": [
+          -216.20221746424266,
+          176.31380619315001,
+          -247.2410697364649
+        ],
+        "radius": 183.66108536632214,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "seed": 7,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1433701.4323510784,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 481723.68126996234,
+        "primaryMassRatio": 0.6983435045406851,
+        "foreMassRatio": 0.14410976354035265,
+        "midMassRatio": 0.3903279000991907,
+        "aftMassRatio": 0.4655623363604567,
+        "lateralSpread": 0.579220786423433,
+        "verticalSpread": 0.16521451781513055,
+        "centerOfVolume": {
+          "x": -0.0160097777716414,
+          "y": 0,
+          "z": 36.19252077661701
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 91948.41935991734,
+          "combat-core": 254647.14660179897,
+          "drive-block": 1001216.082733052,
+          "magazine--1": 43142.54713252703,
+          "magazine-1": 42747.236523783096
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 219,
+        "triangles": 8144,
+        "camera": [
+          -215.6743474366108,
+          177.42240104296502,
+          -246.32478125343894
+        ],
+        "radius": 184.15997083084164,
+        "geometryFinite": true
+      }
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "seed": 13,
+      "candidate": 0,
+      "metrics": {
+        "approximateVolumeM3": 1476948.6788747404,
+        "densityTonnesPerM3": 0.336,
+        "estimatedMassTonnes": 496254.7561019128,
+        "primaryMassRatio": 0.7041666158462093,
+        "foreMassRatio": 0.14070924834628,
+        "midMassRatio": 0.3898463410895803,
+        "aftMassRatio": 0.4694444105641395,
+        "lateralSpread": 0.6131637217834948,
+        "verticalSpread": 0.162117132569228,
+        "centerOfVolume": {
+          "x": 0.01683717946304796,
+          "y": 0,
+          "z": 37.02962624888433
+        },
+        "moduleVolumesM3": {
+          "fore-armor": 91507.5210267363,
+          "combat-core": 258402.94775021868,
+          "drive-block": 1040017.9529817556,
+          "magazine--1": 43307.61037271681,
+          "magazine-1": 43712.64674331286
+        }
+      },
+      "diagnostics": {
+        "drawCalls": 247,
+        "triangles": 10192,
+        "camera": [
+          -215.8404725038856,
+          177.60420940096503,
+          -246.78816208860866
+        ],
+        "radius": 186.54615258090993,
+        "geometryFinite": true
+      }
+    }
+  ]
+}

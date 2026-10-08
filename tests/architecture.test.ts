@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { generateBlueprint, DEFAULT_ORDER } from "../src/generation/generate";
+import { generateBlueprint, generateBlueprintV17, DEFAULT_ORDER } from "../src/generation/generate";
 import {
   ARCHITECTURES,
   ROLES,
@@ -144,7 +144,7 @@ describe("V1 architecture", () => {
       .mockReturnValueOnce(["Rejected hybrid silhouette"])
       .mockReturnValueOnce(["Rejected hybrid silhouette"]);
     try {
-      const b = generateBlueprint(o(), 36);
+      const b = generateBlueprintV17(o(), 36);
       expect(b.candidate).toBe(3);
       expect(b.architecture.requestedGrammar).toBe("HYBRID");
       expect(b.architecture.grammar).toBe("SPINE_AND_MODULES");

@@ -1,0 +1,10 @@
+{
+  "productionMain": true,
+  "productionGallery": true,
+  "developmentOrderHooksAbsent": true,
+  "version": "1.8",
+  "renderedThumbnails": 20,
+  "jsonExport": true,
+  "debugViews": true,
+  "consoleErrors": []
+}

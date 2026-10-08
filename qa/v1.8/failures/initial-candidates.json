@@ -1,0 +1,457 @@
+[
+  {
+    "key": "forge-BLOCK_ASSEMBLY-6",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-BLOCK_ASSEMBLY-8",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-4",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 1,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 2,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-5",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 1,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-6",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-13",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 1,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 2,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-14",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 1,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "forge-TWIN_HULL-15",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "WIDE_CARRIER",
+        "architecture": "TWIN_HULL",
+        "reasons": [
+          "Lost negative space twin-channel"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-3",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "HAMMERHEAD",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-7",
+          "Detached prefab exterior-engine-engine-2-9",
+          "Detached prefab exterior-engine-engine-3-10",
+          "Detached prefab exterior-engine-engine-5-12",
+          "Detached prefab exterior-frame-engine-0-14",
+          "Detached prefab exterior-frame-engine-2-16",
+          "Detached prefab exterior-frame-engine-3-17",
+          "Detached prefab exterior-frame-engine-5-19",
+          "Detached exterior socket exterior-engine-engine-0-7",
+          "Detached exterior socket exterior-engine-engine-2-9",
+          "Detached exterior socket exterior-engine-engine-3-10",
+          "Detached exterior socket exterior-engine-engine-5-12",
+          "Detached exterior socket exterior-frame-engine-0-14",
+          "Detached exterior socket exterior-frame-engine-2-16",
+          "Detached exterior socket exterior-frame-engine-3-17",
+          "Detached exterior socket exterior-frame-engine-5-19"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-6",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-8",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1",
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-7",
+          "Detached prefab exterior-engine-engine-2-9",
+          "Detached prefab exterior-engine-engine-3-10",
+          "Detached prefab exterior-engine-engine-5-12",
+          "Detached prefab exterior-frame-engine-0-14",
+          "Detached prefab exterior-frame-engine-2-16",
+          "Detached prefab exterior-frame-engine-3-17",
+          "Detached prefab exterior-frame-engine-5-19",
+          "Detached exterior socket exterior-engine-engine-0-7",
+          "Detached exterior socket exterior-engine-engine-2-9",
+          "Detached exterior socket exterior-engine-engine-3-10",
+          "Detached exterior socket exterior-engine-engine-5-12",
+          "Detached exterior socket exterior-frame-engine-0-14",
+          "Detached exterior socket exterior-frame-engine-2-16",
+          "Detached exterior socket exterior-frame-engine-3-17",
+          "Detached exterior socket exterior-frame-engine-5-19"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-12",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "HAMMERHEAD",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-7",
+          "Detached prefab exterior-engine-engine-2-9",
+          "Detached prefab exterior-engine-engine-3-10",
+          "Detached prefab exterior-engine-engine-5-12",
+          "Detached prefab exterior-frame-engine-0-14",
+          "Detached prefab exterior-frame-engine-2-16",
+          "Detached prefab exterior-frame-engine-3-17",
+          "Detached prefab exterior-frame-engine-5-19",
+          "Detached exterior socket exterior-engine-engine-0-7",
+          "Detached exterior socket exterior-engine-engine-2-9",
+          "Detached exterior socket exterior-engine-engine-3-10",
+          "Detached exterior socket exterior-engine-engine-5-12",
+          "Detached exterior socket exterior-frame-engine-0-14",
+          "Detached exterior socket exterior-frame-engine-2-16",
+          "Detached exterior socket exterior-frame-engine-3-17",
+          "Detached exterior socket exterior-frame-engine-5-19"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-13",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "HAMMERHEAD",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-7",
+          "Detached prefab exterior-engine-engine-2-9",
+          "Detached prefab exterior-engine-engine-3-10",
+          "Detached prefab exterior-engine-engine-5-12",
+          "Detached prefab exterior-frame-engine-0-14",
+          "Detached prefab exterior-frame-engine-2-16",
+          "Detached prefab exterior-frame-engine-3-17",
+          "Detached prefab exterior-frame-engine-5-19",
+          "Detached exterior socket exterior-engine-engine-0-7",
+          "Detached exterior socket exterior-engine-engine-2-9",
+          "Detached exterior socket exterior-engine-engine-3-10",
+          "Detached exterior socket exterior-engine-engine-5-12",
+          "Detached exterior socket exterior-frame-engine-0-14",
+          "Detached exterior socket exterior-frame-engine-2-16",
+          "Detached exterior socket exterior-frame-engine-3-17",
+          "Detached exterior socket exterior-frame-engine-5-19"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-15",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "WIDE_CARRIER",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-5",
+          "Detached prefab exterior-engine-engine-2-7",
+          "Detached prefab exterior-engine-engine-3-8",
+          "Detached prefab exterior-engine-engine-5-10",
+          "Detached prefab exterior-frame-engine-0-12",
+          "Detached prefab exterior-frame-engine-2-14",
+          "Detached prefab exterior-frame-engine-3-15",
+          "Detached prefab exterior-frame-engine-5-17",
+          "Detached exterior socket exterior-engine-engine-0-5",
+          "Detached exterior socket exterior-engine-engine-2-7",
+          "Detached exterior socket exterior-engine-engine-3-8",
+          "Detached exterior socket exterior-engine-engine-5-10",
+          "Detached exterior socket exterior-frame-engine-0-12",
+          "Detached exterior socket exterior-frame-engine-2-14",
+          "Detached exterior socket exterior-frame-engine-3-15",
+          "Detached exterior socket exterior-frame-engine-5-17"
+        ],
+        "structures": [],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "vesper-BLOCK_ASSEMBLY-18",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Detached engine engine-0",
+          "Detached engine engine-2",
+          "Detached engine engine-3",
+          "Detached engine engine-5",
+          "Detached prefab exterior-engine-engine-0-7",
+          "Detached prefab exterior-engine-engine-2-9",
+          "Detached prefab exterior-engine-engine-3-10",
+          "Detached prefab exterior-engine-engine-5-12",
+          "Detached prefab exterior-frame-engine-0-14",
+          "Detached prefab exterior-frame-engine-2-16",
+          "Detached prefab exterior-frame-engine-3-17",
+          "Detached prefab exterior-frame-engine-5-19",
+          "Detached exterior socket exterior-engine-engine-0-7",
+          "Detached exterior socket exterior-engine-engine-2-9",
+          "Detached exterior socket exterior-engine-engine-3-10",
+          "Detached exterior socket exterior-engine-engine-5-12",
+          "Detached exterior socket exterior-frame-engine-0-14",
+          "Detached exterior socket exterior-frame-engine-2-16",
+          "Detached exterior socket exterior-frame-engine-3-17",
+          "Detached exterior socket exterior-frame-engine-5-19"
+        ],
+        "structures": [],
+        "replacement": false
+      },
+      {
+        "candidate": 1,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  },
+  {
+    "key": "serein-BLOCK_ASSEMBLY-8",
+    "attempts": [
+      {
+        "candidate": 0,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "BLOCK_ASSEMBLY",
+        "reasons": [
+          "Overlapping major volumes drive-block/magazine--1",
+          "Overlapping major volumes drive-block/magazine-1"
+        ],
+        "structures": [
+          "drive-block",
+          "magazine--1",
+          "magazine-1"
+        ],
+        "replacement": false
+      }
+    ]
+  }
+]

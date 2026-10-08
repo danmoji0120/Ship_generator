@@ -1,3 +1,7 @@
+import {
+  DESIGN_LANGUAGES,
+  type DesignLanguage,
+} from "../generation/macro/language";
 import type {
   Profile,
   ArchitectureGrammar,
@@ -5,6 +9,7 @@ import type {
   JoinType,
 } from "../blueprint/types";
 export interface Shipyard {
+  macroLanguage: DesignLanguage;
   shapePreferences: readonly ShapeKind[];
   joinPreferences: readonly JoinType[];
   structuralMultiplier: number;
@@ -25,6 +30,7 @@ export interface Shipyard {
 export const SHIPYARDS: Shipyard[] = [
   {
     id: "aegis",
+    macroLanguage: DESIGN_LANGUAGES.aegis,
     shapePreferences: [
       "CHAMFERED_BOX",
       "FLATTENED_HEX",
@@ -57,6 +63,7 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "vesper",
+    macroLanguage: DESIGN_LANGUAGES.vesper,
     shapePreferences: ["TAPERED_PRISM", "LONG_LOFT", "WEDGE", "HEX_PRISM"],
     joinPreferences: ["TRANSITION", "STRUCTURAL_NECK", "NACELLE_MOUNT"],
     structuralMultiplier: 1,
@@ -84,6 +91,7 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "forge",
+    macroLanguage: DESIGN_LANGUAGES.forge,
     shapePreferences: ["BOX", "CLIPPED_BOX", "HEX_PRISM", "ARMORED_CYLINDER"],
     joinPreferences: ["TRUSS", "BOOM", "STRUCTURAL_NECK", "FLUSH"],
     structuralMultiplier: 1.15,
@@ -111,6 +119,7 @@ export const SHIPYARDS: Shipyard[] = [
   },
   {
     id: "serein",
+    macroLanguage: DESIGN_LANGUAGES.serein,
     shapePreferences: [
       "COMPOUND_LOFT",
       "TAPERED_PRISM",

@@ -134,9 +134,14 @@ export function silhouetteMetrics(
 export function validateSilhouette(
   order: ShipOrder,
   metrics: SilhouetteMetrics,
+  family?: import("../generation/macro/types").MacroFamily,
 ) {
   const errors: string[] = [];
-  if (metrics.slenderness > 12 || metrics.slenderness < 1.05)
+  if (
+    metrics.slenderness > 12 ||
+    metrics.slenderness <
+      (family === "WIDE_CARRIER" ? 0.72 : family ? 0.8 : 1.05)
+  )
     errors.push("Silhouette proportions");
   if (order.role === "Battleship" && metrics.slenderness > 5.5)
     errors.push("Battleship needle silhouette");

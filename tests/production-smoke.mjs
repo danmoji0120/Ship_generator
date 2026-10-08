@@ -29,9 +29,10 @@ try {
   await page.click("#regenerate");
   await page.click("#inspect");
   const b = JSON.parse(await page.locator("#json-content").textContent());
-  assert.equal(b.generatorVersion, "1.7");
+  assert.equal(b.generatorVersion, "1.8");
   assert.equal(b.schemaVersion, 2);
   assert(b.hullIntegration);
+  assert(b.macroDesign);
   await page.click("#close-json");
   for (const mode of ["Integration", "Armor", "Equipment", "Normal"])
     await page.click(`[data-debug="${mode}"]`);
@@ -39,7 +40,7 @@ try {
   await page.click("#export");
   assert.match((await download).suggestedFilename(), /\.blueprint\.json$/);
   await page.screenshot({
-    path: "qa/v1.7/production-main.png",
+    path: "qa/v1.8/production-main.png",
     fullPage: true,
   });
   await page.goto(url + "/qa.html");
@@ -51,13 +52,13 @@ try {
   assert.equal(await page.locator("#grid img").count(), 20);
   assert.deepEqual(errors, []);
   await writeFile(
-    "qa/v1.7/production-smoke.json",
+    "qa/v1.8/production-smoke.json",
     JSON.stringify(
       {
         productionMain: true,
         productionGallery: true,
         developmentOrderHooksAbsent: true,
-        version: "1.7",
+        version: "1.8",
         renderedThumbnails: 20,
         jsonExport: true,
         debugViews: true,

@@ -1,3 +1,4 @@
+import type { MacroDesignPlan } from "../macro/types";
 import type {
   ArchitectureGrammar,
   StructuralVolume,
@@ -19,6 +20,7 @@ export function architectureLayout(
   yard: Shipyard,
   grammar: ArchitectureGrammar,
   rng: SeededRng,
+  macro?: MacroDesignPlan,
 ) {
   const l = order.length,
     p = order.priorities,
@@ -456,7 +458,7 @@ export function architectureLayout(
     link(keel, middle, "BRIDGE");
     link(middle, upper, "DIRECT");
   }
-  const composition = composeLayout(order, yard, grammar, volumes, rng);
+  const composition = composeLayout(order, yard, grammar, volumes, rng, macro);
   if (
     order.role !== "Spinal Gun Ship" &&
     ["BLOCK_ASSEMBLY", "STACKED_BLOCKS"].includes(grammar)
@@ -472,7 +474,7 @@ export function architectureLayout(
   for (const v of volumes.filter(
     (v) => v.position.z - v.dimensions.z / 2 < front + l * 0.025,
   )) {
-    if (!v.shape) continue;
+    if (!v.shape || macro) continue;
     if (nose === "pointed") v.shape.frontScale = 0.08;
     if (nose === "spinal muzzle") {
       v.shape.frontScale = 0.82;
@@ -495,8 +497,8 @@ export function architectureLayout(
     max = Math.max(
       ...volumes.map((v) => v.position.z + v.geometry.stations.at(-1)!.z),
     ),
-    stretch = l / (max - min),
-    center = (max + min) / 2;
+    stretch = macro ? 1 : l / (max - min),
+    center = macro ? 0 : (max + min) / 2;
   for (const v of volumes) {
     v.position.z = (v.position.z - center) * stretch;
     v.dimensions.z *= stretch;
@@ -508,7 +510,7 @@ export function architectureLayout(
   }
   const bounds = volumeBounds(volumes),
     width = bounds.max.x - bounds.min.x,
-    beamFit = Math.min(1, (l * 0.87) / width);
+    beamFit = macro ? 1 : Math.min(1, (l * 0.87) / width);
   for (const v of volumes) {
     v.position.x *= beamFit;
     v.dimensions.x *= beamFit;
@@ -519,7 +521,15 @@ export function architectureLayout(
     c.end.x *= beamFit;
   }
   for (const v of volumes) syncShape(v);
-  refineConnections(order, yard, grammar, volumes, connectors, rng);
+  refineConnections(
+    order,
+    yard,
+    grammar,
+    volumes,
+    connectors,
+    rng,
+    Boolean(macro),
+  );
   return {
     composition,
     volumes,

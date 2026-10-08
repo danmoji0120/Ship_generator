@@ -1,3 +1,6 @@
+import { createMacroPlan } from "./macro/plan";
+import { measureMacro } from "./macro/measurement";
+import type { MacroFamily, MacroDesignPlan } from "./macro/types";
 import {
   ROLES,
   PRIORITIES,
@@ -25,7 +28,8 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6";
+    version?: "1.6" | "1.7";
+    family?: MacroFamily;
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
@@ -48,27 +52,69 @@ export function generateBlueprint(
     throw new Error("Invalid Ship Order");
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
   if (qaOptions?.architecture) selection.grammar = qaOptions.architecture;
+  const initialPlan = !qaOptions?.version
+    ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family)
+    : undefined;
+  const selectedFamily = initialPlan?.family;
   let lastErrors: string[] = [];
+  const attempts: NonNullable<MacroDesignPlan["attempts"]> = [];
   for (let candidate = 0; candidate < 5; candidate++) {
     const priorErrors = lastErrors;
     const rng = new SeededRng(
         (seed + Math.imul(candidate + 1, 0x9e3779b9)) >>> 0,
       ),
       grammar =
-        selection.grammar === "HYBRID" && candidate >= 3
+        qaOptions?.version && selection.grammar === "HYBRID" && candidate >= 3
           ? "SPINE_AND_MODULES"
           : selection.grammar;
-    const layout = architectureLayout(order, yard, grammar, rng),
+    const macro = !qaOptions?.version
+      ? candidate === 0
+        ? initialPlan
+        : createMacroPlan(
+            order,
+            yard,
+            grammar,
+            seed + candidate,
+            selectedFamily,
+          )
+      : undefined;
+    if (macro) macro.source = qaOptions?.family ? "qa-fixed" : "order";
+    const layout = architectureLayout(order, yard, grammar, rng, macro),
       { volumes, connectors, nose, components, beam, armor } = layout;
+    const realized = macro ? measureMacro(order, volumes) : undefined;
     const silhouette = silhouetteMetrics(volumes, connectors);
-    lastErrors = validateSilhouette(order, silhouette);
-    if (lastErrors.length) continue;
+    if (realized && silhouette.massHierarchy) {
+      Object.assign(silhouette.massHierarchy, {
+        primaryRatio: realized.primaryMassRatio,
+        foreRatio: realized.foreMassRatio,
+        midRatio: realized.midMassRatio,
+        aftRatio: realized.aftMassRatio,
+        lateralSpread: realized.lateralSpread,
+        verticalSpread: realized.verticalSpread,
+      });
+    }
+    lastErrors = validateSilhouette(order, silhouette, macro?.family);
+    if (lastErrors.length) {
+      if (macro)
+        attempts.push({
+          candidate,
+          family: macro.family,
+          architecture: grammar,
+          reasons: lastErrors,
+          structures: volumes
+            .filter((v) => lastErrors.some((e) => e.includes(v.id)))
+            .map((v) => v.id),
+          replacement: false,
+        });
+      continue;
+    }
     const { engines, engineArchitecture } = architectureEngines(
         order,
         yard,
         grammar,
         volumes,
         rng,
+        Boolean(macro),
       ),
       { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes);
     const prefabPlacements = generatePrefabPlacements(
@@ -101,7 +147,8 @@ export function generateBlueprint(
     const primary = volumes.find((v) => v.id === "citadel");
     const b: ShipBlueprint = {
       schemaVersion: 2,
-      generatorVersion: qaOptions?.version === "1.6" ? "1.6" : "1.7",
+      generatorVersion: qaOptions?.version ?? "1.8",
+      ...(macro ? { macroDesign: { ...macro, realized, attempts } } : {}),
       seed,
       candidate,
       shipyardId: yard.id,
@@ -120,8 +167,8 @@ export function generateBlueprint(
         selectionWeights: selection.weights,
         parameters: {
           volumeBudget: volumes.length,
-          beamRatio: beam,
-          armorRatio: armor,
+          beamRatio: realized?.lateralSpread ?? beam,
+          armorRatio: realized?.verticalSpread ?? armor,
         },
         ...(grammar !== selection.grammar
           ? {
@@ -142,7 +189,11 @@ export function generateBlueprint(
           ) - bounds.min.z,
         width: bounds.max.x - bounds.min.x,
         height: bounds.max.y - bounds.min.y,
-        estimatedMass: Math.round(mass * (0.16 + p.survivability * 0.0022)),
+        estimatedMass: Math.round(
+          realized
+            ? realized.estimatedMassTonnes
+            : mass * (0.16 + p.survivability * 0.0022),
+        ),
       },
       stations: primary?.geometry.stations ?? [],
       hullSections: volumes.flatMap((v) =>
@@ -183,12 +234,24 @@ export function generateBlueprint(
         enginePattern: engineArchitecture,
       },
     };
-    if (b.generatorVersion === "1.7") integrateHull(b);
+    if (b.generatorVersion === "1.7" || b.generatorVersion === "1.8")
+      integrateHull(b);
     lastErrors = validateBlueprint(b);
     if (!lastErrors.length) return b;
+    if (macro)
+      attempts.push({
+        candidate,
+        family: macro.family,
+        architecture: grammar,
+        reasons: lastErrors,
+        structures: volumes
+          .filter((v) => lastErrors.some((e) => e.includes(v.id)))
+          .map((v) => v.id),
+        replacement: false,
+      });
   }
   throw new Error(
-    `No valid V1 ${selection.grammar} design after 5 candidates: ${lastErrors.join("; ")}`,
+    `No valid V${qaOptions?.version ?? "1.8"} ${selection.grammar}/${selectedFamily ?? "legacy"} design after 5 candidates: ${lastErrors.join("; ")}; attempts=${JSON.stringify(attempts)}`,
   );
 }
 
@@ -199,4 +262,13 @@ export function generateBlueprintV16(
   options?: { architecture?: import("../blueprint/types").ArchitectureGrammar },
 ) {
   return generateBlueprint(input, seed, { ...options, version: "1.6" });
+}
+
+/** Immutable V1.7 generation path for archived comparisons; no Macro rules applied. */
+export function generateBlueprintV17(
+  input: ShipOrder,
+  seed: number,
+  options?: { architecture?: import("../blueprint/types").ArchitectureGrammar },
+) {
+  return generateBlueprint(input, seed, { ...options, version: "1.7" });
 }

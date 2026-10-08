@@ -4,7 +4,7 @@ import type {
   ShipBlueprint,
   StructuralVolume,
 } from "../blueprint/types";
-import { DEFAULT_ORDER, generateBlueprint } from "../generation/generate";
+import { DEFAULT_ORDER, generateBlueprintV17 as generateBlueprint } from "../generation/generate";
 import { shapeDefinition, syncShape } from "../generation/shapes/definition";
 import { boundaryToward } from "../generation/architecture/volumes";
 function volume(

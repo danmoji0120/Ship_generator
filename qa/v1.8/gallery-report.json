@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "projection": "Normal",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "projection": "TOP",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "projection": "SIDE",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "projection": "FRONT",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "projection": "ISOMETRIC",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "projection": "MASS",
+      "count": 20,
+      "ordering": true
+    },
+    {
+      "mode": "shapes",
+      "count": 11
+    },
+    {
+      "mode": "joins",
+      "count": 10
+    },
+    {
+      "mode": "bow",
+      "count": 20
+    },
+    {
+      "mode": "integration",
+      "count": 20
+    }
+  ],
+  "unsupportedPairingExplicit": true,
+  "errors": []
+}

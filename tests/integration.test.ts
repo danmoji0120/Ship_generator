@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { ARCHITECTURES } from "../src/blueprint/types";
 import {
   DEFAULT_ORDER,
-  generateBlueprint,
+  generateBlueprintV17 as generateBlueprint,
   generateBlueprintV16,
 } from "../src/generation/generate";
 import { SHIPYARDS } from "../src/shipyards/config";

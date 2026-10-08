@@ -21,7 +21,7 @@ page.on("pageerror", (e) => errors.push(e.message));
 page.on("console", (m) => {
   if (m.type() === "error") errors.push(m.text());
 });
-const output = process.env.QA_OUTPUT || "qa/v1.7/regression";
+const output = process.env.QA_OUTPUT || "qa/v1.8/regression";
 await mkdir(output, { recursive: true });
 await page.goto(process.env.QA_URL || "http://localhost:5173");
 await page.waitForFunction(() => window.shipyardQA?.getBlueprint());

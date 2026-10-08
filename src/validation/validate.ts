@@ -1,3 +1,4 @@
+import { validateMacro } from "./macro";
 import { validateIntegration } from "./integration";
 import type { AnyShipBlueprint, ShipBlueprint } from "../blueprint/types";
 import { ARCHITECTURES, HARDPOINT_TYPES } from "../blueprint/types";
@@ -46,7 +47,8 @@ export function validateArchitecture(b: ShipBlueprint) {
     if (
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
-      b.generatorVersion === "1.7"
+      b.generatorVersion === "1.7" ||
+      b.generatorVersion === "1.8"
     ) {
       if (
         !v.shape ||
@@ -101,7 +103,8 @@ export function validateArchitecture(b: ShipBlueprint) {
     if (
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
-        b.generatorVersion === "1.7") &&
+        b.generatorVersion === "1.7" ||
+        b.generatorVersion === "1.8") &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -289,7 +292,8 @@ export function validateArchitecture(b: ShipBlueprint) {
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7") errors.push(...validateIntegration(b));
+  if (b.generatorVersion === "1.7" || b.generatorVersion === "1.8")
+    errors.push(...validateIntegration(b));
   const d = b.dimensions;
   if (
     d.length < l * 0.99 ||
@@ -301,7 +305,10 @@ export function validateArchitecture(b: ShipBlueprint) {
     d.estimatedMass <= 0
   )
     errors.push("Overall dimensions");
-  errors.push(...validateSilhouette(b.order, b.silhouette));
+  errors.push(
+    ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
+  );
+  if (b.generatorVersion === "1.8") errors.push(...validateMacro(b));
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint) {

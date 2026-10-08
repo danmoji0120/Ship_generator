@@ -1,0 +1,2188 @@
+{
+  "browser": "Chromium / WebGL SwiftShader",
+  "renderedDesigns": 50,
+  "seedRepetitions": 10,
+  "blueprintIdentical": true,
+  "pixelIdentical": true,
+  "orbit": true,
+  "zoom": true,
+  "debugViews": 10,
+  "grammarFixtures": {
+    "BLOCK_ASSEMBLY": [
+      0,
+      8,
+      9
+    ],
+    "TRUSS_POD": [
+      1,
+      5,
+      6
+    ],
+    "TWIN_HULL": [
+      2,
+      3,
+      20
+    ],
+    "STACKED_BLOCKS": [
+      4,
+      30,
+      89
+    ],
+    "MONOLITHIC": [
+      7,
+      35,
+      79
+    ],
+    "SPINE_AND_MODULES": [
+      12,
+      24,
+      32
+    ],
+    "HYBRID": [
+      36,
+      43,
+      67
+    ],
+    "CORE_AND_NACELLES": [
+      41,
+      44,
+      48
+    ]
+  },
+  "jsonExport": true,
+  "mobileOverflow": false,
+  "consoleErrors": [],
+  "blueprintHash": "2bb7c2c850bb85a3608742428fe95aaf9439130e2cbb9e14a574e96f2d33d8de",
+  "results": [
+    {
+      "name": "battleship-heavy",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.47927116021811883,
+          "foreRatio": 0.22968515756313268,
+          "aftRatio": 0.22174462269507836,
+          "lateralSpread": 1.1700500000000003,
+          "verticalSpread": 0.14296721779788207,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "FLUSH": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.5485702197417891
+        },
+        "slenderness": 0.8546643305841628,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.8775510204081632,
+          "side": 0.8762755102040817,
+          "top": 0.5255102040816326
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 351.0150000000001,
+      "height": 42.89016533936462,
+      "engines": 2,
+      "hardpoints": 39,
+      "drawCalls": 255,
+      "triangles": 9872,
+      "camera": [
+        -277.9369575198649,
+        227.06008240811389,
+        -318.5672640184114
+      ],
+      "radius": 239.15806419216887,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.5724979684311796,
+          "foreRatio": 0.29804307419219017,
+          "aftRatio": 0.22859745524091535,
+          "lateralSpread": 0.8128000000000001,
+          "verticalSpread": 0.38837868299762124,
+          "joinDistribution": {
+            "OVERLAP": 2
+          },
+          "midRatio": 0.4733594705668944
+        },
+        "slenderness": 1.230314960629921,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6964285714285714,
+          "side": 0.7257653061224489,
+          "top": 0.7270408163265306
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 243.84000000000003,
+      "height": 116.51360489928638,
+      "engines": 4,
+      "hardpoints": 39,
+      "drawCalls": 255,
+      "triangles": 9872,
+      "camera": [
+        -279.2843703888195,
+        249.10576316014362,
+        -320.2276310541414
+      ],
+      "radius": 209.214296496989,
+      "geometryFinite": true
+    },
+    {
+      "name": "battleship-heavy",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.1783800910190679,
+          "aftRatio": 0.4066094437083549,
+          "lateralSpread": 0.5574436400000001,
+          "verticalSpread": 0.17195110604103614,
+          "joinDistribution": {},
+          "midRatio": 0.4150104652725771
+        },
+        "slenderness": 1.7939033262627229,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9693877551020408,
+          "side": 0.9923469387755102,
+          "top": 0.7729591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 167.23309200000003,
+      "height": 51.58533181231084,
+      "engines": 2,
+      "hardpoints": 39,
+      "drawCalls": 241,
+      "triangles": 9976,
+      "camera": [
+        -230.4309404764952,
+        187.8417207048131,
+        -263.38237205466845
+      ],
+      "radius": 181.74108338382243,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 42,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.3240513767510214,
+          "foreRatio": 0.20190116931527816,
+          "aftRatio": 0.6008315911094756,
+          "lateralSpread": 0.6572778047044241,
+          "verticalSpread": 0.3620036753625042,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 2,
+            "NACELLE_MOUNT": 2
+          },
+          "midRatio": 0.1972672395752462
+        },
+        "slenderness": 1.5214266978780715,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.24107142857142858,
+          "side": 0.4094387755102041,
+          "top": 0.32142857142857145
+        },
+        "symmetry": 0.9477040816326531,
+        "disconnectedPenalty": 0
+      },
+      "width": 197.18334141132723,
+      "height": 108.60110260875126,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 207,
+      "triangles": 8432,
+      "camera": [
+        -219.74669212293708,
+        176.57099705142116,
+        -248.12927079481094
+      ],
+      "radius": 198.63129897352488,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 2718,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.39521758302173365,
+          "foreRatio": 0.24624148474874374,
+          "aftRatio": 0.5417888973403999,
+          "lateralSpread": 0.6862265143901011,
+          "verticalSpread": 0.3915257779092138,
+          "joinDistribution": {
+            "NACELLE_MOUNT": 2,
+            "STRUCTURAL_NECK": 2
+          },
+          "midRatio": 0.2119696179108566
+        },
+        "slenderness": 1.457244771267359,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.24744897959183673,
+          "side": 0.4272959183673469,
+          "top": 0.28316326530612246
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 205.86795431703032,
+      "height": 117.45773337276414,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 322,
+      "triangles": 9428,
+      "camera": [
+        -222.60094999100255,
+        178.8827393142474,
+        -251.4283552166008
+      ],
+      "radius": 202.33978372303736,
+      "geometryFinite": true
+    },
+    {
+      "name": "destroyer-mobility",
+      "seed": 742091,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7095580410301207,
+          "foreRatio": 0.17585132802260403,
+          "aftRatio": 0.5545695583487721,
+          "lateralSpread": 0.5553542720126895,
+          "verticalSpread": 0.1048243798450741,
+          "joinDistribution": {
+            "TRANSITION": 1,
+            "RECESSED": 1,
+            "OVERLAP": 1,
+            "FLUSH": 1
+          },
+          "midRatio": 0.26957911362862363
+        },
+        "slenderness": 1.8006523950483821,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.7538265306122449,
+          "top": 0.5382653061224489
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 166.60628160380685,
+      "height": 31.447313953522233,
+      "engines": 4,
+      "hardpoints": 25,
+      "drawCalls": 217,
+      "triangles": 8008,
+      "camera": [
+        -190.86924517567508,
+        155.63199159287456,
+        -216.43585694588805
+      ],
+      "radius": 182.36490678337788,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 42,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.34618525385646415,
+          "foreRatio": 0.2053844486272055,
+          "aftRatio": 0.2587969768398899,
+          "lateralSpread": 0.9516672434409776,
+          "verticalSpread": 0.15355153022933546,
+          "joinDistribution": {
+            "BOOM": 1,
+            "TRUSS": 4
+          },
+          "midRatio": 0.5358185745329047
+        },
+        "slenderness": 1.0507874542200948,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6173469387755102,
+          "side": 0.8112244897959183,
+          "top": 0.40816326530612246
+        },
+        "symmetry": 0.9846938775510204,
+        "disconnectedPenalty": 0
+      },
+      "width": 285.5001730322933,
+      "height": 46.065459068800635,
+      "engines": 2,
+      "hardpoints": 41,
+      "drawCalls": 440,
+      "triangles": 11472,
+      "camera": [
+        -235.38417430332873,
+        193.14797031127873,
+        -268.98014167482853
+      ],
+      "radius": 214.28227803184464,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.598709325319562,
+          "foreRatio": 0.2812727420882661,
+          "aftRatio": 0.22819200912006155,
+          "lateralSpread": 0.6191146343154906,
+          "verticalSpread": 0.33014954284733683,
+          "joinDistribution": {
+            "OVERLAP": 2
+          },
+          "midRatio": 0.4905352487916723
+        },
+        "slenderness": 1.6152097601531035,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6964285714285714,
+          "side": 0.7219387755102041,
+          "top": 0.7040816326530612
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 185.7343902946472,
+      "height": 99.04486285420106,
+      "engines": 6,
+      "hardpoints": 41,
+      "drawCalls": 440,
+      "triangles": 11472,
+      "camera": [
+        -262.09738517261,
+        232.13789795194748,
+        -300.10401636393453
+      ],
+      "radius": 190.42622993915157,
+      "geometryFinite": true
+    },
+    {
+      "name": "missile-industrial",
+      "seed": 742091,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7390225045245764,
+          "foreRatio": 0.1571568294544937,
+          "aftRatio": 0.4520015318193128,
+          "lateralSpread": 0.6305525581129768,
+          "verticalSpread": 0.1405487378506305,
+          "joinDistribution": {
+            "FLUSH": 2,
+            "RECESSED": 1,
+            "OVERLAP": 1
+          },
+          "midRatio": 0.3908416387261936
+        },
+        "slenderness": 1.5859106225699093,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7729591836734694,
+          "side": 0.8380102040816326,
+          "top": 0.7806122448979592
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 189.16576743389305,
+      "height": 42.16462135518915,
+      "engines": 4,
+      "hardpoints": 41,
+      "drawCalls": 309,
+      "triangles": 9532,
+      "camera": [
+        -211.39322380304068,
+        173.89794787914994,
+        -241.40658227605596
+      ],
+      "radius": 187.68658809284946,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.2571961576307271,
+          "foreRatio": 0.10136491781084393,
+          "aftRatio": 0.5141747231569568,
+          "lateralSpread": 0.6615624185701268,
+          "verticalSpread": 0.10428285829473531,
+          "joinDistribution": {
+            "RECESSED": 1,
+            "ARMORED_COLLAR": 3,
+            "STRUCTURAL_NECK": 1
+          },
+          "midRatio": 0.3844603590321994
+        },
+        "slenderness": 1.5115731666882741,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.7627551020408163,
+          "side": 0.7283163265306123,
+          "top": 0.5943877551020408
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 198.46872557103802,
+      "height": 31.28485748842059,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 246,
+      "triangles": 8572,
+      "camera": [
+        -201.05885017257273,
+        168.08438516075063,
+        -233.78135235199798
+      ],
+      "radius": 191.9683422396857,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 2718,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.4583371403926822,
+          "foreRatio": 0.278688191911175,
+          "aftRatio": 0.3027798342868576,
+          "lateralSpread": 1.0105316170084977,
+          "verticalSpread": 0.10340532277895242,
+          "joinDistribution": {
+            "BRIDGE": 2
+          },
+          "midRatio": 0.41853197380196744
+        },
+        "slenderness": 0.989578142008387,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.5969387755102041,
+          "side": 0.9438775510204082,
+          "top": 0.5178571428571429
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 303.1594851025493,
+      "height": 31.021596833685727,
+      "engines": 4,
+      "hardpoints": 24,
+      "drawCalls": 246,
+      "triangles": 8572,
+      "camera": [
+        -321.39716756317614,
+        262.80990248234895,
+        -368.4395395649523
+      ],
+      "radius": 220.32092494450615,
+      "geometryFinite": true
+    },
+    {
+      "name": "spinal-advanced",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.1783800910190679,
+          "aftRatio": 0.40660944370835483,
+          "lateralSpread": 0.550172636,
+          "verticalSpread": 0.10171276858256789,
+          "joinDistribution": {},
+          "midRatio": 0.4150104652725772
+        },
+        "slenderness": 1.817611299737561,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9693877551020408,
+          "side": 0.9923469387755102,
+          "top": 0.7729591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 165.0517908,
+      "height": 30.513830574770367,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 151,
+      "triangles": 6308,
+      "camera": [
+        -211.37545012682293,
+        172.96836377348853,
+        -245.64802186404452
+      ],
+      "radius": 183.80519038943814,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-A",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7502433303990109,
+          "foreRatio": 0.6099539271536675,
+          "aftRatio": 0.1301374198116808,
+          "lateralSpread": 0.879533009587127,
+          "verticalSpread": 0.1674060584470927,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "FLUSH": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.25990865303465177
+        },
+        "slenderness": 1.1369669916873537,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.7920918367346939,
+          "top": 0.6122448979591837
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 263.8599028761381,
+      "height": 50.22181753412781,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 213,
+      "triangles": 7928,
+      "camera": [
+        -363.46294545038324,
+        295.8263440220015,
+        -417.5397349810055
+      ],
+      "radius": 218.81279728239264,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-B",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.28864808079220905,
+          "foreRatio": 0.09206883040210846,
+          "aftRatio": 0.5047190251717257,
+          "lateralSpread": 0.5763499672538503,
+          "verticalSpread": 0.16792643805602409,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 1,
+            "ARMORED_COLLAR": 4
+          },
+          "midRatio": 0.40321214442616576
+        },
+        "slenderness": 1.7350569216906977,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.8647959183673469,
+          "side": 0.7448979591836735,
+          "top": 0.5918367346938775
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 172.9049901761551,
+      "height": 50.37793141680723,
+      "engines": 4,
+      "hardpoints": 21,
+      "drawCalls": 252,
+      "triangles": 8840,
+      "camera": [
+        -219.15245600042954,
+        186.17887350253145,
+        -249.00106246078013
+      ],
+      "radius": 185.28156809148342,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-C",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7461287010931816,
+          "foreRatio": 0.6066087000757575,
+          "aftRatio": 0.13490808809950638,
+          "lateralSpread": 0.8285948043986834,
+          "verticalSpread": 0.15909685262636108,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "FLUSH": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.2584832118247361
+        },
+        "slenderness": 1.2068625034714122,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.7920918367346939,
+          "top": 0.6198979591836735
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 248.57844131960502,
+      "height": 47.72905578790832,
+      "engines": 2,
+      "hardpoints": 41,
+      "drawCalls": 296,
+      "triangles": 8536,
+      "camera": [
+        -353.3950183729704,
+        287.6391614377068,
+        -405.6239079402391
+      ],
+      "radius": 213.03599685291303,
+      "geometryFinite": true
+    },
+    {
+      "name": "order-D",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.2917210476587132,
+          "foreRatio": 0.10107460791940401,
+          "aftRatio": 0.4857680737061655,
+          "lateralSpread": 0.6552269514485043,
+          "verticalSpread": 0.18307099745630212,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 1,
+            "ARMORED_COLLAR": 4
+          },
+          "midRatio": 0.4131573183744306
+        },
+        "slenderness": 1.5261887469514328,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.8647959183673469,
+          "side": 0.7448979591836735,
+          "top": 0.5943877551020408
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 196.56808543455128,
+      "height": 54.92129923689063,
+      "engines": 2,
+      "hardpoints": 24,
+      "drawCalls": 296,
+      "triangles": 8536,
+      "camera": [
+        -215.03083613555015,
+        183.50684737088076,
+        -249.78268492654541
+      ],
+      "radius": 195.13217834239273,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-aegis",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7502433303990109,
+          "foreRatio": 0.6099539271536675,
+          "aftRatio": 0.1301374198116808,
+          "lateralSpread": 0.879533009587127,
+          "verticalSpread": 0.1674060584470927,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "FLUSH": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.25990865303465177
+        },
+        "slenderness": 1.1369669916873537,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.7920918367346939,
+          "top": 0.6122448979591837
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 263.8599028761381,
+      "height": 50.22181753412781,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 213,
+      "triangles": 7928,
+      "camera": [
+        -363.46294545038324,
+        295.8263440220015,
+        -417.5397349810055
+      ],
+      "radius": 218.81279728239264,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-vesper",
+      "seed": 42,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.45539541389598787,
+          "foreRatio": 0.23701222125001212,
+          "aftRatio": 0.3712932063494919,
+          "lateralSpread": 0.6338830034466008,
+          "verticalSpread": 0.11462664835335651,
+          "joinDistribution": {
+            "BRIDGE": 2
+          },
+          "midRatio": 0.39169457240049593
+        },
+        "slenderness": 1.5775781880295225,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.701530612244898,
+          "side": 0.9438775510204082,
+          "top": 0.5051020408163265
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 190.16490103398021,
+      "height": 34.387994506006955,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 241,
+      "triangles": 9112,
+      "camera": [
+        -275.3519334934515,
+        221.10591624881076,
+        -312.03696875237733
+      ],
+      "radius": 189.04355544707718,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-forge",
+      "seed": 42,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.3564674849839193,
+          "foreRatio": 0.2084887658639851,
+          "aftRatio": 0.2551439131096296,
+          "lateralSpread": 0.9710195283207423,
+          "verticalSpread": 0.16157111859768786,
+          "joinDistribution": {
+            "BOOM": 1,
+            "TRUSS": 4
+          },
+          "midRatio": 0.5363673210263853
+        },
+        "slenderness": 1.0298454056113329,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6173469387755102,
+          "side": 0.8112244897959183,
+          "top": 0.4094387755102041
+        },
+        "symmetry": 0.9872448979591837,
+        "disconnectedPenalty": 0
+      },
+      "width": 291.3058584962227,
+      "height": 48.471335579306356,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 241,
+      "triangles": 9112,
+      "camera": [
+        -238.52958551783928,
+        195.73653916789206,
+        -272.8827321747535
+      ],
+      "radius": 216.17641123174752,
+      "geometryFinite": true
+    },
+    {
+      "name": "yard-serein",
+      "seed": 42,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.2616209397796503,
+          "foreRatio": 0.1038646536446102,
+          "aftRatio": 0.5044918917955266,
+          "lateralSpread": 0.6698882160504949,
+          "verticalSpread": 0.10428285829473531,
+          "joinDistribution": {
+            "ARMORED_COLLAR": 4,
+            "STRUCTURAL_NECK": 1
+          },
+          "midRatio": 0.3916434545598631
+        },
+        "slenderness": 1.4927863724723618,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.7551020408163265,
+          "side": 0.7283163265306123,
+          "top": 0.5943877551020408
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 200.96646481514847,
+      "height": 31.28485748842059,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 284,
+      "triangles": 9488,
+      "camera": [
+        -207.68082153500077,
+        173.43328088934416,
+        -237.3527307661535
+      ],
+      "radius": 188.25039374885992,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 42,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.38191345144312894,
+          "foreRatio": 0.23795230619509591,
+          "aftRatio": 0.5493996313326323,
+          "lateralSpread": 0.609822037625955,
+          "verticalSpread": 0.3873912747320669,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 2,
+            "NACELLE_MOUNT": 2
+          },
+          "midRatio": 0.21264806247227205
+        },
+        "slenderness": 1.6398226667783489,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.23469387755102042,
+          "side": 0.413265306122449,
+          "top": 0.32908163265306123
+        },
+        "symmetry": 0.9591836734693877,
+        "disconnectedPenalty": 0
+      },
+      "width": 182.94661128778648,
+      "height": 116.21738241962008,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 306,
+      "triangles": 8520,
+      "camera": [
+        -219.96662118601415,
+        176.37087716959854,
+        -249.73088357752698
+      ],
+      "radius": 194.8360198123173,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 2718,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.45719211351590944,
+          "foreRatio": 0.28485489938685943,
+          "aftRatio": 0.4862695707247333,
+          "lateralSpread": 0.6376206294258843,
+          "verticalSpread": 0.41921285071800224,
+          "joinDistribution": {
+            "NACELLE_MOUNT": 2,
+            "STRUCTURAL_NECK": 2
+          },
+          "midRatio": 0.22887552988840718
+        },
+        "slenderness": 1.5683306873248493,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.24744897959183673,
+          "side": 0.4362244897959184,
+          "top": 0.30612244897959184
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 191.28618882776527,
+      "height": 125.76385521540067,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 307,
+      "triangles": 8548,
+      "camera": [
+        -222.9130639713895,
+        178.7528797418323,
+        -253.15168327970736
+      ],
+      "radius": 198.51945732173752,
+      "geometryFinite": true
+    },
+    {
+      "name": "corvette-mobility",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.17838009101906793,
+          "aftRatio": 0.4066094437083549,
+          "lateralSpread": 0.33899451935410274,
+          "verticalSpread": 0.11884915894158747,
+          "joinDistribution": {},
+          "midRatio": 0.41501046527257707
+        },
+        "slenderness": 2.949900198697408,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9693877551020408,
+          "side": 0.9923469387755102,
+          "top": 0.7729591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 101.69835580623082,
+      "height": 35.65474768247624,
+      "engines": 4,
+      "hardpoints": 20,
+      "drawCalls": 307,
+      "triangles": 8548,
+      "camera": [
+        -212.66107977822927,
+        173.70493640086576,
+        -245.12977011374423
+      ],
+      "radius": 169.30222157874778,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 42,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7502433303990109,
+          "foreRatio": 0.6099539271536675,
+          "aftRatio": 0.1301374198116808,
+          "lateralSpread": 0.879533009587127,
+          "verticalSpread": 0.1674060584470927,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "FLUSH": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.25990865303465177
+        },
+        "slenderness": 1.1369669916873537,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.7920918367346939,
+          "top": 0.6122448979591837
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 263.8599028761381,
+      "height": 50.22181753412781,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 172,
+      "triangles": 6240,
+      "camera": [
+        -363.46294545038324,
+        295.8263440220015,
+        -417.5397349810055
+      ],
+      "radius": 218.81279728239264,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 2718,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.5724979684311796,
+          "foreRatio": 0.29804307419219017,
+          "aftRatio": 0.22859745524091535,
+          "lateralSpread": 0.749179454622917,
+          "verticalSpread": 0.37897350121562756,
+          "joinDistribution": {
+            "OVERLAP": 2
+          },
+          "midRatio": 0.4733594705668944
+        },
+        "slenderness": 1.3347936783762016,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6964285714285714,
+          "side": 0.7257653061224489,
+          "top": 0.7270408163265306
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 224.7538363868751,
+      "height": 113.69205036468827,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 213,
+      "triangles": 7928,
+      "camera": [
+        -276.1641154256265,
+        246.17102547658726,
+        -316.6224804138159
+      ],
+      "radius": 203.16281511441477,
+      "geometryFinite": true
+    },
+    {
+      "name": "cruiser-naval",
+      "seed": 742091,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.17838009101906793,
+          "aftRatio": 0.406609443708355,
+          "lateralSpread": 0.5574436400000001,
+          "verticalSpread": 0.16778704791753526,
+          "joinDistribution": {},
+          "midRatio": 0.4150104652725772
+        },
+        "slenderness": 1.7939033262627229,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9693877551020408,
+          "side": 0.9923469387755102,
+          "top": 0.7729591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 167.23309200000003,
+      "height": 50.33611437526058,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 183,
+      "triangles": 7024,
+      "camera": [
+        -229.66245455098442,
+        187.23768844433422,
+        -262.50648819965636
+      ],
+      "radius": 181.5098980222227,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 0,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.26797681562403136,
+          "foreRatio": 0.23655171824415042,
+          "aftRatio": 0.2142902579308847,
+          "lateralSpread": 1.0108197744205893,
+          "verticalSpread": 0.14023226352598744,
+          "joinDistribution": {
+            "OVERLAP": 2,
+            "TRANSITION": 2
+          },
+          "midRatio": 0.5491580238249649
+        },
+        "slenderness": 0.9892960400118891,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7397959183673469,
+          "side": 0.8469387755102041,
+          "top": 0.7002551020408163
+        },
+        "symmetry": 0.9974489795918368,
+        "disconnectedPenalty": 0
+      },
+      "width": 303.2459323261768,
+      "height": 42.069679057796236,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 245,
+      "triangles": 10088,
+      "camera": [
+        -295.68788451032333,
+        241.03043250828122,
+        -338.5981362255852
+      ],
+      "radius": 220.0861175190124,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 8,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.7402761438843061,
+          "foreRatio": 0.1733343187347734,
+          "aftRatio": 0.4329100256633369,
+          "lateralSpread": 0.5327162609910739,
+          "verticalSpread": 0.1884324322899521,
+          "joinDistribution": {
+            "FLUSH": 1,
+            "OVERLAP": 1,
+            "TRANSITION": 1,
+            "ARMORED_COLLAR": 1
+          },
+          "midRatio": 0.39375565560188974
+        },
+        "slenderness": 1.8771719078737783,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.7551020408163265,
+          "side": 0.7704081632653061,
+          "top": 0.8239795918367347
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 159.8148782973222,
+      "height": 56.52972968698563,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 245,
+      "triangles": 10088,
+      "camera": [
+        -209.19214330547186,
+        173.9609955761567,
+        -238.99810575499362
+      ],
+      "radius": 180.66037614745974,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-BLOCK_ASSEMBLY",
+      "seed": 9,
+      "grammar": "BLOCK_ASSEMBLY",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.6840617373750878,
+          "foreRatio": 0.18391244560677275,
+          "aftRatio": 0.4120798029228209,
+          "lateralSpread": 0.5717268833363448,
+          "verticalSpread": 0.1842432525620752,
+          "joinDistribution": {
+            "RECESSED": 4
+          },
+          "midRatio": 0.40400775147040646
+        },
+        "slenderness": 1.749086896464345,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.8010204081632653,
+          "side": 0.7461734693877551,
+          "top": 0.7806122448979592
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 171.51806500090345,
+      "height": 55.27297576862256,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 237,
+      "triangles": 9168,
+      "camera": [
+        -212.09926200150394,
+        176.75112771566458,
+        -242.50152667010113
+      ],
+      "radius": 181.5707283092677,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 1,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.34596400710617314,
+          "foreRatio": 0.17395612009971814,
+          "aftRatio": 0.301152538511826,
+          "lateralSpread": 0.8022740101873803,
+          "verticalSpread": 0.17600322775092173,
+          "joinDistribution": {
+            "BOOM": 1,
+            "TRUSS": 4
+          },
+          "midRatio": 0.5248913413884558
+        },
+        "slenderness": 1.2464569303029505,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6683673469387755,
+          "side": 0.7602040816326531,
+          "top": 0.3979591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 240.6822030562141,
+      "height": 52.800968325276514,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 360,
+      "triangles": 10780,
+      "camera": [
+        -208.92090279197217,
+        170.48564997255858,
+        -238.54975345488455
+      ],
+      "radius": 200.3715614793793,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 5,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.36069354844350493,
+          "foreRatio": 0.16650406782963217,
+          "aftRatio": 0.23240446345877974,
+          "lateralSpread": 1.0350789940595049,
+          "verticalSpread": 0.19575840569168562,
+          "joinDistribution": {
+            "BOOM": 1,
+            "TRUSS": 4
+          },
+          "midRatio": 0.6010914687115881
+        },
+        "slenderness": 0.9661098387071623,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6377551020408163,
+          "side": 0.7104591836734694,
+          "top": 0.42346938775510207
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 310.52369821785146,
+      "height": 58.72752170750569,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 464,
+      "triangles": 12092,
+      "camera": [
+        -217.27478823672664,
+        183.63126405152482,
+        -248.35291453194117
+      ],
+      "radius": 223.35887837613387,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TRUSS_POD",
+      "seed": 6,
+      "grammar": "TRUSS_POD",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.37542466132401153,
+          "foreRatio": 0.2169295959330059,
+          "aftRatio": 0.31315869015604736,
+          "lateralSpread": 0.7188992871710594,
+          "verticalSpread": 0.15319025669646544,
+          "joinDistribution": {
+            "BOOM": 1,
+            "TRUSS": 4
+          },
+          "midRatio": 0.4699117139109465
+        },
+        "slenderness": 1.3910154285102994,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.7780612244897959,
+          "side": 0.7397959183673469,
+          "top": 0.375
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 215.66978615131782,
+      "height": 45.957077008939635,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 464,
+      "triangles": 12188,
+      "camera": [
+        -204.5158346371712,
+        167.00050693268747,
+        -233.5485900180384
+      ],
+      "radius": 192.56725445731644,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 2,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.4622641362896031,
+          "foreRatio": 0.2694414565377717,
+          "aftRatio": 0.3034618375826699,
+          "lateralSpread": 0.9124432205035178,
+          "verticalSpread": 0.16210906672428593,
+          "joinDistribution": {
+            "TRUSS": 2
+          },
+          "midRatio": 0.4270967058795584
+        },
+        "slenderness": 1.0959586060030841,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6198979591836735,
+          "side": 0.9438775510204082,
+          "top": 0.45918367346938777
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 273.73296615105534,
+      "height": 48.63272001728578,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 464,
+      "triangles": 12188,
+      "camera": [
+        -325.29741792598975,
+        265.0281012692759,
+        -372.63370270822224
+      ],
+      "radius": 210.66262807161254,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 3,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.43520366306977215,
+          "foreRatio": 0.28202775037795674,
+          "aftRatio": 0.2928639567399658,
+          "lateralSpread": 0.9131218893875643,
+          "verticalSpread": 0.16564466960988763,
+          "joinDistribution": {
+            "TRUSS": 2
+          },
+          "midRatio": 0.42510829288207747
+        },
+        "slenderness": 1.0951440455235448,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6275510204081632,
+          "side": 0.9438775510204082,
+          "top": 0.4897959183673469
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 273.9365668162693,
+      "height": 49.69340088296629,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 265,
+      "triangles": 9752,
+      "camera": [
+        -325.88680632846274,
+        265.50314758825033,
+        -373.3175495439583
+      ],
+      "radius": 210.79245359874008,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-TWIN_HULL",
+      "seed": 20,
+      "grammar": "TWIN_HULL",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.4428860636467976,
+          "foreRatio": 0.27372487051034367,
+          "aftRatio": 0.293518128703305,
+          "lateralSpread": 1.0213151870764057,
+          "verticalSpread": 0.17072547632799934,
+          "joinDistribution": {
+            "TRUSS": 2
+          },
+          "midRatio": 0.4327570007863512
+        },
+        "slenderness": 0.9791296679554702,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6135204081632653,
+          "side": 0.9438775510204082,
+          "top": 0.49744897959183676
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 306.3945561229217,
+      "height": 51.2176428983998,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 277,
+      "triangles": 9896,
+      "camera": [
+        -338.6496305600742,
+        275.85936846275297,
+        -388.01073903060035
+      ],
+      "radius": 221.8785967169944,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 4,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.6191959109104053,
+          "foreRatio": 0.5262592838409964,
+          "aftRatio": 0.1342373999928478,
+          "lateralSpread": 0.5362549581614852,
+          "verticalSpread": 0.3483570809103468,
+          "joinDistribution": {
+            "OVERLAP": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.33950331616615587
+        },
+        "slenderness": 1.8647846230241567,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6913265306122449,
+          "side": 0.6619897959183674,
+          "top": 0.7346938775510204
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 160.87648744844554,
+      "height": 104.50712427310404,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 206,
+      "triangles": 7564,
+      "camera": [
+        -302.64866703666775,
+        266.00546505607684,
+        -347.2436302518961
+      ],
+      "radius": 185.3255683439622,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 30,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.655539037906193,
+          "foreRatio": 0.26408590074270344,
+          "aftRatio": 0.21501174562739436,
+          "lateralSpread": 0.6185178926393509,
+          "verticalSpread": 0.2752224865994295,
+          "joinDistribution": {
+            "RECESSED": 1,
+            "OVERLAP": 1
+          },
+          "midRatio": 0.5209023536299023
+        },
+        "slenderness": 1.6167681030742405,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6989795918367347,
+          "side": 0.6530612244897959,
+          "top": 0.701530612244898
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 185.55536779180525,
+      "height": 82.56674597982885,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 215,
+      "triangles": 8512,
+      "camera": [
+        -251.39123514198693,
+        220.31768929761205,
+        -288.01917204156365
+      ],
+      "radius": 188.20328430989588,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-STACKED_BLOCKS",
+      "seed": 89,
+      "grammar": "STACKED_BLOCKS",
+      "volumes": 3,
+      "connectors": 2,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.6241024079847435,
+          "foreRatio": 0.27315677807392497,
+          "aftRatio": 0.22113608495521667,
+          "lateralSpread": 0.7078675111650468,
+          "verticalSpread": 0.36887188371524515,
+          "joinDistribution": {
+            "OVERLAP": 1,
+            "RECESSED": 1
+          },
+          "midRatio": 0.5057071369708585
+        },
+        "slenderness": 1.4126937374963653,
+        "majorVolumeCount": 3,
+        "occupancy": {
+          "front": 0.6964285714285714,
+          "side": 0.6964285714285714,
+          "top": 0.701530612244898
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 212.36025334951404,
+      "height": 110.66156511457355,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 215,
+      "triangles": 8512,
+      "camera": [
+        -272.5662622947922,
+        242.64590589403693,
+        -312.31528748608685
+      ],
+      "radius": 198.98449146953436,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 7,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.36501197352788917,
+          "aftRatio": 0.23524971850726292,
+          "lateralSpread": 0.7566923177436888,
+          "verticalSpread": 0.15420021662745523,
+          "joinDistribution": {},
+          "midRatio": 0.3997383079648478
+        },
+        "slenderness": 1.3215411027057973,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9846938775510204,
+          "side": 0.9923469387755102,
+          "top": 0.7551020408163265
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 227.00769532310665,
+      "height": 46.260064988236564,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 197,
+      "triangles": 8048,
+      "camera": [
+        -257.79833171698436,
+        210.29546495813122,
+        -295.3636977002336
+      ],
+      "radius": 196.42722620199706,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 35,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.19848415377988968,
+          "aftRatio": 0.42759090214385953,
+          "lateralSpread": 0.4717631048430279,
+          "verticalSpread": 0.1890262898598971,
+          "joinDistribution": {},
+          "midRatio": 0.3739249440762509
+        },
+        "slenderness": 2.1197079418339317,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9617346938775511,
+          "side": 0.9923469387755102,
+          "top": 0.7372448979591837
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 141.52893145290838,
+      "height": 56.70788695796914,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 197,
+      "triangles": 8048,
+      "camera": [
+        -233.07581226089135,
+        189.96600727434802,
+        -266.6922706234079
+      ],
+      "radius": 175.39213891500603,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-MONOLITHIC",
+      "seed": 79,
+      "grammar": "MONOLITHIC",
+      "volumes": 1,
+      "connectors": 0,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 1,
+          "foreRatio": 0.1984841537798897,
+          "aftRatio": 0.42759090214385953,
+          "lateralSpread": 0.5196203318147746,
+          "verticalSpread": 0.17733545251509727,
+          "joinDistribution": {},
+          "midRatio": 0.3739249440762509
+        },
+        "slenderness": 1.924482047320009,
+        "majorVolumeCount": 1,
+        "occupancy": {
+          "front": 0.9693877551020408,
+          "side": 0.9923469387755102,
+          "top": 0.7372448979591837
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 155.8860995444324,
+      "height": 53.20063575452918,
+      "engines": 6,
+      "hardpoints": 31,
+      "drawCalls": 199,
+      "triangles": 8960,
+      "camera": [
+        -233.45907081748643,
+        190.34045633080683,
+        -267.15512560730315
+      ],
+      "radius": 178.05844739568187,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 12,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.24958203038879984,
+          "foreRatio": 0.17293461863216666,
+          "aftRatio": 0.3179609359478018,
+          "lateralSpread": 0.4414825427654527,
+          "verticalSpread": 0.17573456297621137,
+          "joinDistribution": {
+            "ARMORED_COLLAR": 4,
+            "STRUCTURAL_NECK": 1
+          },
+          "midRatio": 0.5091044454200315
+        },
+        "slenderness": 2.265095226044469,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.8622448979591837,
+          "side": 0.7538265306122449,
+          "top": 0.5408163265306123
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 132.4447628296358,
+      "height": 52.72036889286341,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 386,
+      "triangles": 11016,
+      "camera": [
+        -205.67862842385037,
+        167.00573094778207,
+        -234.01018655464384
+      ],
+      "radius": 173.50494404046094,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 24,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.2605014519097823,
+          "foreRatio": 0.11538853287860579,
+          "aftRatio": 0.43376781837331196,
+          "lateralSpread": 0.6504871391896736,
+          "verticalSpread": 0.1476717658666725,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 2,
+            "ARMORED_COLLAR": 3
+          },
+          "midRatio": 0.4508436487480825
+        },
+        "slenderness": 1.537309409753623,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.8928571428571429,
+          "side": 0.764030612244898,
+          "top": 0.5637755102040817
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 195.1461417569021,
+      "height": 44.30152976000175,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 326,
+      "triangles": 9896,
+      "camera": [
+        -208.28730986713362,
+        169.92805410185304,
+        -237.15072951599956
+      ],
+      "radius": 187.19042918182194,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-SPINE_AND_MODULES",
+      "seed": 32,
+      "grammar": "SPINE_AND_MODULES",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.22842401696219058,
+          "foreRatio": 0.11823498301481292,
+          "aftRatio": 0.37803353828224867,
+          "lateralSpread": 0.44783842973342,
+          "verticalSpread": 0.17612657142064414,
+          "joinDistribution": {
+            "STRUCTURAL_NECK": 2,
+            "ARMORED_COLLAR": 3
+          },
+          "midRatio": 0.5037314787029386
+        },
+        "slenderness": 2.232948165246246,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.8852040816326531,
+          "side": 0.7385204081632653,
+          "top": 0.5178571428571429
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 134.351528920026,
+      "height": 52.83797142619324,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 334,
+      "triangles": 10184,
+      "camera": [
+        -204.38139543383215,
+        163.67090136466408,
+        -229.20454006392575
+      ],
+      "radius": 175.05979530387748,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 36,
+      "grammar": "HYBRID",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.26891175940566653,
+          "foreRatio": 0.10825484048457984,
+          "aftRatio": 0.49614848232776193,
+          "lateralSpread": 0.7331412742705894,
+          "verticalSpread": 0.16788039654979728,
+          "joinDistribution": {
+            "TRUSS": 2,
+            "ARMORED_COLLAR": 3
+          },
+          "midRatio": 0.3955966771876583
+        },
+        "slenderness": 1.3639935918147716,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.6900510204081632,
+          "side": 0.7244897959183674,
+          "top": 0.42857142857142855
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 219.94238228117683,
+      "height": 50.36411896493919,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 320,
+      "triangles": 10096,
+      "camera": [
+        -219.13493279987367,
+        185.8105284679588,
+        -249.41748193367494
+      ],
+      "radius": 194.56562769705624,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 43,
+      "grammar": "HYBRID",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.35740235186593805,
+          "foreRatio": 0.18750160569983496,
+          "aftRatio": 0.2834664133486923,
+          "lateralSpread": 0.8040096948472706,
+          "verticalSpread": 0.17305544555655336,
+          "joinDistribution": {
+            "TRUSS": 2,
+            "ARMORED_COLLAR": 3
+          },
+          "midRatio": 0.5290319809514729
+        },
+        "slenderness": 1.2437660968627495,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.7091836734693877,
+          "side": 0.8112244897959183,
+          "top": 0.5229591836734694
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 241.20290845418117,
+      "height": 51.91663366696601,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 320,
+      "triangles": 10096,
+      "camera": [
+        -239.48148489756426,
+        202.8563605578713,
+        -273.31416283536504
+      ],
+      "radius": 200.74186685604894,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-HYBRID",
+      "seed": 67,
+      "grammar": "HYBRID",
+      "volumes": 6,
+      "connectors": 5,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.36851982194465993,
+          "foreRatio": 0.18592672738127275,
+          "aftRatio": 0.27710631503239336,
+          "lateralSpread": 0.86331787440603,
+          "verticalSpread": 0.19274959294213806,
+          "joinDistribution": {
+            "TRUSS": 2,
+            "ARMORED_COLLAR": 3
+          },
+          "midRatio": 0.5369669575863338
+        },
+        "slenderness": 1.1583218993212765,
+        "majorVolumeCount": 6,
+        "occupancy": {
+          "front": 0.7244897959183674,
+          "side": 0.8099489795918368,
+          "top": 0.5255102040816326
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 258.995362321809,
+      "height": 57.82487788264142,
+      "engines": 2,
+      "hardpoints": 31,
+      "drawCalls": 320,
+      "triangles": 10096,
+      "camera": [
+        -251.08906675819375,
+        204.77637896064365,
+        -286.7142667196305
+      ],
+      "radius": 206.622316858311,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 41,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.4088991931993477,
+          "foreRatio": 0.34689357796732856,
+          "aftRatio": 0.5238573462887515,
+          "lateralSpread": 0.6819118644639732,
+          "verticalSpread": 0.5469420515516861,
+          "joinDistribution": {
+            "TRUSS": 4
+          },
+          "midRatio": 0.12924907574391978
+        },
+        "slenderness": 1.4664651725719196,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.2857142857142857,
+          "side": 0.3622448979591837,
+          "top": 0.3392857142857143
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 204.57355933919197,
+      "height": 164.08261546550582,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 320,
+      "triangles": 10096,
+      "camera": [
+        -227.0579112873148,
+        181.4666528690825,
+        -256.1247739528426
+      ],
+      "radius": 206.94975494846238,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 44,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.40662152443782207,
+          "foreRatio": 0.2773526910542894,
+          "aftRatio": 0.4412140342206088,
+          "lateralSpread": 0.794930660056605,
+          "verticalSpread": 0.554395934211606,
+          "joinDistribution": {
+            "TRUSS": 3,
+            "NACELLE_MOUNT": 1
+          },
+          "midRatio": 0.281433274725102
+        },
+        "slenderness": 1.2579713555504233,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.2627551020408163,
+          "side": 0.44642857142857145,
+          "top": 0.3826530612244898
+        },
+        "symmetry": 0.9948979591836735,
+        "disconnectedPenalty": 0
+      },
+      "width": 238.47919801698148,
+      "height": 166.3187802634818,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 490,
+      "triangles": 12988,
+      "camera": [
+        -227.84304079558345,
+        184.7087367840235,
+        -260.71023360646393
+      ],
+      "radius": 215.96238443604514,
+      "geometryFinite": true
+    },
+    {
+      "name": "grammar-CORE_AND_NACELLES",
+      "seed": 48,
+      "grammar": "CORE_AND_NACELLES",
+      "volumes": 5,
+      "connectors": 4,
+      "silhouette": {
+        "massHierarchy": {
+          "primaryRatio": 0.4195907755630753,
+          "foreRatio": 0.35596388507961896,
+          "aftRatio": 0.5804092244369248,
+          "lateralSpread": 0.7819224705068482,
+          "verticalSpread": 0.49512447664318265,
+          "joinDistribution": {
+            "TRUSS": 3,
+            "STRUCTURAL_NECK": 1
+          },
+          "midRatio": 0.06362689048345631
+        },
+        "slenderness": 1.2788991718728742,
+        "majorVolumeCount": 5,
+        "occupancy": {
+          "front": 0.2576530612244898,
+          "side": 0.3596938775510204,
+          "top": 0.3112244897959184
+        },
+        "symmetry": 1,
+        "disconnectedPenalty": 0
+      },
+      "width": 234.57674115205444,
+      "height": 148.5373429929548,
+      "engines": 4,
+      "hardpoints": 31,
+      "drawCalls": 540,
+      "triangles": 13668,
+      "camera": [
+        -228.1125521061698,
+        182.90766251553057,
+        -256.9096849241996
+      ],
+      "radius": 212.01187558911374,
+      "geometryFinite": true
+    }
+  ]
+}

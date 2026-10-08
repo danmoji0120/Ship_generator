@@ -35,6 +35,7 @@ export function refineConnections(
   volumes: StructuralVolume[],
   connectors: StructuralConnector[],
   rng: SeededRng,
+  planned = false,
 ) {
   const l = order.length;
   const node = volumes.find((v) => v.id === "axis-reinforcement");
@@ -84,9 +85,13 @@ export function refineConnections(
     if (c.type === "TRUSS" && grammar !== "TWIN_HULL") type = "TRUSS";
     if (c.type === "BOOM" && b.purpose === "sensor") type = "BOOM";
     if (b.id === "axis-reinforcement") type = "ARMORED_COLLAR";
+    // Machinery directly behind its breech shares an armored interface; a truss cannot occupy their inset.
+    if (planned && a.id.startsWith("breech") && b.id.startsWith("drive"))
+      type = "ARMORED_COLLAR";
     if (b.type === "NACELLE" && type === "BOOM") type = "NACELLE_MOUNT";
     // Lateral battery interfaces use real inset, rather than a label on a visible gap.
     if (
+      !planned &&
       grammar === "BLOCK_ASSEMBLY" &&
       b.id.startsWith("magazine") &&
       Math.abs(b.position.z - a.position.z) + b.dimensions.z / 2 <

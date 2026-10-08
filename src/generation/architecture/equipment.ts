@@ -17,6 +17,7 @@ export function architectureEngines(
   grammar: ArchitectureGrammar,
   volumes: StructuralVolume[],
   rng: SeededRng,
+  planned = false,
 ) {
   let parents = volumes.filter((v) => v.purpose === "propulsion");
   if (!parents.length) parents = [volumes[0]];
@@ -52,7 +53,9 @@ export function architectureEngines(
         position: {
           x: parent.position.x + x,
           y: parent.position.y + y,
-          z: parent.position.z + rear.z,
+          // V1.8 mating point is one millionth of hull length inside the real aft ring.
+          // This avoids an ulp beyond the last station being interpreted as a fore interval.
+          z: parent.position.z + rear.z - (planned ? order.length * 1e-6 : 0),
         },
         direction: { x: 0, y: 0, z: 1 },
         nozzleRadius: r,
