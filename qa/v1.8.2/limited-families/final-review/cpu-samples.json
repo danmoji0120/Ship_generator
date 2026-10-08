@@ -1,0 +1,33 @@
+{
+  "note": "Three repetitions per fixed design; prototype builder plus validation only. Not p95 or full production performance.",
+  "samples": [
+    {
+      "family": "WEDGE_CITADEL",
+      "buildAndValidationMs": [
+        518.7999999970198,
+        499,
+        470.40000000596046
+      ],
+      "medianMs": 499
+    },
+    {
+      "family": "HAMMERHEAD",
+      "buildAndValidationMs": [
+        346.79999999701977,
+        337.70000000298023,
+        363.90000000596046
+      ],
+      "medianMs": 346.79999999701977
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "buildAndValidationMs": [
+        320.5,
+        307.20000000298023,
+        313
+      ],
+      "medianMs": 313
+    }
+  ],
+  "errors": []
+}

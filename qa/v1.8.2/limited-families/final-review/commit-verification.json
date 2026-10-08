@@ -1,0 +1,28 @@
+{
+  "scope": "Exact staged subset exported separately; no rejected tile draft dependencies",
+  "cases": [
+    {
+      "family": "WEDGE_CITADEL",
+      "jsonSame": true,
+      "pngsSame": true,
+      "pngCount": 9
+    },
+    {
+      "family": "HAMMERHEAD",
+      "jsonSame": true,
+      "pngsSame": true,
+      "pngCount": 9
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "jsonSame": true,
+      "pngsSame": true,
+      "pngCount": 9
+    }
+  ],
+  "build": true,
+  "structuralTests": 17,
+  "archivedLegacyRenderTest": true,
+  "consoleErrors": 0,
+  "archivedV181Test": true
+}

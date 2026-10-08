@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "family": "WEDGE_CITADEL",
+      "architecture": "MONOLITHIC",
+      "seed": 7,
+      "components": 22,
+      "channels": [
+        {
+          "id": "service-lane--1",
+          "width": 16.044903905437174,
+          "depth": 12.044932038035697
+        },
+        {
+          "id": "service-lane-1",
+          "width": 16.044903905437174,
+          "depth": 12.044932038035697
+        }
+      ],
+      "joints": 2,
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull"
+        ],
+        "minimumChannelDepth": 12.044932038035697,
+        "maximumMountLift": 19.348594826100854
+      },
+      "jsonDeterminism": true,
+      "webglDeterminism": true
+    },
+    {
+      "family": "HAMMERHEAD",
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "components": 13,
+      "channels": [
+        {
+          "id": "channel-fore-armor",
+          "width": 21.488063535824473,
+          "depth": 12.001652522207216
+        }
+      ],
+      "joints": 2,
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull"
+        ],
+        "minimumChannelDepth": 12.001652522207216,
+        "maximumMountLift": 19.48013269765494
+      },
+      "jsonDeterminism": true,
+      "webglDeterminism": true
+    },
+    {
+      "family": "ENGINE_DOMINANT",
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 7,
+      "components": 19,
+      "channels": [
+        {
+          "id": "channel-lateral-drive--1",
+          "width": 8.81597226936907,
+          "depth": 8.998698167072273
+        },
+        {
+          "id": "channel-vertical-drive--1",
+          "width": 7.317256983576317,
+          "depth": 7.458699828307015
+        },
+        {
+          "id": "channel-lateral-drive-1",
+          "width": 8.65477529612636,
+          "depth": 9.000205307631123
+        },
+        {
+          "id": "channel-vertical-drive-1",
+          "width": 7.196431343879499,
+          "depth": 7.460091980203998
+        }
+      ],
+      "joints": 0,
+      "validation": {
+        "issues": [],
+        "checks": [
+          "Actual shared-volume contacts for transition necks",
+          "IDs and parent references",
+          "Actual station-root contacts",
+          "Closed nondegenerate solids and positive signed volume",
+          "Sampled exhaust, radiator, weapon and sensor corridors",
+          "Low physical foundation height and mount spacing",
+          "8-point surface-seated foundations",
+          "Every original hardpoint retained, vertical mount firing clearances",
+          "Open structural channels above intact structural hull"
+        ],
+        "minimumChannelDepth": 7.458699828307015,
+        "maximumMountLift": 14.657091769299385
+      },
+      "jsonDeterminism": true,
+      "webglDeterminism": true
+    }
+  ],
+  "errors": []
+}

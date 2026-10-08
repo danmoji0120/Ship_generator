@@ -9,6 +9,20 @@ npm test
 npm run build
 ```
 
+## V1.8.2 구조 방향 승인 / 대표 세 Family 제한 검증
+
+네 Armor Language의 타일 기반 개선은 보류했습니다. 승인된 Seed 7 구조 방향을 다듬고 **WEDGE_CITADEL / MONOLITHIC, HAMMERHEAD / BLOCK_ASSEMBLY, ENGINE_DOMINANT / CORE_AND_NACELLES** 세 대표 설계에만 제한 적용했습니다. 모두 Aegis / Cruiser / 300m / Seed 7이며, 패널·패널라인·Hardpoint를 숨겨도 대형 장갑층, 열린 정비 채널, 측면 Belt 및 기단이 남습니다. 다른 Seed·Shipyard·Armor Language의 출시 적용이나 220척 검증을 의미하지 않습니다. [원래 승인 시안](qa/v1.8.2/STRUCTURAL_REVIEW.md)과 [연결부 보완 및 제한 Family 검증](qa/v1.8.2/LIMITED_STRUCTURAL_REFINEMENT.md)을 확인하세요.
+
+QA 전용 `buildLimitedStructuralArmor(source)`는 위 세 조건만 허용합니다. `generateBlueprintV181`로 얻은 원본을 복사한 뒤 선택적 `structuralArmorPilot`에 실제 체적, 접촉점, 연결부, 채널 실측과 낮은 Foundation을 직렬화합니다. 일반 생성기 전체에 새 구조를 자동 적용하지 않으며 과거 JSON에도 소급 적용하지 않습니다.
+
+```bash
+npx vitest run tests/structural-armor-pilot.test.ts tests/structural-armor-limited.test.ts
+# npm run dev 실행 중 별도 터미널에서 승인 범위의 세 척만 캡처
+LIMITED_OUTPUT=qa/v1.8.2/limited-families/local-review node tests/structural-armor-limited.mjs
+# 기존 승인 시안과 동일한 360m 프레임의 Seed 7 재검토
+PILOT_OUTPUT=qa/v1.8.2/structural-pilot/local-review node tests/structural-armor-pilot.mjs
+```
+
 ## Blueprint / 생성 순서
 
 `schemaVersion: 2`, `generatorVersion: "1.8.1"`. 선택적 `layeredArmor`에 실제 면, 분할 패널, 계층, 접촉점, 두께, Chamfer, Gap, Seam, Bounds, 피복 면적과 예외 사유를 저장합니다. 선택적 `Hardpoint.surfaceMount`는 장갑·Surface·Socket 참조, 안정적인 면 좌표, 표면 법선과 장착 방향, 실제 Foundation Geometry 및 Clearance를 보존합니다. Renderer는 RNG를 실행하거나 새 패널을 배치하지 않습니다.

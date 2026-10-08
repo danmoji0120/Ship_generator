@@ -21,6 +21,7 @@ const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
     const copy=structuredClone(b);
+    if(mode==="Hull Only")copy.structuralArmorPilot=undefined;
     if(mode==="Hull Only"||mode==="Armor Panels"||mode==="Panel Seams"||mode==="Armor Coverage"||mode==="Secondary Armor") {
       copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];
       copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));
@@ -63,6 +64,16 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   };
   if (b.schemaVersion === 2) {
     root.add(renderArchitecture(b, mode, m, ghost));
+    if(b.structuralArmorPilot && ["Normal", "Structure", "Armor"].includes(mode)) {
+      for(const c of b.structuralArmorPilot.components) {
+        const mesh=add(panelGeometry(c.solid), c.role==='SIDE_BELT'?m.secondary:m.hull);
+        mesh.userData.structuralArmor=c.id;mesh.castShadow=true;mesh.receiveShadow=true;
+      }
+      for(const mount of b.structuralArmorPilot.mounts) {
+        const mesh=add(panelGeometry(mount.foundation),m.secondary);
+        mesh.userData.mountFoundation=mount.hardpointId;mesh.castShadow=true;mesh.receiveShadow=true;
+      }
+    }
     if (["Normal", "Structure", "Armor"].includes(mode) && b.layeredArmor)
       root.add(renderLayeredArmor(b, m));
     if (
@@ -73,7 +84,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     )
       root.add(
         renderPrefabs(
-          b.prefabPlacements.filter(p=>!b.layeredArmor?.supersededExteriorIds.includes(p.id)).filter((p) =>
+          b.prefabPlacements.filter(p=>!b.structuralArmorPilot?.supersededPrefabIds.includes(p.id)).filter(p=>!b.layeredArmor?.supersededExteriorIds.includes(p.id)).filter((p) =>
             mode === "Integration"
               ? p.exterior &&
                 ["integration", "bow", "stern"].includes(p.exterior.phase)

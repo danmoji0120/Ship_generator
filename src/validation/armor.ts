@@ -5,7 +5,7 @@ import {measureArmorCoverage} from '../generation/armor/coverage';
 import {inReservedZone} from '../generation/integration/reservations';
 import {DIRECTIONS} from '../generation/armor/surfaces';
 export function validateLayeredArmor(b:ShipBlueprint) {
- const a=b.layeredArmor;if(!a)return b.generatorVersion==='1.8.1'?['Missing omnidirectional armor']:[];
+ const a=b.layeredArmor;if(!a&&b.structuralArmorPilot&&['one-ship-review','limited-family-review'].includes(b.structuralArmorPilot.status))return [];if(!a)return ['1.8.1','1.8.2'].includes(b.generatorVersion)?['Missing omnidirectional armor']:[];
  const errors:string[]=[],segments=a.assemblies.flatMap(a=>a.segments),map=new Map(segments.map(s=>[s.id,s])),surfaces=new Map(a.surfaces.map(s=>[s.id,s])),volumes=new Set(b.structuralVolumes.map(v=>v.id));
  const finite=(x:unknown):boolean=>typeof x==='number'?Number.isFinite(x):Array.isArray(x)?x.every(finite):x&&typeof x==='object'?Object.values(x).every(finite):true;
  if(!finite(a))errors.push('Nonfinite armor data');

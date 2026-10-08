@@ -8,6 +8,7 @@ export type ArmorStage = typeof ARMOR_STAGES[number];
 export function armorStageBlueprint(b: ShipBlueprint, stage: ArmorStage) {
   const copy = structuredClone(b);
   if(stage === 'COMPLETE') return copy;
+  if(stage==='HULL_ONLY')copy.structuralArmorPilot=undefined;
   copy.hardpoints=[];
   if(stage==='NO_HARDPOINTS')return copy;
   copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&['integration','bow','stern'].includes(p.exterior.phase)); copy.engines=[]; copy.surfaceFeatures=[];
@@ -21,6 +22,7 @@ export class ArmorQARenderer {
   private ship?: THREE.Group;
   private cachedBlueprint?:ShipBlueprint;
   private cachedVisualKey="";
+  private ambient = new THREE.HemisphereLight(0xc8d8eb,0x40434c,1.8);
   private key = new THREE.DirectionalLight(0xffebd3,4.1);
   private fill = new THREE.DirectionalLight(0xb4d1ef,1.6);
   private ventral = new THREE.DirectionalLight(0xc4d5e7,2.4);
@@ -31,22 +33,28 @@ export class ArmorQARenderer {
     this.renderer.toneMapping=THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure=1.3;
     this.renderer.shadowMap.enabled=true; this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-    this.scene.add(new THREE.HemisphereLight(0xc8d8eb,0x40434c,1.8),this.key,this.fill,this.ventral,this.key.target);
+    this.scene.add(this.ambient,this.key,this.fill,this.ventral,this.key.target);
     this.key.castShadow=true; this.key.shadow.mapSize.set(1024,1024); this.key.shadow.bias=-.0012;
   }
-  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;closeup?:{center:THREE.Vector3;extent:number}}={}) {
-    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}`;
+  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
+    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}`;
     // QA blueprints are immutable. Reuse the exact geometry across camera views, not design data.
     if(this.cachedBlueprint!==b||this.cachedVisualKey!==visualKey) {
     if(this.ship) {this.scene.remove(this.ship);disposeShip(this.ship);}
     this.ship=createShip(armorStageBlueprint(b,stage),'Normal');
-    const shared=new THREE.MeshStandardMaterial({color:0x98a4af,roughness:.82,metalness:.12});
+    const shared=new THREE.MeshStandardMaterial({color:options.reviewLighting?0x798b9a:0x98a4af,roughness:.82,metalness:.12});
+    // A consistent neutral clay rig, equally applied to source and prototype, reveals deep structural walls.
+    this.ambient.intensity=options.reviewLighting ? .8 : 1.8;
+    this.key.intensity=options.reviewLighting?3:4.1;
+    this.fill.intensity=options.reviewLighting ? 1.25 : 1.6;
+    this.ventral.intensity=options.reviewLighting ? 1 : 2.4;
+    this.renderer.toneMappingExposure=options.reviewLighting?1:1.3;
     const black=new THREE.MeshBasicMaterial({color:0});
     const disposed=new Set<THREE.Material>();
     this.ship.traverse(n=>{
       if(n instanceof THREE.Line) n.visible=false;
       if(n instanceof THREE.Mesh) {
-        n.receiveShadow=true; n.castShadow=Boolean(n.userData.armorLayer);
+        n.receiveShadow=true; n.castShadow=Boolean(n.userData.armorLayer||(b.structuralArmorPilot&&(n.userData.structuralArmor||n.userData.mountFoundation)));
         if(options.isolate!==undefined) n.visible=n.userData.armorLayer===options.isolate;
         if(options.neutral||options.black) {
           (Array.isArray(n.material)?n.material:[n.material]).forEach(m=>disposed.add(m));
@@ -63,7 +71,7 @@ export class ArmorQARenderer {
     const up=view==='TOP'||view==='BOTTOM'?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
     const right=up.clone().cross(direction).normalize(), vertical=direction.clone().cross(right).normalize();
     // Use Complete's authoritative bounds for every progression stage, including fitted views.
-    const bounds=b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
+    const bounds=b.structuralArmorPilot?.overallBounds??b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
     const center=options.scale==='fit'&&bounds?new THREE.Vector3().addVectors(new THREE.Vector3(bounds.min.x,bounds.min.y,bounds.min.z),new THREE.Vector3(bounds.max.x,bounds.max.y,bounds.max.z)).multiplyScalar(.5):new THREE.Vector3();
     let extent=b.order.length*1.50;
     if(options.scale==='fit'&&bounds) {

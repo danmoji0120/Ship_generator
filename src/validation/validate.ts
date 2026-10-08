@@ -1,3 +1,4 @@
+import { validateStructuralArmorPilot } from "../generation/armor/structural-pilot/validate";
 import { validateLayeredArmor } from "./armor";
 import { validateMacro } from "./macro";
 import { validateIntegration } from "./integration";
@@ -49,7 +50,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))
     ) {
       if (
         !v.shape ||
@@ -105,7 +106,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -217,7 +218,7 @@ export function validateArchitecture(b: ShipBlueprint) {
           l * 0.001
       )
         errors.push("Spinal alignment");
-    } else if (!h.surfaceMount) {
+    } else if (!h.surfaceMount && !b.structuralArmorPilot?.mounts.some(m => m.hardpointId === h.id)) {
       const localZ = h.position.z - v.position.z,
         localX = h.position.x - v.position.x,
         s = hullSurfaceAt(v.geometry.stations, localZ, localX);
@@ -293,8 +294,9 @@ export function validateArchitecture(b: ShipBlueprint) {
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1"))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2")))
     errors.push(...validateIntegration(b));
+  if (b.structuralArmorPilot) errors.push(...validateStructuralArmorPilot(b).issues);
   const d = b.dimensions;
   if (
     d.length < l * 0.99 ||
@@ -309,7 +311,7 @@ export function validateArchitecture(b: ShipBlueprint) {
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
   return errors;
 }

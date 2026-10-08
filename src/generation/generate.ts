@@ -29,12 +29,12 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1";
     family?: MacroFamily;
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if (!qaOptions?.version) {
+  if (!qaOptions?.version || qaOptions.version === "1.8.1") {
     const b = generateBlueprint(input, seed, { ...qaOptions, version: "1.8" });
     buildLayeredArmor(b);
     b.generatorVersion = "1.8.1";
@@ -285,4 +285,9 @@ export function generateBlueprintV17(
 /** Frozen V1.8 reference path: no layered armor is added to legacy exports. */
 export function generateBlueprintV18(input: ShipOrder, seed: number, options?: { architecture?: import("../blueprint/types").ArchitectureGrammar; family?: MacroFamily }) {
   return generateBlueprint(input, seed, { ...options, version: "1.8" });
+}
+
+/** Frozen omnidirectional V1.8.1 path for limited structural review. */
+export function generateBlueprintV181(input: ShipOrder, seed: number, options?: {architecture?: import("../blueprint/types").ArchitectureGrammar; family?: MacroFamily}) {
+ return generateBlueprint(input,seed,{...options,version:"1.8.1"});
 }
