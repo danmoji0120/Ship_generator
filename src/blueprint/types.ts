@@ -300,10 +300,40 @@ export interface SilhouetteMetrics {
   disconnectedPenalty: number;
 }
 /** Reusable, parametric external kit parts; sockets are authoritative world-space attachment anchors. */
-export const PREFAB_KINDS = ["ARMOR_PLATE", "RADIATOR_BANK", "JOINT_HOUSING"] as const;
+export const LEGACY_PREFAB_KINDS = [
+  "ARMOR_PLATE",
+  "RADIATOR_BANK",
+  "JOINT_HOUSING",
+] as const;
+export const EXTERIOR_KINDS = [
+  "TRANSITION_SHELL",
+  "ARMORED_SHOULDER",
+  "JUNCTION_HOUSING",
+  "STRUCTURAL_FAIRING",
+  "REINFORCED_COLLAR",
+  "ARMORED_BOW",
+  "WEDGE_BOW",
+  "SENSOR_BOW",
+  "SPINAL_MUZZLE",
+  "INDUSTRIAL_BOW",
+  "ENGINE_HOUSING",
+  "THRUSTER_FRAME",
+  "REAR_TRANSITION",
+  "ARMOR_ENVELOPE",
+  "SENSOR_HOUSING",
+  "MISSILE_BAY_HOUSING",
+  "RADIATOR_MOUNT",
+  "WEAPON_FOUNDATION",
+  "MACHINERY_HOUSING",
+] as const;
+export type ExteriorKind = (typeof EXTERIOR_KINDS)[number];
+export const PREFAB_KINDS = [
+  ...LEGACY_PREFAB_KINDS,
+  ...EXTERIOR_KINDS,
+] as const;
 export type PrefabKind = (typeof PREFAB_KINDS)[number];
 export interface PrefabSocket {
-  kind: "HULL_SIDE" | "CONNECTOR_END";
+  kind: "HULL_SIDE" | "HULL_FACE" | "CONNECTOR_END";
   hostId: string;
   position: Vec3;
   normal: Vec3;
@@ -316,14 +346,70 @@ export interface PrefabPlacement {
   dimensions: Vec3;
   variant: number;
   /** Thermal panels are physical equipment, not a simulated heat balance yet. */
-  functionality: "protection" | "thermal" | "structural";
+  functionality:
+    | "protection"
+    | "thermal"
+    | "structural"
+    | "sensor"
+    | "weapon"
+    | "propulsion"
+    | "machinery";
+  exterior?: ExteriorDefinition;
+}
+export type ArmorClass =
+  "PRIMARY" | "SECONDARY" | "EDGE" | "JOINT" | "MACHINERY";
+export interface BoundsData {
+  min: Vec3;
+  max: Vec3;
+}
+export interface EquipmentZone {
+  id: string;
+  parentId: string;
+  equipmentId: string;
+  kind: "weapon" | "missile" | "sensor" | "exhaust" | "thermal" | "machinery";
+  position: Vec3;
+  normal: Vec3;
+  radius: number;
+  depth: number;
+  /** Free space begins here; foundation skins may occupy the recessed root only. */
+  rootClearance: number;
+}
+export interface ExteriorDefinition {
+  phase: "integration" | "bow" | "stern" | "armor" | "equipment";
+  parentIds: string[];
+  connectorId?: string;
+  equipmentZoneId?: string;
+  /** World-space contour rings, fitted from real station profiles. No renderer-authored design. */
+  rings?: Vec3[][];
+  tube?: {
+    center: Vec3;
+    length: number;
+    innerRadius: number;
+    outerRadius: number;
+  };
+  matingSockets: PrefabSocket[];
+  contactSamples: { parentId: string; position: Vec3 }[];
+  inset: number;
+  armorClass?: ArmorClass;
+  protectionGrade: number;
+}
+export interface HullIntegration {
+  axisAlignedVolumes: true;
+  reservedZones: EquipmentZone[];
+  decisions: {
+    sourceId: string;
+    status: "accepted" | "fallback" | "omitted";
+    reason: string;
+  }[];
+  exteriorBounds: BoundsData;
+  overallBounds: BoundsData;
 }
 export interface ShipBlueprint extends Omit<
   LegacyShipBlueprint,
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -341,6 +427,7 @@ export interface ShipBlueprint extends Omit<
   structuralConnectors: StructuralConnector[];
   /** Optional: V1/V1.5 exports without prefabs remain loadable. */
   prefabPlacements?: PrefabPlacement[];
+  hullIntegration?: HullIntegration;
   silhouette: SilhouetteMetrics;
 }
 export type AnyShipBlueprint = ShipBlueprint | LegacyShipBlueprint;

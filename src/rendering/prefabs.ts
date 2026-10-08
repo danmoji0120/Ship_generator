@@ -1,8 +1,12 @@
 import * as THREE from "three";
+import { exteriorGeometry } from "./exterior";
 import type { PrefabPlacement, Vec3 } from "../blueprint/types";
 import type { shipMaterials } from "./materials";
 import { loftGeometry } from "./geometry";
-import { shapeDefinition, shapeStations } from "../generation/shapes/definition";
+import {
+  shapeDefinition,
+  shapeStations,
+} from "../generation/shapes/definition";
 
 function vector(p: Vec3): THREE.Vector3 {
   return new THREE.Vector3(p.x, p.y, p.z);
@@ -15,7 +19,10 @@ export function renderPrefabs(
 ) {
   const root = new THREE.Group();
   const radiatorSurface = new THREE.MeshStandardMaterial({
-    color: "#455963", metalness: 0.56, roughness: 0.62, side: THREE.DoubleSide,
+    color: "#455963",
+    metalness: 0.56,
+    roughness: 0.62,
+    side: THREE.DoubleSide,
   });
   for (const p of placements) {
     const g = new THREE.Group();
@@ -23,6 +30,20 @@ export function renderPrefabs(
     g.userData.prefabId = p.id;
     g.userData.prefabKind = p.kind;
     g.userData.socket = p.socket;
+    if (p.exterior) {
+      g.userData.exterior = p.exterior;
+      const material =
+        p.kind === "SENSOR_HOUSING"
+          ? materials.accent
+          : p.functionality === "propulsion" || p.functionality === "machinery"
+            ? materials.secondary
+            : materials.hull;
+      const mesh = new THREE.Mesh(exteriorGeometry(p.exterior), material);
+      mesh.userData.exteriorId = p.id;
+      g.add(mesh);
+      root.add(g);
+      continue;
+    }
     g.position.copy(vector(p.socket.position));
     g.quaternion.setFromUnitVectors(
       new THREE.Vector3(0, 1, 0),
@@ -64,22 +85,22 @@ export function renderPrefabs(
           new THREE.BoxGeometry(
             d.x * 0.96,
             d.y * (0.74 + p.variant * 0.07),
-            d.z / count * 0.47,
+            (d.z / count) * 0.47,
           ),
           radiatorSurface,
         );
         fin.position.set(0, d.y * 0.43, z);
         g.add(fin);
         const tip = new THREE.Mesh(
-          new THREE.BoxGeometry(d.x, d.y * 0.075, d.z / count * 0.55),
+          new THREE.BoxGeometry(d.x, d.y * 0.075, (d.z / count) * 0.55),
           materials.accent,
         );
-        tip.position.set(0, d.y * (0.80 + p.variant * 0.05), z);
+        tip.position.set(0, d.y * (0.8 + p.variant * 0.05), z);
         g.add(tip);
       }
       for (const side of [-1, 1]) {
         const rail = new THREE.Mesh(
-          new THREE.BoxGeometry(d.y * 0.10, d.y * 0.18, d.z * 1.03),
+          new THREE.BoxGeometry(d.y * 0.1, d.y * 0.18, d.z * 1.03),
           materials.secondary,
         );
         rail.position.set(side * d.x * 0.42, d.y * 0.12, 0);
@@ -90,9 +111,9 @@ export function renderPrefabs(
         new THREE.CylinderGeometry(d.x * 0.48, d.z * 0.48, d.y, 8),
         materials.secondary,
       );
-      body.position.y = d.y * 0.10;
+      body.position.y = d.y * 0.1;
       g.add(body);
-      for (const t of [-0.30, 0.30]) {
+      for (const t of [-0.3, 0.3]) {
         const ring = new THREE.Mesh(
           new THREE.TorusGeometry(
             Math.min(d.x, d.z) * 0.44,

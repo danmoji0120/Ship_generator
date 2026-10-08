@@ -1,0 +1,29 @@
+
+> procedural-shipyard@1.7.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/Ship_generator
+
+stdout | tests/architecture.test.ts > V1 architecture > keeps deterministic fixtures for all eight grammars, including no-primary layouts
+V1 grammar fixtures {"MONOLITHIC":7,"BLOCK_ASSEMBLY":0,"SPINE_AND_MODULES":12,"TRUSS_POD":1,"TWIN_HULL":2,"CORE_AND_NACELLES":41,"STACKED_BLOCKS":4,"HYBRID":36}
+
+ ✓ tests/shapes-joins.test.ts (6 tests) 41137ms
+   ✓ V1.5 shape / join contracts > keeps deterministic compositions, hierarchy, connected graphs and usable supports for all fixed grammars / yards  40614ms
+ ✓ tests/architecture.test.ts (9 tests) 50258ms
+   ✓ V1 architecture > generates valid layouts for 1296 orders while retaining all V0 regressions  34137ms
+   ✓ V1 architecture > keeps deterministic fixtures for all eight grammars, including no-primary layouts  2058ms
+   ✓ V1 architecture > uses more than one structural grammar across twenty seeds for each role and yard  11925ms
+   ✓ V1 architecture > renders deterministic finite buffers for every grammar and both new debug views  1791ms
+ ✓ tests/integration.test.ts (8 tests) 9569ms
+   ✓ V1.7 station-fitted exterior integration > is deterministic, connected and finite across every grammar, yard and scale  5562ms
+   ✓ V1.7 station-fitted exterior integration > bounds include actual rendered skins, legacy equipment and mounts  3388ms
+ ✓ tests/generation.test.ts (12 tests) 1566ms
+   ✓ Domain invariants over the design space > validates 1,296 designs across every role, yard, length and priority extreme  1305ms
+ ✓ tests/prefabs.test.ts (3 tests) 862ms
+   ✓ V1.6 socketed parametric kitbash > retains authoritative socket and prefab metadata for deterministic multi-yard grammars  773ms
+
+ Test Files  5 passed (5)
+      Tests  38 passed (38)
+   Start at  03:25:48
+   Duration  53.96s (transform 326ms, setup 0ms, collect 1.06s, tests 103.39s, environment 1ms, prepare 337ms)

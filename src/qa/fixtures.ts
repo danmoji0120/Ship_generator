@@ -34,6 +34,8 @@ function volume(
 }
 function fixture(volumes: StructuralVolume[]): ShipBlueprint {
   const b = generateBlueprint(DEFAULT_ORDER, 7, { architecture: "MONOLITHIC" });
+  b.prefabPlacements = [];
+  delete b.hullIntegration;
   b.structuralVolumes = volumes;
   b.structuralConnectors = [];
   b.hardpoints = [];

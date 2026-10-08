@@ -21,7 +21,7 @@ page.on("pageerror", (e) => errors.push(e.message));
 page.on("console", (m) => {
   if (m.type() === "error") errors.push(m.text());
 });
-const output = process.env.QA_OUTPUT || "qa/v1.5/regression";
+const output = process.env.QA_OUTPUT || "qa/v1.7/regression";
 await mkdir(output, { recursive: true });
 await page.goto(process.env.QA_URL || "http://localhost:5173");
 await page.waitForFunction(() => window.shipyardQA?.getBlueprint());
@@ -207,6 +207,9 @@ for (const mode of [
   "Structure",
   "Architecture",
   "Structural Graph",
+  "Integration",
+  "Armor",
+  "Equipment",
   "Normal",
 ]) {
   await page.locator(`[data-debug="${mode}"]`).click();
@@ -311,7 +314,7 @@ const report = {
   pixelIdentical: true,
   orbit: true,
   zoom: true,
-  debugViews: 7,
+  debugViews: 10,
   grammarFixtures,
   jsonExport: true,
   mobileOverflow: false,

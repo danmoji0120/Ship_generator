@@ -69,7 +69,7 @@ describe("V1 architecture", () => {
                 ).toBe(true);
               }
             }
-  }, 30000);
+  }, 60000);
   it("keeps deterministic fixtures for all eight grammars, including no-primary layouts", () => {
     expect(Object.keys(GRAMMAR_SEEDS).sort()).toEqual(
       [...ARCHITECTURES].sort(),

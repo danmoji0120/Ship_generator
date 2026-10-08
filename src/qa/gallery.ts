@@ -14,14 +14,16 @@ import { ShipViewer } from "../rendering/viewer";
 import { seedSequence, diversityReport } from "./diversity";
 import { shapeFixture, joinFixture } from "./fixtures";
 const app = document.getElementById("qa-app")!;
-app.innerHTML = `<header><div><small>PROCEDURAL SHIPYARD / V1.5</small><h1>Silhouette laboratory</h1><p>동일 문법, 서로 다른 설계. Shape와 Join을 함께 검증합니다.</p></div><a href="/">← Ship order</a></header><form id="qa-form"><label>Shipyard<select id="yard">${SHIPYARDS.map((y) => `<option value="${y.id}">${y.name}</option>`)}</select></label><label>Role<select id="role">${ROLES.map((r) => `<option ${r === "Cruiser" ? "selected" : ""}>${r}</option>`)}</select></label><label>Architecture<select id="architecture">${ARCHITECTURES.map((a) => `<option ${a === "BLOCK_ASSEMBLY" ? "selected" : ""}>${a}</option>`)}</select></label><label>Seed start<input id="start" type="number" min="0" max="4294967295" value="0"></label><label>Count<input id="count" type="number" min="1" max="40" value="20"></label><label class="check"><input id="neutral" type="checkbox" checked>Neutral silhouette</label><button>Build contact sheet</button></form><nav><button id="contact">Contact sheet</button><button id="shapes">Shape gallery / 11</button><button id="joins">Join gallery / 10</button><button id="report-download">↓ QA JSON</button></nav><p id="status" role="status"></p><section id="grid"></section><div id="thumbnail-stage" aria-hidden="true"></div>`;
+app.innerHTML = `<header><div><small>PROCEDURAL SHIPYARD / V1.7</small><h1>Silhouette laboratory</h1><p>동일 문법, 서로 다른 설계. Shape와 Join을 함께 검증합니다.</p></div><a href="/">← Ship order</a></header><form id="qa-form"><label>Shipyard<select id="yard">${SHIPYARDS.map((y) => `<option value="${y.id}">${y.name}</option>`)}</select></label><label>Role<select id="role">${ROLES.map((r) => `<option ${r === "Cruiser" ? "selected" : ""}>${r}</option>`)}</select></label><label>Architecture<select id="architecture">${ARCHITECTURES.map((a) => `<option ${a === "BLOCK_ASSEMBLY" ? "selected" : ""}>${a}</option>`)}</select></label><label>Seed start<input id="start" type="number" min="0" max="4294967295" value="0"></label><label>Count<input id="count" type="number" min="1" max="40" value="20"></label><label class="check"><input id="neutral" type="checkbox" checked>Neutral silhouette</label><button>Build contact sheet</button></form><nav><button id="contact">Contact sheet</button><button id="shapes">Shape gallery / 11</button><button id="joins">Join gallery / 10</button><button id="bow">Bow / Stern</button><button id="integration">Integration / Armor</button><button id="report-download">↓ QA JSON</button></nav><p id="status" role="status"></p><section id="grid"></section><div id="thumbnail-stage" aria-hidden="true"></div>`;
 const el = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 const viewer = new ShipViewer(el("thumbnail-stage"));
 let current: ShipBlueprint[] = [],
   report: unknown,
   busy = false;
-async function renderGallery(mode: "contact" | "shapes" | "joins") {
+async function renderGallery(
+  mode: "contact" | "shapes" | "joins" | "bow" | "integration",
+) {
   if (busy) return;
   busy = true;
   el("grid").innerHTML = "";
@@ -37,15 +39,14 @@ async function renderGallery(mode: "contact" | "shapes" | "joins") {
       order.priorities.missile = 10;
     }
     if (role === "Missile Ship") order.priorities.missile = 100;
-    current =
-      mode === "contact"
-        ? seedSequence(
-            Number(el<HTMLInputElement>("start").value),
-            Number(el<HTMLInputElement>("count").value),
-          ).map((seed) => generateBlueprint(order, seed, { architecture }))
-        : mode === "shapes"
-          ? SHAPE_KINDS.map(shapeFixture)
-          : JOIN_TYPES.map(joinFixture);
+    current = ["contact", "bow", "integration"].includes(mode)
+      ? seedSequence(
+          Number(el<HTMLInputElement>("start").value),
+          Number(el<HTMLInputElement>("count").value),
+        ).map((seed) => generateBlueprint(order, seed, { architecture }))
+      : mode === "shapes"
+        ? SHAPE_KINDS.map(shapeFixture)
+        : JOIN_TYPES.map(joinFixture);
     for (const [i, b] of current.entries()) {
       const rendered = structuredClone(b);
       if (el<HTMLInputElement>("neutral").checked) {
@@ -55,25 +56,32 @@ async function renderGallery(mode: "contact" | "shapes" | "joins") {
         rendered.hardpoints = [];
         rendered.surfaceFeatures = [];
       }
-      const src = viewer.snapshot(rendered, "Normal");
-      const title =
-        mode === "contact"
-          ? `SEED ${b.seed}`
-          : mode === "shapes"
-            ? SHAPE_KINDS[i]
-            : JOIN_TYPES[i];
+      const src = viewer.snapshot(
+        rendered,
+        mode === "bow"
+          ? "Integration"
+          : mode === "integration"
+            ? "Armor"
+            : "Normal",
+      );
+      const title = ["contact", "bow", "integration"].includes(mode)
+        ? `SEED ${b.seed}`
+        : mode === "shapes"
+          ? SHAPE_KINDS[i]
+          : JOIN_TYPES[i];
       const card = document.createElement("article");
-      card.innerHTML = `<img src="${src}" alt="${title}"><div><b>${title}</b><span>${mode === "contact" ? b.architecture.grammar : "PRIMITIVE QA"}</span><small>${mode === "contact" ? b.architecture.composition : mode === "shapes" ? "ShapeDefinition → station loft" : "StructuralConnector → join geometry"}</small></div>`;
+      card.innerHTML = `<img src="${src}" alt="${title}"><div><b>${title}</b><span>${["contact", "bow", "integration"].includes(mode) ? b.architecture.grammar : "PRIMITIVE QA"}</span><small>${["contact", "bow", "integration"].includes(mode) ? b.architecture.composition : mode === "shapes" ? "ShapeDefinition → station loft" : "StructuralConnector → join geometry"}</small></div>`;
       el("grid").append(card);
       await new Promise<void>((resolve) =>
         requestAnimationFrame(() => resolve()),
       );
     }
-    report =
-      mode === "contact"
-        ? diversityReport(current)
-        : { mode, count: current.length };
-    const d = mode === "contact" ? diversityReport(current) : undefined;
+    report = ["contact", "bow", "integration"].includes(mode)
+      ? diversityReport(current)
+      : { mode, count: current.length };
+    const d = ["contact", "bow", "integration"].includes(mode)
+      ? diversityReport(current)
+      : undefined;
     el("status").textContent = d
       ? `${yard.toUpperCase()} / ${role} / ${architecture} · ${d.count} designs · ${d.compositions.length} compositions · ${d.uniqueSignatures} feature signatures · ${d.warnings.join(" ") || "Diversity check PASS — visually inspect joins and silhouette."}`
       : `${mode === "shapes" ? "11 shapes" : "10 joins"} · identical renderer and authoritative blueprint parameters`;
@@ -93,7 +101,13 @@ el("qa-form").onsubmit = (e) => {
   e.preventDefault();
   void renderGallery("contact");
 };
-for (const mode of ["contact", "shapes", "joins"] as const)
+for (const mode of [
+  "contact",
+  "shapes",
+  "joins",
+  "bow",
+  "integration",
+] as const)
   el(mode).onclick = () => void renderGallery(mode);
 el("report-download").onclick = () => {
   const url = URL.createObjectURL(

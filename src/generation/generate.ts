@@ -18,13 +18,15 @@ import {
   validateSilhouette,
 } from "../validation/silhouette";
 import { validateBlueprint } from "../validation/validate";
+import { integrateHull } from "./integration/build";
 import { generatePrefabPlacements } from "./prefabs";
 export { DEFAULT_ORDER, generateBlueprintV0 } from "./legacy";
 export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    architecture: import("../blueprint/types").ArchitectureGrammar;
+    version?: "1.6";
+    architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
   const order = structuredClone(input),
@@ -45,7 +47,7 @@ export function generateBlueprint(
   )
     throw new Error("Invalid Ship Order");
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
-  if (qaOptions) selection.grammar = qaOptions.architecture;
+  if (qaOptions?.architecture) selection.grammar = qaOptions.architecture;
   let lastErrors: string[] = [];
   for (let candidate = 0; candidate < 5; candidate++) {
     const priorErrors = lastErrors;
@@ -69,7 +71,13 @@ export function generateBlueprint(
         rng,
       ),
       { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes);
-    const prefabPlacements = generatePrefabPlacements(order, yard, volumes, connectors, seed + candidate);
+    const prefabPlacements = generatePrefabPlacements(
+      order,
+      yard,
+      volumes,
+      connectors,
+      seed + candidate,
+    );
     const bounds = volumeBounds(volumes),
       l = order.length,
       p = order.priorities;
@@ -93,7 +101,7 @@ export function generateBlueprint(
     const primary = volumes.find((v) => v.id === "citadel");
     const b: ShipBlueprint = {
       schemaVersion: 2,
-      generatorVersion: "1.6",
+      generatorVersion: qaOptions?.version === "1.6" ? "1.6" : "1.7",
       seed,
       candidate,
       shipyardId: yard.id,
@@ -102,7 +110,7 @@ export function generateBlueprint(
       designName: `${rng.pick(["Resolute", "Peregrine", "Citadel", "Vanguard", "Meridian", "Halcyon", "Ardent", "Nomad"])} ${String(seed % 10000).padStart(4, "0")}`,
       architecture: {
         composition: layout.composition,
-        source: qaOptions ? "qa-fixed" : "order",
+        source: qaOptions?.architecture ? "qa-fixed" : "order",
         grammar,
         requestedGrammar: selection.grammar,
         components,
@@ -175,10 +183,20 @@ export function generateBlueprint(
         enginePattern: engineArchitecture,
       },
     };
+    if (b.generatorVersion === "1.7") integrateHull(b);
     lastErrors = validateBlueprint(b);
     if (!lastErrors.length) return b;
   }
   throw new Error(
     `No valid V1 ${selection.grammar} design after 5 candidates: ${lastErrors.join("; ")}`,
   );
+}
+
+/** Versioned reference path for regression QA; shares the original V1.6 pipeline and RNG. */
+export function generateBlueprintV16(
+  input: ShipOrder,
+  seed: number,
+  options?: { architecture?: import("../blueprint/types").ArchitectureGrammar },
+) {
+  return generateBlueprint(input, seed, { ...options, version: "1.6" });
 }

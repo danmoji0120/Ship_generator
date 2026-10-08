@@ -1,0 +1,29 @@
+{
+  "environment": "Chromium / ANGLE SwiftShader",
+  "generation": [
+    {
+      "version": "1.6",
+      "medianMs": 1.0,
+      "p95Ms": 2.8
+    },
+    {
+      "version": "1.7",
+      "medianMs": 6.4,
+      "p95Ms": 13.5
+    }
+  ],
+  "pairedDrawCalls": {
+    "before": 216.5,
+    "after": 238.08333333333334
+  },
+  "pairedTriangles": {
+    "before": 7688.0,
+    "after": 9194.333333333334
+  },
+  "maxDrawCalls": 532,
+  "maxTriangles": 13572,
+  "baselineViewerKB": 570.22,
+  "viewerKB": 591.68,
+  "baselineViewerGzipKB": 148.84,
+  "viewerGzipKB": 155.58
+}

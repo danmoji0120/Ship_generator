@@ -117,7 +117,13 @@ function generate() {
       `<strong>${next.architecture.grammar.replaceAll("_", " ")}</strong><span>${next.architecture.composition} · ${volumes.length} major volumes · ${next.structuralConnectors.length} connectors · ${next.trusses.length} trusses</span><span>Hull ${counts("PRIMARY_HULL") + counts("HULL_BLOCK") + counts("ARMOR_BLOCK")} / Pod ${counts("POD")} / Nacelle ${counts("NACELLE")} / Spine ${counts("SPINE")}</span>`;
     $("architecture-summary").innerHTML +=
       `<span>Shapes: ${[...new Set(volumes.map((v) => v.shape?.kind))].join(" / ")} · Joins: ${[...new Set(next.structuralConnectors.map((c) => c.join?.type))].join(" / ")}</span>`;
-    $("architecture-summary").innerHTML += `<span>Kitbash: ${(next.prefabPlacements ?? []).length} mounted prefabs · ${[...new Set((next.prefabPlacements ?? []).map((p) => p.kind))].join(" / ") || "none"}</span>`;
+    $("architecture-summary").innerHTML +=
+      `<span>Kitbash: ${(next.prefabPlacements ?? []).length} mounted prefabs · ${[...new Set((next.prefabPlacements ?? []).map((p) => p.kind))].join(" / ") || "none"}</span>`;
+    if (next.hullIntegration) {
+      const bounds = next.hullIntegration.overallBounds;
+      $("architecture-summary").innerHTML +=
+        `<span>V1.7 exterior: ${next.prefabPlacements?.filter((p) => p.exterior).length} fitted structures · ${next.hullIntegration.reservedZones.length} equipment zones · envelope ${(bounds.max.z - bounds.min.z).toFixed(1)} × ${(bounds.max.x - bounds.min.x).toFixed(1)} × ${(bounds.max.y - bounds.min.y).toFixed(1)} m</span>`;
+    }
     $("engine-pattern").textContent =
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =
@@ -177,7 +183,13 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
               ? "BLUE / HULL · AMBER / POD · MINT / NACELLE · GOLD / SPINE · VIOLET / ARMOR"
               : mode === "Structural Graph"
                 ? "NODES / VOLUMES · WHITE / DIRECT · AMBER / TRUSS · MINT / BRIDGE + MOUNT"
-                : "SOLID / HULL + MODULES   ·   AMBER / STRUCTURAL TRUSS";
+                : mode === "Integration"
+                  ? "STATION-FITTED / JOINT, BOW & STERN · GHOST / ORIGINAL HULL"
+                  : mode === "Armor"
+                    ? "PROTECTION / PRIMARY, SECONDARY, EDGE, JOINT, MACHINERY"
+                    : mode === "Equipment"
+                      ? "HOUSINGS / SENSOR, MISSILE, WEAPON, THERMAL, PROPULSION"
+                      : "SOLID / HULL + MODULES   ·   AMBER / STRUCTURAL TRUSS";
   };
 function setViewLabel(id: "top" | "rear" | "iso") {
   document.querySelector(".axis-label")!.innerHTML =

@@ -134,7 +134,7 @@ export class ShipViewer {
     this.controls.update();
     this.controls.enableDamping = damping;
   }
-  view(direction: "top" | "rear" | "iso") {
+  view(direction: "top" | "rear" | "iso" | "front" | "side") {
     if (direction === "iso") this.fit();
     else {
       const distance = this.camera.position.distanceTo(this.controls.target);
@@ -143,7 +143,11 @@ export class ShipViewer {
         .addScaledVector(
           direction === "top"
             ? new THREE.Vector3(0, 1, 0.001)
-            : new THREE.Vector3(0, 0.12, 1).normalize(),
+            : direction === "front"
+              ? new THREE.Vector3(0, 0.05, -1).normalize()
+              : direction === "side"
+                ? new THREE.Vector3(1, 0.05, 0).normalize()
+                : new THREE.Vector3(0, 0.12, 1).normalize(),
           distance,
         );
       this.controls.update();

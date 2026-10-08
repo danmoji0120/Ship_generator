@@ -2,7 +2,7 @@ import { chromium } from "playwright-core";
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
-const output = process.env.GALLERY_OUTPUT || "qa/v1.5";
+const output = process.env.GALLERY_OUTPUT || "qa/v1.7/gallery";
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({
   executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",

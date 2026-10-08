@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.5 — Shape Vocabulary & Join Quality
+# Procedural Shipyard V1.7 — Hull Integration & External Superstructure
 
-기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. V1.5는 기존 8개 Architecture 안에서 **덩어리의 Shape, 접합 Join, 질량 계층과 Composition**을 분화합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.
+기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. V1.5는 기존 8개 Architecture 안에서 **덩어리의 Shape, 접합 Join, 질량 계층과 Composition**을 분화합니다. V1.7은 실제 단면 접촉과 장비 예약 영역을 기반으로 접합부·선수·선미·장갑 및 기능 외장을 통합합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.
 
 ## 설치 / 실행 / 테스트
 
@@ -9,7 +9,7 @@ Node.js 22.12 이상 권장. 외부 서버와 API 키는 필요 없습니다.
 ```bash
 npm install
 npm run dev            # http://localhost:5173
-npm test               # V0 12개 + V1 9개 + V1.5 6개 = 27 tests
+npm test               # 기존 30개 + V1.7 Integration 8개 = 38 tests
 npm run build          # 엄격한 TypeScript 검사 + production 빌드
 npm run preview        # production 미리보기
 ```
@@ -17,13 +17,34 @@ npm run preview        # production 미리보기
 dev 서버가 실행된 상태에서:
 
 ```bash
-npm run qa             # 50개 실제 브라우저 생성물, 7개 Debug View, UI 회귀 검증
+npm run qa             # 50개 실제 브라우저 생성물, 10개 Debug View, UI 회귀 검증
 npm run qa:gallery     # 220개 Contact Sheet 렌더 + 11 Shape / 10 Join Gallery
+npm run qa:integration # 220 designs × 5 views, V1.6 JSON/pixel compatibility, paired comparison
+python3 tests/compose-integration-qa.py # Pillow: 실제 WebGL PNG를 비교 Gallery로 조합
 # 별도 Chromium 설치 경로 또는 서버:
 CHROMIUM_PATH=/path/to/chromium QA_URL=http://localhost:5173 npm run qa
 ```
 
 브라우저 QA는 `playwright-core`와 설치된 Chromium을 사용합니다. 일반 앱 실행에는 별도 브라우저 설치 스크립트나 외부 리소스가 필요하지 않습니다. 기존 발주서, 직접 Seed 입력, Random Seed, Same Seed 재생성, 새 설계, Orbit/Zoom/Fit, JSON Export를 유지합니다. Architecture 선택 UI는 추가하지 않았으며 선택은 주문서와 Seed에 의해 이루어집니다.
+
+## V1.7 외형 통합
+
+기존 8 Architecture, 29 Composition, Shape 11종, Join 10종과 V1.6 Prefab Registry를 유지합니다. `schemaVersion: 2`, `generatorVersion: "1.7"`입니다. Layout의 중심 축·엔진 장착점·무장 위치를 보존하며, 완성된 구획과 장비 데이터를 이용해 외피를 생성합니다. 기존 V0/schema 1 및 V1–V1.6/schema 2 JSON에 새 필드가 없어도 이전 렌더 경로로 처리합니다.
+
+파이프라인: 주문/Doctrine → Architecture/Composition → Volume/Connector → 기존 Engine/Hardpoint 및 Kitbash 예약 → 실제 단면 기반 Integration → 선수/선미 → Armor Envelope → Functional Superstructure → 간섭 검증 → Blueprint → Renderer. 장비 예약을 먼저 확정하는 것은 외피가 무장과 분사 경로를 가리지 않도록 하기 위한 순서입니다.
+
+- **Integration:** Transition Shell, Armored Shoulder, Junction Housing, Structural Fairing, Reinforced Collar. 길이 방향 연결은 두 실제 Station Ring을 이으며 측면 연결은 실제 단면 폴리곤 내부에 접촉 패치를 맞춥니다. 큰 연결 외피가 인접 구조나 장비와 충돌하면 제한된 전환부 또는 기존 Join으로 fallback하고 실패 사유를 기록합니다.
+- **Bow/Stern:** Armored, Wedge, Sensor, Spinal Muzzle, Industrial Bow; 열린 Engine Housing과 Thruster Frame, rear transition 및 비추진 구획의 노출 후방 마감. 평평한 선수도 장갑 테두리와 단차 마감을 갖습니다. 엔진 케이싱에는 노즐을 막는 디스크를 만들지 않습니다. V1.6의 일부 클러스터에서 겹치던 노즐은 장착점을 이동하지 않고 반경만 간격에 맞춥니다.
+- **Armor:** Station을 따라가는 Primary/Secondary/Edge/Joint/Machinery 보호 외피. 실제로 덮은 측면 구간의 기존 작은 장갑판만 대체합니다. 보호 등급은 시각적 메타데이터이며 관통 시뮬레이션이 아닙니다.
+- **Functional:** Sensor Housing, Missile Bay Housing, Radiator Mount, Weapon Foundation, Engine/Machinery Housing. Firepower/Missile은 foundation 크기, Survivability는 외피 두께와 보호 등급, Mobility는 추진 케이싱 길이, Endurance는 thermal/service mount, Sensor는 센서 하우징에 반영합니다.
+
+새 데이터는 별도 중복 Connector 시스템이 아닌 기존 `PrefabPlacement.exterior`와 `hullIntegration`에 저장됩니다. Exterior에는 phase, parent IDs, Connector/EquipmentZone 참조, mating Socket, 접촉 샘플, world-space contour rings 또는 열린 annular casing, inset, armor class/protection grade가 있습니다. `hullIntegration`에는 장비 예약 영역, 승인/거부/fallback 기록, 별도 외장 bounds와 전체 보수적 bounds가 있습니다. 이후 Internal Zone/Damage는 이 부모와 Socket 참조를 이용할 수 있지만 현재는 구현하지 않습니다.
+
+Aegis는 두꺼운 collar와 flank armor, Vesper는 긴 taper와 추진 외장, Forge는 국소 연결 보호와 노출 트러스, Serein은 낮고 연속적인 fairing을 사용합니다. TRUSS_POD와 CORE_AND_NACELLES의 빈 공간은 통째로 외피로 덮지 않습니다.
+
+일반 Viewer에 Integration/Armor/Equipment Debug View를 추가했습니다. `/qa.html`에서 동일 Architecture와 Seed 범위의 20척 Contact Sheet, 기존 Shape/Join Gallery 및 Bow/Stern, Integration/Armor Gallery를 볼 수 있습니다. QA 전용 Viewer는 iso/top/side/front/rear를 지원합니다. 대표 비교와 측정 결과는 [qa/v1.7/QA.md](qa/v1.7/QA.md)에 기록합니다. 이전 QA 자료는 보존합니다.
+
+의도적 제약: StructuralVolume은 회전 없는 기존 축 정렬 규칙을 유지합니다. AABB는 bounds 용도이며 접합 판정에는 실제 Station Ring과 단면 내부 검사를 사용합니다. 간섭 검사는 유한한 정점/모서리/면 샘플과 예약 원기둥 휴리스틱으로, 완전 CSG·정확한 삼각형 교차·물리 구조 해석을 보장하지 않습니다. 연결 불가 후보는 사유와 함께 생략하거나 기존 Join을 유지합니다. WebGL pixel 결정성은 같은 브라우저/GPU/viewport/카메라 조건에서 검증하며 서로 다른 GPU의 픽셀 동등성을 의미하지 않습니다. 일반 앱 실행에는 Python이 필요 없고 QA 이미지 합성만 Pillow를 사용합니다.
 
 ## Architecture Grammar
 

@@ -1,0 +1,145 @@
+{
+  "sameSeedWebGL": [
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 178,
+        "triangles": 6568,
+        "camera": [
+          -209.91582411783682,
+          171.68874594556422,
+          -239.71149745797015
+        ],
+        "radius": 171.73010261650083,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 211,
+        "triangles": 7748,
+        "camera": [
+          -215.69918442293888,
+          175.15848312096372,
+          -246.5001662183995
+        ],
+        "radius": 197.1868549926186,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 301,
+        "triangles": 9932,
+        "camera": [
+          -202.19145666494427,
+          164.6616795096958,
+          -235.66789118437922
+        ],
+        "radius": 176.3465478332906,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 368,
+        "triangles": 10940,
+        "camera": [
+          -271.6655359764284,
+          225.74882373647432,
+          -317.10981422562116
+        ],
+        "radius": 201.5250279053198,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 234,
+        "triangles": 9372,
+        "camera": [
+          -283.1070107886436,
+          232.17991005168778,
+          -331.4510101220262
+        ],
+        "radius": 195.7445865288957,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 366,
+        "triangles": 11212,
+        "camera": [
+          -246.74002312044993,
+          201.87769338489687,
+          -284.641151817985
+        ],
+        "radius": 201.2867015895582,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 198,
+        "triangles": 7516,
+        "camera": [
+          -262.75560140928724,
+          227.99769705573146,
+          -301.0354546537055
+        ],
+        "radius": 170.23857400610916,
+        "geometryFinite": true
+      }
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 7,
+      "identical": true,
+      "diagnostics": {
+        "drawCalls": 326,
+        "triangles": 10296,
+        "camera": [
+          -205.62575842074847,
+          165.72169238487197,
+          -237.17359129116355
+        ],
+        "radius": 179.0844005699473,
+        "geometryFinite": true
+      }
+    }
+  ],
+  "legacyJsonRendered": [
+    "V0",
+    "V1",
+    "V1.5"
+  ],
+  "neutralShipyardComparison": [
+    "aegis",
+    "vesper",
+    "forge",
+    "serein"
+  ],
+  "contactSheetPixelsStillIdentical": true,
+  "errors": []
+}

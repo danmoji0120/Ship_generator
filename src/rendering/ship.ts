@@ -11,7 +11,10 @@ export type DebugView =
   | "Engines"
   | "Structure"
   | "Architecture"
-  | "Structural Graph";
+  | "Structural Graph"
+  | "Integration"
+  | "Armor"
+  | "Equipment";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   const root = new THREE.Group(),
@@ -38,10 +41,29 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   };
   if (b.schemaVersion === 2) {
     root.add(renderArchitecture(b, mode, m, ghost));
-    if ((mode === "Normal" || mode === "Structure") && b.prefabPlacements?.length)
-      root.add(renderPrefabs(b.prefabPlacements, m));
-  }
-  else {
+    if (
+      ["Normal", "Structure", "Integration", "Armor", "Equipment"].includes(
+        mode,
+      ) &&
+      b.prefabPlacements?.length
+    )
+      root.add(
+        renderPrefabs(
+          b.prefabPlacements.filter((p) =>
+            mode === "Integration"
+              ? p.exterior &&
+                ["integration", "bow", "stern"].includes(p.exterior.phase)
+              : mode === "Armor"
+                ? p.exterior?.armorClass
+                : mode === "Equipment"
+                  ? p.exterior?.phase === "equipment" ||
+                    p.kind === "RADIATOR_BANK"
+                  : true,
+          ),
+          m,
+        ),
+      );
+  } else {
     if (mode === "Hull Sections") {
       b.hullSections.forEach((s, i) => {
         const material = new THREE.MeshStandardMaterial({

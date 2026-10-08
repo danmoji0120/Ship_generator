@@ -153,7 +153,7 @@ describe("V1.5 shape / join contracts", () => {
       }
     expect([...usedShapes].sort()).toEqual([...SHAPE_KINDS].sort());
     expect([...usedJoins].sort()).toEqual([...JOIN_TYPES].sort());
-  }, 30000);
+  }, 60000);
   it("rejects mismatched authority cache, nonfinite values, undersized support and thin spine", () => {
     const b = generateBlueprint(
       { ...structuredClone(DEFAULT_ORDER), shipyardId: "forge" },

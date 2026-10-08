@@ -1,0 +1,2943 @@
+{
+  "schemaVersion": 2,
+  "generatorVersion": "1.6",
+  "seed": 0,
+  "candidate": 0,
+  "shipyardId": "serein",
+  "role": "Cruiser",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "serein",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "designName": "Meridian 0000",
+  "architecture": {
+    "composition": "SPLIT_CORE",
+    "source": "qa-fixed",
+    "grammar": "BLOCK_ASSEMBLY",
+    "requestedGrammar": "BLOCK_ASSEMBLY",
+    "components": [
+      "BLOCK_ASSEMBLY"
+    ],
+    "rootVolumeId": "fore-armor",
+    "nose": "wedge",
+    "engineArchitecture": "Quad Cluster",
+    "selectionWeights": {
+      "MONOLITHIC": 14.4,
+      "BLOCK_ASSEMBLY": 3.8666666666666667,
+      "SPINE_AND_MODULES": 8,
+      "TRUSS_POD": 1.5333333333333332,
+      "TWIN_HULL": 7,
+      "CORE_AND_NACELLES": 4.8,
+      "STACKED_BLOCKS": 1.5,
+      "HYBRID": 1.5
+    },
+    "parameters": {
+      "volumeBudget": 5,
+      "beamRatio": 0.2689395604063757,
+      "armorRatio": 0.07439250000000001
+    }
+  },
+  "structuralVolumes": [
+    {
+      "id": "fore-armor",
+      "type": "ARMOR_BLOCK",
+      "purpose": "armor",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -96
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 80.6818681219127,
+        "y": 20.532330000000005,
+        "z": 108
+      },
+      "geometry": {
+        "primitive": "Wedge",
+        "stations": [
+          {
+            "z": -54,
+            "width": 14.522736261944285,
+            "height": 13.961984400000004,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -40.5,
+            "width": 62.04839608494297,
+            "height": 16.11462790871039,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -27,
+            "width": 80.64107677771283,
+            "height": 18.029645605834496,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -13.5,
+            "width": 77.86462741296964,
+            "height": 19.49564269579198,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 73.91799075588578,
+            "height": 20.35079082805723,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 13.5,
+            "width": 69.32101981788848,
+            "height": 20.500691990077875,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 27,
+            "width": 64.23928040280416,
+            "height": 19.928798906311666,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 40.5,
+            "width": 58.76221575284824,
+            "height": 18.698241657341207,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 54,
+            "width": 52.9472813946934,
+            "height": 16.944858882405537,
+            "profile": "chamfer",
+            "bevel": 0.16499807083979248,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-0"
+      ],
+      "shape": {
+        "kind": "LONG_LOFT",
+        "length": 108,
+        "width": 80.6818681219127,
+        "height": 20.532330000000005,
+        "frontScale": 0.18,
+        "rearScale": 0.6562475885497406,
+        "topSlope": 0.035,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.01,
+        "chamfer": 0.16499807083979248,
+        "roundness": 0.15,
+        "frontProfile": "chamfer",
+        "rearProfile": "chamfer",
+        "taper": 0.15749710625968874,
+        "waist": 0.6062475885497406,
+        "shoulder": 0.24499807083979247
+      },
+      "hierarchyTier": 2
+    },
+    {
+      "id": "combat-core",
+      "type": "HULL_BLOCK",
+      "purpose": "weapon",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 62.9318571350919,
+        "y": 27.718645500000004,
+        "z": 78
+      },
+      "geometry": {
+        "primitive": "Chamfered Box",
+        "stations": [
+          {
+            "z": -39,
+            "width": 62.9318571350919,
+            "height": 22.729289310000002,
+            "profile": "flattened",
+            "bevel": 0.24662522905506196,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -19.5,
+            "width": 62.9318571350919,
+            "height": 22.729289310000002,
+            "profile": "flattened",
+            "bevel": 0.24662522905506196,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 62.9318571350919,
+            "height": 22.729289310000002,
+            "profile": "flattened",
+            "bevel": 0.24662522905506196,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 19.5,
+            "width": 62.9318571350919,
+            "height": 22.729289310000002,
+            "profile": "flattened",
+            "bevel": 0.24662522905506196,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 39,
+            "width": 62.9318571350919,
+            "height": 22.729289310000002,
+            "profile": "flattened",
+            "bevel": 0.24662522905506196,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-0",
+        "link-1",
+        "link-2",
+        "link-3"
+      ],
+      "shape": {
+        "kind": "FLATTENED_HEX",
+        "length": 78,
+        "width": 62.9318571350919,
+        "height": 27.718645500000004,
+        "frontScale": 0.43325045811012386,
+        "rearScale": 0.7582815363188274,
+        "topSlope": 0.035,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.01,
+        "chamfer": 0.24662522905506196,
+        "roundness": 0.15,
+        "frontProfile": "flattened",
+        "rearProfile": "flattened",
+        "taper": 0.2799378435825929,
+        "waist": 0.7082815363188274,
+        "shoulder": 0.3266252290550619
+      },
+      "hierarchyTier": 2
+    },
+    {
+      "id": "drive-block",
+      "type": "HULL_BLOCK",
+      "purpose": "propulsion",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 96
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 85.52278020922746,
+        "y": 20.532330000000005,
+        "z": 108
+      },
+      "geometry": {
+        "primitive": "Tapered Box",
+        "stations": [
+          {
+            "z": -54,
+            "width": 39.6729364748914,
+            "height": 13.961984400000004,
+            "profile": "chamfer",
+            "bevel": 0.2619436785019934,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -27,
+            "width": 81.4936029119363,
+            "height": 18.029645605834496,
+            "profile": "chamfer",
+            "bevel": 0.2619436785019934,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 82.54246179032086,
+            "height": 20.35079082805723,
+            "profile": "chamfer",
+            "bevel": 0.2619436785019934,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 27,
+            "width": 75.29589505810276,
+            "height": 19.928798906311666,
+            "profile": "chamfer",
+            "bevel": 0.2619436785019934,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 54,
+            "width": 66.48794064880552,
+            "height": 16.944858882405537,
+            "profile": "chamfer",
+            "bevel": 0.2619436785019934,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-1"
+      ],
+      "shape": {
+        "kind": "SHORT_LOFT",
+        "length": 108,
+        "width": 85.52278020922746,
+        "height": 20.532330000000005,
+        "frontScale": 0.46388735700398687,
+        "rearScale": 0.7774295981274918,
+        "topSlope": 0.035,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.01,
+        "chamfer": 0.2619436785019934,
+        "roundness": 0.15,
+        "frontProfile": "chamfer",
+        "rearProfile": "chamfer",
+        "taper": 0.3029155177529901,
+        "waist": 0.7274295981274917,
+        "shoulder": 0.3419436785019934
+      },
+      "hierarchyTier": 1
+    },
+    {
+      "id": "magazine--1",
+      "type": "ARMOR_BLOCK",
+      "purpose": "weapon",
+      "position": {
+        "x": -44.157980764004165,
+        "y": 0,
+        "z": 21.000000000000004
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 21.784104392916433,
+        "y": 17.452480500000004,
+        "z": 55.469808142608954
+      },
+      "geometry": {
+        "primitive": "Hexagonal Prism",
+        "stations": [
+          {
+            "z": -27.734904071304477,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.3396767096500844,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -13.867452035652239,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.3396767096500844,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.3396767096500844,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 13.867452035652239,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.3396767096500844,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 27.734904071304477,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.3396767096500844,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-2"
+      ],
+      "shape": {
+        "kind": "FLATTENED_HEX",
+        "length": 55.469808142608954,
+        "width": 21.784104392916433,
+        "height": 17.452480500000004,
+        "frontScale": 0.6193534193001689,
+        "rearScale": 0.8745958870626055,
+        "topSlope": 0.035,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.01,
+        "chamfer": 0.3396767096500844,
+        "roundness": 0.15,
+        "frontProfile": "flattened",
+        "rearProfile": "flattened",
+        "taper": 0.41951506447512654,
+        "waist": 0.8245958870626054,
+        "shoulder": 0.4196767096500844
+      },
+      "hierarchyTier": 3
+    },
+    {
+      "id": "magazine-1",
+      "type": "ARMOR_BLOCK",
+      "purpose": "weapon",
+      "position": {
+        "x": 44.157980764004165,
+        "y": 0,
+        "z": 21.000000000000004
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "dimensions": {
+        "x": 21.784104392916433,
+        "y": 17.452480500000004,
+        "z": 55.469808142608954
+      },
+      "geometry": {
+        "primitive": "Hexagonal Prism",
+        "stations": [
+          {
+            "z": -27.734904071304477,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.18046779873780908,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": -13.867452035652239,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.18046779873780908,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 0,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.18046779873780908,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 13.867452035652239,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.18046779873780908,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          },
+          {
+            "z": 27.734904071304477,
+            "width": 21.784104392916433,
+            "height": 14.311034010000002,
+            "profile": "flattened",
+            "bevel": 0.18046779873780908,
+            "topSlope": 0.035,
+            "sideSlope": 0.01,
+            "bottomSlope": 0.02,
+            "roundness": 0.15
+          }
+        ]
+      },
+      "connectionIds": [
+        "link-3"
+      ],
+      "shape": {
+        "kind": "FLATTENED_HEX",
+        "length": 55.469808142608954,
+        "width": 21.784104392916433,
+        "height": 17.452480500000004,
+        "frontScale": 0.30093559747561816,
+        "rearScale": 0.6755847484222613,
+        "topSlope": 0.035,
+        "bottomSlope": 0.02,
+        "sideSlope": 0.01,
+        "chamfer": 0.18046779873780908,
+        "roundness": 0.15,
+        "frontProfile": "flattened",
+        "rearProfile": "flattened",
+        "taper": 0.18070169810671358,
+        "waist": 0.6255847484222613,
+        "shoulder": 0.26046779873780906
+      },
+      "hierarchyTier": 3
+    }
+  ],
+  "structuralConnectors": [
+    {
+      "id": "link-0",
+      "fromStructureId": "fore-armor",
+      "toStructureId": "combat-core",
+      "type": "DIRECT",
+      "start": {
+        "x": 0,
+        "y": 0,
+        "z": -42
+      },
+      "end": {
+        "x": 0,
+        "y": 0,
+        "z": -39
+      },
+      "thickness": 14.783277600000003,
+      "style": "armored collar",
+      "join": {
+        "type": "RECESSED",
+        "length": 3,
+        "width": 14.783277600000003,
+        "height": 14.783277600000003,
+        "overlap": 0.3,
+        "inset": 3.695819400000001,
+        "transitionRatio": 1.2820512820512822,
+        "armorScale": 0.75,
+        "supportScale": 0.72,
+        "styleVariant": 2,
+        "supportLoad": 428595.60054015234
+      }
+    },
+    {
+      "id": "link-1",
+      "fromStructureId": "combat-core",
+      "toStructureId": "drive-block",
+      "type": "DIRECT",
+      "start": {
+        "x": 0,
+        "y": 0,
+        "z": 39
+      },
+      "end": {
+        "x": 0,
+        "y": 0,
+        "z": 42
+      },
+      "thickness": 14.783277600000003,
+      "style": "armored collar",
+      "join": {
+        "type": "RECESSED",
+        "length": 3,
+        "width": 14.783277600000003,
+        "height": 14.783277600000003,
+        "overlap": 0.3,
+        "inset": 3.695819400000001,
+        "transitionRatio": 0.7358490566037735,
+        "armorScale": 0.75,
+        "supportScale": 0.72,
+        "styleVariant": 1,
+        "supportLoad": 597385.0579520862
+      }
+    },
+    {
+      "id": "link-2",
+      "fromStructureId": "combat-core",
+      "toStructureId": "magazine--1",
+      "type": "DIRECT",
+      "start": {
+        "x": -31.46592856753866,
+        "y": 0,
+        "z": 14.964101358025802
+      },
+      "end": {
+        "x": -33.26592856758555,
+        "y": 0,
+        "z": 15.82011876070101
+      },
+      "thickness": 12.565785960000001,
+      "style": "armored collar",
+      "join": {
+        "type": "FLUSH",
+        "length": 1.993179819748233,
+        "width": 12.565785960000001,
+        "height": 12.565785960000001,
+        "overlap": 0,
+        "inset": 0.8726240250000002,
+        "transitionRatio": 1.65,
+        "armorScale": 0.75,
+        "supportScale": 0.72,
+        "styleVariant": 2,
+        "supportLoad": 44135.628483682274
+      }
+    },
+    {
+      "id": "link-3",
+      "fromStructureId": "combat-core",
+      "toStructureId": "magazine-1",
+      "type": "DIRECT",
+      "start": {
+        "x": 31.46592856753866,
+        "y": 0,
+        "z": 14.964101358025802
+      },
+      "end": {
+        "x": 33.26592856758555,
+        "y": 0,
+        "z": 15.82011876070101
+      },
+      "thickness": 12.565785960000001,
+      "style": "armored collar",
+      "join": {
+        "type": "RECESSED",
+        "length": 1.993179819748233,
+        "width": 12.565785960000001,
+        "height": 12.565785960000001,
+        "overlap": 0.3,
+        "inset": 3.1414464900000003,
+        "transitionRatio": 1.65,
+        "armorScale": 0.75,
+        "supportScale": 0.72,
+        "styleVariant": 2,
+        "supportLoad": 44135.628483682274
+      }
+    }
+  ],
+  "prefabPlacements": [
+    {
+      "id": "kit-armor-0",
+      "kind": "ARMOR_PLATE",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "drive-block",
+        "position": {
+          "x": -40.85168734380661,
+          "y": -0.04623468662569774,
+          "z": 74.4
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 9.855518400000003,
+        "y": 1.5750000000000002,
+        "z": 17.28
+      },
+      "variant": 0,
+      "functionality": "protection"
+    },
+    {
+      "id": "kit-armor-1",
+      "kind": "ARMOR_PLATE",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "drive-block",
+        "position": {
+          "x": 40.85168734380661,
+          "y": -0.04623468662569774,
+          "z": 74.4
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 9.855518400000003,
+        "y": 1.5750000000000002,
+        "z": 17.28
+      },
+      "variant": 0,
+      "functionality": "protection"
+    },
+    {
+      "id": "kit-radiator-2",
+      "kind": "RADIATOR_BANK",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "drive-block",
+        "position": {
+          "x": -37.29562935267949,
+          "y": -0.049225209260997715,
+          "z": 125.16
+        },
+        "normal": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 14.372631000000002,
+        "y": 6,
+        "z": 28.080000000000002
+      },
+      "variant": 0,
+      "functionality": "thermal"
+    },
+    {
+      "id": "kit-radiator-3",
+      "kind": "RADIATOR_BANK",
+      "socket": {
+        "kind": "HULL_SIDE",
+        "hostId": "drive-block",
+        "position": {
+          "x": 37.29562935267949,
+          "y": -0.049225209260997715,
+          "z": 125.16
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "dimensions": {
+        "x": 14.372631000000002,
+        "y": 6,
+        "z": 28.080000000000002
+      },
+      "variant": 2,
+      "functionality": "thermal"
+    }
+  ],
+  "silhouette": {
+    "massHierarchy": {
+      "primaryRatio": 0.34683064208759085,
+      "foreRatio": 0.32719871895055735,
+      "aftRatio": 0.6728012810494426,
+      "lateralSpread": 0.3670002197364159,
+      "verticalSpread": 0.07368077951325001,
+      "joinDistribution": {
+        "RECESSED": 3,
+        "FLUSH": 1
+      }
+    },
+    "slenderness": 2.7247940088924536,
+    "majorVolumeCount": 5,
+    "occupancy": {
+      "front": 0.8367346938775511,
+      "side": 0.8673469387755102,
+      "top": 0.701530612244898
+    },
+    "symmetry": 1,
+    "disconnectedPenalty": 0
+  },
+  "dimensions": {
+    "length": 310.02,
+    "width": 110.10006592092476,
+    "height": 22.104233853975003,
+    "estimatedMass": 100439
+  },
+  "stations": [],
+  "hullSections": [
+    {
+      "id": "fore-armor/section-0",
+      "start": {
+        "z": -54,
+        "width": 14.522736261944285,
+        "height": 13.961984400000004,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -40.5,
+        "width": 62.04839608494297,
+        "height": 16.11462790871039,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-1",
+      "start": {
+        "z": -40.5,
+        "width": 62.04839608494297,
+        "height": 16.11462790871039,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -27,
+        "width": 80.64107677771283,
+        "height": 18.029645605834496,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-2",
+      "start": {
+        "z": -27,
+        "width": 80.64107677771283,
+        "height": 18.029645605834496,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -13.5,
+        "width": 77.86462741296964,
+        "height": 19.49564269579198,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-3",
+      "start": {
+        "z": -13.5,
+        "width": 77.86462741296964,
+        "height": 19.49564269579198,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 73.91799075588578,
+        "height": 20.35079082805723,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-4",
+      "start": {
+        "z": 0,
+        "width": 73.91799075588578,
+        "height": 20.35079082805723,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 13.5,
+        "width": 69.32101981788848,
+        "height": 20.500691990077875,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-5",
+      "start": {
+        "z": 13.5,
+        "width": 69.32101981788848,
+        "height": 20.500691990077875,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 27,
+        "width": 64.23928040280416,
+        "height": 19.928798906311666,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-6",
+      "start": {
+        "z": 27,
+        "width": 64.23928040280416,
+        "height": 19.928798906311666,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 40.5,
+        "width": 58.76221575284824,
+        "height": 18.698241657341207,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "fore-armor/section-7",
+      "start": {
+        "z": 40.5,
+        "width": 58.76221575284824,
+        "height": 18.698241657341207,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 54,
+        "width": 52.9472813946934,
+        "height": 16.944858882405537,
+        "profile": "chamfer",
+        "bevel": 0.16499807083979248,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "combat-core/section-0",
+      "start": {
+        "z": -39,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -19.5,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "combat-core/section-1",
+      "start": {
+        "z": -19.5,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "combat-core/section-2",
+      "start": {
+        "z": 0,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 19.5,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "combat-core/section-3",
+      "start": {
+        "z": 19.5,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 39,
+        "width": 62.9318571350919,
+        "height": 22.729289310000002,
+        "profile": "flattened",
+        "bevel": 0.24662522905506196,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "drive-block/section-0",
+      "start": {
+        "z": -54,
+        "width": 39.6729364748914,
+        "height": 13.961984400000004,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -27,
+        "width": 81.4936029119363,
+        "height": 18.029645605834496,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "drive-block/section-1",
+      "start": {
+        "z": -27,
+        "width": 81.4936029119363,
+        "height": 18.029645605834496,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 82.54246179032086,
+        "height": 20.35079082805723,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "drive-block/section-2",
+      "start": {
+        "z": 0,
+        "width": 82.54246179032086,
+        "height": 20.35079082805723,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 27,
+        "width": 75.29589505810276,
+        "height": 19.928798906311666,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "drive-block/section-3",
+      "start": {
+        "z": 27,
+        "width": 75.29589505810276,
+        "height": 19.928798906311666,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 54,
+        "width": 66.48794064880552,
+        "height": 16.944858882405537,
+        "profile": "chamfer",
+        "bevel": 0.2619436785019934,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine--1/section-0",
+      "start": {
+        "z": -27.734904071304477,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine--1/section-1",
+      "start": {
+        "z": -13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine--1/section-2",
+      "start": {
+        "z": 0,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine--1/section-3",
+      "start": {
+        "z": 13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 27.734904071304477,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.3396767096500844,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine-1/section-0",
+      "start": {
+        "z": -27.734904071304477,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": -13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine-1/section-1",
+      "start": {
+        "z": -13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 0,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine-1/section-2",
+      "start": {
+        "z": 0,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    },
+    {
+      "id": "magazine-1/section-3",
+      "start": {
+        "z": 13.867452035652239,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      },
+      "end": {
+        "z": 27.734904071304477,
+        "width": 21.784104392916433,
+        "height": 14.311034010000002,
+        "profile": "flattened",
+        "bevel": 0.18046779873780908,
+        "topSlope": 0.035,
+        "sideSlope": 0.01,
+        "bottomSlope": 0.02,
+        "roundness": 0.15
+      }
+    }
+  ],
+  "secondaryStructures": [],
+  "engines": [
+    {
+      "id": "engine-0",
+      "parentId": "drive-block",
+      "position": {
+        "x": -9.308311690832774,
+        "y": -2.711177421184886,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 1.9274776978736297,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-1",
+      "parentId": "drive-block",
+      "position": {
+        "x": 9.308311690832774,
+        "y": -2.711177421184886,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 1.9274776978736297,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-2",
+      "parentId": "drive-block",
+      "position": {
+        "x": -9.308311690832774,
+        "y": 2.711177421184886,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 1.9274776978736297,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    },
+    {
+      "id": "engine-3",
+      "parentId": "drive-block",
+      "position": {
+        "x": 9.308311690832774,
+        "y": 2.711177421184886,
+        "z": 150
+      },
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "nozzleRadius": 1.9274776978736297,
+      "nozzleLength": 10.02,
+      "bellRatio": 1.22
+    }
+  ],
+  "hardpoints": [
+    {
+      "id": "mount-0",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 11.426825011717208,
+        "y": 8.477544955488172,
+        "z": -126.24000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9976658966596927,
+        "z": -0.06828439530530676
+      },
+      "radius": 3.105,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-1",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "combat-core",
+      "position": {
+        "x": 9.439778570263785,
+        "y": 10.966882092075,
+        "z": -21.840000000000003
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-2",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "drive-block",
+      "position": {
+        "x": 11.471268440923637,
+        "y": 8.463786420997327,
+        "z": 65.75999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9973684615018431,
+        "z": -0.0724993241447554
+      },
+      "radius": 3.6,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-3",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -40.8903651050667,
+        "y": 6.905073909825001,
+        "z": 5.468453720069494
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-4",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 5.468453720069494
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-5",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -11.426825011717208,
+        "y": 8.477544955488172,
+        "z": -126.24000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9976658966596927,
+        "z": -0.06828439530530676
+      },
+      "radius": 3.105,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-6",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "combat-core",
+      "position": {
+        "x": -9.439778570263785,
+        "y": 10.966882092075,
+        "z": -21.840000000000003
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-7",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "drive-block",
+      "position": {
+        "x": -11.471268440923637,
+        "y": 8.463786420997327,
+        "z": 65.75999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9973684615018431,
+        "z": -0.0724993241447554
+      },
+      "radius": 3.6,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-8",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 5.468453720069494
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-9",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 40.8903651050667,
+        "y": 6.905073909825001,
+        "z": 5.468453720069494
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-10",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 11.529721918976259,
+        "y": 9.511175207420186,
+        "z": -106.08
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9995332593049959,
+        "z": -0.030549362401391
+      },
+      "radius": 3.105,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-11",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "combat-core",
+      "position": {
+        "x": 9.439778570263785,
+        "y": 10.966882092075,
+        "z": -7.280000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-12",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "drive-block",
+      "position": {
+        "x": 12.381369268548129,
+        "y": 9.819256574537613,
+        "z": 96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9991408247580339,
+        "z": -0.04144408645194029
+      },
+      "radius": 4.14,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-13",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -40.8903651050667,
+        "y": 6.905073909825001,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-14",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-15",
+      "type": "Small Turret",
+      "size": "S",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -11.529721918976259,
+        "y": 9.511175207420186,
+        "z": -106.08
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9995332593049959,
+        "z": -0.030549362401391
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-16",
+      "type": "Large Turret",
+      "size": "L",
+      "parentId": "combat-core",
+      "position": {
+        "x": -9.439778570263785,
+        "y": 10.966882092075,
+        "z": -7.280000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-17",
+      "type": "Medium Turret",
+      "size": "M",
+      "parentId": "drive-block",
+      "position": {
+        "x": -12.381369268548129,
+        "y": 9.819256574537613,
+        "z": 96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9991408247580339,
+        "z": -0.04144408645194029
+      },
+      "radius": 3.6,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-18",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "combat-core",
+      "position": {
+        "x": 9.439778570263785,
+        "y": 10.966882092075,
+        "z": 7.279999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-19",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-20",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 40.8903651050667,
+        "y": 6.905073909825001,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-21",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "combat-core",
+      "position": {
+        "x": -9.439778570263785,
+        "y": 10.966882092075,
+        "z": 7.279999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-22",
+      "type": "Missile",
+      "size": "S",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -40.8903651050667,
+        "y": 6.905073909825001,
+        "z": 36.53154627993051
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "missile"
+      ]
+    },
+    {
+      "id": "mount-23",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 10.57283786832717,
+        "y": 9.873260966508251,
+        "z": -85.92
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9999856484848958,
+        "z": -0.005357501679145874
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-24",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "combat-core",
+      "position": {
+        "x": 9.439778570263785,
+        "y": 10.966882092075,
+        "z": 21.840000000000003
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-25",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "drive-block",
+      "position": {
+        "x": 11.135841079348063,
+        "y": 9.442875344911213,
+        "z": 126.24000000000001
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9985812942755514,
+        "z": 0.053248462165256555
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-26",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 36.53154627993051
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-27",
+      "type": "Point Defense",
+      "size": "S",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 47.42559642294163,
+        "y": 6.905073909825001,
+        "z": 36.53154627993051
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.1263426454666767,
+      "allowedCategories": [
+        "turret"
+      ]
+    },
+    {
+      "id": "mount-28",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -10.57283786832717,
+        "y": 9.873260966508251,
+        "z": -85.92
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9999856484848958,
+        "z": -0.005357501679145874
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-29",
+      "type": "Sensor",
+      "size": "S",
+      "parentId": "combat-core",
+      "position": {
+        "x": -9.439778570263785,
+        "y": 10.966882092075,
+        "z": 21.840000000000003
+      },
+      "normal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "radius": 2.2425,
+      "allowedCategories": [
+        "sensor",
+        "electronic-warfare"
+      ]
+    },
+    {
+      "id": "mount-30",
+      "type": "Utility",
+      "size": "S",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 9.43871773302221,
+        "y": 9.473146942864599,
+        "z": -65.75999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.999034235460966,
+        "z": 0.04393855228524399
+      },
+      "radius": 2.4,
+      "allowedCategories": [
+        "utility"
+      ]
+    }
+  ],
+  "trusses": [],
+  "surfaceFeatures": [
+    {
+      "id": "detail-0",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -18.61451882548289,
+        "y": 8.015307965952763,
+        "z": -136.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9970534182284279,
+        "z": -0.07671037217356978
+      },
+      "size": {
+        "x": 9.927743373590875,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-1",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 18.61451882548289,
+        "y": 8.015307965952763,
+        "z": -136.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9970534182284279,
+        "z": -0.07671037217356978
+      },
+      "size": {
+        "x": 9.927743373590875,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-2",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -24.192323033313848,
+        "y": 8.939304004815144,
+        "z": -123
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9976658966596927,
+        "z": -0.06828439530530676
+      },
+      "size": {
+        "x": 12.902572284434052,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-3",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 24.192323033313848,
+        "y": 8.939304004815144,
+        "z": -123
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9976658966596927,
+        "z": -0.06828439530530676
+      },
+      "size": {
+        "x": 12.902572284434052,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-4",
+      "kind": "hatch",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -23.359388223890893,
+        "y": 9.64664760071963,
+        "z": -109.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9986301587699529,
+        "z": -0.0523240479617042
+      },
+      "size": {
+        "x": 12.458340386075143,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-5",
+      "kind": "hatch",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 23.359388223890893,
+        "y": 9.64664760071963,
+        "z": -109.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9986301587699529,
+        "z": -0.0523240479617042
+      },
+      "size": {
+        "x": 12.458340386075143,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-6",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -22.175397226765735,
+        "y": 10.059256574537613,
+        "z": -96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9995332593049959,
+        "z": -0.030549362401391
+      },
+      "size": {
+        "x": 11.826878520941726,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-7",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 22.175397226765735,
+        "y": 10.059256574537613,
+        "z": -96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9995332593049959,
+        "z": -0.030549362401391
+      },
+      "size": {
+        "x": 11.826878520941726,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-8",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -20.796305945366544,
+        "y": 10.131583885212574,
+        "z": -82.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9999856484848958,
+        "z": -0.005357501679145874
+      },
+      "size": {
+        "x": 11.091363170862158,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-9",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 20.796305945366544,
+        "y": 10.131583885212574,
+        "z": -82.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9999856484848958,
+        "z": -0.005357501679145874
+      },
+      "size": {
+        "x": 11.091363170862158,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-10",
+      "kind": "hatch",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -19.271784120841247,
+        "y": 9.855645472295379,
+        "z": -69
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9997911710354773,
+        "z": 0.020435613998826225
+      },
+      "size": {
+        "x": 10.278284864448665,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-11",
+      "kind": "hatch",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 19.271784120841247,
+        "y": 9.855645472295379,
+        "z": -69
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9997911710354773,
+        "z": 0.020435613998826225
+      },
+      "size": {
+        "x": 10.278284864448665,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-12",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": -17.62866472585447,
+        "y": 9.261901599667132,
+        "z": -55.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.999034235460966,
+        "z": 0.04393855228524399
+      },
+      "size": {
+        "x": 9.40195452045572,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-13",
+      "kind": "panel",
+      "parentId": "fore-armor",
+      "position": {
+        "x": 17.62866472585447,
+        "y": 9.261901599667132,
+        "z": -55.5
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.999034235460966,
+        "z": 0.04393855228524399
+      },
+      "size": {
+        "x": 9.40195452045572,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-14",
+      "kind": "panel",
+      "parentId": "combat-core",
+      "position": {
+        "x": -18.87955714052757,
+        "y": 10.3450632057375,
+        "z": -19.5
+      },
+      "normal": {
+        "x": -0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-15",
+      "kind": "panel",
+      "parentId": "combat-core",
+      "position": {
+        "x": 18.87955714052757,
+        "y": 10.3450632057375,
+        "z": -19.5
+      },
+      "normal": {
+        "x": 0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-16",
+      "kind": "panel",
+      "parentId": "combat-core",
+      "position": {
+        "x": -18.87955714052757,
+        "y": 10.3450632057375,
+        "z": 0
+      },
+      "normal": {
+        "x": -0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-17",
+      "kind": "panel",
+      "parentId": "combat-core",
+      "position": {
+        "x": 18.87955714052757,
+        "y": 10.3450632057375,
+        "z": 0
+      },
+      "normal": {
+        "x": 0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-18",
+      "kind": "hatch",
+      "parentId": "combat-core",
+      "position": {
+        "x": -18.87955714052757,
+        "y": 10.3450632057375,
+        "z": 19.5
+      },
+      "normal": {
+        "x": -0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-19",
+      "kind": "hatch",
+      "parentId": "combat-core",
+      "position": {
+        "x": 18.87955714052757,
+        "y": 10.3450632057375,
+        "z": 19.5
+      },
+      "normal": {
+        "x": 0.3239050593912827,
+        "y": 0.9460895901027183,
+        "z": 0
+      },
+      "size": {
+        "x": 10.069097141614705,
+        "y": 0.24000000000000002,
+        "z": 1.9500000000000002
+      }
+    },
+    {
+      "id": "detail-20",
+      "kind": "panel",
+      "parentId": "drive-block",
+      "position": {
+        "x": -24.448080873580892,
+        "y": 8.939304004815144,
+        "z": 69
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9973684615018431,
+        "z": -0.0724993241447554
+      },
+      "size": {
+        "x": 13.03897646590981,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-21",
+      "kind": "panel",
+      "parentId": "drive-block",
+      "position": {
+        "x": 24.448080873580892,
+        "y": 8.939304004815144,
+        "z": 69
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9973684615018431,
+        "z": -0.0724993241447554
+      },
+      "size": {
+        "x": 13.03897646590981,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-22",
+      "kind": "panel",
+      "parentId": "drive-block",
+      "position": {
+        "x": -24.762738537096258,
+        "y": 10.059256574537613,
+        "z": 96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9991408247580339,
+        "z": -0.04144408645194029
+      },
+      "size": {
+        "x": 13.206793886451337,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-23",
+      "kind": "panel",
+      "parentId": "drive-block",
+      "position": {
+        "x": 24.762738537096258,
+        "y": 10.059256574537613,
+        "z": 96
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9991408247580339,
+        "z": -0.04144408645194029
+      },
+      "size": {
+        "x": 13.206793886451337,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-24",
+      "kind": "hatch",
+      "parentId": "drive-block",
+      "position": {
+        "x": -22.588768517430825,
+        "y": 9.855645472295379,
+        "z": 123
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.99997156672647,
+        "z": 0.007540937515261884
+      },
+      "size": {
+        "x": 12.047343209296441,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-25",
+      "kind": "hatch",
+      "parentId": "drive-block",
+      "position": {
+        "x": 22.588768517430825,
+        "y": 9.855645472295379,
+        "z": 123
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.99997156672647,
+        "z": 0.007540937515261884
+      },
+      "size": {
+        "x": 12.047343209296441,
+        "y": 0.24000000000000002,
+        "z": 2.7
+      }
+    },
+    {
+      "id": "detail-26",
+      "kind": "panel",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 7.132547964347765
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-27",
+      "kind": "panel",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 7.132547964347765
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-28",
+      "kind": "panel",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-29",
+      "kind": "panel",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-30",
+      "kind": "hatch",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 34.86745203565224
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-31",
+      "kind": "hatch",
+      "parentId": "magazine--1",
+      "position": {
+        "x": -37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 34.86745203565224
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-32",
+      "kind": "panel",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 7.132547964347765
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-33",
+      "kind": "panel",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 7.132547964347765
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-34",
+      "kind": "panel",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-35",
+      "kind": "panel",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 21.000000000000004
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-36",
+      "kind": "hatch",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 37.622749446129234,
+        "y": 6.602447203612501,
+        "z": 34.86745203565224
+      },
+      "normal": {
+        "x": -0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    },
+    {
+      "id": "detail-37",
+      "kind": "hatch",
+      "parentId": "magazine-1",
+      "position": {
+        "x": 50.693212081879096,
+        "y": 6.602447203612501,
+        "z": 34.86745203565224
+      },
+      "normal": {
+        "x": 0.5286140517394011,
+        "y": 0.8488622881855771,
+        "z": 0
+      },
+      "size": {
+        "x": 3.4854567028666295,
+        "y": 0.24000000000000002,
+        "z": 1.386745203565224
+      }
+    }
+  ],
+  "materialTheme": {
+    "hull": "#d6dddc",
+    "secondary": "#7b949a",
+    "accent": "#89e2c9",
+    "engine": "#71dfff",
+    "roughness": 0.34,
+    "panelScale": 19.5
+  },
+  "generationStats": {
+    "firepowerScore": 80,
+    "survivabilityScore": 80,
+    "mobilityScore": 30,
+    "enduranceScore": 65,
+    "missileScore": 60,
+    "sensorScore": 45,
+    "enginePattern": "Quad Cluster"
+  }
+}

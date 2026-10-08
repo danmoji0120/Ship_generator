@@ -123,10 +123,12 @@ export function stationAt(stations: HullStation[], z: number): HullStation {
   const a = stations[i],
     b = stations[i + 1],
     t = Math.max(0, Math.min(1, (z - a.z) / (b.z - a.z)));
+  const ringA = profileRing(a),
+    ringB = profileRing(b);
   return {
     ...a,
-    sectionRing: profileRing(a).map((p, i) => {
-      const q = profileRing(b)[i];
+    sectionRing: ringA.map((p, i) => {
+      const q = ringB[i];
       return [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t] as [
         number,
         number,
