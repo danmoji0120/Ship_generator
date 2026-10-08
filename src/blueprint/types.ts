@@ -299,12 +299,31 @@ export interface SilhouetteMetrics {
   symmetry: number;
   disconnectedPenalty: number;
 }
+/** Reusable, parametric external kit parts; sockets are authoritative world-space attachment anchors. */
+export const PREFAB_KINDS = ["ARMOR_PLATE", "RADIATOR_BANK", "JOINT_HOUSING"] as const;
+export type PrefabKind = (typeof PREFAB_KINDS)[number];
+export interface PrefabSocket {
+  kind: "HULL_SIDE" | "CONNECTOR_END";
+  hostId: string;
+  position: Vec3;
+  normal: Vec3;
+}
+export interface PrefabPlacement {
+  id: string;
+  kind: PrefabKind;
+  socket: PrefabSocket;
+  /** Local X = along surface, Y = outward from socket, Z = ship axis for hull parts. */
+  dimensions: Vec3;
+  variant: number;
+  /** Thermal panels are physical equipment, not a simulated heat balance yet. */
+  functionality: "protection" | "thermal" | "structural";
+}
 export interface ShipBlueprint extends Omit<
   LegacyShipBlueprint,
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5";
+  generatorVersion: "1.0" | "1.5" | "1.6";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -320,6 +339,8 @@ export interface ShipBlueprint extends Omit<
   };
   structuralVolumes: StructuralVolume[];
   structuralConnectors: StructuralConnector[];
+  /** Optional: V1/V1.5 exports without prefabs remain loadable. */
+  prefabPlacements?: PrefabPlacement[];
   silhouette: SilhouetteMetrics;
 }
 export type AnyShipBlueprint = ShipBlueprint | LegacyShipBlueprint;

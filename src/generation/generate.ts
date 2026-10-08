@@ -18,6 +18,7 @@ import {
   validateSilhouette,
 } from "../validation/silhouette";
 import { validateBlueprint } from "../validation/validate";
+import { generatePrefabPlacements } from "./prefabs";
 export { DEFAULT_ORDER, generateBlueprintV0 } from "./legacy";
 export function generateBlueprint(
   input: ShipOrder,
@@ -68,6 +69,7 @@ export function generateBlueprint(
         rng,
       ),
       { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes);
+    const prefabPlacements = generatePrefabPlacements(order, yard, volumes, connectors, seed + candidate);
     const bounds = volumeBounds(volumes),
       l = order.length,
       p = order.priorities;
@@ -91,7 +93,7 @@ export function generateBlueprint(
     const primary = volumes.find((v) => v.id === "citadel");
     const b: ShipBlueprint = {
       schemaVersion: 2,
-      generatorVersion: "1.5",
+      generatorVersion: "1.6",
       seed,
       candidate,
       shipyardId: yard.id,
@@ -122,6 +124,7 @@ export function generateBlueprint(
       },
       structuralVolumes: volumes,
       structuralConnectors: connectors,
+      prefabPlacements,
       silhouette,
       dimensions: {
         length:

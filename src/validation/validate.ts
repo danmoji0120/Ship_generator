@@ -10,6 +10,8 @@ import { shapeStations } from "../generation/shapes/definition";
 import { SHAPE_KINDS, JOIN_TYPES } from "../blueprint/types";
 import { hullSurfaceAt } from "../generation/hull";
 import { connectedIds, validateSilhouette } from "./silhouette";
+import { PREFAB_LIBRARY } from "../generation/prefabs";
+import { PREFAB_KINDS } from "../blueprint/types";
 function finite(v: unknown): boolean {
   if (typeof v === "number") return Number.isFinite(v);
   if (Array.isArray(v)) return v.every(finite);
@@ -40,7 +42,7 @@ export function validateArchitecture(b: ShipBlueprint) {
   )
     errors.push("Unconnected major structure");
   for (const v of volumes.values()) {
-    if (b.generatorVersion === "1.5") {
+    if ((b.generatorVersion === "1.5" || b.generatorVersion === "1.6")) {
       if (
         !v.shape ||
         !SHAPE_KINDS.includes(v.shape.kind) ||
@@ -92,7 +94,7 @@ export function validateArchitecture(b: ShipBlueprint) {
   }
   for (const c of b.structuralConnectors) {
     if (
-      b.generatorVersion === "1.5" &&
+      (b.generatorVersion === "1.5" || b.generatorVersion === "1.6") &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -229,6 +231,38 @@ export function validateArchitecture(b: ShipBlueprint) {
     errors.push("Hardpoint count");
   if (b.surfaceFeatures.some((f) => !volumes.has(f.parentId)))
     errors.push("Surface parent");
+  if (b.generatorVersion === "1.6" && !Array.isArray(b.prefabPlacements))
+    errors.push("Missing kitbash placements");
+  const prefabs = b.prefabPlacements ?? [];
+  if (prefabs.length > 128 ||
+    new Set(prefabs.map((p) => p.id)).size !== prefabs.length)
+    errors.push("Invalid prefab count or duplicate ID");
+  for (const p of prefabs) {
+    if (!PREFAB_KINDS.includes(p.kind) ||
+      !PREFAB_LIBRARY[p.kind] ||
+      p.socket.kind !== PREFAB_LIBRARY[p.kind].socketKind ||
+      p.functionality !== PREFAB_LIBRARY[p.kind].functionality ||
+      !Number.isInteger(p.variant) || p.variant < 0 || p.variant > 2 ||
+      Math.min(p.dimensions.x, p.dimensions.y, p.dimensions.z) <= 0 ||
+      Math.abs(Math.hypot(p.socket.normal.x, p.socket.normal.y, p.socket.normal.z) - 1) > 0.001) {
+      errors.push("Invalid prefab " + p.id);
+      continue;
+    }
+    if (p.socket.kind === "HULL_SIDE") {
+      const v = volumes.get(p.socket.hostId);
+      if (!v || !containsVolume(v, p.socket.position, l * 0.003)) {
+        errors.push("Detached prefab " + p.id);
+      }
+    } else {
+      const c = b.structuralConnectors.find((c) => c.id === p.socket.hostId);
+      if (!c ||
+        Math.min(
+          Math.hypot(p.socket.position.x - c.start.x, p.socket.position.y - c.start.y, p.socket.position.z - c.start.z),
+          Math.hypot(p.socket.position.x - c.end.x, p.socket.position.y - c.end.y, p.socket.position.z - c.end.z),
+        ) > l * 0.003)
+        errors.push("Detached prefab " + p.id);
+    }
+  }
   const d = b.dimensions;
   if (
     d.length < l * 0.99 ||

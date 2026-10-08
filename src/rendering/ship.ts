@@ -2,6 +2,7 @@ import * as THREE from "three";
 import type { AnyShipBlueprint, Vec3 } from "../blueprint/types";
 import { loftGeometry, moduleGeometry, beamBetween } from "./geometry";
 import { renderArchitecture } from "./architecture";
+import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
 export type DebugView =
   | "Normal"
@@ -35,7 +36,11 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     root.add(mesh);
     return mesh;
   };
-  if (b.schemaVersion === 2) root.add(renderArchitecture(b, mode, m, ghost));
+  if (b.schemaVersion === 2) {
+    root.add(renderArchitecture(b, mode, m, ghost));
+    if ((mode === "Normal" || mode === "Structure") && b.prefabPlacements?.length)
+      root.add(renderPrefabs(b.prefabPlacements, m));
+  }
   else {
     if (mode === "Hull Sections") {
       b.hullSections.forEach((s, i) => {

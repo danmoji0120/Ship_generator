@@ -117,6 +117,7 @@ function generate() {
       `<strong>${next.architecture.grammar.replaceAll("_", " ")}</strong><span>${next.architecture.composition} · ${volumes.length} major volumes · ${next.structuralConnectors.length} connectors · ${next.trusses.length} trusses</span><span>Hull ${counts("PRIMARY_HULL") + counts("HULL_BLOCK") + counts("ARMOR_BLOCK")} / Pod ${counts("POD")} / Nacelle ${counts("NACELLE")} / Spine ${counts("SPINE")}</span>`;
     $("architecture-summary").innerHTML +=
       `<span>Shapes: ${[...new Set(volumes.map((v) => v.shape?.kind))].join(" / ")} · Joins: ${[...new Set(next.structuralConnectors.map((c) => c.join?.type))].join(" / ")}</span>`;
+    $("architecture-summary").innerHTML += `<span>Kitbash: ${(next.prefabPlacements ?? []).length} mounted prefabs · ${[...new Set((next.prefabPlacements ?? []).map((p) => p.kind))].join(" / ") || "none"}</span>`;
     $("engine-pattern").textContent =
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =
