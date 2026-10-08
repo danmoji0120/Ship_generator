@@ -78,3 +78,6 @@ export function addArmor(ctx: IntegrationContext) {
 
   return armorHosts;
 }
+
+// Layered volumetric protection extends this armor subsystem; Integration retains interface ownership.
+export { buildLayeredArmor } from "../armor/build";

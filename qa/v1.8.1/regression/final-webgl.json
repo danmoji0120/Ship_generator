@@ -1,0 +1,123 @@
+{
+  "determinism": [
+    {
+      "architecture": "MONOLITHIC",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    },
+    {
+      "architecture": "HYBRID",
+      "repeats": 10,
+      "jsonExact": true,
+      "normalPixelExact": true,
+      "blackPixelExact": true
+    }
+  ],
+  "compatibility": [
+    {
+      "key": "aegis-0",
+      "pixelsExact": true
+    },
+    {
+      "key": "aegis-7",
+      "pixelsExact": true
+    },
+    {
+      "key": "aegis-13",
+      "pixelsExact": true
+    },
+    {
+      "key": "vesper-0",
+      "pixelsExact": true
+    },
+    {
+      "key": "vesper-7",
+      "pixelsExact": true
+    },
+    {
+      "key": "vesper-13",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-0",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-7",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-13",
+      "pixelsExact": true
+    },
+    {
+      "key": "serein-0",
+      "pixelsExact": true
+    },
+    {
+      "key": "serein-7",
+      "pixelsExact": true
+    },
+    {
+      "key": "serein-13",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-MONOLITHIC-0",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-MONOLITHIC-7",
+      "pixelsExact": true
+    },
+    {
+      "key": "forge-MONOLITHIC-13",
+      "pixelsExact": true
+    }
+  ],
+  "errors": []
+}

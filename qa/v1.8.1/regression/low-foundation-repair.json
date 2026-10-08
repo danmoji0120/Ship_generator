@@ -1,0 +1,496 @@
+{
+  "count": 220,
+  "changes": [
+    {
+      "key": "forge-MONOLITHIC-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-MONOLITHIC-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-MONOLITHIC-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-4",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-7",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-15",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-17",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-18",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-BLOCK_ASSEMBLY-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-0",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-1",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-4",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-5",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-7",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-8",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-11",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-15",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-17",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-SPINE_AND_MODULES-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-TRUSS_POD-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-TRUSS_POD-15",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-0",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-1",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-4",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-5",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-6",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-7",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-8",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-9",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-10",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-11",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-14",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-15",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-17",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-18",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-CORE_AND_NACELLES-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-1",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-4",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-5",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-6",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-7",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-8",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-10",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-14",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-18",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-STACKED_BLOCKS-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-1",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-4",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-5",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-6",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-7",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-8",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-9",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-10",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-11",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-14",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-17",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-18",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "forge-HYBRID-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-0",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-6",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-11",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-15",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-16",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-17",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "aegis-BLOCK_ASSEMBLY-19",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-0",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-2",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-3",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-12",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-13",
+      "armorExact": true,
+      "macroExact": true
+    },
+    {
+      "key": "serein-BLOCK_ASSEMBLY-17",
+      "armorExact": true,
+      "macroExact": true
+    }
+  ],
+  "errors": []
+}

@@ -124,6 +124,10 @@ function generate() {
       $("architecture-summary").innerHTML +=
         `<span>V1.7 exterior: ${next.prefabPlacements?.filter((p) => p.exterior).length} fitted structures · ${next.hullIntegration.reservedZones.length} equipment zones · envelope ${(bounds.max.z - bounds.min.z).toFixed(1)} × ${(bounds.max.x - bounds.min.x).toFixed(1)} × ${(bounds.max.y - bounds.min.y).toFixed(1)} m</span>`;
     }
+    if (next.layeredArmor) {
+      const a=next.layeredArmor;
+      $("architecture-summary").innerHTML += `<span>Armor: ${a.budget.segmentCount} panels · ${a.seams.length} physical seams · ${next.hardpoints.filter(h=>h.surfaceMount).length} surface mounts</span><span>Coverage T/B/P/S/F/A: ${["top","bottom","left","right","fore","aft"].map(k=>Math.round(a.coverage.byDirectionRatio[k as keyof typeof a.coverage.byDirectionRatio]*100)+"%").join(" / ")}</span>`;
+    }
     if (next.macroDesign) {
       const m = next.macroDesign;
       $("architecture-summary").innerHTML +=
@@ -174,7 +178,8 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
     const mode = el.dataset.debug as DebugView;
     viewer?.setMode(mode);
     $("debug-legend").hidden = mode === "Normal";
-    $("debug-legend").textContent =
+    const armorLegend:Partial<Record<DebugView,string>>={"Hull Only":"STRUCTURAL HULL + FITTED CONNECTIONS","Armor Coverage":"TOP / CYAN · BOTTOM / VIOLET · PORT / GREEN · STARBOARD / AMBER · FORE / BLUE · AFT / ROSE","Armor Panels":"CLOSED GEOMETRIC PLATES / PHYSICAL THICKNESS + CHAMFER","Panel Seams":"LOW UNDERLAYER / ACTUAL GAPS BETWEEN PLATES","Secondary Armor":"LOCAL LOW, BROAD OVERLAYS","Hardpoint Mounts":"AMBER / FOUNDATION · CYAN / MOUNT · ARMOR RETAINED","Complete Ship":"COMPLETE ARMOR + SURFACE-MOUNTED EQUIPMENT"};
+    $("debug-legend").textContent = armorLegend[mode] ?? (
       mode === "Hardpoints"
         ? "ARROW / NORMAL · " +
           blueprint.hardpoints
@@ -194,7 +199,7 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
                     ? "PROTECTION / PRIMARY, SECONDARY, EDGE, JOINT, MACHINERY"
                     : mode === "Equipment"
                       ? "HOUSINGS / SENSOR, MISSILE, WEAPON, THERMAL, PROPULSION"
-                      : "SOLID / HULL + MODULES   ·   AMBER / STRUCTURAL TRUSS";
+                      : "SOLID / HULL + MODULES   ·   AMBER / STRUCTURAL TRUSS");
   };
 function setViewLabel(id: "top" | "rear" | "iso") {
   document.querySelector(".axis-label")!.innerHTML =

@@ -11,6 +11,7 @@ const browser = await chromium.launch({
     "--enable-unsafe-swiftshader",
   ],
 });
+const version=process.env.QA_VERSION||'1.8', output=process.env.QA_OUTPUT||'qa/v1.8';
 const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } }),
   errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
@@ -29,18 +30,18 @@ try {
   await page.click("#regenerate");
   await page.click("#inspect");
   const b = JSON.parse(await page.locator("#json-content").textContent());
-  assert.equal(b.generatorVersion, "1.8");
+  assert.equal(b.generatorVersion, version);
   assert.equal(b.schemaVersion, 2);
   assert(b.hullIntegration);
   assert(b.macroDesign);
   await page.click("#close-json");
-  for (const mode of ["Integration", "Armor", "Equipment", "Normal"])
+  for (const mode of ["Integration", "Armor", "Equipment", ...(version==="1.8.1"?["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"]:[]), "Normal"])
     await page.click(`[data-debug="${mode}"]`);
   const download = page.waitForEvent("download");
   await page.click("#export");
   assert.match((await download).suggestedFilename(), /\.blueprint\.json$/);
   await page.screenshot({
-    path: "qa/v1.8/production-main.png",
+    path: `${output}/production-main.png`,
     fullPage: true,
   });
   await page.goto(url + "/qa.html");
@@ -50,15 +51,30 @@ try {
   await page.click("#integration");
   await page.waitForFunction(() => window.shipyardGallery?.ready);
   assert.equal(await page.locator("#grid img").count(), 20);
+  if(version === '1.8.1') {
+    for(const [id,count] of [['shapes',11],['joins',10]]) {
+      await page.evaluate(() => (window.shipyardGallery.ready = false));
+      await page.click(`#${id}`);
+      await page.waitForFunction(() => window.shipyardGallery?.ready);
+      assert.equal(await page.locator('#grid img').count(),count);
+    }
+    await page.selectOption('#armor-stage','PRIMARY');
+    await page.selectOption('#projection','BOTTOM');
+    await page.evaluate(() => (window.shipyardGallery.ready = false));
+    await page.click('#qa-form button');
+    await page.waitForFunction(() => window.shipyardGallery?.ready);
+    assert.deepEqual(await page.evaluate(() => window.shipyardGallery.blueprints.map(b=>b.seed)),Array.from({length:20},(_,i)=>i));
+    await page.screenshot({path:`${output}/production-armor-gallery.png`,fullPage:true});
+  }
   assert.deepEqual(errors, []);
   await writeFile(
-    "qa/v1.8/production-smoke.json",
+    `${output}/production-smoke.json`,
     JSON.stringify(
       {
         productionMain: true,
         productionGallery: true,
         developmentOrderHooksAbsent: true,
-        version: "1.8",
+        version,
         renderedThumbnails: 20,
         jsonExport: true,
         debugViews: true,

@@ -1,3 +1,4 @@
+import { validateLayeredArmor } from "./armor";
 import { validateMacro } from "./macro";
 import { validateIntegration } from "./integration";
 import type { AnyShipBlueprint, ShipBlueprint } from "../blueprint/types";
@@ -48,7 +49,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      b.generatorVersion === "1.8"
+      (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")
     ) {
       if (
         !v.shape ||
@@ -104,7 +105,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        b.generatorVersion === "1.8") &&
+        (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -216,7 +217,7 @@ export function validateArchitecture(b: ShipBlueprint) {
           l * 0.001
       )
         errors.push("Spinal alignment");
-    } else {
+    } else if (!h.surfaceMount) {
       const localZ = h.position.z - v.position.z,
         localX = h.position.x - v.position.x,
         s = hullSurfaceAt(v.geometry.stations, localZ, localX);
@@ -292,7 +293,7 @@ export function validateArchitecture(b: ShipBlueprint) {
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || b.generatorVersion === "1.8")
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1"))
     errors.push(...validateIntegration(b));
   const d = b.dimensions;
   if (
@@ -308,7 +309,8 @@ export function validateArchitecture(b: ShipBlueprint) {
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if (b.generatorVersion === "1.8") errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1")) errors.push(...validateMacro(b));
+  errors.push(...validateLayeredArmor(b));
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint) {

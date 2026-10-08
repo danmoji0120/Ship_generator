@@ -13,6 +13,7 @@ export class ShipViewer {
   private mode: DebugView = "Normal";
   private radius = 100;
   private disposed = false;
+  private armorShadowLight?: THREE.DirectionalLight;
   constructor(private container: HTMLElement) {
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
@@ -41,6 +42,11 @@ export class ShipViewer {
     ] as const) {
       const light = new THREE.DirectionalLight(color, intensity);
       light.position.set(pos[0], pos[1], pos[2]);
+      if (intensity === 4.5) {
+        this.armorShadowLight = light;
+        light.shadow.mapSize.set(1024, 1024);
+        light.shadow.bias = -0.0012;
+      }
       this.scene.add(light);
     }
     this.resizeObserver = new ResizeObserver(() => this.resize());
@@ -72,6 +78,18 @@ export class ShipViewer {
     }
     this.ship = createShip(b, this.mode);
     this.scene.add(this.ship);
+    // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
+    const shadows = Boolean(b.layeredArmor?.budget.segmentCount);
+    this.renderer.shadowMap.enabled = shadows;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    if (this.armorShadowLight) {
+      this.armorShadowLight.castShadow = shadows;
+      const c = this.armorShadowLight.shadow.camera, l = b.order.length;
+      c.left = c.bottom = -l * 1.2; c.right = c.top = l * 1.2;
+      c.near = .1; c.far = l * 5 + 1000; c.updateProjectionMatrix();
+      this.armorShadowLight.shadow.normalBias = l * .0006;
+    }
+    if (shadows) this.ship.traverse(n => { if(n instanceof THREE.Mesh) n.receiveShadow = true; });
     if (reset) this.fit(true);
   }
   snapshot(b: ShipBlueprint, mode: DebugView = "Normal") {

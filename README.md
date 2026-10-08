@@ -1,3 +1,66 @@
+# Procedural Shipyard V1.8.1 — Omnidirectional Armor & Surface Mounts
+
+V1.8의 Macro Silhouette와 StructuralVolume을 그대로 유지하고, **실제 선체 표면 전체를 기하학적 장갑판으로 마감**합니다. 장갑은 낮고 넓은 닫힌 메시이며 상부 장식이나 거대한 추가 장갑 블록을 생성하지 않습니다. 외부 Hardpoint는 완성된 장갑판 위의 Foundation에 설치합니다.
+
+```bash
+npm install
+npm run dev
+npm test
+npm run build
+```
+
+## Blueprint / 생성 순서
+
+`schemaVersion: 2`, `generatorVersion: "1.8.1"`. 선택적 `layeredArmor`에 실제 면, 분할 패널, 계층, 접촉점, 두께, Chamfer, Gap, Seam, Bounds, 피복 면적과 예외 사유를 저장합니다. 선택적 `Hardpoint.surfaceMount`는 장갑·Surface·Socket 참조, 안정적인 면 좌표, 표면 법선과 장착 방향, 실제 Foundation Geometry 및 Clearance를 보존합니다. Renderer는 RNG를 실행하거나 새 패널을 배치하지 않습니다.
+
+1. V1.8의 Architecture, Composition, Macro와 Structural Hull을 생성합니다. 기존 Hardpoint 위치는 설치 계획으로 사용합니다.
+2. Station Ring을 연결하는 실제 Loft 삼각형과 Fore/Aft Cap을 추출합니다. 기존 Integration / Bow / Stern의 저장된 contour도 사용합니다. AABB는 접촉 판정에 사용하지 않고 broad phase만 수행합니다.
+3. 내부 접합 면을 표면 샘플로 분류합니다. 엔진 배기·척추 포구·방열·Carrier 접근 영역은 유한한 원통 예약의 보수적인 다각형 경계로 분할하며 제외 사유와 면적을 기록합니다. 외부 Hardpoint는 기본 피복의 제외 사유가 아닙니다.
+4. 조선소별 종·횡 패널 구획을 실제 면 위에 Clip합니다. 각 판은 매립된 Root, 실제 측면 두께, 작은 경사 Chamfer와 넓은 평면 Cap으로 이루어집니다.
+5. 패널 경계를 축소하여 실제 Geometry Gap을 만듭니다. Gap 아래의 원래 Hull / Integration은 낮은 Underlayer입니다. 별도 검은 Line이나 Texture로 홈을 대체하지 않습니다.
+6. 일부 면에만 낮고 넓은 Secondary / 국소 Reinforcement를 추가합니다. 분리 Pod와 트러스 사이를 외피로 연결하지 않습니다.
+7. 최종 장갑 면에 Surface Socket을 결정합니다. 경사진 접촉 면과 외향 설치 방향 사이를 8점 접촉 Foundation이 보정합니다. 최종 무장/센서/미사일 설치 footprint를 순서대로 예약하고 겹치는 Mount는 가까운 빈 장갑 면으로 이동합니다. 장갑판을 삭제하지 않습니다. Spinal은 기존 축 방향 설치를 유지합니다.
+8. Geometry, 방향별 피복, 참조, Bounds, 예약 Clearance와 사격 경로를 검증합니다.
+
+TOP / BOTTOM / PORT(left) / STARBOARD(right) / FORE / AFT를 독립적으로 측정합니다. 원래 면적, 피복 대상 면적, 제외 면적, 실제 Primary 접촉 면적을 구분하고 대상의 **90% 미만이면 검증 실패**로 처리합니다. Secondary의 면적을 더해 기본 피복률을 부풀리지 않습니다.
+
+패널은 길이·폭 분할과 면 경계에 따라 직사각형, 사다리꼴, 절두형 다각형, 육각형, 종방향 Strip으로 나타납니다. Aegis는 큰 판·두꺼운 가장자리·깊은 홈, Vesper는 긴 좁은 구획·낮은 적층, Forge는 정비용 산업 패널과 절두 경계, Serein은 낮고 넓은 정돈된 구획과 작은 Chamfer를 사용합니다.
+
+Normal 렌더링은 장갑을 계층별 최대 **3개 Mesh**로 배칭하고 Segment ID ↔ vertex range를 보존합니다. 실제 생성량과 Polygon 비용은 QA에 기록합니다. 5,000 Segment / 200,000 Armor Triangle은 안전 상한이며 목표 생성량이 아닙니다. 동일 Material을 공유하고 장갑 Geometry는 Blueprint만으로 재현합니다.
+
+## 호환성과 질량
+
+`generateBlueprintV18`은 변경하지 않은 V1.8 비교 경로입니다. Structure, Connector, Macro Plan/실측, 구조 질량, 엔진, 기존 Prefab/Integration 데이터는 유지합니다. 신규 외부 Hardpoint의 위치·법선과 부모는 최종 Surface에 맞춰 바뀔 수 있으며 원래 Hull 위치·법선은 Mount 데이터에 기록합니다. 기존 Integration 예약은 건조 단계의 계획이며 최종 장착 Socket과 Clearance는 `surfaceMount`에 저장합니다.
+
+기존 측면 Armor Envelope / Hull 기반 외부 무장 하우징은 `supersededExteriorIds`로 명시하여 새 판·Foundation과 중복 렌더링하지 않습니다. 기존 저장 V0~V1.8 Blueprint에는 새 데이터나 규칙이 소급 적용되지 않습니다. 추가 외피와 Foundation Bounds는 별도로 기록하며 Auto Fit은 실제 전체 메시를 사용합니다. 물리적 장갑 두께(미터)와 미래 전투용 보호 등급은 서로 다른 값입니다.
+
+## QA / Debug
+
+기존 Debug 탭에 **Hull Only / Armor Coverage / Armor Panels / Panel Seams / Secondary Armor / Hardpoint Mounts / Complete Ship**을 추가했습니다. Coverage는 방향별 면을 색으로 구분합니다. Panel Seams는 낮은 Underlayer를 강조하지만 실제 판 Geometry와 Gap은 동일합니다.
+
+`/qa.html`에서 Armor stage, Projection, Seed start, Count, Architecture, Family를 선택합니다. TOP / BOTTOM / LEFT / RIGHT / FRONT / AFT / ISOMETRIC과 fixed / normalized 비교를 지원합니다. `NO_HARDPOINTS`와 `COMPLETE`는 정확히 동일한 장갑을 사용합니다. QA 옵션은 발주 UI와 분리되어 있으며 모델 직접 편집은 제공하지 않습니다.
+
+```bash
+npm run dev
+npm run qa:armor
+python3 tests/compose-armor-qa.py
+QA_OUTPUT=qa/v1.8.1/regression npm run qa
+```
+
+브라우저 캡처는 Chromium (`/usr/bin/chromium` 또는 `CHROMIUM_PATH`), 이미지 합성은 Python Pillow / NumPy를 사용합니다. [V1.8.1 QA](qa/v1.8.1/QA.md)에 220척, 7방향, 실제 Seam 확대, Hardpoint 전후, 과거 JSON 회귀와 성능 결과를 기록합니다. 전체 Blueprint는 `.json.gz`로 저장하고 대표 Before/After JSON은 별도로 보존합니다. 기존 `qa/v1.8/`는 수정하지 않습니다.
+
+V1.8.1 전체 테스트는 기존 47개와 장갑 전용 13개를 포함한 **60개**입니다. 최종 220척에서 방향별 피복률은 모두 97.95% 이상이며, Mount 겹침과 Foundation 높이 초과는 0건입니다. Foundation은 8개 지지점 중 최소 6개의 실제 장갑 접촉과 낮은 높이 제한을 만족해야 합니다. 같은 환경의 생성 중앙값은 V1.8 7.00ms에서 111.50ms로 증가했고, 평균 Triangle은 9,798.5에서 47,510.1로 증가했습니다. 장갑 Geometry의 CPU·Polygon 비용은 남은 최적화 과제입니다.
+
+## 의도적 한계
+
+축 정렬 Station Loft만 지원합니다. 내부 접합·부분 노출은 면 샘플을 이용하며 완전한 Triangle Boolean/CSG 또는 모든 삼각형 간 교차 판정은 수행하지 않습니다. 원통 개구부는 두께 여유를 더한 보수적인 8면체로 Clip하므로 실제 개구부보다 넓은 비장갑 가장자리가 생길 수 있습니다. Carrier 접근 구역은 외형/메타데이터이며 실제 격납고를 시뮬레이션하지 않습니다.
+
+Foundation은 실제 패널의 표면을 샘플링하는 외향 설치 구조입니다. Clearance는 Placeholder 설치 공간과 샘플 사격 경로를 검증하며 실제 무기 모델의 전 방향 조준을 보장하지 않습니다. Combat, 내부 구획, Damage, 정밀 열역학은 구현하지 않습니다. 모바일 viewport 확인과 실제 모바일 GPU 성능 측정은 구분합니다.
+
+Armor의 부모·계층·Surface·Socket·보호 구역을 향후 Internal Architecture와 Damage에 연결할 수 있습니다.
+
+---
+
 # Procedural Shipyard V1.8 — Macro Silhouette & Design Grammar
 
 기존 V0의 주문서·Seed·Blueprint→Renderer 구조를 확장한 독립 웹 데모입니다. V1은 하나의 Primary Loft를 변형하는 대신 **구조 Volume과 Connector로 군함의 구성 방식을 선택**합니다. V1.5는 기존 8개 Architecture 안에서 **덩어리의 Shape, 접합 Join, 질량 계층과 Composition**을 분화합니다. V1.7은 실제 단면 접촉과 장비 예약 영역을 기반으로 접합부·선수·선미·장갑 및 기능 외장을 통합합니다. 메시 직접 편집, 전투, 내부 구획, 파괴는 구현하지 않습니다.

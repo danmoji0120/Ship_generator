@@ -87,6 +87,7 @@ export const HARDPOINT_TYPES = [
 ] as const;
 export type HardpointType = (typeof HARDPOINT_TYPES)[number];
 export interface Hardpoint {
+  surfaceMount?: import("../generation/armor/types").HardpointSurfaceMount;
   id: string;
   type: HardpointType;
   size: "S" | "M" | "L" | "XL";
@@ -412,7 +413,7 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -431,6 +432,7 @@ export interface ShipBlueprint extends Omit<
   /** Optional: V1/V1.5 exports without prefabs remain loadable. */
   prefabPlacements?: PrefabPlacement[];
   hullIntegration?: HullIntegration;
+  layeredArmor?: import("../generation/armor/types").LayeredArmor;
   macroDesign?: import("../generation/macro/types").MacroDesignPlan;
   silhouette: SilhouetteMetrics;
 }

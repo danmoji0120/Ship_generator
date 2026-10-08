@@ -1,0 +1,42 @@
+[
+  {
+    "path": "qa/v0/export.blueprint.json",
+    "version": "V0",
+    "schema": 1,
+    "unchanged": true,
+    "armorAdded": false,
+    "finite": true
+  },
+  {
+    "path": "qa/v1/export.blueprint.json",
+    "version": "1.0",
+    "schema": 2,
+    "unchanged": true,
+    "armorAdded": false,
+    "finite": true
+  },
+  {
+    "path": "qa/v1.5/regression/export.blueprint.json",
+    "version": "1.5",
+    "schema": 2,
+    "unchanged": true,
+    "armorAdded": false,
+    "finite": true
+  },
+  {
+    "path": "qa/v1.7/before/forge-0.json",
+    "version": "1.6",
+    "schema": 2,
+    "unchanged": true,
+    "armorAdded": false,
+    "finite": true
+  },
+  {
+    "path": "qa/v1.7/regression/export.blueprint.json",
+    "version": "1.7",
+    "schema": 2,
+    "unchanged": true,
+    "armorAdded": false,
+    "finite": true
+  }
+]

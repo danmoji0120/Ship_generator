@@ -5,7 +5,7 @@ import { containsVolume } from "../generation/architecture/volumes";
 export function validateMacro(b: ShipBlueprint) {
   const p = b.macroDesign;
   if (!p)
-    return b.generatorVersion === "1.8" ? ["Missing Macro Design Plan"] : [];
+    return (b.generatorVersion === "1.8" || b.generatorVersion === "1.8.1") ? ["Missing Macro Design Plan"] : [];
   const errors: string[] = [],
     l = b.order.length;
   if (

@@ -1,3 +1,4 @@
+import { panelGeometry, renderLayeredArmor } from "./armor";
 import * as THREE from "three";
 import type { AnyShipBlueprint, Vec3 } from "../blueprint/types";
 import { loftGeometry, moduleGeometry, beamBetween } from "./geometry";
@@ -14,9 +15,30 @@ export type DebugView =
   | "Structural Graph"
   | "Integration"
   | "Armor"
-  | "Equipment";
+  | "Equipment"
+  | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
+  if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
+    const copy=structuredClone(b);
+    if(mode==="Hull Only"||mode==="Armor Panels"||mode==="Panel Seams"||mode==="Armor Coverage"||mode==="Secondary Armor") {
+      copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];
+      copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));
+      copy.layeredArmor?.assemblies.forEach(a=>a.segments=a.segments.filter(s=>mode==="Hull Only"?false:mode==="Secondary Armor"?s.layer===2:s.layer===1));
+    }
+    const r=createShip(copy,"Normal");
+    if(mode==="Panel Seams")r.traverse(n=>{if(n instanceof THREE.Mesh&&!n.userData.armorLayer)n.material=new THREE.MeshStandardMaterial({color:0x26323b,roughness:.8});});
+    if(mode==="Armor Coverage"&&copy.layeredArmor){
+      r.traverse(n=>{if(n instanceof THREE.Mesh&&n.userData.armorLayer){
+        const colors:number[]=[];for(const range of n.userData.armorSegments){const s=copy.layeredArmor!.assemblies.flatMap(a=>a.segments).find(s=>s.id===range.id)!;const direction=copy.layeredArmor!.surfaces.find(f=>f.id===s.surfaceId)!.direction;const c=new THREE.Color({top:0x64c9ca,bottom:0xa994eb,left:0x74c99b,right:0xe3af6a,fore:0x8baedf,aft:0xdf8d9a}[direction]);for(let i=0;i<range.vertexCount;i++)colors.push(c.r,c.g,c.b);}n.geometry.setAttribute("color",new THREE.Float32BufferAttribute(colors,3));n.material=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.8});
+      }});
+    }
+    if(mode==="Hardpoint Mounts")r.traverse(n=>{
+      if(n instanceof THREE.Mesh&&n.userData.mountFoundation)n.material=new THREE.MeshStandardMaterial({color:0xe5b566,roughness:.65});
+      if(n instanceof THREE.Group&&n.userData.hardpoint)n.traverse(c=>{if(c instanceof THREE.Mesh)c.material=new THREE.MeshStandardMaterial({color:0x83d6dc,roughness:.5});});
+    });
+    return r;
+  }
   const root = new THREE.Group(),
     m = shipMaterials(b),
     l = b.order.length;
@@ -41,6 +63,8 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   };
   if (b.schemaVersion === 2) {
     root.add(renderArchitecture(b, mode, m, ghost));
+    if (["Normal", "Structure", "Armor"].includes(mode) && b.layeredArmor)
+      root.add(renderLayeredArmor(b, m));
     if (
       ["Normal", "Structure", "Integration", "Armor", "Equipment"].includes(
         mode,
@@ -49,7 +73,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     )
       root.add(
         renderPrefabs(
-          b.prefabPlacements.filter((p) =>
+          b.prefabPlacements.filter(p=>!b.layeredArmor?.supersededExteriorIds.includes(p.id)).filter((p) =>
             mode === "Integration"
               ? p.exterior &&
                 ["integration", "bow", "stern"].includes(p.exterior.phase)
@@ -194,6 +218,10 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     root.add(g);
   }
   for (const h of b.hardpoints) {
+    if(h.surfaceMount) {
+      const foundation=new THREE.Mesh(panelGeometry(h.surfaceMount.foundation.solid),categoryMaterial("Hardpoints",m.secondary));
+      foundation.userData.mountFoundation=h.surfaceMount.foundation.id;foundation.receiveShadow=true;root.add(foundation);
+    }
     const group = new THREE.Group();
     group.userData.hardpoint = {
       id: h.id,
@@ -201,6 +229,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
       size: h.size,
       parentId: h.parentId,
       normal: h.normal,
+      ...(h.surfaceMount?{armorId:h.surfaceMount.armorId,surfaceId:h.surfaceMount.surfaceId,foundationId:h.surfaceMount.foundation.id}:{}),
     };
     group.position.copy(v(h.position));
     group.quaternion.setFromUnitVectors(

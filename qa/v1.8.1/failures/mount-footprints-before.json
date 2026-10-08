@@ -1,0 +1,363 @@
+{
+  "count": 220,
+  "mountDecisions": {
+    "accepted": 6051,
+    "adapted": 769
+  },
+  "overlappingMountFootprints": [
+    {
+      "file": "forge-HYBRID-2.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.4117869405930092
+    },
+    {
+      "file": "forge-HYBRID-2.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.41178694059300963
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-9.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.5022773379068032
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-0.json.gz",
+      "a": "mount-9",
+      "b": "mount-15",
+      "ratio": 0.0
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-0.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.9999688768838715
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-3.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.5456885341771818
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-3.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.5456885341771818
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-6.json.gz",
+      "a": "mount-16",
+      "b": "mount-19",
+      "ratio": 0.30556081163737225
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-6.json.gz",
+      "a": "mount-18",
+      "b": "mount-20",
+      "ratio": 0.30651568917373306
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-4.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.620053409878658
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-4.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.6200534098786616
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-7.json.gz",
+      "a": "mount-0",
+      "b": "mount-1",
+      "ratio": 0.45246090402646644
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-19.json.gz",
+      "a": "mount-16",
+      "b": "mount-19",
+      "ratio": 0.30774480978238494
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-19.json.gz",
+      "a": "mount-18",
+      "b": "mount-20",
+      "ratio": 0.30870651231295376
+    },
+    {
+      "file": "forge-HYBRID-3.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.5456885341771793
+    },
+    {
+      "file": "forge-HYBRID-3.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.5456885341771865
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-15.json.gz",
+      "a": "mount-16",
+      "b": "mount-19",
+      "ratio": 0.5007320452840792
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-15.json.gz",
+      "a": "mount-18",
+      "b": "mount-20",
+      "ratio": 0.5382869486803853
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-13.json.gz",
+      "a": "mount-13",
+      "b": "mount-18",
+      "ratio": 0.5156079061306731
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-13.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.5172191808373308
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-17.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.8137343474138891
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-17.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.8137343474138891
+    },
+    {
+      "file": "forge-TWIN_HULL-8.json.gz",
+      "a": "mount-21",
+      "b": "mount-26",
+      "ratio": 0.8359270835373553
+    },
+    {
+      "file": "forge-HYBRID-19.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.6519524294364057
+    },
+    {
+      "file": "forge-CORE_AND_NACELLES-6.json.gz",
+      "a": "mount-4",
+      "b": "mount-6",
+      "ratio": 0.5454396840248917
+    },
+    {
+      "file": "forge-CORE_AND_NACELLES-6.json.gz",
+      "a": "mount-25",
+      "b": "mount-27",
+      "ratio": 0.5454396840248917
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-2.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.4117869405930092
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-2.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.41178694059300963
+    },
+    {
+      "file": "forge-TWIN_HULL-10.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.544007001872546
+    },
+    {
+      "file": "forge-TWIN_HULL-10.json.gz",
+      "a": "mount-21",
+      "b": "mount-26",
+      "ratio": 0.5440070018725442
+    },
+    {
+      "file": "forge-HYBRID-12.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.6105744322954254
+    },
+    {
+      "file": "forge-HYBRID-12.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.6105744322954256
+    },
+    {
+      "file": "forge-TWIN_HULL-17.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.4236487368953583
+    },
+    {
+      "file": "forge-TWIN_HULL-17.json.gz",
+      "a": "mount-21",
+      "b": "mount-26",
+      "ratio": 0.4257570590637481
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-8.json.gz",
+      "a": "mount-13",
+      "b": "mount-18",
+      "ratio": 0.4158040750758044
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-8.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.41710346281041194
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-4.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.4224572840980643
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-12.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.6400855151858015
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-12.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.6400855151858007
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-1.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.45893058337460574
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-16.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.6046593198596089
+    },
+    {
+      "file": "forge-TWIN_HULL-1.json.gz",
+      "a": "mount-1",
+      "b": "mount-4",
+      "ratio": 0.940173728822475
+    },
+    {
+      "file": "forge-TWIN_HULL-1.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.5134671346813617
+    },
+    {
+      "file": "forge-TWIN_HULL-1.json.gz",
+      "a": "mount-21",
+      "b": "mount-26",
+      "ratio": 0.5134671346813603
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-2.json.gz",
+      "a": "mount-16",
+      "b": "mount-19",
+      "ratio": 0.3166320120378527
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-2.json.gz",
+      "a": "mount-18",
+      "b": "mount-20",
+      "ratio": 0.3579128935907182
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-17.json.gz",
+      "a": "mount-13",
+      "b": "mount-18",
+      "ratio": 0.32883825852941034
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-17.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.3298658780873137
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-10.json.gz",
+      "a": "mount-13",
+      "b": "mount-18",
+      "ratio": 0.3564712550150884
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-10.json.gz",
+      "a": "mount-19",
+      "b": "mount-21",
+      "ratio": 0.38320659914121946
+    },
+    {
+      "file": "forge-TWIN_HULL-3.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.43079431841947696
+    },
+    {
+      "file": "forge-TWIN_HULL-3.json.gz",
+      "a": "mount-21",
+      "b": "mount-26",
+      "ratio": 0.4329382011516577
+    },
+    {
+      "file": "forge-HYBRID-17.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.8137343474138891
+    },
+    {
+      "file": "forge-HYBRID-17.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.8137343474138891
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-7.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.8981585701843479
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-1.json.gz",
+      "a": "mount-12",
+      "b": "mount-18",
+      "ratio": 0.6146511572421461
+    },
+    {
+      "file": "forge-SPINE_AND_MODULES-1.json.gz",
+      "a": "mount-20",
+      "b": "mount-23",
+      "ratio": 0.6146511572421476
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-11.json.gz",
+      "a": "mount-16",
+      "b": "mount-19",
+      "ratio": 0.4118321446757848
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-11.json.gz",
+      "a": "mount-18",
+      "b": "mount-20",
+      "ratio": 0.4427195555264687
+    }
+  ]
+}

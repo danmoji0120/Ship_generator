@@ -1,3 +1,4 @@
+import { ArmorQARenderer, type ArmorView, type ArmorStage } from "../rendering/armor-qa";
 import "./gallery.css";
 import { MACRO_FAMILIES, type MacroFamily } from "../generation/macro/types";
 import { SilhouetteRenderer } from "../rendering/silhouette";
@@ -16,11 +17,12 @@ import { ShipViewer } from "../rendering/viewer";
 import { seedSequence, diversityReport } from "./diversity";
 import { shapeFixture, joinFixture } from "./fixtures";
 const app = document.getElementById("qa-app")!;
-app.innerHTML = `<header><div><small>PROCEDURAL SHIPYARD / V1.8</small><h1>Silhouette laboratory</h1><p>동일 문법, 서로 다른 설계. Shape와 Join을 함께 검증합니다.</p></div><a href="/">← Ship order</a></header><form id="qa-form"><label>Shipyard<select id="yard">${SHIPYARDS.map((y) => `<option value="${y.id}">${y.name}</option>`)}</select></label><label>Role<select id="role">${ROLES.map((r) => `<option ${r === "Cruiser" ? "selected" : ""}>${r}</option>`)}</select></label><label>Architecture<select id="architecture">${ARCHITECTURES.map((a) => `<option ${a === "BLOCK_ASSEMBLY" ? "selected" : ""}>${a}</option>`)}</select></label><label>Macro Family<select id="family"><option value="">Order driven</option>${MACRO_FAMILIES.map((f) => `<option>${f}</option>`)}</select></label><label>Projection<select id="projection"><option>Normal</option><option>ISOMETRIC</option><option>TOP</option><option>SIDE</option><option>FRONT</option><option>MASS</option></select></label><label>Scale<select id="scale"><option>normalized</option><option>fixed</option></select></label><label>Seed start<input id="start" type="number" min="0" max="4294967295" value="0"></label><label>Count<input id="count" type="number" min="1" max="40" value="20"></label><label class="check"><input id="neutral" type="checkbox" checked>Neutral silhouette</label><button>Build contact sheet</button></form><nav><button id="contact">Contact sheet</button><button id="shapes">Shape gallery / 11</button><button id="joins">Join gallery / 10</button><button id="bow">Bow / Stern</button><button id="integration">Integration / Armor</button><button id="report-download">↓ QA JSON</button></nav><p id="status" role="status"></p><section id="grid"></section><div id="thumbnail-stage" aria-hidden="true"></div>`;
+app.innerHTML = `<header><div><small>PROCEDURAL SHIPYARD / V1.8.1</small><h1>Silhouette laboratory</h1><p>동일 문법, 서로 다른 설계. Shape와 Join을 함께 검증합니다.</p></div><a href="/">← Ship order</a></header><form id="qa-form"><label>Shipyard<select id="yard">${SHIPYARDS.map((y) => `<option value="${y.id}">${y.name}</option>`)}</select></label><label>Role<select id="role">${ROLES.map((r) => `<option ${r === "Cruiser" ? "selected" : ""}>${r}</option>`)}</select></label><label>Architecture<select id="architecture">${ARCHITECTURES.map((a) => `<option ${a === "BLOCK_ASSEMBLY" ? "selected" : ""}>${a}</option>`)}</select></label><label>Macro Family<select id="family"><option value="">Order driven</option>${MACRO_FAMILIES.map((f) => `<option>${f}</option>`)}</select></label><label>Armor stage<select id="armor-stage"><option>COMPLETE</option><option>HULL_ONLY</option><option>PRIMARY</option><option>SECONDARY</option><option>REINFORCEMENT</option><option>SEAMS</option><option>NO_HARDPOINTS</option></select></label><label>Projection<select id="projection"><option>Normal</option><option>ISOMETRIC</option><option>TOP</option><option>SIDE</option><option>BOTTOM</option><option>LEFT</option><option>RIGHT</option><option>AFT</option><option>FRONT</option><option>MASS</option></select></label><label>Scale<select id="scale"><option>normalized</option><option>fixed</option></select></label><label>Seed start<input id="start" type="number" min="0" max="4294967295" value="0"></label><label>Count<input id="count" type="number" min="1" max="40" value="20"></label><label class="check"><input id="neutral" type="checkbox" checked>Neutral silhouette</label><button>Build contact sheet</button></form><nav><button id="contact">Contact sheet</button><button id="shapes">Shape gallery / 11</button><button id="joins">Join gallery / 10</button><button id="bow">Bow / Stern</button><button id="integration">Integration / Armor</button><button id="report-download">↓ QA JSON</button></nav><p id="status" role="status"></p><section id="grid"></section><div id="thumbnail-stage" aria-hidden="true"></div>`;
 const el = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 const viewer = new ShipViewer(el("thumbnail-stage"));
 const silhouetteRenderer = new SilhouetteRenderer(320);
+const armorRenderer = new ArmorQARenderer(320);
 let current: ShipBlueprint[] = [],
   report: unknown,
   busy = false;
@@ -67,14 +69,17 @@ async function renderGallery(
         rendered.surfaceFeatures = [];
       }
       const projection = el<HTMLSelectElement>("projection").value;
-      const src =
+      const armorStage = el<HTMLSelectElement>("armor-stage").value as ArmorStage;
+      const src = (armorStage !== "COMPLETE" || ["BOTTOM","LEFT","RIGHT","AFT"].includes(projection)) && mode === "contact"
+        ? armorRenderer.capture(b, armorStage, ["Normal", "MASS"].includes(projection) ? "ISOMETRIC" : projection as ArmorView, {neutral: true, scale: el<HTMLSelectElement>("scale").value === "fixed" ? "fixed" : "fit"}).pixels
+        :
         ["contact", "bow", "integration"].includes(mode) &&
         projection !== "Normal"
           ? silhouetteRenderer.capture(
               b,
               projection === "MASS"
                 ? "ISOMETRIC"
-                : (projection as "TOP" | "SIDE" | "FRONT" | "ISOMETRIC"),
+                : (projection as "TOP"|"SIDE"|"FRONT"|"ISOMETRIC"),
               el<HTMLSelectElement>("scale").value as "normalized" | "fixed",
               projection === "MASS",
             ).pixels

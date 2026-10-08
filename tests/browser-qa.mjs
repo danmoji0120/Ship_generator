@@ -148,10 +148,10 @@ for (const [i, [name, partial]] of cases.entries())
       ? [42, 2718, 742091]
       : [42]) {
     const o = { ...defaultOrder, ...partial };
-    const b = await page.evaluate(
-      ({ o, seed }) => window.shipyardQA.generate(o, seed),
+    const b = JSON.parse(await page.evaluate(
+      ({ o, seed }) => JSON.stringify(window.shipyardQA.generate(o, seed)),
       { o, seed },
-    );
+    ));
     assert.equal(b.seed, seed);
     assert.equal(b.role, o.role);
     assert.deepEqual(
@@ -162,7 +162,11 @@ for (const [i, [name, partial]] of cases.entries())
       window.shipyardQA.diagnostics(),
     );
     assert.equal(diagnostics.geometryFinite, true);
-    assert.ok(diagnostics.triangles > 0 && diagnostics.triangles < 30000);
+    // Preserve V1.8's 30k structural/equipment budget; add the actual closed panel
+    // triangles and the bounded eight-sided foundation geometry in V1.8.1.
+    const armorTriangles = b.layeredArmor?.budget.triangleCount ?? 0;
+    const foundationTriangles = b.hardpoints.filter(h => h.surfaceMount).length * 64;
+    assert.ok(diagnostics.triangles > 0 && diagnostics.triangles < 30000 + armorTriangles + foundationTriangles);
     assert.ok(diagnostics.camera.every(Number.isFinite));
     await page.waitForTimeout(140);
     await page
@@ -183,7 +187,7 @@ for (const [i, [name, partial]] of cases.entries())
     });
   }
 // UI seed input and same-seed button: compare both JSON and actual WebGL pixels.
-await page.evaluate((o) => window.shipyardQA.generate(o, 9001), defaultOrder);
+await page.evaluate((o) => { window.shipyardQA.generate(o, 9001); }, defaultOrder);
 await page.waitForTimeout(250);
 const first = await page.evaluate(() => ({
   json: JSON.stringify(window.shipyardQA.getBlueprint()),
@@ -210,6 +214,13 @@ for (const mode of [
   "Integration",
   "Armor",
   "Equipment",
+  "Hull Only",
+  "Armor Coverage",
+  "Armor Panels",
+  "Panel Seams",
+  "Secondary Armor",
+  "Hardpoint Mounts",
+  "Complete Ship",
   "Normal",
 ]) {
   await page.locator(`[data-debug="${mode}"]`).click();
@@ -314,7 +325,7 @@ const report = {
   pixelIdentical: true,
   orbit: true,
   zoom: true,
-  debugViews: 10,
+  debugViews: 17,
   grammarFixtures,
   jsonExport: true,
   mobileOverflow: false,

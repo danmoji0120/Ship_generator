@@ -1,0 +1,144 @@
+{
+  "tallFoundations": [
+    {
+      "file": "forge-STACKED_BLOCKS-6.json.gz",
+      "hardpoint": "mount-15",
+      "height": 30.390064584643408,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-6.json.gz",
+      "hardpoint": "mount-26",
+      "height": 1.816258128432991,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-12.json.gz",
+      "hardpoint": "mount-0",
+      "height": 30.49926244391793,
+      "radius": 5.1000000000000005,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-12.json.gz",
+      "hardpoint": "mount-16",
+      "height": 2.0891978312014485,
+      "radius": 3.105,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-14.json.gz",
+      "hardpoint": "mount-23",
+      "height": 2.0997154258511017,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-14.json.gz",
+      "hardpoint": "mount-26",
+      "height": 1.9380372073986998,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-5.json.gz",
+      "hardpoint": "mount-0",
+      "height": 34.74827800019445,
+      "radius": 5.1000000000000005,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-8.json.gz",
+      "hardpoint": "mount-12",
+      "height": 34.39620700831255,
+      "radius": 5.1000000000000005,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-8.json.gz",
+      "hardpoint": "mount-15",
+      "height": 33.700906991723826,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-4.json.gz",
+      "hardpoint": "mount-9",
+      "height": 1.8066206904416149,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-4.json.gz",
+      "hardpoint": "mount-19",
+      "height": 1.8066206904416149,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-4.json.gz",
+      "hardpoint": "mount-26",
+      "height": 2.0164357203866503,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-4.json.gz",
+      "hardpoint": "mount-30",
+      "height": 1.978805560622375,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-1.json.gz",
+      "hardpoint": "mount-15",
+      "height": 1.8011555474285459,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-1.json.gz",
+      "hardpoint": "mount-23",
+      "height": 2.0410420190698453,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-1.json.gz",
+      "hardpoint": "mount-26",
+      "height": 1.9302933195541183,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-1.json.gz",
+      "hardpoint": "mount-30",
+      "height": 2.0369882567733884,
+      "radius": 2.4,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-16.json.gz",
+      "hardpoint": "mount-0",
+      "height": 34.60193514547348,
+      "radius": 5.1000000000000005,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-2.json.gz",
+      "hardpoint": "mount-13",
+      "height": 2.2144516201437936,
+      "radius": 3.105,
+      "length": 300
+    },
+    {
+      "file": "forge-STACKED_BLOCKS-10.json.gz",
+      "hardpoint": "mount-30",
+      "height": 1.9407829805939454,
+      "radius": 2.4,
+      "length": 300
+    }
+  ]
+}

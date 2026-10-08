@@ -23,6 +23,10 @@ export async function renderSession() {
   await page.waitForFunction(() => window.shipyardQA?.getBlueprint());
   await page.evaluate(async () => {
     const { ShipViewer } = await import("/src/rendering/viewer.ts");
+    // QA performs explicit captures: avoid two continuous SwiftShader render loops.
+    // This changes scheduling only, not geometry, camera or lighting.
+    const raf = window.requestAnimationFrame.bind(window);
+    window.requestAnimationFrame = callback => callback.name === "animate" || /this\.renderer\.render\(/.test(callback.toString()) ? 0 : raf(callback);
     const { generateBlueprint, DEFAULT_ORDER } =
       await import("/src/generation/generate.ts");
     const stage = document.createElement("div");
@@ -30,6 +34,7 @@ export async function renderSession() {
       "position:fixed;inset:0;width:960px;height:620px;background:#162535;z-index:100";
     document.body.append(stage);
     const viewer = new ShipViewer(stage);
+    viewer.disposed = true; // Pause its animation loop; snapshot/render below stay available.
     window.integrationQA = {
       viewer,
       generate: generateBlueprint,
@@ -47,6 +52,7 @@ export async function renderSession() {
           viewer.camera.updateProjectionMatrix();
           viewer.controls.update();
         }
+        viewer.renderer.render(viewer.scene, viewer.camera);
         await new Promise((resolve) =>
           requestAnimationFrame(() => requestAnimationFrame(resolve)),
         );

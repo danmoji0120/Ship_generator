@@ -1,3 +1,4 @@
+import { buildLayeredArmor } from "./integration/armor";
 import { createMacroPlan } from "./macro/plan";
 import { measureMacro } from "./macro/measurement";
 import type { MacroFamily, MacroDesignPlan } from "./macro/types";
@@ -28,11 +29,19 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7";
+    version?: "1.6" | "1.7" | "1.8";
     family?: MacroFamily;
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
+  if (!qaOptions?.version) {
+    const b = generateBlueprint(input, seed, { ...qaOptions, version: "1.8" });
+    buildLayeredArmor(b);
+    b.generatorVersion = "1.8.1";
+    const errors = validateBlueprint(b);
+    if (errors.length) throw new Error(`Invalid layered armor: ${errors.join("; ")}`);
+    return b;
+  }
   const order = structuredClone(input),
     yard = getShipyard(order.shipyardId);
   seed = normalizeSeed(seed);
@@ -52,7 +61,7 @@ export function generateBlueprint(
     throw new Error("Invalid Ship Order");
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
   if (qaOptions?.architecture) selection.grammar = qaOptions.architecture;
-  const initialPlan = !qaOptions?.version
+  const initialPlan = (!qaOptions?.version || qaOptions.version === "1.8")
     ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family)
     : undefined;
   const selectedFamily = initialPlan?.family;
@@ -64,10 +73,10 @@ export function generateBlueprint(
         (seed + Math.imul(candidate + 1, 0x9e3779b9)) >>> 0,
       ),
       grammar =
-        qaOptions?.version && selection.grammar === "HYBRID" && candidate >= 3
+        qaOptions?.version !== "1.8" && selection.grammar === "HYBRID" && candidate >= 3
           ? "SPINE_AND_MODULES"
           : selection.grammar;
-    const macro = !qaOptions?.version
+    const macro = (!qaOptions?.version || qaOptions.version === "1.8")
       ? candidate === 0
         ? initialPlan
         : createMacroPlan(
@@ -271,4 +280,9 @@ export function generateBlueprintV17(
   options?: { architecture?: import("../blueprint/types").ArchitectureGrammar },
 ) {
   return generateBlueprint(input, seed, { ...options, version: "1.7" });
+}
+
+/** Frozen V1.8 reference path: no layered armor is added to legacy exports. */
+export function generateBlueprintV18(input: ShipOrder, seed: number, options?: { architecture?: import("../blueprint/types").ArchitectureGrammar; family?: MacroFamily }) {
+  return generateBlueprint(input, seed, { ...options, version: "1.8" });
 }

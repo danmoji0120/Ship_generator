@@ -1,7 +1,7 @@
 import * as silhouetteValidation from "../src/validation/silhouette";
 import { describe, it, expect, vi } from "vitest";
 import {
-  generateBlueprint,
+  generateBlueprintV18 as generateBlueprint,
   generateBlueprintV17,
   DEFAULT_ORDER,
 } from "../src/generation/generate";

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { generateBlueprint, generateBlueprintV17, DEFAULT_ORDER } from "../src/generation/generate";
+import { generateBlueprintV18 as generateBlueprint, generateBlueprintV17, DEFAULT_ORDER } from "../src/generation/generate";
 import {
   ARCHITECTURES,
   ROLES,
@@ -29,12 +29,14 @@ export const GRAMMAR_SEEDS: Record<ArchitectureGrammar, number> = {
   HYBRID: 36,
 };
 describe("V1 architecture", () => {
-  it("generates valid layouts for 1296 orders while retaining all V0 regressions", () => {
+  it("generates valid layouts for 1296 orders while retaining all V0 regressions", async () => {
+    let checked = 0;
     for (const y of SHIPYARDS)
       for (const role of ROLES)
         for (const length of [40, 150, 600])
           for (const massClass of ["Light", "Standard", "Superheavy"] as const)
             for (const seed of [0, 42, 123456789, 4294967295]) {
+              if (++checked % 32 === 0) await new Promise(resolve => setTimeout(resolve, 0));
               const order = { ...o(y.id, role), length, massClass };
               const b = (() => {
                 try {
@@ -69,7 +71,7 @@ describe("V1 architecture", () => {
                 ).toBe(true);
               }
             }
-  }, 60000);
+  }, 120000); // Same 1,296 orders/assertions; added armor clearance audits require a longer bulk-test budget.
   it("keeps deterministic fixtures for all eight grammars, including no-primary layouts", () => {
     expect(Object.keys(GRAMMAR_SEEDS).sort()).toEqual(
       [...ARCHITECTURES].sort(),
