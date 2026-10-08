@@ -33,6 +33,23 @@ PILOT_OUTPUT=qa/v1.8.2/structural-pilot/local-review node tests/structural-armor
 
 ## Blueprint / 생성 순서
 
+### V1.8.2 Functional Exterior — WEDGE_CITADEL 한 척 검토
+
+승인된 상부·하부 **Seed 7 및 세 Family 저장본은 기준점으로 그대로 보존**했습니다. 이번 후속 단계는 `qa/v1.8.2/ventral-flow/seed7-final/blueprint.json`의 **Aegis / Cruiser / 300m / MONOLITHIC / WEDGE_CITADEL** 한 척에만 기능 외장을 통합합니다. 29개 구조 매스, 채널·복부 포켓, 모든 Foundation, 31개 Hardpoint 좌표·법선과 엔진을 변경하지 않습니다. 타일형 Armor Language와 220척 확장은 보류 상태입니다.
+
+`buildFunctionalExteriorReview(source)`는 기존 Prefab Registry의 선택적 `PrefabPlacement.assembly`에 닫힌 체적, 접촉점, 장비 참조, 열린 배기·정적 사격 공간을 저장합니다. 넓은 장갑 마감면, 무장 보호 하우징·미사일 해치·센서, 함교 창, 열린 환형 추진 보호부와 선택적인 정비 펌프를 추가합니다. `functionalExterior`에 검토 범위, 마감 재질, 장갑 접촉 면적, 채널 점유율과 Bounds를 기록합니다. Renderer는 저장된 메시만 최대 6개 재질 배치로 재현하며, 과거 JSON에는 이를 추가하지 않습니다. 전투·조준·실제 무기 동작은 구현하지 않습니다.
+
+```bash
+npx vitest run tests/functional-exterior.test.ts
+# dev 서버 실행 후 기존 증거를 덮어쓰지 않는 출력 폴더 사용
+FUNCTIONAL_OUTPUT=qa/v1.8.2/functional-exterior/local-review node tests/functional-exterior-qa.mjs
+FUNCTIONAL_OUTPUT=qa/v1.8.2/functional-exterior/local-review python tests/compose-functional-exterior.py
+# production preview의 기존 UI만 검증; Gallery / 대량 생성을 실행하지 않음
+PRODUCTION_URL=http://localhost:4173 node tests/functional-ui-smoke.mjs
+```
+
+[다섯 시점 / 전후 비교 / 확대 렌더와 한계](qa/v1.8.2/FUNCTIONAL_EXTERIOR_REVIEW.md). 이는 일반 생성기를 V1.8.2로 출시한 것이 아니라, 승인된 단일 설계의 완성형 외장 검토입니다. 기존 V1.8.1 생성 경로와 저장 JSON 계약을 유지합니다.
+
 `schemaVersion: 2`, `generatorVersion: "1.8.1"`. 선택적 `layeredArmor`에 실제 면, 분할 패널, 계층, 접촉점, 두께, Chamfer, Gap, Seam, Bounds, 피복 면적과 예외 사유를 저장합니다. 선택적 `Hardpoint.surfaceMount`는 장갑·Surface·Socket 참조, 안정적인 면 좌표, 표면 법선과 장착 방향, 실제 Foundation Geometry 및 Clearance를 보존합니다. Renderer는 RNG를 실행하거나 새 패널을 배치하지 않습니다.
 
 1. V1.8의 Architecture, Composition, Macro와 Structural Hull을 생성합니다. 기존 Hardpoint 위치는 설치 계획으로 사용합니다.

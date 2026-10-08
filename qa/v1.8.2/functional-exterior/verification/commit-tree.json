@@ -1,0 +1,22 @@
+{
+  "selectedTreeOnly": true,
+  "excludedPreviousDrafts": true,
+  "testFiles": 5,
+  "testsPassed": 40,
+  "testsFailed": 0,
+  "typeScriptAndProductionBuild": "PASS",
+  "jsonAnd26RawPNGByteMatches": true,
+  "comparedFiles": 27,
+  "browserErrors": [],
+  "jsonDeterminism": true,
+  "webglDeterminism": true,
+  "validationIssues": [],
+  "assemblyTiming": {
+    "samples": 7,
+    "medianMs": 116.1000000089407,
+    "p95Ms": 252.90000000596046,
+    "includes": "clone + functional assembly + full functional validation; not whole order generation"
+  },
+  "initialBuildMs": 285.6000000089407,
+  "testSuites": 10
+}

@@ -2,13 +2,14 @@ import * as THREE from "three";
 import type { AnyShipBlueprint } from "../blueprint/types";
 export function shipMaterials(b: AnyShipBlueprint) {
   const theme = b.materialTheme;
+  const finish=b.schemaVersion===2?b.functionalExterior?.finishPalette:undefined;
   const hull = new THREE.MeshStandardMaterial({
-    color: theme.hull,
+    color: finish?.hull??theme.hull,
     metalness: 0.48,
     roughness: theme.roughness,
   });
   // Object-space panels: no UV editor or texture asset; repeating bands follow the ship axis.
-  hull.onBeforeCompile = (shader) => {
+  if(!(b.schemaVersion===2&&b.functionalExterior))hull.onBeforeCompile = (shader) => {
     shader.vertexShader = shader.vertexShader
       .replace(
         "#include <common>",
@@ -35,7 +36,7 @@ export function shipMaterials(b: AnyShipBlueprint) {
       );
   };
   const secondary = new THREE.MeshStandardMaterial({
-    color: theme.secondary,
+    color: finish?.secondary??theme.secondary,
     roughness: theme.roughness,
     metalness: 0.5,
   });
@@ -45,15 +46,16 @@ export function shipMaterials(b: AnyShipBlueprint) {
     metalness: 0.3,
   });
   const mount = new THREE.MeshStandardMaterial({
-    color: "#33434e",
+    color: finish?.mount??"#33434e",
     metalness: 0.65,
     roughness: 0.5,
   });
   const engine = new THREE.MeshStandardMaterial({
-    color: "#15252e",
+    color: finish?.engine??"#15252e",
     roughness: 0.4,
     metalness: 0.8,
   });
-  const glow = new THREE.MeshBasicMaterial({ color: theme.engine });
-  return { hull, secondary, accent, mount, engine, glow };
+  const glow = new THREE.MeshBasicMaterial({ color: finish?.glow??theme.engine });
+  const armor=new THREE.MeshStandardMaterial({color:finish?.armor??new THREE.Color(theme.hull).multiplyScalar(1.06),roughness:.64,metalness:.35});
+  return { armor, hull, secondary, accent, mount, engine, glow };
 }

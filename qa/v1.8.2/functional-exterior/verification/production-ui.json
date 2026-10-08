@@ -1,0 +1,12 @@
+{
+  "productionBuild": true,
+  "defaultGeneratorVersion": "1.8.1",
+  "newReviewNotAutoApplied": true,
+  "seed7Regeneration": true,
+  "jsonExport": true,
+  "debugModes": 16,
+  "cameraControls": true,
+  "orbitZoomEvents": true,
+  "consoleErrors": [],
+  "scope": "existing UI smoke; no gallery or bulk QA"
+}

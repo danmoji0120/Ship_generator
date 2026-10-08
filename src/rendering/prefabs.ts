@@ -1,3 +1,4 @@
+import {renderFunctionalPrefabs} from "./functional";
 import * as THREE from "three";
 import { exteriorGeometry } from "./exterior";
 import type { PrefabPlacement, Vec3 } from "../blueprint/types";
@@ -24,7 +25,9 @@ export function renderPrefabs(
     roughness: 0.62,
     side: THREE.DoubleSide,
   });
+  root.add(renderFunctionalPrefabs(placements,materials));
   for (const p of placements) {
+    if(p.assembly)continue;
     const g = new THREE.Group();
     g.name = p.id;
     g.userData.prefabId = p.id;

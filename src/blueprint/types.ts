@@ -359,6 +359,8 @@ export interface PrefabPlacement {
     | "propulsion"
     | "machinery";
   exterior?: ExteriorDefinition;
+  /** Optional stored geometry for functional kits; legacy prefabs retain their renderer. */
+  assembly?: import("../generation/functional/types").ParametricPrefabAssembly;
 }
 export type ArmorClass =
   "PRIMARY" | "SECONDARY" | "EDGE" | "JOINT" | "MACHINERY";
@@ -435,6 +437,7 @@ export interface ShipBlueprint extends Omit<
   layeredArmor?: import("../generation/armor/types").LayeredArmor;
   /** QA-only structural depth review of three fixed family pairs; no automatic language rollout. */
   structuralArmorPilot?: import("../generation/armor/structural-pilot/types").StructuralArmorPilot;
+  functionalExterior?: import("../generation/functional/types").FunctionalExteriorReview;
   macroDesign?: import("../generation/macro/types").MacroDesignPlan;
   silhouette: SilhouetteMetrics;
 }

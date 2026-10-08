@@ -10,6 +10,7 @@ import {
   volumeBounds,
   exposedVolumeSurface,
 } from "../generation/architecture/volumes";
+import {validateFunctionalExterior} from "../generation/functional/validate";
 import {stationCacheEqual} from "./station-cache";
 import { shapeStations } from "../generation/shapes/definition";
 import { SHAPE_KINDS, JOIN_TYPES } from "../blueprint/types";
@@ -268,6 +269,10 @@ export function validateArchitecture(b: ShipBlueprint) {
       errors.push("Invalid prefab " + p.id);
       continue;
     }
+    if(p.assembly){
+      if(!b.functionalExterior?.prefabIds.includes(p.id))errors.push("Unreferenced functional assembly " + p.id);
+      continue;
+    }
     if (p.socket.kind === "HULL_SIDE" || p.socket.kind === "HULL_FACE") {
       const v = volumes.get(p.socket.hostId);
       if (!v || !containsVolume(v, p.socket.position, l * 0.003)) {
@@ -296,6 +301,7 @@ export function validateArchitecture(b: ShipBlueprint) {
   }
   if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2")))
     errors.push(...validateIntegration(b));
+  if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
   if (b.structuralArmorPilot) errors.push(...validateStructuralArmorPilot(b).issues);
   const d = b.dimensions;
   if (

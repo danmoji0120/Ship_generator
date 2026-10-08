@@ -1,0 +1,565 @@
+{
+  "source": "qa/v1.8.2/ventral-flow/seed7-final/blueprint.json",
+  "sourceSha256": "d47ca7bd81b9652eb6d29737bdecb60dd892ad115cb8c3f2f47d766d37d53964",
+  "validation": {
+    "issues": [],
+    "checks": [
+      "Approved mass geometry retained; broad finishing skins seated on stored stations",
+      "Valid prefab registry, source foundations and actual armor/root contacts",
+      "Closed finite solids, positive volume and authoritative Bounds",
+      "Sampled exhaust/thermal and neighboring mount reservation clearance",
+      "Static outward weapon aperture corridors above existing armor",
+      "Low service occupancy with deep residual maintenance space"
+    ]
+  },
+  "generationMs": 135.70000000298023,
+  "assemblyTiming": {
+    "samples": 7,
+    "medianMs": 45.19999998807907,
+    "p95Ms": 87.6000000089407,
+    "includes": "clone + functional assembly + full functional validation; not whole order generation"
+  },
+  "kitCount": 61,
+  "partCount": 207,
+  "finish": [
+    {
+      "prefabId": "finish-fore-axial-guard",
+      "parentArmorId": "fore-axial-guard",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 3143.4312859345537
+    },
+    {
+      "prefabId": "finish-main-citadel",
+      "parentArmorId": "main-citadel",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 5170.458652113805
+    },
+    {
+      "prefabId": "finish-forward-shoulder--1",
+      "parentArmorId": "forward-shoulder--1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 3100.5338108412425
+    },
+    {
+      "prefabId": "finish-mid-shoulder--1",
+      "parentArmorId": "mid-shoulder--1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 2892.5234311396403
+    },
+    {
+      "prefabId": "finish-rear-shoulder--1",
+      "parentArmorId": "rear-shoulder--1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 2074.93808163086
+    },
+    {
+      "prefabId": "finish-forward-shoulder-1",
+      "parentArmorId": "forward-shoulder-1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 3100.6138150613765
+    },
+    {
+      "prefabId": "finish-mid-shoulder-1",
+      "parentArmorId": "mid-shoulder-1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 2892.5164328423934
+    },
+    {
+      "prefabId": "finish-rear-shoulder-1",
+      "parentArmorId": "rear-shoulder-1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 2074.927805528992
+    },
+    {
+      "prefabId": "finish-stern-housing--1",
+      "parentArmorId": "stern-housing--1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 432.52744758500944
+    },
+    {
+      "prefabId": "finish-stern-housing-1",
+      "parentArmorId": "stern-housing-1",
+      "direction": "TOP",
+      "thickness": 0.28,
+      "contactAreaM2": 432.5274475850094
+    },
+    {
+      "prefabId": "finish-belt--1-fore",
+      "parentArmorId": "belt--1-fore",
+      "direction": "PORT",
+      "thickness": 0.34,
+      "contactAreaM2": 1834.7040233642483
+    },
+    {
+      "prefabId": "finish-belt--1-mid",
+      "parentArmorId": "belt--1-mid",
+      "direction": "PORT",
+      "thickness": 0.34,
+      "contactAreaM2": 1667.9323831540692
+    },
+    {
+      "prefabId": "finish-belt--1-aft",
+      "parentArmorId": "belt--1-aft",
+      "direction": "PORT",
+      "thickness": 0.34,
+      "contactAreaM2": 542.5423516025855
+    },
+    {
+      "prefabId": "finish-belt-1-fore",
+      "parentArmorId": "belt-1-fore",
+      "direction": "STARBOARD",
+      "thickness": 0.34,
+      "contactAreaM2": 1834.7040233642483
+    },
+    {
+      "prefabId": "finish-belt-1-mid",
+      "parentArmorId": "belt-1-mid",
+      "direction": "STARBOARD",
+      "thickness": 0.34,
+      "contactAreaM2": 1667.9323831540692
+    },
+    {
+      "prefabId": "finish-belt-1-aft",
+      "parentArmorId": "belt-1-aft",
+      "direction": "STARBOARD",
+      "thickness": 0.34,
+      "contactAreaM2": 542.5423516025855
+    },
+    {
+      "prefabId": "finish-ventral-keel",
+      "parentArmorId": "ventral-keel",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 3149.112151948817
+    },
+    {
+      "prefabId": "finish-ventral-fore-pan",
+      "parentArmorId": "ventral-fore-pan",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 4351.954659554536
+    },
+    {
+      "prefabId": "finish-belly-port-casemate",
+      "parentArmorId": "belly-port-casemate",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 4310.590107783725
+    },
+    {
+      "prefabId": "finish-belly-starboard-fore",
+      "parentArmorId": "belly-starboard-fore",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 2084.37861403594
+    },
+    {
+      "prefabId": "finish-belly-starboard-aft",
+      "parentArmorId": "belly-starboard-aft",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 1128.6511534770216
+    },
+    {
+      "prefabId": "finish-ventral-service-sill",
+      "parentArmorId": "ventral-service-sill",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 312.19352430771374
+    },
+    {
+      "prefabId": "finish-ventral-drive-cradle",
+      "parentArmorId": "ventral-drive-cradle",
+      "direction": "BOTTOM",
+      "thickness": 0.28,
+      "contactAreaM2": 2124.4659767217513
+    }
+  ],
+  "serviceRegions": [
+    {
+      "id": "service-lane--1",
+      "purpose": "MAINTENANCE",
+      "prefabIds": [
+        "service-service-lane--1--23",
+        "service-service-lane--1--4"
+      ],
+      "occupiedFraction": 0.24830313870872936,
+      "remainingDepth": 7.544932038035697
+    },
+    {
+      "id": "service-lane-1",
+      "purpose": "MAINTENANCE",
+      "prefabIds": [
+        "service-service-lane-1--23",
+        "service-service-lane-1--4"
+      ],
+      "occupiedFraction": 0.24830313870872936,
+      "remainingDepth": 7.544932038035697
+    },
+    {
+      "id": "ventral-maintenance-pocket",
+      "purpose": "MAINTENANCE",
+      "prefabIds": [
+        "belly-service-equipment"
+      ],
+      "occupiedFraction": 0.08364682462841629,
+      "remainingDepth": 7.5000000000000036
+    }
+  ],
+  "sourceUnchanged": true,
+  "structurePreserved": true,
+  "existingPrefabsPreserved": true,
+  "noMountArmorPreserved": true,
+  "jsonDeterminism": true,
+  "webglDeterminism": true,
+  "shots": [
+    {
+      "name": "before-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "before-neutral-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "complete-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "neutral-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "before-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "before-neutral-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "complete-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "neutral-SIDE",
+      "stage": "COMPLETE",
+      "view": "SIDE",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "before-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "before-neutral-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "complete-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "neutral-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "before-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "before-neutral-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "complete-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "neutral-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "before-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "before-neutral-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 205,
+        "triangles": 9228
+      }
+    },
+    {
+      "name": "complete-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "neutral-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 101,
+        "triangles": 18864
+      }
+    },
+    {
+      "name": "weapon-closeup",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 58,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 48,
+        "triangles": 16684
+      }
+    },
+    {
+      "name": "command-closeup",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 62,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 20,
+        "triangles": 16076
+      }
+    },
+    {
+      "name": "drive-closeup",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 90,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 59,
+        "triangles": 17880
+      }
+    },
+    {
+      "name": "maintenance-closeup",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 70,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 45,
+        "triangles": 16728
+      }
+    },
+    {
+      "name": "ventral-pocket-closeup",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 70,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 35,
+        "triangles": 16252
+      }
+    },
+    {
+      "name": "complete-no-hardpoints",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 1200,
+      "diagnostics": {
+        "calls": 70,
+        "triangles": 8812
+      }
+    }
+  ],
+  "errors": []
+}

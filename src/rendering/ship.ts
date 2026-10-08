@@ -21,7 +21,7 @@ const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
     const copy=structuredClone(b);
-    if(mode==="Hull Only")copy.structuralArmorPilot=undefined;
+    if(mode==="Hull Only"){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
     if(mode==="Hull Only"||mode==="Armor Panels"||mode==="Panel Seams"||mode==="Armor Coverage"||mode==="Secondary Armor") {
       copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];
       copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));
@@ -89,9 +89,9 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
               ? p.exterior &&
                 ["integration", "bow", "stern"].includes(p.exterior.phase)
               : mode === "Armor"
-                ? p.exterior?.armorClass
+                ? p.exterior?.armorClass || (p.assembly && p.functionality==="protection")
                 : mode === "Equipment"
-                  ? p.exterior?.phase === "equipment" ||
+                  ? p.assembly || p.exterior?.phase === "equipment" ||
                     p.kind === "RADIATOR_BANK"
                   : true,
           ),
@@ -229,6 +229,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     root.add(g);
   }
   for (const h of b.hardpoints) {
+    if(b.schemaVersion===2&&mode==="Normal"&&b.functionalExterior?.replacedHardpointVisuals.includes(h.id)&&b.prefabPlacements?.some(p=>p.assembly?.equipmentIds.includes(h.id)))continue;
     if(h.surfaceMount) {
       const foundation=new THREE.Mesh(panelGeometry(h.surfaceMount.foundation.solid),categoryMaterial("Hardpoints",m.secondary));
       foundation.userData.mountFoundation=h.surfaceMount.foundation.id;foundation.receiveShadow=true;root.add(foundation);
