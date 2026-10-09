@@ -4,17 +4,17 @@ import{armorSurfaces,localPoint,worldDirection,REGION_NORMAL}from'./surfaces';
 import{solidTriangles,normal,inPolygon,area,cross}from'../armor/panels';
 import{dot,sub,add,mul,boundsOf}from'../integration/contours';
 import{validatePattern}from'./plan';
-import{candidateIssues,collisionScene}from'./collision';
+import{candidateIssues,collisionScene,resetCollisionCache}from'./collision';
 export function validateWeaponLayout(b:ShipBlueprint){
- const w=b.weaponLayout;if(!w)return{issues:[],checks:[]};const issues:string[]=[],surfaces=armorSurfaces(b),scene=collisionScene(b);
- if(b.generatorVersion!=='1.8.3'||w.status!=='one-ship-review'||b.seed!==7||b.order.length!==300||b.shipyardId!=='aegis'||b.role!=='Cruiser'||b.macroDesign?.family!=='WEDGE_CITADEL'||b.architecture.grammar!=='MONOLITHIC')issues.push('Invalid weapon review scope');
- if(new Set(w.mounts.map(m=>m.id)).size!==w.mounts.length||w.mounts.length!==b.hardpoints.length||w.mounts.length>w.budget.countLimit)issues.push('Invalid mount IDs/count');
- if(JSON.stringify([...w.retiredHardpointIds].sort())!==JSON.stringify(b.structuralArmorPilot!.mounts.map(m=>m.hardpointId).sort())||JSON.stringify(w.supersededFoundationIds)!==JSON.stringify(w.retiredHardpointIds))issues.push('Invalid retired baseline mount contract');
+ resetCollisionCache();const w=b.weaponLayout;if(!w)return{issues:[],checks:[]};const issues:string[]=[],surfaces=armorSurfaces(b),scene=collisionScene(b,surfaces);
+ if(!b.productionDesign&&(b.generatorVersion!=='1.8.3'||w.status!=='one-ship-review'||b.seed!==7||b.order.length!==300||b.shipyardId!=='aegis'||b.role!=='Cruiser'||b.macroDesign?.family!=='WEDGE_CITADEL'||b.architecture.grammar!=='MONOLITHIC'))issues.push('Invalid weapon review scope');
+ if(new Set(w.mounts.map(m=>m.id)).size!==w.mounts.length||w.mounts.length!==b.hardpoints.filter(h=>h.type!=='Spinal').length||w.mounts.length>w.budget.countLimit)issues.push('Invalid mount IDs/count');
+ if(!b.productionDesign&&(JSON.stringify([...w.retiredHardpointIds].sort())!==JSON.stringify(b.structuralArmorPilot!.mounts.map(m=>m.hardpointId).sort())||JSON.stringify(w.supersededFoundationIds)!==JSON.stringify(w.retiredHardpointIds)))issues.push('Invalid retired baseline mount contract');
  if(new Set(w.groups.map(g=>g.id)).size!==w.groups.length)issues.push('Duplicate layout group IDs');
  const active=w.mounts.map(m=>({mount:m,assembly:b.prefabPlacements!.find(p=>p.id===m.equipment.prefabId)?.assembly}));
  let cost=0;const counts={TOP:0,BOTTOM:0,PORT:0,STARBOARD:0};
  for(const group of w.groups){
-  try{validatePattern(group,new Set([...(b.prefabPlacements??[]).map(p=>p.id),...b.engines.map(e=>e.id),...b.structuralArmorPilot!.channels.map(c=>c.id),...(b.structuralArmorPilot!.ventral?.recesses??[]).map(c=>c.id)]));}catch(e){issues.push((e as Error).message);}
+  try{validatePattern(group,new Set([...(b.prefabPlacements??[]).map(p=>p.id),...b.engines.map(e=>e.id),...(b.productionDesign?.channels??b.structuralArmorPilot?.channels??[]).map(c=>c.id),...(b.structuralArmorPilot?.ventral?.recesses??[]).map(c=>c.id)]));}catch(e){issues.push((e as Error).message);}
   const mounts=w.mounts.filter(m=>m.groupId===group.id);
   if(mounts.length&&mounts.length!==group.members.length)issues.push(`Partial group ${group.id}`);
   if(!mounts.length&&!w.omissions.some(o=>o.groupId===group.id))issues.push(`Unreported missing group ${group.id}`);
@@ -57,8 +57,13 @@ export function validateWeaponLayout(b:ShipBlueprint){
   if(JSON.stringify(boundsOf(equipmentVertices))!==JSON.stringify(m.equipment.bounds)||JSON.stringify(boundsOf(equipmentVertices.map(p=>localPoint(m.position,m.frame,p))))!==JSON.stringify(m.equipment.localBounds))issues.push(`Equipment bounds cache ${m.id}`);
   issues.push(...candidateIssues(b,m,a,active.filter(o=>o.mount.id!==m.id&&o.assembly).map(o=>({mount:o.mount,assembly:o.assembly!})),scene));
  }
+ if(b.productionDesign){
+  const spinal=b.hardpoints.filter(h=>h.type==='Spinal'),integrated=w.integrated??[];
+  if(integrated.length!==spinal.length||new Set(integrated.map(m=>m.hardpointId)).size!==integrated.length||w.budget.integratedReserve!==integrated.reduce((n,m)=>n+m.standard.cost,0))issues.push('Invalid integrated XL budget/count');
+  for(const m of integrated)if(!spinal.some(h=>h.id===m.hardpointId)||m.category!=='SPINAL'||JSON.stringify(m.standard)!==JSON.stringify(mountStandard('XL',b.order.length))||!b.productionDesign.zones.some(z=>z.id===m.reservationId&&z.equipmentId===m.hardpointId))issues.push(`Invalid integrated XL reservation ${m.hardpointId}`);
+ }
  if(cost!==w.budget.allocated||cost>w.budget.available||JSON.stringify(counts)!==JSON.stringify(w.budget.byRegion))issues.push('Invalid weapon budget distribution');
- if(JSON.stringify(b.functionalExterior?.overallBounds)!==JSON.stringify(w.overallBounds)||active.some(o=>o.assembly?.parts.some(p=>(['x','y','z']as const).some(k=>p.bounds.min[k]<w.overallBounds.min[k]-.001||p.bounds.max[k]>w.overallBounds.max[k]+.001))))issues.push('Weapon overall bounds do not include installations');
+ if(JSON.stringify((b.productionDesign?.overallBounds??b.functionalExterior?.overallBounds))!==JSON.stringify(w.overallBounds)||active.some(o=>o.assembly?.parts.some(p=>(['x','y','z']as const).some(k=>p.bounds.min[k]<w.overallBounds.min[k]-.001||p.bounds.max[k]>w.overallBounds.max[k]+.001))))issues.push('Weapon overall bounds do not include installations');
  if(w.prefabIds.length!==w.mounts.length||new Set(w.prefabIds).size!==w.mounts.length)issues.push('Invalid weapon prefab references');
  return{issues:[...new Set(issues)],checks:['Shared physical standards and independent categories','Actual final armor triangles, 17 footprint contacts and local normal frame','Atomic bilateral/centerline groups; explicit rejected candidates','Oriented equipment envelopes and reciprocal solid probes','Protected exhaust/thermal openings and sampled static local firing arcs','Approved source armor retained; inactive legacy foundations preserved as archive']};
 }

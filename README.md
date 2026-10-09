@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.1 — Omnidirectional Armor & Surface Mounts
+# Procedural Shipyard V1.8.4 — Unified Procedural Ship Generator
 
-V1.8의 Macro Silhouette와 StructuralVolume을 그대로 유지하고, **실제 선체 표면 전체를 기하학적 장갑판으로 마감**합니다. 장갑은 낮고 넓은 닫힌 메시이며 상부 장식이나 거대한 추가 장갑 블록을 생성하지 않습니다. 외부 Hardpoint는 완성된 장갑판 위의 Foundation에 설치합니다.
+일반 주문서의 기본 생성기는 **V1.8.4**입니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -8,6 +8,52 @@ npm run dev
 npm test
 npm run build
 ```
+
+## V1.8.4 Production 통합
+
+`generateBlueprint(order, seed)` → 정규화/Architecture·Macro → 실제 StructuralVolume·Connector → 기능 개구부 예약 → 대형 장갑/복부 구조 → 남은 노출 면의 넓은 외장 Course → 기능 외장 → 무장 구성/그룹 후보 → 최종 장갑 접촉 Foundation → 전체 검증 → 직렬화.
+
+각 단계는 `productionDesign.stages`에 입력·출력을 기록합니다. Hull과 Macro 실측은 원래 구조 데이터이고, 추가 외장 Bounds와 방호 면적은 별도로 저장합니다. 새 경로에서는 기존 타일 장갑, 검토용 `structuralArmorPilot`, 구형 무장 Foundation을 먼저 생성하지 않습니다. `schemaVersion: 2`, `generatorVersion: "1.8.4"`를 유지합니다.
+
+- **구조:** 실제 Station 폭과 Deck 높이, 부모의 정규화된 길이 구간을 사용합니다. 전방 성채/연속 성채/후방 지휘 구획은 Seed와 Family에 따라 달라집니다. 상부 채널과 하부 보호 구획은 서로 다른 구조 언어입니다.
+- **외장:** 대형 장갑을 먼저 생성하고, 보호되지 않은 실제 면에만 긴 경사 마감 Course와 기능 개구부를 피하는 Cap을 추가합니다. 방향별 면적은 실제 노출 삼각형과 내부 접합/개구부 제외 사유에서 계산합니다. 90%는 QA 목표이며 달성하지 못한 방향은 실제 잔여 면적과 사유를 기록합니다.
+- **기능 설비:** 실제 Command Plinth, Engine/Nozzle, Service Channel을 찾습니다. 없는 구조에 설비를 강제 설치하지 않으며, 열린 배기 케이싱과 방열 공간이 확보되지 않으면 생략 사유를 저장합니다.
+- **무장:** 역할·길이·화력/미사일 Priority·Family·조선소·장착 면적에 따른 예산을 먼저 정합니다. S/M/L/XL 규격은 V1.8.3 공통 계약을 공유하고, L 설치를 모든 함선에 강제하지 않습니다. XL은 기존 척추무장 계약과 별도 예산/개구부를 사용합니다. 좌우 쌍은 함께 설치·재탐색·생략합니다. 장갑은 삭제하지 않습니다.
+- **안전/성능:** 삼각형 BVH와 불변 Surface 캐시, 충돌 Broad Phase를 사용합니다. 17점 장착 접촉, 장비 OBB/실제 체적 샘플, 양쪽 무장의 국소 정적 사격 공간 검사는 Production에서도 실행합니다. 후보는 최대 3회이며 실패와 선택 부품 생략은 Blueprint에 구분해 남습니다.
+
+### 지원 조합
+
+| Architecture | Macro Family |
+|---|---|
+| MONOLITHIC | WEDGE_CITADEL, WEAPON_DOMINANT |
+| BLOCK_ASSEMBLY | WEDGE_CITADEL, HAMMERHEAD, WIDE_CARRIER, ENGINE_DOMINANT |
+| SPINE_AND_MODULES | SPLIT_FRAME, WEAPON_DOMINANT |
+| TRUSS_POD | SPLIT_FRAME |
+| TWIN_HULL | WIDE_CARRIER, ENGINE_DOMINANT |
+| CORE_AND_NACELLES | ENGINE_DOMINANT |
+| STACKED_BLOCKS | WEDGE_CITADEL, HAMMERHEAD |
+| HYBRID | SPLIT_FRAME, WEAPON_DOMINANT, WIDE_CARRIER |
+
+지원 조합의 권위 데이터는 `generation/macro/plan.ts`입니다. 4개 Shipyard와 기존 40–600m 주문 범위를 지원합니다. 실제 면이 작거나 개구부가 있으면 그룹이 생략될 수 있습니다. 무장 방향별 동일 수량, 모든 함선의 L 무장, 모든 면의 100% 피복은 보장하지 않습니다.
+
+### 사용 / 저장 / 개발 비교
+
+주문서 Generate·Seed 변경·Regenerate가 통합 경로를 호출합니다. JSON Export / Import / Reload는 저장된 데이터 그대로 재현하며 재생성하지 않습니다. Orbit / Zoom / Fit은 실제 전체 메시 Bounds를 사용합니다. `Structural Armor Only`, `Armor Coverage`, `Functional Exterior Only`, `Hardpoint Layout Only`, `Mount Size`, `Symmetry Groups`, `Firing Arc`를 기존 Debug View에서 확인할 수 있습니다.
+
+`/qa.html`의 Generator version으로 V1.8.4와 V1.8.1/1.8/1.7/1.6을 비교할 수 있습니다. V1.8.2/1.8.3은 원래 제한 검토용 Builder와 보존된 JSON으로 비교합니다. 아래 역사적 검토 절의 승인 범위는 당시 결과이며 **현재 기본 생성기의 제한을 의미하지 않습니다**.
+
+```bash
+npm test
+npm run build
+# 개발 서버 실행 후; 기존 QA 출력 폴더를 덮어쓰지 않도록 OUT을 지정
+QA_URL=http://localhost:5173 OUT=qa/v1.8.4/local-phase-b node tests/production-series.mjs
+QA_URL=http://localhost:5173 PHASE=c OUT=qa/v1.8.4/local-phase-c node tests/production-series.mjs
+QA_URL=http://localhost:5173 OUT=qa/v1.8.4/local-regression node tests/production-regression.mjs
+# Production preview 실행 후 실제 UI / JSON / 픽셀 회귀
+PRODUCTION_URL=http://localhost:4173 OUT=qa/v1.8.4/local-ui node tests/unified-ui-qa.mjs
+```
+
+[실제 대표 렌더, 220척 Contact Sheet, 회귀 및 성능](qa/v1.8.4/QA.md). 과거 QA 자료와 미커밋 타일 실험은 삭제하지 않습니다. 자유 회전 Hull, Boolean CSG, 연속 조준/탄도·전투·피해·내부 구획은 구현하지 않습니다. 간섭 검증은 샘플과 Bounding Volume을 결합한 정적 검사이며 모든 Triangle 교차를 증명하지 않습니다. 모바일 화면 레이아웃 확인과 실제 모바일 GPU 성능은 구분합니다.
 
 ## V1.8.2 구조 방향 승인 / 대표 세 Family 제한 검증
 

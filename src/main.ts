@@ -5,6 +5,7 @@ import {
   PRIORITIES,
   type ShipOrder,
   type ShipBlueprint,
+  type AnyShipBlueprint,
   type ShipRole,
   type MassClass,
 } from "./blueprint/types";
@@ -16,7 +17,8 @@ const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 $("app").innerHTML = layout();
 let yardId = "aegis",
-  blueprint: ShipBlueprint,
+  blueprint: AnyShipBlueprint,
+  storedBlueprint: string,
   viewer: ShipViewer | undefined;
 try {
   viewer = new ShipViewer($("viewer"));
@@ -88,13 +90,20 @@ function generate() {
       throw new Error("Seed는 0–4294967295 사이 정수여야 합니다.");
     const start = performance.now(),
       next = generateBlueprint(order(), seed);
+    present(next, start);
+  } catch (e) {
+    $("order-status").textContent = e instanceof Error ? e.message : String(e);
+    $("validated").textContent = "ORDER INVALID";
+  }
+}
+function present(next: AnyShipBlueprint, start=performance.now()) {
     viewer?.show(next);
     blueprint = next;
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
     $("ship-name").textContent = next.designName;
     $("ship-subtitle").textContent = `${y.name} / ${next.role.toUpperCase()}`;
-    $("manifest-seed").textContent = `SEED ${seed}`;
+    $("manifest-seed").textContent = `SEED ${next.seed}`;
     const d = next.dimensions,
       metrics = [
         ["Length", d.length.toFixed(1), "m"],
@@ -111,8 +120,9 @@ function generate() {
           `<div class="metric"><span>${label}</span><strong>${value}<small>${unit}</small></strong></div>`,
       )
       .join("");
-    const volumes = next.structuralVolumes,
+    const volumes = next.schemaVersion===2 ? next.structuralVolumes : [],
       counts = (type: string) => volumes.filter((v) => v.type === type).length;
+    if(next.schemaVersion===2){
     $("architecture-summary").innerHTML =
       `<strong>${next.architecture.grammar.replaceAll("_", " ")}</strong><span>${next.architecture.composition} · ${volumes.length} major volumes · ${next.structuralConnectors.length} connectors · ${next.trusses.length} trusses</span><span>Hull ${counts("PRIMARY_HULL") + counts("HULL_BLOCK") + counts("ARMOR_BLOCK")} / Pod ${counts("POD")} / Nacelle ${counts("NACELLE")} / Spine ${counts("SPINE")}</span>`;
     $("architecture-summary").innerHTML +=
@@ -128,11 +138,15 @@ function generate() {
       const a=next.layeredArmor;
       $("architecture-summary").innerHTML += `<span>Armor: ${a.budget.segmentCount} panels · ${a.seams.length} physical seams · ${next.hardpoints.filter(h=>h.surfaceMount).length} surface mounts</span><span>Coverage T/B/P/S/F/A: ${["top","bottom","left","right","fore","aft"].map(k=>Math.round(a.coverage.byDirectionRatio[k as keyof typeof a.coverage.byDirectionRatio]*100)+"%").join(" / ")}</span>`;
     }
+    if(next.productionDesign){const d=next.productionDesign,w=next.weaponLayout!;
+      $("architecture-summary").innerHTML+=`<span>V1.8.4 exterior ${(d.overallBounds.max.z-d.overallBounds.min.z).toFixed(1)} × ${(d.overallBounds.max.x-d.overallBounds.min.x).toFixed(1)} × ${(d.overallBounds.max.y-d.overallBounds.min.y).toFixed(1)} m · ${d.armor.length} structural armor masses · ${d.finish.length} broad finishing courses · ${d.functionalPrefabIds.length} functional assemblies</span><span>Coverage T/B/P/S/F/A: ${Object.values(d.coverage.directions).map(m=>Math.round(m.ratio*100)+"%").join(" / ")}</span><span>Weapons: ${w.composition.map(c=>`${c.count} × ${c.size} ${c.category}`).join(" · ")} · T/B/P/S ${Object.values(w.budget.byRegion).join(" / ")} · ${w.omissions.length} reported group omissions</span>`;
+    }
     if (next.macroDesign) {
       const m = next.macroDesign;
       $("architecture-summary").innerHTML +=
         `<strong>${m.family.replaceAll("_", " ")}</strong><span>Mass F / M / A: ${[m.foreMassRatio, m.midMassRatio, m.aftMassRatio].map((x) => Math.round(x * 100) + "%").join(" / ")} · ${m.negativeSpaceTargets.length} intentional channels · ${m.attempts?.length ?? 0} retries</span>`;
     }
+    }else $("architecture-summary").textContent="Historical V0 Blueprint — original stored geometry";
     $("engine-pattern").textContent =
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =
@@ -141,10 +155,7 @@ function generate() {
     $("order-status").textContent = "생성 완료 · 현재 주문서가 적용되었습니다";
     $("order-status").classList.remove("stale");
     $("validated").textContent = "✓ BLUEPRINT VALID";
-  } catch (e) {
-    $("order-status").textContent = e instanceof Error ? e.message : String(e);
-    $("validated").textContent = "ORDER INVALID";
-  }
+    storedBlueprint=JSON.stringify(next);
 }
 $("order-form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -214,6 +225,16 @@ for (const id of ["top", "rear", "iso"] as const)
     viewer?.view(id);
     setViewLabel(id);
   };
+function importBlueprint(text: string) {
+ const value:AnyShipBlueprint=JSON.parse(text);
+ if(![1,2].includes(value.schemaVersion))throw Error("Unsupported Blueprint schema");
+ const errors=validateBlueprint(value);if(errors.length)throw Error(errors.join("; "));
+ present(value);applyOrder(value.order);$<HTMLInputElement>("seed").value=String(value.seed);
+ $("order-status").textContent="저장된 Blueprint 로드 완료 · 재생성 없이 원본 재현";
+}
+$("import").onclick=()=>$<HTMLInputElement>("import-file").click();
+$("import-file").onchange=async()=>{try{const file=$<HTMLInputElement>("import-file").files?.[0];if(file)importBlueprint(await file.text());}catch(e){$("order-status").textContent=String(e);}finally{$<HTMLInputElement>("import-file").value="";}};
+$("reload").onclick=()=>{try{if(storedBlueprint)importBlueprint(storedBlueprint);}catch(e){$("order-status").textContent=String(e);}};
 $("export").onclick = () => {
   if (!blueprint) return;
   const url = URL.createObjectURL(

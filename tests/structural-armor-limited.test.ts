@@ -2,7 +2,7 @@ import {describe,it,expect} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import * as THREE from 'three';
-import {DEFAULT_ORDER,generateBlueprintV181} from '../src/generation/generate';
+import {DEFAULT_ORDER,generateBlueprintV181} from './helpers/generate-v181';
 import {LIMITED_FAMILIES,buildLimitedStructuralArmor} from '../src/generation/armor/structural-pilot/limited';
 import {validateStructuralArmorPilot} from '../src/generation/armor/structural-pilot/validate';
 import {validateBlueprint} from '../src/validation/validate';

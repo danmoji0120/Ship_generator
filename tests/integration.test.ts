@@ -6,7 +6,7 @@ import {
   DEFAULT_ORDER,
   generateBlueprintV17 as generateBlueprint,
   generateBlueprintV16,
-} from "../src/generation/generate";
+} from "./helpers/generate-v181";
 import { SHIPYARDS } from "../src/shipyards/config";
 import { validateBlueprint } from "../src/validation/validate";
 import { validateIntegration } from "../src/validation/integration";

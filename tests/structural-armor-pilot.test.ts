@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import * as THREE from 'three';
-import { generateBlueprintV181, DEFAULT_ORDER } from '../src/generation/generate';
+import { generateBlueprintV181, DEFAULT_ORDER } from './helpers/generate-v181';
 import { buildStructuralArmorPilot, surfaceHit } from '../src/generation/armor/structural-pilot/build';
 import { validateStructuralArmorPilot, containsStructuralArmor } from '../src/generation/armor/structural-pilot/validate';
 import { validateBlueprint } from '../src/validation/validate';

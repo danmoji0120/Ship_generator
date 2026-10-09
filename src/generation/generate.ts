@@ -1,3 +1,4 @@
+import { buildProduction } from "./production/build";
 import { buildLayeredArmor } from "./integration/armor";
 import { createMacroPlan } from "./macro/plan";
 import { measureMacro } from "./macro/measurement";
@@ -29,11 +30,22 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8" | "1.8.1";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4";
+    productionBase?: boolean;
+    minimumMacroCandidate?: number;
+    onTimings?: (timings:import("./production/types").ProductionTimings)=>void;
     family?: MacroFamily;
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
+  if((!qaOptions?.version)||qaOptions?.version==="1.8.4"){
+    const failures:{candidate:number;reasons:string[]}[]=[];
+    for(let candidate=0;candidate<3;candidate++)try{
+      const hullStart=performance.now(),base=generateBlueprint(input,seed,{...qaOptions,version:"1.8",productionBase:true,minimumMacroCandidate:candidate});
+      return buildProduction(base,candidate,failures,performance.now()-hullStart,qaOptions?.onTimings);
+    }catch(e){failures.push({candidate,reasons:[(e as Error).message]});}
+    throw Error(`Integrated design rejected after 3 candidates: ${JSON.stringify(failures)}`);
+  }
   if (!qaOptions?.version || qaOptions.version === "1.8.1") {
     const b = generateBlueprint(input, seed, { ...qaOptions, version: "1.8" });
     buildLayeredArmor(b);
@@ -68,6 +80,7 @@ export function generateBlueprint(
   let lastErrors: string[] = [];
   const attempts: NonNullable<MacroDesignPlan["attempts"]> = [];
   for (let candidate = 0; candidate < 5; candidate++) {
+    if(candidate<(qaOptions?.minimumMacroCandidate??0))continue;
     const priorErrors = lastErrors;
     const rng = new SeededRng(
         (seed + Math.imul(candidate + 1, 0x9e3779b9)) >>> 0,
@@ -125,8 +138,8 @@ export function generateBlueprint(
         rng,
         Boolean(macro),
       ),
-      { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes);
-    const prefabPlacements = generatePrefabPlacements(
+      { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes,qaOptions?.productionBase);
+    const prefabPlacements = qaOptions?.productionBase ? [] : generatePrefabPlacements(
       order,
       yard,
       volumes,
@@ -244,8 +257,8 @@ export function generateBlueprint(
       },
     };
     if (b.generatorVersion === "1.7" || b.generatorVersion === "1.8")
-      integrateHull(b);
-    lastErrors = validateBlueprint(b);
+      integrateHull(b,qaOptions?.productionBase);
+    lastErrors = validateBlueprint(b).filter(e=>!(qaOptions?.productionBase&&e==="Hardpoint count"));
     if (!lastErrors.length) return b;
     if (macro)
       attempts.push({
@@ -287,7 +300,7 @@ export function generateBlueprintV18(input: ShipOrder, seed: number, options?: {
   return generateBlueprint(input, seed, { ...options, version: "1.8" });
 }
 
-/** Frozen omnidirectional V1.8.1 path for limited structural review. */
+/** Frozen omnidirectional V1.8.1 generation path for saved/rendered comparisons. */
 export function generateBlueprintV181(input: ShipOrder, seed: number, options?: {architecture?: import("../blueprint/types").ArchitectureGrammar; family?: MacroFamily}) {
  return generateBlueprint(input,seed,{...options,version:"1.8.1"});
 }

@@ -1,0 +1,13 @@
+{
+  "command": "npm test -- --maxWorkers=1 --minWorkers=1",
+  "environment": "Intended staged source tree; unrelated dirty tile drafts excluded",
+  "files": 15,
+  "tests": 209,
+  "passed": 209,
+  "failed": 0,
+  "unhandledErrors": 0,
+  "seconds": 314.8,
+  "historicalCasesPreserved": true,
+  "productionRoleYardLengthOrders": 108,
+  "priorityMassExtremes": 16
+}

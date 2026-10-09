@@ -51,7 +51,7 @@ export function decorateWeaponDebug(root:THREE.Group,b:ShipBlueprint,mode:Weapon
   }
  }
  if(mode==='ARCS'){
-  const representatives=[w.mounts.find(m=>m.groupId==='primary-citadel'),w.mounts.find(m=>m.region==='BOTTOM'&&m.standard.size==='M'),w.mounts.find(m=>m.region==='PORT'&&m.standard.size==='M')].filter(Boolean);
+  const representatives=[w.mounts.find(m=>m.standard.size==='L'),w.mounts.find(m=>m.region==='BOTTOM'&&m.standard.size==='M'),w.mounts.find(m=>m.region==='PORT'&&m.standard.size==='M')].filter(Boolean);
   for(const m of representatives)for(const s of m!.firingArc.samples){
    const a=new THREE.Vector3(s.origin.x,s.origin.y,s.origin.z),end=a.clone().addScaledVector(new THREE.Vector3(s.direction.x,s.direction.y,s.direction.z),m!.firingArc.rangeMeters),line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([a,end]),new THREE.LineDashedMaterial({color:0xf6d379,transparent:true,opacity:.7,dashSize:2,gapSize:1,depthTest:false}));line.computeLineDistances();overlay.add(line);
   }

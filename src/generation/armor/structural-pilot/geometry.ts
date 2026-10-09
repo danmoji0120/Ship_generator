@@ -1,3 +1,4 @@
+import{stationSolid}from'../../production/solid';
 import type { StructuralVolume, Vec3 } from '../../../blueprint/types';
 import type { StructuralArmorComponent } from './types';
 import { boundsOf, sectionRing } from '../../integration/contours';
@@ -10,8 +11,8 @@ export const curve=(knots:[number,number][]|undefined,t:number)=> {
     const [a,b]=[knots[j],knots[j+1]];return a[1]+(b[1]-a[1])*Math.max(0,Math.min(1,(t-a[0])/(b[0]-a[0])));
   };
 
-export function armorBodyBuilder(hull:StructuralVolume, components:StructuralArmorComponent[], l:number) {
-  const inset=l*.004;
+export function armorBodyBuilder(hull:StructuralVolume, components:StructuralArmorComponent[], l:number, adaptive=false) {
+  const inset=l*.004,step=adaptive?Math.min(hull.dimensions.z*.025,l*.02):7;
   const ring = (z: number) => sectionRing(hull, z);
   const halfWidth = (z: number) => (Math.max(...ring(z).map(p => p.x))-Math.min(...ring(z).map(p => p.x)))/2;
   function deckY(x: number, z: number) {
@@ -29,7 +30,7 @@ export function armorBodyBuilder(hull:StructuralVolume, components:StructuralArm
   function deck(id: string, role: StructuralArmorComponent['role'], z0: number, z1: number,
                 inner: number, outer: number, crest: number, side = 0, parentArmorId?: string, form:Form={}) {
     const parent = components.find(c => c.id === parentArmorId);
-    const candidates = [...new Set([z0, z0 + 7, ...[...(form.width??[]),...(form.rise??[])].map(k=>z0+k[0]*(z1-z0)), ...hull.geometry.stations.map(s => s.z + hull.position.z).filter(z => z > z0 + 7 && z < z1 - 7), z1 - 7, z1])].sort((a,b) => a-b);
+    const candidates = [...new Set([z0, z0 + step, ...[...(form.width??[]),...(form.rise??[])].map(k=>z0+k[0]*(z1-z0)), ...hull.geometry.stations.map(s => s.z + hull.position.z).filter(z => z > z0 + step && z < z1 - step), z1 - step, z1])].sort((a,b) => a-b);
     const zs=candidates.filter((z,i)=>i===0||z-candidates[i-1]>l*1e-8);
     const contacts: Vec3[] = [];
     const rings = zs.map(z => {
@@ -57,7 +58,7 @@ export function armorBodyBuilder(hull:StructuralVolume, components:StructuralArm
 }
 
 /** A broad side belt follows actual sloped station edges; it is not an AABB-face overlay. */
-export function addBodyBelt(hull:StructuralVolume,components:StructuralArmorComponent[],id:string,side:number,z0:number,z1:number,l:number) {
+export function addBodyBelt(hull:StructuralVolume,components:StructuralArmorComponent[],id:string,side:number,z0:number,z1:number,l:number,adaptive=false) {
   const inset=l*.004, zs=[z0,...hull.geometry.stations.map(s=>s.z+hull.position.z).filter(z=>z>z0&&z<z1),z1],contacts:Vec3[]=[];
   const rings=zs.map(z=>{
     const r=sectionRing(hull,z), ymin=Math.min(...r.map(p=>p.y)),ymax=Math.max(...r.map(p=>p.y));
@@ -67,12 +68,14 @@ export function addBodyBelt(hull:StructuralVolume,components:StructuralArmorComp
       return side<0?Math.min(...xs):Math.max(...xs);
     };
     const a=sideX(bottom)-side*inset,c=sideX(top)-side*inset;
-    const t=(z-z0)/(z1-z0),protrude=hull.dimensions.x*.06*curve([[0,.6],[.3,1],[.7,.8],[1,.5]],t),outer=side<0?Math.min(a,c)-protrude:Math.max(a,c)+protrude;
+    const mid=sideX((bottom+top)/2)-side*inset;
+    const t=(z-z0)/(z1-z0),protrude=hull.dimensions.x*.06*curve([[0,.6],[.3,1],[.7,.8],[1,.5]],t),outer=side<0?Math.min(a,c,adaptive?mid:a)-protrude:Math.max(a,c,adaptive?mid:a)+protrude;
     const bevel=Math.min(protrude*.25,(top-bottom)*.16);
     let points:Vec3[]=[{x:a,y:bottom,z},{x:outer-side*bevel,y:bottom,z},{x:outer,y:bottom+bevel,z},{x:outer,y:top-bevel,z},{x:outer-side*bevel,y:top,z},{x:c,y:top,z}];
+    if(adaptive)points.push({x:mid,y:(bottom+top)/2,z});
     if(side<0)points=points.reverse();
     for(const y of [bottom,(bottom+top)/2,top])contacts.push({x:sideX(y)-side*inset*.5,y,z});
     return points;
   });
-  components.push({id,role:'SIDE_BELT',parentStructureId:hull.id,rings,solid:solidFromRings(rings),contactSamples:contacts,inset,bounds:boundsOf(rings.flat())});
+  components.push({id,role:'SIDE_BELT',parentStructureId:hull.id,rings,solid:adaptive?stationSolid(rings):solidFromRings(rings),contactSamples:contacts,inset,bounds:boundsOf(rings.flat())});
 }

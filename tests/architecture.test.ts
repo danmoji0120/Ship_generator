@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { generateBlueprintV18 as generateBlueprint, generateBlueprintV17, DEFAULT_ORDER } from "../src/generation/generate";
+import { generateBlueprintV18 as generateBlueprint, generateBlueprintV17, DEFAULT_ORDER } from "./helpers/generate-v181";
 import {
   ARCHITECTURES,
   ROLES,

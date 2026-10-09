@@ -24,7 +24,7 @@ import {
 } from "./reservations";
 
 /** All phases use finalized equipment reservations. Original structural layout and RNG are untouched. */
-export function integrateHull(b: ShipBlueprint) {
+export function integrateHull(b: ShipBlueprint, productionBase=false) {
   const yard = getShipyard(b.shipyardId),
     l = b.order.length,
     p = b.order.priorities,
@@ -160,8 +160,7 @@ export function integrateHull(b: ShipBlueprint) {
   const context = { b, yard, l, p, vs, inset, emit, socket, decisions };
   addConnections(context);
   addCompletion(context);
-  const armorHosts = addArmor(context);
-  addEquipment(context, armorHosts);
+  if(!productionBase){const armorHosts = addArmor(context);addEquipment(context, armorHosts);}
   // Preserve legacy kit parts unless a larger fitted skin now owns their specific coverage.
   const coveredArmor = (q: PrefabPlacement) =>
     parts.some(

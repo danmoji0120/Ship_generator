@@ -23,12 +23,12 @@ export function annularHousing(center:Vec3,axis:Vec3,outer:number,inner:number,l
 }
 /** A few long finishing skins follow the SAME stored crest/belt stations, not a panel grid.
  * Narrow bevel, actual thickness and inward root embed; no change to underlying armor masses. */
-export function finishingRibbon(c:StructuralArmorComponent,face:number,thickness:number) {
+export function finishingRibbon(c:StructuralArmorComponent,face:number,thickness:number,edgeGap=.025) {
   const contacts:{position:Vec3;normal:Vec3}[]=[],n=c.rings[0].length;
   const rings=c.rings.map((r,j)=>{
     const next=c.rings[Math.min(j+1,c.rings.length-1)],prev=c.rings[Math.max(j-1,0)];
     const outward=j<c.rings.length-1?normal([r[face],r[(face+1)%n],next[face]]):normal([prev[face],prev[(face+1)%n],r[face]]);
-    const a=mix(r[face],r[(face+1)%n],.025),d=mix(r[face],r[(face+1)%n],.975);
+    const a=mix(r[face],r[(face+1)%n],edgeGap),d=mix(r[face],r[(face+1)%n],1-edgeGap);
     for(const p of[a,mix(a,d,.5),d])contacts.push({position:p,normal:outward});
     return [add(a,mul(outward,-.12)),add(d,mul(outward,-.12)),add(d,mul(outward,thickness*.7)),add(mix(a,d,.99),mul(outward,thickness)),add(mix(a,d,.01),mul(outward,thickness)),add(a,mul(outward,thickness*.7))];
   });

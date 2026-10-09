@@ -9,9 +9,10 @@ export type ArmorStage = typeof ARMOR_STAGES[number];
 export function armorStageBlueprint(b: ShipBlueprint, stage: ArmorStage) {
   const copy = structuredClone(b);
   if(stage === 'COMPLETE') return copy;
-  if(stage==='HULL_ONLY'){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
+  if(stage==='HULL_ONLY'){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.productionDesign=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
+  if(copy.productionDesign&&stage==='PRIMARY')copy.productionDesign.finish=[];
   copy.hardpoints=[];
-  if(stage==='NO_HARDPOINTS')return copy;
+  if(stage==='NO_HARDPOINTS'){copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!copy.weaponLayout?.prefabIds.includes(p.id));return copy;}
   copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&['integration','bow','stern'].includes(p.exterior.phase)); copy.engines=[]; copy.surfaceFeatures=[];
   if(copy.layeredArmor) copy.layeredArmor.assemblies.forEach(a=>a.segments=a.segments.filter(s=>s.layer <= (stage==='HULL_ONLY'?0:stage==='PRIMARY'||stage==='SEAMS'?1:stage==='SECONDARY'?2:3)));
   return copy;
@@ -74,7 +75,7 @@ export class ArmorQARenderer {
     const up=view==='TOP'||view==='BOTTOM'?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
     const right=up.clone().cross(direction).normalize(), vertical=direction.clone().cross(right).normalize();
     // Use Complete's authoritative bounds for every progression stage, including fitted views.
-    const bounds=b.functionalExterior?.overallBounds??b.structuralArmorPilot?.overallBounds??b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
+    const bounds=b.productionDesign?.overallBounds??b.functionalExterior?.overallBounds??b.structuralArmorPilot?.overallBounds??b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
     const center=options.scale==='fit'&&bounds?new THREE.Vector3().addVectors(new THREE.Vector3(bounds.min.x,bounds.min.y,bounds.min.z),new THREE.Vector3(bounds.max.x,bounds.max.y,bounds.max.z)).multiplyScalar(.5):new THREE.Vector3();
     let extent=b.order.length*1.50;
     if(options.scale==='fit'&&bounds) {

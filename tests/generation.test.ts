@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   generateBlueprintV0 as generateBlueprint,
   DEFAULT_ORDER,
-} from "../src/generation/generate";
+} from "./helpers/generate-v181";
 import { validateBlueprint } from "../src/validation/validate";
 import { SHIPYARDS, getShipyard } from "../src/shipyards/config";
 import {

@@ -1,0 +1,171 @@
+{
+  "designs": 220,
+  "failures": [],
+  "consoleErrors": [],
+  "familyCounts": {
+    "WEDGE_CITADEL": 49,
+    "WEAPON_DOMINANT": 33,
+    "HAMMERHEAD": 29,
+    "WIDE_CARRIER": 40,
+    "ENGINE_DOMINANT": 45,
+    "SPLIT_FRAME": 24
+  },
+  "regionsWithInstalledMounts": {
+    "TOP": 187,
+    "BOTTOM": 187,
+    "PORT": 206,
+    "STARBOARD": 206
+  },
+  "retryCounts": {
+    "0": 220
+  },
+  "coverage": {
+    "top": {
+      "minimum": 0.8685913031158192,
+      "mean": 0.9795198323939927,
+      "under90": 2
+    },
+    "bottom": {
+      "minimum": 0.9140764933511955,
+      "mean": 0.9800514751670805,
+      "under90": 0
+    },
+    "left": {
+      "minimum": 0.9593372286380304,
+      "mean": 0.9887383407213507,
+      "under90": 0
+    },
+    "right": {
+      "minimum": 0.9593333884745401,
+      "mean": 0.9889092942645998,
+      "under90": 0
+    },
+    "fore": {
+      "minimum": 0.9769445323750884,
+      "mean": 0.9978235126885971,
+      "under90": 0
+    },
+    "aft": {
+      "minimum": 0.9757415428071826,
+      "mean": 0.9955166343370504,
+      "under90": 0
+    }
+  },
+  "render": {
+    "calls": {
+      "mean": 53.95,
+      "maximum": 126
+    },
+    "triangles": {
+      "mean": 14719.245454545455,
+      "maximum": 19410
+    }
+  },
+  "cpuContendedRun": {
+    "note": "Bulk generation overlapped the automated regression worker; isolated comparison is reported separately.",
+    "medianMs": 485.6000000089407,
+    "p95Ms": 1204.5549999877803
+  },
+  "coverageExceptions": [
+    {
+      "architecture": "MONOLITHIC",
+      "shipyardId": "aegis",
+      "seed": 9,
+      "family": "WEAPON_DOMINANT",
+      "coverage": {
+        "top": {
+          "exposedM2": 33481.82766073392,
+          "eligibleM2": 33095.88516448216,
+          "coveredM2": 28746.79802278907,
+          "excludedM2": 385.9424962517619,
+          "ratio": 0.8685913031158192
+        },
+        "bottom": {
+          "exposedM2": 33523.298009933766,
+          "eligibleM2": 33135.92311510778,
+          "coveredM2": 32811.78944687939,
+          "excludedM2": 387.3748948259911,
+          "ratio": 0.9902180582957533
+        },
+        "left": {
+          "exposedM2": 14713.333698489461,
+          "eligibleM2": 14413.317989258101,
+          "coveredM2": 14328.454294923467,
+          "excludedM2": 300.0157092313612,
+          "ratio": 0.99411213334793
+        },
+        "right": {
+          "exposedM2": 14713.333698489461,
+          "eligibleM2": 14413.317989258101,
+          "coveredM2": 14328.454294923467,
+          "excludedM2": 300.0157092313612,
+          "ratio": 0.99411213334793
+        },
+        "fore": {
+          "exposedM2": 11416.277102528293,
+          "eligibleM2": 2676.34894584383,
+          "coveredM2": 2676.34894584383,
+          "excludedM2": 8739.928156684464,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 15958.835575044246,
+          "eligibleM2": 4810.236181011891,
+          "coveredM2": 4744.368469110856,
+          "excludedM2": 11148.599394032346,
+          "ratio": 0.9863067613683827
+        }
+      }
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "shipyardId": "aegis",
+      "seed": 18,
+      "family": "WEAPON_DOMINANT",
+      "coverage": {
+        "top": {
+          "exposedM2": 30068.55262226998,
+          "eligibleM2": 29868.93580896522,
+          "coveredM2": 26811.964445422145,
+          "excludedM2": 199.6168133047581,
+          "ratio": 0.8976538239227955
+        },
+        "bottom": {
+          "exposedM2": 30101.19319571311,
+          "eligibleM2": 29901.434507047557,
+          "coveredM2": 29443.850457181074,
+          "excludedM2": 199.75868866555186,
+          "ratio": 0.9846969198163843
+        },
+        "left": {
+          "exposedM2": 16216.825375862882,
+          "eligibleM2": 15848.544276120516,
+          "coveredM2": 15752.239649990795,
+          "excludedM2": 368.281099742367,
+          "ratio": 0.9939234402572339
+        },
+        "right": {
+          "exposedM2": 16216.83835022948,
+          "eligibleM2": 15848.558130184369,
+          "coveredM2": 15752.225295150523,
+          "excludedM2": 368.28022004510916,
+          "ratio": 0.993921665665574
+        },
+        "fore": {
+          "exposedM2": 10177.728031697437,
+          "eligibleM2": 1599.7732324111826,
+          "coveredM2": 1599.7732324111826,
+          "excludedM2": 8577.954799286255,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 16230.932426551557,
+          "eligibleM2": 5815.451092148063,
+          "coveredM2": 5717.466001921099,
+          "excludedM2": 10415.481334403494,
+          "ratio": 0.9831509046032109
+        }
+      }
+    }
+  ]
+}

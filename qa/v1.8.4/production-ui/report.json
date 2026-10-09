@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Production default generator without DEV hooks",
+    "Same Seed JSON",
+    "New Seed changes actual Hull",
+    "All production debug modes",
+    "Real UI export/import + WebGL pixel reproduction",
+    "Stored reload without regeneration",
+    "Orbit / Zoom / Fit",
+    "Historical import undefined",
+    "Historical import 1.8.1",
+    "Historical import 1.8.2",
+    "Historical import 1.8.3",
+    "390px responsive layout only (no mobile GPU claim)"
+  ],
+  "errors": [],
+  "pixels": true,
+  "environment": "Chromium / SwiftShader; actual production bundle"
+}

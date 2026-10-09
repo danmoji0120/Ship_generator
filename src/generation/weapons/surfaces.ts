@@ -1,3 +1,4 @@
+import{indexedFaces}from'./surface-index';
 import type{ShipBlueprint,Vec3}from'../../blueprint/types';
 import type{PanelSolid}from'../armor/types';
 import type{MountFrame,SurfaceContact,MountStandard,MountRegion,WeaponGroupPlan}from'./types';
@@ -21,8 +22,10 @@ export function armorSurfaces(b:ShipBlueprint){
   if(Object.values(v.rotation).some(x=>Math.abs(x)>1e-8))throw Error('Review mounting requires axis-aligned source Hull');
   shapes.push({id:v.id,structureId:v.id,solid:solidFromRings(v.geometry.stations.map(s=>profileRing(s).reverse().map(([x,y])=>({x:x+v.position.x,y:y+v.position.y,z:s.z+v.position.z}))))});
  }
- for(const c of b.structuralArmorPilot?.components??[])shapes.push({id:c.id,structureId:c.parentStructureId,solid:c.solid});
+ for(const c of b.productionDesign?.armor??b.structuralArmorPilot?.components??[])shapes.push({id:c.id,structureId:c.parentStructureId,solid:c.solid});
+ for(const c of b.productionDesign?.finish??[])shapes.push({id:c.id,structureId:c.parentStructureId,solid:c.solid});
  for(const p of b.prefabPlacements??[])if(p.assembly&&p.functionality==='protection')for(const part of p.assembly.parts)shapes.push({id:part.id,structureId:p.socket.hostId,solid:part.solid});
+ for(const p of b.prefabPlacements??[])if(p.exterior?.rings&&!(b.structuralArmorPilot?.supersededPrefabIds??[]).includes(p.id)&&!(b.layeredArmor?.supersededExteriorIds??[]).includes(p.id))shapes.push({id:p.id,structureId:p.exterior.parentIds[0],solid:solidFromRings(p.exterior.rings.map(r=>[...r].reverse()))});
  return shapes.map(s=>({...s,box:boundsOf(s.solid.vertices),triangles:solidTriangles(s.solid).map(t=>({vertices:t,n:normal(t)}))}));
 }
 export type ArmorSurfaces=ReturnType<typeof armorSurfaces>;
@@ -37,12 +40,10 @@ function lineMeetsBounds(p:Vec3,d:Vec3,b:ArmorSurfaces[number]['box']){
 /** Ray/triangle first exterior hit. Bounds only accelerate rejection, never decide contact. */
 export function surfaceRay(surfaces:ArmorSurfaces,p:Vec3,d:Vec3):SurfaceContact|undefined{
  let best:SurfaceContact|undefined,bestDistance=-Infinity;
- for(const s of surfaces){if(!lineMeetsBounds(p,d,s.box))continue;for(const{vertices:t,n}of s.triangles){
-  const den=dot(n,d);if(den<.15)continue;
-  const distance=dot(n,sub(t[0],p))/den;if(distance<=bestDistance)continue;
-  const q=add(p,mul(d,distance));
-  if(inPolygon(t,q,n,1e-6)){bestDistance=distance;best={surfaceId:s.id,structureId:s.structureId,position:q,normal:n};}
- }}
+ for(const{vertices:t,n,surfaceId,structureId}of indexedFaces(surfaces,p,d)){
+  const den=dot(n,d);if(den<.15)continue;const distance=dot(n,sub(t[0],p))/den;if(distance<=bestDistance)continue;
+  const q=add(p,mul(d,distance));if(inPolygon(t,q,n,1e-6)){bestDistance=distance;best={surfaceId,structureId,position:q,normal:n};}
+ }
  return best;
 }
 export function resolveFoundation(surfaces:ArmorSurfaces,hint:Vec3,region:MountRegion,s:MountStandard,alignment?:{normal:Vec3;position?:Vec3}){

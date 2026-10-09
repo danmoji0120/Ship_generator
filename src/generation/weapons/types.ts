@@ -22,8 +22,9 @@ export interface WeaponMount {
  firingArc:{coordinateSystem:'LOCAL_MOUNT';yawMin:number;yawMax:number;pitchMin:number;pitchMax:number;staticPitch:number;rangeMeters:number;clearanceBounds:BoundsData;muzzles:Vec3[];samples:{yaw:number;pitch:number;origin:Vec3;direction:Vec3;clear:boolean}[]};
 }
 export interface WeaponLayout {
- status:'one-ship-review';standardsVersion:'1.8.3';sourceVersion:string;sourceSeed:number;
- budget:{available:number;allocated:number;countLimit:number;byRegion:Record<MountRegion,number>};
+ status:'one-ship-review'|'production';standardsVersion:'1.8.3';sourceVersion:string;sourceSeed:number;
+ budget:{available:number;integratedReserve?:number;allocated:number;countLimit:number;byRegion:Record<MountRegion,number>};
+ integrated?:{hardpointId:string;standard:MountStandard;category:'SPINAL';reservationId:string}[];
  composition:{size:MountSize;category:WeaponCategory;count:number}[];
  groups:WeaponGroupPlan[];mounts:WeaponMount[];prefabIds:string[];supersededFoundationIds:string[];
  retiredHardpointIds:string[];

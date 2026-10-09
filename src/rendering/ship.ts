@@ -1,3 +1,5 @@
+import{decorateWeaponDebug}from'./weapons-qa';
+import {renderProductionArmor} from "./production";
 import { panelGeometry, renderLayeredArmor } from "./armor";
 import * as THREE from "three";
 import type { AnyShipBlueprint, Vec3 } from "../blueprint/types";
@@ -16,12 +18,20 @@ export type DebugView =
   | "Integration"
   | "Armor"
   | "Equipment"
-  | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship";
+  | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
+  if(b.schemaVersion===2&&b.productionDesign&&["Structural Armor Only","Functional Exterior Only","Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode)){
+    const copy=structuredClone(b);
+    if(mode==="Structural Armor Only"){copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));copy.productionDesign!.finish=[];}
+    if(mode==="Functional Exterior Only"){copy.productionDesign=undefined;copy.hardpoints=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>b.productionDesign!.functionalPrefabIds.includes(p.id));copy.structuralVolumes=[];copy.structuralConnectors=[];copy.trusses=[];}
+    const r=createShip(copy,"Normal");
+    if(copy.weaponLayout&&["Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode))decorateWeaponDebug(r,copy,mode==="Symmetry Groups"?"GROUPS":mode==="Firing Arc"?"ARCS":"LAYOUT");
+    return r;
+  }
   if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
     const copy=structuredClone(b);
-    if(mode==="Hull Only"){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
+    if(mode==="Hull Only"){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.productionDesign=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
     if(mode==="Hull Only"||mode==="Armor Panels"||mode==="Panel Seams"||mode==="Armor Coverage"||mode==="Secondary Armor") {
       copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];
       copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));
@@ -29,6 +39,10 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     }
     const r=createShip(copy,"Normal");
     if(mode==="Panel Seams")r.traverse(n=>{if(n instanceof THREE.Mesh&&!n.userData.armorLayer)n.material=new THREE.MeshStandardMaterial({color:0x26323b,roughness:.8});});
+    if(mode==="Armor Coverage"&&copy.productionDesign){
+      const palette={top:0x64c9ca,bottom:0xa994eb,left:0x74c99b,right:0xe3af6a,fore:0x8baedf,aft:0xdf8d9a};
+      r.traverse(n=>{if(n instanceof THREE.Mesh&&n.userData.functionalParts){const normals=n.geometry.getAttribute("normal"),colors:number[]=[];for(let i=0;i<normals.count;i++){const x=normals.getX(i),y=normals.getY(i),z=normals.getZ(i),direction=Math.abs(z)>Math.max(Math.abs(x),Math.abs(y))?(z<0?'fore':'aft'):Math.abs(x)>Math.abs(y)?(x<0?'left':'right'):(y<0?'bottom':'top'),c=new THREE.Color(palette[direction]);colors.push(c.r,c.g,c.b);}n.geometry.setAttribute("color",new THREE.Float32BufferAttribute(colors,3));n.material=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.8});}});
+    }
     if(mode==="Armor Coverage"&&copy.layeredArmor){
       r.traverse(n=>{if(n instanceof THREE.Mesh&&n.userData.armorLayer){
         const colors:number[]=[];for(const range of n.userData.armorSegments){const s=copy.layeredArmor!.assemblies.flatMap(a=>a.segments).find(s=>s.id===range.id)!;const direction=copy.layeredArmor!.surfaces.find(f=>f.id===s.surfaceId)!.direction;const c=new THREE.Color({top:0x64c9ca,bottom:0xa994eb,left:0x74c99b,right:0xe3af6a,fore:0x8baedf,aft:0xdf8d9a}[direction]);for(let i=0;i<range.vertexCount;i++)colors.push(c.r,c.g,c.b);}n.geometry.setAttribute("color",new THREE.Float32BufferAttribute(colors,3));n.material=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.8});
@@ -64,6 +78,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
   };
   if (b.schemaVersion === 2) {
     root.add(renderArchitecture(b, mode, m, ghost));
+    if(b.productionDesign&&["Normal","Structure","Armor"].includes(mode))root.add(renderProductionArmor(b,m));
     if(b.structuralArmorPilot && ["Normal", "Structure", "Armor"].includes(mode)) {
       for(const c of b.structuralArmorPilot.components) {
         const mesh=add(panelGeometry(c.solid), c.role==='SIDE_BELT'?m.secondary:m.hull);

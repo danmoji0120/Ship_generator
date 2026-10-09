@@ -7,7 +7,7 @@ import {
 import {
   DEFAULT_ORDER,
   generateBlueprintV16 as generateBlueprint,
-} from "../src/generation/generate";
+} from "./helpers/generate-v181";
 import { PREFAB_LIBRARY } from "../src/generation/prefabs";
 import { SHIPYARDS } from "../src/shipyards/config";
 import { createShip, disposeShip } from "../src/rendering/ship";

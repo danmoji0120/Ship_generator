@@ -4,7 +4,7 @@ import {
   generateBlueprintV18 as generateBlueprint,
   generateBlueprintV17,
   DEFAULT_ORDER,
-} from "../src/generation/generate";
+} from "./helpers/generate-v181";
 import {
   ARCHITECTURES,
   type ShipOrder,

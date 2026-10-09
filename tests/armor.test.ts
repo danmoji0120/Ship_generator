@@ -1,6 +1,6 @@
 import {describe,it,expect} from 'vitest';
 import * as THREE from 'three';
-import {generateBlueprint,generateBlueprintV18,DEFAULT_ORDER} from '../src/generation/generate';
+import {generateBlueprintV181 as generateBlueprint,generateBlueprintV18,DEFAULT_ORDER} from './helpers/generate-v181';
 import {ARCHITECTURES,type ShipBlueprint} from '../src/blueprint/types';
 import {validateLayeredArmor} from '../src/validation/armor';
 import {validateBlueprint} from '../src/validation/validate';
@@ -49,13 +49,14 @@ describe('V1.8.1 omnidirectional armor and surface sockets',()=>{
    const g=panelGeometry(s.solid);for(const name of ['position','normal'])expect([...g.getAttribute(name).array].every(Number.isFinite)).toBe(true);const normals=g.getAttribute('normal');for(let i=0;i<normals.count;i++)expect(new THREE.Vector3().fromBufferAttribute(normals,i).length()).toBeCloseTo(1,5);g.dispose();
   }
  });
- it('validates 220 consecutive designs: all architectures, all yards, six-direction coverage and parent sockets',async()=>{
-  const cases=ARCHITECTURES.flatMap(architecture=>seedSequence(0,20).map(seed=>({architecture,seed,shipyardId:'forge'})));
-  cases.push(...['aegis','vesper','serein'].flatMap(shipyardId=>seedSequence(0,20).map(seed=>({architecture:'BLOCK_ASSEMBLY' as const,seed,shipyardId}))));
-  for(const [i,c]of cases.entries()){
-   const b=generateBlueprint({...structuredClone(DEFAULT_ORDER),shipyardId:c.shipyardId},c.seed,{architecture:c.architecture});
-   expect(validateBlueprint(b),JSON.stringify(c)).toEqual([]);expect(new Set(all(b).map(s=>s.id)).size).toBe(all(b).length);
-   if(i%10===9)await new Promise(r=>setTimeout(r,0));
+ // Keep all 220 historical cases and assertions; bounded batches prevent one long
+ // synchronous regression from exceeding the runner RPC / test scheduling budget.
+ const historicalBatches=ARCHITECTURES.map(architecture=>({label:`forge / ${architecture}`,shipyardId:'forge',architecture})).concat(['aegis','vesper','serein'].map(shipyardId=>({label:`${shipyardId} / BLOCK_ASSEMBLY`,shipyardId,architecture:'BLOCK_ASSEMBLY' as const})));
+ it.each(historicalBatches)('validates the original 220 consecutive designs / $label',async({architecture,shipyardId})=>{
+  for(const seed of seedSequence(0,20)){
+   const b=generateBlueprint({...structuredClone(DEFAULT_ORDER),shipyardId},seed,{architecture});
+   expect(validateBlueprint(b),JSON.stringify({architecture,shipyardId,seed})).toEqual([]);expect(new Set(all(b).map(s=>s.id)).size).toBe(all(b).length);
+   await new Promise(r=>setTimeout(r,0));
   }
  },120000);
  it('rejects corrupt IDs, cyclic parents, detached roots, degenerate geometry and cached bounds',()=>{

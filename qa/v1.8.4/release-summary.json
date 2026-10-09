@@ -1,0 +1,2552 @@
+{
+  "rows": [
+    {
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 10954
+          }
+        },
+        {
+          "name": "HULL_ONLY-TOP",
+          "stage": "HULL_ONLY",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 5,
+            "triangles": 500
+          }
+        },
+        {
+          "name": "HULL_ONLY-BOTTOM",
+          "stage": "HULL_ONLY",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 5,
+            "triangles": 500
+          }
+        },
+        {
+          "name": "HULL_ONLY-LEFT",
+          "stage": "HULL_ONLY",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 5,
+            "triangles": 500
+          }
+        },
+        {
+          "name": "HULL_ONLY-ISOMETRIC",
+          "stage": "HULL_ONLY",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 5,
+            "triangles": 500
+          }
+        },
+        {
+          "name": "HULL_ONLY-LOW-ISOMETRIC",
+          "stage": "HULL_ONLY",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 5,
+            "triangles": 500
+          }
+        },
+        {
+          "name": "PRIMARY-TOP",
+          "stage": "PRIMARY",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 7,
+            "triangles": 1776
+          }
+        },
+        {
+          "name": "PRIMARY-BOTTOM",
+          "stage": "PRIMARY",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 7,
+            "triangles": 1776
+          }
+        },
+        {
+          "name": "PRIMARY-LEFT",
+          "stage": "PRIMARY",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 7,
+            "triangles": 1776
+          }
+        },
+        {
+          "name": "PRIMARY-ISOMETRIC",
+          "stage": "PRIMARY",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 7,
+            "triangles": 1776
+          }
+        },
+        {
+          "name": "PRIMARY-LOW-ISOMETRIC",
+          "stage": "PRIMARY",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 7,
+            "triangles": 1776
+          }
+        },
+        {
+          "name": "NO_HARDPOINTS-TOP",
+          "stage": "NO_HARDPOINTS",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 4318
+          }
+        },
+        {
+          "name": "NO_HARDPOINTS-BOTTOM",
+          "stage": "NO_HARDPOINTS",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 4318
+          }
+        },
+        {
+          "name": "NO_HARDPOINTS-LEFT",
+          "stage": "NO_HARDPOINTS",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 4318
+          }
+        },
+        {
+          "name": "NO_HARDPOINTS-ISOMETRIC",
+          "stage": "NO_HARDPOINTS",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 4318
+          }
+        },
+        {
+          "name": "NO_HARDPOINTS-LOW-ISOMETRIC",
+          "stage": "NO_HARDPOINTS",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 4318
+          }
+        },
+        {
+          "name": "LAYOUT",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9412
+          }
+        },
+        {
+          "name": "SIZES",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9412
+          }
+        },
+        {
+          "name": "SYMMETRY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9412
+          }
+        },
+        {
+          "name": "ARCS",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 135,
+            "triangles": 9802
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 5,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "count": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 57083.606407166044,
+          "eligibleM2": 56169.01048626737,
+          "coveredM2": 55147.04267443537,
+          "excludedM2": 914.5959208986819,
+          "ratio": 0.9818054866378346
+        },
+        "bottom": {
+          "exposedM2": 57113.65213609636,
+          "eligibleM2": 56197.344013830625,
+          "coveredM2": 55568.50540370139,
+          "excludedM2": 916.3081222657315,
+          "ratio": 0.9888101720612549
+        },
+        "left": {
+          "exposedM2": 10867.1346768015,
+          "eligibleM2": 10867.1346768015,
+          "coveredM2": 10827.592133667837,
+          "excludedM2": 0,
+          "ratio": 0.9963612723767862
+        },
+        "right": {
+          "exposedM2": 10867.1346768015,
+          "eligibleM2": 10867.1346768015,
+          "coveredM2": 10827.592133667837,
+          "excludedM2": 0,
+          "ratio": 0.9963612723767862
+        },
+        "fore": {
+          "exposedM2": 22787.091202841726,
+          "eligibleM2": 12382.617424884447,
+          "coveredM2": 12281.594489057881,
+          "excludedM2": 10404.473777957273,
+          "ratio": 0.9918415523665015
+        },
+        "aft": {
+          "exposedM2": 16074.746113393898,
+          "eligibleM2": 5096.007844496003,
+          "coveredM2": 5092.356565079009,
+          "excludedM2": 10978.738268897883,
+          "ratio": 0.9992835020022708
+        }
+      },
+      "omissions": [],
+      "armor": 11,
+      "finish": 27,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 378.2345441822826,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 378.2345441822826,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.5278315287363,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.5278315287363,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 378.2345441822826,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 378.2345441822826,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 517.3336445421662,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 517.3336445421662,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 15458
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 4,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 46921.99749668392,
+          "eligibleM2": 44596.52223627892,
+          "coveredM2": 44393.27954951777,
+          "excludedM2": 2325.475260404887,
+          "ratio": 0.995442633717393
+        },
+        "bottom": {
+          "exposedM2": 46942.26232812243,
+          "eligibleM2": 44627.552228978384,
+          "coveredM2": 44318.421787785555,
+          "excludedM2": 2314.7100991439756,
+          "ratio": 0.9930731033688176
+        },
+        "left": {
+          "exposedM2": 18683.466909973817,
+          "eligibleM2": 14871.990583456656,
+          "coveredM2": 14768.965783531516,
+          "excludedM2": 3811.47632651718,
+          "ratio": 0.9930725615144119
+        },
+        "right": {
+          "exposedM2": 18673.204149009704,
+          "eligibleM2": 14941.351057852256,
+          "coveredM2": 14839.100091553524,
+          "excludedM2": 3731.853091157483,
+          "ratio": 0.9931565113554442
+        },
+        "fore": {
+          "exposedM2": 47053.30412526794,
+          "eligibleM2": 22146.34979447841,
+          "coveredM2": 22146.34979447841,
+          "excludedM2": 24906.954330789493,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 47625.17784443203,
+          "eligibleM2": 24233.112824215834,
+          "coveredM2": 24218.24340818726,
+          "excludedM2": 23392.065020215916,
+          "ratio": 0.9993864009078638
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 45,
+      "finish": 76,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 353.59321050917646,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 353.59321050917646,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.59321050917646,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.59321050917646,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 271.42154730492103,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 271.42154730492103,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 436.55239478712974,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 436.55239478712974,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 54,
+            "triangles": 17384
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 2,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 2
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 34396.56477267432,
+          "eligibleM2": 31192.785489650527,
+          "coveredM2": 30762.850853484997,
+          "excludedM2": 3203.779283023959,
+          "ratio": 0.9862168565770384
+        },
+        "bottom": {
+          "exposedM2": 33516.83484334369,
+          "eligibleM2": 30541.502386656226,
+          "coveredM2": 30117.674320249116,
+          "excludedM2": 2975.332456687444,
+          "ratio": 0.9861228808903558
+        },
+        "left": {
+          "exposedM2": 29993.533108651958,
+          "eligibleM2": 27420.47770281097,
+          "coveredM2": 26984.040089321734,
+          "excludedM2": 2573.0554058409666,
+          "ratio": 0.9840835153121896
+        },
+        "right": {
+          "exposedM2": 29994.12170428239,
+          "eligibleM2": 27499.561480378383,
+          "coveredM2": 27063.59273513835,
+          "excludedM2": 2494.5602239040045,
+          "ratio": 0.9841463382770265
+        },
+        "fore": {
+          "exposedM2": 39120.739149067165,
+          "eligibleM2": 13503.581914658238,
+          "coveredM2": 13503.581914658238,
+          "excludedM2": 25617.15723440888,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 40616.29560820408,
+          "eligibleM2": 11475.459315150396,
+          "coveredM2": 11448.20196561166,
+          "excludedM2": 29140.836293053373,
+          "ratio": 0.997624726924634
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "dorsal-defense",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 43,
+      "finish": 149,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 376.888207024639,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 376.888207024639,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.7101020528742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.7101020528742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 376.888207024639,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 376.888207024639,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 516.4340532432581,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 516.4340532432581,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 122,
+            "triangles": 18504
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 2,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 2
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 44842.75118299067,
+          "eligibleM2": 40493.38805594299,
+          "coveredM2": 38981.67603130639,
+          "excludedM2": 4349.363127047929,
+          "ratio": 0.9626676823745123
+        },
+        "bottom": {
+          "exposedM2": 44907.37459225549,
+          "eligibleM2": 40559.90041953471,
+          "coveredM2": 39957.27149883425,
+          "excludedM2": 4347.474172720891,
+          "ratio": 0.9851422485147371
+        },
+        "left": {
+          "exposedM2": 28225.10759525673,
+          "eligibleM2": 23354.096209042476,
+          "coveredM2": 23040.71414093389,
+          "excludedM2": 4871.011386214207,
+          "ratio": 0.9865812804184969
+        },
+        "right": {
+          "exposedM2": 28240.34792282391,
+          "eligibleM2": 23374.380689868274,
+          "coveredM2": 23101.170395378445,
+          "excludedM2": 4865.967232955612,
+          "ratio": 0.9883115493790066
+        },
+        "fore": {
+          "exposedM2": 50423.29466520856,
+          "eligibleM2": 18586.998579540865,
+          "coveredM2": 18586.998579540865,
+          "excludedM2": 31836.296085667662,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 51539.27085335816,
+          "eligibleM2": 18824.168497422044,
+          "coveredM2": 18809.49489962394,
+          "excludedM2": 32715.10235593567,
+          "ratio": 0.9992204915823977
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "dorsal-defense",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 53,
+      "finish": 103,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "architecture": "TWIN_HULL",
+      "family": "WIDE_CARRIER",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 401.14636766528747,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 401.14636766528747,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 352.970317791829,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 352.970317791829,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 401.14636766528747,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 401.14636766528747,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 534.3062307901489,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 534.3062307901489,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 40,
+            "triangles": 16728
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 3,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 7
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 51972.396475593654,
+          "eligibleM2": 50137.69701347226,
+          "coveredM2": 47318.71034477914,
+          "excludedM2": 1834.6994621213885,
+          "ratio": 0.9437751066241507
+        },
+        "bottom": {
+          "exposedM2": 51857.12981153911,
+          "eligibleM2": 50060.05371721987,
+          "coveredM2": 49504.22896654252,
+          "excludedM2": 1797.076094319255,
+          "ratio": 0.9888968407062225
+        },
+        "left": {
+          "exposedM2": 30459.70528703508,
+          "eligibleM2": 26412.123779690457,
+          "coveredM2": 26123.72236170471,
+          "excludedM2": 4047.58150734464,
+          "ratio": 0.9890807183704208
+        },
+        "right": {
+          "exposedM2": 30459.833779599758,
+          "eligibleM2": 26424.066218142252,
+          "coveredM2": 26142.320785913027,
+          "excludedM2": 4035.7675614574882,
+          "ratio": 0.9893375444224484
+        },
+        "fore": {
+          "exposedM2": 20518.549390684344,
+          "eligibleM2": 7413.318264854447,
+          "coveredM2": 7413.318264854447,
+          "excludedM2": 13105.2311258299,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 24714.985584310234,
+          "eligibleM2": 10016.484944097076,
+          "coveredM2": 10007.628892090372,
+          "excludedM2": 14698.500640213122,
+          "ratio": 0.9991158523118508
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "protected-missiles",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 28,
+      "finish": 129,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 353.4265701264373,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 353.4265701264373,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.4265701264373,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.4265701264373,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 246.3656620800621,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 246.3656620800621,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 417.4839895126192,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 417.4839895126192,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 44,
+            "triangles": 12132
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 2,
+        "BOTTOM": 0,
+        "PORT": 1,
+        "STARBOARD": 1
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 2
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 38363.04020906948,
+          "eligibleM2": 23875.7569787023,
+          "coveredM2": 23742.495110696786,
+          "excludedM2": 14487.283230367133,
+          "ratio": 0.9944185280439742
+        },
+        "bottom": {
+          "exposedM2": 38433.69894560778,
+          "eligibleM2": 23914.835115931728,
+          "coveredM2": 23781.295258860624,
+          "excludedM2": 14518.863829676075,
+          "ratio": 0.9944160243454013
+        },
+        "left": {
+          "exposedM2": 26775.158045295757,
+          "eligibleM2": 14882.027766443889,
+          "coveredM2": 14752.510545144722,
+          "excludedM2": 11893.130278851939,
+          "ratio": 0.9912970716536893
+        },
+        "right": {
+          "exposedM2": 26773.474103019573,
+          "eligibleM2": 14891.747848237852,
+          "coveredM2": 14763.27206427375,
+          "excludedM2": 11881.726254781663,
+          "ratio": 0.9913726860491191
+        },
+        "fore": {
+          "exposedM2": 30546.371428582504,
+          "eligibleM2": 11647.77139584378,
+          "coveredM2": 11647.77139584378,
+          "excludedM2": 18898.600032738745,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 32186.474773646267,
+          "eligibleM2": 8453.807851431384,
+          "coveredM2": 8430.895693303777,
+          "excludedM2": 23732.666922214878,
+          "ratio": 0.9972897233376641
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "ventral-battery",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "protected-missiles",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "lower-defense",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "forward-battery",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 39,
+      "finish": 95,
+      "attempts": []
+    },
+    {
+      "seed": 11,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 13140
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 5,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "count": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 50973.79468313154,
+          "eligibleM2": 49983.14547270226,
+          "coveredM2": 46600.91931516025,
+          "excludedM2": 990.6492104292757,
+          "ratio": 0.9323326668308786
+        },
+        "bottom": {
+          "exposedM2": 51006.02971047837,
+          "eligibleM2": 50013.25146222607,
+          "coveredM2": 48493.94889847689,
+          "excludedM2": 992.7782482522983,
+          "ratio": 0.9696219997834639
+        },
+        "left": {
+          "exposedM2": 10898.332958511486,
+          "eligibleM2": 10898.332958511486,
+          "coveredM2": 10863.314197871945,
+          "excludedM2": 0,
+          "ratio": 0.9967867782372907
+        },
+        "right": {
+          "exposedM2": 10898.332958511486,
+          "eligibleM2": 10898.332958511486,
+          "coveredM2": 10863.314197871945,
+          "excludedM2": 0,
+          "ratio": 0.9967867782372907
+        },
+        "fore": {
+          "exposedM2": 17591.741599076846,
+          "eligibleM2": 8616.300996139842,
+          "coveredM2": 8503.045750559078,
+          "excludedM2": 8975.440602936997,
+          "ratio": 0.986855699953901
+        },
+        "aft": {
+          "exposedM2": 13001.549341180502,
+          "eligibleM2": 3210.372604767197,
+          "coveredM2": 3182.4917021321344,
+          "excludedM2": 9791.176736413321,
+          "ratio": 0.9913153686292795
+        }
+      },
+      "omissions": [],
+      "armor": 11,
+      "finish": 46,
+      "attempts": []
+    },
+    {
+      "seed": 23,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 30,
+            "triangles": 12316
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 3,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "count": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 2
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 54213.181490410716,
+          "eligibleM2": 53245.91384252561,
+          "coveredM2": 51042.99987500194,
+          "excludedM2": 967.2676478851043,
+          "ratio": 0.9586275488849947
+        },
+        "bottom": {
+          "exposedM2": 54247.43821564098,
+          "eligibleM2": 53277.93664752172,
+          "coveredM2": 48918.190417097,
+          "excludedM2": 969.5015681192673,
+          "ratio": 0.9181697621049385
+        },
+        "left": {
+          "exposedM2": 9456.847224513684,
+          "eligibleM2": 9456.847224513684,
+          "coveredM2": 9422.482209654863,
+          "excludedM2": 0,
+          "ratio": 0.9963661235036407
+        },
+        "right": {
+          "exposedM2": 9456.847224513684,
+          "eligibleM2": 9456.847224513684,
+          "coveredM2": 9422.482209654863,
+          "excludedM2": 0,
+          "ratio": 0.9963661235036407
+        },
+        "fore": {
+          "exposedM2": 20956.772416782947,
+          "eligibleM2": 11646.714510265807,
+          "coveredM2": 11538.428446665846,
+          "excludedM2": 9310.057906517137,
+          "ratio": 0.9907024368542293
+        },
+        "aft": {
+          "exposedM2": 13833.646276433958,
+          "eligibleM2": 3451.052709363104,
+          "coveredM2": 3418.089420002631,
+          "excludedM2": 10382.593567070868,
+          "ratio": 0.9904483379025073
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "dorsal-defense",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 11,
+      "finish": 46,
+      "attempts": []
+    },
+    {
+      "seed": 41,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 900,
+          "diagnostics": {
+            "calls": 20,
+            "triangles": 10970
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 3,
+        "BOTTOM": 4,
+        "PORT": 2,
+        "STARBOARD": 2
+      },
+      "sizes": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "count": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 6
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 2
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 48931.41404150494,
+          "eligibleM2": 48680.059074231256,
+          "coveredM2": 46627.62511510392,
+          "excludedM2": 251.35496727368462,
+          "ratio": 0.9578383017983273
+        },
+        "bottom": {
+          "exposedM2": 48966.95151210451,
+          "eligibleM2": 48715.18858015291,
+          "coveredM2": 47775.338237994765,
+          "excludedM2": 251.76293195159593,
+          "ratio": 0.9807072420419398
+        },
+        "left": {
+          "exposedM2": 11853.4012899656,
+          "eligibleM2": 11422.975724790704,
+          "coveredM2": 11280.761886439723,
+          "excludedM2": 430.42556517489714,
+          "ratio": 0.9875501934191857
+        },
+        "right": {
+          "exposedM2": 11861.075883824204,
+          "eligibleM2": 11431.531781518317,
+          "coveredM2": 11290.293848486597,
+          "excludedM2": 429.5441023058871,
+          "ratio": 0.9876448812170506
+        },
+        "fore": {
+          "exposedM2": 16417.125432602486,
+          "eligibleM2": 9854.664877345673,
+          "coveredM2": 9838.131815907911,
+          "excludedM2": 6562.460555256812,
+          "ratio": 0.9983223111446673
+        },
+        "aft": {
+          "exposedM2": 12104.823303157067,
+          "eligibleM2": 3794.3097203223138,
+          "coveredM2": 3776.9725697179724,
+          "excludedM2": 8310.513582834752,
+          "ratio": 0.995430749758913
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "dorsal-defense",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 11,
+      "finish": 38,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "shipyardId": "vesper",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 357.0836059950742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 357.0836059950742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 357.0836059950742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 357.0836059950742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 274.53698255091604,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 274.53698255091604,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 441.19174565676724,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 441.19174565676724,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 46,
+            "triangles": 17214
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 5,
+        "BOTTOM": 4,
+        "PORT": 1,
+        "STARBOARD": 1
+      },
+      "sizes": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "count": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 4
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 35765.79284793997,
+          "eligibleM2": 33930.105741866966,
+          "coveredM2": 33661.45577332993,
+          "excludedM2": 1835.6871060729911,
+          "ratio": 0.9920822537194294
+        },
+        "bottom": {
+          "exposedM2": 35791.93000116496,
+          "eligibleM2": 33950.50988103964,
+          "coveredM2": 33511.87395477154,
+          "excludedM2": 1841.4201201253293,
+          "ratio": 0.9870801372997032
+        },
+        "left": {
+          "exposedM2": 11092.903229475827,
+          "eligibleM2": 8765.705413981423,
+          "coveredM2": 8662.14763241039,
+          "excludedM2": 2327.1978154943545,
+          "ratio": 0.988186029910855
+        },
+        "right": {
+          "exposedM2": 11088.40936928816,
+          "eligibleM2": 8745.766865380529,
+          "coveredM2": 8645.449047271894,
+          "excludedM2": 2342.6425039076157,
+          "ratio": 0.9885295572529225
+        },
+        "fore": {
+          "exposedM2": 22525.171097792947,
+          "eligibleM2": 9241.249483139292,
+          "coveredM2": 9241.249483139292,
+          "excludedM2": 13283.92161465365,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 23958.64118400225,
+          "eligibleM2": 10688.343091939065,
+          "coveredM2": 10665.26476654152,
+          "excludedM2": 13270.298092063193,
+          "ratio": 0.9978407948548218
+        }
+      },
+      "omissions": [],
+      "armor": 45,
+      "finish": 93,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "shipyardId": "forge",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 353.3996706853801,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 353.3996706853801,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.3996706853801,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.3996706853801,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 335.53625059614103,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 335.53625059614103,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 484.94061743283754,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 484.94061743283754,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 36,
+            "triangles": 14924
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 4,
+        "BOTTOM": 4,
+        "PORT": 1,
+        "STARBOARD": 1
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 4
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 45044.33568929441,
+          "eligibleM2": 43503.02171798992,
+          "coveredM2": 43080.92132802864,
+          "excludedM2": 1541.3139713045184,
+          "ratio": 0.9902972167612273
+        },
+        "bottom": {
+          "exposedM2": 45137.287556868054,
+          "eligibleM2": 43587.3812375315,
+          "coveredM2": 43077.67761048076,
+          "excludedM2": 1549.9063193365644,
+          "ratio": 0.9883061653951383
+        },
+        "left": {
+          "exposedM2": 10103.466609372937,
+          "eligibleM2": 7252.163070554853,
+          "coveredM2": 7158.406188239329,
+          "excludedM2": 2851.303538818038,
+          "ratio": 0.9870718733978563
+        },
+        "right": {
+          "exposedM2": 10091.935954142456,
+          "eligibleM2": 7184.046968942812,
+          "coveredM2": 7099.676444976197,
+          "excludedM2": 2907.8889851996546,
+          "ratio": 0.9882558501731189
+        },
+        "fore": {
+          "exposedM2": 26632.87452147311,
+          "eligibleM2": 12254.37029966661,
+          "coveredM2": 12132.048972087952,
+          "excludedM2": 14378.504221806495,
+          "ratio": 0.9900181466213742
+        },
+        "aft": {
+          "exposedM2": 29499.00461485808,
+          "eligibleM2": 15464.030749968815,
+          "coveredM2": 15458.13913722121,
+          "excludedM2": 14034.973864889236,
+          "ratio": 0.9996190118318525
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 45,
+      "finish": 76,
+      "attempts": []
+    },
+    {
+      "seed": 7,
+      "shipyardId": "serein",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "shots": [
+        {
+          "name": "TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 353.0215245172418,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 353.0215245172418,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 353.0215245172418,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 353.0215245172418,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 333.75120653671985,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 333.75120653671985,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 483.34267457566983,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 483.34267457566983,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 900,
+          "diagnostics": {
+            "calls": 31,
+            "triangles": 13116
+          }
+        }
+      ],
+      "repeatPixels": true,
+      "issues": [],
+      "counts": {
+        "TOP": 4,
+        "BOTTOM": 4,
+        "PORT": 0,
+        "STARBOARD": 0
+      },
+      "sizes": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "count": 2
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "count": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "count": 4
+        }
+      ],
+      "coverage": {
+        "top": {
+          "exposedM2": 51173.20501458618,
+          "eligibleM2": 48525.73448087506,
+          "coveredM2": 48289.45664743446,
+          "excludedM2": 2647.470533711143,
+          "ratio": 0.9951308756896051
+        },
+        "bottom": {
+          "exposedM2": 51138.862076705445,
+          "eligibleM2": 48506.52488033723,
+          "coveredM2": 47041.8051988387,
+          "excludedM2": 2632.337196368484,
+          "ratio": 0.9698036566191475
+        },
+        "left": {
+          "exposedM2": 4263.306084307486,
+          "eligibleM2": 3082.456062160516,
+          "coveredM2": 3056.2036620192507,
+          "excludedM2": 1180.8500221469615,
+          "ratio": 0.9914832848832678
+        },
+        "right": {
+          "exposedM2": 4276.705685224162,
+          "eligibleM2": 3082.367344350533,
+          "coveredM2": 3056.114944209268,
+          "excludedM2": 1194.3383408736222,
+          "ratio": 0.9914830397520978
+        },
+        "fore": {
+          "exposedM2": 21120.157613569987,
+          "eligibleM2": 8608.019043381413,
+          "coveredM2": 8608.019043381413,
+          "excludedM2": 12512.13857018856,
+          "ratio": 1
+        },
+        "aft": {
+          "exposedM2": 20677.99815852445,
+          "eligibleM2": 8256.30012224226,
+          "coveredM2": 8255.721466327948,
+          "excludedM2": 12421.698036282092,
+          "ratio": 0.9999299134108808
+        }
+      },
+      "omissions": [
+        {
+          "groupId": "primary-axis",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        },
+        {
+          "groupId": "broadside",
+          "reason": "No coherent whole-group surface / clearance candidate; armor and standards retained"
+        }
+      ],
+      "armor": 45,
+      "finish": 87,
+      "attempts": []
+    }
+  ],
+  "errors": [],
+  "fixedFrameNote": "Wedge fixed 360m; others Auto Fit. Original fixed-camera captures retained locally."
+}

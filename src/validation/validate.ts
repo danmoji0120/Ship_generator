@@ -1,3 +1,4 @@
+import{validateProduction}from'../generation/production/validate';
 import { validateStructuralArmorPilot } from "../generation/armor/structural-pilot/validate";
 import { validateLayeredArmor } from "./armor";
 import { validateMacro } from "./macro";
@@ -25,7 +26,8 @@ function finite(v: unknown): boolean {
   if (v && typeof v === "object") return Object.values(v).every(finite);
   return true;
 }
-export function validateArchitecture(b: ShipBlueprint) {
+export interface ValidationDetails {weapon?:ReturnType<typeof validateWeaponLayout>;production?:ReturnType<typeof validateProduction>}
+export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails) {
   const errors: string[] = [],
     l = b.order.length,
     volumes = new Map(b.structuralVolumes.map((v) => [v.id, v]));
@@ -53,7 +55,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || b.generatorVersion === "1.8.4"))))
     ) {
       if (
         !v.shape ||
@@ -108,7 +110,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || b.generatorVersion === "1.8.4"))))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -241,7 +243,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       }
     }
   }
-  if (b.hardpoints.length < 3 || b.hardpoints.length > 100)
+  if (b.hardpoints.length < (b.productionDesign ? 1 : 3) || b.hardpoints.length > 100)
     errors.push("Hardpoint count");
   if (b.surfaceFeatures.some((f) => !volumes.has(f.parentId)))
     errors.push("Surface parent");
@@ -271,7 +273,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       continue;
     }
     if(p.assembly){
-      if(!b.functionalExterior?.prefabIds.includes(p.id)&&!b.weaponLayout?.prefabIds.includes(p.id))errors.push("Unreferenced functional assembly " + p.id);
+      if(!b.functionalExterior?.prefabIds.includes(p.id)&&!b.weaponLayout?.prefabIds.includes(p.id)&&!b.productionDesign?.functionalPrefabIds.includes(p.id))errors.push("Unreferenced functional assembly " + p.id);
       continue;
     }
     if (p.socket.kind === "HULL_SIDE" || p.socket.kind === "HULL_FACE") {
@@ -300,9 +302,9 @@ export function validateArchitecture(b: ShipBlueprint) {
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3"))))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || b.generatorVersion === "1.8.4")))))
     errors.push(...validateIntegration(b));
-  if(b.weaponLayout)errors.push(...validateWeaponLayout(b).issues);
+  if(b.weaponLayout){const result=validateWeaponLayout(b);if(details)details.weapon=result;errors.push(...result.issues);}
   if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
   if (b.structuralArmorPilot) errors.push(...validateStructuralArmorPilot(b).issues);
   const d = b.dimensions;
@@ -319,10 +321,11 @@ export function validateArchitecture(b: ShipBlueprint) {
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || b.generatorVersion === "1.8.4"))))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
+  if(b.productionDesign){const result=validateProduction(b);if(details)details.production=result;errors.push(...result.issues);}
   return errors;
 }
-export function validateBlueprint(b: AnyShipBlueprint) {
-  return b.schemaVersion === 1 ? validateV0(b) : validateArchitecture(b);
+export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {
+  return b.schemaVersion === 1 ? validateV0(b) : validateArchitecture(b,details);
 }

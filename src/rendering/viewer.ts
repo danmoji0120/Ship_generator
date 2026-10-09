@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import type { ShipBlueprint } from "../blueprint/types";
+import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
   private scene = new THREE.Scene();
@@ -8,7 +8,7 @@ export class ShipViewer {
   private renderer: THREE.WebGLRenderer;
   private controls: OrbitControls;
   private ship?: THREE.Group;
-  private blueprint?: ShipBlueprint;
+  private blueprint?: AnyShipBlueprint;
   private resizeObserver: ResizeObserver;
   private mode: DebugView = "Normal";
   private radius = 100;
@@ -70,7 +70,7 @@ export class ShipViewer {
     this.controls.update();
     this.renderer.render(this.scene, this.camera);
   };
-  show(b: ShipBlueprint, reset = true) {
+  show(b: AnyShipBlueprint, reset = true) {
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -79,7 +79,7 @@ export class ShipViewer {
     this.ship = createShip(b, this.mode);
     this.scene.add(this.ship);
     // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
-    const shadows = Boolean(b.layeredArmor?.budget.segmentCount);
+    const shadows = Boolean(b.schemaVersion===2&&(b.layeredArmor?.budget.segmentCount||b.productionDesign?.armor.length));
     this.renderer.shadowMap.enabled = shadows;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     if (this.armorShadowLight) {
@@ -92,7 +92,7 @@ export class ShipViewer {
     if (shadows) this.ship.traverse(n => { if(n instanceof THREE.Mesh) n.receiveShadow = true; });
     if (reset) this.fit(true);
   }
-  snapshot(b: ShipBlueprint, mode: DebugView = "Normal") {
+  snapshot(b: AnyShipBlueprint, mode: DebugView = "Normal") {
     this.mode = mode;
     this.show(b);
     this.renderer.render(this.scene, this.camera);

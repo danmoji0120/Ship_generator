@@ -9,7 +9,7 @@ export function shipMaterials(b: AnyShipBlueprint) {
     roughness: theme.roughness,
   });
   // Object-space panels: no UV editor or texture asset; repeating bands follow the ship axis.
-  if(!(b.schemaVersion===2&&b.functionalExterior))hull.onBeforeCompile = (shader) => {
+  if(!(b.schemaVersion===2&&(b.functionalExterior||b.productionDesign)))hull.onBeforeCompile = (shader) => {
     shader.vertexShader = shader.vertexShader
       .replace(
         "#include <common>",

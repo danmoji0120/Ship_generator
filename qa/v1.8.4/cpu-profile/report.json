@@ -1,0 +1,3791 @@
+{
+  "summary": {
+    "designs": 220,
+    "errors": [],
+    "environment": "Same Chromium/SwiftShader environment; CPU only, no captures or test/build worker in parallel. One warmup outside 220 consecutive design cases.",
+    "totalMs": {
+      "median": 343.30000001192093,
+      "p95": 487.2000000178814,
+      "maximum": 557.3000000119209
+    },
+    "phases": {
+      "hullMs": {
+        "median": 4.0999999940395355,
+        "p95": 12,
+        "maximum": 20.69999998807907
+      },
+      "armorMs": {
+        "median": 46.19999998807907,
+        "p95": 90.30000001192093,
+        "maximum": 126.80000001192093
+      },
+      "coverageMs": {
+        "median": 41.599999994039536,
+        "p95": 73.19999998807907,
+        "maximum": 93.30000001192093
+      },
+      "functionalMs": {
+        "median": 67.2000000178814,
+        "p95": 94.80000001192093,
+        "maximum": 120.5
+      },
+      "installationMs": {
+        "median": 105.59999999403954,
+        "p95": 147.30000001192093,
+        "maximum": 217.40000000596046
+      },
+      "validationMs": {
+        "median": 74.7999999821186,
+        "p95": 112.69999998807907,
+        "maximum": 137.40000000596046
+      },
+      "totalMs": {
+        "median": 343.2000000178814,
+        "p95": 487.2000000178814,
+        "maximum": 557.2000000178814
+      }
+    }
+  },
+  "rows": [
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 266.7999999821186,
+      "phases": {
+        "hullMs": 4.799999982118607,
+        "armorMs": 19.30000001192093,
+        "coverageMs": 35.400000005960464,
+        "functionalMs": 36.29999998211861,
+        "installationMs": 107,
+        "validationMs": 63.900000005960464,
+        "totalMs": 266.69999998807907
+      },
+      "mounts": 11,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 175,
+      "phases": {
+        "hullMs": 2.699999988079071,
+        "armorMs": 9.800000011920929,
+        "coverageMs": 11,
+        "functionalMs": 16.299999982118607,
+        "installationMs": 76,
+        "validationMs": 59.20000001788139,
+        "totalMs": 175
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 214.09999999403954,
+      "phases": {
+        "hullMs": 2.5,
+        "armorMs": 11.699999988079071,
+        "coverageMs": 12.900000005960464,
+        "functionalMs": 25.200000017881393,
+        "installationMs": 87,
+        "validationMs": 74.7999999821186,
+        "totalMs": 214.09999999403954
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 220,
+      "phases": {
+        "hullMs": 2.2999999821186066,
+        "armorMs": 12.100000023841858,
+        "coverageMs": 16.599999994039536,
+        "functionalMs": 20,
+        "installationMs": 111.40000000596046,
+        "validationMs": 57.599999994039536,
+        "totalMs": 220
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 154.2999999821186,
+      "phases": {
+        "hullMs": 1.699999988079071,
+        "armorMs": 10.200000017881393,
+        "coverageMs": 8.599999994039536,
+        "functionalMs": 19.19999998807907,
+        "installationMs": 71.2000000178814,
+        "validationMs": 43.39999997615814,
+        "totalMs": 154.2999999821186
+      },
+      "mounts": 11,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 196.69999998807907,
+      "phases": {
+        "hullMs": 2,
+        "armorMs": 10.399999976158142,
+        "coverageMs": 14,
+        "functionalMs": 21,
+        "installationMs": 91.40000000596046,
+        "validationMs": 57.900000005960464,
+        "totalMs": 196.69999998807907
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 189.69999998807907,
+      "phases": {
+        "hullMs": 2,
+        "armorMs": 12.800000011920929,
+        "coverageMs": 12.899999976158142,
+        "functionalMs": 20.200000017881393,
+        "installationMs": 74.2999999821186,
+        "validationMs": 67.5,
+        "totalMs": 189.69999998807907
+      },
+      "mounts": 10,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 160.2999999821186,
+      "phases": {
+        "hullMs": 1.4000000059604645,
+        "armorMs": 10.799999982118607,
+        "coverageMs": 7.700000017881393,
+        "functionalMs": 16.899999976158142,
+        "installationMs": 73.5,
+        "validationMs": 50,
+        "totalMs": 160.2999999821186
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 269.80000001192093,
+      "phases": {
+        "hullMs": 1.9000000059604645,
+        "armorMs": 13.099999994039536,
+        "coverageMs": 22.600000023841858,
+        "functionalMs": 29.299999982118607,
+        "installationMs": 94.2000000178814,
+        "validationMs": 108.69999998807907,
+        "totalMs": 269.80000001192093
+      },
+      "mounts": 12,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 195.40000000596046,
+      "phases": {
+        "hullMs": 1.600000023841858,
+        "armorMs": 12.5,
+        "coverageMs": 15.099999994039536,
+        "functionalMs": 22.69999998807907,
+        "installationMs": 81.2000000178814,
+        "validationMs": 62.29999998211861,
+        "totalMs": 195.40000000596046
+      },
+      "mounts": 10,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 166.40000000596046,
+      "phases": {
+        "hullMs": 1.800000011920929,
+        "armorMs": 15.799999982118607,
+        "coverageMs": 14.600000023841858,
+        "functionalMs": 21.299999982118607,
+        "installationMs": 58.5,
+        "validationMs": 54.400000005960464,
+        "totalMs": 166.40000000596046
+      },
+      "mounts": 8,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 188.40000000596046,
+      "phases": {
+        "hullMs": 1.7999999821186066,
+        "armorMs": 11.800000011920929,
+        "coverageMs": 13.699999988079071,
+        "functionalMs": 21.700000017881393,
+        "installationMs": 80.5,
+        "validationMs": 58.900000005960464,
+        "totalMs": 188.40000000596046
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 213.89999997615814,
+      "phases": {
+        "hullMs": 1.399999976158142,
+        "armorMs": 9.300000011920929,
+        "coverageMs": 11,
+        "functionalMs": 21.599999994039536,
+        "installationMs": 109.40000000596046,
+        "validationMs": 61.19999998807907,
+        "totalMs": 213.89999997615814
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 172.40000000596046,
+      "phases": {
+        "hullMs": 1.4000000059604645,
+        "armorMs": 12.799999982118607,
+        "coverageMs": 16.600000023841858,
+        "functionalMs": 20.5,
+        "installationMs": 81.5,
+        "validationMs": 39.5,
+        "totalMs": 172.30000001192093
+      },
+      "mounts": 11,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 255.90000000596046,
+      "phases": {
+        "hullMs": 1.0999999940395355,
+        "armorMs": 10.900000005960464,
+        "coverageMs": 11.300000011920929,
+        "functionalMs": 20,
+        "installationMs": 105.2999999821186,
+        "validationMs": 107.30000001192093,
+        "totalMs": 255.90000000596046
+      },
+      "mounts": 8,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 205,
+      "phases": {
+        "hullMs": 1.800000011920929,
+        "armorMs": 11.400000005960464,
+        "coverageMs": 14.699999988079071,
+        "functionalMs": 21.80000001192093,
+        "installationMs": 93,
+        "validationMs": 62.19999998807907,
+        "totalMs": 204.90000000596046
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 187,
+      "phases": {
+        "hullMs": 1.2999999821186066,
+        "armorMs": 10.200000017881393,
+        "coverageMs": 12.299999982118607,
+        "functionalMs": 27,
+        "installationMs": 88.60000002384186,
+        "validationMs": 47.5,
+        "totalMs": 186.90000000596046
+      },
+      "mounts": 11,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 207.69999998807907,
+      "phases": {
+        "hullMs": 1.5,
+        "armorMs": 15.599999994039536,
+        "coverageMs": 12.400000005960464,
+        "functionalMs": 21.099999994039536,
+        "installationMs": 97.2999999821186,
+        "validationMs": 59.80000001192093,
+        "totalMs": 207.69999998807907
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 273.5,
+      "phases": {
+        "hullMs": 1.5999999940395355,
+        "armorMs": 21.599999994039536,
+        "coverageMs": 16.099999994039536,
+        "functionalMs": 25.599999994039536,
+        "installationMs": 112.10000002384186,
+        "validationMs": 96.5,
+        "totalMs": 273.5
+      },
+      "mounts": 10,
+      "armor": 11
+    },
+    {
+      "architecture": "MONOLITHIC",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 203.5,
+      "phases": {
+        "hullMs": 1.5999999940395355,
+        "armorMs": 26.400000005960464,
+        "coverageMs": 9.299999982118607,
+        "functionalMs": 25.900000005960464,
+        "installationMs": 90.80000001192093,
+        "validationMs": 49.400000005960464,
+        "totalMs": 203.40000000596046
+      },
+      "mounts": 13,
+      "armor": 11
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 381,
+      "phases": {
+        "hullMs": 8.400000005960464,
+        "armorMs": 48.5,
+        "coverageMs": 37.79999998211861,
+        "functionalMs": 54.30000001192093,
+        "installationMs": 119.30000001192093,
+        "validationMs": 112.69999998807907,
+        "totalMs": 381
+      },
+      "mounts": 12,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 360.39999997615814,
+      "phases": {
+        "hullMs": 5.899999976158142,
+        "armorMs": 37.20000001788139,
+        "coverageMs": 56.69999998807907,
+        "functionalMs": 89.5,
+        "installationMs": 111.90000000596046,
+        "validationMs": 59.19999998807907,
+        "totalMs": 360.39999997615814
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 359.2000000178814,
+      "phases": {
+        "hullMs": 19.200000017881393,
+        "armorMs": 66.90000000596046,
+        "coverageMs": 26.5,
+        "functionalMs": 62.69999998807907,
+        "installationMs": 103.30000001192093,
+        "validationMs": 80.59999999403954,
+        "totalMs": 359.2000000178814
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 296.40000000596046,
+      "phases": {
+        "hullMs": 10.5,
+        "armorMs": 48.60000002384186,
+        "coverageMs": 25.5,
+        "functionalMs": 56.29999998211861,
+        "installationMs": 97,
+        "validationMs": 58.5,
+        "totalMs": 296.40000000596046
+      },
+      "mounts": 8,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 264.2000000178814,
+      "phases": {
+        "hullMs": 2.5,
+        "armorMs": 35.70000001788139,
+        "coverageMs": 26.69999998807907,
+        "functionalMs": 56.099999994039536,
+        "installationMs": 95.30000001192093,
+        "validationMs": 47.80000001192093,
+        "totalMs": 264.10000002384186
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 301.80000001192093,
+      "phases": {
+        "hullMs": 3.2000000178813934,
+        "armorMs": 33.19999998807907,
+        "coverageMs": 30.80000001192093,
+        "functionalMs": 52.900000005960464,
+        "installationMs": 115.59999999403954,
+        "validationMs": 66.09999999403954,
+        "totalMs": 301.80000001192093
+      },
+      "mounts": 13,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 374.59999999403954,
+      "phases": {
+        "hullMs": 3.2999999821186066,
+        "armorMs": 51.30000001192093,
+        "coverageMs": 48.79999998211861,
+        "functionalMs": 59.30000001192093,
+        "installationMs": 131.40000000596046,
+        "validationMs": 80.5,
+        "totalMs": 374.59999999403954
+      },
+      "mounts": 4,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 467.30000001192093,
+      "phases": {
+        "hullMs": 14.400000005960464,
+        "armorMs": 69.19999998807907,
+        "coverageMs": 67.2000000178814,
+        "functionalMs": 77.69999998807907,
+        "installationMs": 141.80000001192093,
+        "validationMs": 97,
+        "totalMs": 467.30000001192093
+      },
+      "mounts": 12,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 350,
+      "phases": {
+        "hullMs": 8.300000011920929,
+        "armorMs": 57.29999998211861,
+        "coverageMs": 49.599999994039536,
+        "functionalMs": 61.10000002384186,
+        "installationMs": 95.19999998807907,
+        "validationMs": 78.40000000596046,
+        "totalMs": 349.90000000596046
+      },
+      "mounts": 5,
+      "armor": 41
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 315.30000001192093,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 42.70000001788139,
+        "coverageMs": 37.29999998211861,
+        "functionalMs": 67.2000000178814,
+        "installationMs": 101.39999997615814,
+        "validationMs": 62.70000001788139,
+        "totalMs": 315.30000001192093
+      },
+      "mounts": 6,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 492.09999999403954,
+      "phases": {
+        "hullMs": 4.5999999940395355,
+        "armorMs": 63.900000005960464,
+        "coverageMs": 61.29999998211861,
+        "functionalMs": 74,
+        "installationMs": 217.40000000596046,
+        "validationMs": 70.90000000596046,
+        "totalMs": 492.09999999403954
+      },
+      "mounts": 6,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 288.59999999403954,
+      "phases": {
+        "hullMs": 5.0999999940395355,
+        "armorMs": 28.5,
+        "coverageMs": 26.599999994039536,
+        "functionalMs": 58.099999994039536,
+        "installationMs": 108.5,
+        "validationMs": 61.80000001192093,
+        "totalMs": 288.59999999403954
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 393.30000001192093,
+      "phases": {
+        "hullMs": 7.200000017881393,
+        "armorMs": 71.69999998807907,
+        "coverageMs": 49.5,
+        "functionalMs": 65,
+        "installationMs": 126.2000000178814,
+        "validationMs": 73.69999998807907,
+        "totalMs": 393.30000001192093
+      },
+      "mounts": 12,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 376.90000000596046,
+      "phases": {
+        "hullMs": 5.300000011920929,
+        "armorMs": 43.400000005960464,
+        "coverageMs": 36.900000005960464,
+        "functionalMs": 67.39999997615814,
+        "installationMs": 156.90000000596046,
+        "validationMs": 66.90000000596046,
+        "totalMs": 376.80000001192093
+      },
+      "mounts": 11,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 270.19999998807907,
+      "phases": {
+        "hullMs": 3.0999999940395355,
+        "armorMs": 27.400000005960464,
+        "coverageMs": 26.099999994039536,
+        "functionalMs": 59.5,
+        "installationMs": 90.40000000596046,
+        "validationMs": 63.69999998807907,
+        "totalMs": 270.19999998807907
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 298.09999999403954,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 32.39999997615814,
+        "coverageMs": 25.100000023841858,
+        "functionalMs": 56.89999997615814,
+        "installationMs": 122.60000002384186,
+        "validationMs": 58.099999994039536,
+        "totalMs": 298.09999999403954
+      },
+      "mounts": 12,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 329.90000000596046,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 39.10000002384186,
+        "coverageMs": 26.099999994039536,
+        "functionalMs": 78.90000000596046,
+        "installationMs": 124.7999999821186,
+        "validationMs": 57.400000005960464,
+        "totalMs": 329.90000000596046
+      },
+      "mounts": 11,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 277,
+      "phases": {
+        "hullMs": 3.2999999821186066,
+        "armorMs": 29.80000001192093,
+        "coverageMs": 25.400000005960464,
+        "functionalMs": 57.69999998807907,
+        "installationMs": 100.59999999403954,
+        "validationMs": 60.20000001788139,
+        "totalMs": 277
+      },
+      "mounts": 12,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 453.2999999821186,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 43.5,
+        "coverageMs": 59.30000001192093,
+        "functionalMs": 70.2999999821186,
+        "installationMs": 189.90000000596046,
+        "validationMs": 86.69999998807907,
+        "totalMs": 453.2999999821186
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 336.60000002384186,
+      "phases": {
+        "hullMs": 4.9000000059604645,
+        "armorMs": 54.099999994039536,
+        "coverageMs": 24.200000017881393,
+        "functionalMs": 61.69999998807907,
+        "installationMs": 112.30000001192093,
+        "validationMs": 79.40000000596046,
+        "totalMs": 336.60000002384186
+      },
+      "mounts": 13,
+      "armor": 49
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 251.59999999403954,
+      "phases": {
+        "hullMs": 5.0999999940395355,
+        "armorMs": 43.30000001192093,
+        "coverageMs": 29.099999994039536,
+        "functionalMs": 58.19999998807907,
+        "installationMs": 73.5,
+        "validationMs": 42.400000005960464,
+        "totalMs": 251.59999999403954
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 257.7999999821186,
+      "phases": {
+        "hullMs": 4.699999988079071,
+        "armorMs": 49.60000002384186,
+        "coverageMs": 32.19999998807907,
+        "functionalMs": 45.69999998807907,
+        "installationMs": 75.30000001192093,
+        "validationMs": 50.19999998807907,
+        "totalMs": 257.69999998807907
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 235.90000000596046,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 31.900000005960464,
+        "coverageMs": 29.5,
+        "functionalMs": 52.69999998807907,
+        "installationMs": 77,
+        "validationMs": 41.20000001788139,
+        "totalMs": 235.80000001192093
+      },
+      "mounts": 4,
+      "armor": 31
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 261.7999999821186,
+      "phases": {
+        "hullMs": 3.4000000059604645,
+        "armorMs": 34.39999997615814,
+        "coverageMs": 32.80000001192093,
+        "functionalMs": 46.599999994039536,
+        "installationMs": 79.30000001192093,
+        "validationMs": 65.2999999821186,
+        "totalMs": 261.7999999821186
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 269.90000000596046,
+      "phases": {
+        "hullMs": 6.5,
+        "armorMs": 31.5,
+        "coverageMs": 34.10000002384186,
+        "functionalMs": 53.69999998807907,
+        "installationMs": 93.09999999403954,
+        "validationMs": 50.900000005960464,
+        "totalMs": 269.80000001192093
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 291.90000000596046,
+      "phases": {
+        "hullMs": 4.4000000059604645,
+        "armorMs": 42.79999998211861,
+        "coverageMs": 41.10000002384186,
+        "functionalMs": 58.69999998807907,
+        "installationMs": 83.59999999403954,
+        "validationMs": 61.30000001192093,
+        "totalMs": 291.90000000596046
+      },
+      "mounts": 4,
+      "armor": 40
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 243.5,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 29,
+        "coverageMs": 26.100000023841858,
+        "functionalMs": 63.099999994039536,
+        "installationMs": 80.40000000596046,
+        "validationMs": 41.5,
+        "totalMs": 243.5
+      },
+      "mounts": 4,
+      "armor": 39
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 314.40000000596046,
+      "phases": {
+        "hullMs": 5.100000023841858,
+        "armorMs": 51.5,
+        "coverageMs": 31.19999998807907,
+        "functionalMs": 60.900000005960464,
+        "installationMs": 105.09999999403954,
+        "validationMs": 60.599999994039536,
+        "totalMs": 314.40000000596046
+      },
+      "mounts": 4,
+      "armor": 39
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 257.69999998807907,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 33.19999998807907,
+        "coverageMs": 30.100000023841858,
+        "functionalMs": 57.29999998211861,
+        "installationMs": 85.09999999403954,
+        "validationMs": 48.400000005960464,
+        "totalMs": 257.69999998807907
+      },
+      "mounts": 4,
+      "armor": 37
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 284.69999998807907,
+      "phases": {
+        "hullMs": 3.699999988079071,
+        "armorMs": 47.80000001192093,
+        "coverageMs": 29,
+        "functionalMs": 61.099999994039536,
+        "installationMs": 85.09999999403954,
+        "validationMs": 58,
+        "totalMs": 284.69999998807907
+      },
+      "mounts": 4,
+      "armor": 39
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 297.30000001192093,
+      "phases": {
+        "hullMs": 13.400000005960464,
+        "armorMs": 65.09999999403954,
+        "coverageMs": 30.600000023841858,
+        "functionalMs": 54.39999997615814,
+        "installationMs": 85.30000001192093,
+        "validationMs": 48.5,
+        "totalMs": 297.30000001192093
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 245.5,
+      "phases": {
+        "hullMs": 4.299999982118607,
+        "armorMs": 31.900000005960464,
+        "coverageMs": 29.200000017881393,
+        "functionalMs": 54.099999994039536,
+        "installationMs": 81.5,
+        "validationMs": 44.5,
+        "totalMs": 245.5
+      },
+      "mounts": 2,
+      "armor": 39
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 232.69999998807907,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 30.5,
+        "coverageMs": 26.19999998807907,
+        "functionalMs": 50.900000005960464,
+        "installationMs": 78.69999998807907,
+        "validationMs": 42.80000001192093,
+        "totalMs": 232.59999999403954
+      },
+      "mounts": 2,
+      "armor": 37
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 251.09999999403954,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 34.099999994039536,
+        "coverageMs": 26.30000001192093,
+        "functionalMs": 55.599999994039536,
+        "installationMs": 89.7000000178814,
+        "validationMs": 41.89999997615814,
+        "totalMs": 251.09999999403954
+      },
+      "mounts": 4,
+      "armor": 39
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 256.59999999403954,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 37.599999994039536,
+        "coverageMs": 30.30000001192093,
+        "functionalMs": 51.400000005960464,
+        "installationMs": 86,
+        "validationMs": 46.29999998211861,
+        "totalMs": 255.19999998807907
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 260.7999999821186,
+      "phases": {
+        "hullMs": 3.7999999821186066,
+        "armorMs": 33.20000001788139,
+        "coverageMs": 33,
+        "functionalMs": 57.400000005960464,
+        "installationMs": 88.39999997615814,
+        "validationMs": 45,
+        "totalMs": 260.7999999821186
+      },
+      "mounts": 4,
+      "armor": 43
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 451.59999999403954,
+      "phases": {
+        "hullMs": 6.4000000059604645,
+        "armorMs": 100.5,
+        "coverageMs": 89.39999997615814,
+        "functionalMs": 68.90000000596046,
+        "installationMs": 107.59999999403954,
+        "validationMs": 78.7000000178814,
+        "totalMs": 451.5
+      },
+      "mounts": 6,
+      "armor": 41
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 265.19999998807907,
+      "phases": {
+        "hullMs": 5.300000011920929,
+        "armorMs": 40.099999994039536,
+        "coverageMs": 33.900000005960464,
+        "functionalMs": 51.5,
+        "installationMs": 83.09999999403954,
+        "validationMs": 51.29999998211861,
+        "totalMs": 265.19999998807907
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 269.40000000596046,
+      "phases": {
+        "hullMs": 3.800000011920929,
+        "armorMs": 47.400000005960464,
+        "coverageMs": 26.5,
+        "functionalMs": 59.79999998211861,
+        "installationMs": 82.5,
+        "validationMs": 49.400000005960464,
+        "totalMs": 269.40000000596046
+      },
+      "mounts": 4,
+      "armor": 43
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 364.80000001192093,
+      "phases": {
+        "hullMs": 8.099999994039536,
+        "armorMs": 93.10000002384186,
+        "coverageMs": 51,
+        "functionalMs": 54.19999998807907,
+        "installationMs": 92.09999999403954,
+        "validationMs": 66.30000001192093,
+        "totalMs": 364.80000001192093
+      },
+      "mounts": 6,
+      "armor": 37
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 385.7999999821186,
+      "phases": {
+        "hullMs": 8.199999988079071,
+        "armorMs": 41.599999994039536,
+        "coverageMs": 41.400000005960464,
+        "functionalMs": 69.80000001192093,
+        "installationMs": 123.40000000596046,
+        "validationMs": 101.2999999821186,
+        "totalMs": 385.69999998807907
+      },
+      "mounts": 10,
+      "armor": 53
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 540.0999999940395,
+      "phases": {
+        "hullMs": 9.099999994039536,
+        "armorMs": 110.2000000178814,
+        "coverageMs": 77.19999998807907,
+        "functionalMs": 116.80000001192093,
+        "installationMs": 144.7999999821186,
+        "validationMs": 81.90000000596046,
+        "totalMs": 540
+      },
+      "mounts": 6,
+      "armor": 49
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 382.80000001192093,
+      "phases": {
+        "hullMs": 5,
+        "armorMs": 57.099999994039536,
+        "coverageMs": 49.900000005960464,
+        "functionalMs": 75.2000000178814,
+        "installationMs": 123.2999999821186,
+        "validationMs": 72.30000001192093,
+        "totalMs": 382.80000001192093
+      },
+      "mounts": 6,
+      "armor": 51
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 432.19999998807907,
+      "phases": {
+        "hullMs": 6.5,
+        "armorMs": 74.40000000596046,
+        "coverageMs": 54.5,
+        "functionalMs": 76.89999997615814,
+        "installationMs": 130.40000000596046,
+        "validationMs": 89.2000000178814,
+        "totalMs": 431.90000000596046
+      },
+      "mounts": 10,
+      "armor": 49
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 409.90000000596046,
+      "phases": {
+        "hullMs": 10,
+        "armorMs": 74.09999999403954,
+        "coverageMs": 50.29999998211861,
+        "functionalMs": 78.2000000178814,
+        "installationMs": 126.2999999821186,
+        "validationMs": 70.90000000596046,
+        "totalMs": 409.7999999821186
+      },
+      "mounts": 8,
+      "armor": 49
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 521.6999999880791,
+      "phases": {
+        "hullMs": 20,
+        "armorMs": 70.19999998807907,
+        "coverageMs": 54.400000005960464,
+        "functionalMs": 94.80000001192093,
+        "installationMs": 178.5,
+        "validationMs": 103.69999998807907,
+        "totalMs": 521.5999999940395
+      },
+      "mounts": 8,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 405.7000000178814,
+      "phases": {
+        "hullMs": 6,
+        "armorMs": 50.29999998211861,
+        "coverageMs": 51,
+        "functionalMs": 78.30000001192093,
+        "installationMs": 132.5,
+        "validationMs": 87.5,
+        "totalMs": 405.59999999403954
+      },
+      "mounts": 10,
+      "armor": 51
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 474.19999998807907,
+      "phases": {
+        "hullMs": 5.899999976158142,
+        "armorMs": 85.10000002384186,
+        "coverageMs": 70,
+        "functionalMs": 88.59999999403954,
+        "installationMs": 133.69999998807907,
+        "validationMs": 90.90000000596046,
+        "totalMs": 474.19999998807907
+      },
+      "mounts": 10,
+      "armor": 53
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 392.19999998807907,
+      "phases": {
+        "hullMs": 9.699999988079071,
+        "armorMs": 50.400000005960464,
+        "coverageMs": 50.900000005960464,
+        "functionalMs": 86.5,
+        "installationMs": 117.5,
+        "validationMs": 77.19999998807907,
+        "totalMs": 392.19999998807907
+      },
+      "mounts": 8,
+      "armor": 51
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 456.7000000178814,
+      "phases": {
+        "hullMs": 5.800000011920929,
+        "armorMs": 71.90000000596046,
+        "coverageMs": 53.099999994039536,
+        "functionalMs": 86.69999998807907,
+        "installationMs": 145.80000001192093,
+        "validationMs": 93.40000000596046,
+        "totalMs": 456.7000000178814
+      },
+      "mounts": 10,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 417.80000001192093,
+      "phases": {
+        "hullMs": 4.5,
+        "armorMs": 53.20000001788139,
+        "coverageMs": 48.29999998211861,
+        "functionalMs": 83.5,
+        "installationMs": 138.80000001192093,
+        "validationMs": 89.5,
+        "totalMs": 417.80000001192093
+      },
+      "mounts": 8,
+      "armor": 51
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 524.7999999821186,
+      "phases": {
+        "hullMs": 11.5,
+        "armorMs": 98.59999999403954,
+        "coverageMs": 58.69999998807907,
+        "functionalMs": 93.60000002384186,
+        "installationMs": 131.7999999821186,
+        "validationMs": 130.59999999403954,
+        "totalMs": 524.7999999821186
+      },
+      "mounts": 8,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 408,
+      "phases": {
+        "hullMs": 6.100000023841858,
+        "armorMs": 45,
+        "coverageMs": 52.19999998807907,
+        "functionalMs": 84.59999999403954,
+        "installationMs": 139.40000000596046,
+        "validationMs": 80.59999999403954,
+        "totalMs": 407.90000000596046
+      },
+      "mounts": 8,
+      "armor": 49
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 435.59999999403954,
+      "phases": {
+        "hullMs": 5.0999999940395355,
+        "armorMs": 50.400000005960464,
+        "coverageMs": 60.70000001788139,
+        "functionalMs": 87.5,
+        "installationMs": 137.5,
+        "validationMs": 94.39999997615814,
+        "totalMs": 435.59999999403954
+      },
+      "mounts": 10,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 425.09999999403954,
+      "phases": {
+        "hullMs": 5.899999976158142,
+        "armorMs": 51.10000002384186,
+        "coverageMs": 48.39999997615814,
+        "functionalMs": 107.90000000596046,
+        "installationMs": 135.7000000178814,
+        "validationMs": 76.09999999403954,
+        "totalMs": 425.09999999403954
+      },
+      "mounts": 8,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 557.3000000119209,
+      "phases": {
+        "hullMs": 7.4000000059604645,
+        "armorMs": 126.80000001192093,
+        "coverageMs": 73.19999998807907,
+        "functionalMs": 87,
+        "installationMs": 155.59999999403954,
+        "validationMs": 107.2000000178814,
+        "totalMs": 557.2000000178814
+      },
+      "mounts": 8,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 487.2000000178814,
+      "phases": {
+        "hullMs": 6.5,
+        "armorMs": 61.70000001788139,
+        "coverageMs": 70.59999999403954,
+        "functionalMs": 98.90000000596046,
+        "installationMs": 146.39999997615814,
+        "validationMs": 103.10000002384186,
+        "totalMs": 487.2000000178814
+      },
+      "mounts": 10,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 468.7999999821186,
+      "phases": {
+        "hullMs": 12.099999994039536,
+        "armorMs": 107.59999999403954,
+        "coverageMs": 54.19999998807907,
+        "functionalMs": 86.5,
+        "installationMs": 124.5,
+        "validationMs": 83.90000000596046,
+        "totalMs": 468.7999999821186
+      },
+      "mounts": 6,
+      "armor": 49
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 487.5,
+      "phases": {
+        "hullMs": 5.100000023841858,
+        "armorMs": 65.19999998807907,
+        "coverageMs": 56.400000005960464,
+        "functionalMs": 87.59999999403954,
+        "installationMs": 157.30000001192093,
+        "validationMs": 115.89999997615814,
+        "totalMs": 487.5
+      },
+      "mounts": 10,
+      "armor": 55
+    },
+    {
+      "architecture": "TRUSS_POD",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 425.89999997615814,
+      "phases": {
+        "hullMs": 8.5,
+        "armorMs": 57.099999994039536,
+        "coverageMs": 50.599999994039536,
+        "functionalMs": 74,
+        "installationMs": 138.09999999403954,
+        "validationMs": 97.59999999403954,
+        "totalMs": 425.89999997615814
+      },
+      "mounts": 10,
+      "armor": 55
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 475.69999998807907,
+      "phases": {
+        "hullMs": 7.199999988079071,
+        "armorMs": 72.30000001192093,
+        "coverageMs": 57.5,
+        "functionalMs": 95.59999999403954,
+        "installationMs": 121.30000001192093,
+        "validationMs": 121.69999998807907,
+        "totalMs": 475.59999999403954
+      },
+      "mounts": 8,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 372.19999998807907,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 74.90000000596046,
+        "coverageMs": 55.099999994039536,
+        "functionalMs": 63,
+        "installationMs": 91,
+        "validationMs": 84.19999998807907,
+        "totalMs": 372.19999998807907
+      },
+      "mounts": 8,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 350.7999999821186,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 43.5,
+        "coverageMs": 54.400000005960464,
+        "functionalMs": 58.79999998211861,
+        "installationMs": 106.90000000596046,
+        "validationMs": 83.59999999403954,
+        "totalMs": 350.7999999821186
+      },
+      "mounts": 8,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 396.19999998807907,
+      "phases": {
+        "hullMs": 7.5,
+        "armorMs": 68.69999998807907,
+        "coverageMs": 56.599999994039536,
+        "functionalMs": 74.90000000596046,
+        "installationMs": 101.80000001192093,
+        "validationMs": 86.59999999403954,
+        "totalMs": 396.09999999403954
+      },
+      "mounts": 10,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 360.10000002384186,
+      "phases": {
+        "hullMs": 3.600000023841858,
+        "armorMs": 50.099999994039536,
+        "coverageMs": 50.29999998211861,
+        "functionalMs": 67.30000001192093,
+        "installationMs": 112.5,
+        "validationMs": 76.30000001192093,
+        "totalMs": 360.10000002384186
+      },
+      "mounts": 8,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 392.5,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 47.80000001192093,
+        "coverageMs": 55,
+        "functionalMs": 69,
+        "installationMs": 132.5,
+        "validationMs": 84.19999998807907,
+        "totalMs": 392.5
+      },
+      "mounts": 8,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 324.40000000596046,
+      "phases": {
+        "hullMs": 4.4000000059604645,
+        "armorMs": 52.29999998211861,
+        "coverageMs": 41.599999994039536,
+        "functionalMs": 56.900000005960464,
+        "installationMs": 91.40000000596046,
+        "validationMs": 77.80000001192093,
+        "totalMs": 324.40000000596046
+      },
+      "mounts": 6,
+      "armor": 27
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 401.19999998807907,
+      "phases": {
+        "hullMs": 3.2999999821186066,
+        "armorMs": 49.80000001192093,
+        "coverageMs": 55.80000001192093,
+        "functionalMs": 69.59999999403954,
+        "installationMs": 132.7999999821186,
+        "validationMs": 89.90000000596046,
+        "totalMs": 401.19999998807907
+      },
+      "mounts": 11,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 343.09999999403954,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 59.099999994039536,
+        "coverageMs": 57.400000005960464,
+        "functionalMs": 64.59999999403954,
+        "installationMs": 83.40000000596046,
+        "validationMs": 74.5,
+        "totalMs": 343
+      },
+      "mounts": 9,
+      "armor": 26
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 332,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 40.5,
+        "coverageMs": 45.30000001192093,
+        "functionalMs": 76,
+        "installationMs": 83.09999999403954,
+        "validationMs": 84.09999999403954,
+        "totalMs": 332
+      },
+      "mounts": 9,
+      "armor": 26
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 388.7999999821186,
+      "phases": {
+        "hullMs": 3.4000000059604645,
+        "armorMs": 35.89999997615814,
+        "coverageMs": 49.60000002384186,
+        "functionalMs": 60.79999998211861,
+        "installationMs": 139.30000001192093,
+        "validationMs": 99.7999999821186,
+        "totalMs": 388.7999999821186
+      },
+      "mounts": 8,
+      "armor": 24
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 418.10000002384186,
+      "phases": {
+        "hullMs": 5.299999982118607,
+        "armorMs": 64.7000000178814,
+        "coverageMs": 59.29999998211861,
+        "functionalMs": 84.5,
+        "installationMs": 104.7000000178814,
+        "validationMs": 99.5,
+        "totalMs": 418
+      },
+      "mounts": 6,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 488.59999999403954,
+      "phases": {
+        "hullMs": 3.2000000178813934,
+        "armorMs": 42.099999994039536,
+        "coverageMs": 69.69999998807907,
+        "functionalMs": 67.2000000178814,
+        "installationMs": 203.09999999403954,
+        "validationMs": 103.19999998807907,
+        "totalMs": 488.5
+      },
+      "mounts": 6,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 464.09999999403954,
+      "phases": {
+        "hullMs": 9.599999994039536,
+        "armorMs": 89.2000000178814,
+        "coverageMs": 55.69999998807907,
+        "functionalMs": 81.80000001192093,
+        "installationMs": 130.2999999821186,
+        "validationMs": 97.40000000596046,
+        "totalMs": 464
+      },
+      "mounts": 8,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 294,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 40,
+        "coverageMs": 40.30000001192093,
+        "functionalMs": 65,
+        "installationMs": 83.69999998807907,
+        "validationMs": 61.5,
+        "totalMs": 293.89999997615814
+      },
+      "mounts": 6,
+      "armor": 27
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 480.90000000596046,
+      "phases": {
+        "hullMs": 4.9000000059604645,
+        "armorMs": 81,
+        "coverageMs": 84.69999998807907,
+        "functionalMs": 78.40000000596046,
+        "installationMs": 141,
+        "validationMs": 90.7999999821186,
+        "totalMs": 480.7999999821186
+      },
+      "mounts": 8,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 372.40000000596046,
+      "phases": {
+        "hullMs": 3.100000023841858,
+        "armorMs": 52.5,
+        "coverageMs": 51.29999998211861,
+        "functionalMs": 70.80000001192093,
+        "installationMs": 109.7999999821186,
+        "validationMs": 84.90000000596046,
+        "totalMs": 372.40000000596046
+      },
+      "mounts": 10,
+      "armor": 28
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 371.90000000596046,
+      "phases": {
+        "hullMs": 6,
+        "armorMs": 61.5,
+        "coverageMs": 55.900000005960464,
+        "functionalMs": 69.2000000178814,
+        "installationMs": 105.7999999821186,
+        "validationMs": 73.5,
+        "totalMs": 371.90000000596046
+      },
+      "mounts": 8,
+      "armor": 22
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 351.5,
+      "phases": {
+        "hullMs": 3.9000000059604645,
+        "armorMs": 46.39999997615814,
+        "coverageMs": 45.30000001192093,
+        "functionalMs": 64.90000000596046,
+        "installationMs": 106.69999998807907,
+        "validationMs": 84.30000001192093,
+        "totalMs": 351.5
+      },
+      "mounts": 11,
+      "armor": 26
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 399.40000000596046,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 45.70000001788139,
+        "coverageMs": 53.400000005960464,
+        "functionalMs": 80.69999998807907,
+        "installationMs": 127.69999998807907,
+        "validationMs": 88.90000000596046,
+        "totalMs": 399.40000000596046
+      },
+      "mounts": 8,
+      "armor": 28
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 470.69999998807907,
+      "phases": {
+        "hullMs": 11.699999988079071,
+        "armorMs": 99.2000000178814,
+        "coverageMs": 63.29999998211861,
+        "functionalMs": 96.5,
+        "installationMs": 114.80000001192093,
+        "validationMs": 85.09999999403954,
+        "totalMs": 470.59999999403954
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 390.09999999403954,
+      "phases": {
+        "hullMs": 4.4000000059604645,
+        "armorMs": 50.69999998807907,
+        "coverageMs": 59.10000002384186,
+        "functionalMs": 91.59999999403954,
+        "installationMs": 97.40000000596046,
+        "validationMs": 86.7999999821186,
+        "totalMs": 390
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 351.30000001192093,
+      "phases": {
+        "hullMs": 5.300000011920929,
+        "armorMs": 48.89999997615814,
+        "coverageMs": 53,
+        "functionalMs": 71.80000001192093,
+        "installationMs": 90.5,
+        "validationMs": 81.80000001192093,
+        "totalMs": 351.30000001192093
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 410,
+      "phases": {
+        "hullMs": 4.100000023841858,
+        "armorMs": 56.39999997615814,
+        "coverageMs": 67.7000000178814,
+        "functionalMs": 84.7999999821186,
+        "installationMs": 101.30000001192093,
+        "validationMs": 95.69999998807907,
+        "totalMs": 410
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 472.90000000596046,
+      "phases": {
+        "hullMs": 12.800000011920929,
+        "armorMs": 79,
+        "coverageMs": 76.09999999403954,
+        "functionalMs": 81.5,
+        "installationMs": 127.2000000178814,
+        "validationMs": 96.2999999821186,
+        "totalMs": 472.90000000596046
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 487.09999999403954,
+      "phases": {
+        "hullMs": 5.4000000059604645,
+        "armorMs": 46.5,
+        "coverageMs": 78.59999999403954,
+        "functionalMs": 104,
+        "installationMs": 117.40000000596046,
+        "validationMs": 135.19999998807907,
+        "totalMs": 487.09999999403954
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 492.39999997615814,
+      "phases": {
+        "hullMs": 8.5,
+        "armorMs": 93.5,
+        "coverageMs": 84.5,
+        "functionalMs": 111.40000000596046,
+        "installationMs": 102.09999999403954,
+        "validationMs": 92.2999999821186,
+        "totalMs": 492.2999999821186
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 397.30000001192093,
+      "phases": {
+        "hullMs": 4.700000017881393,
+        "armorMs": 57.79999998211861,
+        "coverageMs": 60.099999994039536,
+        "functionalMs": 88.7000000178814,
+        "installationMs": 97.5,
+        "validationMs": 88.5,
+        "totalMs": 397.30000001192093
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 523.2000000178814,
+      "phases": {
+        "hullMs": 10.700000017881393,
+        "armorMs": 91.90000000596046,
+        "coverageMs": 65.89999997615814,
+        "functionalMs": 83.2000000178814,
+        "installationMs": 170.2999999821186,
+        "validationMs": 101.2000000178814,
+        "totalMs": 523.2000000178814
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 428.40000000596046,
+      "phases": {
+        "hullMs": 4.0999999940395355,
+        "armorMs": 59.80000001192093,
+        "coverageMs": 66.09999999403954,
+        "functionalMs": 84.09999999403954,
+        "installationMs": 114,
+        "validationMs": 100.30000001192093,
+        "totalMs": 428.40000000596046
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 433.5,
+      "phases": {
+        "hullMs": 10.900000005960464,
+        "armorMs": 57.80000001192093,
+        "coverageMs": 64.2999999821186,
+        "functionalMs": 73.40000000596046,
+        "installationMs": 105.59999999403954,
+        "validationMs": 121.5,
+        "totalMs": 433.5
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 370.39999997615814,
+      "phases": {
+        "hullMs": 6.299999982118607,
+        "armorMs": 57,
+        "coverageMs": 59.400000005960464,
+        "functionalMs": 84.2000000178814,
+        "installationMs": 87.19999998807907,
+        "validationMs": 76.19999998807907,
+        "totalMs": 370.2999999821186
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 518.9000000059605,
+      "phases": {
+        "hullMs": 20.69999998807907,
+        "armorMs": 92.90000000596046,
+        "coverageMs": 66.69999998807907,
+        "functionalMs": 80.40000000596046,
+        "installationMs": 120.80000001192093,
+        "validationMs": 137.40000000596046,
+        "totalMs": 518.9000000059605
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 434.59999999403954,
+      "phases": {
+        "hullMs": 4.0999999940395355,
+        "armorMs": 60.5,
+        "coverageMs": 76,
+        "functionalMs": 84.90000000596046,
+        "installationMs": 101.30000001192093,
+        "validationMs": 107.7999999821186,
+        "totalMs": 434.59999999403954
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 384.69999998807907,
+      "phases": {
+        "hullMs": 4.199999988079071,
+        "armorMs": 51.099999994039536,
+        "coverageMs": 60.60000002384186,
+        "functionalMs": 83.69999998807907,
+        "installationMs": 105.09999999403954,
+        "validationMs": 80,
+        "totalMs": 384.69999998807907
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 474.40000000596046,
+      "phases": {
+        "hullMs": 9,
+        "armorMs": 72.5,
+        "coverageMs": 84.60000002384186,
+        "functionalMs": 84.89999997615814,
+        "installationMs": 120.60000002384186,
+        "validationMs": 102.59999999403954,
+        "totalMs": 474.2000000178814
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 417.09999999403954,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 46.5,
+        "coverageMs": 65.30000001192093,
+        "functionalMs": 120.5,
+        "installationMs": 91.2999999821186,
+        "validationMs": 89.5,
+        "totalMs": 417.09999999403954
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 495.80000001192093,
+      "phases": {
+        "hullMs": 5.4000000059604645,
+        "armorMs": 72.59999999403954,
+        "coverageMs": 93.30000001192093,
+        "functionalMs": 96.30000001192093,
+        "installationMs": 110.09999999403954,
+        "validationMs": 118.09999999403954,
+        "totalMs": 495.80000001192093
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 409.69999998807907,
+      "phases": {
+        "hullMs": 4.799999982118607,
+        "armorMs": 60.400000005960464,
+        "coverageMs": 65.09999999403954,
+        "functionalMs": 85.7000000178814,
+        "installationMs": 99.69999998807907,
+        "validationMs": 94,
+        "totalMs": 409.69999998807907
+      },
+      "mounts": 10,
+      "armor": 43
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 420.7000000178814,
+      "phases": {
+        "hullMs": 5.100000023841858,
+        "armorMs": 67.39999997615814,
+        "coverageMs": 77.60000002384186,
+        "functionalMs": 78.69999998807907,
+        "installationMs": 99,
+        "validationMs": 92.90000000596046,
+        "totalMs": 420.7000000178814
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 266.5,
+      "phases": {
+        "hullMs": 2,
+        "armorMs": 20.299999982118607,
+        "coverageMs": 29.600000023841858,
+        "functionalMs": 34.89999997615814,
+        "installationMs": 113.10000002384186,
+        "validationMs": 66.59999999403954,
+        "totalMs": 266.5
+      },
+      "mounts": 8,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 293.80000001192093,
+      "phases": {
+        "hullMs": 1.9000000059604645,
+        "armorMs": 17.700000017881393,
+        "coverageMs": 16.899999976158142,
+        "functionalMs": 36.70000001788139,
+        "installationMs": 125.7999999821186,
+        "validationMs": 94.80000001192093,
+        "totalMs": 293.80000001192093
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 326.59999999403954,
+      "phases": {
+        "hullMs": 5,
+        "armorMs": 58.30000001192093,
+        "coverageMs": 29.400000005960464,
+        "functionalMs": 36.89999997615814,
+        "installationMs": 122,
+        "validationMs": 75,
+        "totalMs": 326.59999999403954
+      },
+      "mounts": 7,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 305.19999998807907,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 30.299999982118607,
+        "coverageMs": 32.60000002384186,
+        "functionalMs": 46,
+        "installationMs": 104.7999999821186,
+        "validationMs": 88.5,
+        "totalMs": 305.19999998807907
+      },
+      "mounts": 6,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 266.2999999821186,
+      "phases": {
+        "hullMs": 1.699999988079071,
+        "armorMs": 25.5,
+        "coverageMs": 18.599999994039536,
+        "functionalMs": 33.900000005960464,
+        "installationMs": 119.59999999403954,
+        "validationMs": 67,
+        "totalMs": 266.2999999821186
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 282.09999999403954,
+      "phases": {
+        "hullMs": 2.2000000178813934,
+        "armorMs": 32.89999997615814,
+        "coverageMs": 37.400000005960464,
+        "functionalMs": 44.80000001192093,
+        "installationMs": 97.69999998807907,
+        "validationMs": 67.09999999403954,
+        "totalMs": 282.09999999403954
+      },
+      "mounts": 6,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 296.5,
+      "phases": {
+        "hullMs": 4.700000017881393,
+        "armorMs": 52.29999998211861,
+        "coverageMs": 21,
+        "functionalMs": 37.30000001192093,
+        "installationMs": 106.90000000596046,
+        "validationMs": 74.19999998807907,
+        "totalMs": 296.40000000596046
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 294.60000002384186,
+      "phases": {
+        "hullMs": 1.800000011920929,
+        "armorMs": 23,
+        "coverageMs": 22.400000005960464,
+        "functionalMs": 41,
+        "installationMs": 148.59999999403954,
+        "validationMs": 57.80000001192093,
+        "totalMs": 294.60000002384186
+      },
+      "mounts": 7,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 256.40000000596046,
+      "phases": {
+        "hullMs": 1.600000023841858,
+        "armorMs": 20,
+        "coverageMs": 19.599999994039536,
+        "functionalMs": 32.5,
+        "installationMs": 114.40000000596046,
+        "validationMs": 68.2999999821186,
+        "totalMs": 256.40000000596046
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 263.2999999821186,
+      "phases": {
+        "hullMs": 1.7999999821186066,
+        "armorMs": 20.600000023841858,
+        "coverageMs": 17.19999998807907,
+        "functionalMs": 39,
+        "installationMs": 115.59999999403954,
+        "validationMs": 69.09999999403954,
+        "totalMs": 263.2999999821186
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 401.59999999403954,
+      "phases": {
+        "hullMs": 4.0999999940395355,
+        "armorMs": 74.59999999403954,
+        "coverageMs": 24.19999998807907,
+        "functionalMs": 47.5,
+        "installationMs": 165,
+        "validationMs": 86.2000000178814,
+        "totalMs": 401.59999999403954
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 269.5,
+      "phases": {
+        "hullMs": 1.7000000178813934,
+        "armorMs": 24.19999998807907,
+        "coverageMs": 20.69999998807907,
+        "functionalMs": 47.20000001788139,
+        "installationMs": 100.90000000596046,
+        "validationMs": 74.7999999821186,
+        "totalMs": 269.5
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 294.80000001192093,
+      "phases": {
+        "hullMs": 2.9000000059604645,
+        "armorMs": 27.80000001192093,
+        "coverageMs": 33.5,
+        "functionalMs": 34,
+        "installationMs": 120.5,
+        "validationMs": 76.09999999403954,
+        "totalMs": 294.80000001192093
+      },
+      "mounts": 8,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 245.5,
+      "phases": {
+        "hullMs": 1.5999999940395355,
+        "armorMs": 19.900000005960464,
+        "coverageMs": 19.30000001192093,
+        "functionalMs": 48,
+        "installationMs": 108.5,
+        "validationMs": 48.19999998807907,
+        "totalMs": 245.5
+      },
+      "mounts": 7,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 234.69999998807907,
+      "phases": {
+        "hullMs": 1.5999999940395355,
+        "armorMs": 19.599999994039536,
+        "coverageMs": 12.800000011920929,
+        "functionalMs": 32.5,
+        "installationMs": 107.80000001192093,
+        "validationMs": 60.29999998211861,
+        "totalMs": 234.59999999403954
+      },
+      "mounts": 10,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 240.80000001192093,
+      "phases": {
+        "hullMs": 2.5,
+        "armorMs": 24.69999998807907,
+        "coverageMs": 29.100000023841858,
+        "functionalMs": 32.69999998807907,
+        "installationMs": 97.5,
+        "validationMs": 54.30000001192093,
+        "totalMs": 240.80000001192093
+      },
+      "mounts": 6,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 278.09999999403954,
+      "phases": {
+        "hullMs": 2,
+        "armorMs": 24.899999976158142,
+        "coverageMs": 22.700000017881393,
+        "functionalMs": 36.29999998211861,
+        "installationMs": 108.40000000596046,
+        "validationMs": 83.80000001192093,
+        "totalMs": 278.09999999403954
+      },
+      "mounts": 7,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 324.39999997615814,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 66.80000001192093,
+        "coverageMs": 37.099999994039536,
+        "functionalMs": 42.599999994039536,
+        "installationMs": 104.90000000596046,
+        "validationMs": 69.59999999403954,
+        "totalMs": 324.39999997615814
+      },
+      "mounts": 8,
+      "armor": 14
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 293,
+      "phases": {
+        "hullMs": 2.0999999940395355,
+        "armorMs": 26.900000005960464,
+        "coverageMs": 31,
+        "functionalMs": 36,
+        "installationMs": 122.80000001192093,
+        "validationMs": 74.19999998807907,
+        "totalMs": 293
+      },
+      "mounts": 12,
+      "armor": 15
+    },
+    {
+      "architecture": "STACKED_BLOCKS",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 274.40000000596046,
+      "phases": {
+        "hullMs": 1.699999988079071,
+        "armorMs": 28.200000017881393,
+        "coverageMs": 33.69999998807907,
+        "functionalMs": 36.80000001192093,
+        "installationMs": 105.09999999403954,
+        "validationMs": 68.90000000596046,
+        "totalMs": 274.40000000596046
+      },
+      "mounts": 8,
+      "armor": 14
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 0,
+      "shipyardId": "aegis",
+      "totalMs": 316,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 32.900000005960464,
+        "coverageMs": 33.19999998807907,
+        "functionalMs": 63,
+        "installationMs": 130,
+        "validationMs": 53.30000001192093,
+        "totalMs": 316
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 1,
+      "shipyardId": "aegis",
+      "totalMs": 314.90000000596046,
+      "phases": {
+        "hullMs": 3.9000000059604645,
+        "armorMs": 46.69999998807907,
+        "coverageMs": 59.400000005960464,
+        "functionalMs": 54.599999994039536,
+        "installationMs": 85.90000000596046,
+        "validationMs": 64.2999999821186,
+        "totalMs": 314.7999999821186
+      },
+      "mounts": 4,
+      "armor": 25
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 2,
+      "shipyardId": "aegis",
+      "totalMs": 240.59999999403954,
+      "phases": {
+        "hullMs": 3.2000000178813934,
+        "armorMs": 27.099999994039536,
+        "coverageMs": 26.30000001192093,
+        "functionalMs": 58.599999994039536,
+        "installationMs": 75.40000000596046,
+        "validationMs": 49.89999997615814,
+        "totalMs": 240.5
+      },
+      "mounts": 4,
+      "armor": 31
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 3,
+      "shipyardId": "aegis",
+      "totalMs": 320.59999999403954,
+      "phases": {
+        "hullMs": 12.400000005960464,
+        "armorMs": 52.099999994039536,
+        "coverageMs": 38.70000001788139,
+        "functionalMs": 64.5,
+        "installationMs": 97.09999999403954,
+        "validationMs": 55.69999998807907,
+        "totalMs": 320.5
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 4,
+      "shipyardId": "aegis",
+      "totalMs": 317.2000000178814,
+      "phases": {
+        "hullMs": 3.7000000178813934,
+        "armorMs": 51.79999998211861,
+        "coverageMs": 49,
+        "functionalMs": 59,
+        "installationMs": 96.5,
+        "validationMs": 57.20000001788139,
+        "totalMs": 317.2000000178814
+      },
+      "mounts": 2,
+      "armor": 25
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 5,
+      "shipyardId": "aegis",
+      "totalMs": 304.89999997615814,
+      "phases": {
+        "hullMs": 9,
+        "armorMs": 33.099999994039536,
+        "coverageMs": 29,
+        "functionalMs": 75,
+        "installationMs": 98.30000001192093,
+        "validationMs": 60.39999997615814,
+        "totalMs": 304.7999999821186
+      },
+      "mounts": 4,
+      "armor": 39
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 6,
+      "shipyardId": "aegis",
+      "totalMs": 466.2999999821186,
+      "phases": {
+        "hullMs": 14.599999994039536,
+        "armorMs": 75.30000001192093,
+        "coverageMs": 67.89999997615814,
+        "functionalMs": 74.30000001192093,
+        "installationMs": 129.19999998807907,
+        "validationMs": 105,
+        "totalMs": 466.2999999821186
+      },
+      "mounts": 8,
+      "armor": 37
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 7,
+      "shipyardId": "aegis",
+      "totalMs": 275.69999998807907,
+      "phases": {
+        "hullMs": 6.399999976158142,
+        "armorMs": 32.5,
+        "coverageMs": 28.400000005960464,
+        "functionalMs": 64.80000001192093,
+        "installationMs": 91.59999999403954,
+        "validationMs": 52,
+        "totalMs": 275.69999998807907
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 8,
+      "shipyardId": "aegis",
+      "totalMs": 424.2000000178814,
+      "phases": {
+        "hullMs": 4.4000000059604645,
+        "armorMs": 61.400000005960464,
+        "coverageMs": 77.09999999403954,
+        "functionalMs": 67.80000001192093,
+        "installationMs": 122.2999999821186,
+        "validationMs": 91.10000002384186,
+        "totalMs": 424.10000002384186
+      },
+      "mounts": 6,
+      "armor": 37
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 9,
+      "shipyardId": "aegis",
+      "totalMs": 381.59999999403954,
+      "phases": {
+        "hullMs": 8.5,
+        "armorMs": 86.2999999821186,
+        "coverageMs": 43.20000001788139,
+        "functionalMs": 66.90000000596046,
+        "installationMs": 103.2999999821186,
+        "validationMs": 72.5,
+        "totalMs": 380.69999998807907
+      },
+      "mounts": 4,
+      "armor": 25
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 10,
+      "shipyardId": "aegis",
+      "totalMs": 318,
+      "phases": {
+        "hullMs": 5,
+        "armorMs": 43,
+        "coverageMs": 48.400000005960464,
+        "functionalMs": 61.099999994039536,
+        "installationMs": 97.69999998807907,
+        "validationMs": 62.5,
+        "totalMs": 317.69999998807907
+      },
+      "mounts": 6,
+      "armor": 25
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 11,
+      "shipyardId": "aegis",
+      "totalMs": 292,
+      "phases": {
+        "hullMs": 3.800000011920929,
+        "armorMs": 42.79999998211861,
+        "coverageMs": 47.099999994039536,
+        "functionalMs": 58.400000005960464,
+        "installationMs": 78.09999999403954,
+        "validationMs": 61.80000001192093,
+        "totalMs": 292
+      },
+      "mounts": 2,
+      "armor": 25
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 12,
+      "shipyardId": "aegis",
+      "totalMs": 242.59999999403954,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 29.900000005960464,
+        "coverageMs": 31.599999994039536,
+        "functionalMs": 53.099999994039536,
+        "installationMs": 81.19999998807907,
+        "validationMs": 43.30000001192093,
+        "totalMs": 242.59999999403954
+      },
+      "mounts": 2,
+      "armor": 33
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 13,
+      "shipyardId": "aegis",
+      "totalMs": 255.90000000596046,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 36.099999994039536,
+        "coverageMs": 26.200000017881393,
+        "functionalMs": 54.69999998807907,
+        "installationMs": 94.69999998807907,
+        "validationMs": 40.60000002384186,
+        "totalMs": 255.80000001192093
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 14,
+      "shipyardId": "aegis",
+      "totalMs": 323.90000000596046,
+      "phases": {
+        "hullMs": 3.100000023841858,
+        "armorMs": 44.79999998211861,
+        "coverageMs": 44.099999994039536,
+        "functionalMs": 68.5,
+        "installationMs": 101.10000002384186,
+        "validationMs": 62.19999998807907,
+        "totalMs": 323.80000001192093
+      },
+      "mounts": 8,
+      "armor": 41
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 15,
+      "shipyardId": "aegis",
+      "totalMs": 346.90000000596046,
+      "phases": {
+        "hullMs": 4.600000023841858,
+        "armorMs": 62.29999998211861,
+        "coverageMs": 52.30000001192093,
+        "functionalMs": 84.09999999403954,
+        "installationMs": 84.30000001192093,
+        "validationMs": 59.29999998211861,
+        "totalMs": 346.90000000596046
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 16,
+      "shipyardId": "aegis",
+      "totalMs": 361.2999999821186,
+      "phases": {
+        "hullMs": 4.199999988079071,
+        "armorMs": 42.400000005960464,
+        "coverageMs": 41.29999998211861,
+        "functionalMs": 74,
+        "installationMs": 136.30000001192093,
+        "validationMs": 63.099999994039536,
+        "totalMs": 361.2999999821186
+      },
+      "mounts": 6,
+      "armor": 41
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 17,
+      "shipyardId": "aegis",
+      "totalMs": 273.2000000178814,
+      "phases": {
+        "hullMs": 3.600000023841858,
+        "armorMs": 35.599999994039536,
+        "coverageMs": 35.29999998211861,
+        "functionalMs": 59.5,
+        "installationMs": 93.90000000596046,
+        "validationMs": 45.30000001192093,
+        "totalMs": 273.2000000178814
+      },
+      "mounts": 4,
+      "armor": 33
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 18,
+      "shipyardId": "aegis",
+      "totalMs": 427.69999998807907,
+      "phases": {
+        "hullMs": 7.299999982118607,
+        "armorMs": 82.7000000178814,
+        "coverageMs": 59.29999998211861,
+        "functionalMs": 76.7000000178814,
+        "installationMs": 116.7999999821186,
+        "validationMs": 84.80000001192093,
+        "totalMs": 427.59999999403954
+      },
+      "mounts": 6,
+      "armor": 41
+    },
+    {
+      "architecture": "HYBRID",
+      "seed": 19,
+      "shipyardId": "aegis",
+      "totalMs": 296.30000001192093,
+      "phases": {
+        "hullMs": 4.5999999940395355,
+        "armorMs": 41.5,
+        "coverageMs": 35.79999998211861,
+        "functionalMs": 70.90000000596046,
+        "installationMs": 93.30000001192093,
+        "validationMs": 50.099999994039536,
+        "totalMs": 296.19999998807907
+      },
+      "mounts": 4,
+      "armor": 35
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 0,
+      "shipyardId": "vesper",
+      "totalMs": 405.7000000178814,
+      "phases": {
+        "hullMs": 3.300000011920929,
+        "armorMs": 67.40000000596046,
+        "coverageMs": 58.79999998211861,
+        "functionalMs": 82.40000000596046,
+        "installationMs": 114.5,
+        "validationMs": 79.30000001192093,
+        "totalMs": 405.7000000178814
+      },
+      "mounts": 9,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 1,
+      "shipyardId": "vesper",
+      "totalMs": 391.09999999403954,
+      "phases": {
+        "hullMs": 4.300000011920929,
+        "armorMs": 55.69999998807907,
+        "coverageMs": 48.20000001788139,
+        "functionalMs": 98.39999997615814,
+        "installationMs": 106.60000002384186,
+        "validationMs": 77.89999997615814,
+        "totalMs": 391.09999999403954
+      },
+      "mounts": 9,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 2,
+      "shipyardId": "vesper",
+      "totalMs": 315.40000000596046,
+      "phases": {
+        "hullMs": 3.300000011920929,
+        "armorMs": 41.099999994039536,
+        "coverageMs": 41.79999998211861,
+        "functionalMs": 62,
+        "installationMs": 86.7000000178814,
+        "validationMs": 80.40000000596046,
+        "totalMs": 315.30000001192093
+      },
+      "mounts": 11,
+      "armor": 47
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 3,
+      "shipyardId": "vesper",
+      "totalMs": 349.7000000178814,
+      "phases": {
+        "hullMs": 4.300000011920929,
+        "armorMs": 52.400000005960464,
+        "coverageMs": 48.900000005960464,
+        "functionalMs": 61.69999998807907,
+        "installationMs": 104.80000001192093,
+        "validationMs": 77.59999999403954,
+        "totalMs": 349.7000000178814
+      },
+      "mounts": 11,
+      "armor": 47
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 4,
+      "shipyardId": "vesper",
+      "totalMs": 303,
+      "phases": {
+        "hullMs": 3.199999988079071,
+        "armorMs": 41.900000005960464,
+        "coverageMs": 38.70000001788139,
+        "functionalMs": 63.69999998807907,
+        "installationMs": 86.69999998807907,
+        "validationMs": 68.80000001192093,
+        "totalMs": 303
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 5,
+      "shipyardId": "vesper",
+      "totalMs": 373.5,
+      "phases": {
+        "hullMs": 10.099999994039536,
+        "armorMs": 76.90000000596046,
+        "coverageMs": 43.400000005960464,
+        "functionalMs": 66.40000000596046,
+        "installationMs": 101.59999999403954,
+        "validationMs": 75.09999999403954,
+        "totalMs": 373.5
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 6,
+      "shipyardId": "vesper",
+      "totalMs": 343.30000001192093,
+      "phases": {
+        "hullMs": 4.800000011920929,
+        "armorMs": 55.900000005960464,
+        "coverageMs": 49.099999994039536,
+        "functionalMs": 62.099999994039536,
+        "installationMs": 92.19999998807907,
+        "validationMs": 79.10000002384186,
+        "totalMs": 343.2000000178814
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "shipyardId": "vesper",
+      "totalMs": 295,
+      "phases": {
+        "hullMs": 2.800000011920929,
+        "armorMs": 34.19999998807907,
+        "coverageMs": 36.80000001192093,
+        "functionalMs": 63.5,
+        "installationMs": 96.2999999821186,
+        "validationMs": 61.400000005960464,
+        "totalMs": 295
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 8,
+      "shipyardId": "vesper",
+      "totalMs": 372.5,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 49.900000005960464,
+        "coverageMs": 45.19999998807907,
+        "functionalMs": 75.5,
+        "installationMs": 101.2000000178814,
+        "validationMs": 97.69999998807907,
+        "totalMs": 372.5
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 9,
+      "shipyardId": "vesper",
+      "totalMs": 427.59999999403954,
+      "phases": {
+        "hullMs": 7.4000000059604645,
+        "armorMs": 78.69999998807907,
+        "coverageMs": 48.900000005960464,
+        "functionalMs": 77.5,
+        "installationMs": 122.59999999403954,
+        "validationMs": 92.5,
+        "totalMs": 427.59999999403954
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 10,
+      "shipyardId": "vesper",
+      "totalMs": 358.39999997615814,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 53.60000002384186,
+        "coverageMs": 46.599999994039536,
+        "functionalMs": 75.59999999403954,
+        "installationMs": 92.59999999403954,
+        "validationMs": 86.59999999403954,
+        "totalMs": 358.39999997615814
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 11,
+      "shipyardId": "vesper",
+      "totalMs": 386.90000000596046,
+      "phases": {
+        "hullMs": 11.300000011920929,
+        "armorMs": 84,
+        "coverageMs": 46.29999998211861,
+        "functionalMs": 62.80000001192093,
+        "installationMs": 90.69999998807907,
+        "validationMs": 91.80000001192093,
+        "totalMs": 386.90000000596046
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 12,
+      "shipyardId": "vesper",
+      "totalMs": 312.80000001192093,
+      "phases": {
+        "hullMs": 3.300000011920929,
+        "armorMs": 44.900000005960464,
+        "coverageMs": 38,
+        "functionalMs": 70.2999999821186,
+        "installationMs": 92.7000000178814,
+        "validationMs": 63.599999994039536,
+        "totalMs": 312.80000001192093
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 13,
+      "shipyardId": "vesper",
+      "totalMs": 325.2999999821186,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 38.79999998211861,
+        "coverageMs": 48.900000005960464,
+        "functionalMs": 68,
+        "installationMs": 96.2000000178814,
+        "validationMs": 69.7999999821186,
+        "totalMs": 325.19999998807907
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 14,
+      "shipyardId": "vesper",
+      "totalMs": 316.90000000596046,
+      "phases": {
+        "hullMs": 2.9000000059604645,
+        "armorMs": 39.69999998807907,
+        "coverageMs": 36.70000001788139,
+        "functionalMs": 61.29999998211861,
+        "installationMs": 97.30000001192093,
+        "validationMs": 79,
+        "totalMs": 316.90000000596046
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 15,
+      "shipyardId": "vesper",
+      "totalMs": 358.19999998807907,
+      "phases": {
+        "hullMs": 3.5999999940395355,
+        "armorMs": 43.599999994039536,
+        "coverageMs": 45.599999994039536,
+        "functionalMs": 69.5,
+        "installationMs": 100.90000000596046,
+        "validationMs": 95,
+        "totalMs": 358.19999998807907
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 16,
+      "shipyardId": "vesper",
+      "totalMs": 433.59999999403954,
+      "phases": {
+        "hullMs": 12,
+        "armorMs": 90.30000001192093,
+        "coverageMs": 37.79999998211861,
+        "functionalMs": 83.7000000178814,
+        "installationMs": 131.40000000596046,
+        "validationMs": 78.39999997615814,
+        "totalMs": 433.59999999403954
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 17,
+      "shipyardId": "vesper",
+      "totalMs": 334.5,
+      "phases": {
+        "hullMs": 3.9000000059604645,
+        "armorMs": 39,
+        "coverageMs": 42.29999998211861,
+        "functionalMs": 62.30000001192093,
+        "installationMs": 104,
+        "validationMs": 82.90000000596046,
+        "totalMs": 334.40000000596046
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 18,
+      "shipyardId": "vesper",
+      "totalMs": 351.30000001192093,
+      "phases": {
+        "hullMs": 3.2000000178813934,
+        "armorMs": 43,
+        "coverageMs": 45.69999998807907,
+        "functionalMs": 64.09999999403954,
+        "installationMs": 101.2000000178814,
+        "validationMs": 94.09999999403954,
+        "totalMs": 351.30000001192093
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 19,
+      "shipyardId": "vesper",
+      "totalMs": 319.7000000178814,
+      "phases": {
+        "hullMs": 4.4000000059604645,
+        "armorMs": 41.5,
+        "coverageMs": 36.80000001192093,
+        "functionalMs": 70.5,
+        "installationMs": 106.7999999821186,
+        "validationMs": 59.70000001788139,
+        "totalMs": 319.7000000178814
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 0,
+      "shipyardId": "forge",
+      "totalMs": 460.7000000178814,
+      "phases": {
+        "hullMs": 9.5,
+        "armorMs": 78.90000000596046,
+        "coverageMs": 62.599999994039536,
+        "functionalMs": 85.30000001192093,
+        "installationMs": 130,
+        "validationMs": 94.40000000596046,
+        "totalMs": 460.7000000178814
+      },
+      "mounts": 6,
+      "armor": 43
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 1,
+      "shipyardId": "forge",
+      "totalMs": 361.59999999403954,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 52.5,
+        "coverageMs": 51,
+        "functionalMs": 86.2000000178814,
+        "installationMs": 98,
+        "validationMs": 70.5,
+        "totalMs": 361.59999999403954
+      },
+      "mounts": 8,
+      "armor": 41
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 2,
+      "shipyardId": "forge",
+      "totalMs": 388.5,
+      "phases": {
+        "hullMs": 5.300000011920929,
+        "armorMs": 62.69999998807907,
+        "coverageMs": 43.30000001192093,
+        "functionalMs": 86.5,
+        "installationMs": 111.89999997615814,
+        "validationMs": 78.7000000178814,
+        "totalMs": 388.40000000596046
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 3,
+      "shipyardId": "forge",
+      "totalMs": 336.5,
+      "phases": {
+        "hullMs": 3.5,
+        "armorMs": 40.19999998807907,
+        "coverageMs": 36.19999998807907,
+        "functionalMs": 82.7000000178814,
+        "installationMs": 115.59999999403954,
+        "validationMs": 58.30000001192093,
+        "totalMs": 336.5
+      },
+      "mounts": 9,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 4,
+      "shipyardId": "forge",
+      "totalMs": 374.90000000596046,
+      "phases": {
+        "hullMs": 6.4000000059604645,
+        "armorMs": 76.09999999403954,
+        "coverageMs": 48,
+        "functionalMs": 77.7999999821186,
+        "installationMs": 93.5,
+        "validationMs": 73.10000002384186,
+        "totalMs": 374.90000000596046
+      },
+      "mounts": 4,
+      "armor": 43
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 5,
+      "shipyardId": "forge",
+      "totalMs": 333.5,
+      "phases": {
+        "hullMs": 3.9000000059604645,
+        "armorMs": 38.89999997615814,
+        "coverageMs": 36.30000001192093,
+        "functionalMs": 75.69999998807907,
+        "installationMs": 108.60000002384186,
+        "validationMs": 70.09999999403954,
+        "totalMs": 333.5
+      },
+      "mounts": 11,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 6,
+      "shipyardId": "forge",
+      "totalMs": 440.39999997615814,
+      "phases": {
+        "hullMs": 3.399999976158142,
+        "armorMs": 54.400000005960464,
+        "coverageMs": 52.099999994039536,
+        "functionalMs": 76.60000002384186,
+        "installationMs": 129.19999998807907,
+        "validationMs": 124.69999998807907,
+        "totalMs": 440.39999997615814
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "shipyardId": "forge",
+      "totalMs": 283.80000001192093,
+      "phases": {
+        "hullMs": 2.7000000178813934,
+        "armorMs": 32.19999998807907,
+        "coverageMs": 28.30000001192093,
+        "functionalMs": 62,
+        "installationMs": 97.89999997615814,
+        "validationMs": 60.70000001788139,
+        "totalMs": 283.80000001192093
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 8,
+      "shipyardId": "forge",
+      "totalMs": 372.60000002384186,
+      "phases": {
+        "hullMs": 4.700000017881393,
+        "armorMs": 56.599999994039536,
+        "coverageMs": 54.099999994039536,
+        "functionalMs": 66.40000000596046,
+        "installationMs": 98.09999999403954,
+        "validationMs": 92.7000000178814,
+        "totalMs": 372.60000002384186
+      },
+      "mounts": 9,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 9,
+      "shipyardId": "forge",
+      "totalMs": 459.09999999403954,
+      "phases": {
+        "hullMs": 8.400000005960464,
+        "armorMs": 87,
+        "coverageMs": 46.29999998211861,
+        "functionalMs": 76,
+        "installationMs": 126.90000000596046,
+        "validationMs": 114.5,
+        "totalMs": 459.09999999403954
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 10,
+      "shipyardId": "forge",
+      "totalMs": 449.09999999403954,
+      "phases": {
+        "hullMs": 4.5,
+        "armorMs": 46.19999998807907,
+        "coverageMs": 51.19999998807907,
+        "functionalMs": 70.90000000596046,
+        "installationMs": 147.30000001192093,
+        "validationMs": 128.90000000596046,
+        "totalMs": 449
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 11,
+      "shipyardId": "forge",
+      "totalMs": 397.2000000178814,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 59.400000005960464,
+        "coverageMs": 60.400000005960464,
+        "functionalMs": 76.90000000596046,
+        "installationMs": 106.5,
+        "validationMs": 90,
+        "totalMs": 397.2000000178814
+      },
+      "mounts": 8,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 12,
+      "shipyardId": "forge",
+      "totalMs": 278.39999997615814,
+      "phases": {
+        "hullMs": 2.7999999821186066,
+        "armorMs": 35.20000001788139,
+        "coverageMs": 32.29999998211861,
+        "functionalMs": 55,
+        "installationMs": 96.09999999403954,
+        "validationMs": 57,
+        "totalMs": 278.39999997615814
+      },
+      "mounts": 8,
+      "armor": 43
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 13,
+      "shipyardId": "forge",
+      "totalMs": 412.2999999821186,
+      "phases": {
+        "hullMs": 6.4000000059604645,
+        "armorMs": 92.7999999821186,
+        "coverageMs": 50.400000005960464,
+        "functionalMs": 62.80000001192093,
+        "installationMs": 122.2999999821186,
+        "validationMs": 77.5,
+        "totalMs": 412.19999998807907
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 14,
+      "shipyardId": "forge",
+      "totalMs": 341.90000000596046,
+      "phases": {
+        "hullMs": 3.4000000059604645,
+        "armorMs": 50.20000001788139,
+        "coverageMs": 43.69999998807907,
+        "functionalMs": 68.09999999403954,
+        "installationMs": 95.59999999403954,
+        "validationMs": 80.90000000596046,
+        "totalMs": 341.90000000596046
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 15,
+      "shipyardId": "forge",
+      "totalMs": 363.40000000596046,
+      "phases": {
+        "hullMs": 4.200000017881393,
+        "armorMs": 43,
+        "coverageMs": 43.5,
+        "functionalMs": 97.59999999403954,
+        "installationMs": 92.09999999403954,
+        "validationMs": 83,
+        "totalMs": 363.40000000596046
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 16,
+      "shipyardId": "forge",
+      "totalMs": 389.69999998807907,
+      "phases": {
+        "hullMs": 4.199999988079071,
+        "armorMs": 66.40000000596046,
+        "coverageMs": 42.29999998211861,
+        "functionalMs": 76.10000002384186,
+        "installationMs": 115.7999999821186,
+        "validationMs": 84.80000001192093,
+        "totalMs": 389.59999999403954
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 17,
+      "shipyardId": "forge",
+      "totalMs": 317.59999999403954,
+      "phases": {
+        "hullMs": 5.699999988079071,
+        "armorMs": 44.30000001192093,
+        "coverageMs": 35,
+        "functionalMs": 63.89999997615814,
+        "installationMs": 97.7000000178814,
+        "validationMs": 71,
+        "totalMs": 317.59999999403954
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 18,
+      "shipyardId": "forge",
+      "totalMs": 431.2000000178814,
+      "phases": {
+        "hullMs": 12.100000023841858,
+        "armorMs": 85.59999999403954,
+        "coverageMs": 54.400000005960464,
+        "functionalMs": 73.09999999403954,
+        "installationMs": 113,
+        "validationMs": 92.90000000596046,
+        "totalMs": 431.10000002384186
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 19,
+      "shipyardId": "forge",
+      "totalMs": 339.5,
+      "phases": {
+        "hullMs": 4,
+        "armorMs": 33.30000001192093,
+        "coverageMs": 27.099999994039536,
+        "functionalMs": 83,
+        "installationMs": 123.09999999403954,
+        "validationMs": 69,
+        "totalMs": 339.5
+      },
+      "mounts": 11,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 0,
+      "shipyardId": "serein",
+      "totalMs": 342.90000000596046,
+      "phases": {
+        "hullMs": 3.800000011920929,
+        "armorMs": 43.5,
+        "coverageMs": 39.900000005960464,
+        "functionalMs": 70.39999997615814,
+        "installationMs": 111.80000001192093,
+        "validationMs": 73.40000000596046,
+        "totalMs": 342.80000001192093
+      },
+      "mounts": 8,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 1,
+      "shipyardId": "serein",
+      "totalMs": 366.30000001192093,
+      "phases": {
+        "hullMs": 3.699999988079071,
+        "armorMs": 46.20000001788139,
+        "coverageMs": 36.599999994039536,
+        "functionalMs": 74.80000001192093,
+        "installationMs": 146.09999999403954,
+        "validationMs": 58.900000005960464,
+        "totalMs": 366.30000001192093
+      },
+      "mounts": 7,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 2,
+      "shipyardId": "serein",
+      "totalMs": 352,
+      "phases": {
+        "hullMs": 5.299999982118607,
+        "armorMs": 34.400000005960464,
+        "coverageMs": 31.5,
+        "functionalMs": 69.40000000596046,
+        "installationMs": 156.09999999403954,
+        "validationMs": 55.30000001192093,
+        "totalMs": 352
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 3,
+      "shipyardId": "serein",
+      "totalMs": 358,
+      "phases": {
+        "hullMs": 6.600000023841858,
+        "armorMs": 57.19999998807907,
+        "coverageMs": 34.19999998807907,
+        "functionalMs": 71.5,
+        "installationMs": 110.5,
+        "validationMs": 78,
+        "totalMs": 358
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 4,
+      "shipyardId": "serein",
+      "totalMs": 338.5,
+      "phases": {
+        "hullMs": 3,
+        "armorMs": 45.900000005960464,
+        "coverageMs": 34.599999994039536,
+        "functionalMs": 76,
+        "installationMs": 95,
+        "validationMs": 84,
+        "totalMs": 338.5
+      },
+      "mounts": 7,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 5,
+      "shipyardId": "serein",
+      "totalMs": 361.40000000596046,
+      "phases": {
+        "hullMs": 5,
+        "armorMs": 43.900000005960464,
+        "coverageMs": 45,
+        "functionalMs": 81.09999999403954,
+        "installationMs": 131.69999998807907,
+        "validationMs": 54.70000001788139,
+        "totalMs": 361.40000000596046
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 6,
+      "shipyardId": "serein",
+      "totalMs": 379.59999999403954,
+      "phases": {
+        "hullMs": 8.599999994039536,
+        "armorMs": 75.59999999403954,
+        "coverageMs": 45.400000005960464,
+        "functionalMs": 75.19999998807907,
+        "installationMs": 92.7000000178814,
+        "validationMs": 82.09999999403954,
+        "totalMs": 379.59999999403954
+      },
+      "mounts": 7,
+      "armor": 43
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "shipyardId": "serein",
+      "totalMs": 305,
+      "phases": {
+        "hullMs": 3.100000023841858,
+        "armorMs": 35.19999998807907,
+        "coverageMs": 25.099999994039536,
+        "functionalMs": 73.2000000178814,
+        "installationMs": 118.5,
+        "validationMs": 49.89999997615814,
+        "totalMs": 305
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 8,
+      "shipyardId": "serein",
+      "totalMs": 339.5,
+      "phases": {
+        "hullMs": 3.600000023841858,
+        "armorMs": 42.89999997615814,
+        "coverageMs": 54.900000005960464,
+        "functionalMs": 58.80000001192093,
+        "installationMs": 98.2999999821186,
+        "validationMs": 81,
+        "totalMs": 339.5
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 9,
+      "shipyardId": "serein",
+      "totalMs": 370.5,
+      "phases": {
+        "hullMs": 6.300000011920929,
+        "armorMs": 66.40000000596046,
+        "coverageMs": 34.5,
+        "functionalMs": 76.5,
+        "installationMs": 116.5,
+        "validationMs": 70.19999998807907,
+        "totalMs": 370.40000000596046
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 10,
+      "shipyardId": "serein",
+      "totalMs": 374.59999999403954,
+      "phases": {
+        "hullMs": 3.7999999821186066,
+        "armorMs": 45.5,
+        "coverageMs": 53.900000005960464,
+        "functionalMs": 76.2000000178814,
+        "installationMs": 108.7999999821186,
+        "validationMs": 86.40000000596046,
+        "totalMs": 374.59999999403954
+      },
+      "mounts": 10,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 11,
+      "shipyardId": "serein",
+      "totalMs": 474.60000002384186,
+      "phases": {
+        "hullMs": 8.900000005960464,
+        "armorMs": 87.90000000596046,
+        "coverageMs": 39.80000001192093,
+        "functionalMs": 81.59999999403954,
+        "installationMs": 132.09999999403954,
+        "validationMs": 124.30000001192093,
+        "totalMs": 474.60000002384186
+      },
+      "mounts": 11,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 12,
+      "shipyardId": "serein",
+      "totalMs": 333.60000002384186,
+      "phases": {
+        "hullMs": 5.200000017881393,
+        "armorMs": 37.099999994039536,
+        "coverageMs": 35.900000005960464,
+        "functionalMs": 69.40000000596046,
+        "installationMs": 118.7999999821186,
+        "validationMs": 67.09999999403954,
+        "totalMs": 333.5
+      },
+      "mounts": 9,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 13,
+      "shipyardId": "serein",
+      "totalMs": 372.59999999403954,
+      "phases": {
+        "hullMs": 4.9000000059604645,
+        "armorMs": 42.5,
+        "coverageMs": 40.900000005960464,
+        "functionalMs": 89.2999999821186,
+        "installationMs": 130.59999999403954,
+        "validationMs": 64.40000000596046,
+        "totalMs": 372.59999999403954
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 14,
+      "shipyardId": "serein",
+      "totalMs": 293.2000000178814,
+      "phases": {
+        "hullMs": 2.800000011920929,
+        "armorMs": 34.400000005960464,
+        "coverageMs": 27.69999998807907,
+        "functionalMs": 63.80000001192093,
+        "installationMs": 99.2999999821186,
+        "validationMs": 65.09999999403954,
+        "totalMs": 293.09999999403954
+      },
+      "mounts": 11,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 15,
+      "shipyardId": "serein",
+      "totalMs": 333.59999999403954,
+      "phases": {
+        "hullMs": 12.599999994039536,
+        "armorMs": 48.900000005960464,
+        "coverageMs": 39.80000001192093,
+        "functionalMs": 66.2999999821186,
+        "installationMs": 96.09999999403954,
+        "validationMs": 69.90000000596046,
+        "totalMs": 333.59999999403954
+      },
+      "mounts": 8,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 16,
+      "shipyardId": "serein",
+      "totalMs": 333.40000000596046,
+      "phases": {
+        "hullMs": 3.300000011920929,
+        "armorMs": 39.5,
+        "coverageMs": 30.69999998807907,
+        "functionalMs": 68.09999999403954,
+        "installationMs": 131.60000002384186,
+        "validationMs": 60.099999994039536,
+        "totalMs": 333.30000001192093
+      },
+      "mounts": 9,
+      "armor": 49
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 17,
+      "shipyardId": "serein",
+      "totalMs": 269.2999999821186,
+      "phases": {
+        "hullMs": 2.699999988079071,
+        "armorMs": 28.5,
+        "coverageMs": 27.80000001192093,
+        "functionalMs": 65.89999997615814,
+        "installationMs": 87.10000002384186,
+        "validationMs": 57.29999998211861,
+        "totalMs": 269.2999999821186
+      },
+      "mounts": 9,
+      "armor": 45
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 18,
+      "shipyardId": "serein",
+      "totalMs": 419.60000002384186,
+      "phases": {
+        "hullMs": 10.400000005960464,
+        "armorMs": 77.30000001192093,
+        "coverageMs": 49.400000005960464,
+        "functionalMs": 69.19999998807907,
+        "installationMs": 127.80000001192093,
+        "validationMs": 85.5,
+        "totalMs": 419.60000002384186
+      },
+      "mounts": 9,
+      "armor": 44
+    },
+    {
+      "architecture": "BLOCK_ASSEMBLY",
+      "seed": 19,
+      "shipyardId": "serein",
+      "totalMs": 328,
+      "phases": {
+        "hullMs": 5.4000000059604645,
+        "armorMs": 31.099999994039536,
+        "coverageMs": 27.799999982118607,
+        "functionalMs": 76.7000000178814,
+        "installationMs": 129.69999998807907,
+        "validationMs": 57.30000001192093,
+        "totalMs": 328
+      },
+      "mounts": 9,
+      "armor": 49
+    }
+  ]
+}

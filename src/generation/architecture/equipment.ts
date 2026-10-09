@@ -86,6 +86,7 @@ export function architectureEngines(
 export function architectureEquipment(
   order: ShipOrder,
   volumes: StructuralVolume[],
+  integratedOnly = false,
 ) {
   const l = order.length,
     p = order.priorities,
@@ -137,7 +138,7 @@ export function architectureEquipment(
   for (const item of plan)
     counts.set(item.volume.id, (counts.get(item.volume.id) ?? 0) + 1);
   const occupied = new Map<string, number>();
-  for (const { type, volume: v } of plan) {
+  for (const { type, volume: v } of integratedOnly ? [] : plan) {
     const index = occupied.get(v.id) ?? 0;
     occupied.set(v.id, index + 1);
     const rows = Math.ceil(counts.get(v.id)! / 2),
@@ -204,7 +205,7 @@ export function architectureEquipment(
       ),
       allowedCategories: ["spinal-energy", "spinal-kinetic"],
     });
-  for (const v of volumes) {
+  for (const v of integratedOnly ? [] : volumes) {
     const stations = v.geometry.stations;
     for (let i = 1; i < stations.length - 1; i++) {
       const z = stations[i].z;

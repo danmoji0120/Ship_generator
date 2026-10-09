@@ -1,0 +1,16 @@
+import {renderSession,png} from './helpers/render-session.mjs';
+import {readBlueprint} from './helpers/blueprint-artifact.mjs';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const out=process.env.OUT||'qa/v1.8.4/history';await mkdir(out,{recursive:true});
+const paths=['qa/v1/export.blueprint.json','qa/v1.5/regression/export.blueprint.json','qa/v1.7/regression/export.blueprint.json','qa/v1.8/regression/export.blueprint.json','qa/v1.8.1/regression/export.blueprint.json','qa/v1.8.2/functional-exterior/final-review/blueprint.json','qa/v1.8.3/final-review/blueprint.json'];
+const blueprints=[];for(const path of paths)blueprints.push({path,b:await readBlueprint(path)});
+process.env.QA_URL=process.env.BASELINE_URL||'http://localhost:5180';const baseline=await renderSession();
+const v0=await baseline.page.evaluate(async()=>{const{generateBlueprintV0,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprintV0(DEFAULT_ORDER,7);});
+blueprints.unshift({path:'Frozen unmodified V0 generator from d52d504',b:v0});await writeFile(`${out}/v0.blueprint.json`,JSON.stringify(v0));
+async function captures(page,b){return page.evaluate(async b=>{const{ArmorQARenderer}=await import('/src/rendering/armor-qa.ts');const r=new ArmorQARenderer(480),shots=[];for(const view of['TOP','BOTTOM','LEFT','ISOMETRIC','LOW-ISOMETRIC'])shots.push({view,...r.capture(b,'COMPLETE',view,{reviewLighting:true,underbodyLighting:view==='BOTTOM'||view==='LOW-ISOMETRIC',scale:'fixed',closeup:{center:{x:0,y:0,z:0},extent:b.order.length*1.5}})});r.dispose();return shots;},b);}
+const old=[];try{for(const{b}of blueprints)old.push(await captures(baseline.page,b));}finally{await baseline.browser.close();}
+process.env.QA_URL=process.env.TARGET_URL||'http://localhost:5176';const current=await renderSession(),rows=[];
+try{for(const[index,{path,b}]of blueprints.entries()){const shots=await captures(current.page,b);const repeated=await captures(current.page,JSON.parse(JSON.stringify(b)));const checks=shots.map((s,j)=>({view:s.view,historicalPixels:s.pixels===old[index][j].pixels,jsonReloadPixels:s.pixels===repeated[j].pixels,sha256:createHash('sha256').update(png(s.pixels)).digest('hex')}));assert(checks.every(c=>c.historicalPixels&&c.jsonReloadPixels),`Historical pixel regression ${b.generatorVersion??'V0'}`);rows.push({path,version:b.generatorVersion??'V0',checks});if(index===0)await writeFile(`${out}/v0-reloaded.png`,png(shots[3].pixels));}
+assert.deepEqual(current.errors,[]);assert.deepEqual(baseline.errors,[]);await writeFile(`${out}/report.json`,JSON.stringify({baselineCommit:'d52d504abc4e29aa5c00438f3deac1b790304940',rows,errors:current.errors,baselineErrors:baseline.errors,environment:'Same Chromium / SwiftShader, 480px orthographic, identical light/material/camera'},null,2));console.log(JSON.stringify({versions:rows.length,views:rows.length*5,historicalPixels:true,reloadPixels:true,errors:current.errors}));}finally{await current.browser.close();}
