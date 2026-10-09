@@ -1,3 +1,4 @@
+import {addExteriorDetails} from './details/build';
 import {planRequirements,requirementCandidates,bindRequirementSpaces,DesignRejection,type RequirementPlan} from './production/requirements';
 import { buildProduction } from "./production/build";
 import { buildLayeredArmor } from "./integration/armor";
@@ -31,7 +32,7 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5";
     productionBase?: boolean;
     requirementPlan?: RequirementPlan;
     minimumMacroCandidate?: number;
@@ -40,7 +41,7 @@ export function generateBlueprint(
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if(!qaOptions?.version||qaOptions.version==='1.8.4.2'){
+  if((!qaOptions?.version)||qaOptions?.version==='1.8.4.2'||qaOptions?.version==='1.8.5'){
     // Normalize/validate before planning; historical generation remains separately callable.
     const order=structuredClone(input),normalizedSeed=normalizeSeed(seed);
     if(!ROLES.includes(order.role)||!['Light','Standard','Heavy','Superheavy'].includes(order.massClass)||!Number.isFinite(order.length)||order.length<40||order.length>600||PRIORITIES.some(k=>!Number.isFinite(order.priorities[k])||order.priorities[k]<0||order.priorities[k]>100))throw Error('Invalid Ship Order');
@@ -52,7 +53,8 @@ export function generateBlueprint(
       if(!qaOptions?.architecture)base.architecture.requestedGrammar=selectArchitecture(order,getShipyard(order.shipyardId),new SeededRng(normalizedSeed)).grammar;
       if(index>0)base.architecture.fallbackReason='Requirements-first fallback after recorded candidate rejection';
       candidatePlan.chosen={architecture:base.architecture.grammar,family:base.macroDesign!.family,candidate:base.candidate};
-      return buildProduction(base,index,plan.rejectedCandidates.filter(a=>a.candidate>=0).map(a=>({candidate:a.candidate,reasons:a.reasons})),performance.now()-hullStart,qaOptions?.onTimings);
+      const released=buildProduction(base,index,plan.rejectedCandidates.filter(a=>a.candidate>=0).map(a=>({candidate:a.candidate,reasons:a.reasons})),performance.now()-hullStart,qaOptions?.onTimings);
+      return qaOptions?.version==='1.8.4.2'?released:addExteriorDetails(released);
     }catch(e){const reason=(e as Error).message;plan.rejectedCandidates.push({candidate:index,architecture:c.architecture,family:c.family,stage:'physical-candidate',codes:[...new Set(reason.match(/REQUIRED_[A-Z_]+/g)??['REQUIRED_PHYSICAL_DESIGN_INVALID'])],reasons:[reason]});}
     throw new DesignRejection(plan.rejectedCandidates.flatMap(a=>a.codes),plan.rejectedCandidates,'No requirements-compliant physical candidate: '+JSON.stringify(plan.rejectedCandidates));
   }

@@ -1,6 +1,6 @@
 {
   "name": "procedural-shipyard",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,7 +15,8 @@
     "qa:integration": "node tests/integration-qa.mjs",
     "qa:doctrine": "vitest run tests/design-doctrine-qa.test.ts && node tests/summarize-design-doctrine.mjs",
     "qa:doctrine:summary": "node tests/summarize-design-doctrine.mjs",
-    "qa:requirements": "vitest run tests/design-requirements.test.ts tests/design-requirements-qa.test.ts && node tests/summarize-design-requirements.mjs"
+    "qa:requirements": "vitest run tests/design-requirements.test.ts tests/design-requirements-qa.test.ts && node tests/summarize-design-requirements.mjs",
+    "qa:details": "vitest run tests/exterior-details.test.ts"
   },
   "dependencies": {
     "three": "^0.180.0"

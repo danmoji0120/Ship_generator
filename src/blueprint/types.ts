@@ -417,7 +417,7 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -442,6 +442,7 @@ export interface ShipBlueprint extends Omit<
   functionalExterior?: import("../generation/functional/types").FunctionalExteriorReview;
   productionDesign?: import("../generation/production/types").ProductionDesign;
   /** Optional additive doctrine: historical Blueprints remain unchanged and loadable. */
+  exteriorDetailPlan?: import("../generation/details/types").ExteriorDetailPlan;
   designRequirements?: import("../generation/production/requirements").RequirementPlan;
   designDoctrine?: import("../generation/production/doctrine").DesignDoctrine;
   weaponLayout?: import("../generation/weapons/types").WeaponLayout;

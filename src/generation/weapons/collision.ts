@@ -9,7 +9,7 @@ import{equipmentReservations,inReservedZone}from'../integration/reservations';
 import{reservationSamples,reservationBounds,overlappingBounds}from'../armor/geometry';
 import{armorSurfaces,worldPoint}from'./surfaces';
 let solidCache=new WeakMap<PanelSolid,{planes:{p:Vec3;n:Vec3}[];convex:boolean;faces:{a:Vec3;e1:Vec3;e2:Vec3;h:Vec3;det:number}[]}>();
-export function resetCollisionCache(){solidCache=new WeakMap();sampleCache=new WeakMap();rayTriangles=new WeakMap();}
+export function resetCollisionCache(){solidCache=new WeakMap();sampleCache=new WeakMap();sampleFactories=new WeakMap();rayTriangles=new WeakMap();}
 /** Immutable stored solids: prepared planes / parity coefficients are shared within a pass. */
 export function solidContains(s:PanelSolid,p:Vec3){
  let prepared=solidCache.get(s);if(!prepared){const ts=solidTriangles(s),planes=ts.map(t=>({p:t[0],n:normal(t)})),ray={x:1,y:.3713907,z:.529817};
@@ -22,7 +22,12 @@ export function solidContains(s:PanelSolid,p:Vec3){
 }
 const inside=solidContains;
 let sampleCache=new WeakMap<PanelSolid,Vec3[]>();
-export function geometrySamples(s:PanelSolid){let samples=sampleCache.get(s);if(!samples){samples= solidTriangles(s).flatMap(([a,b,c])=>[a,b,c,mix(a,b,.5),mix(b,c,.5),mix(c,a,.5),mul(add(add(a,b),c),1/3)]);samples=[...new Map(samples.map(p=>[`${p.x}/${p.y}/${p.z}`,p])).values()];sampleCache.set(s,samples);}return samples;}
+let sampleFactories=new WeakMap<PanelSolid,()=>Vec3[]>();
+/** Immutable parametric instances can provide transformed prototype samples lazily.
+ * Historical solids without a provider keep the original sampling algorithm. */
+export function provideGeometrySamples(s:PanelSolid,create:()=>Vec3[]){sampleFactories.set(s,create);}
+
+export function geometrySamples(s:PanelSolid){let samples=sampleCache.get(s);if(!samples){const factory=sampleFactories.get(s);if(factory){samples=factory();sampleCache.set(s,samples);return samples;}samples= solidTriangles(s).flatMap(([a,b,c])=>[a,b,c,mix(a,b,.5),mix(b,c,.5),mix(c,a,.5),mul(add(add(a,b),c),1/3)]);samples=[...new Map(samples.map(p=>[`${p.x}/${p.y}/${p.z}`,p])).values()];sampleCache.set(s,samples);}return samples;}
 const within=(p:Vec3,b:BoundsData)=>(['x','y','z']as const).every(k=>p[k]>=b.min[k]&&p[k]<=b.max[k]);
 export function solidsIntrude(a:PanelSolid,ab:BoundsData,b:PanelSolid,bb:BoundsData){
  if(!overlappingBounds(ab,bb))return false;

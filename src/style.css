@@ -1012,3 +1012,6 @@ pre {
 .architecture-summary details span { display: block; margin-top: 6px; overflow-wrap: anywhere; }
 
 #design-rejection{overflow-wrap:anywhere;font-size:12px;max-width:100%}#design-rejection details{margin-top:8px}#requirements-summary{color:var(--accent);font-weight:600}
+
+.detail-control { display:flex; align-items:center; gap:.7rem; padding:.45rem .8rem; font-size:.75rem; color:#a8b8c5; }
+.detail-control select { width:auto; padding:.25rem .5rem; }

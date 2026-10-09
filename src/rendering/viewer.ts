@@ -1,3 +1,5 @@
+import {setDetailVisibility} from './details';
+import type {DetailMode} from '../generation/details/types';
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
@@ -10,6 +12,7 @@ export class ShipViewer {
   private ship?: THREE.Group;
   private blueprint?: AnyShipBlueprint;
   private resizeObserver: ResizeObserver;
+  private detailMode:DetailMode="AUTO";
   private mode: DebugView = "Normal";
   private radius = 100;
   private disposed = false;
@@ -68,6 +71,7 @@ export class ShipViewer {
     if (this.disposed) return;
     requestAnimationFrame(this.animate);
     this.controls.update();
+    if(this.ship){const pixels=this.radius*2/Math.max(1,this.camera.position.distanceTo(this.controls.target))/Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))*this.container.clientHeight/2;setDetailVisibility(this.ship,this.detailMode,pixels);}
     this.renderer.render(this.scene, this.camera);
   };
   show(b: AnyShipBlueprint, reset = true) {
@@ -76,7 +80,7 @@ export class ShipViewer {
       this.scene.remove(this.ship);
       disposeShip(this.ship);
     }
-    this.ship = createShip(b, this.mode);
+    this.ship = createShip(b, this.mode,this.detailMode);
     this.scene.add(this.ship);
     // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
     const shadows = Boolean(b.schemaVersion===2&&(b.layeredArmor?.budget.segmentCount||b.productionDesign?.armor.length));
@@ -98,6 +102,7 @@ export class ShipViewer {
     this.renderer.render(this.scene, this.camera);
     return this.renderer.domElement.toDataURL("image/png");
   }
+  setDetailMode(mode:DetailMode){this.detailMode=mode;if(this.ship)setDetailVisibility(this.ship,mode,Infinity);}
   setMode(mode: DebugView) {
     this.mode = mode;
     if (this.blueprint) this.show(this.blueprint, false);

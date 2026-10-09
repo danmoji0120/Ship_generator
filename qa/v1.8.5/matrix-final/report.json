@@ -1,0 +1,280 @@
+{
+  "rows": [
+    {
+      "label": "MONOLITHIC",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 45,
+      "issues": []
+    },
+    {
+      "label": "BLOCK_ASSEMBLY",
+      "status": "released",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 51,
+      "omitted": 107,
+      "issues": []
+    },
+    {
+      "label": "SPINE_AND_MODULES",
+      "status": "released",
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 50,
+      "omitted": 54,
+      "issues": []
+    },
+    {
+      "label": "TRUSS_POD",
+      "status": "released",
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 51,
+      "omitted": 85,
+      "issues": []
+    },
+    {
+      "label": "TWIN_HULL",
+      "status": "released",
+      "architecture": "TWIN_HULL",
+      "family": "WIDE_CARRIER",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 49,
+      "omitted": 84,
+      "issues": []
+    },
+    {
+      "label": "CORE_AND_NACELLES",
+      "status": "released",
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 51,
+      "omitted": 77,
+      "issues": []
+    },
+    {
+      "label": "STACKED_BLOCKS",
+      "status": "released",
+      "architecture": "STACKED_BLOCKS",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 43,
+      "omitted": 58,
+      "issues": []
+    },
+    {
+      "label": "HYBRID",
+      "status": "released",
+      "architecture": "HYBRID",
+      "family": "WEAPON_DOMINANT",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 49,
+      "omitted": 55,
+      "issues": []
+    },
+    {
+      "label": "Corvette",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 38,
+      "omitted": 67,
+      "issues": []
+    },
+    {
+      "label": "Frigate",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 42,
+      "omitted": 45,
+      "issues": []
+    },
+    {
+      "label": "Destroyer",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 42,
+      "omitted": 45,
+      "issues": []
+    },
+    {
+      "label": "Cruiser",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 45,
+      "issues": []
+    },
+    {
+      "label": "Battlecruiser",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 42,
+      "omitted": 47,
+      "issues": []
+    },
+    {
+      "label": "Battleship",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 41,
+      "omitted": 46,
+      "issues": []
+    },
+    {
+      "label": "Missile Ship",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 41,
+      "omitted": 50,
+      "issues": []
+    },
+    {
+      "label": "Spinal Gun Ship",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEAPON_DOMINANT",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 41,
+      "omitted": 38,
+      "issues": []
+    },
+    {
+      "label": "Patrol Ship",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 51,
+      "issues": []
+    },
+    {
+      "label": "Light",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 37,
+      "issues": []
+    },
+    {
+      "label": "Standard",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 45,
+      "issues": []
+    },
+    {
+      "label": "Heavy",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 57,
+      "issues": []
+    },
+    {
+      "label": "Superheavy",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 40,
+      "omitted": 69,
+      "issues": []
+    },
+    {
+      "label": "seed-0",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 47,
+      "omitted": 38,
+      "issues": []
+    },
+    {
+      "label": "seed-11",
+      "status": "released",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 51,
+      "omitted": 75,
+      "issues": []
+    },
+    {
+      "label": "seed-23",
+      "status": "released",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 49,
+      "omitted": 36,
+      "issues": []
+    },
+    {
+      "label": "seed-41",
+      "status": "released",
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "baseUnchanged": true,
+      "deterministic": true,
+      "kits": 42,
+      "omitted": 53,
+      "issues": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,725 @@
+{
+  "ms": 2637,
+  "issues": [],
+  "count": 40,
+  "kits": [
+    {
+      "id": "detail/command-house/command/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "command-house/command",
+      "position": {
+        "x": -1.8562500000000002,
+        "y": 50.06308931199207,
+        "z": 89.34842851453303
+      }
+    },
+    {
+      "id": "detail/command-house/command/EVA_HANDRAIL",
+      "kit": "EVA_HANDRAIL",
+      "zoneId": "command-house/command",
+      "position": {
+        "x": 1.1137500000000002,
+        "y": 50.06308931199207,
+        "z": 89.34842851453303
+      }
+    },
+    {
+      "id": "detail/command-house/command/EVA_LADDER",
+      "kit": "EVA_LADDER",
+      "zoneId": "command-house/command",
+      "position": {
+        "x": -0.9652500000000002,
+        "y": 50.290240641792344,
+        "z": 86.34842851453303
+      }
+    },
+    {
+      "id": "detail/command-house/sensor/SENSOR_STRIP",
+      "kit": "SENSOR_STRIP",
+      "zoneId": "command-house/sensor",
+      "position": {
+        "x": 2.8215,
+        "y": 49.024016677206475,
+        "z": 66.10621406443786
+      }
+    },
+    {
+      "id": "detail/command-house/sensor/OPTICAL_SENSOR",
+      "kit": "OPTICAL_SENSOR",
+      "zoneId": "command-house/sensor",
+      "position": {
+        "x": 0,
+        "y": 49.836516677206475,
+        "z": 66.16773421625878
+      }
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "service-citadel/service--1/access",
+      "position": {
+        "x": -53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -48.999999999999986
+      }
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE",
+      "kit": "CONDUIT_BUNDLE",
+      "zoneId": "service-citadel/service--1/access",
+      "position": {
+        "x": -53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -41.499999999999986
+      }
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/SERVICE_CATWALK",
+      "kit": "SERVICE_CATWALK",
+      "zoneId": "service-citadel/service--1/access",
+      "position": {
+        "x": -52.74736280035205,
+        "y": 27.162158034540333,
+        "z": -45.24999999999998
+      }
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/SERVICE_PORT",
+      "kit": "SERVICE_PORT",
+      "zoneId": "service-citadel/service--1/access",
+      "position": {
+        "x": -53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -47.499999999999986
+      }
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "service-citadel/service-1/access",
+      "position": {
+        "x": 53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -43.999999999999986
+      }
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE",
+      "kit": "CONDUIT_BUNDLE",
+      "zoneId": "service-citadel/service-1/access",
+      "position": {
+        "x": 53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -51.499999999999986
+      }
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/SERVICE_CATWALK",
+      "kit": "SERVICE_CATWALK",
+      "zoneId": "service-citadel/service-1/access",
+      "position": {
+        "x": 52.74736280035205,
+        "y": 27.162158034540333,
+        "z": -47.74999999999998
+      }
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/SERVICE_PORT",
+      "kit": "SERVICE_PORT",
+      "zoneId": "service-citadel/service-1/access",
+      "position": {
+        "x": 53.05169839701002,
+        "y": 27.162158034540333,
+        "z": -45.499999999999986
+      }
+    },
+    {
+      "id": "detail/citadel/service--1/DRONE_DOCK",
+      "kit": "DRONE_DOCK",
+      "zoneId": "citadel/service--1",
+      "position": {
+        "x": -55.27919839701002,
+        "y": 24.90675803454033,
+        "z": -46.499999999999986
+      }
+    },
+    {
+      "id": "detail/citadel/service-1/DRONE_DOCK",
+      "kit": "DRONE_DOCK",
+      "zoneId": "citadel/service-1",
+      "position": {
+        "x": 50.82419839701002,
+        "y": 24.90675803454033,
+        "z": -46.499999999999986
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME",
+      "kit": "ENGINE_SERVICE_FRAME",
+      "zoneId": "citadel/engine-service--1",
+      "position": {
+        "x": -119.71139956207409,
+        "y": -0.09099999999999998,
+        "z": 9.570131340684796
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service--1/VENT_LOUVER",
+      "kit": "VENT_LOUVER",
+      "zoneId": "citadel/engine-service--1",
+      "position": {
+        "x": -119.71139956207409,
+        "y": -0.09099999999999998,
+        "z": 9.570131340684796
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service--1/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "citadel/engine-service--1",
+      "position": {
+        "x": -75.46779459560766,
+        "y": -0.6682500000000001,
+        "z": 99
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME",
+      "kit": "ENGINE_SERVICE_FRAME",
+      "zoneId": "citadel/engine-service-1",
+      "position": {
+        "x": 119.71139956207409,
+        "y": 0.09099999999999998,
+        "z": 9.570131340684796
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service-1/VENT_LOUVER",
+      "kit": "VENT_LOUVER",
+      "zoneId": "citadel/engine-service-1",
+      "position": {
+        "x": 119.71139956207409,
+        "y": 0.09099999999999998,
+        "z": 9.570131340684796
+      }
+    },
+    {
+      "id": "detail/citadel/engine-service-1/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "citadel/engine-service-1",
+      "position": {
+        "x": 75.46779459560766,
+        "y": 0.6682500000000001,
+        "z": 99
+      }
+    },
+    {
+      "id": "detail/cannon-0-0/service/WEAPON_SERVICE_RING",
+      "kit": "WEAPON_SERVICE_RING",
+      "zoneId": "cannon-0-0/service",
+      "position": {
+        "x": 12.564687668105213,
+        "y": 44.22883414386416,
+        "z": -38.96831810629803
+      }
+    },
+    {
+      "id": "detail/cannon-0-0/service/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "cannon-0-0/service",
+      "position": {
+        "x": 12.509527228177664,
+        "y": 44.22883414386416,
+        "z": -33.90581810629803
+      }
+    },
+    {
+      "id": "detail/cannon-1-0/service/WEAPON_SERVICE_RING",
+      "kit": "WEAPON_SERVICE_RING",
+      "zoneId": "cannon-1-0/service",
+      "position": {
+        "x": -49.98550277533253,
+        "y": -36.33775158063273,
+        "z": -5.986071796421673
+      }
+    },
+    {
+      "id": "detail/cannon-1-1/service/WEAPON_SERVICE_RING",
+      "kit": "WEAPON_SERVICE_RING",
+      "zoneId": "cannon-1-1/service",
+      "position": {
+        "x": 38.92955959351434,
+        "y": -36.43840740203672,
+        "z": -7.804309791189543
+      }
+    },
+    {
+      "id": "detail/citadel/rcs-0.18/RCS_CLUSTER",
+      "kit": "RCS_CLUSTER",
+      "zoneId": "citadel/rcs-0.18",
+      "position": {
+        "x": 0,
+        "y": -38.32405583989009,
+        "z": -93.75
+      }
+    },
+    {
+      "id": "detail/citadel/rcs-0.81/RCS_CLUSTER",
+      "kit": "RCS_CLUSTER",
+      "zoneId": "citadel/rcs-0.81",
+      "position": {
+        "x": 125.06087075513425,
+        "y": 0.09099999999999998,
+        "z": 2.182935876348793
+      }
+    },
+    {
+      "id": "detail/citadel/rcs-port/RCS_CLUSTER",
+      "kit": "RCS_CLUSTER",
+      "zoneId": "citadel/rcs-port",
+      "position": {
+        "x": -125.06087075513425,
+        "y": -0.09099999999999998,
+        "z": 2.182935876348793
+      }
+    },
+    {
+      "id": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/belt--1/joint",
+      "position": {
+        "x": -125.64594119454975,
+        "y": 2.086429992422227,
+        "z": 1.375
+      }
+    },
+    {
+      "id": "detail/citadel/belt--1/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/belt--1/joint",
+      "position": {
+        "x": -88.44704282232323,
+        "y": -1.9166666666666665,
+        "z": -119.44740581116784
+      }
+    },
+    {
+      "id": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/belt-1/joint",
+      "position": {
+        "x": 125.64594119454975,
+        "y": 2.086429992422227,
+        "z": 1.375
+      }
+    },
+    {
+      "id": "detail/citadel/belt-1/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/belt-1/joint",
+      "position": {
+        "x": 88.44704282232323,
+        "y": 1.9166666666666665,
+        "z": -119.44740581116784
+      }
+    },
+    {
+      "id": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/keel/joint",
+      "position": {
+        "x": 0,
+        "y": -42.90942080912058,
+        "z": 1.375
+      }
+    },
+    {
+      "id": "detail/citadel/keel/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/keel/joint",
+      "position": {
+        "x": 0,
+        "y": -42.937629917787916,
+        "z": 0
+      }
+    },
+    {
+      "id": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/belly-port/joint",
+      "position": {
+        "x": -52.10711937677058,
+        "y": -35.437278728995906,
+        "z": 6
+      }
+    },
+    {
+      "id": "detail/citadel/belly-port/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/belly-port/joint",
+      "position": {
+        "x": -52.10711937677058,
+        "y": -35.416839302016854,
+        "z": 6.9375
+      }
+    },
+    {
+      "id": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/belly-starboard/joint",
+      "position": {
+        "x": 52.10711937677058,
+        "y": -35.437278728995906,
+        "z": 6
+      }
+    },
+    {
+      "id": "detail/citadel/belly-starboard/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/belly-starboard/joint",
+      "position": {
+        "x": 52.10711937677058,
+        "y": -35.416839302016854,
+        "z": 6.9375
+      }
+    },
+    {
+      "id": "detail/citadel/axial-rcs--1/RCS_CLUSTER",
+      "kit": "RCS_CLUSTER",
+      "zoneId": "citadel/axial-rcs--1",
+      "position": {
+        "x": 0,
+        "y": -2.25,
+        "z": -154.5
+      }
+    },
+    {
+      "id": "detail/citadel/cap-service--1/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "citadel/cap-service--1",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -154.5
+      }
+    }
+  ],
+  "omissions": [
+    {
+      "id": "detail/command-house/command/SENSOR_STRIP",
+      "kit": "SENSOR_STRIP",
+      "zoneId": "command-house/command",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/EVA_LADDER",
+      "kit": "EVA_LADDER",
+      "zoneId": "service-citadel/service--1/access",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "service-citadel/service--1/access",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/service-citadel/service--1/access/DRONE_DOCK",
+      "kit": "DRONE_DOCK",
+      "zoneId": "service-citadel/service--1/access",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/EVA_LADDER",
+      "kit": "EVA_LADDER",
+      "zoneId": "service-citadel/service-1/access",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "service-citadel/service-1/access",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/service-citadel/service-1/access/DRONE_DOCK",
+      "kit": "DRONE_DOCK",
+      "zoneId": "service-citadel/service-1/access",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/service--1/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/citadel/service--1/CONDUIT_BUNDLE",
+      "kit": "CONDUIT_BUNDLE",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+    },
+    {
+      "id": "detail/citadel/service--1/SERVICE_CATWALK",
+      "kit": "SERVICE_CATWALK",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/service--1/EVA_LADDER",
+      "kit": "EVA_LADDER",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/service--1/SERVICE_PORT",
+      "kit": "SERVICE_PORT",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/service--1/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "citadel/service--1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/service-1/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/citadel/service-1/CONDUIT_BUNDLE",
+      "kit": "CONDUIT_BUNDLE",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/service-1/SERVICE_CATWALK",
+      "kit": "SERVICE_CATWALK",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+    },
+    {
+      "id": "detail/citadel/service-1/EVA_LADDER",
+      "kit": "EVA_LADDER",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+    },
+    {
+      "id": "detail/citadel/service-1/SERVICE_PORT",
+      "kit": "SERVICE_PORT",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+    },
+    {
+      "id": "detail/citadel/service-1/COOLANT_PIPE",
+      "kit": "COOLANT_PIPE",
+      "zoneId": "citadel/service-1",
+      "status": "omitted",
+      "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+    },
+    {
+      "id": "detail/citadel/engine-service--1/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "citadel/engine-service--1",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/engine-service--1/HAZARD_MARKING",
+      "kit": "HAZARD_MARKING",
+      "zoneId": "citadel/engine-service--1",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/engine-service-1/MACHINE_ACCESS_COVER",
+      "kit": "MACHINE_ACCESS_COVER",
+      "zoneId": "citadel/engine-service-1",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/engine-service-1/HAZARD_MARKING",
+      "kit": "HAZARD_MARKING",
+      "zoneId": "citadel/engine-service-1",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/cannon-1-0/service/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "cannon-1-0/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/cannon-1-1/service/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "cannon-1-1/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/cannon-2-0/service/WEAPON_SERVICE_RING",
+      "kit": "WEAPON_SERVICE_RING",
+      "zoneId": "cannon-2-0/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/cannon-2-0/service/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "cannon-2-0/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/cannon-2-1/service/WEAPON_SERVICE_RING",
+      "kit": "WEAPON_SERVICE_RING",
+      "zoneId": "cannon-2-1/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/cannon-2-1/service/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "cannon-2-1/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/missile-0-0/service/MISSILE_CELL_DETAIL",
+      "kit": "MISSILE_CELL_DETAIL",
+      "zoneId": "missile-0-0/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/missile-0-0/service/HAZARD_MARKING",
+      "kit": "HAZARD_MARKING",
+      "zoneId": "missile-0-0/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/missile-0-1/service/MISSILE_CELL_DETAIL",
+      "kit": "MISSILE_CELL_DETAIL",
+      "zoneId": "missile-0-1/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/missile-0-1/service/HAZARD_MARKING",
+      "kit": "HAZARD_MARKING",
+      "zoneId": "missile-0-1/service",
+      "status": "omitted",
+      "reason": "Kit footprint crosses armor step or unsupported edge"
+    },
+    {
+      "id": "detail/citadel/primary/joint/REINFORCEMENT_BRACKET",
+      "kit": "REINFORCEMENT_BRACKET",
+      "zoneId": "citadel/primary/joint",
+      "status": "omitted",
+      "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+    },
+    {
+      "id": "detail/citadel/primary/joint/ARMOR_CLAMP",
+      "kit": "ARMOR_CLAMP",
+      "zoneId": "citadel/primary/joint",
+      "status": "omitted",
+      "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+    },
+    {
+      "id": "detail/citadel/primary/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/primary/joint",
+      "status": "omitted",
+      "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+    },
+    {
+      "id": "detail/citadel/belt--1/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/belt--1/joint",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/belt-1/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/belt-1/joint",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/keel/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/keel/joint",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/belly-port/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/belly-port/joint",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/belly-starboard/joint/PANEL_SEAM",
+      "kit": "PANEL_SEAM",
+      "zoneId": "citadel/belly-starboard/joint",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/axial-rcs-1/RCS_CLUSTER",
+      "kit": "RCS_CLUSTER",
+      "zoneId": "citadel/axial-rcs-1",
+      "status": "omitted",
+      "reason": "Reserved opening zone-engine-0"
+    },
+    {
+      "id": "detail/citadel/cap-service--1/RECESSED_SERVICE_PANEL",
+      "kit": "RECESSED_SERVICE_PANEL",
+      "zoneId": "citadel/cap-service--1",
+      "status": "omitted",
+      "reason": "Zone density or global polygon budget reached"
+    },
+    {
+      "id": "detail/citadel/cap-service-1/ACCESS_HATCH",
+      "kit": "ACCESS_HATCH",
+      "zoneId": "citadel/cap-service-1",
+      "status": "omitted",
+      "reason": "Reserved opening zone-engine-0"
+    },
+    {
+      "id": "detail/citadel/cap-service-1/RECESSED_SERVICE_PANEL",
+      "kit": "RECESSED_SERVICE_PANEL",
+      "zoneId": "citadel/cap-service-1",
+      "status": "omitted",
+      "reason": "Reserved opening zone-engine-0"
+    }
+  ],
+  "errors": []
+}

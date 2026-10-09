@@ -1,3 +1,4 @@
+import type {DetailMode} from './generation/details/types';
 import {DesignRejection} from './generation/production/requirements';
 import "./style.css";
 import { layout, PRIORITY_LABELS } from "./ui/layout";
@@ -29,6 +30,7 @@ try {
     "WebGL을 시작할 수 없습니다. 하드웨어 가속을 지원하는 브라우저를 사용하세요.";
   console.error(e);
 }
+$<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
 function syncRanges() {
   for (const id of ["length", ...PRIORITIES]) {
     const input = $<HTMLInputElement>(id);
@@ -145,6 +147,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     if(next.productionDesign){const d=next.productionDesign,w=next.weaponLayout!;
       $("architecture-summary").innerHTML+=`<span>V1.8.4 exterior ${(d.overallBounds.max.z-d.overallBounds.min.z).toFixed(1)} × ${(d.overallBounds.max.x-d.overallBounds.min.x).toFixed(1)} × ${(d.overallBounds.max.y-d.overallBounds.min.y).toFixed(1)} m · ${d.armor.length} structural armor masses · ${d.finish.length} broad finishing courses · ${d.functionalPrefabIds.length} functional assemblies</span><span>Coverage T/B/P/S/F/A: ${Object.values(d.coverage.directions).map(m=>Math.round(m.ratio*100)+"%").join(" / ")}</span><span>Weapons: ${w.composition.map(c=>`${c.count} × ${c.size} ${c.category}`).join(" · ")} · T/B/P/S ${Object.values(w.budget.byRegion).join(" / ")} · ${w.omissions.length} reported group omissions</span>`;
     }
+    if(next.schemaVersion===2&&next.exteriorDetailPlan){const d=next.exteriorDetailPlan;const line=document.createElement("span");line.textContent=`Exterior V${d.version}: ${d.kitPlacements.length} functional kits / ${d.detectedZones.length} zones · ${d.styleLanguage} · ${d.decisions.filter(x=>x.status==='omitted').length} recorded omissions · VISUAL ONLY`;$("architecture-summary").append(line);}
     if(next.designDoctrine){const d=next.designDoctrine;
       const section=document.createElement('details'),title=document.createElement('summary');title.textContent=`Design doctrine V${d.version} · ${d.role}`;section.append(title);
       const line=(text:string)=>{const node=document.createElement('span');node.textContent=text;section.append(node);};

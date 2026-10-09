@@ -1,0 +1,368 @@
+{
+  "baselineCommit": "41e5d8b455e8aad1a1555ed4b2a7e6edf50ed702",
+  "rows": [
+    {
+      "path": "Frozen unmodified V0 generator from 41e5d8b",
+      "version": "V0",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "f80f1203579fc50b2694a54e7934eef8bd3f6372396c361430e3809ab4ac465f"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d762cd90d0aa626e82191e6fc57c91858a130470f86446f7cbb95310e44d5cc0"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "7eed2f7772d9678948c175525b1bbd36da0d481410b86bd17e76b4be92b21b2f"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "270b79e8ebbf09e33c4beb365be3cc9038924f2a6e8fcff007d3f0e051372818"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "a0d501cddf203ec514d16321da79164f5205fc452db83d79ed326b72626bfc29"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1/export.blueprint.json",
+      "version": "1.0",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d29271ab0082735a4a7c5939770968c905841c90c38745c644fd52e99c361c8e"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "98bb01d1e278441c588765f90217da95aeed52848ed608cf163cf8449b164c73"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "b3ba2224a2e00b13ce7bff8ccaeef28e6f691bfc562f20c61655ba744e4c5578"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "8f08bca89ae416e1b7e6bcc80b4586a7fa289dadb868235b946fb8b32e5cb98c"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "48ddcb6538be66f31c5729cf00b4c26d786ba11b2a02e1139d12e6c7fa8e7e3f"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.5/regression/export.blueprint.json",
+      "version": "1.5",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "4ac027a63dd8db7fe3ac05c15fc0f77b7a14f3c3ce7400580af5af9158f5aac8"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "a7c70b9cda6b05c6b189c4a6920a5a8f0f016679b2ad5c21ce1e14d34368ae87"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "9eefa3c6b70cd33df99245b7907e50889900428e9c1c4dbf24d6c0b58183faa2"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "b60f97cae1a6f774f256ac190a0d9d9256adf86476a66fe66ab790958419ed1e"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "e06598ef3b0befd69a588dfecfcb992e69127298677f623b6f67b57b14c10fdc"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.7/regression/export.blueprint.json",
+      "version": "1.7",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "eb96c39fefa74fca46bced618695b7a1f65d3386011643121b3f72c67741d17f"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "4ee57edfee0ca27415f578ff2708b9bbfaf601ed19ce1f1564d96d93dfcd952f"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "565fdf3ecd718bf06c177aa18a9f615da247d2fa7b9e01294f598df47cfce0b8"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "f97edf9cd6bc9b35d34ea9590c19fdfaa2b970006c25176ec34810a49ccad1ca"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d0fa589203f84a2a26989983653ea3d378eaf34855a9ed81101277f4dd030aac"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.8/regression/export.blueprint.json",
+      "version": "1.8",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d514c57ab76756c533a2f8a19819055840abaf90a996473a493e142d184910aa"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "016d7db5c0ddcb21db5d61cb283f9f45def20a6ecaf9d4809dc541c8cf01f9a6"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d2538e99bd8213c83d5803f2619d01590b86a6a6a7b53057d8603f3856c7a27e"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "5117525d377ea9f682362d50f1e93be7b57f0d36427c2ac4973addb51b8f6f40"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "2781357c433d215f41e77f878d79aa901e045403cd4627331a0f7f645e7e6738"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.8.1/regression/export.blueprint.json",
+      "version": "1.8.1",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "c9b03a20a2006010b0be118d415dac225d4ee8e1a4536dba5f16238e4b58cbd4"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "9bc2f0271e5f2558471556b9c9ce62cb5fd2c30a7701fcb1b0c0c5fecf2fac7c"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "f930af0931ed2427db55ec2219744f4653ff751816954797cfb2238a92765a32"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "247a4c225d7fca0b104ab0fe1c605d3e4692e4c1c18498dcfb9395efc8cbf219"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "b4d90c31397cbb0ee3cf233d10da34c8d8f25175e68f59ea7144a30e364c286a"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.8.2/functional-exterior/final-review/blueprint.json",
+      "version": "1.8.2",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "a980937268c93e9211c8df1934cf5c49bbff425cc7be2d11701a782335416371"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "86dea4ff75f244f1b5d8ffd89d4a2cb973c199cea8eee8b48e000163ec642c58"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "6349ffd0aec072acf6f7bc764cc2c4104194f3be198f6cbbd8726eed5d50f678"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "0d02103ae1ad6fa4a501bc60ddc9ebe8557b8f188e9ccfe44a361c33215dece3"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "837e27d33c720b6963dade9ee4e1e7e568eb85370f2bb85e37e15c4bbb8905dd"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.8.3/final-review/blueprint.json",
+      "version": "1.8.3",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "13e8536fda4e6e105be30e1fb52791964d4e9ba84ea986a946b70c0e14e3fbd5"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "36e0418aefd3d1cd518c570875e1215c2fed41018dd5dbb9c4d44351b7e3e68c"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "9ee7290f4b212dcb74e9bd14bc3fb9ba48f333547911004fcbcc98189d16a317"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "c3258f50589a256a6f6b76f8b9ab4260cd5f1c81924c81c011243a258e30006f"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "a0a04a1f72f07a383eb5e4df44d0ca84645e1fb56bcee00b53d1283a13569f1d"
+        }
+      ]
+    },
+    {
+      "path": "qa/v1.8.4.2/history/v1.8.4.1.blueprint.json",
+      "version": "1.8.4",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "5401cfe4f4d481a1133228b2cf46289016da897cf986a9c444f59c2806546233"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "d87e8ba5504a4014470ba0a045021f5d6df129a7abc25445e13b2c58350ab8d6"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "82cc4b8b9bd6e376ca3fcfc6f8a104b32351121bf54ad56561df3d2ed7261167"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "32939bac6740082704bf76abdbd41b31400c4448c342aed10abd6e36fe8caac5"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "03ac74cd3f358d516198439da3e64ef2a99fdc8650d41c3de922ba10b186839c"
+        }
+      ]
+    },
+    {
+      "path": "Frozen V1.8.4.2 Requirements-first Seed 7",
+      "version": "1.8.4",
+      "checks": [
+        {
+          "view": "TOP",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "b9699ad99892040053eb797cc30df898575186788116d387ca3f39e115aa19cf"
+        },
+        {
+          "view": "BOTTOM",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "b35b37f8c52957e5aa5eee8ff3f29e17980b4c5d2c8bc53021509ef2d1f57613"
+        },
+        {
+          "view": "LEFT",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "be75163dde6ec66c44ad2520463c64a90a84e3c17c85058f47b7d5d4086d9079"
+        },
+        {
+          "view": "ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "5ecbbf2ff95397202f3951a72f97bc45c33b14fa7d100c497d77a7f2f125740d"
+        },
+        {
+          "view": "LOW-ISOMETRIC",
+          "historicalPixels": true,
+          "jsonReloadPixels": true,
+          "sha256": "9e904af55c5bb1b218e6170c00c7137ed5a366a8fedd09dd6cdd83f31b3af760"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "baselineErrors": [],
+  "environment": "Same Chromium / SwiftShader, 480px orthographic, identical light/material/camera"
+}

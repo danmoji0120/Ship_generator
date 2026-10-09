@@ -1,3 +1,5 @@
+import {renderExteriorDetails} from './details';
+import type {DetailMode} from '../generation/details/types';
 import{decorateWeaponDebug}from'./weapons-qa';
 import {renderProductionArmor} from "./production";
 import { panelGeometry, renderLayeredArmor } from "./armor";
@@ -20,24 +22,26 @@ export type DebugView =
   | "Equipment"
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
-export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
+export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
   if(b.schemaVersion===2&&b.productionDesign&&["Structural Armor Only","Functional Exterior Only","Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode)){
     const copy=structuredClone(b);
+    if(mode!=="Functional Exterior Only")copy.exteriorDetailPlan=undefined;
     if(mode==="Structural Armor Only"){copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));copy.productionDesign!.finish=[];}
     if(mode==="Functional Exterior Only"){copy.productionDesign=undefined;copy.hardpoints=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>b.productionDesign!.functionalPrefabIds.includes(p.id));copy.structuralVolumes=[];copy.structuralConnectors=[];copy.trusses=[];}
-    const r=createShip(copy,"Normal");
+    const r=createShip(copy,"Normal",detailMode);
     if(copy.weaponLayout&&["Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode))decorateWeaponDebug(r,copy,mode==="Symmetry Groups"?"GROUPS":mode==="Firing Arc"?"ARCS":"LAYOUT");
     return r;
   }
   if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
     const copy=structuredClone(b);
+    if(mode!=="Functional Exterior Only")copy.exteriorDetailPlan=undefined;
     if(mode==="Hull Only"){copy.structuralArmorPilot=undefined;copy.functionalExterior=undefined;copy.productionDesign=undefined;copy.prefabPlacements=copy.prefabPlacements?.filter(p=>!p.assembly);}
     if(mode==="Hull Only"||mode==="Armor Panels"||mode==="Panel Seams"||mode==="Armor Coverage"||mode==="Secondary Armor") {
       copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];
       copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));
       copy.layeredArmor?.assemblies.forEach(a=>a.segments=a.segments.filter(s=>mode==="Hull Only"?false:mode==="Secondary Armor"?s.layer===2:s.layer===1));
     }
-    const r=createShip(copy,"Normal");
+    const r=createShip(copy,"Normal",detailMode);
     if(mode==="Panel Seams")r.traverse(n=>{if(n instanceof THREE.Mesh&&!n.userData.armorLayer)n.material=new THREE.MeshStandardMaterial({color:0x26323b,roughness:.8});});
     if(mode==="Armor Coverage"&&copy.productionDesign){
       const palette={top:0x64c9ca,bottom:0xa994eb,left:0x74c99b,right:0xe3af6a,fore:0x8baedf,aft:0xdf8d9a};
@@ -432,6 +436,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
         }
       root.add(detailGroup);
     }
+  if(b.schemaVersion===2&&b.exteriorDetailPlan&&["Normal","Equipment"].includes(mode))root.add(renderExteriorDetails(b,m,detailMode));
   root.userData.blueprint = b;
   return root;
 }

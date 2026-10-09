@@ -1,0 +1,6285 @@
+{
+  "rows": [
+    {
+      "label": "yard-aegis",
+      "order": {
+        "shipyardId": "aegis"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 40,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.19891291941284114
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-engine-0"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        }
+      ]
+    },
+    {
+      "label": "yard-vesper",
+      "order": {
+        "shipyardId": "vesper"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 42,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "MACHINE_ACCESS_COVER",
+        "DRONE_DOCK",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "PANEL_SEAM",
+        "REINFORCEMENT_BRACKET",
+        "PANEL_SEAM",
+        "REINFORCEMENT_BRACKET",
+        "PANEL_SEAM",
+        "REINFORCEMENT_BRACKET",
+        "PANEL_SEAM",
+        "REINFORCEMENT_BRACKET",
+        "PANEL_SEAM",
+        "REINFORCEMENT_BRACKET",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RECESSED_SERVICE_PANEL",
+        "RECESSED_SERVICE_PANEL"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9984746737770782,
+              "z": 0.05521164574396328
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.9383769079057296,
+              "y": 0,
+              "z": -0.3456136263362343
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9383769079057296,
+              "y": 0,
+              "z": -0.34561362633623427
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/EVA_LADDER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/EVA_LADDER; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/EVA_LADDER"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 403.4500546386135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 403.4500546386135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        }
+      ]
+    },
+    {
+      "label": "yard-forge",
+      "order": {
+        "shipyardId": "forge"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 47,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "DRONE_DOCK",
+        "MACHINE_ACCESS_COVER",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "MACHINE_ACCESS_COVER",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "MACHINE_ACCESS_COVER",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9935091692582204,
+              "z": 0.11375205756310836
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8440971948844134,
+              "y": 0,
+              "z": -0.536190195348875
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8440971948844134,
+              "y": 0,
+              "z": -0.536190195348875
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 451.1257435366663,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 20594
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 451.1257435366663,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 20594
+          }
+        }
+      ]
+    },
+    {
+      "label": "yard-serein",
+      "order": {
+        "shipyardId": "serein"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 40,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "DRONE_DOCK",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "PANEL_SEAM",
+        "ARMOR_CLAMP",
+        "PANEL_SEAM",
+        "ARMOR_CLAMP",
+        "PANEL_SEAM",
+        "ARMOR_CLAMP",
+        "PANEL_SEAM",
+        "ARMOR_CLAMP",
+        "PANEL_SEAM",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RECESSED_SERVICE_PANEL",
+        "RECESSED_SERVICE_PANEL"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9975409762132541,
+              "z": 0.07008566740431371
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.9152220761130284,
+              "y": 0,
+              "z": -0.402949812501952
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9152220761130284,
+              "y": 0,
+              "z": -0.402949812501952
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0.9999999999999999
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/EVA_LADDER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/EVA_LADDER; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/EVA_LADDER"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 465.1850546767434,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 465.1850546767434,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-WEDGE_CITADEL",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 40,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.19891291941284114
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-engine-0"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-HAMMERHEAD",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "counts": 51,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "COOLANT_PIPE",
+        "COOLANT_PIPE",
+        "MACHINE_ACCESS_COVER",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "DRONE_DOCK",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.8527232979060845,
+              "z": 0.522362878857381
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.8134026852979859,
+              "z": 0.5817010155999609
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -7.294194877911254e-17,
+              "y": -1,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -7.294194877911254e-17,
+              "y": -1,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9220603674841572,
+              "z": 0.38704609378597377
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9143483895008531,
+              "z": 0.4049284166580511
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9999999999999999,
+              "y": -6.017591985298974e-16,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-fore-armor/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-fore-armor/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-fore-armor/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-fore-armor/service--1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-fore-armor/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-fore-armor/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-fore-armor/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-fore-armor/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-fore-armor/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-fore-armor/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 517.4137611841533,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 25798
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 517.4137611841533,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 25798
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-SPLIT_FRAME",
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "counts": 51,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "COOLANT_PIPE",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9436367207418276,
+              "z": 0.3309829893931258
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9333418225280414,
+              "z": 0.35898891670918476
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": -1,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9471058587968757,
+              "z": 0.32092131782203687
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.919492490125662,
+              "z": 0.39310756874233455
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8939749787230599,
+              "y": 0.44811687919236526,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 515.5472672503713,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 130,
+            "triangles": 28104
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 515.5472672503713,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 130,
+            "triangles": 28104
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-WIDE_CARRIER",
+      "architecture": "TWIN_HULL",
+      "family": "WIDE_CARRIER",
+      "counts": 49,
+      "kits": [
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "COOLANT_PIPE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "COOLANT_PIPE",
+        "COOLANT_PIPE",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9836565432707892,
+              "z": 0.18005500515276374
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9774758342454608,
+              "z": 0.21104737256393571
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9219130390453781,
+              "z": 0.38739688749151724
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 534.8309053955268,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 48,
+            "triangles": 25708
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 534.8309053955268,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 48,
+            "triangles": 25708
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-ENGINE_DOMINANT",
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "counts": 51,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9431852044551228,
+              "z": 0.332267467707792
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9430742084207543,
+              "z": 0.33258237688062703
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9231989586139916,
+              "y": 0.38432236834985484,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9032052105061713,
+              "z": 0.4292089790702227
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.9999185268746131,
+              "y": 4.434539789411382e-18,
+              "z": -0.012764780174506404
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9578287939283612,
+              "z": 0.287339523076345
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.9996833567432661,
+              "y": 0,
+              "z": -0.02516319237528286
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9228009198470577,
+              "y": 0.385277124067111,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 436.7350173307742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 62,
+            "triangles": 26808
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 436.7350173307742,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 62,
+            "triangles": 26808
+          }
+        }
+      ]
+    },
+    {
+      "label": "family-WEAPON_DOMINANT",
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "counts": 50,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "COOLANT_PIPE",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "SERVICE_CATWALK",
+        "SERVICE_CATWALK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.8731048938236131,
+              "z": 0.4875324034166933
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.8257359497493566,
+              "z": 0.564056859980914
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9780587656682977,
+              "z": 0.2083291887840157
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9997245617804704,
+              "y": 0,
+              "z": -0.02346914086298119
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 1.2156991463185428e-16,
+              "y": 1,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8610791622609525,
+              "y": 0.5084709198370897,
+              "z": 0
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Service kit would sit on armor crest instead of the channel floor"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ENGINE_SERVICE_FRAME",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "VENT_LOUVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "No exposed surface belonging to functional parent"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 417.4839895126192,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 52,
+            "triangles": 22352
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 417.4839895126192,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 52,
+            "triangles": 22352
+          }
+        }
+      ]
+    },
+    {
+      "label": "length-40",
+      "order": {
+        "length": 40,
+        "role": "Corvette"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 18,
+      "kits": [
+        "ACCESS_HATCH",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "ARMOR_CLAMP",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.198912919412841
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "EVA_HANDRAIL",
+          "reason": "Detail collision detail/command-house/command/ACCESS_HATCH"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/command-house/command/ACCESS_HATCH"
+        },
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "OPTICAL_SENSOR",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "No exposed surface belonging to functional parent"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference point_defense-0-0-seat; Other equipment/armor interference point_defense-0-0-breech; Weapon operating envelope point_defense-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 57.83379072891385,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9256
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 57.83379072891385,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9256
+          }
+        }
+      ]
+    },
+    {
+      "label": "length-120",
+      "order": {
+        "length": 120,
+        "role": "Cruiser"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 32,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "CONDUIT_BUNDLE",
+        "CONDUIT_BUNDLE",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672982,
+              "z": 0.19891291941284098
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.809935728068756,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.809935728068756,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 192.26328983629995,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 16798
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 192.26328983629995,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 16798
+          }
+        }
+      ]
+    },
+    {
+      "label": "length-300",
+      "order": {
+        "length": 300,
+        "role": "Cruiser"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 40,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.19891291941284114
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "REINFORCEMENT_BRACKET",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "ARMOR_CLAMP",
+          "reason": "Other equipment/armor interference cannon-0-0-breech; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Other equipment/armor interference cannon-0-0-seat; Weapon operating envelope cannon-0-0"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-engine-0"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 479.02182109111135,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        }
+      ]
+    },
+    {
+      "label": "length-600",
+      "order": {
+        "length": 600,
+        "role": "Cruiser"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 51,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "ACCESS_HATCH",
+        "MISSILE_CELL_DETAIL",
+        "HAZARD_MARKING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.19891291941284114
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.9097691926402475,
+              "y": 0,
+              "z": -0.41511446147142617
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.9097691926402475,
+              "y": 0,
+              "z": -0.41511446147142617
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/EVA_LADDER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/EVA_LADDER"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Earlier detail access blocked detail/service-citadel/service--1/access/CONDUIT_BUNDLE"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/citadel/service-1/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/citadel/service-1/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/citadel/service-1/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Detail collision detail/citadel/service-1/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/citadel/service-1/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-engine-0"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 948.3818790886043,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 24826
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 948.3818790886043,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 24826
+          }
+        }
+      ]
+    },
+    {
+      "label": "spinal-exit",
+      "order": {
+        "role": "Spinal Gun Ship",
+        "priorities": {
+          "firepower": 50,
+          "missile": 50,
+          "mobility": 50,
+          "survivability": 50,
+          "endurance": 50,
+          "sensor": 50
+        }
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEAPON_DOMINANT",
+      "counts": 39,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "SERVICE_PORT",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "COOLANT_PIPE",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "EVA_LADDER",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9791928515692221,
+              "z": 0.20293190837257544
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8520005472530858,
+              "y": 0,
+              "z": 0.5235408937995597
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8520005472530858,
+              "y": 0,
+              "z": 0.5235408937995598
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": -0.9999999999999999
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "WEAPON_SERVICE_RING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-mount-0; Required internal/XL space required-xl-envelope"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-mount-0; Required internal/XL space required-xl-envelope"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-mount-0; Required internal/XL space required-xl-envelope"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 374.2927069258571,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 32,
+            "triangles": 17846
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 374.2927069258571,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 32,
+            "triangles": 17846
+          }
+        }
+      ]
+    },
+    {
+      "label": "missile-bay",
+      "order": {
+        "role": "Missile Ship"
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "counts": 41,
+      "kits": [
+        "ACCESS_HATCH",
+        "EVA_HANDRAIL",
+        "EVA_LADDER",
+        "SENSOR_STRIP",
+        "OPTICAL_SENSOR",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "MACHINE_ACCESS_COVER",
+        "CONDUIT_BUNDLE",
+        "SERVICE_CATWALK",
+        "SERVICE_PORT",
+        "DRONE_DOCK",
+        "DRONE_DOCK",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "ENGINE_SERVICE_FRAME",
+        "VENT_LOUVER",
+        "COOLANT_PIPE",
+        "MISSILE_CELL_DETAIL",
+        "WEAPON_SERVICE_RING",
+        "WEAPON_SERVICE_RING",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "RCS_CLUSTER",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "REINFORCEMENT_BRACKET",
+        "ARMOR_CLAMP",
+        "RCS_CLUSTER",
+        "ACCESS_HATCH"
+      ],
+      "rcs": [
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0.9800171684672981,
+              "z": 0.19891291941284114
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": -0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0.8099357280687562,
+              "y": 0,
+              "z": -0.586518641134051
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        },
+        {
+          "nozzleCount": 4,
+          "thrustDirectionCandidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          ],
+          "axes": [
+            "TRANSLATION",
+            "PITCH",
+            "YAW",
+            "ROLL"
+          ],
+          "status": "RESERVED_FOR_COMBAT",
+          "constraints": [
+            "Sampled nozzle direction clear; no thrust/torque/fuel or maneuver bonus simulated"
+          ]
+        }
+      ],
+      "issues": [],
+      "omissions": [
+        {
+          "kit": "SENSOR_STRIP",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "DRONE_DOCK",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service--1/access/CONDUIT_BUNDLE; Detail collision detail/service-citadel/service--1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "CONDUIT_BUNDLE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "SERVICE_CATWALK",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT"
+        },
+        {
+          "kit": "EVA_LADDER",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Earlier detail access blocked detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "SERVICE_PORT",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER"
+        },
+        {
+          "kit": "COOLANT_PIPE",
+          "reason": "Detail collision detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER; Detail collision detail/service-citadel/service-1/access/SERVICE_PORT; Detail collision detail/service-citadel/service-1/access/SERVICE_CATWALK"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MACHINE_ACCESS_COVER",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "MISSILE_CELL_DETAIL",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "HAZARD_MARKING",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Kit footprint crosses armor step or unsupported edge"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "PANEL_SEAM",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "RCS_CLUSTER",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Zone density or global polygon budget reached"
+        },
+        {
+          "kit": "ACCESS_HATCH",
+          "reason": "Reserved opening zone-engine-0"
+        },
+        {
+          "kit": "RECESSED_SERVICE_PANEL",
+          "reason": "Reserved opening zone-engine-0"
+        }
+      ],
+      "diagnostics": [
+        {
+          "name": "ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 499.0467514696717,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 20574
+          }
+        },
+        {
+          "name": "LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 499.0467514696717,
+          "projection": "orthographic",
+          "scale": "fit",
+          "size": 700,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 20574
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

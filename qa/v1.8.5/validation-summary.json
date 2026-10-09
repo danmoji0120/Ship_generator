@@ -1,0 +1,39 @@
+{
+  "suite": {
+    "files": 21,
+    "tests": 654,
+    "passed": 654,
+    "failed": 0,
+    "seconds": 775.07,
+    "command": "npx vitest run --maxWorkers=2 --testTimeout=120000",
+    "location": "Clean staged-source verification archive"
+  },
+  "details": {
+    "passed": 8,
+    "prototypeProbeToleranceMeters": 1e-08
+  },
+  "preservedLocalDraftTests": {
+    "passed": 10,
+    "committed": false
+  },
+  "build": {
+    "typescript": true,
+    "production": true,
+    "preservedWorkingTreeAlsoBuilds": true
+  },
+  "ui": {
+    "checks": 19,
+    "consoleErrors": 0
+  },
+  "historicalPixels": {
+    "versions": 10,
+    "views": 50,
+    "identical": true
+  },
+  "initialTimeout": {
+    "test": "architecture diversity across 20 seeds per role/yard",
+    "originalSeconds": 32.124,
+    "unchangedStandalonePassSeconds": 10.428,
+    "geometricCriteriaChanged": false
+  }
+}

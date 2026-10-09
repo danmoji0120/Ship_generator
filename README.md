@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.4.2 — Unified Procedural Ship Generator
+# Procedural Shipyard V1.8.5 — Functional Exterior Detail Language
 
-일반 주문서의 기본 생성기는 **V1.8.4.2 Requirements-first** 경로입니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.5**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -8,6 +8,20 @@ npm run dev
 npm test
 npm run build
 ```
+
+## V1.8.5 기능성 외장 디테일
+
+실제 함교·기관부·무장 기단·정비 채널·센서·장갑 접합부에서 설치 구역을 찾습니다. 21개 Parametric Kit가 점검 해치, EVA 접근 구조, 기관 프레임·루버·배관, 함포 기단 정비 구조, RCS 및 센서 스트립을 선택적으로 배치합니다. 표면 법선과 실제 접촉면을 사용하며 기존 장갑·무장·예약 구획은 변경하지 않습니다. 설치에 실패한 선택 부품만 사유와 함께 생략합니다.
+
+- **실제 크기:** 사다리·해치의 물리적 크기는 40~600m 함선 길이에 비례 확대하지 않습니다. 기능 구역과 서비스 위치 수를 제한하고 큰 장갑면 일부를 비워 둡니다.
+- **조선소:** Aegis의 견고한 프레임, Vesper의 낮고 긴 커버, Forge의 노출 정비 구조, Serein의 낮은 매립형 외장이 형태·비례·노출 규칙에서 구별됩니다.
+- **표시:** Preview의 `Exterior detail` 선택기로 OFF / LOW / HIGH / AUTO를 전환합니다. 표시만 바뀌며 주문서와 정본 JSON은 바뀌지 않습니다. AUTO는 화면 크기에 따라 미세 부품을 숨깁니다.
+- **저장:** `schemaVersion: 2`, `generatorVersion: "1.8.5"`, 선택적 `exteriorDetailPlan`. 과거 JSON은 새 부품을 생성하지 않고 그대로 재생합니다. Macro·장갑·무장과 독립된 디테일 Seed 스트림을 사용합니다.
+- **기능 범위:** RCS·센서·배관은 시각/향후 전투 참조 데이터이며 실제 전투·추력·냉각 성능을 추가하지 않습니다.
+- [전체 Kit·기능 구역·부착·LOD·제한](docs/exterior-details-v1.8.5.md)
+- [실제 Before/After·확대·조선소/Family/체급·회귀/성능](qa/v1.8.5/QA.md)
+
+`generateBlueprint(order, seed, {version:'1.8.4.2'})`는 기존 Requirements-first 생성 경로를 명시적으로 실행합니다. 기본 경로의 디테일 기록을 제거하고 생성 버전을 복원하면 같은 주문/Seed의 기존 전체 Blueprint와 일치합니다. 확대 시 서비스 구조가 읽히도록 설계했으며 전체 함선 시점의 개선은 절제되어 있습니다.
 
 ## V1.8.4.2 설계 요구사항 보장
 

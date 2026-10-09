@@ -1,0 +1,86 @@
+{
+  "baselineCommit": "41e5d8b455e8aad1a1555ed4b2a7e6edf50ed702",
+  "environment": "Same browser and machine; paired old/new measured runs; two warm-up iterations excluded; CPU synchronous performance.now; static 600px orthographic main-pass renderer.info counters (Three.js autoReset excludes shadow passes)",
+  "baselineGenerationMs": {
+    "median": 767,
+    "p95": 1292.800000011921,
+    "samples": [
+      591,
+      606.5,
+      637.5,
+      651.3000000119209,
+      668.4000000059605,
+      767,
+      835.8000000119209,
+      956,
+      1005.1999999880791,
+      1292.800000011921
+    ]
+  },
+  "detailGenerationMs": {
+    "median": 1103.2000000178814,
+    "p95": 3227.5,
+    "samples": [
+      991.3000000119209,
+      991.6999999880791,
+      1021.7000000178814,
+      1023.2000000178814,
+      1098.5,
+      1103.2000000178814,
+      1105.300000011921,
+      1141.5,
+      2328.199999988079,
+      3227.5
+    ]
+  },
+  "newGenerationMs": {
+    "median": 1877.0999999940395,
+    "p95": 4001.4000000059605,
+    "samples": [
+      1541,
+      1725.7999999821186,
+      1734.800000011921,
+      1761.6000000238419,
+      1765,
+      1877.0999999940395,
+      2398.399999976158,
+      3498.800000011921,
+      3709.4000000059605,
+      4001.4000000059605
+    ]
+  },
+  "detailValidationMs": {
+    "median": 252.7000000178814,
+    "p95": 370.89999997615814,
+    "samples": [
+      158.40000000596046,
+      163.2999999821186,
+      169.80000001192093,
+      180.59999999403954,
+      207.19999998807907,
+      252.7000000178814,
+      297.7999999821186,
+      312.7999999821186,
+      323.09999999403954,
+      370.89999997615814
+    ]
+  },
+  "generationIncreasePercent": 144.73272490143933,
+  "render": {
+    "OFF": {
+      "calls": 15,
+      "triangles": 11386
+    },
+    "LOW": {
+      "calls": 19,
+      "triangles": 24038
+    },
+    "HIGH": {
+      "calls": 23,
+      "triangles": 27346
+    }
+  },
+  "kitCount": 40,
+  "partCount": 213,
+  "errors": []
+}

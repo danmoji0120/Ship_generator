@@ -1,0 +1,24 @@
+import {it,expect,beforeAll} from 'vitest';
+import * as THREE from 'three';
+import {generateBlueprint,DEFAULT_ORDER} from '../src/generation/generate';
+import {DETAIL_KITS} from '../src/generation/details/registry';
+import {detailFrame,detailAssembly} from '../src/generation/details/geometry';
+import {validateExteriorDetails} from '../src/generation/details/validate';
+import {validateBlueprint} from '../src/validation/validate';
+import {createShip,disposeShip} from '../src/rendering/ship';
+import {setDetailVisibility} from '../src/rendering/details';
+import {add,mul,dot} from '../src/generation/integration/contours';
+import {cross,solidTriangles,area} from '../src/generation/armor/panels';
+import {geometrySamples} from '../src/generation/weapons/collision';
+import type {ShipBlueprint} from '../src/blueprint/types';
+let b:ShipBlueprint,old:ShipBlueprint;
+beforeAll(()=>{old=generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.4.2'});b=generateBlueprint(DEFAULT_ORDER,7);},120000);
+it('keeps the entire requirements-first base unchanged after removing the optional detail record',()=>{const q=structuredClone(b);delete q.exteriorDetailPlan;q.generatorVersion=old.generatorVersion;expect(q).toEqual(old);expect(b.generatorVersion).toBe('1.8.5');expect(b.exteriorDetailPlan!.kitPlacements.length).toBeGreaterThan(4);});
+it('serializes deterministic optional detail data using an isolated stream',()=>{expect(generateBlueprint(DEFAULT_ORDER,7)).toEqual(b);expect(JSON.parse(JSON.stringify(b))).toEqual(b);expect(JSON.stringify(b)).not.toContain('totalMs');},120000);
+it('uses stable right-handed local frames on dorsal, ventral, flanks, bow, stern and oblique faces',()=>{for(const n of[{x:0,y:1,z:0},{x:0,y:-1,z:0},{x:1,y:0,z:0},{x:-1,y:0,z:0},{x:0,y:0,z:1},{x:0,y:0,z:-1},{x:.4,y:.3,z:.5}]){const f=detailFrame(n);expect(dot(f.normal,f.forward)).toBeCloseTo(0);expect(dot(cross(f.right,f.normal),mul(f.forward,-1))).toBeCloseTo(1);expect(Object.values(f).flatMap(Object.values).every(Number.isFinite)).toBe(true);}});
+it('all 21 kits produce actual finite, nondegenerate parametric solids',()=>{expect(Object.keys(DETAIL_KITS)).toHaveLength(21);for(const kit of Object.keys(DETAIL_KITS) as (keyof typeof DETAIL_KITS)[])for(const yard of['aegis','vesper','forge','serein']){const a=detailAssembly('fixture',kit,yard,{x:0,y:0,z:0},detailFrame({x:0,y:0,z:1}));expect(a.parts.length).toBeGreaterThan(0);for(const p of a.parts)for(const t of solidTriangles(p.solid)){expect(area(t)).toBeGreaterThan(1e-9);expect(t.flatMap(Object.values).every(Number.isFinite)).toBe(true);}}});
+it('validates final surfaces, existing openings, firing arcs, references and actual detail solids',()=>{expect(validateExteriorDetails(b)).toEqual([]);expect(validateBlueprint(b)).toEqual([]);for(const p of b.exteriorDetailPlan!.kitPlacements){expect(p.attachment.contacts).toHaveLength(p.geometryParameters?9:5);expect(p.physicalOrVisualRole).toBe('VISUAL_ONLY');} });
+it('rejects detached contacts, changed physical geometry and false parent references',()=>{for(const edit of[(q:ShipBlueprint)=>q.exteriorDetailPlan!.kitPlacements[0].attachment.contacts[0].position.x+=100,(q:ShipBlueprint)=>q.exteriorDetailPlan!.kitPlacements[0].parentStructureId='invalid',(q:ShipBlueprint)=>q.exteriorDetailPlan!.kitPlacements[0].assembly.parts[0].solid.vertices[0].y+=3]){const q=structuredClone(b);edit(q);expect(validateExteriorDetails(q).length).toBeGreaterThan(0);}});
+it('LOD switches only rendering and preserves per-part identity, authoritative JSON and historical geometry',()=>{const text=JSON.stringify(b),root=createShip(b,'Normal');const visible=()=>{let n=0;root.traverse(p=>{if(p.userData.exteriorLOD&&p.visible)n++;});return n;};setDetailVisibility(root,'OFF',500);expect(visible()).toBe(0);setDetailVisibility(root,'LOW',500);expect(visible()).toBe(1);setDetailVisibility(root,'HIGH',500);expect(visible()).toBe(2);setDetailVisibility(root,'AUTO',500);expect(visible()).toBe(1);expect(JSON.stringify(b)).toBe(text);disposeShip(root);const historical=createShip(old,'Normal');expect(historical.children.some(c=>c.userData.exteriorDetails)).toBe(false);disposeShip(historical);});
+
+it('prototype sample acceleration preserves the original boundary probes on rotated world instances',()=>{for(const kit of ['ACCESS_HATCH','EVA_LADDER','RCS_CLUSTER'] as const){const a=detailAssembly('samples',kit,'aegis',{x:31.721,y:-18.333,z:47.889},detailFrame({x:.4,y:-.8,z:.3}));for(const p of a.parts){const fast=geometrySamples(p.solid),reference=geometrySamples(structuredClone(p.solid));for(const v of reference)expect(fast.some(q=>Math.hypot(q.x-v.x,q.y-v.y,q.z-v.z)<1e-8)).toBe(true);for(const v of fast)expect(reference.some(q=>Math.hypot(q.x-v.x,q.y-v.y,q.z-v.z)<1e-8)).toBe(true);}}});
