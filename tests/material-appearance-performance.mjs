@@ -1,0 +1,15 @@
+import {renderSession} from './helpers/render-session.mjs';import {mkdir,writeFile} from 'node:fs/promises';import assert from 'node:assert/strict';
+const out=process.env.OUT||'qa/v1.8.5.1/performance';await mkdir(out,{recursive:true});const{browser,page,errors}=await renderSession();
+try{const report=await page.evaluate(async()=>{
+ const{generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts'),{applyMaterialAppearance}=await import('/src/rendering/appearance.ts'),{createShip,disposeShip}=await import('/src/rendering/ship.ts'),{ArmorQARenderer}=await import('/src/rendering/armor-qa.ts');
+ const summary=xs=>{const a=[...xs].sort((a,b)=>a-b);return{median:a[Math.floor(a.length/2)],p95:a[Math.ceil(a.length*.95)-1],samples:a};},oldTimes=[],newTimes=[],appearanceTimes=[],buildOld=[],buildNew=[];
+ const timed=f=>{const start=performance.now(),result=f();return{result,ms:performance.now()-start};};let old,current;
+ for(let i=0;i<12;i++){const baseline=()=>timed(()=>generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.5'})),latest=()=>timed(()=>generateBlueprint(DEFAULT_ORDER,7));let a,c;if(i%2){c=latest();a=baseline();}else{a=baseline();c=latest();}old=a.result;current=c.result;
+  const q=structuredClone(c.result);delete q.materialAppearance;q.generatorVersion=a.result.generatorVersion;if(JSON.stringify(q)!==JSON.stringify(a.result))throw Error('Canonical blueprint changed');
+  const clone=structuredClone(a.result),appearance=timed(()=>applyMaterialAppearance(clone));
+  const bo=timed(()=>createShip(a.result,'Normal')),bn=timed(()=>createShip(c.result,'Normal'));disposeShip(bo.result);disposeShip(bn.result);
+  if(i>=2){oldTimes.push(a.ms);newTimes.push(c.ms);appearanceTimes.push(appearance.ms);buildOld.push(bo.ms);buildNew.push(bn.ms);}
+ }
+ const renderer=new ArmorQARenderer(600),draws={};for(const mode of['OFF','LOW','HIGH','AUTO']){const opt={reviewLighting:true,detailMode:mode,scale:'fixed',closeup:{center:{x:0,y:0,z:0},extent:360}};draws[mode]={before:renderer.capture(old,'COMPLETE','ISOMETRIC',opt).diagnostics,after:renderer.capture(current,'COMPLETE','ISOMETRIC',opt).diagnostics};}renderer.dispose();
+ return{baselineCommit:'34fde4203b78cea1fd34154664a7e2262b8bae1b',environment:'Same browser/machine, 10 paired measured iterations after two warm-ups; synchronous CPU generation and mesh construction; 600px orthographic main-pass renderer.info excludes shadow passes; AUTO resolves to MESO at 500px projected length',generationBeforeMs:summary(oldTimes),generationAfterMs:summary(newTimes),appearanceAssignmentMs:summary(appearanceTimes),meshConstructionBeforeMs:summary(buildOld),meshConstructionAfterMs:summary(buildNew),draws};
+});assert.deepEqual(errors,[]);for(const d of Object.values(report.draws))assert.equal(d.before.triangles,d.after.triangles);await writeFile(out+'/report.json',JSON.stringify({...report,errors},null,2));console.log(JSON.stringify({before:report.generationBeforeMs.median,after:report.generationAfterMs.median,draws:report.draws,errors}));}finally{await browser.close();}

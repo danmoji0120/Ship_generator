@@ -1,0 +1,144 @@
+{
+  "baselineCommit": "34fde4203b78cea1fd34154664a7e2262b8bae1b",
+  "canonicalTests": {
+    "files": 22,
+    "passed": 663,
+    "failed": 0,
+    "seconds": 668.74,
+    "command": "npx vitest run --maxWorkers=2 --testTimeout=120000",
+    "source": "Isolated immutable staged release tree"
+  },
+  "preservedLocalDraftTests": {
+    "passed": 10,
+    "failed": 0,
+    "committed": false
+  },
+  "typescript": "PASS",
+  "productionBuild": "PASS",
+  "productionUIChecks": 19,
+  "consoleErrors": [],
+  "historicalVersions": 11,
+  "historicalViewPixelMatches": 55,
+  "newCases": 13,
+  "newCaptures": 124,
+  "canonicalGeometryUnchanged": true,
+  "newJSONReloadPixelMatches": true,
+  "requirementsControl": "222 identical non-timing records: 200 released, 22 rejected",
+  "initialVerificationIssue": "One initial full-run material assertion observed cached prior code while the work-in-progress verification tree was refreshed. Final source was frozen and the entire suite rerun: 663/663 PASS. No physical acceptance thresholds changed.",
+  "performance": {
+    "generationBeforeMs": {
+      "median": 964.7000000178814,
+      "p95": 1016,
+      "samples": [
+        911.3999999761581,
+        928,
+        938.6999999880791,
+        953.7000000178814,
+        960.1999999880791,
+        964.7000000178814,
+        970.5,
+        1003.7000000178814,
+        1007.0999999940395,
+        1016
+      ]
+    },
+    "generationAfterMs": {
+      "median": 1002.7999999821186,
+      "p95": 1069.0999999940395,
+      "samples": [
+        918.5999999940395,
+        933.8000000119209,
+        969.1000000238419,
+        997.0999999940395,
+        1000.0999999940395,
+        1002.7999999821186,
+        1008.1000000238419,
+        1026.9000000059605,
+        1051.6000000238419,
+        1069.0999999940395
+      ]
+    },
+    "meshConstructionBeforeMs": {
+      "median": 9.599999994039536,
+      "p95": 18.69999998807907,
+      "samples": [
+        7.799999982118607,
+        8.099999994039536,
+        8.800000011920929,
+        9.300000011920929,
+        9.599999994039536,
+        9.599999994039536,
+        10.099999994039536,
+        11.699999988079071,
+        12.400000005960464,
+        18.69999998807907
+      ]
+    },
+    "meshConstructionAfterMs": {
+      "median": 27.400000005960464,
+      "p95": 62.400000005960464,
+      "samples": [
+        23.900000005960464,
+        24.19999998807907,
+        24.900000005960464,
+        25.400000005960464,
+        26.799999982118607,
+        27.400000005960464,
+        27.80000001192093,
+        28.799999982118607,
+        29.200000017881393,
+        62.400000005960464
+      ]
+    },
+    "draws": {
+      "OFF": {
+        "before": {
+          "calls": 15,
+          "triangles": 11386
+        },
+        "after": {
+          "calls": 14,
+          "triangles": 11386
+        }
+      },
+      "LOW": {
+        "before": {
+          "calls": 19,
+          "triangles": 16694
+        },
+        "after": {
+          "calls": 18,
+          "triangles": 16694
+        }
+      },
+      "HIGH": {
+        "before": {
+          "calls": 23,
+          "triangles": 18034
+        },
+        "after": {
+          "calls": 22,
+          "triangles": 18034
+        }
+      },
+      "AUTO": {
+        "before": {
+          "calls": 19,
+          "triangles": 16694
+        },
+        "after": {
+          "calls": 18,
+          "triangles": 16694
+        }
+      }
+    }
+  },
+  "limits": [
+    "No real mobile GPU test",
+    "Flat procedural finish/window/marking shader, no PBR texture pipeline",
+    "Emission does not cast light and devices remain visual-only",
+    "Additional shader attributes increase one-time mesh construction; GPU fragment timing not measured",
+    "Main-pass draw counters exclude shadow passes"
+  ],
+  "preexistingDraftsAndQA": "Preserved and excluded from commit"
+}

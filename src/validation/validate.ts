@@ -57,7 +57,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || b.generatorVersion === "1.8.5")))))
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || b.generatorVersion === "1.8.5.1"))))))
     ) {
       if (
         !v.shape ||
@@ -112,7 +112,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || b.generatorVersion === "1.8.5")))))) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || b.generatorVersion === "1.8.5.1"))))))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -304,7 +304,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || b.generatorVersion === "1.8.5"))))))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || b.generatorVersion === "1.8.5.1")))))))
     errors.push(...validateIntegration(b));
   if(b.weaponLayout){const result=validateWeaponLayout(b);if(details)details.weapon=result;errors.push(...result.issues);}
   if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
@@ -323,9 +323,10 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || b.generatorVersion === "1.8.5")))))) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || b.generatorVersion === "1.8.5.1"))))))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
   if(b.productionDesign){const result=validateProduction(b);if(details)details.production=result;errors.push(...result.issues);}
+  if(b.materialAppearance && (b.materialAppearance.version!=='1.8.5.1'||!['aegis','vesper','forge','serein'].includes(b.materialAppearance.language)||b.materialAppearance.language!==b.shipyardId))errors.push('Invalid versioned material appearance');
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {

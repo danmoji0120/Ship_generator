@@ -1,3 +1,4 @@
+import {setDetailVisibility} from './details';
 import * as THREE from 'three';
 import type { ShipBlueprint } from '../blueprint/types';
 export type ArmorView='TOP'|'BOTTOM'|'LEFT'|'RIGHT'|'SIDE'|'FRONT'|'AFT'|'ISOMETRIC'|'LOW-ISOMETRIC';
@@ -98,6 +99,7 @@ export class ArmorQARenderer {
     camera.up.copy(up); camera.position.copy(center).addScaledVector(direction,l*5); camera.lookAt(center);camera.updateProjectionMatrix();
     this.renderer.setClearColor(options.black?0xffffff:0x172431);
     this.renderer.shadowMap.enabled=!options.black;
+    if(options.detailMode==='AUTO')setDetailVisibility(this.ship!,'AUTO',b.order.length*this.size/extent);
     this.renderer.render(this.scene,camera);
     return {pixels:this.renderer.domElement.toDataURL('image/png'),stage,view,frameMeters:extent,projection:'orthographic',scale:options.scale??'fixed',size:this.size,diagnostics:{calls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles}};
   }

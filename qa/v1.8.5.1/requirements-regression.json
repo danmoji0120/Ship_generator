@@ -1,0 +1,13 @@
+{
+  "baselineCommit": "34fde4203b78cea1fd34154664a7e2262b8bae1b",
+  "cases": 222,
+  "released": 200,
+  "rejected": 22,
+  "excludedVolatileFields": [
+    "ms",
+    "timings"
+  ],
+  "changedResults": [],
+  "normalizedSHA256": "62ce593f818510abfe74c5603491bb16692f196b5da9bcde54ff78678441446b",
+  "baselineEvidence": "Retained final V1.8.5 full-suite report in isolated source verification workspace; same baseline code. Repository V1.8.4.2 QA files were not overwritten."
+}

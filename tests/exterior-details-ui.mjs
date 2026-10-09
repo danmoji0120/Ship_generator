@@ -1,11 +1,11 @@
 import{chromium}from'playwright-core';import{mkdir,writeFile,readFile}from'node:fs/promises';import{readBlueprint}from'./helpers/blueprint-artifact.mjs';import assert from'node:assert/strict';
-const out=process.env.OUT||'qa/v1.8.5/ui',url=process.env.PRODUCTION_URL||'http://localhost:4185';await mkdir(out,{recursive:true});
+const out=process.env.OUT||'qa/v1.8.5.1/ui',url=process.env.PRODUCTION_URL||'http://localhost:4185';await mkdir(out,{recursive:true});
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']}),page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1}),errors=[],checks=[];
 page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 const manifest=async()=>JSON.parse(await page.locator('#json-content').textContent());const image=async()=>page.locator('#viewer canvas').evaluate(c=>c.toDataURL('image/png'));
 try{
  await page.goto(url);await page.waitForFunction(()=>document.querySelector('#order-status').textContent.startsWith('생성 완료'));
- assert.equal(await page.evaluate(()=>!!window.shipyardQA),false);assert.equal((await manifest()).generatorVersion,'1.8.5');checks.push('Production default generator without DEV hooks');
+ assert.equal(await page.evaluate(()=>!!window.shipyardQA),false);assert.equal((await manifest()).generatorVersion,process.env.EXPECT_VERSION||'1.8.5.1');checks.push('Production default generator without DEV hooks');
  await page.fill('#seed','7');await page.click('#regenerate');const first=await manifest();await page.click('#regenerate');assert.deepEqual(await manifest(),first);checks.push('Same Seed JSON');
  await page.fill('#seed','11');await page.click('#regenerate');assert.notDeepEqual((await manifest()).structuralVolumes,first.structuralVolumes);checks.push('New Seed changes actual Hull');
  const modes=['Structural Armor Only','Armor Coverage','Functional Exterior Only','Hardpoint Layout Only','Mount Size','Symmetry Groups','Firing Arc','Hull Only','Complete Ship','Normal'];

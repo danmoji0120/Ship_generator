@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.5 — Functional Exterior Detail Language
+# Procedural Shipyard V1.8.5.1 — Material & Emissive Pass
 
-일반 주문서의 기본 생성기는 **V1.8.5**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.5.1**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -8,6 +8,15 @@ npm run dev
 npm test
 npm run build
 ```
+
+## V1.8.5.1 재질과 기능성 발광
+
+- **5개 재질 계층:** Primary/Secondary Armor, Mechanical Structure, Recessed Interior, Functional Surface. 장갑·기계·함몰부의 명도, 거칠기와 금속성을 구분합니다.
+- **21종 기존 Kit:** 해치 외곽선·상태등, 정비 유도 표식, 센서 셀, 함교 창과 경고/식별 마킹을 기존 메시 표면의 셰이더로 표현합니다. 추가 삼각형·Bloom·동적 광원은 없습니다.
+- **4개 조선소:** Aegis 청백색 군용, Vesper 냉색 정밀, Forge 주황 산업형, Serein 은은한 민트/백색. 색상뿐 아니라 표면 거칠기·금속성과 대비도 다릅니다.
+- **정본 보존:** `schemaVersion: 2`, `generatorVersion: "1.8.5.1"`, 선택적 `materialAppearance`. 새 표시 정보와 최상위 버전을 제외하면 V1.8.5의 전체 Hull·Armor·Weapon·Exterior Detail JSON과 같습니다. UI OFF/LOW/HIGH/AUTO는 표시만 바꿉니다.
+- **과거 재생:** 새 필드가 없는 저장 Blueprint는 원래 재질·배칭으로 렌더링합니다. `{version: "1.8.5"}`로 이전 생성기도 호출할 수 있습니다. Import에서 외장을 소급 생성하지 않습니다.
+- [설계·Kit 태깅·표시 규칙과 한계](docs/material-emissive-v1.8.5.1.md) · [실제 비교 이미지·회귀·성능 QA](qa/v1.8.5.1/QA.md)
 
 ## V1.8.5 기능성 외장 디테일
 

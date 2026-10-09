@@ -1,0 +1,1795 @@
+{
+  "rows": [
+    {
+      "case": {
+        "id": "yard-aegis",
+        "yard": "aegis",
+        "length": 300,
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL"
+      },
+      "shots": [
+        {
+          "name": "before-TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-TOP",
+          "stage": "COMPLETE",
+          "view": "TOP",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-BOTTOM",
+          "stage": "COMPLETE",
+          "view": "BOTTOM",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-LEFT",
+          "stage": "COMPLETE",
+          "view": "LEFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-RIGHT",
+          "stage": "COMPLETE",
+          "view": "RIGHT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-FRONT",
+          "stage": "COMPLETE",
+          "view": "FRONT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-AFT",
+          "stage": "COMPLETE",
+          "view": "AFT",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 17502
+          }
+        },
+        {
+          "name": "after-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 17390
+          }
+        },
+        {
+          "name": "before-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 17138
+          }
+        },
+        {
+          "name": "after-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 13,
+            "triangles": 17138
+          }
+        },
+        {
+          "name": "before-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 17138
+          }
+        },
+        {
+          "name": "after-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 17250
+          }
+        },
+        {
+          "name": "before-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 17138
+          }
+        },
+        {
+          "name": "after-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 17250
+          }
+        },
+        {
+          "name": "before-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 18,
+            "triangles": 17546
+          }
+        },
+        {
+          "name": "after-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 17546
+          }
+        },
+        {
+          "name": "before-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 17182
+          }
+        },
+        {
+          "name": "after-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 17294
+          }
+        },
+        {
+          "name": "before-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 17990
+          }
+        },
+        {
+          "name": "after-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 17990
+          }
+        },
+        {
+          "name": "mode-OFF",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 11386
+          }
+        },
+        {
+          "name": "mode-LOW",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 18,
+            "triangles": 16694
+          }
+        },
+        {
+          "name": "mode-HIGH",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "mode-AUTO",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 40
+    },
+    {
+      "case": {
+        "id": "yard-vesper",
+        "yard": "vesper",
+        "length": 300,
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 17222
+          }
+        },
+        {
+          "name": "before-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15226
+          }
+        },
+        {
+          "name": "after-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15226
+          }
+        },
+        {
+          "name": "before-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "after-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "before-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "after-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "before-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "after-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "before-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 15270
+          }
+        },
+        {
+          "name": "after-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 15270
+          }
+        },
+        {
+          "name": "before-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "after-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 15198
+          }
+        },
+        {
+          "name": "before-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 27.62125031545557,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 26,
+            "triangles": 16202
+          }
+        },
+        {
+          "name": "after-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 27.62125031545557,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 26,
+            "triangles": 16202
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 42
+    },
+    {
+      "case": {
+        "id": "yard-forge",
+        "yard": "forge",
+        "length": 300,
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 20594
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 20594
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 20594
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 20594
+          }
+        },
+        {
+          "name": "before-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 18598
+          }
+        },
+        {
+          "name": "after-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 18486
+          }
+        },
+        {
+          "name": "before-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18234
+          }
+        },
+        {
+          "name": "after-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 13,
+            "triangles": 18234
+          }
+        },
+        {
+          "name": "before-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18234
+          }
+        },
+        {
+          "name": "after-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18346
+          }
+        },
+        {
+          "name": "before-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18234
+          }
+        },
+        {
+          "name": "after-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18346
+          }
+        },
+        {
+          "name": "before-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 18,
+            "triangles": 18642
+          }
+        },
+        {
+          "name": "after-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 18642
+          }
+        },
+        {
+          "name": "before-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18234
+          }
+        },
+        {
+          "name": "after-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 14,
+            "triangles": 18346
+          }
+        },
+        {
+          "name": "before-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 19574
+          }
+        },
+        {
+          "name": "after-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 26,
+            "triangles": 19574
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 47
+    },
+    {
+      "case": {
+        "id": "yard-serein",
+        "yard": "serein",
+        "length": 300,
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 27,
+            "triangles": 16022
+          }
+        },
+        {
+          "name": "before-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15002
+          }
+        },
+        {
+          "name": "after-close-COMMAND",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15002
+          }
+        },
+        {
+          "name": "before-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "after-close-PROPULSION",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "before-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "after-close-SERVICE_CHANNEL",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 9,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "before-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "after-close-WEAPON_PRIMARY",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 15,
+            "triangles": 14974
+          }
+        },
+        {
+          "name": "before-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 15046
+          }
+        },
+        {
+          "name": "after-close-SENSOR",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 8,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 17,
+            "triangles": 15046
+          }
+        },
+        {
+          "name": "before-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15018
+          }
+        },
+        {
+          "name": "after-close-MANEUVERING",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 5,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 16,
+            "triangles": 15018
+          }
+        },
+        {
+          "name": "before-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 15490
+          }
+        },
+        {
+          "name": "after-bridge-window",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 29.7,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 15490
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 40
+    },
+    {
+      "case": {
+        "id": "family-WEDGE_CITADEL",
+        "yard": "aegis",
+        "length": 300,
+        "family": "WEDGE_CITADEL",
+        "architecture": "MONOLITHIC"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 18034
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 22,
+            "triangles": 18034
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 40
+    },
+    {
+      "case": {
+        "id": "family-HAMMERHEAD",
+        "yard": "aegis",
+        "length": 300,
+        "family": "HAMMERHEAD",
+        "architecture": "BLOCK_ASSEMBLY"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 25798
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 25798
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 25798
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 38,
+            "triangles": 25798
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 51
+    },
+    {
+      "case": {
+        "id": "family-WIDE_CARRIER",
+        "yard": "aegis",
+        "length": 300,
+        "family": "WIDE_CARRIER",
+        "architecture": "BLOCK_ASSEMBLY"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 24788
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 24788
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 39,
+            "triangles": 24788
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 37,
+            "triangles": 24788
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 51
+    },
+    {
+      "case": {
+        "id": "family-ENGINE_DOMINANT",
+        "yard": "aegis",
+        "length": 300,
+        "family": "ENGINE_DOMINANT",
+        "architecture": "CORE_AND_NACELLES"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 62,
+            "triangles": 26808
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 60,
+            "triangles": 26808
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 62,
+            "triangles": 26808
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 60,
+            "triangles": 26808
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 51
+    },
+    {
+      "case": {
+        "id": "family-WEAPON_DOMINANT",
+        "yard": "aegis",
+        "length": 300,
+        "family": "WEAPON_DOMINANT",
+        "architecture": "SPINE_AND_MODULES"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 52,
+            "triangles": 22352
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 50,
+            "triangles": 22352
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 52,
+            "triangles": 22352
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 50,
+            "triangles": 22352
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 50
+    },
+    {
+      "case": {
+        "id": "family-SPLIT_FRAME",
+        "yard": "aegis",
+        "length": 300,
+        "family": "SPLIT_FRAME",
+        "architecture": "TRUSS_POD"
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 130,
+            "triangles": 28104
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 128,
+            "triangles": 28104
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 130,
+            "triangles": 28104
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 360,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 128,
+            "triangles": 28104
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 51
+    },
+    {
+      "case": {
+        "id": "length-40",
+        "yard": "aegis",
+        "length": 40
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 48,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9256
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 48,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 18,
+            "triangles": 9256
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 48,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 9256
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 48,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 18,
+            "triangles": 9256
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 18
+    },
+    {
+      "case": {
+        "id": "length-120",
+        "yard": "aegis",
+        "length": 120
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 144,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 16798
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 144,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 16798
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 144,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 16798
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 144,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 16798
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 32
+    },
+    {
+      "case": {
+        "id": "length-600",
+        "yard": "aegis",
+        "length": 600
+      },
+      "shots": [
+        {
+          "name": "before-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 720,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 24826
+          }
+        },
+        {
+          "name": "after-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "ISOMETRIC",
+          "frameMeters": 720,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 24826
+          }
+        },
+        {
+          "name": "before-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 720,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 23,
+            "triangles": 24826
+          }
+        },
+        {
+          "name": "after-LOW-ISOMETRIC",
+          "stage": "COMPLETE",
+          "view": "LOW-ISOMETRIC",
+          "frameMeters": 720,
+          "projection": "orthographic",
+          "scale": "fixed",
+          "size": 800,
+          "diagnostics": {
+            "calls": 21,
+            "triangles": 24826
+          }
+        }
+      ],
+      "geometryUnchanged": true,
+      "reloadPixels": true,
+      "kits": 51
+    }
+  ],
+  "errors": [],
+  "baseline": "34fde4203b78cea1fd34154664a7e2262b8bae1b",
+  "lighting": "Identical review/inspection rig, orthographic fixed physical scale; no bloom and no material override"
+}

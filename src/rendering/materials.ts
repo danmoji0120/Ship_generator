@@ -1,6 +1,12 @@
+import {appearanceMaterials} from './surface-appearance';
 import * as THREE from "three";
 import type { AnyShipBlueprint } from "../blueprint/types";
 export function shipMaterials(b: AnyShipBlueprint) {
+  if(b.schemaVersion===2&&b.materialAppearance?.version==='1.8.5.1'){
+    const layers=appearanceMaterials(b.materialAppearance),glow=new THREE.MeshBasicMaterial({color:b.materialTheme.engine});
+    const hull=layers.PRIMARY_ARMOR.clone();hull.color.multiplyScalar(.72);hull.onBeforeCompile=layers.PRIMARY_ARMOR.onBeforeCompile;hull.customProgramCacheKey=layers.PRIMARY_ARMOR.customProgramCacheKey;hull.userData.appearance=b.materialAppearance;
+    return {...layers,armor:layers.PRIMARY_ARMOR,hull,secondary:layers.SECONDARY_ARMOR,mount:layers.FUNCTIONAL_SURFACE,engine:layers.MECHANICAL_STRUCTURE,accent:layers.MECHANICAL_STRUCTURE,glow};
+  }
   const theme = b.materialTheme;
   const finish=b.schemaVersion===2?b.functionalExterior?.finishPalette:undefined;
   const hull = new THREE.MeshStandardMaterial({
@@ -57,5 +63,5 @@ export function shipMaterials(b: AnyShipBlueprint) {
   });
   const glow = new THREE.MeshBasicMaterial({ color: finish?.glow??theme.engine });
   const armor=new THREE.MeshStandardMaterial({color:finish?.armor??new THREE.Color(theme.hull).multiplyScalar(1.06),roughness:.64,metalness:.35});
-  return { armor, hull, secondary, accent, mount, engine, glow };
+  return { armor, hull, secondary, accent, mount, engine, glow,PRIMARY_ARMOR:armor,SECONDARY_ARMOR:secondary,MECHANICAL_STRUCTURE:engine,RECESSED_INTERIOR:engine,FUNCTIONAL_SURFACE:mount };
 }
