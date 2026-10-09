@@ -69,7 +69,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
         const mesh=add(panelGeometry(c.solid), c.role==='SIDE_BELT'?m.secondary:m.hull);
         mesh.userData.structuralArmor=c.id;mesh.castShadow=true;mesh.receiveShadow=true;
       }
-      for(const mount of b.structuralArmorPilot.mounts) {
+      for(const mount of b.structuralArmorPilot.mounts.filter(m=>!b.weaponLayout?.supersededFoundationIds.includes(m.hardpointId))) {
         const mesh=add(panelGeometry(mount.foundation),m.secondary);
         mesh.userData.mountFoundation=mount.hardpointId;mesh.castShadow=true;mesh.receiveShadow=true;
       }
@@ -229,6 +229,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
     root.add(g);
   }
   for (const h of b.hardpoints) {
+    if(b.schemaVersion===2&&mode==="Normal"&&h.plannedMountId&&b.weaponLayout?.mounts.some(m=>m.id===h.plannedMountId))continue;
     if(b.schemaVersion===2&&mode==="Normal"&&b.functionalExterior?.replacedHardpointVisuals.includes(h.id)&&b.prefabPlacements?.some(p=>p.assembly?.equipmentIds.includes(h.id)))continue;
     if(h.surfaceMount) {
       const foundation=new THREE.Mesh(panelGeometry(h.surfaceMount.foundation.solid),categoryMaterial("Hardpoints",m.secondary));
@@ -422,6 +423,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView): THREE.Group {
 export function disposeShip(root: THREE.Object3D) {
   const materials = new Set<THREE.Material>();
   root.traverse((node) => {
+    if(node instanceof THREE.Sprite){node.material.map?.dispose();materials.add(node.material);}
     if (node instanceof THREE.Mesh || node instanceof THREE.Line) {
       node.geometry.dispose();
       for (const m of Array.isArray(node.material)

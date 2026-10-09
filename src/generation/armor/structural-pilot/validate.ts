@@ -26,7 +26,7 @@ export function validateStructuralArmorPilot(b:ShipBlueprint) {
   const pilot=b.structuralArmorPilot!,issues:string[]=[],checks:string[]=[],ids=new Set<string>();
   const pairs:Record<string,string>={WEDGE_CITADEL:'MONOLITHIC',HAMMERHEAD:'BLOCK_ASSEMBLY',ENGINE_DOMINANT:'CORE_AND_NACELLES'};
   if(!['one-ship-review','limited-family-review'].includes(pilot.status)||b.seed!==7||b.shipyardId!=='aegis'||b.order.length!==300||b.role!=='Cruiser'||pairs[b.macroDesign?.family??'']!==b.architecture.grammar)issues.push('Invalid pilot scope');
-  if(pilot.components.length<8||pilot.channels.length<1||pilot.mounts.length!==b.hardpoints.length)issues.push('Incomplete structural review data');
+  if(pilot.components.length<8||pilot.channels.length<1||(!b.weaponLayout&&pilot.mounts.length!==b.hardpoints.length))issues.push('Incomplete structural review data');
   for(const c of pilot.components){
     if(ids.has(c.id))issues.push(`Duplicate structure ${c.id}`);ids.add(c.id);
     const hull=b.structuralVolumes.find(v=>v.id===c.parentStructureId),parent=pilot.components.find(v=>v.id===c.parentArmorId);
@@ -67,7 +67,7 @@ export function validateStructuralArmorPilot(b:ShipBlueprint) {
     if(samples.some(p=>inReservedZone(p,z))||reservationSamples(z).some(p=>containsStructuralArmor(c,p,-.01)))issues.push(`Equipment corridor ${z.id} intersects ${c.id}`);
   }
   checks.push('Sampled exhaust, radiator, weapon and sensor corridors');
-  for(const m of pilot.mounts){
+  for(const m of b.weaponLayout?[]:pilot.mounts){
     const h=b.hardpoints.find(h=>h.id===m.hardpointId);
     if(!h||!m.parentArmorIds.length||m.parentArmorIds.some(id=>!ids.has(id)))issues.push(`Mount references ${m.hardpointId}`);
     if(m.contactSamples.some(p=>!pilot.components.some(c=>containsStructuralArmor(c,{...p,y:p.y-.01},.02))))issues.push(`Floating foundation ${m.hardpointId}`);
@@ -77,12 +77,13 @@ export function validateStructuralArmorPilot(b:ShipBlueprint) {
     if(solidTriangles(m.foundation).some(t=>area(t)<1e-7||t.some(p=>Object.values(p).some(v=>!Number.isFinite(v)))))issues.push(`Invalid foundation geometry ${m.hardpointId}`);
     if(h&&m.foundation.vertices.slice(-8).some(p=>Math.abs(p.y-h.position.y)>.00001))issues.push(`Foundation cap ${m.hardpointId}`);
   }
-  for(let i=0;i<pilot.mounts.length;i++)for(let j=0;j<i;j++) {
+  for(let i=0;i<(b.weaponLayout?0:pilot.mounts.length);i++)for(let j=0;j<i;j++) {
     const a=b.hardpoints.find(h=>h.id===pilot.mounts[i].hardpointId)!,d=b.hardpoints.find(h=>h.id===pilot.mounts[j].hardpointId)!;
     if(Math.hypot(a.position.x-d.position.x,a.position.z-d.position.z)<(a.radius+d.radius)*1.30)issues.push(`Overlapping foundations ${a.id}/${d.id}`);
   }
   checks.push('Low physical foundation height and mount spacing');
-  checks.push('8-point surface-seated foundations','Every original hardpoint retained, vertical mount firing clearances');
+  if(!b.weaponLayout)checks.push('8-point surface-seated foundations','Every original hardpoint retained, vertical mount firing clearances');
+  else checks.push('Legacy mount geometry archived; active 3D foundations validated by weapon layout');
   for(const channel of pilot.channels){
     const v=b.structuralVolumes.find(v=>v.id===channel.parentStructureId);
     if(channel.width<Math.min(b.order.length*.02,v?v.dimensions.x*.12:Infinity)||channel.depth<Math.min(b.order.length*.03,v?v.dimensions.y*.12:Infinity))issues.push(`Shallow/narrow channel ${channel.id}`);

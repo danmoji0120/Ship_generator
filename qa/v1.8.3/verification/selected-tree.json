@@ -1,0 +1,16 @@
+{
+  "source": "final staged code exported to /tmp/ship-v183-final (excluded preserved local drafts)",
+  "baselineCommit": "62c34a8f0dc9477f9fc2857a84f2d091b45ea015",
+  "sameBlueprint": true,
+  "matchingRawPngs": 32,
+  "oldV182MatchingRawPngs": {
+    "TOP": true,
+    "BOTTOM": true,
+    "ISOMETRIC": true,
+    "LOW-ISOMETRIC": true
+  },
+  "consoleErrors": [],
+  "productionBuild": true,
+  "experimentalGenerator": "1.8.3",
+  "defaultGenerator": "1.8.1"
+}

@@ -1,0 +1,13 @@
+{
+  "suites": 13,
+  "tests": 127,
+  "newWeaponTests": 27,
+  "testsPassed": true,
+  "typescript": true,
+  "productionBuild": true,
+  "testedSource": "staged index exported to /tmp/ship-v183-final",
+  "durationSeconds": 182.67,
+  "defaultGeneratorUnaffected": true,
+  "preservedLocalDraftsExcluded": true,
+  "buildAdvisory": "existing >500kB chunk warning; build passes"
+}

@@ -10,6 +10,7 @@ import {
   volumeBounds,
   exposedVolumeSurface,
 } from "../generation/architecture/volumes";
+import {validateWeaponLayout} from "../generation/weapons/validate";
 import {validateFunctionalExterior} from "../generation/functional/validate";
 import {stationCacheEqual} from "./station-cache";
 import { shapeStations } from "../generation/shapes/definition";
@@ -52,7 +53,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))
     ) {
       if (
         !v.shape ||
@@ -107,7 +108,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -219,7 +220,7 @@ export function validateArchitecture(b: ShipBlueprint) {
           l * 0.001
       )
         errors.push("Spinal alignment");
-    } else if (!h.surfaceMount && !b.structuralArmorPilot?.mounts.some(m => m.hardpointId === h.id)) {
+    } else if (!h.plannedMountId && !h.surfaceMount && !b.structuralArmorPilot?.mounts.some(m => m.hardpointId === h.id)) {
       const localZ = h.position.z - v.position.z,
         localX = h.position.x - v.position.x,
         s = hullSurfaceAt(v.geometry.stations, localZ, localX);
@@ -270,7 +271,7 @@ export function validateArchitecture(b: ShipBlueprint) {
       continue;
     }
     if(p.assembly){
-      if(!b.functionalExterior?.prefabIds.includes(p.id))errors.push("Unreferenced functional assembly " + p.id);
+      if(!b.functionalExterior?.prefabIds.includes(p.id)&&!b.weaponLayout?.prefabIds.includes(p.id))errors.push("Unreferenced functional assembly " + p.id);
       continue;
     }
     if (p.socket.kind === "HULL_SIDE" || p.socket.kind === "HULL_FACE") {
@@ -299,8 +300,9 @@ export function validateArchitecture(b: ShipBlueprint) {
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2")))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3"))))
     errors.push(...validateIntegration(b));
+  if(b.weaponLayout)errors.push(...validateWeaponLayout(b).issues);
   if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
   if (b.structuralArmorPilot) errors.push(...validateStructuralArmorPilot(b).issues);
   const d = b.dimensions;
@@ -317,7 +319,7 @@ export function validateArchitecture(b: ShipBlueprint) {
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || b.generatorVersion === "1.8.2"))) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || b.generatorVersion === "1.8.3")))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
   return errors;
 }

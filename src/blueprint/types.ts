@@ -87,6 +87,8 @@ export const HARDPOINT_TYPES = [
 ] as const;
 export type HardpointType = (typeof HARDPOINT_TYPES)[number];
 export interface Hardpoint {
+  /** Optional authoritative standardized mount in weaponLayout; absent on historical exports. */
+  plannedMountId?: string;
   surfaceMount?: import("../generation/armor/types").HardpointSurfaceMount;
   id: string;
   type: HardpointType;
@@ -415,7 +417,7 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";
@@ -438,6 +440,7 @@ export interface ShipBlueprint extends Omit<
   /** QA-only structural depth review of three fixed family pairs; no automatic language rollout. */
   structuralArmorPilot?: import("../generation/armor/structural-pilot/types").StructuralArmorPilot;
   functionalExterior?: import("../generation/functional/types").FunctionalExteriorReview;
+  weaponLayout?: import("../generation/weapons/types").WeaponLayout;
   macroDesign?: import("../generation/macro/types").MacroDesignPlan;
   silhouette: SilhouetteMetrics;
 }

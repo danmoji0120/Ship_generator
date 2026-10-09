@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import type { ShipBlueprint } from '../blueprint/types';
 export type ArmorView='TOP'|'BOTTOM'|'LEFT'|'RIGHT'|'SIDE'|'FRONT'|'AFT'|'ISOMETRIC'|'LOW-ISOMETRIC';
 import { createShip, disposeShip } from './ship';
+import{weaponDebugBlueprint,sizeComparisonBlueprint,decorateWeaponDebug,type WeaponDebug}from'./weapons-qa';
 export const ARMOR_STAGES = ['HULL_ONLY','PRIMARY','SECONDARY','REINFORCEMENT','SEAMS','NO_HARDPOINTS','COMPLETE'] as const;
 export type ArmorStage = typeof ARMOR_STAGES[number];
 /** QA-only visibility projection. The underlying stored data is never regenerated. */
@@ -36,12 +37,13 @@ export class ArmorQARenderer {
     this.scene.add(this.ambient,this.key,this.fill,this.ventral,this.key.target);
     this.key.castShadow=true; this.key.shadow.mapSize.set(1024,1024); this.key.shadow.bias=-.0012;
   }
-  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
-    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}`;
+  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{weaponDebug?:WeaponDebug;sizeComparison?:boolean;neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
+    const visualKey=`${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}/${options.weaponDebug??''}/${Boolean(options.sizeComparison)}`;
     // QA blueprints are immutable. Reuse the exact geometry across camera views, not design data.
     if(this.cachedBlueprint!==b||this.cachedVisualKey!==visualKey) {
     if(this.ship) {this.scene.remove(this.ship);disposeShip(this.ship);}
-    this.ship=createShip(armorStageBlueprint(b,stage),'Normal');
+    const rendered=options.sizeComparison?sizeComparisonBlueprint(b):options.weaponDebug?weaponDebugBlueprint(b):armorStageBlueprint(b,stage);
+    this.ship=createShip(rendered,'Normal');
     const shared=new THREE.MeshStandardMaterial({color:options.reviewLighting?0x798b9a:0x98a4af,roughness:.82,metalness:.12});
     // A consistent neutral clay rig, equally applied to source and prototype, reveals deep structural walls.
     this.ambient.intensity=options.underbodyLighting?1.2:options.reviewLighting ? .8 : 1.8;
@@ -63,6 +65,7 @@ export class ArmorQARenderer {
       }
     });
     disposed.forEach(m=>m.dispose());
+    if(options.weaponDebug)decorateWeaponDebug(this.ship,rendered,options.weaponDebug);
     if(!options.neutral||options.black) shared.dispose(); if(!options.black) black.dispose();
     this.scene.add(this.ship); this.ship.updateMatrixWorld(true);
     this.cachedBlueprint=b;this.cachedVisualKey=visualKey;

@@ -550,3 +550,23 @@ src/
 이후에는 (1) Shape + purpose에서 Internal Zone envelope 생성, (2) 기존 Volume/Connector ID를 사용하는 Structural Graph 및 국부 하중 모델, (3) endpoint·면 법선과 연결된 명시적 interface socket을 우선할 수 있습니다. 내부 구획·장갑·피해 기능은 이번 버전에 구현하지 않았습니다.
 
 V1.5 기록: `qa/QA.md`, `qa/v1.5/gallery-report.json`, `qa/v1.5/regression/report.json`. V0/V1 증거와 screenshot은 `qa/v0/`, `qa/v1/`에 보존합니다.
+
+### V1.8.3 — Seed 7 무장 배치 검토본
+
+`buildWeaponLayoutReview`는 승인된 Aegis / Cruiser / 300m / Seed 7 / MONOLITHIC / WEDGE_CITADEL의 V1.8.2 저장 Blueprint만 입력받는 실험 경로입니다. 일반 주문서 생성기의 기본값을 바꾸지 않습니다. `schemaVersion: 2`, `generatorVersion: "1.8.3"`, 선택적 `weaponLayout`과 `Hardpoint.plannedMountId`를 사용하며, 과거 저장 설계에는 새 규칙을 적용하지 않습니다.
+
+공통 규격은 설치 footprint, 장비 envelope, foundation 높이, 예산 비용을 분리합니다. 300m 기준 S=4.5×5.5m, M=11.5×13m, L=26×30m, XL=45×75m입니다. XL은 기존 선체 통합 척추무장 계약이며 표면 포탑으로 확대하지 않습니다. 규격과 무장 종류는 독립적입니다.
+
+전체 무장 구성 → 중앙선/대칭 그룹/종방향 포대 계획 → 최종 장갑 삼각형 탐색 → 17점 실제 설치 접촉 → 법선 기반 기단 → 정적 사격 여유 검증 순서로 생성합니다. 실패한 대칭 후보는 그룹 전체를 이동하거나 거부합니다. 승인된 29개 장갑 매스, 복부 keel, 채널, 엔진은 그대로 보존합니다. 기존 31개 기단은 원본 데이터를 보존하되 새 검토본에서만 비활성 archive로 처리합니다.
+
+검토용 렌더 생성 (별도 터미널에서 `npm run dev` 실행):
+
+```bash
+node tests/weapon-layout-qa.mjs
+# 결과를 final-review에 별도로 저장하려면:
+WEAPON_OUTPUT=qa/v1.8.3/final-review node tests/weapon-layout-qa.mjs
+python3 tests/compose-weapon-layout.py
+npx vitest run tests/weapon-layout.test.ts
+```
+
+저장된 검토 Blueprint와 전체 시점·규격·대칭·법선 이미지는 `qa/v1.8.3/final-review/`에 있습니다. `qa/v1.8.3/QA.md`에 이전 렌더와의 동일 조건 비교, 성능, 충돌 검사 한계를 기록했습니다. 실제 발사, 조준 애니메이션, 전투 AI, 다른 설계로의 확장은 포함하지 않습니다.

@@ -1,0 +1,80 @@
+{
+  "environment": "Chromium SwiftShader; no concurrent tests/capture jobs; 7 warm paired runs",
+  "baselineFunctionalAssembly": {
+    "samples": [
+      35,
+      37.1000000089407,
+      40.3999999910593,
+      43.20000000298023,
+      44.900000005960464,
+      50.900000005960464,
+      72.3999999910593
+    ],
+    "medianMs": 43.20000000298023,
+    "observedP95Ms": 72.3999999910593
+  },
+  "newWeaponLayoutIncludingValidation": {
+    "samples": [
+      641.2999999970198,
+      650.2999999970198,
+      651,
+      661.6000000089407,
+      669.1999999880791,
+      685.7000000029802,
+      726.4000000059605
+    ],
+    "medianMs": 661.6000000089407,
+    "observedP95Ms": 726.4000000059605
+  },
+  "standaloneFullBlueprintValidation": {
+    "samples": [
+      721,
+      725.2000000029802,
+      729.9000000059605,
+      750.8999999910593,
+      751.7000000029802,
+      756.8999999910593,
+      761.5999999940395
+    ],
+    "medianMs": 750.8999999910593,
+    "observedP95Ms": 761.5999999940395
+  },
+  "phases": [
+    {
+      "planningMs": 12.400000005960464,
+      "resolutionMs": 379.3999999910593,
+      "validationMs": 334.5
+    },
+    {
+      "planningMs": 10.599999994039536,
+      "resolutionMs": 329.90000000596046,
+      "validationMs": 309.70000000298023
+    },
+    {
+      "planningMs": 11.599999994039536,
+      "resolutionMs": 341.6000000089407,
+      "validationMs": 297.69999998807907
+    },
+    {
+      "planningMs": 10.799999997019768,
+      "resolutionMs": 349,
+      "validationMs": 325.79999999701977
+    },
+    {
+      "planningMs": 10.700000002980232,
+      "resolutionMs": 328,
+      "validationMs": 322.79999999701977
+    },
+    {
+      "planningMs": 12.700000002980232,
+      "resolutionMs": 348,
+      "validationMs": 308.3999999910593
+    },
+    {
+      "planningMs": 10.200000002980232,
+      "resolutionMs": 324.09999999403954,
+      "validationMs": 307
+    }
+  ],
+  "consoleErrors": []
+}

@@ -16,7 +16,7 @@ export function validateFunctionalExterior(b:ShipBlueprint){
   if(!pilot)return{issues:['Missing approved structural armor'],checks:[]};
   const kits=b.prefabPlacements!.filter(p=>f.prefabIds.includes(p.id)),parts=kits.flatMap(p=>p.assembly?.parts??[]),ids=new Set(parts.map(p=>p.id));
   if(kits.length!==f.prefabIds.length||new Set(f.prefabIds).size!==kits.length||ids.size!==parts.length||parts.length>240)issues.push('Functional assembly IDs/budget');
-  if(f.replacedHardpointVisuals.length!==b.hardpoints.length||new Set(f.replacedHardpointVisuals).size!==b.hardpoints.length||f.replacedHardpointVisuals.some(id=>!b.hardpoints.some(h=>h.id===id)))issues.push('Lost functional mount');
+  if(!b.weaponLayout&&(f.replacedHardpointVisuals.length!==b.hardpoints.length||new Set(f.replacedHardpointVisuals).size!==b.hardpoints.length||f.replacedHardpointVisuals.some(id=>!b.hardpoints.some(h=>h.id===id))))issues.push('Lost functional mount');
   const reservations=equipmentReservations(b);
   const cached=parts.map(p=>({part:p,triangles:solidTriangles(p.solid),box:p.bounds}));
   const inBox=(p:Vec3,q:typeof cached[0]['box'])=>(['x','y','z']as const).every(k=>p[k]>=q.min[k]-.01&&p[k]<=q.max[k]+.01);

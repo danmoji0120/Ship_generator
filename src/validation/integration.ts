@@ -21,6 +21,7 @@ export function validateIntegration(b: ShipBlueprint) {
     if (
       ![
         ...b.hardpoints.map((h) => h.id),
+        ...(b.weaponLayout?.retiredHardpointIds ?? []),
         ...b.engines.map((e) => e.id),
         ...(b.prefabPlacements ?? []).map((p) => p.id),
       ].includes(z.equipmentId) ||
