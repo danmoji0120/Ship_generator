@@ -1,0 +1,182 @@
+[
+  {
+    "role": "Cruiser",
+    "seed": 7,
+    "version": "1.8.4.1",
+    "ms": 2213.3918710000003,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Cruiser",
+    "seed": 7,
+    "version": "1.8.4.2",
+    "ms": 1216.486022,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Cruiser",
+    "seed": 11,
+    "version": "1.8.4.1",
+    "ms": 1820.0335100000002,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "HAMMERHEAD",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Cruiser",
+    "seed": 11,
+    "version": "1.8.4.2",
+    "ms": 1752.0152269999999,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "HAMMERHEAD",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Cruiser",
+    "seed": 23,
+    "version": "1.8.4.1",
+    "ms": 1977.381934000001,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Cruiser",
+    "seed": 23,
+    "version": "1.8.4.2",
+    "ms": 1123.5958570000003,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 7,
+    "version": "1.8.4.1",
+    "ms": 1606.893317,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 7,
+    "version": "1.8.4.2",
+    "ms": 1072.086292,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 11,
+    "version": "1.8.4.1",
+    "ms": 1673.0427170000003,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "HAMMERHEAD",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 11,
+    "version": "1.8.4.2",
+    "ms": 1584.5952710000001,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "HAMMERHEAD",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 23,
+    "version": "1.8.4.1",
+    "ms": 1559.5569539999997,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Missile Ship",
+    "seed": 23,
+    "version": "1.8.4.2",
+    "ms": 1225.2736799999984,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 7,
+    "version": "1.8.4.1",
+    "ms": 1288.1587749999999,
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "xl": 1,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 7,
+    "version": "1.8.4.2",
+    "ms": 1831.7601329999998,
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "xl": 1,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 11,
+    "version": "1.8.4.1",
+    "ms": 1842.345672000003,
+    "architecture": "SPINE_AND_MODULES",
+    "family": "WEAPON_DOMINANT",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 11,
+    "version": "1.8.4.2",
+    "ms": 1641.819234999999,
+    "architecture": "SPINE_AND_MODULES",
+    "family": "WEAPON_DOMINANT",
+    "xl": 1,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 23,
+    "version": "1.8.4.1",
+    "ms": 1606.7532950000023,
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "xl": 0,
+    "candidates": 0
+  },
+  {
+    "role": "Spinal Gun Ship",
+    "seed": 23,
+    "version": "1.8.4.2",
+    "ms": 1251.7612750000008,
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "xl": 1,
+    "candidates": 0
+  }
+]

@@ -1,3 +1,4 @@
+import {planRequirements,requirementCandidates,bindRequirementSpaces,DesignRejection,type RequirementPlan} from './production/requirements';
 import { buildProduction } from "./production/build";
 import { buildLayeredArmor } from "./integration/armor";
 import { createMacroPlan } from "./macro/plan";
@@ -30,15 +31,32 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2";
     productionBase?: boolean;
+    requirementPlan?: RequirementPlan;
     minimumMacroCandidate?: number;
     onTimings?: (timings:import("./production/types").ProductionTimings)=>void;
     family?: MacroFamily;
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if((!qaOptions?.version)||qaOptions?.version==="1.8.4"){
+  if(!qaOptions?.version||qaOptions.version==='1.8.4.2'){
+    // Normalize/validate before planning; historical generation remains separately callable.
+    const order=structuredClone(input),normalizedSeed=normalizeSeed(seed);
+    if(!ROLES.includes(order.role)||!['Light','Standard','Heavy','Superheavy'].includes(order.massClass)||!Number.isFinite(order.length)||order.length<40||order.length>600||PRIORITIES.some(k=>!Number.isFinite(order.priorities[k])||order.priorities[k]<0||order.priorities[k]>100))throw Error('Invalid Ship Order');
+    const plan=planRequirements(order),candidates=requirementCandidates(order,normalizedSeed,plan,qaOptions);
+    if(!candidates.length)throw new DesignRejection(plan.spinal?['REQUIRED_XL_STRUCTURE_UNSUPPORTED']:['REQUIRED_ARCHITECTURE_FAMILY_UNSUPPORTED'],plan.rejectedCandidates,'No compatible requirements-first Architecture/Family candidate');
+    for(const [index,c] of candidates.entries())try{
+      const hullStart=performance.now(),candidatePlan=structuredClone(plan),base=generateBlueprint(order,normalizedSeed,{...qaOptions,version:'1.8',productionBase:true,requirementPlan:candidatePlan,architecture:c.architecture,family:c.family,minimumMacroCandidate:c.minimumMacroCandidate});
+      base.architecture.source=qaOptions?.architecture?'qa-fixed':'order';base.macroDesign!.source=qaOptions?.family?'qa-fixed':'order';
+      if(!qaOptions?.architecture)base.architecture.requestedGrammar=selectArchitecture(order,getShipyard(order.shipyardId),new SeededRng(normalizedSeed)).grammar;
+      if(index>0)base.architecture.fallbackReason='Requirements-first fallback after recorded candidate rejection';
+      candidatePlan.chosen={architecture:base.architecture.grammar,family:base.macroDesign!.family,candidate:base.candidate};
+      return buildProduction(base,index,plan.rejectedCandidates.filter(a=>a.candidate>=0).map(a=>({candidate:a.candidate,reasons:a.reasons})),performance.now()-hullStart,qaOptions?.onTimings);
+    }catch(e){const reason=(e as Error).message;plan.rejectedCandidates.push({candidate:index,architecture:c.architecture,family:c.family,stage:'physical-candidate',codes:[...new Set(reason.match(/REQUIRED_[A-Z_]+/g)??['REQUIRED_PHYSICAL_DESIGN_INVALID'])],reasons:[reason]});}
+    throw new DesignRejection(plan.rejectedCandidates.flatMap(a=>a.codes),plan.rejectedCandidates,'No requirements-compliant physical candidate: '+JSON.stringify(plan.rejectedCandidates));
+  }
+  if(qaOptions?.version==='1.8.4'||qaOptions?.version==='1.8.4.1'){
     const failures:{candidate:number;reasons:string[]}[]=[];
     for(let candidate=0;candidate<3;candidate++)try{
       const hullStart=performance.now(),base=generateBlueprint(input,seed,{...qaOptions,version:"1.8",productionBase:true,minimumMacroCandidate:candidate});
@@ -74,7 +92,7 @@ export function generateBlueprint(
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
   if (qaOptions?.architecture) selection.grammar = qaOptions.architecture;
   const initialPlan = (!qaOptions?.version || qaOptions.version === "1.8")
-    ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family)
+    ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family,qaOptions?.requirementPlan)
     : undefined;
   const selectedFamily = initialPlan?.family;
   let lastErrors: string[] = [];
@@ -97,7 +115,7 @@ export function generateBlueprint(
             yard,
             grammar,
             seed + candidate,
-            selectedFamily,
+            selectedFamily,qaOptions?.requirementPlan,
           )
       : undefined;
     if (macro) macro.source = qaOptions?.family ? "qa-fixed" : "order";
@@ -138,7 +156,7 @@ export function generateBlueprint(
         rng,
         Boolean(macro),
       ),
-      { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes,qaOptions?.productionBase);
+      { hardpoints, surfaceFeatures } = architectureEquipment(order, volumes,qaOptions?.productionBase,qaOptions?.requirementPlan);
     const prefabPlacements = qaOptions?.productionBase ? [] : generatePrefabPlacements(
       order,
       yard,
@@ -256,6 +274,7 @@ export function generateBlueprint(
         enginePattern: engineArchitecture,
       },
     };
+    if(qaOptions?.requirementPlan){b.designRequirements=qaOptions.requirementPlan;bindRequirementSpaces(b);}
     if (b.generatorVersion === "1.7" || b.generatorVersion === "1.8")
       integrateHull(b,qaOptions?.productionBase);
     lastErrors = validateBlueprint(b).filter(e=>!(qaOptions?.productionBase&&e==="Hardpoint count"));

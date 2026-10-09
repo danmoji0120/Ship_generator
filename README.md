@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.4 — Unified Procedural Ship Generator
+# Procedural Shipyard V1.8.4.2 — Unified Procedural Ship Generator
 
-일반 주문서의 기본 생성기는 **V1.8.4**입니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.4.2 Requirements-first** 경로입니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -8,6 +8,25 @@ npm run dev
 npm test
 npm run build
 ```
+
+## V1.8.4.2 설계 요구사항 보장
+
+함종의 최소 기능을 Mandatory로 정의하고, 필수 무장·구조 자원을 먼저 확보한 뒤 나머지 자원을 Target과 Optional 사이에 배분합니다. Spinal Gun Ship의 변경하지 않은 XL Envelope과 후방 공급/에너지 구획은 Macro stations 이전부터 확보합니다. 핵심 기능이 없는 함선은 출고하지 않고 구체적인 코드로 거절합니다.
+
+- [함종별 계약·공간 예약·예산 단위·보존 설명](docs/design-requirements-v1.8.4.2.md)
+- [기존 XL 실패 개선 / 여러 Seed 민감도 / 성능 판정](qa/v1.8.4.2/assessment.md)
+- [222개 통제 비교표](qa/v1.8.4.2/controlled-comparisons.md)
+- `npm run qa:requirements`로 신규 계약과 비교를 재현합니다. 기존 `qa:doctrine`은 V1.8.4.1 경로의 입력과 기준을 유지합니다.
+
+## V1.8.4.1 설계 교리 / 무장 구성 재계획
+
+9개 함종의 주무장·미사일·방어무장·대형 수용·배치 정책을 적용합니다. 질량 등급과 실제 구조물 체적/장갑 표면에서 유한 예산을 계산하고, 여섯 Priority가 추진·장갑·항속·센서·무장 공간을 함께 나눕니다. 표준 규격의 그룹 대체와 6상태 Beam Search로 구성을 재계획하며, `designDoctrine`에 목표/실제 차이와 생략·대체 이유를 저장합니다. UI Inspector에서 설계 의도를 펼쳐 볼 수 있습니다.
+
+- [설계 모델·단위·제한·보존 계약](docs/design-doctrine-v1.8.4.1.md)
+- [여러 Seed 경향 판정 / 수량 정체 및 XL 목표 미달](qa/v1.8.4.1/sensitivity.md)
+- [A–E 통제 비교표 / 여러 Seed](qa/v1.8.4.1/controlled-comparisons.md)
+- [Seed별 입력·설비·예산·배치·생략 원자료](qa/v1.8.4.1/controlled-comparisons.json)
+- `npm run qa:doctrine`으로 126개 통제 설계를 다시 생성합니다. 자원 수치는 내부 예약 모델이며 실물 외장 고체 비용은 별도로 기록합니다.
 
 ## V1.8.4 Production 통합
 

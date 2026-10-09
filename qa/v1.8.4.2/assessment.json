@@ -1,0 +1,494 @@
+{
+  "cases": 222,
+  "released": 200,
+  "rejected": 22,
+  "invalidShipments": 0,
+  "sensitivity": [
+    {
+      "priority": "firepower",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.17462703920046055,
+        0.2455535818521509,
+        0.3000215001335585
+      ],
+      "volumes": [
+        202200.48514777748,
+        284326.26245975116,
+        347394.61402727326
+      ],
+      "counts": [
+        1,
+        3,
+        7
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+      ]
+    },
+    {
+      "priority": "firepower",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.17601615095094325,
+        0.24676036602341347,
+        0.30108826614921785
+      ],
+      "volumes": [
+        139767.78823239417,
+        195943.10179024914,
+        239082.83867729412
+      ],
+      "counts": [
+        2,
+        4,
+        6
+      ],
+      "plateau": false,
+      "reasons": [
+        "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained; No coherent whole-group candidate: Firing arc point_defense-2-0 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/primary; Firing arc point_defense-2-0 hits fore-armor/shoulder--1; Firing arc point_defense-2-1 hits fore-armor/shoulder-1; armor and standards retained",
+        "Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+      ]
+    },
+    {
+      "priority": "firepower",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.1748873552834497,
+        0.24577973020081126,
+        0.3002214094285205
+      ],
+      "volumes": [
+        186489.03639614288,
+        262084.27119596818,
+        320137.5037038772
+      ],
+      "counts": [
+        2,
+        3,
+        5
+      ],
+      "plateau": false,
+      "reasons": [
+        "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained; Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor; Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+      ]
+    },
+    {
+      "priority": "missile",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.20985190735913725,
+        0.2455535818521509,
+        0.27654189733473306
+      ],
+      "volumes": [
+        242987.32699977027,
+        284326.26245975116,
+        320207.60393572785
+      ],
+      "counts": [
+        0,
+        2,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "missile",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.21115046817199343,
+        0.24676036602341347,
+        0.2783206711491371
+      ],
+      "volumes": [
+        167666.6246886585,
+        195943.10179024914,
+        187027.10320426844
+      ],
+      "counts": [
+        0,
+        2,
+        2
+      ],
+      "plateau": false,
+      "reasons": [
+        "Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained; No coherent whole-group candidate: Firing arc point_defense-2-0 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/primary; Firing arc point_defense-2-0 hits fore-armor/shoulder--1; Firing arc point_defense-2-1 hits fore-armor/shoulder-1; armor and standards retained",
+        "Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor; Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained; Explicit replacement M BILATERAL TOP → S BILATERAL TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+      ]
+    },
+    {
+      "priority": "missile",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.2100952544218977,
+        0.24577973020081126,
+        0.27675311755506343
+      ],
+      "volumes": [
+        224032.55790014216,
+        262084.27119596818,
+        295112.37178252666
+      ],
+      "counts": [
+        0,
+        2,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor; Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+      ]
+    },
+    {
+      "priority": "survivability",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.11532556074593861,
+        0.1756279392162493,
+        0.22587582484652302
+      ],
+      "volumes": [
+        110419.05741254833,
+        203359.42633869225,
+        311114.0630191035
+      ],
+      "counts": [
+        37,
+        38,
+        38
+      ],
+      "plateau": false,
+      "reasons": [
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "survivability",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.11503268807494829,
+        0.17533069982660307,
+        0.22551767941348824
+      ],
+      "volumes": [
+        61900.350946112834,
+        139223.49734162737,
+        213017.0447486333
+      ],
+      "counts": [
+        169,
+        140,
+        140
+      ],
+      "plateau": false,
+      "reasons": [
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "No coherent whole-group candidate: Firing arc point_defense-2-0 hits fore-armor/shoulder--1; Firing arc point_defense-2-0 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/shoulder-1; armor and standards retained"
+      ]
+    },
+    {
+      "priority": "survivability",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.11529329097732513,
+        0.17557223729479052,
+        0.22580870928419647
+      ],
+      "volumes": [
+        101659.20020332906,
+        187219.35212499014,
+        286427.53894769354
+      ],
+      "counts": [
+        55,
+        57,
+        57
+      ],
+      "plateau": false,
+      "reasons": [
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "mobility",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.12277535343146441,
+        0.178583656445287,
+        0.22576775085121376
+      ],
+      "volumes": [
+        146558.21315073373,
+        206781.84855009452,
+        253331.22807964298
+      ],
+      "counts": [
+        1,
+        1,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "mobility",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.12265583455251267,
+        0.17833023200419165,
+        0.2251599592320505
+      ],
+      "volumes": [
+        96738.77806330146,
+        141605.31273713784,
+        146882.3564933658
+      ],
+      "counts": [
+        4,
+        4,
+        4
+      ],
+      "plateau": true,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+      ]
+    },
+    {
+      "priority": "mobility",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.12275536863905043,
+        0.1785361653360823,
+        0.22569527547242074
+      ],
+      "volumes": [
+        134947.13083247512,
+        190379.9012880337,
+        233224.13017701506
+      ],
+      "counts": [
+        4,
+        4,
+        4
+      ],
+      "plateau": true,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+      ]
+    },
+    {
+      "priority": "endurance",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.07919260389680062,
+        0.14654161425472587,
+        0.20165784612189544
+      ],
+      "volumes": [
+        86443.56552825053,
+        169680.39790578943,
+        246877.0027443859
+      ],
+      "counts": [
+        0,
+        3,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "endurance",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.07908239540625371,
+        0.14626773265995166,
+        0.20098956320934103
+      ],
+      "volumes": [
+        58630.245409240015,
+        116145.69102437822,
+        138290.5170925554
+      ],
+      "counts": [
+        0,
+        3,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+      ]
+    },
+    {
+      "priority": "endurance",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.07917256922343638,
+        0.14649028952586243,
+        0.20158421229705423
+      ],
+      "volumes": [
+        79587.88784952009,
+        156208.16548339307,
+        227272.14972096498
+      ],
+      "counts": [
+        0,
+        3,
+        4
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+      ]
+    },
+    {
+      "priority": "sensor",
+      "seed": 7,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.048374999207517304,
+        0.1018340369672513,
+        0.14758051775422892
+      ],
+      "volumes": [
+        56013.366278030284,
+        117913.5360343475,
+        170883.34329490582
+      ],
+      "counts": [
+        1,
+        1,
+        3
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "sensor",
+      "seed": 11,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.04831491017934195,
+        0.10163652326591746,
+        0.1472654056928469
+      ],
+      "volumes": [
+        38365.04830909225,
+        80705.7306034758,
+        116937.9055594281
+      ],
+      "counts": [
+        1,
+        1,
+        3
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity"
+      ]
+    },
+    {
+      "priority": "sensor",
+      "seed": 23,
+      "changed": true,
+      "increasing": true,
+      "fractions": [
+        0.04836373867326597,
+        0.1017970233914536,
+        0.1475214665385919
+      ],
+      "volumes": [
+        51572.09340306019,
+        108550.0365049224,
+        157307.74873883254
+      ],
+      "counts": [
+        1,
+        1,
+        3
+      ],
+      "plateau": false,
+      "reasons": [
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Finite competing allocations; unchanged counts can coexist with changed reserved capacity",
+        "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+      ]
+    }
+  ]
+}

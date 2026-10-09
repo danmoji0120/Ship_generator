@@ -87,6 +87,7 @@ export function architectureEquipment(
   order: ShipOrder,
   volumes: StructuralVolume[],
   integratedOnly = false,
+  requirements?: import("../production/requirements").RequirementPlan,
 ) {
   const l = order.length,
     p = order.priorities,
@@ -198,7 +199,7 @@ export function architectureEquipment(
         z: axis.position.z + axis.geometry.stations[0].z,
       },
       normal: { x: 0, y: 0, z: -1 },
-      radius: Math.min(
+      radius: requirements?.spinal ? requirements.spinal.standard.footprint.width*.36 : Math.min(
         l * 0.034,
         axis.geometry.stations[0].width * 0.34,
         axis.geometry.stations[0].height * 0.34,

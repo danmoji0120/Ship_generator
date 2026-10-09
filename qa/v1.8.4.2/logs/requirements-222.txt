@@ -1,0 +1,212 @@
+
+ RUN  v3.2.7 /workspace/Ship_generator
+
+ ✓ tests/design-requirements-qa.test.ts (222 tests) 743687ms
+   ✓ requirements QA 'A' / 'XL aegis' / 7  4031ms
+   ✓ requirements QA 'A' / 'XL aegis' / 11  3867ms
+   ✓ requirements QA 'A' / 'XL aegis' / 23  2624ms
+   ✓ requirements QA 'A' / 'XL aegis' / 41  2815ms
+   ✓ requirements QA 'A' / 'XL vesper' / 7  2475ms
+   ✓ requirements QA 'A' / 'XL vesper' / 11  2852ms
+   ✓ requirements QA 'A' / 'XL vesper' / 23  3247ms
+   ✓ requirements QA 'A' / 'XL vesper' / 41  3979ms
+   ✓ requirements QA 'A' / 'XL forge' / 7  2642ms
+   ✓ requirements QA 'A' / 'XL forge' / 11  2908ms
+   ✓ requirements QA 'A' / 'XL forge' / 23  3570ms
+   ✓ requirements QA 'A' / 'XL forge' / 41  3086ms
+   ✓ requirements QA 'A' / 'XL serein' / 7  2694ms
+   ✓ requirements QA 'A' / 'XL serein' / 11  3634ms
+   ✓ requirements QA 'A' / 'XL serein' / 23  2482ms
+   ✓ requirements QA 'A' / 'XL serein' / 41  4310ms
+   ✓ requirements QA 'A' / 'MONOLITHIC/WEAPON_DOMINANT' / 7  2612ms
+   ✓ requirements QA 'A' / 'MONOLITHIC/WEAPON_DOMINANT' / 23  2059ms
+   ✓ requirements QA 'A' / 'SPINE_AND_MODULES/WEAPON_DOMINANT' / 7  2506ms
+   ✓ requirements QA 'A' / 'SPINE_AND_MODULES/WEAPON_DOMINANT' / 23  3046ms
+   ✓ requirements QA 'A' / 'SPINE_AND_MODULES/SPLIT_FRAME' / 7  2790ms
+   ✓ requirements QA 'A' / 'SPINE_AND_MODULES/SPLIT_FRAME' / 23  3600ms
+   ✓ requirements QA 'A' / 'HYBRID/WEAPON_DOMINANT' / 7  2264ms
+   ✓ requirements QA 'A' / 'HYBRID/WEAPON_DOMINANT' / 23  3204ms
+   ✓ requirements QA 'A' / 'HYBRID/SPLIT_FRAME' / 7  4928ms
+   ✓ requirements QA 'A' / 'HYBRID/SPLIT_FRAME' / 23  11818ms
+   ✓ requirements QA 'B' / 'Corvette' / 7  6982ms
+   ✓ requirements QA 'B' / 'Corvette' / 11  4484ms
+   ✓ requirements QA 'B' / 'Corvette' / 23  4037ms
+   ✓ requirements QA 'B' / 'Frigate' / 7  2590ms
+   ✓ requirements QA 'B' / 'Frigate' / 11  2898ms
+   ✓ requirements QA 'B' / 'Frigate' / 23  2408ms
+   ✓ requirements QA 'B' / 'Destroyer' / 7  1970ms
+   ✓ requirements QA 'B' / 'Destroyer' / 11  2626ms
+   ✓ requirements QA 'B' / 'Destroyer' / 23  2298ms
+   ✓ requirements QA 'B' / 'Cruiser' / 7  1482ms
+   ✓ requirements QA 'B' / 'Cruiser' / 11  2684ms
+   ✓ requirements QA 'B' / 'Cruiser' / 23  2796ms
+   ✓ requirements QA 'B' / 'Battlecruiser' / 7  3699ms
+   ✓ requirements QA 'B' / 'Battlecruiser' / 11  9105ms
+   ✓ requirements QA 'B' / 'Battlecruiser' / 23  4496ms
+   ✓ requirements QA 'B' / 'Battleship' / 7  7113ms
+   ✓ requirements QA 'B' / 'Battleship' / 11  20527ms
+   ✓ requirements QA 'B' / 'Battleship' / 23  7109ms
+   ✓ requirements QA 'B' / 'Missile Ship' / 7  3295ms
+   ✓ requirements QA 'B' / 'Missile Ship' / 11  3895ms
+   ✓ requirements QA 'B' / 'Missile Ship' / 23  2461ms
+   ✓ requirements QA 'B' / 'Spinal Gun Ship' / 7  2594ms
+   ✓ requirements QA 'B' / 'Spinal Gun Ship' / 11  2302ms
+   ✓ requirements QA 'B' / 'Spinal Gun Ship' / 23  2394ms
+   ✓ requirements QA 'B' / 'Patrol Ship' / 7  3500ms
+   ✓ requirements QA 'B' / 'Patrol Ship' / 11  3246ms
+   ✓ requirements QA 'B' / 'Patrol Ship' / 23  3293ms
+   ✓ requirements QA 'C' / 'XL 200m Light' / 7  1394ms
+   ✓ requirements QA 'C' / 'XL 200m Light' / 23  610ms
+   ✓ requirements QA 'C' / 'XL 200m Standard' / 7  2477ms
+   ✓ requirements QA 'C' / 'XL 200m Standard' / 23  1768ms
+   ✓ requirements QA 'C' / 'XL 200m Heavy' / 7  2555ms
+   ✓ requirements QA 'C' / 'XL 200m Heavy' / 23  2939ms
+   ✓ requirements QA 'C' / 'XL 200m Superheavy' / 7  2853ms
+   ✓ requirements QA 'C' / 'XL 200m Superheavy' / 23  3050ms
+   ✓ requirements QA 'C' / 'XL 300m Light' / 7  732ms
+   ✓ requirements QA 'C' / 'XL 300m Light' / 23  4878ms
+   ✓ requirements QA 'C' / 'XL 300m Standard' / 7  8924ms
+   ✓ requirements QA 'C' / 'XL 300m Standard' / 23  4868ms
+   ✓ requirements QA 'C' / 'XL 300m Heavy' / 7  5127ms
+   ✓ requirements QA 'C' / 'XL 300m Heavy' / 23  4499ms
+   ✓ requirements QA 'C' / 'XL 300m Superheavy' / 7  4878ms
+   ✓ requirements QA 'C' / 'XL 300m Superheavy' / 23  6187ms
+   ✓ requirements QA 'C' / 'XL 500m Light' / 7  2222ms
+   ✓ requirements QA 'C' / 'XL 500m Light' / 23  3839ms
+   ✓ requirements QA 'C' / 'XL 500m Standard' / 7  5072ms
+   ✓ requirements QA 'C' / 'XL 500m Standard' / 23  3408ms
+   ✓ requirements QA 'C' / 'XL 500m Heavy' / 7  4616ms
+   ✓ requirements QA 'C' / 'XL 500m Heavy' / 23  5073ms
+   ✓ requirements QA 'C' / 'XL 500m Superheavy' / 7  6599ms
+   ✓ requirements QA 'C' / 'XL 500m Superheavy' / 23  5086ms
+   ✓ requirements QA 'C' / 'XL 600m Light' / 7  2031ms
+   ✓ requirements QA 'C' / 'XL 600m Light' / 23  985ms
+   ✓ requirements QA 'C' / 'XL 600m Standard' / 7  4930ms
+   ✓ requirements QA 'C' / 'XL 600m Standard' / 23  4058ms
+   ✓ requirements QA 'C' / 'XL 600m Heavy' / 7  5006ms
+   ✓ requirements QA 'C' / 'XL 600m Heavy' / 23  5683ms
+   ✓ requirements QA 'C' / 'XL 600m Superheavy' / 7  6820ms
+   ✓ requirements QA 'C' / 'XL 600m Superheavy' / 23  5505ms
+   ✓ requirements QA 'C' / 'Cruiser 100m' / 7  1687ms
+   ✓ requirements QA 'C' / 'Cruiser 100m' / 11  4901ms
+   ✓ requirements QA 'C' / 'Cruiser 100m' / 23  2381ms
+   ✓ requirements QA 'C' / 'Cruiser 200m' / 7  2099ms
+   ✓ requirements QA 'C' / 'Cruiser 200m' / 11  3719ms
+   ✓ requirements QA 'C' / 'Cruiser 200m' / 23  2900ms
+   ✓ requirements QA 'C' / 'Cruiser 300m' / 7  3335ms
+   ✓ requirements QA 'C' / 'Cruiser 300m' / 11  4667ms
+   ✓ requirements QA 'C' / 'Cruiser 300m' / 23  2906ms
+   ✓ requirements QA 'C' / 'Cruiser 500m' / 7  4036ms
+   ✓ requirements QA 'C' / 'Cruiser 500m' / 11  9659ms
+   ✓ requirements QA 'C' / 'Cruiser 500m' / 23  13288ms
+   ✓ requirements QA 'C' / 'Cruiser 40m' / 7  2892ms
+   ✓ requirements QA 'C' / 'Cruiser 40m' / 11  7541ms
+   ✓ requirements QA 'C' / 'Cruiser 40m' / 23  3099ms
+   ✓ requirements QA 'C' / 'Cruiser 600m' / 7  5282ms
+   ✓ requirements QA 'C' / 'Cruiser 600m' / 11  4178ms
+   ✓ requirements QA 'C' / 'Cruiser 600m' / 23  5144ms
+   ✓ requirements QA 'C' / 'Cruiser Light' / 7  1475ms
+   ✓ requirements QA 'C' / 'Cruiser Light' / 11  3131ms
+   ✓ requirements QA 'C' / 'Cruiser Light' / 23  2262ms
+   ✓ requirements QA 'C' / 'Cruiser Standard' / 7  2034ms
+   ✓ requirements QA 'C' / 'Cruiser Standard' / 11  3880ms
+   ✓ requirements QA 'C' / 'Cruiser Standard' / 23  3002ms
+   ✓ requirements QA 'C' / 'Cruiser Heavy' / 7  5014ms
+   ✓ requirements QA 'C' / 'Cruiser Heavy' / 11  4708ms
+   ✓ requirements QA 'C' / 'Cruiser Heavy' / 23  5270ms
+   ✓ requirements QA 'C' / 'Cruiser Superheavy' / 7  6690ms
+   ✓ requirements QA 'C' / 'Cruiser Superheavy' / 11  5582ms
+   ✓ requirements QA 'C' / 'Cruiser Superheavy' / 23  7401ms
+   ✓ requirements QA 'C' / 'Corvette boundary 40' / 11  2810ms
+   ✓ requirements QA 'C' / 'Corvette boundary 600' / 11  5339ms
+   ✓ requirements QA 'C' / 'Frigate boundary 40' / 11  2369ms
+   ✓ requirements QA 'C' / 'Frigate boundary 600' / 11  5610ms
+   ✓ requirements QA 'C' / 'Destroyer boundary 40' / 11  2478ms
+   ✓ requirements QA 'C' / 'Destroyer boundary 600' / 11  5127ms
+   ✓ requirements QA 'C' / 'Cruiser boundary 40' / 11  3221ms
+   ✓ requirements QA 'C' / 'Cruiser boundary 600' / 11  2788ms
+   ✓ requirements QA 'C' / 'Battlecruiser boundary 40' / 11  2520ms
+   ✓ requirements QA 'C' / 'Battlecruiser boundary 600' / 11  4695ms
+   ✓ requirements QA 'C' / 'Battleship boundary 600' / 11  10654ms
+   ✓ requirements QA 'C' / 'Missile Ship boundary 40' / 11  2807ms
+   ✓ requirements QA 'C' / 'Missile Ship boundary 600' / 11  4325ms
+   ✓ requirements QA 'C' / 'Spinal Gun Ship boundary 600' / 11  3877ms
+   ✓ requirements QA 'C' / 'Patrol Ship boundary 40' / 11  2716ms
+   ✓ requirements QA 'C' / 'Patrol Ship boundary 600' / 11  5522ms
+   ✓ requirements QA 'D' / 'firepower=0' / 7  4059ms
+   ✓ requirements QA 'D' / 'firepower=0' / 11  4010ms
+   ✓ requirements QA 'D' / 'firepower=0' / 23  3111ms
+   ✓ requirements QA 'D' / 'firepower=50' / 7  2116ms
+   ✓ requirements QA 'D' / 'firepower=50' / 11  4295ms
+   ✓ requirements QA 'D' / 'firepower=50' / 23  3005ms
+   ✓ requirements QA 'D' / 'firepower=100' / 7  3863ms
+   ✓ requirements QA 'D' / 'firepower=100' / 11  4425ms
+   ✓ requirements QA 'D' / 'firepower=100' / 23  5371ms
+   ✓ requirements QA 'D' / 'survivability=0' / 7  2005ms
+   ✓ requirements QA 'D' / 'survivability=0' / 11  5878ms
+   ✓ requirements QA 'D' / 'survivability=0' / 23  3104ms
+   ✓ requirements QA 'D' / 'survivability=50' / 7  2097ms
+   ✓ requirements QA 'D' / 'survivability=50' / 11  4405ms
+   ✓ requirements QA 'D' / 'survivability=50' / 23  3104ms
+   ✓ requirements QA 'D' / 'survivability=100' / 7  4115ms
+   ✓ requirements QA 'D' / 'survivability=100' / 11  4384ms
+   ✓ requirements QA 'D' / 'survivability=100' / 23  4605ms
+   ✓ requirements QA 'D' / 'mobility=0' / 7  3615ms
+   ✓ requirements QA 'D' / 'mobility=0' / 11  4195ms
+   ✓ requirements QA 'D' / 'mobility=0' / 23  4219ms
+   ✓ requirements QA 'D' / 'mobility=50' / 7  3276ms
+   ✓ requirements QA 'D' / 'mobility=50' / 11  4433ms
+   ✓ requirements QA 'D' / 'mobility=50' / 23  2328ms
+   ✓ requirements QA 'D' / 'mobility=100' / 7  4930ms
+   ✓ requirements QA 'D' / 'mobility=100' / 11  5539ms
+   ✓ requirements QA 'D' / 'mobility=100' / 23  2907ms
+   ✓ requirements QA 'D' / 'endurance=0' / 7  1787ms
+   ✓ requirements QA 'D' / 'endurance=0' / 11  2572ms
+   ✓ requirements QA 'D' / 'endurance=0' / 23  1592ms
+   ✓ requirements QA 'D' / 'endurance=50' / 7  1423ms
+   ✓ requirements QA 'D' / 'endurance=50' / 11  2543ms
+   ✓ requirements QA 'D' / 'endurance=50' / 23  1648ms
+   ✓ requirements QA 'D' / 'endurance=100' / 7  1530ms
+   ✓ requirements QA 'D' / 'endurance=100' / 11  2807ms
+   ✓ requirements QA 'D' / 'endurance=100' / 23  1737ms
+   ✓ requirements QA 'D' / 'missile=0' / 7  1902ms
+   ✓ requirements QA 'D' / 'missile=0' / 11  2315ms
+   ✓ requirements QA 'D' / 'missile=0' / 23  1683ms
+   ✓ requirements QA 'D' / 'missile=50' / 7  857ms
+   ✓ requirements QA 'D' / 'missile=50' / 11  1474ms
+   ✓ requirements QA 'D' / 'missile=50' / 23  1089ms
+   ✓ requirements QA 'D' / 'missile=100' / 7  1132ms
+   ✓ requirements QA 'D' / 'missile=100' / 11  2182ms
+   ✓ requirements QA 'D' / 'missile=100' / 23  1672ms
+   ✓ requirements QA 'D' / 'sensor=0' / 7  1849ms
+   ✓ requirements QA 'D' / 'sensor=0' / 11  2216ms
+   ✓ requirements QA 'D' / 'sensor=0' / 23  1201ms
+   ✓ requirements QA 'D' / 'sensor=50' / 7  962ms
+   ✓ requirements QA 'D' / 'sensor=50' / 11  1888ms
+   ✓ requirements QA 'D' / 'sensor=50' / 23  1636ms
+   ✓ requirements QA 'D' / 'sensor=100' / 7  1458ms
+   ✓ requirements QA 'D' / 'sensor=100' / 11  2731ms
+   ✓ requirements QA 'D' / 'sensor=100' / 23  1865ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Light' / 7  1414ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Light' / 11  2210ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Light' / 23  1345ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Superheavy' / 7  6872ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Superheavy' / 11  4073ms
+   ✓ requirements QA 'E' / 'Cruiser all100 Superheavy' / 23  6415ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Light' / 7  1582ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Light' / 11  2762ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Light' / 23  1879ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Superheavy' / 7  3064ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Superheavy' / 11  2744ms
+   ✓ requirements QA 'E' / 'Spinal Gun Ship all100 Superheavy' / 23  3076ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Light' / 7  1095ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Light' / 11  2659ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Light' / 23  1412ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Superheavy' / 7  4707ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Superheavy' / 11  3357ms
+   ✓ requirements QA 'E' / 'Missile Ship all100 Superheavy' / 23  5685ms
+
+ Test Files  1 passed (1)
+      Tests  222 passed (222)
+   Start at  11:39:49
+   Duration  745.69s (transform 1.10s, setup 0ms, collect 1.47s, tests 743.69s, environment 0ms, prepare 116ms)

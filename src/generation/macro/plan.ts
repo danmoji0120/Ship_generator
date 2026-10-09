@@ -1,3 +1,4 @@
+import {reserveRequirementMacro,type RequirementPlan} from '../production/requirements';
 import type {
   ArchitectureGrammar,
   ShipOrder,
@@ -71,6 +72,7 @@ export function createMacroPlan(
   grammar: ArchitectureGrammar,
   seed: number,
   forced?: MacroFamily,
+  requirements?: RequirementPlan,
 ): MacroDesignPlan {
   const rng = new SeededRng((seed ^ 0x18ac73f1) >>> 0),
     weights = macroWeights(order, yard, grammar);
@@ -715,6 +717,7 @@ export function createMacroPlan(
       m.position.y *= 0.86;
       m.dimensions.y *= 0.86;
     }
+  if(requirements)reserveRequirementMacro(requirements,modules,order,grammar,voids);
   for (const m of modules) {
     m.shape.width = m.dimensions.x;
     m.shape.height = m.dimensions.y;

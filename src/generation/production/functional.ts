@@ -6,13 +6,19 @@ import{boundsOf,add,mul}from'../integration/contours';
 import{containsProductionVolume as containsVolume}from'./surface-contact';
 import{armorSurfaces,surfaceRay,mountFrame,transformSolid}from'../weapons/surfaces';
 import{geometrySamples,solidContains}from'../weapons/collision';
+import{solidVolume,fits,plus,emptyResources,type DesignSector}from'./doctrine';
 import{inReservedZone}from'../integration/reservations';
 import{reservationBounds,reservationSamples,overlappingBounds}from'../armor/geometry';
 export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
- const l=b.order.length,surfaces=armorSurfaces(b);
+ const l=b.order.length,surfaces=armorSurfaces(b),doctrine=b.designDoctrine!;
+ const installed={propulsion:emptyResources(),sensor:emptyResources(),endurance:emptyResources()};
  function emit(id:string,kind:PrefabPlacement['kind'],parentId:string,position:Vec3,n:Vec3,parts:ParametricPrefabAssembly['parts'],equipmentIds:string[]=[]){
   const own=kind==='ENGINE_HOUSING'?equipmentIds:[];
   if(parts.some(p=>d.zones.some(z=>!own.includes(z.equipmentId)&&geometrySamples(p.solid).some(q=>inReservedZone(q,z))))){d.decisions.push({stage:'functional',sourceId:id,status:'omitted',reason:'Protected functional opening interference'});return;}
+  const sector=kind==='ENGINE_HOUSING'?'propulsion':kind==='SENSOR_HOUSING'?'sensor':'endurance';
+  const volumeM3=parts.reduce((n,p)=>n+solidVolume(p.solid),0),resources={massTonnes:volumeM3*.32,volumeM3,surfaceM2:0};
+  if(!fits(plus(installed[sector],resources),doctrine.allocations[sector])){d.decisions.push({stage:'functional',sourceId:id,status:'omitted',reason:`${sector} equipment exceeds competing design reservation`});doctrine.adjustments.push({groupId:id,reason:`${sector} equipment exceeds competing design reservation`});return;}
+  installed[sector]=plus(installed[sector],resources);
   const bounds=boundsOf(parts.flatMap(p=>p.solid.vertices));
   const p:PrefabPlacement={id,kind,functionality:kind==='ENGINE_HOUSING'?'propulsion':kind==='SENSOR_HOUSING'?'sensor':kind==='RADIATOR_MOUNT'?'thermal':'machinery',socket:{kind:'HULL_FACE',hostId:parentId,position,normal:n},dimensions:{x:bounds.max.x-bounds.min.x,y:bounds.max.y-bounds.min.y,z:bounds.max.z-bounds.min.z},variant:0,assembly:{parts,attachments:[{kind:d.armor.some(c=>c.id===equipmentIds[0])?'ARMOR':'HULL',parentId:d.armor.some(c=>c.id===equipmentIds[0])?equipmentIds[0]:parentId,position,normal:n}],equipmentIds,clearances:[]}};
   b.prefabPlacements!.push(p);d.functionalPrefabIds.push(id);d.decisions.push({stage:'functional',sourceId:id,status:'accepted',reason:'Actual command/engine/service attachment; stored registry assembly'});
@@ -20,10 +26,27 @@ export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
  const candidates=d.armor.filter(c=>c.role==='COMMAND_PLINTH');
  const command=candidates.sort((a,c)=>(c.bounds.max.x-c.bounds.min.x)*(c.bounds.max.z-c.bounds.min.z)-(a.bounds.max.x-a.bounds.min.x)*(a.bounds.max.z-a.bounds.min.z))[0];
  if(command){const box=command.bounds,hint={x:(box.min.x+box.max.x)/2,y:0,z:(box.min.z+box.max.z)/2},contact=surfaceRay(surfaces,hint,{x:0,y:1,z:0});
-  if(contact){const width=Math.min((box.max.x-box.min.x)*.68,l*.055),height=l*(.009+b.order.priorities.sensor*.00004),length=Math.min((box.max.z-box.min.z)*.65,l*.08),frame=mountFrame(contact.normal),body=transformSolid(facetedBox({x:0,y:height/2-l*.0002,z:0},{x:width,y:height,z:length}),contact.position,frame),optic=transformSolid(facetedBox({x:0,y:height*.58,z:-length*.48},{x:width*.65,y:height*.32,z:l*.003}),contact.position,frame);
+  if(contact){const width=Math.min((box.max.x-box.min.x)*.68,l*.055),height=l*(.007+Math.min(.012,doctrine.allocations.sensor.volumeM3/doctrine.total.volumeM3*.07)),length=Math.min((box.max.z-box.min.z)*.65,l*.08),frame=mountFrame(contact.normal),body=transformSolid(facetedBox({x:0,y:height/2-l*.0002,z:0},{x:width,y:height,z:length}),contact.position,frame),optic=transformSolid(facetedBox({x:0,y:height*.58,z:-length*.48},{x:width*.65,y:height*.32,z:l*.003}),contact.position,frame);
    emit('command-house','SENSOR_HOUSING',contact.structureId,contact.position,contact.normal,[{id:'command-body',role:'COMMAND_HOUSING',material:'armor',solid:body,bounds:boundsOf(body.vertices)},{id:'command-optic',role:'PROTECTED_SENSOR',material:'mount',solid:optic,bounds:boundsOf(optic.vertices)}],[contact.surfaceId]);
   }
  }else d.decisions.push({stage:'functional',sourceId:'command-house',status:'omitted',reason:'No attached command plinth on this architecture; retained sensor-role volume'});
+ // A sensing mission needs a real attached sensor even when this architecture has no command plinth.
+ if(b.designRequirements&&['Cruiser','Patrol Ship'].includes(b.role)&&!d.functionalPrefabIds.some(id=>b.prefabPlacements!.find(p=>p.id===id)?.functionality==='sensor')){
+  const host=b.structuralVolumes.find(v=>v.type!=='SPINE'&&v.purpose!=='propulsion');
+  if(host){const hint={...host.position,z:host.position.z+host.geometry.stations[0].z+host.dimensions.z*.25},hit=surfaceRay(surfaces,hint,{x:0,y:1,z:0});
+   if(hit){const size=Math.min(l*.018,host.dimensions.x*.10),solid=transformSolid(facetedBox({x:0,y:size*.3-l*.0002,z:0},{x:size,y:size*.6,z:size}),hit.position,mountFrame(hit.normal));
+    emit('sensor-required','SENSOR_HOUSING',hit.structureId,hit.position,hit.normal,[{id:'required-optic',role:'PROTECTED_SENSOR',material:'mount',solid,bounds:boundsOf(solid.vertices)}],[hit.surfaceId]);
+   }
+  }
+ }
+ if(b.order.priorities.sensor>=65){
+  const host=b.structuralVolumes.find(v=>Math.abs(v.position.x)<.001&&v.type!=='SPINE');
+  if(host)for(const side of [-1,1]){
+   const hint={x:host.position.x,y:host.position.y,z:host.position.z+host.geometry.stations[0].z+host.dimensions.z*.18},contact=surfaceRay(surfaces,hint,{x:side,y:0,z:0});if(!contact)continue;
+   const size=Math.min(l*.014,host.dimensions.y*.14),frame=mountFrame(contact.normal),solid=transformSolid(facetedBox({x:0,y:size*.25-l*.0002,z:0},{x:size,y:size*.5,z:size*1.3}),contact.position,frame);
+   emit(`sensor-flank-${side}`,'SENSOR_HOUSING',contact.structureId,contact.position,contact.normal,[{id:`sensor-flank-${side}-optic`,role:'PROTECTED_SENSOR',material:'mount',solid,bounds:boundsOf(solid.vertices)}],[contact.surfaceId]);
+  }
+ }
  for(const e of b.engines){
   const zone=d.zones.find(z=>z.equipmentId===e.id)!,inner=zone.radius*1.05,neighbours=b.engines.filter(q=>q!==e&&q.parentId===e.parentId),spacing=neighbours.length?Math.min(...neighbours.map(q=>Math.hypot(q.position.x-e.position.x,q.position.y-e.position.y))):Infinity,outer=Math.min(inner+l*.006,spacing*.48);
   const host=b.structuralVolumes.find(v=>v.id===e.parentId)!,contacts=Array.from({length:12},(_,i)=>({x:e.position.x+outer*Math.cos(i*Math.PI/6),y:e.position.y+outer*Math.sin(i*Math.PI/6),z:e.position.z-l*.0001}));
@@ -31,7 +54,7 @@ export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
   const axis=e.direction??{x:0,y:0,z:1},length=e.nozzleLength*.7,solid=annularHousing(add(e.position,mul(axis,length/2-l*.0002)),axis,outer,inner,length);
   emit(`casing-${e.id}`,'ENGINE_HOUSING',e.parentId,e.position,axis,[{id:`${e.id}-casing`,role:'OPEN_ENGINE_CASING',material:'engine',solid,bounds:boundsOf(solid.vertices)}],[e.id]);
  }
- if(b.order.priorities.endurance>=45){
+ if(b.order.priorities.endurance>=45&&doctrine.allocations.endurance.volumeM3>0){
   const host=[...b.structuralVolumes].filter(v=>v.type!=='SPINE').sort((a,c)=>c.dimensions.z-a.dimensions.z)[0];
   if(host)for(const side of[-1,1]){
    const hint={x:host.position.x,y:host.position.y,z:host.position.z+host.geometry.stations[0].z+host.dimensions.z*.83},hit=surfaceRay(surfaces,hint,{x:side,y:0,z:0});if(!hit)continue;
@@ -46,8 +69,8 @@ export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
   }
  }
 
- for(const channel of d.channels){
-  if(b.order.priorities.endurance<20)continue;
+ for(const [channelIndex,channel] of d.channels.entries()){
+  if(b.order.priorities.endurance<20||channelIndex>=Math.ceil(b.order.priorities.endurance/50))continue;
   const p=channel.floor[Math.floor(channel.floor.length/2)],h=Math.min(channel.depth*.30,l*.008),solid=facetedBox({x:p.x,y:p.y+h/2-l*.0002,z:p.z},{x:channel.width*.35,y:h,z:l*.05});
   emit(`service-${channel.id}`,'MACHINERY_HOUSING',channel.parentStructureId,p,{x:0,y:1,z:0},[{id:`${channel.id}-pump`,role:'SERVICE_PUMP_HOUSING',material:'engine',solid,bounds:boundsOf(solid.vertices)}]);
  }

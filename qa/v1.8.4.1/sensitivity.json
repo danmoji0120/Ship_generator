@@ -1,0 +1,590 @@
+{
+  "seeds": [
+    7,
+    11,
+    23
+  ],
+  "comparisons": [
+    {
+      "priority": "firepower",
+      "metric": "함포 규격 투자 지수 (S=1/M=3/L=8/XL=18)",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 13.80870820044484,
+          "actualLow": 12,
+          "actualHigh": 32,
+          "actualDelta": 20,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 13.298119553522358,
+          "actualLow": 6,
+          "actualHigh": 18,
+          "actualDelta": 12,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 11.504997752771928,
+          "actualLow": 12,
+          "actualHigh": 26,
+          "actualDelta": 14,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    },
+    {
+      "priority": "missile",
+      "metric": "실제 발사기 수",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 7.490144095761847,
+          "actualLow": 2,
+          "actualHigh": 6,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 7.442950021834072,
+          "actualLow": 0,
+          "actualHigh": 4,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 5.6498282210836415,
+          "actualLow": 2,
+          "actualHigh": 4,
+          "actualDelta": 2,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    },
+    {
+      "priority": "survivability",
+      "metric": "실제 근접방어 수",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 9.351826970261087,
+          "actualLow": 4,
+          "actualHigh": 11,
+          "actualDelta": 7,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 7.836794933657903,
+          "actualLow": 2,
+          "actualHigh": 6,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 7.54824388592914,
+          "actualLow": 4,
+          "actualHigh": 10,
+          "actualDelta": 6,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    },
+    {
+      "priority": "mobility",
+      "metric": "함선 질량 한도 대비 실제 무장 질량 % (감소 목표)",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 11.562779210664932,
+          "actualLow": 34.755281629117015,
+          "actualHigh": 31.28041597633931,
+          "actualDelta": -3.474865652777705,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 11.562779210664935,
+          "actualLow": 24.498553280468457,
+          "actualHigh": 23.713508061642468,
+          "actualDelta": -0.7850452188259887,
+          "expectedDirection": true,
+          "countsUnchanged": true
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 11.562779210664932,
+          "actualLow": 31.55273144826083,
+          "actualHigh": 24.296473030955443,
+          "actualDelta": -7.256258417305386,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    },
+    {
+      "priority": "endurance",
+      "metric": "실제 방열/정비 조립체 수",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 13.72211654978619,
+          "actualLow": 0,
+          "actualHigh": 4,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 13.72211654978619,
+          "actualLow": 0,
+          "actualHigh": 4,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": true
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 13.72211654978619,
+          "actualLow": 0,
+          "actualHigh": 4,
+          "actualDelta": 4,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    },
+    {
+      "priority": "sensor",
+      "metric": "실제 센서 조립체 수",
+      "comparisons": [
+        {
+          "seed": 7,
+          "budgetDelta": 11.13781132111358,
+          "actualLow": 1,
+          "actualHigh": 3,
+          "actualDelta": 2,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 11,
+          "budgetDelta": 11.13781132111358,
+          "actualLow": 1,
+          "actualHigh": 3,
+          "actualDelta": 2,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        },
+        {
+          "seed": 23,
+          "budgetDelta": 11.13781132111358,
+          "actualLow": 1,
+          "actualHigh": 3,
+          "actualDelta": 2,
+          "expectedDirection": true,
+          "countsUnchanged": false
+        }
+      ],
+      "positive": 3,
+      "consistent": true
+    }
+  ],
+  "plateaus": [
+    {
+      "priority": "mobility",
+      "seed": 11,
+      "counts": {
+        "CANNON": 4,
+        "MISSILE": 2,
+        "POINT_DEFENSE": 4,
+        "SPINAL": 0,
+        "SENSOR": 1
+      },
+      "targetLow": [
+        {
+          "category": "CANNON",
+          "size": "L",
+          "count": 1
+        },
+        {
+          "category": "CANNON",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "MISSILE",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "POINT_DEFENSE",
+          "size": "S",
+          "count": 6
+        }
+      ],
+      "targetHigh": [
+        {
+          "category": "CANNON",
+          "size": "M",
+          "count": 3
+        },
+        {
+          "category": "MISSILE",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "POINT_DEFENSE",
+          "size": "S",
+          "count": 4
+        }
+      ],
+      "weaponMassLow": 112885.61910181472,
+      "weaponMassHigh": 90209.90522110085,
+      "equipmentLow": {
+        "engines": 4,
+        "engineCasings": 4,
+        "thermal": 2,
+        "service": 1
+      },
+      "equipmentHigh": {
+        "engines": 4,
+        "engineCasings": 4,
+        "thermal": 2,
+        "service": 1
+      },
+      "highDifferences": [
+        {
+          "size": "M",
+          "category": "CANNON",
+          "target": 3,
+          "actual": 4,
+          "missing": 0
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "target": 2,
+          "actual": 0,
+          "missing": 2
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "target": 4,
+          "actual": 4,
+          "missing": 0
+        },
+        {
+          "size": "S",
+          "category": "MISSILE",
+          "target": 0,
+          "actual": 2,
+          "missing": 0
+        }
+      ],
+      "highReasons": [
+        {
+          "groupId": "armor",
+          "reason": "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+        },
+        {
+          "groupId": "cannon-0",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "missile-0",
+          "reason": "Explicit replacement M BILATERAL TOP → S BILATERAL TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        }
+      ]
+    },
+    {
+      "priority": "endurance",
+      "seed": 11,
+      "counts": {
+        "CANNON": 4,
+        "MISSILE": 2,
+        "POINT_DEFENSE": 4,
+        "SPINAL": 0,
+        "SENSOR": 1
+      },
+      "targetLow": [
+        {
+          "category": "CANNON",
+          "size": "L",
+          "count": 1
+        },
+        {
+          "category": "CANNON",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "MISSILE",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "POINT_DEFENSE",
+          "size": "S",
+          "count": 6
+        }
+      ],
+      "targetHigh": [
+        {
+          "category": "CANNON",
+          "size": "L",
+          "count": 1
+        },
+        {
+          "category": "CANNON",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "MISSILE",
+          "size": "M",
+          "count": 2
+        },
+        {
+          "category": "POINT_DEFENSE",
+          "size": "S",
+          "count": 6
+        }
+      ],
+      "weaponMassLow": 112885.61910181472,
+      "weaponMassHigh": 112885.61910181472,
+      "equipmentLow": {
+        "engines": 4,
+        "engineCasings": 4,
+        "thermal": 0,
+        "service": 0
+      },
+      "equipmentHigh": {
+        "engines": 4,
+        "engineCasings": 4,
+        "thermal": 2,
+        "service": 2
+      },
+      "highDifferences": [
+        {
+          "size": "L",
+          "category": "CANNON",
+          "target": 1,
+          "actual": 0,
+          "missing": 1
+        },
+        {
+          "size": "M",
+          "category": "CANNON",
+          "target": 2,
+          "actual": 4,
+          "missing": 0
+        },
+        {
+          "size": "M",
+          "category": "MISSILE",
+          "target": 2,
+          "actual": 2,
+          "missing": 0
+        },
+        {
+          "size": "S",
+          "category": "POINT_DEFENSE",
+          "target": 6,
+          "actual": 4,
+          "missing": 2
+        }
+      ],
+      "highReasons": [
+        {
+          "groupId": "armor",
+          "reason": "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+        },
+        {
+          "groupId": "cannon-0",
+          "reason": "Explicit replacement L CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-2",
+          "reason": "No coherent whole-group candidate: Firing arc point_defense-2-0 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/primary; Firing arc point_defense-2-0 hits fore-armor/shoulder--1; Firing arc point_defense-2-1 hits fore-armor/shoulder-1; armor and standards retained"
+        }
+      ]
+    }
+  ],
+  "spinal": [
+    {
+      "seed": 7,
+      "target": 1,
+      "actual": 1,
+      "reasons": []
+    },
+    {
+      "seed": 11,
+      "target": 1,
+      "actual": 0,
+      "reasons": [
+        {
+          "groupId": "mount-0",
+          "reason": "XL omitted: actual axial host cannot contain unchanged XL envelope; legacy macro and muzzle geometry retained, no scaled-down XL installed"
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "target": 1,
+      "actual": 0,
+      "reasons": [
+        {
+          "groupId": "mount-0",
+          "reason": "XL omitted: actual axial host cannot contain unchanged XL envelope; legacy macro and muzzle geometry retained, no scaled-down XL installed"
+        }
+      ]
+    }
+  ],
+  "allHigh": [
+    {
+      "seed": 7,
+      "mass": 801135.5476460803,
+      "volume": 909464.9182519548,
+      "total": {
+        "massTonnes": 821815.7102329549,
+        "volumeM3": 1408826.9318279226,
+        "surfaceM2": 135145.0627531239
+      },
+      "within": true,
+      "adjustments": [
+        {
+          "groupId": "resources",
+          "reason": "All priorities high: normalized competing demands within unchanged finite mass and volume; no independent capacity bonuses"
+        },
+        {
+          "groupId": "armor",
+          "reason": "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+        },
+        {
+          "groupId": "cannon-0",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "cannon-3",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-2",
+          "reason": "Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-3",
+          "reason": "Explicit replacement S BILATERAL PORT → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "mass": 552216.3676025134,
+      "volume": 650053.7399705097,
+      "total": {
+        "massTonnes": 589593.3158254628,
+        "volumeM3": 1010731.3985579362,
+        "surfaceM2": 118272.45719614661
+      },
+      "within": true,
+      "adjustments": [
+        {
+          "groupId": "resources",
+          "reason": "All priorities high: normalized competing demands within unchanged finite mass and volume; no independent capacity bonuses"
+        },
+        {
+          "groupId": "armor",
+          "reason": "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+        },
+        {
+          "groupId": "cannon-0",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "cannon-2",
+          "reason": "Explicit replacement M BILATERAL PORT → S BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-0",
+          "reason": "Replanned whole group: Equipment envelopes overlap point_defense-0-0/cannon-2-0; Foundations overlap point_defense-0-0/cannon-2-0; Installation solids overlap point_defense-0-0-foundation/cannon-2-0-foundation; Equipment envelopes overlap point_defense-0-0/cannon-0-0; Foundations overlap point_defense-0-0/cannon-0-0; Installation solids overlap point_defense-0-0-foundation/cannon-0-0-foundation; candidate excluded from selected feasible composition"
+        },
+        {
+          "groupId": "point_defense-2",
+          "reason": "No coherent whole-group candidate: Firing arc point_defense-2-0 hits fore-armor/shoulder--1; Firing arc point_defense-2-0 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/primary; Firing arc point_defense-2-1 hits fore-armor/shoulder-1; armor and standards retained"
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "mass": 718284.568374149,
+      "volume": 842400.0164274329,
+      "total": {
+        "massTonnes": 756830.5096927552,
+        "volumeM3": 1297423.7309018658,
+        "surfaceM2": 126429.12798873783
+      },
+      "within": true,
+      "adjustments": [
+        {
+          "groupId": "resources",
+          "reason": "All priorities high: normalized competing demands within unchanged finite mass and volume; no independent capacity bonuses"
+        },
+        {
+          "groupId": "armor",
+          "reason": "Measured retained armor exceeds reservation; weapon capacity reduced to protect completed armor"
+        },
+        {
+          "groupId": "cannon-0",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "cannon-3",
+          "reason": "Explicit replacement M CENTERLINE TOP → M BILATERAL PORT: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "missile-1",
+          "reason": "Explicit replacement M BILATERAL BOTTOM → S BILATERAL BOTTOM: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-2",
+          "reason": "Explicit replacement S BILATERAL TOP → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        },
+        {
+          "groupId": "point_defense-3",
+          "reason": "Explicit replacement S BILATERAL PORT → S CENTERLINE TOP: standard-size whole group selected for resource / footprint / clearance fit; original target retained"
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}

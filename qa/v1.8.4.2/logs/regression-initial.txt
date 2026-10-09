@@ -1,0 +1,266 @@
+
+ RUN  v3.2.7 /workspace/Ship_generator
+
+ ✓ tests/production-matrix.test.ts (124 tests) 508538ms
+   ✓ supports 'aegis' / 'Corvette' / 40 m without review templates  1238ms
+   ✓ supports 'aegis' / 'Corvette' / 300 m without review templates  2021ms
+   ✓ supports 'aegis' / 'Corvette' / 600 m without review templates  2340ms
+   ✓ supports 'aegis' / 'Frigate' / 40 m without review templates  1893ms
+   ✓ supports 'aegis' / 'Frigate' / 300 m without review templates  3372ms
+   ✓ supports 'aegis' / 'Frigate' / 600 m without review templates  6120ms
+   ✓ supports 'aegis' / 'Destroyer' / 40 m without review templates  1446ms
+   ✓ supports 'aegis' / 'Destroyer' / 300 m without review templates  3521ms
+   ✓ supports 'aegis' / 'Destroyer' / 600 m without review templates  3921ms
+   ✓ supports 'aegis' / 'Cruiser' / 40 m without review templates  2004ms
+   ✓ supports 'aegis' / 'Cruiser' / 300 m without review templates  3388ms
+   ✓ supports 'aegis' / 'Cruiser' / 600 m without review templates  6354ms
+   ✓ supports 'aegis' / 'Battlecruiser' / 40 m without review templates  2564ms
+   ✓ supports 'aegis' / 'Battlecruiser' / 300 m without review templates  5097ms
+   ✓ supports 'aegis' / 'Battlecruiser' / 600 m without review templates  5338ms
+   ✓ supports 'aegis' / 'Battleship' / 40 m without review templates  3616ms
+   ✓ supports 'aegis' / 'Battleship' / 300 m without review templates  6585ms
+   ✓ supports 'aegis' / 'Battleship' / 600 m without review templates  6450ms
+   ✓ supports 'aegis' / 'Missile Ship' / 40 m without review templates  2104ms
+   ✓ supports 'aegis' / 'Missile Ship' / 300 m without review templates  5768ms
+   ✓ supports 'aegis' / 'Missile Ship' / 600 m without review templates  5240ms
+   ✓ supports 'aegis' / 'Spinal Gun Ship' / 40 m without review templates  4547ms
+   ✓ supports 'aegis' / 'Spinal Gun Ship' / 300 m without review templates  16341ms
+   ✓ supports 'aegis' / 'Spinal Gun Ship' / 600 m without review templates  6484ms
+   ✓ supports 'aegis' / 'Patrol Ship' / 40 m without review templates  3268ms
+   ✓ supports 'aegis' / 'Patrol Ship' / 300 m without review templates  6422ms
+   ✓ supports 'aegis' / 'Patrol Ship' / 600 m without review templates  6930ms
+   ✓ supports 'vesper' / 'Corvette' / 40 m without review templates  3193ms
+   ✓ supports 'vesper' / 'Corvette' / 300 m without review templates  4107ms
+   ✓ supports 'vesper' / 'Corvette' / 600 m without review templates  3984ms
+   ✓ supports 'vesper' / 'Frigate' / 40 m without review templates  2868ms
+   ✓ supports 'vesper' / 'Frigate' / 300 m without review templates  2903ms
+   ✓ supports 'vesper' / 'Frigate' / 600 m without review templates  3013ms
+   ✓ supports 'vesper' / 'Destroyer' / 40 m without review templates  2883ms
+   ✓ supports 'vesper' / 'Destroyer' / 300 m without review templates  5347ms
+   ✓ supports 'vesper' / 'Destroyer' / 600 m without review templates  4271ms
+   ✓ supports 'vesper' / 'Cruiser' / 40 m without review templates  2600ms
+   ✓ supports 'vesper' / 'Cruiser' / 300 m without review templates  3093ms
+   ✓ supports 'vesper' / 'Cruiser' / 600 m without review templates  6715ms
+   ✓ supports 'vesper' / 'Battlecruiser' / 40 m without review templates  6084ms
+   ✓ supports 'vesper' / 'Battlecruiser' / 300 m without review templates  5030ms
+   ✓ supports 'vesper' / 'Battlecruiser' / 600 m without review templates  5662ms
+   ✓ supports 'vesper' / 'Battleship' / 40 m without review templates  3837ms
+   ✓ supports 'vesper' / 'Battleship' / 300 m without review templates  4875ms
+   ✓ supports 'vesper' / 'Battleship' / 600 m without review templates  5093ms
+   ✓ supports 'vesper' / 'Missile Ship' / 40 m without review templates  3307ms
+   ✓ supports 'vesper' / 'Missile Ship' / 300 m without review templates  5213ms
+   ✓ supports 'vesper' / 'Missile Ship' / 600 m without review templates  5673ms
+   ✓ supports 'vesper' / 'Spinal Gun Ship' / 40 m without review templates  2649ms
+   ✓ supports 'vesper' / 'Spinal Gun Ship' / 300 m without review templates  3979ms
+   ✓ supports 'vesper' / 'Spinal Gun Ship' / 600 m without review templates  3686ms
+   ✓ supports 'vesper' / 'Patrol Ship' / 40 m without review templates  3548ms
+   ✓ supports 'vesper' / 'Patrol Ship' / 300 m without review templates  4297ms
+   ✓ supports 'vesper' / 'Patrol Ship' / 600 m without review templates  8286ms
+   ✓ supports 'forge' / 'Corvette' / 40 m without review templates  8955ms
+   ✓ supports 'forge' / 'Corvette' / 300 m without review templates  7135ms
+   ✓ supports 'forge' / 'Corvette' / 600 m without review templates  7394ms
+   ✓ supports 'forge' / 'Frigate' / 40 m without review templates  4382ms
+   ✓ supports 'forge' / 'Frigate' / 300 m without review templates  7214ms
+   ✓ supports 'forge' / 'Frigate' / 600 m without review templates  6898ms
+   ✓ supports 'forge' / 'Destroyer' / 40 m without review templates  5000ms
+   ✓ supports 'forge' / 'Destroyer' / 300 m without review templates  5696ms
+   ✓ supports 'forge' / 'Destroyer' / 600 m without review templates  7338ms
+   ✓ supports 'forge' / 'Cruiser' / 40 m without review templates  3098ms
+   ✓ supports 'forge' / 'Cruiser' / 300 m without review templates  4054ms
+   ✓ supports 'forge' / 'Cruiser' / 600 m without review templates  3498ms
+   ✓ supports 'forge' / 'Battlecruiser' / 40 m without review templates  2704ms
+   ✓ supports 'forge' / 'Battlecruiser' / 300 m without review templates  3239ms
+   ✓ supports 'forge' / 'Battlecruiser' / 600 m without review templates  4250ms
+   ✓ supports 'forge' / 'Battleship' / 40 m without review templates  2451ms
+   ✓ supports 'forge' / 'Battleship' / 300 m without review templates  4064ms
+   ✓ supports 'forge' / 'Battleship' / 600 m without review templates  4244ms
+   ✓ supports 'forge' / 'Missile Ship' / 40 m without review templates  3076ms
+   ✓ supports 'forge' / 'Missile Ship' / 300 m without review templates  4104ms
+   ✓ supports 'forge' / 'Missile Ship' / 600 m without review templates  5216ms
+   ✓ supports 'forge' / 'Spinal Gun Ship' / 40 m without review templates  1745ms
+   ✓ supports 'forge' / 'Spinal Gun Ship' / 300 m without review templates  3696ms
+   ✓ supports 'forge' / 'Spinal Gun Ship' / 600 m without review templates  4915ms
+   ✓ supports 'forge' / 'Patrol Ship' / 40 m without review templates  4048ms
+   ✓ supports 'forge' / 'Patrol Ship' / 300 m without review templates  8362ms
+   ✓ supports 'forge' / 'Patrol Ship' / 600 m without review templates  7992ms
+   ✓ supports 'serein' / 'Corvette' / 40 m without review templates  2603ms
+   ✓ supports 'serein' / 'Corvette' / 300 m without review templates  10883ms
+   ✓ supports 'serein' / 'Corvette' / 600 m without review templates  10724ms
+   ✓ supports 'serein' / 'Frigate' / 40 m without review templates  4022ms
+   ✓ supports 'serein' / 'Frigate' / 300 m without review templates  6584ms
+   ✓ supports 'serein' / 'Frigate' / 600 m without review templates  5031ms
+   ✓ supports 'serein' / 'Destroyer' / 40 m without review templates  1768ms
+   ✓ supports 'serein' / 'Destroyer' / 300 m without review templates  1920ms
+   ✓ supports 'serein' / 'Destroyer' / 600 m without review templates  2056ms
+   ✓ supports 'serein' / 'Cruiser' / 40 m without review templates  1899ms
+   ✓ supports 'serein' / 'Cruiser' / 300 m without review templates  1946ms
+   ✓ supports 'serein' / 'Cruiser' / 600 m without review templates  2875ms
+   ✓ supports 'serein' / 'Battlecruiser' / 40 m without review templates  689ms
+   ✓ supports 'serein' / 'Battlecruiser' / 300 m without review templates  1119ms
+   ✓ supports 'serein' / 'Battlecruiser' / 600 m without review templates  1797ms
+   ✓ supports 'serein' / 'Battleship' / 40 m without review templates  591ms
+   ✓ supports 'serein' / 'Battleship' / 300 m without review templates  1926ms
+   ✓ supports 'serein' / 'Battleship' / 600 m without review templates  2975ms
+   ✓ supports 'serein' / 'Missile Ship' / 40 m without review templates  1312ms
+   ✓ supports 'serein' / 'Missile Ship' / 300 m without review templates  2069ms
+   ✓ supports 'serein' / 'Missile Ship' / 600 m without review templates  2999ms
+   ✓ supports 'serein' / 'Spinal Gun Ship' / 40 m without review templates  1338ms
+   ✓ supports 'serein' / 'Spinal Gun Ship' / 300 m without review templates  2112ms
+   ✓ supports 'serein' / 'Spinal Gun Ship' / 600 m without review templates  2494ms
+   ✓ supports 'serein' / 'Patrol Ship' / 40 m without review templates  1110ms
+   ✓ supports 'serein' / 'Patrol Ship' / 300 m without review templates  2497ms
+   ✓ supports 'serein' / 'Patrol Ship' / 600 m without review templates  2259ms
+   ✓ handles priority/mass extremes 'aegis' / 40 m / +0 with explicit physical failure  1013ms
+   ✓ handles priority/mass extremes 'aegis' / 40 m / 100 with explicit physical failure  1891ms
+   ✓ handles priority/mass extremes 'aegis' / 600 m / +0 with explicit physical failure  1601ms
+   ✓ handles priority/mass extremes 'aegis' / 600 m / 100 with explicit physical failure  7543ms
+   ✓ handles priority/mass extremes 'vesper' / 40 m / +0 with explicit physical failure  3464ms
+   ✓ handles priority/mass extremes 'vesper' / 40 m / 100 with explicit physical failure  2481ms
+   ✓ handles priority/mass extremes 'vesper' / 600 m / +0 with explicit physical failure  2151ms
+   ✓ handles priority/mass extremes 'vesper' / 600 m / 100 with explicit physical failure  3364ms
+   ✓ handles priority/mass extremes 'forge' / 40 m / +0 with explicit physical failure  4997ms
+   ✓ handles priority/mass extremes 'forge' / 40 m / 100 with explicit physical failure  2792ms
+   ✓ handles priority/mass extremes 'forge' / 600 m / +0 with explicit physical failure  1736ms
+   ✓ handles priority/mass extremes 'forge' / 600 m / 100 with explicit physical failure  4379ms
+   ✓ handles priority/mass extremes 'serein' / 40 m / +0 with explicit physical failure  3888ms
+   ✓ handles priority/mass extremes 'serein' / 40 m / 100 with explicit physical failure  2928ms
+   ✓ handles priority/mass extremes 'serein' / 600 m / +0 with explicit physical failure  3257ms
+   ✓ handles priority/mass extremes 'serein' / 600 m / 100 with explicit physical failure  6118ms
+stdout | tests/architecture.test.ts > V1 architecture > keeps deterministic fixtures for all eight grammars, including no-primary layouts
+V1 grammar fixtures {"MONOLITHIC":7,"BLOCK_ASSEMBLY":0,"SPINE_AND_MODULES":12,"TRUSS_POD":1,"TWIN_HULL":2,"CORE_AND_NACELLES":41,"STACKED_BLOCKS":4,"HYBRID":36}
+
+ ❯ tests/architecture.test.ts (9 tests | 1 failed) 113292ms
+   ✓ V1 architecture > generates valid layouts for 1296 orders while retaining all V0 regressions  63189ms
+   ✓ V1 architecture > keeps deterministic fixtures for all eight grammars, including no-primary layouts  4493ms
+   × V1 architecture > uses more than one structural grammar across twenty seeds for each role and yard 39804ms
+     → Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ V1 architecture > rejects moved volumes, missing graph edges, wrong parents and misdirected engines 101ms
+   ✓ V1 architecture > mounts equipment on rendered V1 volumes using independent ray intersections  616ms
+   ✓ V1 architecture > falls back from a rejected two-grammar hybrid after three bounded candidates 105ms
+   ✓ V1 architecture > supports all eight primitive definitions with valid loft geometry 39ms
+   ✓ V1 architecture > detects a graph disconnection independently of numeric or mount errors 99ms
+   ✓ V1 architecture > renders deterministic finite buffers for every grammar and both new debug views  4837ms
+ ✓ tests/ventral-limited.test.ts (7 tests) 36922ms
+   ✓ Three fixed ventral representatives, no broad rollout > keeps upper volumes, source macro, equipment and all foundations exactly unchanged  11352ms
+   ✓ Three fixed ventral representatives, no broad rollout > accepts only machine-rounding cache differences without changing saved geometry  2795ms
+   ✓ Three fixed ventral representatives, no broad rollout > serializes deterministic geometry and refuses different seeds, family pairs or reapplication  17236ms
+   ✓ Three fixed ventral representatives, no broad rollout > rejects false junction contacts, false Hull measurements and blocked exhaust  5282ms
+ ✓ tests/armor.test.ts (23 tests) 150433ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > preserves exact V1.8 Macro, structural volumes/mass, engines and integration while relocating external mounts  19707ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > serializes and reproduces panels, foundations and sockets exactly ten times  4581ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > maintains actual planar attachment and shallow, broad, noncyclic secondary layers  563ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > uses finite closed manifold, positive-volume solids with nonzero outward triangles and unit normals  3018ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / MONOLITHIC'  4927ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / BLOCK_ASSEMBLY'  11666ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / SPINE_AND_MODULES'  9932ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / TRUSS_POD'  16008ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / TWIN_HULL'  10932ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / CORE_AND_NACELLES'  9091ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / STACKED_BLOCKS'  5896ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'forge / HYBRID'  10352ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'aegis / BLOCK_ASSEMBLY'  6151ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'vesper / BLOCK_ASSEMBLY'  13144ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > validates the original 220 consecutive designs / 'serein / BLOCK_ASSEMBLY'  14721ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > rejects corrupt IDs, cyclic parents, detached roots, degenerate geometry and cached bounds  3795ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > records functional/internal surface exclusions with their areas and never reserves base holes for external mounts  407ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > batches armor into at most three shared meshes while retaining segment vertex identity  740ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > retains identical panel geometry and coverage when mounting hardpoints or hiding them  925ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > resolves foundations above armor and reports corrupt socket/position/firing references  453ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > stores real seam gap/depth and bevel, using Hull/integration underlayers rather than line overlays  320ms
+   ✓ V1.8.1 omnidirectional armor and surface sockets > keeps saved V1.8 rendering unchanged and records bounds enclosing expanded geometry and foundations  2832ms
+ ✓ tests/structural-armor-pilot.test.ts (10 tests) 57521ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > preserves the source and its macro/structural graph, engines and exterior attachments  2594ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > keeps large real tiers while sculpting the upper plinth and connective necks  2556ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > leaves deep open channels between actual structural banks with lower hull floors  1903ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > makes thick side belts protrude from actual station contours  2214ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > keeps every hardpoint, reseats 8 foundation perimeter contacts and preserves firing normals  5577ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > detects detached roots, filled channels, invalid references and inverted volumes  20161ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > detects a blocked engine corridor rather than hiding the collision  5542ms
+   ✓ Single-ship structural depth review (no panel/language rollout) > serializes deterministically and emits finite unit normals within recorded complete bounds  16824ms
+ ✓ tests/shapes-joins.test.ts (6 tests) 110113ms
+   ✓ V1.5 shape / join contracts > serializes every shape and produces finite outward geometry at multiple scales  354ms
+   ✓ V1.5 shape / join contracts > renders all ten joins between actual mating structures with valid endpoints  531ms
+   ✓ V1.5 shape / join contracts > keeps deterministic compositions, hierarchy, connected graphs and usable supports for all fixed grammars / yards  108921ms
+ ✓ tests/structural-armor-limited.test.ts (7 tests) 19238ms
+   ✓ Limited structural hierarchy refinement > retains source macro masses, graph and equipment with immutable, deterministic serialized authority  9100ms
+   ✓ Limited structural hierarchy refinement > matches archived V1.8.1 JSON and renders it without retroactive structural armor  1983ms
+   ✓ Limited structural hierarchy refinement > makes connected transition necks while preserving local pod channels and separated propulsion  3966ms
+   ✓ Limited structural hierarchy refinement > detects falsified mount height, cyclic parent hierarchy and unseated transition contacts  3601ms
+   ✓ Limited structural hierarchy refinement > renders offset parent volumes with finite unit normals and bounds even after panels and mounts are hidden  387ms
+ ✓ tests/macro.test.ts (9 tests) 12353ms
+   ✓ V1.8 Macro Design contracts > realizes all supported pairings, positive mass budgets, geometry and connected graphs across yards  8448ms
+   ✓ V1.8 Macro Design contracts > replays Macro selection, shape / join / equipment / Integration and export exactly ten times  3375ms
+ ✓ tests/integration.test.ts (8 tests) 15590ms
+   ✓ V1.7 station-fitted exterior integration > keeps the V1.6 baseline JSON and original structural layout reproducible  445ms
+   ✓ V1.7 station-fitted exterior integration > renders archived V0, V1 and V1.5 exported JSON without integration fields  357ms
+   ✓ V1.7 station-fitted exterior integration > is deterministic, connected and finite across every grammar, yard and scale  9205ms
+   ✓ V1.7 station-fitted exterior integration > bounds include actual rendered skins, legacy equipment and mounts  4978ms
+ ✓ tests/ventral-structure.test.ts (7 tests) 15907ms
+   ✓ Seed 7 dedicated ventral hierarchy > has a genuinely open local recess under the unchanged original hull  3187ms
+   ✓ Seed 7 dedicated ventral hierarchy > detects detached roots, falsified tiers, filled recesses and obstructed equipment  9945ms
+   ✓ Seed 7 dedicated ventral hierarchy > serializes deterministic geometry and renders finite unit normals within extended bounds without panels or mounts  2510ms
+ ✓ tests/production.test.ts (20 tests) 20440ms
+   ✓ V1.8.4 order-driven production pipeline > reproduces complete authoritative JSON and rerender positions without timing in JSON  2205ms
+   ✓ V1.8.4 order-driven production pipeline > varies the actual hull and armor geometry across independent seeds  8297ms
+   ✓ V1.8.4 order-driven production pipeline > installs visible L assemblies but never demands L on a small order  1692ms
+   ✓ V1.8.4 order-driven production pipeline > records measured-surface, local static arcs and rejected coherent candidates  331ms
+   ✓ V1.8.4 order-driven production pipeline > rejects falsified coverage, detached roots and duplicate parent references  701ms
+   ✓ V1.8.4 order-driven production pipeline > rejects invalid mount standards and local firing vectors  586ms
+   ✓ V1.8.4 order-driven production pipeline > exposes stage costs outside serialized authority  3439ms
+   ✓ V1.8.4 order-driven production pipeline > renders finite unit-normal batches and meaningful production debug views  467ms
+ ✓ tests/functional-exterior.test.ts (9 tests) 7833ms
+   ✓ One approved Wedge functional exterior, without broad rollout > preserves every approved mass, channel, pocket, foundation and source equipment contract  3457ms
+   ✓ One approved Wedge functional exterior, without broad rollout > is immutable and deterministic in serialized geometry; rejects unauthorized designs and reapplication  2383ms
+   ✓ One approved Wedge functional exterior, without broad rollout > preserves the physical nozzle opening and detects exhaust obstruction and blocked firing paths  328ms
+   ✓ One approved Wedge functional exterior, without broad rollout > batches finite closed geometry with unit normals, authoritative bounds and every part ID retained  761ms
+   ✓ One approved Wedge functional exterior, without broad rollout > renders archived V0, V1, V1.5, V1.7, V1.8 and V1.8.1 JSON without new installations  515ms
+ ❯ tests/design-requirements.test.ts (8 tests | 1 failed) 15233ms
+   ✓ plans mandatory identity before any hull, with unchanged XL standard and finite hard floors 4ms
+   ✓ repairs failed Seed 11 through actual pre-station macro sizing while retaining spine architecture  3476ms
+   ✓ serializes deterministic requirements, candidate rejection records, mounts and reserved budgets  2810ms
+   ✓ rejects an impossible small spinal order before geometry 192ms
+   ✓ rejects unsupported forced architecture/family instead of changing requested role 1ms
+   × does not trust declared satisfaction, phase, reservations, envelope or actual installations 2546ms
+     → expected 0 to be greater than 0
+   ✓ fails the required gun when an actual solid blocks its forward axis 25ms
+   ✓ keeps complete historical V1.8.4.1 Blueprints unchanged and requirement-free  3497ms
+ ✓ tests/weapon-layout.test.ts (27 tests) 5472ms
+   ✓ V1.8.3 single-ship weapon layout > retains every approved structural/macro/armor/engine and source JSON  572ms
+   ✓ V1.8.3 single-ship weapon layout > rejects partial bilateral membership  341ms
+   ✓ V1.8.3 single-ship weapon layout > validates without mutating authoritative JSON or clearance flags  1693ms
+   ✓ V1.8.3 single-ship weapon layout > reproduces the complete placement and geometry JSON exactly  487ms
+   ✓ V1.8.3 single-ship weapon layout > renders finite unit-normal batched assemblies and honors actual expanded bounds  534ms
+ ✓ tests/generation.test.ts (12 tests) 3686ms
+   ✓ Domain invariants over the design space > validates 1,296 designs across every role, yard, length and priority extreme  3343ms
+ ✓ tests/design-doctrine.test.ts (8 tests) 3371ms
+ ✓ tests/prefabs.test.ts (3 tests) 1741ms
+   ✓ V1.6 socketed parametric kitbash > retains authoritative socket and prefab metadata for deterministic multi-yard grammars  1543ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/architecture.test.ts > V1 architecture > uses more than one structural grammar across twenty seeds for each role and yard
+Error: Test timed out in 30000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/architecture.test.ts:91:3
+     89|     }
+     90|   });
+     91|   it("uses more than one structural grammar across twenty seeds for ea…
+       |   ^
+     92|     for (const y of SHIPYARDS)
+     93|       for (const role of ROLES) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/design-requirements.test.ts > does not trust declared satisfaction, phase, reservations, envelope or actual installations
+AssertionError: expected 0 to be greater than 0
+ ❯ tests/design-requirements.test.ts:16:964
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 15 passed (17)
+      Tests  2 failed | 295 passed (297)
+   Start at  11:39:41
+   Duration  1141.54s (transform 1.42s, setup 0ms, collect 35.55s, tests 1097.68s, environment 7ms, prepare 2.13s)

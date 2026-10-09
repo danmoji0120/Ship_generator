@@ -1,3 +1,5 @@
+import {validateRequirements} from './requirements';
+import{validateDesignDoctrine}from'./doctrine';
 import type{ShipBlueprint}from'../../blueprint/types';
 import{measureProductionCoverage}from'./armor';
 import{containsProductionVolume as containsVolume}from'./surface-contact';
@@ -35,5 +37,6 @@ export function validateProduction(b:ShipBlueprint){
  for(const target of b.macroDesign!.negativeSpaceTargets)for(const x of[-.35,0,.35])for(const y of[-.35,0,.35])for(const z of[-.35,0,.35]){const p={x:target.center.x+target.size.x*x,y:target.center.y+target.size.y*y,z:target.center.z+target.size.z*z};if(!b.structuralVolumes.some(v=>containsVolume(v,p,0))&&solids.some(c=>p.x>=c.bounds.min.x&&p.x<=c.bounds.max.x&&p.y>=c.bounds.min.y&&p.y<=c.bounds.max.y&&p.z>=c.bounds.min.z&&p.z<=c.bounds.max.z&&solidContains(c.solid,p)))issues.push(`Armor fills actual negative-space sample ${target.id}`);}
  const allVertices=[...solids.flatMap(c=>c.solid.vertices),...(b.prefabPlacements??[]).flatMap(p=>p.assembly?.parts.flatMap(c=>c.solid.vertices)??[])];
  if(allVertices.some(p=>(['x','y','z']as const).some(k=>p[k]<d.overallBounds.min[k]-.001||p[k]>d.overallBounds.max[k]+.001)))issues.push('Production bounds exclude exterior');
+ issues.push(...validateDesignDoctrine(b),...validateRequirements(b));
  return{issues:[...new Set(issues)],checks:['Compatible macro plan and exclusive generated ownership','Closed finite armor volumes, measured station root contacts','Explicit functional opening exclusions and independent six-direction area measurement','Stored command/engine/service assemblies and armor-mounted atomic weapon groups','Exterior bounds include armor, functional equipment and weapons']};
 }

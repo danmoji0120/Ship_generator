@@ -19,9 +19,9 @@ export function equipmentReservations(b: ShipBlueprint): EquipmentZone[] {
             : ("weapon" as const),
       position: h.position,
       normal: h.normal,
-      radius: h.radius * (h.type === "Missile" ? 1.75 : 1.4),
+      radius: h.type==='Spinal'&&b.designRequirements?.spinal ? Math.hypot(b.designRequirements.spinal.standard.envelope.width,b.designRequirements.spinal.standard.envelope.height)/2+b.order.length*.004 : h.radius * (h.type === "Missile" ? 1.75 : 1.4),
       depth: h.type === "Spinal" ? b.order.length * 0.065 : h.radius * 3,
-      rootClearance: h.radius * 0.13,
+      rootClearance: h.type==='Spinal'&&b.designRequirements?.spinal ? -b.order.length*.005 : h.radius * 0.13,
     })),
     ...b.engines.map((e) => ({
       id: `zone-${e.id}`,

@@ -28,7 +28,7 @@ export interface WeaponLayout {
  composition:{size:MountSize;category:WeaponCategory;count:number}[];
  groups:WeaponGroupPlan[];mounts:WeaponMount[];prefabIds:string[];supersededFoundationIds:string[];
  retiredHardpointIds:string[];
- attempts:{groupId:string;candidate:number;longitudinalShift:number;accepted:boolean;reasons:string[]}[];
+ attempts:{groupId:string;candidate:number;longitudinalShift:number;accepted:boolean;reasons:string[];variant?:WeaponGroupPlan;selected?:boolean}[];
  omissions:{groupId:string;reason:string}[];overallBounds:BoundsData;
  validation:{issues:string[];checks:string[]};
 }

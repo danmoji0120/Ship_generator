@@ -81,7 +81,7 @@ describe("V1.5 shape / join contracts", () => {
       disposeShip(group);
     }
   });
-  it("keeps deterministic compositions, hierarchy, connected graphs and usable supports for all fixed grammars / yards", () => {
+  it("keeps deterministic compositions, hierarchy, connected graphs and usable supports for all fixed grammars / yards", async () => {
     const usedShapes = new Set<string>(),
       usedJoins = new Set<string>();
     for (const yard of SHIPYARDS)
@@ -135,6 +135,8 @@ describe("V1.5 shape / join contracts", () => {
             }
           }
         }
+        // Flush worker RPC between the 32 exhaustive grammar batches.
+        await new Promise(resolve=>setTimeout(resolve,0));
       }
     // BOX is intentionally confined to supply structures; sample low missile orders as well.
     for (const role of ROLES)
@@ -153,7 +155,7 @@ describe("V1.5 shape / join contracts", () => {
       }
     expect([...usedShapes].sort()).toEqual([...SHAPE_KINDS].sort());
     expect([...usedJoins].sort()).toEqual([...JOIN_TYPES].sort());
-  }, 60000);
+  }, 120000); // 1,460 unchanged V1.7 generations; allow slower cloud workers.
   it("rejects mismatched authority cache, nonfinite values, undersized support and thin spine", () => {
     const b = generateBlueprint(
       { ...structuredClone(DEFAULT_ORDER), shipyardId: "forge" },

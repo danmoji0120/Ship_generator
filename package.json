@@ -12,7 +12,10 @@
     "preview": "vite preview --host 0.0.0.0",
     "qa:armor": "node tests/armor-qa.mjs",
     "qa:macro": "node tests/macro-qa.mjs",
-    "qa:integration": "node tests/integration-qa.mjs"
+    "qa:integration": "node tests/integration-qa.mjs",
+    "qa:doctrine": "vitest run tests/design-doctrine-qa.test.ts && node tests/summarize-design-doctrine.mjs",
+    "qa:doctrine:summary": "node tests/summarize-design-doctrine.mjs",
+    "qa:requirements": "vitest run tests/design-requirements.test.ts tests/design-requirements-qa.test.ts && node tests/summarize-design-requirements.mjs"
   },
   "dependencies": {
     "three": "^0.180.0"

@@ -1,0 +1,135 @@
+
+ RUN  v3.2.7 /workspace/Ship_generator
+
+ ✓ tests/design-doctrine-qa.test.ts (126 tests) 596729ms
+   ✓ controlled QA 'A' / 'Corvette' / 7  6507ms
+   ✓ controlled QA 'A' / 'Corvette' / 11  5177ms
+   ✓ controlled QA 'A' / 'Corvette' / 23  5841ms
+   ✓ controlled QA 'A' / 'Frigate' / 7  7510ms
+   ✓ controlled QA 'A' / 'Frigate' / 11  6068ms
+   ✓ controlled QA 'A' / 'Frigate' / 23  4849ms
+   ✓ controlled QA 'A' / 'Destroyer' / 7  4955ms
+   ✓ controlled QA 'A' / 'Destroyer' / 11  4995ms
+   ✓ controlled QA 'A' / 'Destroyer' / 23  9079ms
+   ✓ controlled QA 'A' / 'Cruiser' / 7  11946ms
+   ✓ controlled QA 'A' / 'Cruiser' / 11  3180ms
+   ✓ controlled QA 'A' / 'Cruiser' / 23  2925ms
+   ✓ controlled QA 'A' / 'Battlecruiser' / 7  3473ms
+   ✓ controlled QA 'A' / 'Battlecruiser' / 11  6612ms
+   ✓ controlled QA 'A' / 'Battlecruiser' / 23  4972ms
+   ✓ controlled QA 'A' / 'Battleship' / 7  5451ms
+   ✓ controlled QA 'A' / 'Battleship' / 11  6038ms
+   ✓ controlled QA 'A' / 'Battleship' / 23  7325ms
+   ✓ controlled QA 'A' / 'Missile Ship' / 7  5974ms
+   ✓ controlled QA 'A' / 'Missile Ship' / 11  6560ms
+   ✓ controlled QA 'A' / 'Missile Ship' / 23  7486ms
+   ✓ controlled QA 'A' / 'Spinal Gun Ship' / 7  10257ms
+   ✓ controlled QA 'A' / 'Spinal Gun Ship' / 11  4229ms
+   ✓ controlled QA 'A' / 'Spinal Gun Ship' / 23  6131ms
+   ✓ controlled QA 'A' / 'Patrol Ship' / 7  5384ms
+   ✓ controlled QA 'A' / 'Patrol Ship' / 11  6664ms
+   ✓ controlled QA 'A' / 'Patrol Ship' / 23  6490ms
+   ✓ controlled QA 'B' / 'Light' / 7  1912ms
+   ✓ controlled QA 'B' / 'Light' / 11  3804ms
+   ✓ controlled QA 'B' / 'Light' / 23  2539ms
+   ✓ controlled QA 'B' / 'Standard' / 7  4758ms
+   ✓ controlled QA 'B' / 'Standard' / 11  5536ms
+   ✓ controlled QA 'B' / 'Standard' / 23  5390ms
+   ✓ controlled QA 'B' / 'Heavy' / 7  6007ms
+   ✓ controlled QA 'B' / 'Heavy' / 11  8615ms
+   ✓ controlled QA 'B' / 'Heavy' / 23  7474ms
+   ✓ controlled QA 'B' / 'Superheavy' / 7  8114ms
+   ✓ controlled QA 'B' / 'Superheavy' / 11  4382ms
+   ✓ controlled QA 'B' / 'Superheavy' / 23  6168ms
+   ✓ controlled QA 'C' / '100m' / 7  1863ms
+   ✓ controlled QA 'C' / '100m' / 11  3056ms
+   ✓ controlled QA 'C' / '100m' / 23  1493ms
+   ✓ controlled QA 'C' / '200m' / 7  2411ms
+   ✓ controlled QA 'C' / '200m' / 11  2528ms
+   ✓ controlled QA 'C' / '200m' / 23  1878ms
+   ✓ controlled QA 'C' / '300m' / 7  2422ms
+   ✓ controlled QA 'C' / '300m' / 11  2956ms
+   ✓ controlled QA 'C' / '300m' / 23  3497ms
+   ✓ controlled QA 'C' / '500m' / 7  3311ms
+   ✓ controlled QA 'C' / '500m' / 11  4116ms
+   ✓ controlled QA 'C' / '500m' / 23  4223ms
+   ✓ controlled QA 'D' / 'firepower=10' / 7  2057ms
+   ✓ controlled QA 'D' / 'firepower=10' / 11  4440ms
+   ✓ controlled QA 'D' / 'firepower=10' / 23  4180ms
+   ✓ controlled QA 'D' / 'firepower=50' / 7  3668ms
+   ✓ controlled QA 'D' / 'firepower=50' / 11  4123ms
+   ✓ controlled QA 'D' / 'firepower=50' / 23  4908ms
+   ✓ controlled QA 'D' / 'firepower=90' / 7  4424ms
+   ✓ controlled QA 'D' / 'firepower=90' / 11  5086ms
+   ✓ controlled QA 'D' / 'firepower=90' / 23  4982ms
+   ✓ controlled QA 'D' / 'survivability=10' / 7  2591ms
+   ✓ controlled QA 'D' / 'survivability=10' / 11  5191ms
+   ✓ controlled QA 'D' / 'survivability=10' / 23  4502ms
+   ✓ controlled QA 'D' / 'survivability=50' / 7  5822ms
+   ✓ controlled QA 'D' / 'survivability=50' / 11  3790ms
+   ✓ controlled QA 'D' / 'survivability=50' / 23  4214ms
+   ✓ controlled QA 'D' / 'survivability=90' / 7  2922ms
+   ✓ controlled QA 'D' / 'survivability=90' / 11  4648ms
+   ✓ controlled QA 'D' / 'survivability=90' / 23  3324ms
+   ✓ controlled QA 'D' / 'mobility=10' / 7  4278ms
+   ✓ controlled QA 'D' / 'mobility=10' / 11  15510ms
+   ✓ controlled QA 'D' / 'mobility=10' / 23  9190ms
+   ✓ controlled QA 'D' / 'mobility=50' / 7  5712ms
+   ✓ controlled QA 'D' / 'mobility=50' / 11  7225ms
+   ✓ controlled QA 'D' / 'mobility=50' / 23  5384ms
+   ✓ controlled QA 'D' / 'mobility=90' / 7  4574ms
+   ✓ controlled QA 'D' / 'mobility=90' / 11  5163ms
+   ✓ controlled QA 'D' / 'mobility=90' / 23  4063ms
+   ✓ controlled QA 'D' / 'endurance=10' / 7  3834ms
+   ✓ controlled QA 'D' / 'endurance=10' / 11  3982ms
+   ✓ controlled QA 'D' / 'endurance=10' / 23  4788ms
+   ✓ controlled QA 'D' / 'endurance=50' / 7  3611ms
+   ✓ controlled QA 'D' / 'endurance=50' / 11  3861ms
+   ✓ controlled QA 'D' / 'endurance=50' / 23  5023ms
+   ✓ controlled QA 'D' / 'endurance=90' / 7  3796ms
+   ✓ controlled QA 'D' / 'endurance=90' / 11  4033ms
+   ✓ controlled QA 'D' / 'endurance=90' / 23  4569ms
+   ✓ controlled QA 'D' / 'missile=10' / 7  3577ms
+   ✓ controlled QA 'D' / 'missile=10' / 11  4330ms
+   ✓ controlled QA 'D' / 'missile=10' / 23  5099ms
+   ✓ controlled QA 'D' / 'missile=50' / 7  3602ms
+   ✓ controlled QA 'D' / 'missile=50' / 11  4071ms
+   ✓ controlled QA 'D' / 'missile=50' / 23  4713ms
+   ✓ controlled QA 'D' / 'missile=90' / 7  4534ms
+   ✓ controlled QA 'D' / 'missile=90' / 11  4504ms
+   ✓ controlled QA 'D' / 'missile=90' / 23  5556ms
+   ✓ controlled QA 'D' / 'sensor=10' / 7  3712ms
+   ✓ controlled QA 'D' / 'sensor=10' / 11  4508ms
+   ✓ controlled QA 'D' / 'sensor=10' / 23  5427ms
+   ✓ controlled QA 'D' / 'sensor=50' / 7  3582ms
+   ✓ controlled QA 'D' / 'sensor=50' / 11  3975ms
+   ✓ controlled QA 'D' / 'sensor=50' / 23  4909ms
+   ✓ controlled QA 'D' / 'sensor=90' / 7  3676ms
+   ✓ controlled QA 'D' / 'sensor=90' / 11  4459ms
+   ✓ controlled QA 'D' / 'sensor=90' / 23  5059ms
+   ✓ controlled QA 'E' / 'high-firepower' / 7  3829ms
+   ✓ controlled QA 'E' / 'high-firepower' / 11  4191ms
+   ✓ controlled QA 'E' / 'high-firepower' / 23  5890ms
+   ✓ controlled QA 'E' / 'high-survivability' / 7  5892ms
+   ✓ controlled QA 'E' / 'high-survivability' / 11  6499ms
+   ✓ controlled QA 'E' / 'high-survivability' / 23  6125ms
+   ✓ controlled QA 'E' / 'high-mobility' / 7  2384ms
+   ✓ controlled QA 'E' / 'high-mobility' / 11  3232ms
+   ✓ controlled QA 'E' / 'high-mobility' / 23  2981ms
+   ✓ controlled QA 'E' / 'high-endurance' / 7  2718ms
+   ✓ controlled QA 'E' / 'high-endurance' / 11  3373ms
+   ✓ controlled QA 'E' / 'high-endurance' / 23  3217ms
+   ✓ controlled QA 'E' / 'high-missile' / 7  2764ms
+   ✓ controlled QA 'E' / 'high-missile' / 11  3199ms
+   ✓ controlled QA 'E' / 'high-missile' / 23  3493ms
+   ✓ controlled QA 'E' / 'high-sensor' / 7  2023ms
+   ✓ controlled QA 'E' / 'high-sensor' / 11  2533ms
+   ✓ controlled QA 'E' / 'high-sensor' / 23  2666ms
+   ✓ controlled QA 'E' / 'all-high' / 7  3538ms
+   ✓ controlled QA 'E' / 'all-high' / 11  3882ms
+   ✓ controlled QA 'E' / 'all-high' / 23  4870ms
+
+ Test Files  1 passed (1)
+      Tests  126 passed (126)
+   Start at  11:40:14
+   Duration  600.20s (transform 1.85s, setup 0ms, collect 2.63s, tests 596.73s, environment 0ms, prepare 177ms)

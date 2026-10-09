@@ -1006,3 +1006,9 @@ pre {
     min-height: 490px;
   }
 }
+
+.architecture-summary details { flex-basis: 100%; min-width: 0; }
+.architecture-summary details summary { cursor: pointer; color: #9ddbc5; }
+.architecture-summary details span { display: block; margin-top: 6px; overflow-wrap: anywhere; }
+
+#design-rejection{overflow-wrap:anywhere;font-size:12px;max-width:100%}#design-rejection details{margin-top:8px}#requirements-summary{color:var(--accent);font-weight:600}

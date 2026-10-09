@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /workspace/Ship_generator
+
+ ✓ tests/architecture.test.ts (9 tests | 8 skipped) 18261ms
+   ✓ V1 architecture > uses more than one structural grammar across twenty seeds for each role and yard  18258ms
+ ✓ tests/design-requirements.test.ts (8 tests | 7 skipped) 5204ms
+   ✓ does not trust declared satisfaction, phase, reservations, envelope or actual installations  3328ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 15 skipped (17)
+   Start at  11:59:38
+   Duration  25.52s (transform 880ms, setup 0ms, collect 1.39s, tests 23.46s, environment 0ms, prepare 211ms)

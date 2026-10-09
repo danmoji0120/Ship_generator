@@ -1,6 +1,8 @@
 import{describe,it,expect,beforeAll}from'vitest';
 import * as THREE from'three';
-import{generateBlueprint,generateBlueprintV18,DEFAULT_ORDER}from'../src/generation/generate';
+import{generateBlueprint as generateBaselineBlueprint,generateBlueprintV18,DEFAULT_ORDER}from'../src/generation/generate';
+// Preserve the complete V1.8.4.1 regression contract; new requirements are tested separately.
+const generateBlueprint=(...args:Parameters<typeof generateBaselineBlueprint>)=>generateBaselineBlueprint(args[0],args[1],{...args[2],version:args[2]?.version??'1.8.4.1'});
 import{validateBlueprint}from'../src/validation/validate';
 import{validateProduction}from'../src/generation/production/validate';
 import{validateWeaponLayout}from'../src/generation/weapons/validate';

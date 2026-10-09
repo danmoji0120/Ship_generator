@@ -1,0 +1,156 @@
+[
+  {
+    "seed": 7,
+    "order": {
+      "role": "Spinal Gun Ship",
+      "shipyardId": "aegis",
+      "length": 300,
+      "massClass": "Standard",
+      "priorities": {
+        "firepower": 50,
+        "missile": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "sensor": 50
+      }
+    },
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "candidate": 0,
+    "xl": 1,
+    "host": [
+      {
+        "id": "citadel",
+        "dimensions": {
+          "x": 152.28522034449296,
+          "y": 62.6581686983943,
+          "z": 300
+        },
+        "front": {
+          "z": -150,
+          "width": 59.69580637504124,
+          "height": 51.37969833268332,
+          "profile": "chamfer",
+          "bevel": 0.19314299280755223,
+          "topSlope": 0.045,
+          "sideSlope": 0.02,
+          "bottomSlope": 0.02,
+          "roundness": 0.15
+        }
+      }
+    ],
+    "reasons": [],
+    "allocations": {
+      "massTonnes": 174256.62151738335,
+      "volumeM3": 298725.63688694284,
+      "surfaceM2": 32781.408226835105
+    }
+  },
+  {
+    "seed": 11,
+    "order": {
+      "role": "Spinal Gun Ship",
+      "shipyardId": "aegis",
+      "length": 300,
+      "massClass": "Standard",
+      "priorities": {
+        "firepower": 50,
+        "missile": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "sensor": 50
+      }
+    },
+    "architecture": "SPINE_AND_MODULES",
+    "family": "WEAPON_DOMINANT",
+    "candidate": 0,
+    "xl": 0,
+    "host": [
+      {
+        "id": "axial-spine",
+        "dimensions": {
+          "x": 37.525927635587884,
+          "y": 27.921977121216056,
+          "z": 300
+        },
+        "front": {
+          "z": -150,
+          "width": 28.14444572669091,
+          "height": 22.896021239397164,
+          "profile": "chamfer",
+          "bevel": 0.25852809933945536,
+          "topSlope": 0.045,
+          "sideSlope": 0.02,
+          "bottomSlope": 0.02,
+          "roundness": 0.15
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "groupId": "mount-0",
+        "reason": "XL omitted: actual axial host cannot contain unchanged XL envelope; legacy macro and muzzle geometry retained, no scaled-down XL installed"
+      }
+    ],
+    "allocations": {
+      "massTonnes": 118623.45468248334,
+      "volumeM3": 203354.49374139996,
+      "surfaceM2": 21390.033638467416
+    }
+  },
+  {
+    "seed": 23,
+    "order": {
+      "role": "Spinal Gun Ship",
+      "shipyardId": "aegis",
+      "length": 300,
+      "massClass": "Standard",
+      "priorities": {
+        "firepower": 50,
+        "missile": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "sensor": 50
+      }
+    },
+    "architecture": "MONOLITHIC",
+    "family": "WEAPON_DOMINANT",
+    "candidate": 0,
+    "xl": 0,
+    "host": [
+      {
+        "id": "citadel",
+        "dimensions": {
+          "x": 134.8233255327365,
+          "y": 54.535169787003994,
+          "z": 300
+        },
+        "front": {
+          "z": -150,
+          "width": 37.75053114916623,
+          "height": 44.718839225343274,
+          "profile": "chamfer",
+          "bevel": 0.30073191471397875,
+          "topSlope": 0.045,
+          "sideSlope": 0.02,
+          "bottomSlope": 0.02,
+          "roundness": 0.15
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "groupId": "mount-0",
+        "reason": "XL omitted: actual axial host cannot contain unchanged XL envelope; legacy macro and muzzle geometry retained, no scaled-down XL installed"
+      }
+    ],
+    "allocations": {
+      "massTonnes": 137340.54881541114,
+      "volumeM3": 237239.74178577747,
+      "surfaceM2": 28878.32707181485
+    }
+  }
+]

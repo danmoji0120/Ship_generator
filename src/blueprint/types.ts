@@ -441,6 +441,9 @@ export interface ShipBlueprint extends Omit<
   structuralArmorPilot?: import("../generation/armor/structural-pilot/types").StructuralArmorPilot;
   functionalExterior?: import("../generation/functional/types").FunctionalExteriorReview;
   productionDesign?: import("../generation/production/types").ProductionDesign;
+  /** Optional additive doctrine: historical Blueprints remain unchanged and loadable. */
+  designRequirements?: import("../generation/production/requirements").RequirementPlan;
+  designDoctrine?: import("../generation/production/doctrine").DesignDoctrine;
   weaponLayout?: import("../generation/weapons/types").WeaponLayout;
   macroDesign?: import("../generation/macro/types").MacroDesignPlan;
   silhouette: SilhouetteMetrics;

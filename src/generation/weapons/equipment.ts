@@ -12,10 +12,10 @@ export function buildWeaponAssembly(m:WeaponMount):ParametricPrefabAssembly{
  a.parts.push({id:m.id+'-foundation',role:'SURFACE_FOUNDATION',material:'secondary',solid:m.foundation.solid,bounds:m.foundation.bounds});
  a.attachments=m.contacts.map(c=>({kind:c.surfaceId===c.structureId?'HULL':'ARMOR',parentId:c.surfaceId,position:c.position,normal:c.normal}));
  if(m.category==='MISSILE'){
-  box('body','PROTECTED_VLS_BODY','armor',{x:0,y:1.9,z:0},{x:10,y:4,z:11});
-  for(const x of[-2.3,2.3])for(const z of[-3,0,3])box(`hatch-${x}-${z}`,'LAUNCH_HATCH','mount',{x,y:4,z},{x:3.5,y:.25,z:2.3});
+  box('body','PROTECTED_VLS_BODY','armor',{x:0,y:small?1.1:1.9,z:0},{x:small?3.6:10,y:small?2.4:4,z:small?4.3:11});
+  for(const x of (small?[-.9,.9]:[-2.3,2.3]))for(const z of (small?[-1.2,1.2]:[-3,0,3]))box(`hatch-${x}-${z}`,'LAUNCH_HATCH','mount',{x,y:small?2.4:4,z},{x:small?1.3:3.5,y:.25,z:small?1:2.3});
   m.equipment.model='VLS';m.firingArc.staticPitch=90;m.firingArc.pitchMin=90;m.firingArc.pitchMax=90;m.firingArc.yawMin=0;m.firingArc.yawMax=0;
-  m.firingArc.muzzles=[worldPoint(m.position,m.frame,{x:0,y:4.5*scale,z:0})];
+  m.firingArc.muzzles=[worldPoint(m.position,m.frame,{x:0,y:(small?2.8:4.5)*scale,z:0})];
  }else{
   const width=large?21:small?3.6:9.5,bodyHeight=large?8.5:small?2.6:5,bodyLength=large?17:small?4:9;
   part('seat','ARMORED_TRAVERSE_SEAT','mount',annularHousing(worldLocal(0,.25,0),{x:0,y:1,z:0},(large?11.8:small?2:5.3)*scale,(large?8.7:small?1.2:3.6)*scale,.65*scale,12));
