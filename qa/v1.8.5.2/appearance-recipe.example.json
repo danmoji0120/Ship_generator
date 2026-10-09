@@ -1,0 +1,3803 @@
+{
+  "version": "1.8.5.2",
+  "language": "aegis",
+  "finish": "CLEAN",
+  "texture": {
+    "namespace": "ship-surface-v1",
+    "seed": 2512845267,
+    "grainPeriodMeters": 0.24,
+    "tileResolution": 128,
+    "projection": "OBJECT_LOCAL_TRIPLANAR"
+  },
+  "componentVariations": [
+    {
+      "parentId": "citadel/primary",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.020032499999999998,
+      "wearEligible": false,
+      "reason": "CITADEL"
+    },
+    {
+      "parentId": "citadel/shoulder--1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.029392500000000002,
+      "wearEligible": false,
+      "reason": "SHOULDER"
+    },
+    {
+      "parentId": "citadel/shoulder-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0369675,
+      "wearEligible": false,
+      "reason": "SHOULDER"
+    },
+    {
+      "parentId": "citadel/fore-guard",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.006067499999999997,
+      "wearEligible": false,
+      "reason": "AXIAL_PROTECTION"
+    },
+    {
+      "parentId": "citadel/command-plinth",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.05363999999999999,
+      "wearEligible": false,
+      "reason": "COMMAND_PLINTH"
+    },
+    {
+      "parentId": "citadel/belt--1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.039435,
+      "wearEligible": true,
+      "reason": "SIDE_BELT"
+    },
+    {
+      "parentId": "citadel/belt-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.022799999999999997,
+      "wearEligible": true,
+      "reason": "SIDE_BELT"
+    },
+    {
+      "parentId": "citadel/keel",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.05504,
+      "wearEligible": false,
+      "reason": "VENTRAL_KEEL"
+    },
+    {
+      "parentId": "citadel/belly-port",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.017159999999999998,
+      "wearEligible": false,
+      "reason": "BELLY_CITADEL"
+    },
+    {
+      "parentId": "citadel/belly-starboard",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0070050000000000025,
+      "wearEligible": false,
+      "reason": "BELLY_CITADEL"
+    },
+    {
+      "parentId": "citadel/rear-cradle",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.006037500000000001,
+      "wearEligible": false,
+      "reason": "LOWER_HOUSING"
+    },
+    {
+      "parentId": "skin-citadel-0-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.03675,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-1-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0214575,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-2-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0049875,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-3-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0350925,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-4-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.011197499999999999,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-5-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.010402500000000004,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-6-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.012554999999999998,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-6-1",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.017887499999999997,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "skin-citadel-7-0",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.027524999999999997,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-citadel--1",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0257925,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-161-10",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.004612499999999999,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-163-11",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.014609999999999998,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-163-12",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0158325,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-163-13",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.028732499999999998,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-163-14",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.001709999999999999,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-165-15",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0015000000000000013,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-165-16",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.017820000000000003,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-165-17",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0126225,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-18",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.003450000000000003,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-19",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0269925,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-20",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.012112499999999998,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-21",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.032452499999999995,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-22",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.026234999999999998,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-23",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.01833,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-167-24",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0161325,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-169-25",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0188325,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "cap-surface-citadel-171-26",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0011099999999999984,
+      "wearEligible": false,
+      "reason": "BROAD_FINISH"
+    },
+    {
+      "parentId": "command-body",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.043185,
+      "wearEligible": false,
+      "reason": "COMMAND_HOUSING"
+    },
+    {
+      "parentId": "command-optic",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.0028725,
+      "wearEligible": false,
+      "reason": "PROTECTED_SENSOR"
+    },
+    {
+      "parentId": "engine-0-casing",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.007507499999999997,
+      "wearEligible": true,
+      "reason": "OPEN_ENGINE_CASING"
+    },
+    {
+      "parentId": "thermal-citadel--1-housing",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0162075,
+      "wearEligible": false,
+      "reason": "RADIATOR_SUPPORT"
+    },
+    {
+      "parentId": "thermal-citadel--1-fin-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0009825,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "thermal-citadel--1-fin-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.029459999999999997,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "thermal-citadel--1-fin-2",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.01314,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "thermal-citadel-1-housing",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0029549999999999993,
+      "wearEligible": false,
+      "reason": "RADIATOR_SUPPORT"
+    },
+    {
+      "parentId": "thermal-citadel-1-fin-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.032984999999999993,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "thermal-citadel-1-fin-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.011579999999999998,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "thermal-citadel-1-fin-2",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.018862499999999994,
+      "wearEligible": false,
+      "reason": "THERMAL_EXCHANGER"
+    },
+    {
+      "parentId": "citadel/service--1-pump",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0015075000000000004,
+      "wearEligible": true,
+      "reason": "SERVICE_PUMP_HOUSING"
+    },
+    {
+      "parentId": "citadel/service-1-pump",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0348075,
+      "wearEligible": true,
+      "reason": "SERVICE_PUMP_HOUSING"
+    },
+    {
+      "parentId": "cannon-0-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.021105,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "cannon-0-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.03693,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "cannon-0-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.03639749999999999,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "cannon-0-0-cheek--1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0181425,
+      "wearEligible": false,
+      "reason": "HEAVY_SIDE_PROTECTION"
+    },
+    {
+      "parentId": "cannon-0-0-cheek-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.012592500000000003,
+      "wearEligible": false,
+      "reason": "HEAVY_SIDE_PROTECTION"
+    },
+    {
+      "parentId": "cannon-0-0-rear-drive",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.007695000000000001,
+      "wearEligible": false,
+      "reason": "LOCAL_MECHANISM_HOUSING"
+    },
+    {
+      "parentId": "cannon-0-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0339375,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-0-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0309675,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-0-0-shroud-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.010627500000000003,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-0-0-mantlet-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0135975,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-1-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.020354999999999998,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "cannon-1-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.031987499999999995,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "cannon-1-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0132675,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "cannon-1-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0288075,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-1-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.031027499999999996,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-1-0-shroud-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.001635000000000003,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-1-0-mantlet-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0135375,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-1-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.0334425,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "cannon-1-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.0316575,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "cannon-1-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.010312499999999997,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "cannon-1-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.020512499999999996,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-1-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.023257500000000004,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-1-1-shroud-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.024052499999999997,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-1-1-mantlet-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0071849999999999995,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-2-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.016364999999999994,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "cannon-2-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.030352499999999994,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "cannon-2-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.000547499999999998,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "cannon-2-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.011129999999999998,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-2-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.034484999999999995,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-2-0-shroud-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.033435,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-2-0-mantlet-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.004042499999999996,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-2-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.019454999999999997,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "cannon-2-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.016237500000000002,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "cannon-2-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.0313875,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "cannon-2-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0236025,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-2-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.031319999999999994,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "cannon-2-1-shroud-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.006839999999999996,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "cannon-2-1-mantlet-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.000877499999999999,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "missile-0-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.0004875000000000004,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "missile-0-0-body",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0043124999999999995,
+      "wearEligible": false,
+      "reason": "PROTECTED_VLS_BODY"
+    },
+    {
+      "parentId": "missile-0-0-hatch--2.3--3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0234375,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-0-hatch--2.3-0",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0065775,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-0-hatch--2.3-3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.03702,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-0-hatch-2.3--3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.034109999999999994,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-0-hatch-2.3-0",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.025687500000000002,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-0-hatch-2.3-3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.0047550000000000005,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.03483,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "missile-0-1-body",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.020512499999999996,
+      "wearEligible": false,
+      "reason": "PROTECTED_VLS_BODY"
+    },
+    {
+      "parentId": "missile-0-1-hatch--2.3--3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.035895,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-hatch--2.3-0",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.01686,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-hatch--2.3-3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.013582500000000003,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-hatch-2.3--3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.03552,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-hatch-2.3-0",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.033749999999999995,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "missile-0-1-hatch-2.3-3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0249375,
+      "wearEligible": false,
+      "reason": "LAUNCH_HATCH"
+    },
+    {
+      "parentId": "point_defense-0-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.0008024999999999991,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-0-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.015509999999999998,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-0-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0195675,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-0-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.018427499999999996,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-0-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0072450000000000014,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-0-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.012554999999999998,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-0-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.027014999999999997,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-0-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0014099999999999987,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-0-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0028575000000000015,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-0-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.006179999999999998,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-1-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.033839999999999995,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-1-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.011212499999999997,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-1-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.019402500000000003,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-1-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.010492500000000002,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-1-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.009022499999999998,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-1-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.006262500000000002,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-1-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.02517,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-1-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.011017500000000001,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-1-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.016935,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-1-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.009389999999999997,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-2-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.014572499999999997,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-2-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.020114999999999997,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-2-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.024547500000000003,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-2-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0136125,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-2-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0311925,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-2-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.013792499999999996,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-2-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0355725,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-2-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.011812499999999998,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-2-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.027097499999999997,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-2-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.021644999999999998,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-3-0-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.004140000000000002,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-3-0-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.004919999999999999,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-3-0-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": -0.0349125,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-3-0-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.005482500000000004,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-3-0-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.005684999999999998,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "point_defense-3-1-foundation",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.029332499999999997,
+      "wearEligible": false,
+      "reason": "SURFACE_FOUNDATION"
+    },
+    {
+      "parentId": "point_defense-3-1-seat",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.017107499999999998,
+      "wearEligible": false,
+      "reason": "ARMORED_TRAVERSE_SEAT"
+    },
+    {
+      "parentId": "point_defense-3-1-breech",
+      "role": "PRIMARY_ARMOR",
+      "tone": 0.006067499999999997,
+      "wearEligible": false,
+      "reason": "FACETED_BREECH_HOUSING"
+    },
+    {
+      "parentId": "point_defense-3-1-shroud-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.03381,
+      "wearEligible": false,
+      "reason": "OPEN_WEAPON_SHROUD"
+    },
+    {
+      "parentId": "point_defense-3-1-mantlet-0",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0032624999999999985,
+      "wearEligible": false,
+      "reason": "REINFORCED_MANTLET"
+    },
+    {
+      "parentId": "detail/command-house/command/ACCESS_HATCH-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.0333675,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_SEAT"
+    },
+    {
+      "parentId": "detail/command-house/command/ACCESS_HATCH-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.029835,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_INSET"
+    },
+    {
+      "parentId": "detail/command-house/command/ACCESS_HATCH-hinge-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.006547499999999999,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE-1"
+    },
+    {
+      "parentId": "detail/command-house/command/ACCESS_HATCH-hinge1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0276525,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE1"
+    },
+    {
+      "parentId": "detail/command-house/command/ACCESS_HATCH-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.029715,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HANDLE"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0067424999999999985,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_LONG-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0183675,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0263925,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.013844999999999998,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_LONG1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.014699999999999996,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_HANDRAIL-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0013724999999999987,
+      "wearEligible": false,
+      "reason": "EVA_HANDRAIL_SUPPORT11"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rail-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.021967500000000004,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RAIL-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rail1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.017849999999999998,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RAIL1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung0",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.001454999999999998,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG0"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0318975,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung2",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0126675,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG2"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung3",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.017775,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG3"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung4",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.026789999999999998,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG4"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung5",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0036524999999999973,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG5"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung6",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.034095,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG6"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-rung7",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.01047,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_RUNG7"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-anchor-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.017872499999999996,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_ANCHOR-1-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-anchor-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.017835,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_ANCHOR-11"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-anchor1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0035925000000000037,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_ANCHOR1-1"
+    },
+    {
+      "parentId": "detail/command-house/command/EVA_LADDER-anchor11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.016124999999999997,
+      "wearEligible": false,
+      "reason": "EVA_LADDER_ANCHOR11"
+    },
+    {
+      "parentId": "detail/command-house/sensor/SENSOR_STRIP-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.037094999999999996,
+      "wearEligible": false,
+      "reason": "SENSOR_STRIP_SEAT"
+    },
+    {
+      "parentId": "detail/command-house/sensor/SENSOR_STRIP-cell0",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.027689999999999996,
+      "wearEligible": false,
+      "reason": "SENSOR_STRIP_CELL0"
+    },
+    {
+      "parentId": "detail/command-house/sensor/SENSOR_STRIP-cell1",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0027525000000000006,
+      "wearEligible": false,
+      "reason": "SENSOR_STRIP_CELL1"
+    },
+    {
+      "parentId": "detail/command-house/sensor/SENSOR_STRIP-cell2",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.033194999999999995,
+      "wearEligible": false,
+      "reason": "SENSOR_STRIP_CELL2"
+    },
+    {
+      "parentId": "detail/command-house/sensor/SENSOR_STRIP-cell3",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.011369999999999996,
+      "wearEligible": false,
+      "reason": "SENSOR_STRIP_CELL3"
+    },
+    {
+      "parentId": "detail/command-house/sensor/OPTICAL_SENSOR-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0316875,
+      "wearEligible": false,
+      "reason": "OPTICAL_SENSOR_SEAT"
+    },
+    {
+      "parentId": "detail/command-house/sensor/OPTICAL_SENSOR-rim",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.03348,
+      "wearEligible": false,
+      "reason": "OPTICAL_SENSOR_RIM"
+    },
+    {
+      "parentId": "detail/command-house/sensor/OPTICAL_SENSOR-core",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.004125000000000004,
+      "wearEligible": false,
+      "reason": "OPTICAL_SENSOR_CORE"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.024749999999999998,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_SEAT"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.017369999999999997,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_INSET"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-hinge-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.027915,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HINGE-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-hinge1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.003562499999999999,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HINGE1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.013109999999999997,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HANDLE"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE-run0",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0232125,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN0"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE-run1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.021352499999999996,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE-run2",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.037335,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN2"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE-clamp-1.4",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0289425,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_CLAMP-1.4"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/CONDUIT_BUNDLE-clamp1.4",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.028485,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_CLAMP1.4"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-walk",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.018997499999999997,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_WALK"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.020812499999999998,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_LONG-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.03381749999999999,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.02895,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.032827499999999996,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_LONG1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.025859999999999998,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_CATWALK-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.035475,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT11"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_PORT-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.012149999999999998,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_SEAT"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_PORT-rim",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.030022499999999997,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_RIM"
+    },
+    {
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_PORT-core",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.010679999999999997,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_CORE"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0273675,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_SEAT"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0228075,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_INSET"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-hinge-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.036465,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HINGE-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-hinge1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.014969999999999999,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HINGE1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0217725,
+      "wearEligible": true,
+      "reason": "MACHINE_ACCESS_COVER_HANDLE"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE-run0",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0283275,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN0"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE-run1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.002115,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE-run2",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.014205,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_RUN2"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE-clamp-1.4",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.026932499999999998,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_CLAMP-1.4"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/CONDUIT_BUNDLE-clamp1.4",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.027149999999999997,
+      "wearEligible": false,
+      "reason": "CONDUIT_BUNDLE_CLAMP1.4"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-walk",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0230625,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_WALK"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.027982499999999997,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_LONG-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.00261,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.023955,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.009675,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_LONG1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.02901,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_CATWALK-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.009164999999999998,
+      "wearEligible": true,
+      "reason": "SERVICE_CATWALK_SUPPORT11"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_PORT-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.006772499999999999,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_SEAT"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_PORT-rim",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.01413,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_RIM"
+    },
+    {
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_PORT-core",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.0346275,
+      "wearEligible": true,
+      "reason": "SERVICE_PORT_CORE"
+    },
+    {
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.0215775,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0273075,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_INSET"
+    },
+    {
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-hinge-1",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.0071400000000000005,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HINGE-1"
+    },
+    {
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-hinge1",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": 0.032084999999999995,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HINGE1"
+    },
+    {
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.019245,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HANDLE"
+    },
+    {
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.003922500000000001,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0215775,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_INSET"
+    },
+    {
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-hinge-1",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.025815,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HINGE-1"
+    },
+    {
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-hinge1",
+      "role": "FUNCTIONAL_SURFACE",
+      "tone": -0.028769999999999997,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HINGE1"
+    },
+    {
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.015847499999999997,
+      "wearEligible": false,
+      "reason": "DRONE_DOCK_HANDLE"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.036562500000000005,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.013357500000000003,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.035145,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.010979999999999998,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.00048749999999999624,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.01704,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.025117499999999997,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.00204,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.014894999999999999,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade0",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.012554999999999998,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE0"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.017887500000000004,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade2",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0015675000000000023,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE2"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade3",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.03201,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE3"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade4",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.015690000000000003,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE4"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/VENT_LOUVER-blade5",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.028874999999999998,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE5"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/COOLANT_PIPE-run0",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0341025,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_RUN0"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/COOLANT_PIPE-run1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.0036599999999999966,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_RUN1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.028485,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_CLAMP-1.0499999999999998"
+    },
+    {
+      "parentId": "detail/citadel/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.030285000000000003,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_CLAMP1.0499999999999998"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0101325,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.021435000000000003,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0015524999999999996,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.012352499999999997,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.029767500000000002,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.009,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0099675,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0022575000000000013,
+      "wearEligible": true,
+      "reason": "ENGINE_SERVICE_FRAME_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0008925000000000016,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade0",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0326475,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE0"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.011917500000000003,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade2",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.018525,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE2"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade3",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.026039999999999997,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE3"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade4",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0044024999999999976,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE4"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/VENT_LOUVER-blade5",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.034845,
+      "wearEligible": false,
+      "reason": "VENT_LOUVER_BLADE5"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/COOLANT_PIPE-run0",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.031935,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_RUN0"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/COOLANT_PIPE-run1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.001492499999999998,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_RUN1"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.024015,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_CLAMP-1.0499999999999998"
+    },
+    {
+      "parentId": "detail/citadel/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.016755,
+      "wearEligible": false,
+      "reason": "COOLANT_PIPE_CLAMP1.0499999999999998"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/WEAPON_SERVICE_RING-outer-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.037447499999999995,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER-1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/WEAPON_SERVICE_RING-outer1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.034567499999999994,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/WEAPON_SERVICE_RING-brace-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.004777499999999998,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE-1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/WEAPON_SERVICE_RING-brace1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.009539999999999998,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.020887499999999996,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_SEAT"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.018585,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_INSET"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-hinge-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.02328,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE-1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-hinge1",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.012929999999999999,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE1"
+    },
+    {
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.025095,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HANDLE"
+    },
+    {
+      "parentId": "detail/cannon-1-0/service/WEAPON_SERVICE_RING-outer-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.00014250000000000094,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER-1"
+    },
+    {
+      "parentId": "detail/cannon-1-0/service/WEAPON_SERVICE_RING-outer1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0293475,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER1"
+    },
+    {
+      "parentId": "detail/cannon-1-0/service/WEAPON_SERVICE_RING-brace-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.01692,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE-1"
+    },
+    {
+      "parentId": "detail/cannon-1-0/service/WEAPON_SERVICE_RING-brace1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.034199999999999994,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE1"
+    },
+    {
+      "parentId": "detail/cannon-1-1/service/WEAPON_SERVICE_RING-outer-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.004140000000000002,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER-1"
+    },
+    {
+      "parentId": "detail/cannon-1-1/service/WEAPON_SERVICE_RING-outer1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0012525000000000036,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_OUTER1"
+    },
+    {
+      "parentId": "detail/cannon-1-1/service/WEAPON_SERVICE_RING-brace-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.03009,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE-1"
+    },
+    {
+      "parentId": "detail/cannon-1-1/service/WEAPON_SERVICE_RING-brace1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0111825,
+      "wearEligible": true,
+      "reason": "WEAPON_SERVICE_RING_BRACE1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.18/RCS_CLUSTER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.0054075000000000034,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.18/RCS_CLUSTER-nozzle-1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.012067499999999998,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.18/RCS_CLUSTER-nozzle-11",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0031049999999999993,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-11"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.18/RCS_CLUSTER-nozzle1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.023302499999999997,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.18/RCS_CLUSTER-nozzle11",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.016274999999999998,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE11"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.81/RCS_CLUSTER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.012232500000000002,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.81/RCS_CLUSTER-nozzle-1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.02229,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.81/RCS_CLUSTER-nozzle-11",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.014655000000000001,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-11"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.81/RCS_CLUSTER-nozzle1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.036885,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-0.81/RCS_CLUSTER-nozzle11",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.03639749999999999,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE11"
+    },
+    {
+      "parentId": "detail/citadel/rcs-port/RCS_CLUSTER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": 0.020069999999999994,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/rcs-port/RCS_CLUSTER-nozzle-1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.022987499999999998,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-port/RCS_CLUSTER-nozzle-11",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.0295875,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-11"
+    },
+    {
+      "parentId": "detail/citadel/rcs-port/RCS_CLUSTER-nozzle1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.007815,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE1-1"
+    },
+    {
+      "parentId": "detail/citadel/rcs-port/RCS_CLUSTER-nozzle11",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.018449999999999998,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE11"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.02364,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.001957500000000001,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.001754999999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0022875000000000018,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0014474999999999987,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.006645000000000001,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.015022499999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/REINFORCEMENT_BRACKET-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0232725,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/ARMOR_CLAMP-seat",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0223125,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/belt--1/joint/ARMOR_CLAMP-lock",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.030525,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_LOCK"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.006555000000000003,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0249075,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.015007499999999995,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0185925,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.022387499999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.036495,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.022125000000000002,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/REINFORCEMENT_BRACKET-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.022515,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/ARMOR_CLAMP-seat",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.027007499999999997,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/belt-1/joint/ARMOR_CLAMP-lock",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.007649999999999998,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_LOCK"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.021194999999999995,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.014497500000000002,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.035730000000000005,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.02763,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.033555,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0244875,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.014707499999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/REINFORCEMENT_BRACKET-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.012584999999999995,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/ARMOR_CLAMP-seat",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0322725,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/keel/joint/ARMOR_CLAMP-lock",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.023549999999999998,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_LOCK"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.021944999999999996,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.008947499999999997,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.0361275,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0079275,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.022387499999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.017137499999999996,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.013349999999999999,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0093375,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/ARMOR_CLAMP-seat",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.001522499999999999,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/belly-port/joint/ARMOR_CLAMP-lock",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.028102500000000002,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_LOCK"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.005182500000000004,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.02805,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-1-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.027187500000000003,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT-11"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.019012499999999998,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_LONG1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support1-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.029137499999999997,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT1-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support11",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0327225,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_SUPPORT11"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross-1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.0252075,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS-1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross1",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.037282499999999996,
+      "wearEligible": true,
+      "reason": "REINFORCEMENT_BRACKET_CROSS1"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/ARMOR_CLAMP-seat",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": 0.007964999999999996,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/belly-starboard/joint/ARMOR_CLAMP-lock",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.01995,
+      "wearEligible": false,
+      "reason": "ARMOR_CLAMP_LOCK"
+    },
+    {
+      "parentId": "detail/citadel/axial-rcs--1/RCS_CLUSTER-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.01146,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle-1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.001417500000000002,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-1-1"
+    },
+    {
+      "parentId": "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle-11",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.028439999999999997,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE-11"
+    },
+    {
+      "parentId": "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle1-1",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.028132499999999998,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE1-1"
+    },
+    {
+      "parentId": "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle11",
+      "role": "RECESSED_INTERIOR",
+      "tone": 0.008782499999999999,
+      "wearEligible": false,
+      "reason": "RCS_CLUSTER_NOZZLE11"
+    },
+    {
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-seat",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.012982499999999998,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_SEAT"
+    },
+    {
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset",
+      "role": "RECESSED_INTERIOR",
+      "tone": -0.03183,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_INSET"
+    },
+    {
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-hinge-1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.030127499999999998,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE-1"
+    },
+    {
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-hinge1",
+      "role": "SECONDARY_ARMOR",
+      "tone": -0.03363,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HINGE1"
+    },
+    {
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-handle",
+      "role": "MECHANICAL_STRUCTURE",
+      "tone": -0.023055,
+      "wearEligible": true,
+      "reason": "ACCESS_HATCH_HANDLE"
+    }
+  ],
+  "decals": [
+    {
+      "id": "paint-0-IDENTIFICATION",
+      "parentId": "citadel/belt--1",
+      "parentStructureId": "citadel",
+      "kind": "IDENTIFICATION",
+      "text": "AN-0007",
+      "position": {
+        "x": -137.94663692525148,
+        "y": 2.086429992422227,
+        "z": -74.99999999999999
+      },
+      "normal": {
+        "x": -0.9583957111449136,
+        "y": 0,
+        "z": -0.28544292049205855
+      },
+      "right": {
+        "x": -0.28544292049205855,
+        "y": 0,
+        "z": 0.9583957111449133
+      },
+      "up": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "width": 20.03347863176829,
+        "height": 4.397592870388161
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -135.08742960111786,
+            "y": -0.11236644277185359,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -135.08742960111786,
+            "y": 2.086429992422227,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -135.08742960111786,
+            "y": 4.2852264276163075,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -137.94663692525145,
+            "y": -0.11236644277185359,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -137.94663692525145,
+            "y": 2.086429992422227,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -137.94663692525145,
+            "y": 4.2852264276163075,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -140.80584424938505,
+            "y": -0.11236644277185359,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -140.80584424938505,
+            "y": 2.086429992422227,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt--1"
+        },
+        {
+          "position": {
+            "x": -140.80584424938505,
+            "y": 4.2852264276163075,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt--1"
+        }
+      ],
+      "visibility": "FAR",
+      "color": "MARKING",
+      "reason": "Large naval side identification; derived code is not a globally unique registration"
+    },
+    {
+      "id": "paint-2-IDENTIFICATION",
+      "parentId": "citadel/belt-1",
+      "parentStructureId": "citadel",
+      "kind": "IDENTIFICATION",
+      "text": "AN-0007",
+      "position": {
+        "x": 137.94663692525148,
+        "y": 2.086429992422227,
+        "z": -74.99999999999999
+      },
+      "normal": {
+        "x": 0.9583957111449136,
+        "y": 0,
+        "z": -0.28544292049205855
+      },
+      "right": {
+        "x": -0.28544292049205855,
+        "y": 0,
+        "z": -0.9583957111449133
+      },
+      "up": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "width": 20.03347863176829,
+        "height": 4.397592870388161
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": 140.80584424938505,
+            "y": -0.11236644277185359,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 140.80584424938505,
+            "y": 2.086429992422227,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 140.80584424938505,
+            "y": 4.2852264276163075,
+            "z": -65.39999999999998
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 137.94663692525145,
+            "y": -0.11236644277185359,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 137.94663692525145,
+            "y": 2.086429992422227,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 137.94663692525145,
+            "y": 4.2852264276163075,
+            "z": -74.99999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 135.08742960111786,
+            "y": -0.11236644277185359,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 135.08742960111786,
+            "y": 2.086429992422227,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        },
+        {
+          "position": {
+            "x": 135.08742960111786,
+            "y": 4.2852264276163075,
+            "z": -84.59999999999997
+          },
+          "surfaceId": "citadel/belt-1"
+        }
+      ],
+      "visibility": "FAR",
+      "color": "MARKING",
+      "reason": "Large naval side identification; derived code is not a globally unique registration"
+    },
+    {
+      "id": "paint-3-IDENTIFICATION",
+      "parentId": "citadel/shoulder--1",
+      "parentStructureId": "citadel",
+      "kind": "IDENTIFICATION",
+      "text": "AN-0007",
+      "position": {
+        "x": -85.40029498055272,
+        "y": 36.55067588816131,
+        "z": -45
+      },
+      "normal": {
+        "x": -0.05393149883210643,
+        "y": 0.9984308428938728,
+        "z": 0.015074660591622832
+      },
+      "right": {
+        "x": 0.9985443066364393,
+        "y": 0.05393762771899255,
+        "z": 0
+      },
+      "up": {
+        "x": -0.0008130914309811205,
+        "y": 0.01505271650824168,
+        "z": -0.9998863708482316
+      },
+      "size": {
+        "width": 19.72054816418924,
+        "height": 4.328900816529345
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -95.2444556310234,
+            "y": 35.986255237122315,
+            "z": -42.83579553639926
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -95.24621552710315,
+            "y": 36.01883609551407,
+            "z": -45
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -95.24797542318288,
+            "y": 36.05141695390583,
+            "z": -47.16420446360074
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -85.39853508447297,
+            "y": 36.51809502976957,
+            "z": -42.83579553639926
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -85.40029498055272,
+            "y": 36.55067588816132,
+            "z": -45
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -85.40205487663246,
+            "y": 36.583256746553076,
+            "z": -47.16420446360074
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -75.55261453792255,
+            "y": 37.049934822416816,
+            "z": -42.83579553639926
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -75.55437443400228,
+            "y": 37.08251568080858,
+            "z": -45
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -75.55613433008203,
+            "y": 37.11509653920033,
+            "z": -47.16420446360074
+          },
+          "surfaceId": "citadel/shoulder--1"
+        }
+      ],
+      "visibility": "FAR",
+      "color": "MARKING",
+      "reason": "Dorsal / ventral ship identity on actual armor mass"
+    },
+    {
+      "id": "paint-13-COMPARTMENT",
+      "parentId": "citadel/primary",
+      "parentStructureId": "citadel",
+      "kind": "COMPARTMENT",
+      "text": "A22",
+      "position": {
+        "x": 0,
+        "y": 43.60888418809626,
+        "z": -51.65999999999999
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9995696337347987,
+        "z": 0.029335086761089323
+      },
+      "right": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "up": {
+        "x": 0,
+        "y": 0.029335086761089323,
+        "z": -0.9995696337347987
+      },
+      "size": {
+        "width": 5,
+        "height": 1.2
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -2.5,
+            "y": 43.5912831360396,
+            "z": -51.06025821975911
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": -2.5,
+            "y": 43.60888418809625,
+            "z": -51.65999999999999
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": -2.5,
+            "y": 43.6264852401529,
+            "z": -52.259741780240866
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 43.5912831360396,
+            "z": -51.06025821975911
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 43.60888418809625,
+            "z": -51.65999999999999
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 43.6264852401529,
+            "z": -52.259741780240866
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 2.5,
+            "y": 43.5912831360396,
+            "z": -51.06025821975911
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 2.5,
+            "y": 43.60888418809625,
+            "z": -51.65999999999999
+          },
+          "surfaceId": "citadel/primary"
+        },
+        {
+          "position": {
+            "x": 2.5,
+            "y": 43.6264852401529,
+            "z": -52.259741780240866
+          },
+          "surfaceId": "citadel/primary"
+        }
+      ],
+      "visibility": "MEDIUM",
+      "color": "MARKING",
+      "reason": "Armor component compartment code"
+    },
+    {
+      "id": "paint-14-COMPARTMENT",
+      "parentId": "citadel/shoulder--1",
+      "parentStructureId": "citadel",
+      "kind": "COMPARTMENT",
+      "text": "A09",
+      "position": {
+        "x": -102.08542285985942,
+        "y": 34.44114840345267,
+        "z": -91.19999999999999
+      },
+      "normal": {
+        "x": -0.24618521196107462,
+        "y": 0.9332702636850839,
+        "z": -0.26153289722873196
+      },
+      "right": {
+        "x": 0.966924493621074,
+        "y": 0.2550627837134027,
+        "z": 6.93889390390723e-18
+      },
+      "up": {
+        "x": 0.06670730879979161,
+        "y": -0.252882564218144,
+        "z": -0.9651945625971715
+      },
+      "size": {
+        "width": 5,
+        "height": 1.1935417424028696
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -104.54254307270006,
+            "y": 33.954404392329295,
+            "z": -90.62399999999998
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -104.50273409391211,
+            "y": 33.803491444169175,
+            "z": -91.19999999999999
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -104.46292511512415,
+            "y": 33.65257849600906,
+            "z": -91.776
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -102.12523183864738,
+            "y": 34.5920613516128,
+            "z": -90.62399999999998
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -102.08542285985942,
+            "y": 34.44114840345269,
+            "z": -91.19999999999999
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -102.0475729404558,
+            "y": 34.29766210717646,
+            "z": -91.77808119111846
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -99.70792060459469,
+            "y": 35.22971831089631,
+            "z": -90.62399999999998
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -99.67010854713624,
+            "y": 35.08637554650512,
+            "z": -91.20212141345404
+          },
+          "surfaceId": "citadel/shoulder--1"
+        },
+        {
+          "position": {
+            "x": -99.63437371373684,
+            "y": 34.95090738770005,
+            "z": -91.78244954932667
+          },
+          "surfaceId": "citadel/shoulder--1"
+        }
+      ],
+      "visibility": "MEDIUM",
+      "color": "MARKING",
+      "reason": "Armor component compartment code"
+    },
+    {
+      "id": "paint-15-COMPARTMENT",
+      "parentId": "citadel/shoulder-1",
+      "parentStructureId": "citadel",
+      "kind": "COMPARTMENT",
+      "text": "A98",
+      "position": {
+        "x": 61.494043437817204,
+        "y": 34.50669368165535,
+        "z": -106.20000000000002
+      },
+      "normal": {
+        "x": 0.055992145077609315,
+        "y": 0.9626755023383123,
+        "z": -0.2648032418368134
+      },
+      "right": {
+        "x": 0.9983128092493573,
+        "y": -0.058064919604323376,
+        "z": -1.734723475976807e-18
+      },
+      "up": {
+        "x": -0.015375778948218772,
+        "y": -0.26435646825644615,
+        "z": -0.9643024645373018
+      },
+      "size": {
+        "width": 5,
+        "height": 1.2
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": 59.00748688206274,
+            "y": 34.81046986162003,
+            "z": -105.62141852127763
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 58.998261414693815,
+            "y": 34.65185598066616,
+            "z": -106.20000000000002
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 58.98903594732488,
+            "y": 34.49324209971229,
+            "z": -106.7785814787224
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 61.50326890518613,
+            "y": 34.66530756260922,
+            "z": -105.62141852127763
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 61.494043437817204,
+            "y": 34.506693681655356,
+            "z": -106.20000000000002
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 61.484817970448276,
+            "y": 34.348079800701484,
+            "z": -106.7785814787224
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 63.99905092830953,
+            "y": 34.520145263598415,
+            "z": -105.62141852127763
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 63.989825460940594,
+            "y": 34.36153138264454,
+            "z": -106.20000000000002
+          },
+          "surfaceId": "citadel/shoulder-1"
+        },
+        {
+          "position": {
+            "x": 63.980599993571666,
+            "y": 34.20291750169068,
+            "z": -106.7785814787224
+          },
+          "surfaceId": "citadel/shoulder-1"
+        }
+      ],
+      "visibility": "MEDIUM",
+      "color": "MARKING",
+      "reason": "Armor component compartment code"
+    },
+    {
+      "id": "paint-17-COMPARTMENT",
+      "parentId": "citadel/keel",
+      "parentStructureId": "citadel",
+      "kind": "COMPARTMENT",
+      "text": "A85",
+      "position": {
+        "x": 0,
+        "y": -42.85823409921163,
+        "z": 3.870000000000007
+      },
+      "normal": {
+        "x": 0,
+        "y": -0.9997896191197276,
+        "z": 0.020511399280156953
+      },
+      "right": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "up": {
+        "x": 0,
+        "y": -0.020511399280156953,
+        "z": -0.9997896191197276
+      },
+      "size": {
+        "width": 5,
+        "height": 1.2
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": 2.5,
+            "y": -42.8459272596434,
+            "z": 4.469873771471841
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": 2.5,
+            "y": -42.8582340992115,
+            "z": 3.8700000000000045
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": 2.5,
+            "y": -42.8705409387796,
+            "z": 3.2701262285281683
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": -42.8459272596434,
+            "z": 4.469873771471841
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": -42.8582340992115,
+            "z": 3.8700000000000045
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": -42.8705409387796,
+            "z": 3.2701262285281683
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": -2.5,
+            "y": -42.8459272596434,
+            "z": 4.469873771471841
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": -2.5,
+            "y": -42.8582340992115,
+            "z": 3.8700000000000045
+          },
+          "surfaceId": "citadel/keel"
+        },
+        {
+          "position": {
+            "x": -2.5,
+            "y": -42.8705409387796,
+            "z": 3.2701262285281683
+          },
+          "surfaceId": "citadel/keel"
+        }
+      ],
+      "visibility": "MEDIUM",
+      "color": "MARKING",
+      "reason": "Armor component compartment code"
+    },
+    {
+      "id": "paint-20-MAINTENANCE",
+      "parentId": "detail/command-house/command/ACCESS_HATCH-inset",
+      "parentStructureId": "citadel",
+      "kind": "MAINTENANCE",
+      "text": "S21",
+      "position": {
+        "x": -1.8562500000000002,
+        "y": 50.19240824384624,
+        "z": 89.35822017031273
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.997145726619783,
+        "z": 0.07550099260211743
+      },
+      "right": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "up": {
+        "x": 0,
+        "y": 0.07550099260211744,
+        "z": -0.9971457266197832
+      },
+      "size": {
+        "width": 0.555632,
+        "height": 0.22
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -2.1340660000000002,
+            "y": 50.184103134660006,
+            "z": 89.4679062002409
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -2.1340660000000002,
+            "y": 50.19240824384624,
+            "z": 89.35822017031273
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -2.1340660000000002,
+            "y": 50.20071335303247,
+            "z": 89.24853414038456
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.8562500000000002,
+            "y": 50.184103134660006,
+            "z": 89.4679062002409
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.8562500000000002,
+            "y": 50.19240824384624,
+            "z": 89.35822017031273
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.8562500000000002,
+            "y": 50.20071335303247,
+            "z": 89.24853414038456
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.5784340000000001,
+            "y": 50.184103134660006,
+            "z": 89.4679062002409
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.5784340000000001,
+            "y": 50.19240824384624,
+            "z": 89.35822017031273
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -1.5784340000000001,
+            "y": 50.20071335303247,
+            "z": 89.24853414038456
+          },
+          "surfaceId": "detail/command-house/command/ACCESS_HATCH-inset"
+        }
+      ],
+      "visibility": "NEAR",
+      "color": "MARKING",
+      "reason": "Crew access on existing command/sensor housing; no new bridge"
+    },
+    {
+      "id": "paint-30-MAINTENANCE",
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset",
+      "parentStructureId": "citadel",
+      "kind": "MAINTENANCE",
+      "text": "S07",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -154.6296891
+      },
+      "normal": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "right": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "up": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "size": {
+        "width": 0.5556320000000001,
+        "height": 0.22
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": 0.27781600000000006,
+            "y": -0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": 0.27781600000000006,
+            "y": 0,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": 0.27781600000000006,
+            "y": 0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": -0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -0.27781600000000006,
+            "y": -0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -0.27781600000000006,
+            "y": 0,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        },
+        {
+          "position": {
+            "x": -0.27781600000000006,
+            "y": 0.11,
+            "z": -154.6296891
+          },
+          "surfaceId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset"
+        }
+      ],
+      "visibility": "NEAR",
+      "color": "MARKING",
+      "reason": "Limited end-cap inspection access, omitted around actual engine/spinal aperture"
+    },
+    {
+      "id": "paint-31-SHIPYARD",
+      "parentId": "command-body",
+      "parentStructureId": "citadel",
+      "kind": "SHIPYARD",
+      "text": "AEGIS",
+      "position": {
+        "x": 0,
+        "y": 50.900955824277375,
+        "z": 78.28267979509563
+      },
+      "normal": {
+        "x": 0,
+        "y": 0.9971457266197834,
+        "z": 0.07550099260211486
+      },
+      "right": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "up": {
+        "x": 0,
+        "y": 0.07550099260211485,
+        "z": -0.9971457266197832
+      },
+      "size": {
+        "width": 2.5,
+        "height": 0.6
+      },
+      "contacts": [
+        {
+          "position": {
+            "x": -1.25,
+            "y": 50.878305526496725,
+            "z": 78.58182351308157
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": -1.25,
+            "y": 50.90095582427736,
+            "z": 78.28267979509563
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": -1.25,
+            "y": 50.923606122058,
+            "z": 77.98353607710969
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 50.878305526496725,
+            "z": 78.58182351308157
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 50.90095582427736,
+            "z": 78.28267979509563
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 50.923606122058,
+            "z": 77.98353607710969
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 1.25,
+            "y": 50.878305526496725,
+            "z": 78.58182351308157
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 1.25,
+            "y": 50.90095582427736,
+            "z": 78.28267979509563
+          },
+          "surfaceId": "command-body"
+        },
+        {
+          "position": {
+            "x": 1.25,
+            "y": 50.923606122058,
+            "z": 77.98353607710969
+          },
+          "surfaceId": "command-body"
+        }
+      ],
+      "visibility": "MEDIUM",
+      "color": "MARKING",
+      "reason": "Shipyard geometric insignia on command roof"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "paint-0-IDENTIFICATION",
+      "parentId": "citadel/belt--1",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-1-IDENTIFICATION",
+      "parentId": "citadel/belt--1",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-2-IDENTIFICATION",
+      "parentId": "citadel/belt-1",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-3-IDENTIFICATION",
+      "parentId": "citadel/shoulder--1",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-4-IDENTIFICATION",
+      "parentId": "citadel/shoulder--1",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-5-IDENTIFICATION",
+      "parentId": "citadel/shoulder-1",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-6-IDENTIFICATION",
+      "parentId": "citadel/primary",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-7-IDENTIFICATION",
+      "parentId": "citadel/belly-port",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-8-IDENTIFICATION",
+      "parentId": "citadel/belly-starboard",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-9-IDENTIFICATION",
+      "parentId": "citadel/keel",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-10-IDENTIFICATION",
+      "parentId": "citadel/rear-cradle",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-11-IDENTIFICATION",
+      "parentId": "citadel/fore-guard",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-12-IDENTIFICATION",
+      "parentId": "citadel/command-plinth",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-13-COMPARTMENT",
+      "parentId": "citadel/primary",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-14-COMPARTMENT",
+      "parentId": "citadel/shoulder--1",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-15-COMPARTMENT",
+      "parentId": "citadel/shoulder-1",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-16-COMPARTMENT",
+      "parentId": "citadel/command-plinth",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-17-COMPARTMENT",
+      "parentId": "citadel/keel",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-18-COMPARTMENT",
+      "parentId": "citadel/belly-port",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-19-COMPARTMENT",
+      "parentId": "citadel/belly-starboard",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-20-MAINTENANCE",
+      "parentId": "detail/command-house/command/ACCESS_HATCH-inset",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-21-MAINTENANCE",
+      "parentId": "detail/service-citadel/service--1/access/MACHINE_ACCESS_COVER-inset",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-22-MAINTENANCE",
+      "parentId": "detail/service-citadel/service--1/access/SERVICE_PORT-core",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-23-MAINTENANCE",
+      "parentId": "detail/service-citadel/service-1/access/MACHINE_ACCESS_COVER-inset",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-24-MAINTENANCE",
+      "parentId": "detail/service-citadel/service-1/access/SERVICE_PORT-core",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-25-MAINTENANCE",
+      "parentId": "detail/citadel/service--1/DRONE_DOCK-inset",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-26-MAINTENANCE",
+      "parentId": "detail/citadel/service-1/DRONE_DOCK-inset",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-27-MAINTENANCE",
+      "parentId": "detail/citadel/engine-service--1/ENGINE_SERVICE_FRAME-cross-1",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-28-MAINTENANCE",
+      "parentId": "detail/citadel/engine-service-1/ENGINE_SERVICE_FRAME-cross-1",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-29-MAINTENANCE",
+      "parentId": "detail/cannon-0-0/service/ACCESS_HATCH-inset",
+      "status": "omitted",
+      "reason": "No exposed coplanar readable footprint outside equipment/opening reservations"
+    },
+    {
+      "id": "paint-30-MAINTENANCE",
+      "parentId": "detail/citadel/cap-service--1/ACCESS_HATCH-inset",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    },
+    {
+      "id": "paint-31-SHIPYARD",
+      "parentId": "command-body",
+      "status": "accepted",
+      "reason": "Nine exposed triangle contacts; footprint does not cross an armor step or reserved opening"
+    }
+  ],
+  "policy": {
+    "maximumDecals": 48,
+    "atlasWidth": 512,
+    "rowHeight": 32,
+    "defaultFinish": "CLEAN",
+    "visibility": "derivative-filtered / physical footprint"
+  }
+}

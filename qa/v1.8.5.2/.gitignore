@@ -1,0 +1,20 @@
+# Raw WebGL captures and intermediate passes are preserved locally.
+/iteration-01/
+/iteration-02/
+/iteration-03/
+/final/
+/release/
+/diagnostics/
+/rendering/report.json
+/rendering/**/*.png
+/history/v0.blueprint.json
+/history/*.png
+/ui/*.png
+/transform/*.png
+/performance/first-run.json
+/performance/readback/
+/performance/optimized/
+/performance/shipping/
+/performance/final/
+
+/performance/release/

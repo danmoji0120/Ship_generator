@@ -1,0 +1,11 @@
+{
+  "timings": {
+    "surfacesMs": 3,
+    "metadataMs": 4.899999976158142,
+    "placementMs": 95.2000000178814,
+    "totalMs": 103.09999999403954
+  },
+  "decals": 10,
+  "bad": [],
+  "errors": []
+}

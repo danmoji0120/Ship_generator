@@ -1,0 +1,11 @@
+{
+  "baselineCommit": "8ead651434213b9ae707729006c711109fc5fc08",
+  "cases": 222,
+  "released": 200,
+  "rejected": 22,
+  "exactRecordedPhysicalDesignAndRequirements": true,
+  "ignoredOnly": [
+    "ms",
+    "timings"
+  ]
+}

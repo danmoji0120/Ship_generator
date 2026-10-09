@@ -1,3 +1,5 @@
+import {setSurfacePresentation} from './textured-surface';
+import type {FinishProfile} from '../generation/appearance/types';
 import {setDetailVisibility} from './details';
 import type {DetailMode} from '../generation/details/types';
 import * as THREE from "three";
@@ -13,6 +15,7 @@ export class ShipViewer {
   private blueprint?: AnyShipBlueprint;
   private resizeObserver: ResizeObserver;
   private detailMode:DetailMode="AUTO";
+  private finish?:FinishProfile;
   private mode: DebugView = "Normal";
   private radius = 100;
   private disposed = false;
@@ -81,6 +84,7 @@ export class ShipViewer {
       disposeShip(this.ship);
     }
     this.ship = createShip(b, this.mode,this.detailMode);
+    setSurfacePresentation(this.ship,this.finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');
     this.scene.add(this.ship);
     // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
     const shadows = Boolean(b.schemaVersion===2&&(b.layeredArmor?.budget.segmentCount||b.productionDesign?.armor.length));
@@ -102,6 +106,7 @@ export class ShipViewer {
     this.renderer.render(this.scene, this.camera);
     return this.renderer.domElement.toDataURL("image/png");
   }
+  setSurfaceFinish(finish:FinishProfile){this.finish=finish;if(this.ship)setSurfacePresentation(this.ship,finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');}
   setDetailMode(mode:DetailMode){this.detailMode=mode;if(this.ship)setDetailVisibility(this.ship,mode,Infinity);}
   setMode(mode: DebugView) {
     this.mode = mode;

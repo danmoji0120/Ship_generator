@@ -1,3 +1,4 @@
+import {tagSurfaceFinish} from './textured-surface';
 import {functionalPartAppearance,type SurfaceAppearance} from './appearance';
 import {tagAppearance} from './surface-appearance';
 import type {MountFrame} from '../generation/weapons/types';
@@ -14,6 +15,7 @@ export function renderFunctionalPrefabs(placements:readonly PrefabPlacement[],ma
   for(const p of placements)for(const part of p.assembly?.parts??[]){
     const geometry=panelGeometry(part.solid),modern=Boolean(materials.hull.userData.appearance),override=overrides?.get(part.id),spec=override?.spec??functionalPartAppearance(part.role,part.material),category=modern?spec.material:part.material;
     if(modern)tagAppearance(geometry,spec,p.socket?.normal,override?.frame);
+    const finish=materials.hull.userData.surfaceAppearance;if(finish)tagSurfaceFinish(geometry,finish,part.id);
     const list=buckets.get(category)??[];list.push({geometry,prefabId:p.id,partId:part.id,role:part.role});buckets.set(category,list);
   }
   for(const[category,list]of buckets){

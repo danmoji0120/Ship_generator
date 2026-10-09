@@ -14,6 +14,7 @@ import {
 import { getShipyard } from "./shipyards/config";
 import { validateBlueprint } from "./validation/validate";
 import { ShipViewer } from "./rendering/viewer";
+import type {FinishProfile} from './generation/appearance/types';
 import type { DebugView } from "./rendering/ship";
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
@@ -31,6 +32,7 @@ try {
   console.error(e);
 }
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
+$<HTMLSelectElement>("surface-finish").onchange=()=>viewer?.setSurfaceFinish($<HTMLSelectElement>("surface-finish").value as FinishProfile);
 function syncRanges() {
   for (const id of ["length", ...PRIORITIES]) {
     const input = $<HTMLInputElement>(id);

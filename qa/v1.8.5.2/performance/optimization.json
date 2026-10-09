@@ -1,0 +1,19 @@
+{
+  "unoptimized": {
+    "baselineReadbackFrameMedianMs": 124.09999999403954,
+    "surfaceReadbackFrameMedianMs": 308.59999999403954
+  },
+  "final": {
+    "baselineReadbackFrameMedianMs": 95.5,
+    "surfaceReadbackFrameMedianMs": 172.80000001192093,
+    "warmSurfaceReadbackFrameMedianMs": 159.59999999403954
+  },
+  "changes": [
+    "Skip sub-pixel triplanar samples",
+    "Fetch atlas only inside readable footprint",
+    "Use explicit WebGL2 mip gradients",
+    "Pack row/visibility varyings",
+    "Skip unresolvable grain weights and bump math"
+  ],
+  "note": "Same software WebGL rig, separate executions. CPU+driver+readback wall time, not isolated GPU time; show all final samples and variability."
+}

@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.5.1 — Material & Emissive Pass
+# Procedural Shipyard V1.8.5.2 — Surface Texture & Decal Language
 
-일반 주문서의 기본 생성기는 **V1.8.5.1**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.5.2**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -8,6 +8,15 @@ npm run dev
 npm test
 npm run build
 ```
+
+## V1.8.5.2 표면 질감과 함선 마킹
+
+- 기존 5개 재질 계층에 미터 단위의 도장 입자·금속 브러싱·Albedo/Roughness/미세 Normal 변화를 추가합니다. 공유 128² 타일과 Object-local Triplanar 좌표를 사용하며 이동·회전에 따라 질감이 미끄러지지 않습니다.
+- 실제 외장 삼각형에서 넓은 함번, 장갑 구획 번호, 조선소 심볼, 정비 코드와 미사일 접근 경고를 선택합니다. 9개 노출 접촉점과 최종 설비 점유 범위를 검사하며, 지원되지 않는 표식만 생략합니다. 함번은 설계 식별 코드이며 전역 등록번호의 고유성을 보장하지 않습니다.
+- 문자·심볼은 결정적으로 만드는 공유 아틀라스입니다. 추가 Decal 메시·깊은 가짜 홈·새 개구부가 없으며, 기존 형상·삼각형·Draw Call은 유지합니다. 장갑의 큰 톤 변화와 작은 마킹에 Mipmap·가독성 필터를 적용합니다.
+- CLEAN이 저장 기본값입니다. Viewer의 Surface finish(CLEAN/SERVICE/WEATHERED), Surface Texture/Decal Markings Debug와 기존 OFF/LOW/HIGH/AUTO는 표시만 바꾸며 Blueprint JSON을 수정하지 않습니다. 별도 Bloom·동적 광원은 추가하지 않습니다.
+- `materialAppearance.version: "1.8.5.2"`에 재구축 레시피·표면 참조·채택/생략 이유를 보존합니다. 이전 저장 Blueprint는 원래 셰이더로 재생하고 `{version:'1.8.5.1'}`로 기존 생성기를 실행할 수 있습니다.
+- [Material/Texture 구조·Decal 명세·조선소 Profile·캐시·LOD·한계](docs/surface-texture-v1.8.5.2.md) · [실제 렌더·과거 픽셀·회귀·성능 QA](qa/v1.8.5.2/QA.md)
 
 ## V1.8.5.1 재질과 기능성 발광
 

@@ -1,3 +1,4 @@
+import {setSurfacePresentation} from './textured-surface';
 import {renderExteriorDetails} from './details';
 import type {DetailMode} from '../generation/details/types';
 import{decorateWeaponDebug}from'./weapons-qa';
@@ -10,6 +11,7 @@ import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
 export type DebugView =
+  | "Surface Texture" | "Decal Markings"
   | "Normal"
   | "Hull Sections"
   | "Hardpoints"
@@ -23,6 +25,7 @@ export type DebugView =
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
+  if(mode==='Surface Texture'||mode==='Decal Markings'){const r=createShip(b,'Normal',detailMode);setSurfacePresentation(r,undefined,mode==='Surface Texture'?'TEXTURE':'DECAL');return r;}
   if(b.schemaVersion===2&&b.productionDesign&&["Structural Armor Only","Functional Exterior Only","Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode)){
     const copy=structuredClone(b);
     if(mode!=="Functional Exterior Only")copy.exteriorDetailPlan=undefined;
@@ -437,11 +440,12 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
       root.add(detailGroup);
     }
   if(b.schemaVersion===2&&b.exteriorDetailPlan&&["Normal","Equipment"].includes(mode))root.add(renderExteriorDetails(b,m,detailMode));
+  if(b.schemaVersion===2&&b.materialAppearance?.version==='1.8.5.2')root.userData.surfaceMaterials=Object.values(m);
   root.userData.blueprint = b;
   return root;
 }
 export function disposeShip(root: THREE.Object3D) {
-  const materials = new Set<THREE.Material>();
+  const materials = new Set<THREE.Material>(root.userData.surfaceMaterials??[]);
   root.traverse((node) => {
     if(node instanceof THREE.Sprite){node.material.map?.dispose();materials.add(node.material);}
     if (node instanceof THREE.Mesh || node instanceof THREE.Line) {

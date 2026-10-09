@@ -1,0 +1,127 @@
+{
+  "runner": "Vitest 3.2.7",
+  "testFiles": 23,
+  "tests": 677,
+  "durationSeconds": 910.84,
+  "files": [
+    {
+      "file": "tests/design-doctrine-qa.test.ts",
+      "tests": 126,
+      "durationMs": 368801
+    },
+    {
+      "file": "tests/production-matrix.test.ts",
+      "tests": 124,
+      "durationMs": 252209
+    },
+    {
+      "file": "tests/armor.test.ts",
+      "tests": 23,
+      "durationMs": 93732
+    },
+    {
+      "file": "tests/design-requirements-qa.test.ts",
+      "tests": 222,
+      "durationMs": 754144
+    },
+    {
+      "file": "tests/architecture.test.ts",
+      "tests": 9,
+      "durationMs": 46327
+    },
+    {
+      "file": "tests/structural-armor-pilot.test.ts",
+      "tests": 10,
+      "durationMs": 23267
+    },
+    {
+      "file": "tests/shapes-joins.test.ts",
+      "tests": 6,
+      "durationMs": 36754
+    },
+    {
+      "file": "tests/design-requirements-performance.test.ts",
+      "tests": 1,
+      "durationMs": 21235
+    },
+    {
+      "file": "tests/ventral-limited.test.ts",
+      "tests": 7,
+      "durationMs": 18073
+    },
+    {
+      "file": "tests/ventral-structure.test.ts",
+      "tests": 7,
+      "durationMs": 8808
+    },
+    {
+      "file": "tests/material-appearance.test.ts",
+      "tests": 9,
+      "durationMs": 13658
+    },
+    {
+      "file": "tests/structural-armor-limited.test.ts",
+      "tests": 7,
+      "durationMs": 18434
+    },
+    {
+      "file": "tests/exterior-details.test.ts",
+      "tests": 8,
+      "durationMs": 16576
+    },
+    {
+      "file": "tests/integration.test.ts",
+      "tests": 8,
+      "durationMs": 14089
+    },
+    {
+      "file": "tests/surface-texture.test.ts",
+      "tests": 14,
+      "durationMs": 15799
+    },
+    {
+      "file": "tests/production.test.ts",
+      "tests": 20,
+      "durationMs": 26817
+    },
+    {
+      "file": "tests/macro.test.ts",
+      "tests": 9,
+      "durationMs": 13380
+    },
+    {
+      "file": "tests/functional-exterior.test.ts",
+      "tests": 9,
+      "durationMs": 9909
+    },
+    {
+      "file": "tests/design-requirements.test.ts",
+      "tests": 8,
+      "durationMs": 21897
+    },
+    {
+      "file": "tests/weapon-layout.test.ts",
+      "tests": 27,
+      "durationMs": 9070
+    },
+    {
+      "file": "tests/design-doctrine.test.ts",
+      "tests": 8,
+      "durationMs": 3423
+    },
+    {
+      "file": "tests/generation.test.ts",
+      "tests": 12,
+      "durationMs": 2801
+    },
+    {
+      "file": "tests/prefabs.test.ts",
+      "tests": 3,
+      "durationMs": 1967
+    }
+  ],
+  "typescript": "PASS",
+  "productionBuild": "PASS",
+  "buildWarning": "Existing Vite >500kB bundle advisory; viewer 836.71kB / gzip 234.93kB",
+  "isolatedStagedRelease": true
+}

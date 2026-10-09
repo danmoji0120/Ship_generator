@@ -1,0 +1,37 @@
+{
+  "baseline": "8ead651434213b9ae707729006c711109fc5fc08",
+  "frozenCoreMatchesStaged": true,
+  "sha256": {
+    "package-lock.json": "9bebad4024a9641abc1b370edfd2d464dd6a5b825cebca65082ce427644cb0d6",
+    "package.json": "15efc330b855d087e7124d89ff4f6dc85b1d5f64efc50d27bec4af1287c4488b",
+    "src/blueprint/types.ts": "5cba973417ecec9e523097989d0038d00aafbd82d9d5f475df5cb6e950dd2c05",
+    "src/generation/appearance/build.ts": "da1e31703ce09bdfdeb95a63129be8dac81c8be9ea7e81b04edb3847529b577e",
+    "src/generation/appearance/profile.ts": "2f37c1eca285cb7f0b60872f250bf075ab8602c9db497476234e99f005035e54",
+    "src/generation/appearance/types.ts": "15ba26818c25beb0e1569362da10cb951e478d7505bde8dc8524bd33c07aa896",
+    "src/generation/appearance/validate.ts": "53f1cd9a5e32ca3a0d6f5ab6647e6c259cb61a2f5159306d0450abaf948f8a89",
+    "src/generation/generate.ts": "281380f46c4d90f087e9fe0f088053c33ad542dbccf95062cf3b6fc911460236",
+    "src/generation/production/validate.ts": "805fc88cc7a8db32ccf0b253b0843e76faac3cbfd9b2e22c5f11ee6606d96217",
+    "src/main.ts": "93e53505be02dae82214317ee0e1d0f5ca42adb6a21a9b7af2a39ec2e29d97b1",
+    "src/rendering/appearance.ts": "403b3be64bea3cc080db235b7107e5728a2113d151d15c84c295e9db36f90a27",
+    "src/rendering/armor-qa.ts": "feb92d764b0809e5c94a70fdb304508161d8c4e4e15c403a41b18cbbcb27686f",
+    "src/rendering/functional.ts": "b65897c5f7718e517903dcbc986dcb753d7908fd6ecb1acdbef10ca00eb7aafb",
+    "src/rendering/materials.ts": "bea021d53571d70095a3c5e65e30d74fb4852658c389523a6ca81cae3f5fae4c",
+    "src/rendering/ship.ts": "f6ccf942d1d02dad2b4b8df57e707461ff9fb63fa7f68e194935120b7320486b",
+    "src/rendering/surface-assets.ts": "2e80b9dd2c6ace83b479bfb7f8da3644bd28660021e9285ada156025468ea736",
+    "src/rendering/textured-surface.ts": "face4420887c6b4ad1aeb96bf21f36e06c9ad66b5ab29e50c3b36f7866be769a",
+    "src/rendering/viewer.ts": "0160e39f1d71276aaa97406492e1e0bb848cf031a0a5f25b46c14dc04a243c44",
+    "src/ui/layout.ts": "c639a0398a4f10914fde7ede1979cd3c84010d2d0b8643d27c79186f304a703d",
+    "src/validation/validate.ts": "6132587477f6ddbe99b945f05553f2426ea1431247fa3c0d70dd3f6335da6b6c"
+  },
+  "preexistingDraftsPreserved": {
+    "src/generation/armor/build.ts": true,
+    "src/generation/armor/mounts.ts": true,
+    "src/generation/armor/types.ts": true,
+    "src/qa/gallery.ts": true,
+    "src/rendering/armor.ts": true,
+    "src/validation/armor.ts": true,
+    "tests/production-smoke.mjs": true,
+    "generate.ts draft hooks": true,
+    "main.ts draft inspector": true
+  }
+}

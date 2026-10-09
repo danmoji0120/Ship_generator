@@ -1,3 +1,4 @@
+import {setSurfacePresentation} from './textured-surface';
 import {setDetailVisibility} from './details';
 import * as THREE from 'three';
 import type { ShipBlueprint } from '../blueprint/types';
@@ -40,13 +41,14 @@ export class ArmorQARenderer {
     this.scene.add(this.ambient,this.key,this.fill,this.ventral,this.key.target);
     this.key.castShadow=true; this.key.shadow.mapSize.set(1024,1024); this.key.shadow.bias=-.0012;
   }
-  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{inspectionLighting?:boolean;viewDirection?:{x:number;y:number;z:number};detailMode?:import("../generation/details/types").DetailMode;weaponDebug?:WeaponDebug;sizeComparison?:boolean;neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
-    const visualKey=`${options.detailMode??"HIGH"}/${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}/${options.weaponDebug??''}/${Boolean(options.sizeComparison)}`;
+  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{surfaceDebug?:'NONE'|'TEXTURE'|'DECAL';finish?:import('../generation/appearance/types').FinishProfile;environment?:'INSPECTION'|'SPACE'|'SIDE';inspectionLighting?:boolean;viewDirection?:{x:number;y:number;z:number};detailMode?:import("../generation/details/types").DetailMode;weaponDebug?:WeaponDebug;sizeComparison?:boolean;neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
+    const visualKey=`${options.detailMode??"HIGH"}/${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}/${options.weaponDebug??''}/${Boolean(options.sizeComparison)}/${options.environment??'default'}/${options.surfaceDebug??'NONE'}/${options.finish??'default'}`;
     // QA blueprints are immutable. Reuse the exact geometry across camera views, not design data.
     if(this.cachedBlueprint!==b||this.cachedVisualKey!==visualKey) {
     if(this.ship) {this.scene.remove(this.ship);disposeShip(this.ship);}
     const rendered=options.sizeComparison?sizeComparisonBlueprint(b):options.weaponDebug?weaponDebugBlueprint(b):armorStageBlueprint(b,stage);
     this.ship=createShip(rendered,'Normal',options.detailMode??'HIGH');
+    setSurfacePresentation(this.ship,options.finish,options.surfaceDebug);
     const shared=new THREE.MeshStandardMaterial({color:options.reviewLighting?0x798b9a:0x98a4af,roughness:.82,metalness:.12});
     // A consistent neutral clay rig, equally applied to source and prototype, reveals deep structural walls.
     this.ambient.intensity=options.underbodyLighting?1.2:options.reviewLighting ? .8 : 1.8;
@@ -100,6 +102,8 @@ export class ArmorQARenderer {
     this.renderer.setClearColor(options.black?0xffffff:0x172431);
     this.renderer.shadowMap.enabled=!options.black;
     if(options.detailMode==='AUTO')setDetailVisibility(this.ship!,'AUTO',b.order.length*this.size/extent);
+    if(options.environment==='SPACE'){this.ambient.intensity=.12;this.key.intensity=.65;this.fill.intensity=.13;this.ventral.intensity=.10;this.renderer.setClearColor(0x040910);}
+    if(options.environment==='SIDE'){this.ambient.intensity=.25;this.key.intensity=2;this.fill.intensity=.30;this.ventral.intensity=.15;this.key.position.copy(center).add(new THREE.Vector3(-l,l*.25,-l*.7));}
     this.renderer.render(this.scene,camera);
     return {pixels:this.renderer.domElement.toDataURL('image/png'),stage,view,frameMeters:extent,projection:'orthographic',scale:options.scale??'fixed',size:this.size,diagnostics:{calls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles}};
   }

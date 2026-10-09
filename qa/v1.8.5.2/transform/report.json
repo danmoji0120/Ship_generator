@@ -1,0 +1,16 @@
+{
+  "meanAbsoluteChannelDifference": 0,
+  "maximumChannelDifference": 0,
+  "pixelsDifferingByMoreThanOne": 0,
+  "physicalJSONUnchanged": true,
+  "transform": {
+    "yawRadians": 0.63,
+    "translation": [
+      17,
+      -9,
+      27
+    ]
+  },
+  "lighting": "Rotation-invariant ambient rig; ship and camera receive identical rigid transform; no shadow reprojection",
+  "errors": []
+}

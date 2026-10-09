@@ -1,0 +1,393 @@
+{
+  "rows": [
+    {
+      "case": {
+        "label": "MONOLITHIC",
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL",
+        "seed": 7
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 10,
+      "omissions": 22,
+      "globalTriangleContacts": 90,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "BLOCK_ASSEMBLY",
+        "architecture": "BLOCK_ASSEMBLY",
+        "family": "HAMMERHEAD",
+        "seed": 7
+      },
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "decals": 20,
+      "omissions": 20,
+      "globalTriangleContacts": 180,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "SPINE_AND_MODULES",
+        "architecture": "SPINE_AND_MODULES",
+        "family": "WEAPON_DOMINANT",
+        "seed": 7
+      },
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "decals": 9,
+      "omissions": 72,
+      "globalTriangleContacts": 81,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "TRUSS_POD",
+        "architecture": "TRUSS_POD",
+        "family": "SPLIT_FRAME",
+        "seed": 7
+      },
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "decals": 14,
+      "omissions": 117,
+      "globalTriangleContacts": 126,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "TWIN_HULL",
+        "architecture": "TWIN_HULL",
+        "family": "WIDE_CARRIER",
+        "seed": 7
+      },
+      "architecture": "TWIN_HULL",
+      "family": "WIDE_CARRIER",
+      "decals": 13,
+      "omissions": 53,
+      "globalTriangleContacts": 117,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "CORE_AND_NACELLES",
+        "architecture": "CORE_AND_NACELLES",
+        "family": "ENGINE_DOMINANT",
+        "seed": 7
+      },
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "decals": 7,
+      "omissions": 101,
+      "globalTriangleContacts": 63,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "STACKED_BLOCKS",
+        "architecture": "STACKED_BLOCKS",
+        "family": "WEDGE_CITADEL",
+        "seed": 7
+      },
+      "architecture": "STACKED_BLOCKS",
+      "family": "WEDGE_CITADEL",
+      "decals": 6,
+      "omissions": 23,
+      "globalTriangleContacts": 54,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "HYBRID",
+        "architecture": "HYBRID",
+        "family": "SPLIT_FRAME",
+        "seed": 7
+      },
+      "architecture": "HYBRID",
+      "family": "SPLIT_FRAME",
+      "decals": 9,
+      "omissions": 74,
+      "globalTriangleContacts": 81,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Corvette",
+        "role": "Corvette",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 19,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Frigate",
+        "role": "Frigate",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 19,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Destroyer",
+        "role": "Destroyer",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 17,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Cruiser",
+        "role": "Cruiser",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 20,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Battlecruiser",
+        "role": "Battlecruiser",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 10,
+      "omissions": 20,
+      "globalTriangleContacts": 90,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Battleship",
+        "role": "Battleship",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 16,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Missile Ship",
+        "role": "Missile Ship",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 11,
+      "omissions": 19,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Spinal Gun Ship",
+        "role": "Spinal Gun Ship",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEAPON_DOMINANT",
+      "decals": 5,
+      "omissions": 36,
+      "globalTriangleContacts": 45,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "Patrol Ship",
+        "role": "Patrol Ship",
+        "seed": 23
+      },
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "decals": 10,
+      "omissions": 19,
+      "globalTriangleContacts": 90,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "aegis",
+        "shipyardId": "aegis",
+        "seed": 11
+      },
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "decals": 18,
+      "omissions": 18,
+      "globalTriangleContacts": 162,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "vesper",
+        "shipyardId": "vesper",
+        "seed": 11
+      },
+      "architecture": "TWIN_HULL",
+      "family": "ENGINE_DOMINANT",
+      "decals": 10,
+      "omissions": 55,
+      "globalTriangleContacts": 90,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "forge",
+        "shipyardId": "forge",
+        "seed": 11
+      },
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "decals": 14,
+      "omissions": 139,
+      "globalTriangleContacts": 126,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "serein",
+        "shipyardId": "serein",
+        "seed": 11
+      },
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "decals": 21,
+      "omissions": 36,
+      "globalTriangleContacts": 189,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "40m",
+        "length": 40,
+        "role": "Corvette",
+        "seed": 41
+      },
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "decals": 0,
+      "omissions": 97,
+      "globalTriangleContacts": 0,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "120m",
+        "length": 120,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "decals": 5,
+      "omissions": 26,
+      "globalTriangleContacts": 45,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "300m",
+        "length": 300,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "decals": 8,
+      "omissions": 24,
+      "globalTriangleContacts": 72,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    },
+    {
+      "case": {
+        "label": "600m",
+        "length": 600,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "decals": 11,
+      "omissions": 16,
+      "globalTriangleContacts": 99,
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true,
+      "issues": []
+    }
+  ],
+  "errors": [],
+  "geometry": "Independent complete-scene ray/triangle contact checks, in addition to production conservative footprint exclusion"
+}

@@ -1,7 +1,8 @@
 import type {ShipBlueprint} from '../blueprint/types';
 import type {DetailKitType} from '../generation/details/types';
 /** Immutable version selector. Rendering modes do not change this serialized contract. */
-export interface MaterialAppearance {version:'1.8.5.1';language:'aegis'|'vesper'|'forge'|'serein'}
+export type MaterialLanguage='aegis'|'vesper'|'forge'|'serein';
+export type MaterialAppearance = {version:'1.8.5.1';language:MaterialLanguage} | import('../generation/appearance/types').SurfaceAppearancePlan;
 export type MaterialRole='PRIMARY_ARMOR'|'SECONDARY_ARMOR'|'MECHANICAL_STRUCTURE'|'RECESSED_INTERIOR'|'FUNCTIONAL_SURFACE';
 export type EmissiveRole='BRIDGE_LIGHT'|'STATUS_LIGHT'|'MAINTENANCE_GUIDE'|'SENSOR_EMISSIVE'|'PROPULSION_EMISSIVE'|'WEAPON_STATUS'|'NAV_LIGHT';
 export type SurfacePattern='NONE'|'STATUS'|'GUIDE'|'LENS'|'WINDOW'|'HATCH'|'HAZARD'|'IDENTIFICATION';
