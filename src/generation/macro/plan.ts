@@ -1,3 +1,4 @@
+import {refineStackedModules} from "./stacked";
 import {reserveRequirementMacro,type RequirementPlan} from '../production/requirements';
 import type {
   ArchitectureGrammar,
@@ -73,6 +74,7 @@ export function createMacroPlan(
   seed: number,
   forced?: MacroFamily,
   requirements?: RequirementPlan,
+  stackedRefinement = true,
 ): MacroDesignPlan {
   const rng = new SeededRng((seed ^ 0x18ac73f1) >>> 0),
     weights = macroWeights(order, yard, grammar);
@@ -666,6 +668,7 @@ export function createMacroPlan(
       "functional",
     );
   }
+  if(grammar === "STACKED_BLOCKS" && stackedRefinement)refineStackedModules(order,yard,modules,composition,variant,family === "HAMMERHEAD");
   // Composition refines the family recipe while preserving its dominant region and graph.
   if (grammar === "MONOLITHIC") {
     if (composition === "BROAD_CITADEL") modules[0].dimensions.x *= 1.04;

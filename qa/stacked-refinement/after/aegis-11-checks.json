@@ -1,0 +1,97 @@
+{
+  "case": {
+    "shipyardId": "aegis",
+    "seed": 11,
+    "length": 500,
+    "role": "Frigate",
+    "family": "HAMMERHEAD",
+    "massClass": "Heavy"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": true,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 10257927.29010518,
+      "centroid": 0.47765367562398,
+      "fore": 0.3506125353920168,
+      "mid": 0.375879733955347,
+      "aft": 0.27350773065263617
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 3122309.0857411628,
+      "centroid": 0.48587925956386674,
+      "fore": 0.18162513117745316,
+      "mid": 0.6866946320561311,
+      "aft": 0.1316802367664157
+    },
+    "ratios": {
+      "x": 0.712,
+      "y": 0.6999999999999998,
+      "z": 0.6
+    },
+    "individualUpperVolumeRatio": 0.3622980774551802,
+    "upperNormalizedCenter": 0.4729,
+    "frontRectangularity": 0.6989795918367347,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.384
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.41600000000000004
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.3445000000000001
+      }
+    ],
+    "estimatedMassTonnes": 3588078,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 12039133.742258582,
+      "centroid": 0.36047831481598286,
+      "fore": 0.519511774877,
+      "mid": 0.34780703926421275,
+      "aft": 0.13268118585878724
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 5052714.728603913,
+      "centroid": 0.2853079649041836,
+      "fore": 0.5876348330596959,
+      "mid": 0.4123651669403031,
+      "aft": 0
+    },
+    "ratios": {
+      "x": 0.6200000000000001,
+      "y": 1,
+      "z": 0.56
+    },
+    "individualUpperVolumeRatio": 0.5865229751882018,
+    "upperNormalizedCenter": 0.28,
+    "frontRectangularity": 0.6989795918367347,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.5330000000000001
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 1
+      },
+      {
+        "id": "command-deck",
+        "ratio": 1
+      }
+    ],
+    "estimatedMassTonnes": 4227196,
+    "physicalMassCentroid": null
+  }
+}

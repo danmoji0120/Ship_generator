@@ -1,0 +1,13 @@
+{
+  "case": {
+    "shipyardId": "vesper",
+    "seed": 7,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "WEDGE_CITADEL",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null
+}

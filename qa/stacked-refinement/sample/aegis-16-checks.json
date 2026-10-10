@@ -1,0 +1,56 @@
+{
+  "case": {
+    "shipyardId": "aegis",
+    "seed": 16,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "HAMMERHEAD",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 2298254.3382556266,
+      "centroid": 0.4636171675897065,
+      "fore": 0.3671173995240399,
+      "mid": 0.38885845111483397,
+      "aft": 0.24402414936112585
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 671619.6203944444,
+      "centroid": 0.43150117660206205,
+      "fore": 0.24456923352125784,
+      "mid": 0.7450606637281527,
+      "aft": 0.010370102750589512
+    },
+    "ratios": {
+      "x": 0.712,
+      "y": 0.78,
+      "z": 0.515
+    },
+    "individualUpperVolumeRatio": 0.34651223265177616,
+    "upperNormalizedCenter": 0.42,
+    "frontRectangularity": 0.6836734693877551,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.3840000000000001
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.4159999999999999
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.3445
+      }
+    ],
+    "estimatedMassTonnes": 798611,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": null
+}

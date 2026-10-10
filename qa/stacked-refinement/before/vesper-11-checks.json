@@ -1,0 +1,13 @@
+{
+  "case": {
+    "shipyardId": "vesper",
+    "seed": 11,
+    "length": 500,
+    "role": "Frigate",
+    "family": "HAMMERHEAD",
+    "massClass": "Heavy"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null
+}

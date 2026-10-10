@@ -105,7 +105,7 @@ export function generateBlueprint(
   const selection = selectArchitecture(order, yard, new SeededRng(seed));
   if (qaOptions?.architecture) selection.grammar = qaOptions.architecture;
   const initialPlan = (!qaOptions?.version || qaOptions.version === "1.8")
-    ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family,qaOptions?.requirementPlan)
+    ? createMacroPlan(order, yard, selection.grammar, seed, qaOptions?.family,qaOptions?.requirementPlan,Boolean(qaOptions?.productionBase))
     : undefined;
   const selectedFamily = initialPlan?.family;
   let lastErrors: string[] = [];
@@ -128,7 +128,7 @@ export function generateBlueprint(
             yard,
             grammar,
             seed + candidate,
-            selectedFamily,qaOptions?.requirementPlan,
+            selectedFamily,qaOptions?.requirementPlan,Boolean(qaOptions?.productionBase),
           )
       : undefined;
     if (macro) macro.source = qaOptions?.family ? "qa-fixed" : "order";

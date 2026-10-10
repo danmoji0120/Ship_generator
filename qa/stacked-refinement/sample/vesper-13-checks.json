@@ -1,0 +1,56 @@
+{
+  "case": {
+    "shipyardId": "vesper",
+    "seed": 13,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "WEDGE_CITADEL",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 1290989.9060939995,
+      "centroid": 0.5445771282132323,
+      "fore": 0.21233889151647006,
+      "mid": 0.45002296386720325,
+      "aft": 0.33763814461632685
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 295064.3243527912,
+      "centroid": 0.610735080783547,
+      "fore": 0.02489454595284704,
+      "mid": 0.600796080048173,
+      "aft": 0.3743093739989801
+    },
+    "ratios": {
+      "x": 0.61,
+      "y": 0.7,
+      "z": 0.6
+    },
+    "individualUpperVolumeRatio": 0.25727144850526423,
+    "upperNormalizedCenter": 0.5939,
+    "frontRectangularity": 0.6556122448979592,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.192
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.31200000000000006
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.3445000000000001
+      }
+    ],
+    "estimatedMassTonnes": 444442,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": null
+}

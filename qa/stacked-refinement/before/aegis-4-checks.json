@@ -1,0 +1,13 @@
+{
+  "case": {
+    "shipyardId": "aegis",
+    "seed": 4,
+    "length": 120,
+    "role": "Frigate",
+    "family": "HAMMERHEAD",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null
+}

@@ -1,0 +1,494 @@
+[
+  {
+    "case": {
+      "shipyardId": "aegis",
+      "seed": 7,
+      "length": 300,
+      "role": "Cruiser",
+      "family": "WEDGE_CITADEL",
+      "massClass": "Standard"
+    },
+    "issues": [],
+    "deterministic": true,
+    "replayEqual": true,
+    "afterMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 2798384.606776769,
+        "centroid": 0.5515621023283825,
+        "fore": 0.20532315145122168,
+        "mid": 0.4413372486250143,
+        "aft": 0.35333959992376424
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 719739.0154968557,
+        "centroid": 0.6357863445495217,
+        "fore": 0.006756396793730032,
+        "mid": 0.554328367525753,
+        "aft": 0.4389152356805171
+      },
+      "ratios": {
+        "x": 0.736,
+        "y": 0.62,
+        "z": 0.6
+      },
+      "individualUpperVolumeRatio": 0.2800088446630678,
+      "upperNormalizedCenter": 0.6209,
+      "frontRectangularity": 0.7908163265306123,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.19200000000000003
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 0.416
+        },
+        {
+          "id": "command-deck",
+          "ratio": 0.34450000000000003
+        }
+      ],
+      "estimatedMassTonnes": 1001642,
+      "physicalMassCentroid": null
+    },
+    "beforeMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 3224629.068984839,
+        "centroid": 0.47819895787712313,
+        "fore": 0.2905866454801182,
+        "mid": 0.4835909284080546,
+        "aft": 0.22582242611182665
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 1411575.6094379409,
+        "centroid": 0.414188079578626,
+        "fore": 0.37389296753878565,
+        "mid": 0.5041632052442018,
+        "aft": 0.1219438272170119
+      },
+      "ratios": {
+        "x": 0.6200000000000001,
+        "y": 1,
+        "z": 0.7
+      },
+      "individualUpperVolumeRatio": 0.6255098272183485,
+      "upperNormalizedCenter": 0.42,
+      "frontRectangularity": 0.7040816326530612,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.1394
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 1
+        },
+        {
+          "id": "command-deck",
+          "ratio": 1
+        }
+      ],
+      "estimatedMassTonnes": 1137908,
+      "physicalMassCentroid": null
+    }
+  },
+  {
+    "case": {
+      "shipyardId": "serein",
+      "seed": 11,
+      "length": 500,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Heavy"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "aegis",
+      "seed": 4,
+      "length": 120,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Standard"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "vesper",
+      "seed": 11,
+      "length": 500,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Heavy"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "forge",
+      "seed": 7,
+      "length": 300,
+      "role": "Cruiser",
+      "family": "WEDGE_CITADEL",
+      "massClass": "Standard"
+    },
+    "issues": [],
+    "deterministic": true,
+    "replayEqual": true,
+    "afterMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 2280128.2661160887,
+        "centroid": 0.5486410838016738,
+        "fore": 0.21143231452191275,
+        "mid": 0.43832861378678106,
+        "aft": 0.3502390716913061
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 558478.7992988337,
+        "centroid": 0.635569551494728,
+        "fore": 0.007017734766727894,
+        "mid": 0.5542800607539851,
+        "aft": 0.4387022044792872
+      },
+      "ratios": {
+        "x": 0.7060000000000001,
+        "y": 0.62,
+        "z": 0.6
+      },
+      "individualUpperVolumeRatio": 0.26859544066864927,
+      "upperNormalizedCenter": 0.6209,
+      "frontRectangularity": 0.8086734693877551,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.19199999999999995
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 0.4160000000000001
+        },
+        {
+          "id": "command-deck",
+          "ratio": 0.34450000000000003
+        }
+      ],
+      "estimatedMassTonnes": 810808,
+      "physicalMassCentroid": null
+    },
+    "beforeMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 2491177.2852858556,
+        "centroid": 0.48491285645059773,
+        "fore": 0.275048710953674,
+        "mid": 0.49874403154659835,
+        "aft": 0.22620725749972745
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 1019852.9380477159,
+        "centroid": 0.42414882309550506,
+        "fore": 0.3411150089684394,
+        "mid": 0.5499936171791177,
+        "aft": 0.1088913738524425
+      },
+      "ratios": {
+        "x": 0.6200000000000001,
+        "y": 1,
+        "z": 0.7
+      },
+      "individualUpperVolumeRatio": 0.5614524083292961,
+      "upperNormalizedCenter": 0.42,
+      "frontRectangularity": 0.7040816326530612,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.1394
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 0.4835999999999999
+        },
+        {
+          "id": "command-deck",
+          "ratio": 0.4835999999999999
+        }
+      ],
+      "estimatedMassTonnes": 875309,
+      "physicalMassCentroid": null
+    }
+  },
+  {
+    "case": {
+      "shipyardId": "forge",
+      "seed": 4,
+      "length": 120,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Standard"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "vesper",
+      "seed": 7,
+      "length": 300,
+      "role": "Cruiser",
+      "family": "WEDGE_CITADEL",
+      "massClass": "Standard"
+    },
+    "issues": [],
+    "deterministic": true,
+    "replayEqual": true,
+    "afterMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 1274263.1297546611,
+        "centroid": 0.5482468825653828,
+        "fore": 0.2142924925063207,
+        "mid": 0.435112510747384,
+        "aft": 0.35059499674629524
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 286497.53965379763,
+        "centroid": 0.6396402191907642,
+        "fore": 0.005404990139376965,
+        "mid": 0.5489688641009116,
+        "aft": 0.44562614575971143
+      },
+      "ratios": {
+        "x": 0.646,
+        "y": 0.62,
+        "z": 0.6
+      },
+      "individualUpperVolumeRatio": 0.2413170036424555,
+      "upperNormalizedCenter": 0.6209,
+      "frontRectangularity": 0.7551020408163265,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.192
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 0.312
+        },
+        {
+          "id": "command-deck",
+          "ratio": 0.3444999999999999
+        }
+      ],
+      "estimatedMassTonnes": 450482,
+      "physicalMassCentroid": null
+    },
+    "beforeMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 1602885.7945246277,
+        "centroid": 0.47819895787712313,
+        "fore": 0.2905866454801185,
+        "mid": 0.48359092840805507,
+        "aft": 0.22582242611182682
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 701660.3906562857,
+        "centroid": 0.4141880795786259,
+        "fore": 0.3738929675387863,
+        "mid": 0.5041632052442028,
+        "aft": 0.12194382721701205
+      },
+      "ratios": {
+        "x": 0.6200000000000001,
+        "y": 1,
+        "z": 0.7
+      },
+      "individualUpperVolumeRatio": 0.6255098272183487,
+      "upperNormalizedCenter": 0.42,
+      "frontRectangularity": 0.7040816326530612,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.1394
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 1
+        },
+        {
+          "id": "command-deck",
+          "ratio": 1
+        }
+      ],
+      "estimatedMassTonnes": 565627,
+      "physicalMassCentroid": null
+    }
+  },
+  {
+    "case": {
+      "shipyardId": "serein",
+      "seed": 4,
+      "length": 120,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Standard"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "forge",
+      "seed": 11,
+      "length": 500,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Heavy"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "vesper",
+      "seed": 4,
+      "length": 120,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Standard"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "aegis",
+      "seed": 11,
+      "length": 500,
+      "role": "Frigate",
+      "family": "HAMMERHEAD",
+      "massClass": "Heavy"
+    },
+    "rejected": "DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: No requirements-compliant physical candidate: [{\"candidate\":0,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":0,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]},{\"candidate\":1,\"architecture\":\"STACKED_BLOCKS\",\"family\":\"HAMMERHEAD\",\"stage\":\"physical-candidate\",\"codes\":[\"REQUIRED_PHYSICAL_DESIGN_INVALID\"],\"reasons\":[\"No valid V1.8 STACKED_BLOCKS/HAMMERHEAD design after 5 candidates: Hammerhead fore mass budget; attempts=[{\\\"candidate\\\":1,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":2,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":3,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false},{\\\"candidate\\\":4,\\\"family\\\":\\\"HAMMERHEAD\\\",\\\"architecture\\\":\\\"STACKED_BLOCKS\\\",\\\"reasons\\\":[\\\"Hammerhead fore mass budget\\\"],\\\"structures\\\":[],\\\"replacement\\\":false}]\"]}]",
+    "issues": [],
+    "deterministic": null
+  },
+  {
+    "case": {
+      "shipyardId": "serein",
+      "seed": 7,
+      "length": 300,
+      "role": "Cruiser",
+      "family": "WEDGE_CITADEL",
+      "massClass": "Standard"
+    },
+    "issues": [],
+    "deterministic": true,
+    "replayEqual": true,
+    "afterMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 1516599.3767039408,
+        "centroid": 0.5494500039195687,
+        "fore": 0.2099867700508313,
+        "mid": 0.4387579079809848,
+        "aft": 0.35125532196818393
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 365814.35534988745,
+        "centroid": 0.635697709012653,
+        "fore": 0.006985929900613409,
+        "mid": 0.5539948283182861,
+        "aft": 0.43901924178110047
+      },
+      "ratios": {
+        "x": 0.6960000000000001,
+        "y": 0.62,
+        "z": 0.6
+      },
+      "individualUpperVolumeRatio": 0.2647909726705099,
+      "upperNormalizedCenter": 0.6209,
+      "frontRectangularity": 0.75,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.192
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 0.416
+        },
+        {
+          "id": "command-deck",
+          "ratio": 0.3445000000000001
+        }
+      ],
+      "estimatedMassTonnes": 535310,
+      "physicalMassCentroid": null
+    },
+    "beforeMetrics": {
+      "union": {
+        "method": "station union midpoint 64×32",
+        "volume": 1743155.4430287331,
+        "centroid": 0.48267156278947565,
+        "fore": 0.28449267297170294,
+        "mid": 0.4833731970843449,
+        "aft": 0.23213412994395222
+      },
+      "upperUnion": {
+        "method": "station union midpoint 64×32",
+        "volume": 617968.4662767419,
+        "centroid": 0.4133393943737669,
+        "fore": 0.37373131321405056,
+        "mid": 0.5070527762988412,
+        "aft": 0.11921591048710761
+      },
+      "ratios": {
+        "x": 0.62,
+        "y": 1,
+        "z": 0.7
+      },
+      "individualUpperVolumeRatio": 0.4618975738800122,
+      "upperNormalizedCenter": 0.42,
+      "frontRectangularity": 0.6836734693877551,
+      "frontCapToMaximumSection": [
+        {
+          "id": "armored-keel",
+          "ratio": 0.1394
+        },
+        {
+          "id": "magazine-deck",
+          "ratio": 1
+        },
+        {
+          "id": "command-deck",
+          "ratio": 1
+        }
+      ],
+      "estimatedMassTonnes": 591307,
+      "physicalMassCentroid": null
+    }
+  }
+]

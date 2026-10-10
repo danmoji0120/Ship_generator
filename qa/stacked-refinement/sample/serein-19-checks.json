@@ -1,0 +1,56 @@
+{
+  "case": {
+    "shipyardId": "serein",
+    "seed": 19,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "WEDGE_CITADEL",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 1354841.4432815819,
+      "centroid": 0.5446761430516179,
+      "fore": 0.21020043741045383,
+      "mid": 0.45325008158701047,
+      "aft": 0.33654948100253573
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 333399.06277098216,
+      "centroid": 0.6064170877570325,
+      "fore": 0.030916268663659163,
+      "mid": 0.601093656048682,
+      "aft": 0.3679900752876594
+    },
+    "ratios": {
+      "x": 0.66,
+      "y": 0.7,
+      "z": 0.6
+    },
+    "individualUpperVolumeRatio": 0.2834942282484601,
+    "upperNormalizedCenter": 0.5939,
+    "frontRectangularity": 0.6709183673469388,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.192
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.4160000000000001
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.3445
+      }
+    ],
+    "estimatedMassTonnes": 467169,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": null
+}

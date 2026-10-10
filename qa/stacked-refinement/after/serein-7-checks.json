@@ -1,0 +1,97 @@
+{
+  "case": {
+    "shipyardId": "serein",
+    "seed": 7,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "WEDGE_CITADEL",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": true,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 1542457.222661802,
+      "centroid": 0.5465229938923776,
+      "fore": 0.20593512426616065,
+      "mid": 0.4547733276832653,
+      "aft": 0.3392915480505742
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 404814.90387657285,
+      "centroid": 0.6059620377427926,
+      "fore": 0.03839693698552503,
+      "mid": 0.5840501772444185,
+      "aft": 0.37755288577005625
+    },
+    "ratios": {
+      "x": 0.6960000000000001,
+      "y": 0.7,
+      "z": 0.6
+    },
+    "individualUpperVolumeRatio": 0.29895754978928535,
+    "upperNormalizedCenter": 0.5909,
+    "frontRectangularity": 0.6989795918367347,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.19199999999999998
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.416
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.3445000000000001
+      }
+    ],
+    "estimatedMassTonnes": 531912,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 1743155.4430287331,
+      "centroid": 0.48267156278947565,
+      "fore": 0.28449267297170294,
+      "mid": 0.4833731970843449,
+      "aft": 0.23213412994395222
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 617968.4662767419,
+      "centroid": 0.4133393943737669,
+      "fore": 0.37373131321405056,
+      "mid": 0.5070527762988412,
+      "aft": 0.11921591048710761
+    },
+    "ratios": {
+      "x": 0.62,
+      "y": 1,
+      "z": 0.7
+    },
+    "individualUpperVolumeRatio": 0.4618975738800122,
+    "upperNormalizedCenter": 0.42,
+    "frontRectangularity": 0.6836734693877551,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.1394
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 1
+      },
+      {
+        "id": "command-deck",
+        "ratio": 1
+      }
+    ],
+    "estimatedMassTonnes": 591307,
+    "physicalMassCentroid": null
+  }
+}

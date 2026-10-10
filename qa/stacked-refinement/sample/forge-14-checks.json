@@ -1,0 +1,56 @@
+{
+  "case": {
+    "shipyardId": "forge",
+    "seed": 14,
+    "length": 300,
+    "role": "Cruiser",
+    "family": "HAMMERHEAD",
+    "massClass": "Standard"
+  },
+  "issues": [],
+  "deterministic": true,
+  "replayEqual": null,
+  "afterMetrics": {
+    "union": {
+      "method": "station union midpoint 64×32",
+      "volume": 1824346.526678984,
+      "centroid": 0.4676525031493545,
+      "fore": 0.3668535568032345,
+      "mid": 0.3758525974771025,
+      "aft": 0.25729384571966313
+    },
+    "upperUnion": {
+      "method": "station union midpoint 64×32",
+      "volume": 532251.3850628034,
+      "centroid": 0.4399550766902016,
+      "fore": 0.24634674323631536,
+      "mid": 0.7101712257873191,
+      "aft": 0.04348203097636586
+    },
+    "ratios": {
+      "x": 0.6940000000000001,
+      "y": 0.74,
+      "z": 0.55
+    },
+    "individualUpperVolumeRatio": 0.3422083679836655,
+    "upperNormalizedCenter": 0.4269,
+    "frontRectangularity": 0.7372448979591837,
+    "frontCapToMaximumSection": [
+      {
+        "id": "armored-keel",
+        "ratio": 0.38399999999999995
+      },
+      {
+        "id": "magazine-deck",
+        "ratio": 0.41600000000000015
+      },
+      {
+        "id": "command-deck",
+        "ratio": 0.34450000000000014
+      }
+    ],
+    "estimatedMassTonnes": 638497,
+    "physicalMassCentroid": null
+  },
+  "beforeMetrics": null
+}

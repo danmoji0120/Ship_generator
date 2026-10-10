@@ -1,0 +1,18 @@
+{
+  "selectedUniqueTests": 6,
+  "passed": 6,
+  "structuralForm": 4,
+  "productionPhysicalRepresentative": 1,
+  "existingAnalyticalMacro": 1,
+  "existingUnrelatedTestsSkipped": 8,
+  "typecheck": "passed",
+  "productionBuild": "passed; existing chunk-size warning",
+  "currentBrowserDesignCases": 21,
+  "distinctSeeds": 12,
+  "browserPhysicalValidation": "21 passed",
+  "jsonDeterminism": "21 passed",
+  "savedBeforeSingleViewReplay": "12 passed",
+  "consoleErrors": 0,
+  "fullSuiteExecuted": false,
+  "notes": "First snapshot-in-Node attempt failed existing cross-runtime numeric string equality; representative regenerated and validated in Node passed. See selected-tests-first.log and attachment-retest.log."
+}
