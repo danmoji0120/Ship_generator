@@ -1,0 +1,23 @@
+{
+  "time": 64.2666666666643,
+  "outcome": "DEFEAT",
+  "stats": {
+    "hits": 96,
+    "intercepts": 86,
+    "interceptsByOwner": [
+      60,
+      26
+    ],
+    "aiBoosts": 21,
+    "shots": 227,
+    "playerShots": {
+      "MISSILE": 60,
+      "SPINAL": 4,
+      "TURRET": 0
+    }
+  },
+  "health": [
+    0,
+    0.32364999999999977
+  ]
+}
