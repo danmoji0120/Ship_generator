@@ -1,0 +1,81 @@
+{
+  "requests": [
+    {
+      "request": {
+        "id": "utility-top",
+        "type": "UTILITY",
+        "size": "S",
+        "count": 4,
+        "mandatory": true,
+        "priority": 90,
+        "region": "TOP"
+      },
+      "matchedIds": [
+        "slot-112",
+        "slot-15",
+        "slot-16",
+        "slot-17"
+      ],
+      "missing": 0,
+      "status": "SATISFIED",
+      "reason": "Distinct physically verified compatible slots; installed equipment and slot count are separate"
+    },
+    {
+      "request": {
+        "id": "four-spinal",
+        "type": "SPINAL",
+        "size": "XL",
+        "count": 4,
+        "mandatory": false,
+        "priority": 80
+      },
+      "matchedIds": [],
+      "missing": 4,
+      "status": "LIMITED",
+      "reason": "Only existing validated integrated axial contracts are usable; no hull/breech/opening changes or surface XL substitution"
+    }
+  ],
+  "issues": [],
+  "surfaceXL": {
+    "requests": [
+      {
+        "request": {
+          "id": "surface-xl",
+          "type": "TURRET",
+          "size": "XL",
+          "count": 1,
+          "mandatory": false,
+          "priority": 100
+        },
+        "matchedIds": [],
+        "missing": 1,
+        "status": "LIMITED",
+        "reason": "Coherent surface footprint / envelope / protected access / finite support reservation prevents remaining placements"
+      }
+    ],
+    "issues": [],
+    "count": 0,
+    "diagnostics": {
+      "candidates": 1493,
+      "rejections": {
+        "Insufficient coherent installation footprint": 608,
+        "INCOHERENT_FOOTPRINT": 50,
+        "NO_EXPOSED_SURFACE": 95,
+        "INSUFFICIENT_INTERNAL_POCKET": 328,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 131,
+        "OPERATING_ENVELOPE_INTERFERENCE": 73,
+        "PROTECTED_OPENING_OR_PROPULSION": 27,
+        "Paired foundation cannot safely absorb surface relief": 6
+      },
+      "surfaceAreaM2": 407099.97349007905,
+      "stopReason": "TARGET_REACHED"
+    }
+  },
+  "rejection": {
+    "name": "DesignRejection",
+    "codes": [
+      "REQUIRED_HARDPOINT_CAPACITY_UNAVAILABLE"
+    ],
+    "message": "REQUIRED_HARDPOINT_CAPACITY_UNAVAILABLE: impossible: SPINAL/XL requested 4, matched 0, missing 4; Only existing validated integrated axial contracts are usable; no hull/breech/opening changes or surface XL substitution"
+  }
+}

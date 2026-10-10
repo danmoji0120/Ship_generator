@@ -1,3 +1,4 @@
+import {validateModularHardpoints} from "../generation/hardpoint-system/validate";
 import {validateMesoStructures} from '../generation/meso/validate';
 import {validateSurfaceAppearance} from '../generation/appearance/validate';
 import {validateExteriorDetails} from '../generation/details/validate';
@@ -59,7 +60,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || (b.generatorVersion === "1.8.5.3.1" || b.generatorVersion === "1.8.5.4"))))))))))
     ) {
       if (
         !v.shape ||
@@ -114,7 +115,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || (b.generatorVersion === "1.8.5.3.1" || b.generatorVersion === "1.8.5.4"))))))))))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -226,7 +227,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
           l * 0.001
       )
         errors.push("Spinal alignment");
-    } else if (!h.plannedMountId && !h.surfaceMount && !b.structuralArmorPilot?.mounts.some(m => m.hardpointId === h.id)) {
+    } else if (!h.modular && !h.plannedMountId && !h.surfaceMount && !b.structuralArmorPilot?.mounts.some(m => m.hardpointId === h.id)) {
       const localZ = h.position.z - v.position.z,
         localX = h.position.x - v.position.x,
         s = hullSurfaceAt(v.geometry.stations, localZ, localX);
@@ -247,7 +248,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       }
     }
   }
-  if (b.hardpoints.length < (b.productionDesign ? 1 : 3) || b.hardpoints.length > 100)
+  if (b.hardpoints.length < (b.productionDesign ? 1 : 3) || b.hardpoints.length > (b.modularHardpoints ? 512 : 100))
     errors.push("Hardpoint count");
   if (b.surfaceFeatures.some((f) => !volumes.has(f.parentId)))
     errors.push("Surface parent");
@@ -306,7 +307,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1"))))))))))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || (b.generatorVersion === "1.8.5.3.1" || b.generatorVersion === "1.8.5.4")))))))))))
     errors.push(...validateIntegration(b));
   if(b.weaponLayout){const result=validateWeaponLayout(b);if(details)details.weapon=result;errors.push(...result.issues);}
   if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
@@ -325,9 +326,10 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || (b.generatorVersion === "1.8.5.3.1" || b.generatorVersion === "1.8.5.4"))))))))))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
   if(b.productionDesign){const result=validateProduction(b);if(details)details.production=result;errors.push(...result.issues);}
+  errors.push(...validateModularHardpoints(b));
   errors.push(...validateSurfaceAppearance(b));
   if(b.mesoStructurePlan)errors.push(...validateMesoStructures(b).issues);
   if(b.materialAppearance && (!['1.8.5.1','1.8.5.2'].includes(b.materialAppearance.version)||!['aegis','vesper','forge','serein'].includes(b.materialAppearance.language)||b.materialAppearance.language!==b.shipyardId))errors.push('Invalid versioned material appearance');

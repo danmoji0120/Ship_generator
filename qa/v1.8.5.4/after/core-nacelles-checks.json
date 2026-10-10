@@ -1,0 +1,127 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "core-nacelles",
+    "seed": 7,
+    "shipyardId": "vesper",
+    "length": 200,
+    "role": "Frigate",
+    "architecture": "CORE_AND_NACELLES",
+    "family": "ENGINE_DOMINANT"
+  },
+  "issues": [],
+  "generationMs": 5517.5999999996275,
+  "hardpoints": 57,
+  "weapons": 6,
+  "counts": {
+    "S": 47,
+    "M": 10,
+    "L": 0,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 57,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 1180.6495062861486,
+      "reservedM3": 639.2596120196525,
+      "byHost": {
+        "command-core": {
+          "availableM3": 506.51328375750717,
+          "reservedM3": 330.9417033635325
+        },
+        "lateral-drive--1": {
+          "availableM3": 159.05216543618752,
+          "reservedM3": 64.63639007495219
+        },
+        "vertical-drive--1": {
+          "availableM3": 106.41770126318391,
+          "reservedM3": 64.63639007495219
+        },
+        "lateral-drive-1": {
+          "availableM3": 244.68420379812116,
+          "reservedM3": 58.82186623927571
+        },
+        "vertical-drive-1": {
+          "availableM3": 163.98215203114881,
+          "reservedM3": 120.22326226693887
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 324,
+      "rejections": {
+        "INSUFFICIENT_INTERNAL_POCKET": 80,
+        "Insufficient coherent installation footprint": 147,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 15,
+        "Paired foundation cannot safely absorb surface relief": 2,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 7,
+        "EXISTING_SERVICE_ACCESS": 4,
+        "INCOHERENT_FOOTPRINT": 4,
+        "OPERATING_ENVELOPE_INTERFERENCE": 14,
+        "PROTECTED_OPENING_OR_PROPULSION": 6
+      },
+      "surfaceAreaM2": 42009.58059318876,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 57,
+      "empty": 51,
+      "occupied": 6,
+      "bySize": {
+        "S": 47,
+        "M": 10,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 27,
+        "FIXED": 13,
+        "MISSILE": 13,
+        "SPINAL": 0,
+        "UTILITY": 13,
+        "DEFENSIVE": 29
+      },
+      "byRegion": {
+        "TOP": 18,
+        "BOTTOM": 15,
+        "PORT": 8,
+        "STARBOARD": 12,
+        "FORE": 1,
+        "AFT": 3
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 68,
+      "triangles": 24780,
+      "camera": [
+        -156.8306950307004,
+        128.71448337396896,
+        -181.4405232786228
+      ],
+      "radius": 136.56784181112687,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 26,
+      "triangles": 3680,
+      "camera": [
+        -150.56578125210063,
+        124.81864756308204,
+        -178.60654764486534
+      ],
+      "radius": 138.73432449933767,
+      "geometryFinite": true
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {renderModularHardpoints} from "./modular-hardpoints";
 import {renderMesoStructures,renderMesoDiagnostics} from './meso';
 import {setSurfacePresentation} from './textured-surface';
 import {renderExteriorDetails} from './details';
@@ -39,6 +40,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
     if(mode==="Functional Exterior Only"){copy.productionDesign=undefined;copy.hardpoints=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>b.productionDesign!.functionalPrefabIds.includes(p.id));copy.structuralVolumes=[];copy.structuralConnectors=[];copy.trusses=[];}
     const r=createShip(copy,"Normal",detailMode);
     if(copy.weaponLayout&&["Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode))decorateWeaponDebug(r,copy,mode==="Symmetry Groups"?"GROUPS":mode==="Firing Arc"?"ARCS":"LAYOUT");
+    if(copy.modularHardpoints&&["Hardpoint Layout Only","Mount Size"].includes(mode))r.add(renderModularHardpoints(copy));
     return r;
   }
   if(b.schemaVersion===2&&["Hull Only","Armor Coverage","Armor Panels","Panel Seams","Secondary Armor","Hardpoint Mounts","Complete Ship"].includes(mode)) {
@@ -257,6 +259,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
     root.add(g);
   }
   for (const h of b.hardpoints) {
+    if(h.modular?.state==="EMPTY"||h.modular&&mode==="Hardpoints")continue;
     if(b.schemaVersion===2&&mode==="Normal"&&h.plannedMountId&&b.weaponLayout?.mounts.some(m=>m.id===h.plannedMountId))continue;
     if(b.schemaVersion===2&&mode==="Normal"&&b.functionalExterior?.replacedHardpointVisuals.includes(h.id)&&b.prefabPlacements?.some(p=>p.assembly?.equipmentIds.includes(h.id)))continue;
     if(h.surfaceMount) {
@@ -448,12 +451,14 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
   if(b.schemaVersion===2&&b.exteriorDetailPlan&&["Normal","Equipment"].includes(mode))root.add(renderExteriorDetails(b,m,detailMode));
   if(b.schemaVersion===2&&b.materialAppearance?.version==='1.8.5.2')root.userData.surfaceMaterials=Object.values(m);
   if(b.schemaVersion===2&&b.mesoStructurePlan&&['Normal','Equipment','Complete Ship'].includes(mode))root.add(renderMesoStructures(b,m));
+  if(b.schemaVersion===2&&b.modularHardpoints&&mode==="Hardpoints")root.add(renderModularHardpoints(b));
   root.userData.blueprint = b;
   return root;
 }
 export function disposeShip(root: THREE.Object3D) {
   const materials = new Set<THREE.Material>(root.userData.surfaceMaterials??[]);
   root.traverse((node) => {
+    if(node instanceof THREE.InstancedMesh)node.dispose();
     if(node instanceof THREE.Sprite){node.material.map?.dispose();materials.add(node.material);}
     if (node instanceof THREE.Mesh || node instanceof THREE.Line) {
       node.geometry.dispose();

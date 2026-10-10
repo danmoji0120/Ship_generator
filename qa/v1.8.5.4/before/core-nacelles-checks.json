@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "core-nacelles",
+    "seed": 7,
+    "shipyardId": "vesper",
+    "length": 200,
+    "role": "Frigate",
+    "architecture": "CORE_AND_NACELLES",
+    "family": "ENGINE_DOMINANT"
+  },
+  "issues": [],
+  "generationMs": 4688,
+  "hardpoints": 6,
+  "weapons": 6,
+  "counts": {
+    "S": 4,
+    "M": 2,
+    "L": 0,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 68,
+      "triangles": 24780,
+      "camera": [
+        -156.8306950307004,
+        128.71448337396896,
+        -181.4405232786228
+      ],
+      "radius": 136.56784181112687,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 51,
+      "triangles": 2728,
+      "camera": [
+        -156.03596795482866,
+        127.19778343315315,
+        -177.32144594679144
+      ],
+      "radius": 133.2319635636279,
+      "geometryFinite": true
+    }
+  ]
+}

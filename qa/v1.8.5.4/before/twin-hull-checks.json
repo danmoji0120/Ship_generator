@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "twin-hull",
+    "seed": 11,
+    "shipyardId": "forge",
+    "length": 400,
+    "role": "Frigate",
+    "architecture": "TWIN_HULL",
+    "family": "WIDE_CARRIER"
+  },
+  "issues": [],
+  "generationMs": 4882.5999999996275,
+  "hardpoints": 18,
+  "weapons": 18,
+  "counts": {
+    "S": 14,
+    "M": 4,
+    "L": 0,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 92,
+      "triangles": 33202,
+      "camera": [
+        -441.34541570966144,
+        359.85641753973175,
+        -507.1233117918027
+      ],
+      "radius": 303.39637453078967,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 153,
+      "triangles": 5472,
+      "camera": [
+        -438.2131421022707,
+        357.18554984039156,
+        -500.21061871277334
+      ],
+      "radius": 302.8042772156401,
+      "geometryFinite": true
+    }
+  ]
+}

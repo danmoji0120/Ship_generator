@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "name": "Production bundle: no DEV QA API",
+      "passed": true
+    },
+    {
+      "name": "Import preserves new Blueprint",
+      "passed": true
+    },
+    {
+      "name": "Inspector exposes total/empty/occupied",
+      "passed": true
+    },
+    {
+      "name": "Selected empty slot details",
+      "passed": true
+    },
+    {
+      "name": "Density editor applied to generated slots",
+      "passed": true
+    },
+    {
+      "name": "Mandatory UI support request satisfied",
+      "passed": true
+    },
+    {
+      "name": "Precise mandatory rejection displayed",
+      "passed": true
+    },
+    {
+      "name": "Rejected order does not replace the last valid Blueprint",
+      "passed": true
+    },
+    {
+      "name": "JSON Export matches actual Blueprint",
+      "passed": true
+    },
+    {
+      "name": "JSON Import round-trip",
+      "passed": true
+    },
+    {
+      "name": "Reload preserves saved Blueprint",
+      "passed": true
+    },
+    {
+      "name": "Historical import is not upgraded or rewritten",
+      "passed": true
+    },
+    {
+      "name": "Historical Blueprint hides additive inspector",
+      "passed": true
+    },
+    {
+      "name": "Console errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "denseSummary": {
+    "total": 171,
+    "empty": 156,
+    "occupied": 15,
+    "bySize": {
+      "S": 118,
+      "M": 45,
+      "L": 8,
+      "XL": 0
+    },
+    "byType": {
+      "TURRET": 85,
+      "FIXED": 43,
+      "MISSILE": 45,
+      "SPINAL": 0,
+      "UTILITY": 40,
+      "DEFENSIVE": 88
+    },
+    "byRegion": {
+      "TOP": 50,
+      "BOTTOM": 93,
+      "PORT": 12,
+      "STARBOARD": 11,
+      "FORE": 3,
+      "AFT": 2
+    }
+  }
+}

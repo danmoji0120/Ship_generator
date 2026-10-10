@@ -1,3 +1,4 @@
+import {setupHardpointOrder,readHardpointOrder,applyHardpointOrder,showHardpointInspector,selectHardpoint} from "./ui/hardpoints";
 import type {DetailMode} from './generation/details/types';
 import {DesignRejection} from './generation/production/requirements';
 import "./style.css";
@@ -19,6 +20,7 @@ import type { DebugView } from "./rendering/ship";
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 $("app").innerHTML = layout();
+setupHardpointOrder();
 let yardId = "aegis",
   blueprint: AnyShipBlueprint,
   storedBlueprint: string,
@@ -46,6 +48,7 @@ function syncRanges() {
 }
 function order(): ShipOrder {
   return {
+    ...readHardpointOrder(),
     role: $<HTMLSelectElement>("role").value as ShipRole,
     shipyardId: yardId,
     length: Number($<HTMLInputElement>("length").value),
@@ -56,6 +59,7 @@ function order(): ShipOrder {
   };
 }
 function applyOrder(o: ShipOrder) {
+  applyHardpointOrder(o);
   yardId = o.shipyardId;
   $<HTMLSelectElement>("role").value = o.role;
   $<HTMLInputElement>("length").value = String(o.length);
@@ -107,6 +111,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     $("design-rejection").replaceChildren();
     viewer?.show(next);
     blueprint = next;
+    showHardpointInspector(next);
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
     $("ship-name").textContent = next.designName;
@@ -222,10 +227,7 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
     const armorLegend:Partial<Record<DebugView,string>>={"Hull Only":"STRUCTURAL HULL + FITTED CONNECTIONS","Armor Coverage":"TOP / CYAN · BOTTOM / VIOLET · PORT / GREEN · STARBOARD / AMBER · FORE / BLUE · AFT / ROSE","Armor Panels":"CLOSED GEOMETRIC PLATES / PHYSICAL THICKNESS + CHAMFER","Panel Seams":"LOW UNDERLAYER / ACTUAL GAPS BETWEEN PLATES","Secondary Armor":"LOCAL LOW, BROAD OVERLAYS","Hardpoint Mounts":"AMBER / FOUNDATION · CYAN / MOUNT · ARMOR RETAINED","Complete Ship":"COMPLETE ARMOR + SURFACE-MOUNTED EQUIPMENT"};
     $("debug-legend").textContent = armorLegend[mode] ?? (
       mode === "Hardpoints"
-        ? "ARROW / NORMAL · " +
-          blueprint.hardpoints
-            .map((h) => `${h.id}: ${h.type} ${h.size} → ${h.parentId}`)
-            .join(" · ")
+        ? "COLOR / SIZE: S CYAN · M GREEN · L AMBER · XL VIOLET · SHAPE / TYPE · CLICK A MARKER TO INSPECT"
         : mode === "Hull Sections"
           ? "COLOR / LOGICAL HULL SECTION   ·   OUTLINE / STATION BOUNDARY"
           : mode === "Engines"

@@ -1,0 +1,541 @@
+[
+  {
+    "seed": 12,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "shipyardId": "aegis",
+    "generationMs": 3886.699999999255,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 73,
+      "occupied": 20,
+      "bySize": {
+        "S": 65,
+        "M": 27,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 41,
+        "FIXED": 19,
+        "MISSILE": 21,
+        "SPINAL": 0,
+        "UTILITY": 18,
+        "DEFENSIVE": 51
+      },
+      "byRegion": {
+        "TOP": 41,
+        "BOTTOM": 28,
+        "PORT": 10,
+        "STARBOARD": 10,
+        "FORE": 1,
+        "AFT": 3
+      }
+    },
+    "diagnostics": {
+      "candidates": 523,
+      "rejections": {
+        "Insufficient coherent installation footprint": 218,
+        "OPERATING_ENVELOPE_INTERFERENCE": 11,
+        "PROTECTED_OPENING_OR_PROPULSION": 9,
+        "INSUFFICIENT_INTERNAL_POCKET": 154,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 45,
+        "NO_EXPOSED_SURFACE": 17,
+        "INCOHERENT_FOOTPRINT": 3,
+        "EXISTING_FIRING_PATH": 2
+      },
+      "surfaceAreaM2": 123913.50150949864,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "MONOLITHIC",
+    "chosenFamily": "WEDGE_CITADEL"
+  },
+  {
+    "seed": 13,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "WEDGE_CITADEL",
+    "shipyardId": "vesper",
+    "generationMs": 6107.9000000003725,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 83,
+      "occupied": 10,
+      "bySize": {
+        "S": 71,
+        "M": 22,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 44,
+        "FIXED": 20,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 21,
+        "DEFENSIVE": 48
+      },
+      "byRegion": {
+        "TOP": 35,
+        "BOTTOM": 28,
+        "PORT": 5,
+        "STARBOARD": 5,
+        "FORE": 2,
+        "AFT": 18
+      }
+    },
+    "diagnostics": {
+      "candidates": 662,
+      "rejections": {
+        "INCOHERENT_FOOTPRINT": 56,
+        "Insufficient coherent installation footprint": 171,
+        "INSUFFICIENT_INTERNAL_POCKET": 136,
+        "Paired foundation cannot safely absorb surface relief": 10,
+        "OPERATING_ENVELOPE_INTERFERENCE": 55,
+        "PROTECTED_OPENING_OR_PROPULSION": 45,
+        "NO_EXPOSED_SURFACE": 63,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 51,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 29
+      },
+      "surfaceAreaM2": 95851.54993935362,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "BLOCK_ASSEMBLY",
+    "chosenFamily": "WEDGE_CITADEL"
+  },
+  {
+    "seed": 14,
+    "architecture": "SPINE_AND_MODULES",
+    "family": "WEAPON_DOMINANT",
+    "shipyardId": "forge",
+    "generationMs": 3614,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 87,
+      "occupied": 6,
+      "bySize": {
+        "S": 85,
+        "M": 6,
+        "L": 2,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 44,
+        "FIXED": 23,
+        "MISSILE": 25,
+        "SPINAL": 0,
+        "UTILITY": 22,
+        "DEFENSIVE": 48
+      },
+      "byRegion": {
+        "TOP": 37,
+        "BOTTOM": 20,
+        "PORT": 16,
+        "STARBOARD": 16,
+        "FORE": 2,
+        "AFT": 2
+      }
+    },
+    "diagnostics": {
+      "candidates": 665,
+      "rejections": {
+        "Insufficient coherent installation footprint": 278,
+        "INCOHERENT_FOOTPRINT": 30,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 6,
+        "INSUFFICIENT_INTERNAL_POCKET": 105,
+        "NO_EXPOSED_SURFACE": 73,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 38,
+        "OPERATING_ENVELOPE_INTERFERENCE": 32,
+        "PROTECTED_OPENING_OR_PROPULSION": 30
+      },
+      "surfaceAreaM2": 72276.85486081152,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "SPINE_AND_MODULES",
+    "chosenFamily": "WEAPON_DOMINANT"
+  },
+  {
+    "seed": 15,
+    "architecture": "TRUSS_POD",
+    "family": "SPLIT_FRAME",
+    "shipyardId": "serein",
+    "generationMs": 9243.10000000149,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 87,
+      "occupied": 6,
+      "bySize": {
+        "S": 70,
+        "M": 23,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 45,
+        "FIXED": 22,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 22,
+        "DEFENSIVE": 47
+      },
+      "byRegion": {
+        "TOP": 26,
+        "BOTTOM": 53,
+        "PORT": 2,
+        "STARBOARD": 2,
+        "FORE": 4,
+        "AFT": 6
+      }
+    },
+    "diagnostics": {
+      "candidates": 930,
+      "rejections": {
+        "Insufficient coherent installation footprint": 332,
+        "INCOHERENT_FOOTPRINT": 22,
+        "EXISTING_FIRING_PATH": 1,
+        "INSUFFICIENT_INTERNAL_POCKET": 379,
+        "Paired foundation cannot safely absorb surface relief": 5,
+        "OPERATING_ENVELOPE_INTERFERENCE": 11,
+        "PROTECTED_OPENING_OR_PROPULSION": 4,
+        "NO_EXPOSED_SURFACE": 35,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 41,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 17
+      },
+      "surfaceAreaM2": 99722.08812521162,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "TRUSS_POD",
+    "chosenFamily": "SPLIT_FRAME"
+  },
+  {
+    "seed": 16,
+    "architecture": "TWIN_HULL",
+    "family": "WIDE_CARRIER",
+    "shipyardId": "aegis",
+    "generationMs": 7807.699999999255,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 74,
+      "occupied": 19,
+      "bySize": {
+        "S": 73,
+        "M": 19,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 41,
+        "FIXED": 19,
+        "MISSILE": 21,
+        "SPINAL": 0,
+        "UTILITY": 19,
+        "DEFENSIVE": 50
+      },
+      "byRegion": {
+        "TOP": 9,
+        "BOTTOM": 18,
+        "PORT": 28,
+        "STARBOARD": 30,
+        "FORE": 5,
+        "AFT": 3
+      }
+    },
+    "diagnostics": {
+      "candidates": 862,
+      "rejections": {
+        "INSUFFICIENT_INTERNAL_POCKET": 203,
+        "Insufficient coherent installation footprint": 404,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 90,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 2,
+        "INCOHERENT_FOOTPRINT": 2,
+        "OPERATING_ENVELOPE_INTERFERENCE": 14,
+        "PROTECTED_OPENING_OR_PROPULSION": 11,
+        "NO_EXPOSED_SURFACE": 68,
+        "Paired foundation cannot safely absorb surface relief": 2
+      },
+      "surfaceAreaM2": 168787.75933196355,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "TWIN_HULL",
+    "chosenFamily": "WIDE_CARRIER"
+  },
+  {
+    "seed": 17,
+    "architecture": "CORE_AND_NACELLES",
+    "family": "ENGINE_DOMINANT",
+    "shipyardId": "vesper",
+    "generationMs": 8565.099999999627,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 87,
+      "occupied": 6,
+      "bySize": {
+        "S": 91,
+        "M": 2,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 45,
+        "FIXED": 22,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 22,
+        "DEFENSIVE": 47
+      },
+      "byRegion": {
+        "TOP": 24,
+        "BOTTOM": 18,
+        "PORT": 28,
+        "STARBOARD": 22,
+        "FORE": 0,
+        "AFT": 1
+      }
+    },
+    "diagnostics": {
+      "candidates": 602,
+      "rejections": {
+        "Insufficient coherent installation footprint": 248,
+        "INSUFFICIENT_INTERNAL_POCKET": 127,
+        "INCOHERENT_FOOTPRINT": 18,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 3,
+        "OPERATING_ENVELOPE_INTERFERENCE": 68,
+        "EXISTING_SERVICE_ACCESS": 10,
+        "PROTECTED_OPENING_OR_PROPULSION": 15,
+        "NO_EXPOSED_SURFACE": 21,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 24
+      },
+      "surfaceAreaM2": 69692.78013520487,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "CORE_AND_NACELLES",
+    "chosenFamily": "ENGINE_DOMINANT"
+  },
+  {
+    "seed": 18,
+    "architecture": "STACKED_BLOCKS",
+    "family": "WEDGE_CITADEL",
+    "shipyardId": "forge",
+    "generationMs": 12241.599999999627,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 73,
+      "occupied": 20,
+      "bySize": {
+        "S": 64,
+        "M": 27,
+        "L": 2,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 42,
+        "FIXED": 19,
+        "MISSILE": 21,
+        "SPINAL": 0,
+        "UTILITY": 18,
+        "DEFENSIVE": 52
+      },
+      "byRegion": {
+        "TOP": 51,
+        "BOTTOM": 18,
+        "PORT": 6,
+        "STARBOARD": 6,
+        "FORE": 2,
+        "AFT": 10
+      }
+    },
+    "diagnostics": {
+      "candidates": 658,
+      "rejections": {
+        "INSUFFICIENT_INTERNAL_POCKET": 252,
+        "Insufficient coherent installation footprint": 219,
+        "INCOHERENT_FOOTPRINT": 23,
+        "Paired foundation cannot safely absorb surface relief": 11,
+        "EXISTING_FIRING_PATH": 12,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 41,
+        "OPERATING_ENVELOPE_INTERFERENCE": 18,
+        "PROTECTED_OPENING_OR_PROPULSION": 2,
+        "NO_EXPOSED_SURFACE": 9
+      },
+      "surfaceAreaM2": 143316.0587569452,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "STACKED_BLOCKS",
+    "chosenFamily": "WEDGE_CITADEL"
+  },
+  {
+    "seed": 19,
+    "architecture": "HYBRID",
+    "family": "SPLIT_FRAME",
+    "shipyardId": "serein",
+    "generationMs": 4612.5999999996275,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 88,
+      "occupied": 5,
+      "bySize": {
+        "S": 86,
+        "M": 7,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 46,
+        "FIXED": 22,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 22,
+        "DEFENSIVE": 47
+      },
+      "byRegion": {
+        "TOP": 37,
+        "BOTTOM": 40,
+        "PORT": 2,
+        "STARBOARD": 3,
+        "FORE": 2,
+        "AFT": 9
+      }
+    },
+    "diagnostics": {
+      "candidates": 473,
+      "rejections": {
+        "INCOHERENT_FOOTPRINT": 54,
+        "Insufficient coherent installation footprint": 122,
+        "INSUFFICIENT_INTERNAL_POCKET": 116,
+        "NO_EXPOSED_SURFACE": 23,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 31,
+        "OPERATING_ENVELOPE_INTERFERENCE": 35,
+        "PROTECTED_OPENING_OR_PROPULSION": 21,
+        "Paired foundation cannot safely absorb surface relief": 2,
+        "EXISTING_FIRING_PATH": 2
+      },
+      "surfaceAreaM2": 67506.61400307759,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "HYBRID",
+    "chosenFamily": "SPLIT_FRAME"
+  },
+  {
+    "seed": 20,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "shipyardId": "aegis",
+    "generationMs": 3698.9000000003725,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 69,
+      "occupied": 24,
+      "bySize": {
+        "S": 61,
+        "M": 29,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 41,
+        "FIXED": 20,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 17,
+        "DEFENSIVE": 51
+      },
+      "byRegion": {
+        "TOP": 23,
+        "BOTTOM": 28,
+        "PORT": 17,
+        "STARBOARD": 17,
+        "FORE": 1,
+        "AFT": 7
+      }
+    },
+    "diagnostics": {
+      "candidates": 575,
+      "rejections": {
+        "Insufficient coherent installation footprint": 202,
+        "NO_EXPOSED_SURFACE": 27,
+        "OPERATING_ENVELOPE_INTERFERENCE": 19,
+        "PROTECTED_OPENING_OR_PROPULSION": 6,
+        "INSUFFICIENT_INTERNAL_POCKET": 122,
+        "EXISTING_FIRING_PATH": 4,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 121,
+        "INCOHERENT_FOOTPRINT": 13
+      },
+      "surfaceAreaM2": 143393.5826097347,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "MONOLITHIC",
+    "chosenFamily": "WEDGE_CITADEL"
+  },
+  {
+    "seed": 21,
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "WEDGE_CITADEL",
+    "shipyardId": "vesper",
+    "generationMs": 6507.300000000745,
+    "deterministic": true,
+    "issues": [],
+    "summary": {
+      "total": 93,
+      "empty": 83,
+      "occupied": 10,
+      "bySize": {
+        "S": 78,
+        "M": 15,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 44,
+        "FIXED": 20,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 21,
+        "DEFENSIVE": 48
+      },
+      "byRegion": {
+        "TOP": 42,
+        "BOTTOM": 43,
+        "PORT": 3,
+        "STARBOARD": 3,
+        "FORE": 0,
+        "AFT": 2
+      }
+    },
+    "diagnostics": {
+      "candidates": 590,
+      "rejections": {
+        "Insufficient coherent installation footprint": 172,
+        "Paired foundation cannot safely absorb surface relief": 17,
+        "INSUFFICIENT_INTERNAL_POCKET": 185,
+        "INCOHERENT_FOOTPRINT": 28,
+        "NO_EXPOSED_SURFACE": 36,
+        "EXISTING_FIRING_PATH": 4,
+        "OPERATING_ENVELOPE_INTERFERENCE": 35,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 13,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 17,
+        "PROTECTED_OPENING_OR_PROPULSION": 8
+      },
+      "surfaceAreaM2": 104702.09979095033,
+      "stopReason": "TARGET_REACHED"
+    },
+    "chosenArchitecture": "BLOCK_ASSEMBLY",
+    "chosenFamily": "WEDGE_CITADEL"
+  }
+]

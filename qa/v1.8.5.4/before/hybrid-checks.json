@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "hybrid",
+    "seed": 11,
+    "shipyardId": "serein",
+    "length": 300,
+    "role": "Frigate",
+    "architecture": "HYBRID",
+    "family": "SPLIT_FRAME"
+  },
+  "issues": [],
+  "generationMs": 3809.0999999996275,
+  "hardpoints": 5,
+  "weapons": 5,
+  "counts": {
+    "S": 4,
+    "M": 1,
+    "L": 0,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 101,
+      "triangles": 26376,
+      "camera": [
+        -208.98460788119039,
+        172.9424714780665,
+        -238.87300971308977
+      ],
+      "radius": 185.04861305680748,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 86,
+      "triangles": 3494,
+      "camera": [
+        -208.30269697161688,
+        170.06987238068635,
+        -235.82017553130754
+      ],
+      "radius": 180.97493543804083,
+      "geometryFinite": true
+    }
+  ]
+}

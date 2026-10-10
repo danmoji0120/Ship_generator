@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "spinal-modules",
+    "seed": 7,
+    "shipyardId": "serein",
+    "length": 300,
+    "role": "Spinal Gun Ship",
+    "architecture": "SPINE_AND_MODULES",
+    "family": "WEAPON_DOMINANT"
+  },
+  "issues": [],
+  "generationMs": 3660.199999999255,
+  "hardpoints": 10,
+  "weapons": 10,
+  "counts": {
+    "S": 9,
+    "M": 0,
+    "L": 0,
+    "XL": 1
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 66,
+      "triangles": 27024,
+      "camera": [
+        -244.25318127674583,
+        212.85033140640945,
+        -284.42451167024376
+      ],
+      "radius": 207.50962156630735,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 84,
+      "triangles": 3600,
+      "camera": [
+        -251.9374297541868,
+        224.2392597045772,
+        -293.2142657292504
+      ],
+      "radius": 205.5346223919987,
+      "geometryFinite": true
+    }
+  ]
+}

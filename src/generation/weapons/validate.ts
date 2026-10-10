@@ -8,7 +8,7 @@ import{candidateIssues,collisionScene,resetCollisionCache}from'./collision';
 export function validateWeaponLayout(b:ShipBlueprint){
  resetCollisionCache();const w=b.weaponLayout;if(!w)return{issues:[],checks:[]};const issues:string[]=[],surfaces=armorSurfaces(b),scene=collisionScene(b,surfaces);
  if(!b.productionDesign&&(b.generatorVersion!=='1.8.3'||w.status!=='one-ship-review'||b.seed!==7||b.order.length!==300||b.shipyardId!=='aegis'||b.role!=='Cruiser'||b.macroDesign?.family!=='WEDGE_CITADEL'||b.architecture.grammar!=='MONOLITHIC'))issues.push('Invalid weapon review scope');
- if(new Set(w.mounts.map(m=>m.id)).size!==w.mounts.length||w.mounts.length!==b.hardpoints.filter(h=>h.type!=='Spinal').length||w.mounts.length>w.budget.countLimit)issues.push('Invalid mount IDs/count');
+ if(new Set(w.mounts.map(m=>m.id)).size!==w.mounts.length||w.mounts.length!==b.hardpoints.filter(h=>h.type!=='Spinal'&&h.modular?.state!=='EMPTY').length||w.mounts.length>w.budget.countLimit)issues.push('Invalid mount IDs/count');
  if(!b.productionDesign&&(JSON.stringify([...w.retiredHardpointIds].sort())!==JSON.stringify(b.structuralArmorPilot!.mounts.map(m=>m.hardpointId).sort())||JSON.stringify(w.supersededFoundationIds)!==JSON.stringify(w.retiredHardpointIds)))issues.push('Invalid retired baseline mount contract');
  if(new Set(w.groups.map(g=>g.id)).size!==w.groups.length)issues.push('Duplicate layout group IDs');
  const active=w.mounts.map(m=>({mount:m,assembly:b.prefabPlacements!.find(p=>p.id===m.equipment.prefabId)?.assembly}));

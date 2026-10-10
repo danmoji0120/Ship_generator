@@ -1,0 +1,133 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "truss-pods",
+    "seed": 7,
+    "shipyardId": "vesper",
+    "length": 300,
+    "role": "Frigate",
+    "architecture": "TRUSS_POD",
+    "family": "SPLIT_FRAME"
+  },
+  "issues": [],
+  "generationMs": 12687.699999999255,
+  "hardpoints": 93,
+  "weapons": 10,
+  "counts": {
+    "S": 77,
+    "M": 15,
+    "L": 1,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 93,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 4925.987337599086,
+      "reservedM3": 2497.918500000008,
+      "byHost": {
+        "pressure-core": {
+          "availableM3": 1781.9760961226834,
+          "reservedM3": 1452.824100000003
+        },
+        "sensor-forebody": {
+          "availableM3": 182.67200267915055,
+          "reservedM3": 173.92724999999996
+        },
+        "weapon-pod--1": {
+          "availableM3": 924.5310440770979,
+          "reservedM3": 289.80179999999984
+        },
+        "engine-pod--1": {
+          "availableM3": 468.81212104726194,
+          "reservedM3": 13.632299999999999
+        },
+        "weapon-pod-1": {
+          "availableM3": 888.7383180015063,
+          "reservedM3": 289.80179999999984
+        },
+        "engine-pod-1": {
+          "availableM3": 679.2577556713866,
+          "reservedM3": 277.9312499999999
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 451,
+      "rejections": {
+        "Insufficient coherent installation footprint": 170,
+        "Paired foundation cannot safely absorb surface relief": 14,
+        "INSUFFICIENT_INTERNAL_POCKET": 101,
+        "INCOHERENT_FOOTPRINT": 13,
+        "SUPPORT_ALLOCATION_EXHAUSTED": 17,
+        "EXISTING_FIRING_PATH": 2,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 21,
+        "OPERATING_ENVELOPE_INTERFERENCE": 19,
+        "PROTECTED_OPENING_OR_PROPULSION": 10,
+        "EXISTING_SERVICE_ACCESS": 4,
+        "NO_EXPOSED_SURFACE": 11
+      },
+      "surfaceAreaM2": 108303.44494690144,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 93,
+      "empty": 83,
+      "occupied": 10,
+      "bySize": {
+        "S": 77,
+        "M": 15,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 44,
+        "FIXED": 21,
+        "MISSILE": 23,
+        "SPINAL": 0,
+        "UTILITY": 21,
+        "DEFENSIVE": 48
+      },
+      "byRegion": {
+        "TOP": 39,
+        "BOTTOM": 25,
+        "PORT": 12,
+        "STARBOARD": 8,
+        "FORE": 4,
+        "AFT": 5
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 135,
+      "triangles": 31126,
+      "camera": [
+        -245.00970735313777,
+        200.61310428144395,
+        -280.4496468408608
+      ],
+      "radius": 214.55022014681145,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 98,
+      "triangles": 6228,
+      "camera": [
+        -242.1530696193068,
+        197.622696588338,
+        -274.86335438814854
+      ],
+      "radius": 207.57803605337,
+      "geometryFinite": true
+    }
+  ]
+}

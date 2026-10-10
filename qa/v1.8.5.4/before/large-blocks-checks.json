@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "large-blocks",
+    "seed": 7,
+    "shipyardId": "forge",
+    "length": 500,
+    "role": "Battleship",
+    "architecture": "BLOCK_ASSEMBLY",
+    "family": "WEDGE_CITADEL"
+  },
+  "issues": [],
+  "generationMs": 6957.199999999255,
+  "hardpoints": 15,
+  "weapons": 15,
+  "counts": {
+    "S": 8,
+    "M": 6,
+    "L": 1,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 50,
+      "triangles": 34288,
+      "camera": [
+        -439.35750013841164,
+        361.00479244066076,
+        -503.2654220099263
+      ],
+      "radius": 410.38068169740467,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 92,
+      "triangles": 4090,
+      "camera": [
+        -437.61622803847627,
+        360.1126980599172,
+        -497.50006078314914
+      ],
+      "radius": 412.7662372257865,
+      "geometryFinite": true
+    }
+  ]
+}

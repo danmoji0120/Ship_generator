@@ -1,0 +1,118 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "twin-hull",
+    "seed": 11,
+    "shipyardId": "forge",
+    "length": 400,
+    "role": "Frigate",
+    "architecture": "TWIN_HULL",
+    "family": "WIDE_CARRIER"
+  },
+  "issues": [],
+  "generationMs": 5989.89999999851,
+  "hardpoints": 131,
+  "weapons": 18,
+  "counts": {
+    "S": 103,
+    "M": 23,
+    "L": 5,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 131,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 18612.4819651407,
+      "reservedM3": 9210.302295793992,
+      "byHost": {
+        "central-bridge": {
+          "availableM3": 1794.1574895403573,
+          "reservedM3": 1615.7459926453257
+        },
+        "independent-hull--1": {
+          "availableM3": 8540.83208564978,
+          "reservedM3": 3730.184653916697
+        },
+        "independent-hull-1": {
+          "availableM3": 8277.492389950565,
+          "reservedM3": 3864.371649232019
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 1274,
+      "rejections": {
+        "Insufficient coherent installation footprint": 579,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 236,
+        "INCOHERENT_FOOTPRINT": 18,
+        "OPERATING_ENVELOPE_INTERFERENCE": 31,
+        "PROTECTED_OPENING_OR_PROPULSION": 20,
+        "INSUFFICIENT_INTERNAL_POCKET": 237,
+        "NO_EXPOSED_SURFACE": 54,
+        "EXISTING_SERVICE_ACCESS": 1
+      },
+      "surfaceAreaM2": 238868.70578705994,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 131,
+      "empty": 113,
+      "occupied": 18,
+      "bySize": {
+        "S": 103,
+        "M": 23,
+        "L": 5,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 63,
+        "FIXED": 32,
+        "MISSILE": 34,
+        "SPINAL": 0,
+        "UTILITY": 27,
+        "DEFENSIVE": 71
+      },
+      "byRegion": {
+        "TOP": 20,
+        "BOTTOM": 33,
+        "PORT": 44,
+        "STARBOARD": 26,
+        "FORE": 3,
+        "AFT": 5
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 92,
+      "triangles": 33202,
+      "camera": [
+        -441.34541570966144,
+        359.85641753973175,
+        -507.1233117918027
+      ],
+      "radius": 303.39637453078967,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 60,
+      "triangles": 7136,
+      "camera": [
+        -427.63827190492697,
+        347.1960164960782,
+        -495.3416384948552
+      ],
+      "radius": 300.1934148901512,
+      "geometryFinite": true
+    }
+  ]
+}

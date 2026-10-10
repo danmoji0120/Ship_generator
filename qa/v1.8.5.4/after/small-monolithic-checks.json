@@ -1,0 +1,105 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "small-monolithic",
+    "seed": 7,
+    "shipyardId": "aegis",
+    "length": 80,
+    "role": "Corvette",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL"
+  },
+  "issues": [],
+  "generationMs": 3202.2000000011176,
+  "hardpoints": 22,
+  "weapons": 16,
+  "counts": {
+    "S": 22,
+    "M": 0,
+    "L": 0,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 22,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 217.87958556759477,
+      "reservedM3": 11.053439718750003,
+      "byHost": {
+        "citadel": {
+          "availableM3": 217.87958556759475,
+          "reservedM3": 11.053439718750003
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 13,
+      "rejections": {
+        "Insufficient coherent installation footprint": 3,
+        "OPERATING_ENVELOPE_INTERFERENCE": 3,
+        "INSUFFICIENT_INTERNAL_POCKET": 1
+      },
+      "surfaceAreaM2": 9128.197676099611,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 22,
+      "empty": 6,
+      "occupied": 16,
+      "bySize": {
+        "S": 22,
+        "M": 0,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 8,
+        "FIXED": 2,
+        "MISSILE": 6,
+        "SPINAL": 0,
+        "UTILITY": 2,
+        "DEFENSIVE": 8
+      },
+      "byRegion": {
+        "TOP": 8,
+        "BOTTOM": 10,
+        "PORT": 2,
+        "STARBOARD": 2,
+        "FORE": 0,
+        "AFT": 0
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 23,
+      "triangles": 17494,
+      "camera": [
+        -69.80329745649416,
+        57.28922169446233,
+        -79.90873567089258
+      ],
+      "radius": 56.40062787853539,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 9,
+      "triangles": 1108,
+      "camera": [
+        -66.43686570907461,
+        53.777805902364165,
+        -75.41240224842802
+      ],
+      "radius": 53.97434002349899,
+      "geometryFinite": true
+    }
+  ]
+}

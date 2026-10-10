@@ -1,0 +1,119 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "stacked-blocks",
+    "seed": 7,
+    "shipyardId": "aegis",
+    "length": 300,
+    "role": "Cruiser",
+    "architecture": "STACKED_BLOCKS",
+    "family": "WEDGE_CITADEL"
+  },
+  "issues": [],
+  "generationMs": 3992.4000000003725,
+  "hardpoints": 114,
+  "weapons": 15,
+  "counts": {
+    "S": 81,
+    "M": 32,
+    "L": 1,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 114,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 13212.252082771736,
+      "reservedM3": 2670.0232500000084,
+      "byHost": {
+        "armored-keel": {
+          "availableM3": 9589.963775568829,
+          "reservedM3": 2073.2638500000066
+        },
+        "magazine-deck": {
+          "availableM3": 3031.7617322748224,
+          "reservedM3": 499.57154999999983
+        },
+        "command-deck": {
+          "availableM3": 590.5265749280841,
+          "reservedM3": 97.18784999999997
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 953,
+      "rejections": {
+        "Insufficient coherent installation footprint": 346,
+        "Paired foundation cannot safely absorb surface relief": 7,
+        "INSUFFICIENT_INTERNAL_POCKET": 367,
+        "INCOHERENT_FOOTPRINT": 25,
+        "OPERATING_ENVELOPE_INTERFERENCE": 33,
+        "PROTECTED_OPENING_OR_PROPULSION": 2,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 33,
+        "NO_EXPOSED_SURFACE": 43,
+        "EXISTING_SERVICE_ACCESS": 1
+      },
+      "surfaceAreaM2": 168882.15797518712,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 114,
+      "empty": 99,
+      "occupied": 15,
+      "bySize": {
+        "S": 81,
+        "M": 32,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 54,
+        "FIXED": 25,
+        "MISSILE": 27,
+        "SPINAL": 0,
+        "UTILITY": 25,
+        "DEFENSIVE": 57
+      },
+      "byRegion": {
+        "TOP": 43,
+        "BOTTOM": 53,
+        "PORT": 9,
+        "STARBOARD": 9,
+        "FORE": 0,
+        "AFT": 0
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 31,
+      "triangles": 21748,
+      "camera": [
+        -249.34842767377958,
+        204.39909029791602,
+        -285.8272670951935
+      ],
+      "radius": 221.35947380909724,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 13,
+      "triangles": 4840,
+      "camera": [
+        -249.86236767703176,
+        208.38458863310805,
+        -283.81942104092445
+      ],
+      "radius": 213.0168621395353,
+      "geometryFinite": true
+    }
+  ]
+}

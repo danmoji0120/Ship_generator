@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "stacked-blocks",
+    "seed": 7,
+    "shipyardId": "aegis",
+    "length": 300,
+    "role": "Cruiser",
+    "architecture": "STACKED_BLOCKS",
+    "family": "WEDGE_CITADEL"
+  },
+  "issues": [],
+  "generationMs": 2750.10000000149,
+  "hardpoints": 15,
+  "weapons": 15,
+  "counts": {
+    "S": 8,
+    "M": 6,
+    "L": 1,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 31,
+      "triangles": 21748,
+      "camera": [
+        -249.34842767377958,
+        204.39909029791602,
+        -285.8272670951935
+      ],
+      "radius": 221.35947380909724,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 91,
+      "triangles": 3314,
+      "camera": [
+        -246.81365014122744,
+        203.83702472371283,
+        -280.29081278189165
+      ],
+      "radius": 219.2425872098674,
+      "geometryFinite": true
+    }
+  ]
+}

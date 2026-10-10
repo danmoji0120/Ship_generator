@@ -21,6 +21,8 @@ export const PRIORITIES = [
 export type Priority = (typeof PRIORITIES)[number];
 export type MassClass = "Light" | "Standard" | "Heavy" | "Superheavy";
 export interface ShipOrder {
+  hardpointDensity?: import("../generation/hardpoint-system/types").HardpointDensity;
+  hardpointRequests?: import("../generation/hardpoint-system/types").HardpointRequest[];
   role: ShipRole;
   shipyardId: string;
   length: number;
@@ -87,6 +89,7 @@ export const HARDPOINT_TYPES = [
 ] as const;
 export type HardpointType = (typeof HARDPOINT_TYPES)[number];
 export interface Hardpoint {
+  modular?: import("../generation/hardpoint-system/types").ModularSlot;
   /** Optional authoritative standardized mount in weaponLayout; absent on historical exports. */
   plannedMountId?: string;
   surfaceMount?: import("../generation/armor/types").HardpointSurfaceMount;
@@ -417,7 +420,8 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1";
+  modularHardpoints?: import("../generation/hardpoint-system/types").ModularHardpointPlan;
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";

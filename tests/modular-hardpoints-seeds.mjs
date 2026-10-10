@@ -1,0 +1,11 @@
+import {renderSession,png} from './helpers/render-session.mjs';
+import {mkdir,writeFile} from 'node:fs/promises';
+const out='qa/v1.8.5.4/seeds';await mkdir(out,{recursive:true});
+const pairs=[['MONOLITHIC','WEDGE_CITADEL'],['BLOCK_ASSEMBLY','WEDGE_CITADEL'],['SPINE_AND_MODULES','WEAPON_DOMINANT'],['TRUSS_POD','SPLIT_FRAME'],['TWIN_HULL','WIDE_CARRIER'],['CORE_AND_NACELLES','ENGINE_DOMINANT'],['STACKED_BLOCKS','WEDGE_CITADEL'],['HYBRID','SPLIT_FRAME']];
+const {browser,page,errors}=await renderSession();try{
+ const rows=[];for(let i=0;i<10;i++){const seed=12+i,[architecture,family]=pairs[i%8],shipyardId=['aegis','vesper','forge','serein'][i%4];
+ const r=await page.evaluate(async({seed,architecture,family,shipyardId})=>{const {generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts'),{addModularHardpoints}=await import('/src/generation/hardpoint-system/planner.ts'),{validateBlueprint}=await import('/src/validation/validate.ts');const order={...structuredClone(DEFAULT_ORDER),length:300,role:'Frigate',shipyardId};let b;const start=performance.now();try{b=generateBlueprint(order,seed,{architecture,family});}catch(e){return {seed,architecture,family,shipyardId,rejected:e.message};}const generationMs=performance.now()-start,copy=structuredClone(b);delete copy.modularHardpoints;copy.hardpoints=copy.hardpoints.filter(h=>h.modular.state==='OCCUPIED');for(const h of copy.hardpoints)delete h.modular;addModularHardpoints(copy);const deterministic=JSON.stringify(copy)===JSON.stringify(b),issues=validateBlueprint(b),f=await window.integrationQA.capture(b,'iso',undefined,'Hardpoints');return {seed,architecture,family,shipyardId,generationMs,deterministic,issues,summary:b.modularHardpoints.summary,diagnostics:b.modularHardpoints.diagnostics,pixels:f.pixels,b};},{seed,architecture,family,shipyardId});
+ if(r.pixels){await writeFile(`${out}/${seed}.png`,png(r.pixels));delete r.pixels;await writeFile(`${out}/${seed}.json`,JSON.stringify(r.b));delete r.b;}
+ rows.push(r);console.log(seed,r.rejected||`${r.summary.total} slots; deterministic ${r.deterministic}; issues ${r.issues.length}`);await writeFile(`${out}/report.json`,JSON.stringify(rows,null,2));}
+ await writeFile(`${out}/console.json`,JSON.stringify(errors));if(errors.length)throw Error(errors.join('\n'));
+}finally{await browser.close();}

@@ -7,6 +7,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  onHardpointSelect?: (id:string)=>void;
   private scene = new THREE.Scene();
   private camera = new THREE.PerspectiveCamera(36, 1, 0.1, 10000);
   private renderer: THREE.WebGLRenderer;
@@ -36,6 +37,8 @@ export class ShipViewer {
     );
     this.renderer.domElement.setAttribute("tabindex", "0");
     container.append(this.renderer.domElement);
+    let down={x:0,y:0};this.renderer.domElement.addEventListener("pointerdown",e=>{down={x:e.clientX,y:e.clientY};});
+    this.renderer.domElement.addEventListener("pointerup",e=>{if(!this.ship||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const rect=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),this.camera);const markers:THREE.Object3D[]=[];this.ship.traverse(n=>{if(n.userData.modularSlotIds)markers.push(n);});const hit=ray.intersectObjects(markers,false)[0];if(hit?.instanceId!==undefined)this.onHardpointSelect?.(hit.object.userData.modularSlotIds[hit.instanceId]);});
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.08;

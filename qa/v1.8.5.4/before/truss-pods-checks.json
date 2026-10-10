@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "truss-pods",
+    "seed": 7,
+    "shipyardId": "vesper",
+    "length": 300,
+    "role": "Frigate",
+    "architecture": "TRUSS_POD",
+    "family": "SPLIT_FRAME"
+  },
+  "issues": [],
+  "generationMs": 12149.299999998882,
+  "hardpoints": 10,
+  "weapons": 10,
+  "counts": {
+    "S": 8,
+    "M": 2,
+    "L": 0,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 135,
+      "triangles": 31126,
+      "camera": [
+        -245.00970735313777,
+        200.61310428144395,
+        -280.4496468408608
+      ],
+      "radius": 214.55022014681145,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 151,
+      "triangles": 4540,
+      "camera": [
+        -242.17179029629855,
+        197.6506209447428,
+        -274.88502183837045
+      ],
+      "radius": 213.76112967538813,
+      "geometryFinite": true
+    }
+  ]
+}

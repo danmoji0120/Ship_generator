@@ -1,0 +1,104 @@
+[
+  {
+    "density": "SPARSE",
+    "summary": {
+      "total": 68,
+      "empty": 53,
+      "occupied": 15,
+      "bySize": {
+        "S": 46,
+        "M": 21,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 31,
+        "FIXED": 14,
+        "MISSILE": 16,
+        "SPINAL": 0,
+        "UTILITY": 13,
+        "DEFENSIVE": 34
+      },
+      "byRegion": {
+        "TOP": 26,
+        "BOTTOM": 30,
+        "PORT": 6,
+        "STARBOARD": 6,
+        "FORE": 0,
+        "AFT": 0
+      }
+    },
+    "planningMs": 964.4000000022352,
+    "validationMs": 464.5999999977648,
+    "issues": [],
+    "deterministic": true
+  },
+  {
+    "density": "STANDARD",
+    "summary": {
+      "total": 114,
+      "empty": 99,
+      "occupied": 15,
+      "bySize": {
+        "S": 81,
+        "M": 32,
+        "L": 1,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 54,
+        "FIXED": 25,
+        "MISSILE": 27,
+        "SPINAL": 0,
+        "UTILITY": 25,
+        "DEFENSIVE": 57
+      },
+      "byRegion": {
+        "TOP": 43,
+        "BOTTOM": 53,
+        "PORT": 9,
+        "STARBOARD": 9,
+        "FORE": 0,
+        "AFT": 0
+      }
+    },
+    "planningMs": 1374.300000000745,
+    "validationMs": 549.5,
+    "issues": [],
+    "deterministic": true
+  },
+  {
+    "density": "DENSE",
+    "summary": {
+      "total": 171,
+      "empty": 156,
+      "occupied": 15,
+      "bySize": {
+        "S": 125,
+        "M": 43,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 85,
+        "FIXED": 40,
+        "MISSILE": 42,
+        "SPINAL": 0,
+        "UTILITY": 38,
+        "DEFENSIVE": 88
+      },
+      "byRegion": {
+        "TOP": 74,
+        "BOTTOM": 69,
+        "PORT": 10,
+        "STARBOARD": 10,
+        "FORE": 2,
+        "AFT": 6
+      }
+    },
+    "planningMs": 1566.800000000745,
+    "validationMs": 277,
+    "issues": [],
+    "deterministic": true
+  }
+]

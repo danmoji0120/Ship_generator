@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "small-monolithic",
+    "seed": 7,
+    "shipyardId": "aegis",
+    "length": 80,
+    "role": "Corvette",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL"
+  },
+  "issues": [],
+  "generationMs": 2391,
+  "hardpoints": 16,
+  "weapons": 16,
+  "counts": {
+    "S": 16,
+    "M": 0,
+    "L": 0,
+    "XL": 0
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 23,
+      "triangles": 17494,
+      "camera": [
+        -69.80329745649416,
+        57.28922169446233,
+        -79.90873567089258
+      ],
+      "radius": 56.40062787853539,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 100,
+      "triangles": 3012,
+      "camera": [
+        -66.43753217486709,
+        53.77880002390839,
+        -75.413173620873
+      ],
+      "radius": 55.887936387125684,
+      "geometryFinite": true
+    }
+  ]
+}

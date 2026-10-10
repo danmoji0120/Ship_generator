@@ -1,0 +1,132 @@
+{
+  "geometryPreserved": true,
+  "normalPixelsEqual": true,
+  "case": {
+    "id": "hybrid",
+    "seed": 11,
+    "shipyardId": "serein",
+    "length": 300,
+    "role": "Frigate",
+    "architecture": "HYBRID",
+    "family": "SPLIT_FRAME"
+  },
+  "issues": [],
+  "generationMs": 4794.4000000003725,
+  "hardpoints": 93,
+  "weapons": 5,
+  "counts": {
+    "S": 89,
+    "M": 4,
+    "L": 0,
+    "XL": 0
+  },
+  "slots": {
+    "version": "1.8.5.4",
+    "density": "STANDARD",
+    "target": 93,
+    "limit": 512,
+    "budget": {
+      "sector": "structure",
+      "method": "Interface support pockets suballocated inside existing structure reservation (8% after energy space); not new capacity or installed equipment power/ammunition",
+      "availableM3": 2638.4350418560934,
+      "reservedM3": 830.0393999999994,
+      "byHost": {
+        "axial-spine": {
+          "availableM3": 534.0028538478265,
+          "reservedM3": 27.264599999999998
+        },
+        "breech--1": {
+          "availableM3": 618.0029818944053,
+          "reservedM3": 219.87854999999985
+        },
+        "drive--1": {
+          "availableM3": 385.69775865100183,
+          "reservedM3": 178.9816499999999
+        },
+        "breech-1": {
+          "availableM3": 618.0029818944053,
+          "reservedM3": 192.61394999999987
+        },
+        "drive-1": {
+          "availableM3": 385.69775865100183,
+          "reservedM3": 115.87454999999994
+        },
+        "axis-reinforcement": {
+          "availableM3": 97.03070691745276,
+          "reservedM3": 95.42609999999996
+        }
+      }
+    },
+    "requests": [],
+    "diagnostics": {
+      "candidates": 536,
+      "rejections": {
+        "Insufficient coherent installation footprint": 133,
+        "INCOHERENT_FOOTPRINT": 48,
+        "INSUFFICIENT_INTERNAL_POCKET": 164,
+        "OPERATING_ENVELOPE_INTERFERENCE": 43,
+        "Paired foundation cannot safely absorb surface relief": 11,
+        "NO_EXPOSED_SURFACE": 24,
+        "SLOT_ORIENTED_ENVELOPE_OVERLAP": 24,
+        "PROTECTED_OPENING_OR_PROPULSION": 20,
+        "EXISTING_SERVICE_ACCESS": 1,
+        "OUTWARD_ACCESS_BLOCKED": 2
+      },
+      "surfaceAreaM2": 52768.68362182057,
+      "stopReason": "TARGET_REACHED"
+    },
+    "summary": {
+      "total": 93,
+      "empty": 88,
+      "occupied": 5,
+      "bySize": {
+        "S": 89,
+        "M": 4,
+        "L": 0,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 45,
+        "FIXED": 22,
+        "MISSILE": 22,
+        "SPINAL": 0,
+        "UTILITY": 22,
+        "DEFENSIVE": 48
+      },
+      "byRegion": {
+        "TOP": 41,
+        "BOTTOM": 40,
+        "PORT": 1,
+        "STARBOARD": 1,
+        "FORE": 6,
+        "AFT": 4
+      }
+    }
+  },
+  "rendering": [
+    {
+      "name": "Normal",
+      "drawCalls": 101,
+      "triangles": 26376,
+      "camera": [
+        -208.98460788119039,
+        172.9424714780665,
+        -238.87300971308977
+      ],
+      "radius": 185.04861305680748,
+      "geometryFinite": true
+    },
+    {
+      "name": "Hardpoints",
+      "drawCalls": 66,
+      "triangles": 5964,
+      "camera": [
+        -201.78153223640697,
+        166.0290227402263,
+        -233.00753177220318
+      ],
+      "radius": 184.60446553551668,
+      "geometryFinite": true
+    }
+  ]
+}

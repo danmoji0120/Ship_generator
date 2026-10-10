@@ -1015,3 +1015,10 @@ pre {
 
 .detail-control { display:flex; align-items:center; gap:.7rem; padding:.45rem .8rem; font-size:.75rem; color:#a8b8c5; }
 .detail-control select { width:auto; padding:.25rem .5rem; }
+.hardpoint-orders summary, .hardpoint-inspector summary { cursor: pointer; margin: 10px 0; color: var(--text-secondary); }
+.hardpoint-request { border: 1px solid #314554; padding: 8px; margin: 8px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.hardpoint-request label { font-size: 11px; display: grid; gap: 3px; }
+.hardpoint-request select, .hardpoint-request input { min-width: 0; width: 100%; font-size: 12px; }
+.hardpoint-request .wide { grid-column: 1 / -1; }
+.hardpoint-inspector { margin: 14px 20px; font-size: 12px; color: #bdd1dc; }
+#hardpoint-selection-info { white-space: pre-wrap; font: 11px/1.6 monospace; }
