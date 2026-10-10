@@ -1,3 +1,4 @@
+import {mesoConnectorScene} from './connector-scene';
 import type {ShipBlueprint} from '../../blueprint/types';
 import {mesoSurfaces,mesoAsDetail,mesoIssues} from './build';
 import {mesoGeometry} from './geometry';
@@ -7,8 +8,8 @@ import {area,cross,solidTriangles} from '../armor/panels';
 import {boundsOf,dot,sub,mul} from '../integration/contours';
 export function validateMesoStructures(b:ShipBlueprint){
  const p=b.mesoStructurePlan,issues:string[]=[],checks=['Closed finite reconstructed solids','Thirteen real triangle support contacts','Existing operating/firing/XL/opening/access exclusions','Separate visual structure authority; no armor coverage or combat strength'];if(!p)return{issues,checks};
- const surfaces=mesoSurfaces(b),scene=detailScene(b,surfaces),ids=new Set<string>(),prior=[...(b.exteriorDetailPlan?.kitPlacements??[])];
- if(p.version!=='1.8.5.3'||p.generationSeed!==b.seed||p.namespace!=='meso-structure-v1'||p.styleLanguage!==b.shipyardId)issues.push('Invalid meso version/seed/style');
+ const surfaces=mesoSurfaces(b),scene=[...detailScene(b,surfaces),...(p.version==='1.8.5.3.1'?mesoConnectorScene(b):[])],ids=new Set<string>(),prior=[...(b.exteriorDetailPlan?.kitPlacements??[])];
+ if(!['1.8.5.3','1.8.5.3.1'].includes(p.version)||p.generationSeed!==b.seed||p.namespace!=='meso-structure-v1'||p.styleLanguage!==b.shipyardId)issues.push('Invalid meso version/seed/style');
  for(const a of p.placements){
   if(ids.has(a.id)||!p.detectedZones.some(z=>z.id===a.zoneId&&z.allowed.includes(a.kind))||!b.structuralVolumes.some(v=>v.id===a.parentStructureId)||a.combatProtection!=='NOT_SIMULATED'||a.physicalOrVisualRole!=='VISUAL_STRUCTURE_ONLY'||a.attachment.contacts.length!==13)issues.push('Invalid meso identity/parent/authority '+a.id);ids.add(a.id);
   const sourceZone=p.detectedZones.find(z=>z.id===a.zoneId);
@@ -17,6 +18,12 @@ export function validateMesoStructures(b:ShipBlueprint){
   if(a.kind==='WEAPON_BARBETTE_INTEGRATION'&&(!mount||Math.abs(dot(sub(a.attachment.position,mount.position),mount.frame.forward))>mount.footprint.length*.5+.1))issues.push('Meso outside weapon foundation neighborhood '+a.id);
   if((a.kind==='MACHINERY_GALLERY'||a.kind==='SERVICE_RECESS_FRAME')&&(!channel||a.bounds.min.z<Math.min(...channel.floor.map(p=>p.z))-3||a.bounds.max.z>Math.max(...channel.floor.map(p=>p.z))+3))issues.push('Meso outside actual service channel '+a.id);
   if(a.kind==='ENGINE_ROOT_TRANSITION'&&!b.engines.some(e=>e.id===a.parentEquipmentId))issues.push('Meso missing propulsion source '+a.id);
+  if(p.version==='1.8.5.3.1'){
+   if(sourceZone?.root){const r=sourceZone.root,e=b.engines.find(e=>e.id===r.engineId);if(!e||e.parentId!==a.parentStructureId||JSON.stringify(e.position)!==JSON.stringify(r.position)||JSON.stringify(e.direction??{x:0,y:0,z:1})!==JSON.stringify(r.direction)||e.nozzleRadius!==r.radius||!['WIDE_ROOT_FAIRING','NARROW_ROOT_FAIRING','SEGMENTED_ROOT_SUPPORT','LOW_PROFILE_TRANSITION'].includes(a.parameters.rootVariant??'')||Math.hypot(...Object.values(sub(a.attachment.position,e.position)))>Math.max(e.nozzleRadius*4,b.order.length*.07))issues.push('Invalid actual engine root reference/neighborhood '+a.id);
+    if(a.parameters.rootVariant==='SEGMENTED_ROOT_SUPPORT'&&p.placements.filter(q=>q.parentEquipmentId===a.parentEquipmentId&&q.parameters.rootVariant==='SEGMENTED_ROOT_SUPPORT').length<2)issues.push('Segmented root has no independently supported pair '+a.id);
+   }
+   if(sourceZone?.connectorId){const c=b.structuralConnectors.find(c=>c.id===sourceZone.connectorId),endpoint=c?.fromStructureId===a.parentStructureId?c.start:c?.toStructureId===a.parentStructureId?c.end:undefined;if(!c||!endpoint||Math.hypot(...Object.values(sub(a.attachment.position,endpoint)))>Math.max(b.order.length*.09,c.thickness*4))issues.push('Meso outside actual structural junction '+a.id);}
+  }
   const f=a.attachment.frame;
   if([f.right,f.normal,f.forward].some(v=>Math.abs(dot(v,v)-1)>1e-5)||Math.abs(dot(f.right,f.normal))>1e-5||Math.abs(dot(f.normal,f.forward))>1e-5||dot(cross(f.right,f.normal),mul(f.forward,-1))<.99999)issues.push('Invalid meso local frame '+a.id);
   try{if(JSON.stringify(mesoGeometry(a.id,a.kind,a.parameters,a.attachment))!==JSON.stringify(a.parts))issues.push('Meso solid differs from parametric authority '+a.id);}catch{issues.push('Invalid meso root patch/recipe '+a.id);}

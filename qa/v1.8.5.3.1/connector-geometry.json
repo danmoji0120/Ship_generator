@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "architecture": "TRUSS_POD",
+      "connectorSolids": 81,
+      "junctionPlacements": 8,
+      "interferences": []
+    },
+    {
+      "architecture": "HYBRID",
+      "connectorSolids": 49,
+      "junctionPlacements": 9,
+      "interferences": []
+    },
+    {
+      "architecture": "SPINE_AND_MODULES",
+      "connectorSolids": 13,
+      "junctionPlacements": 6,
+      "interferences": []
+    },
+    {
+      "architecture": "CORE_AND_NACELLES",
+      "connectorSolids": 4,
+      "junctionPlacements": 9,
+      "interferences": []
+    },
+    {
+      "architecture": "TWIN_HULL",
+      "connectorSolids": 2,
+      "junctionPlacements": 3,
+      "interferences": []
+    }
+  ],
+  "errors": [],
+  "note": "Extra QA against actual rendered connector mesh solids with world transforms; sampled solid containment, not exhaustive triangle intersection."
+}

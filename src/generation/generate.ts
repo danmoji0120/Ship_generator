@@ -1,3 +1,4 @@
+import {addMesoStructures as addLegacyMesoStructures} from './meso/legacy-build';
 import {addMesoStructures} from './meso/build';
 import {applySurfaceAppearance} from './appearance/build';
 import { applyMaterialAppearance } from '../rendering/appearance';
@@ -35,7 +36,7 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1";
     productionBase?: boolean;
     requirementPlan?: RequirementPlan;
     minimumMacroCandidate?: number;
@@ -44,7 +45,7 @@ export function generateBlueprint(
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if((!qaOptions?.version)||qaOptions?.version==='1.8.4.2'||qaOptions?.version==='1.8.5'||qaOptions?.version==='1.8.5.1'||qaOptions?.version==='1.8.5.2'||qaOptions?.version==='1.8.5.3'){
+  if((!qaOptions?.version)||qaOptions?.version==='1.8.4.2'||qaOptions?.version==='1.8.5'||qaOptions?.version==='1.8.5.1'||qaOptions?.version==='1.8.5.2'||qaOptions?.version==='1.8.5.3'||qaOptions?.version==='1.8.5.3.1'){
     // Normalize/validate before planning; historical generation remains separately callable.
     const order=structuredClone(input),normalizedSeed=normalizeSeed(seed);
     if(!ROLES.includes(order.role)||!['Light','Standard','Heavy','Superheavy'].includes(order.massClass)||!Number.isFinite(order.length)||order.length<40||order.length>600||PRIORITIES.some(k=>!Number.isFinite(order.priorities[k])||order.priorities[k]<0||order.priorities[k]>100))throw Error('Invalid Ship Order');
@@ -60,11 +61,11 @@ export function generateBlueprint(
       if(qaOptions?.version==='1.8.4.2')return released;
       const detailed=addExteriorDetails(released);
       if(qaOptions?.version==='1.8.5')return detailed;
-      const modern=!qaOptions?.version||qaOptions.version==='1.8.5.3';
-      const structured=modern?addMesoStructures(detailed):detailed;
+      const modern=!qaOptions?.version||qaOptions.version==='1.8.5.3'||qaOptions.version==='1.8.5.3.1';
+      const structured=modern?(qaOptions?.version==='1.8.5.3'?addLegacyMesoStructures(detailed):addMesoStructures(detailed)):detailed;
       const appeared=applyMaterialAppearance(structured);
       if(qaOptions?.version==='1.8.5.1')return appeared;
-      const result=applySurfaceAppearance(appeared);if(modern)result.generatorVersion='1.8.5.3';return result;
+      const result=applySurfaceAppearance(appeared);if(modern)result.generatorVersion=qaOptions?.version==='1.8.5.3'?'1.8.5.3':'1.8.5.3.1';return result;
     }catch(e){const reason=(e as Error).message;plan.rejectedCandidates.push({candidate:index,architecture:c.architecture,family:c.family,stage:'physical-candidate',codes:[...new Set(reason.match(/REQUIRED_[A-Z_]+/g)??['REQUIRED_PHYSICAL_DESIGN_INVALID'])],reasons:[reason]});}
     throw new DesignRejection(plan.rejectedCandidates.flatMap(a=>a.codes),plan.rejectedCandidates,'No requirements-compliant physical candidate: '+JSON.stringify(plan.rejectedCandidates));
   }

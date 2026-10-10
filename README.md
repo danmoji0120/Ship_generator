@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.5.3 — Structural Visual Hierarchy & Meso Geometry
+# Procedural Shipyard V1.8.5.3.1 — Engine Root & Sparse Architecture Refinement
 
-일반 주문서의 기본 생성기는 **V1.8.5.3**입니다. 무장과 기존 외장 Kit 이후에 실제 표면에 부착되는 Meso 구조를 생성하고, 최종 노출 면의 질감·마킹을 계획합니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.5.3.1**입니다. 무장과 기존 외장 Kit 이후에 실제 표면에 부착되는 Meso 구조를 생성하고, 최종 노출 면의 질감·마킹을 계획합니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -676,3 +676,9 @@ The default Requirements-first generator now adds a deterministic, optional Meso
 
 - [Meso architecture and safety contract](docs/MESO_STRUCTURE.md)
 - [V1.8.5.3 QA evidence and limitations](qa/v1.8.5.3/QA.md)
+
+## V1.8.5.3.1 엔진 접속부 및 개방형 접합 개선
+
+실제 Engine Mount 좌표·축·노즐 반경에서 Root 후보와 실제 노출 표면의 지지 간격을 찾습니다. Wide/Narrow/Segmented/Low-profile는 기존 ENGINE_ROOT_TRANSITION의 변형이며, 접촉·충돌·배기·사격 기준은 유지합니다. 실제 Connector 주변의 Pod/Spine/Nacelle/Twin/Hybrid 접합 후보와 기능별 예산 우선순위를 추가했습니다. `{version: '1.8.5.3'}`는 이전 생성기를 그대로 실행합니다. 기존 저장 설계에는 신규 구조를 소급 적용하지 않습니다.
+
+[설계 계약](docs/MESO_ROOT_REFINEMENT.md) · [실제 설치·회귀·성능 QA](qa/v1.8.5.3.1/QA.md)

@@ -1,0 +1,11 @@
+{
+  "baselineCommit": "a9969d2b0e6341a7800e1e1659f95b9256d983f9",
+  "total": 222,
+  "statuses": {
+    "released": 200,
+    "rejected": 22
+  },
+  "sameBaselineDecisions": true,
+  "freshRunArtifactUTC": "2026-10-10T11:10:42.000077+00:00",
+  "differences": []
+}

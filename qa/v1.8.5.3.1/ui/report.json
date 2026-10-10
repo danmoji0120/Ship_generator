@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "Production default generator without DEV hooks",
+    "Same Seed JSON",
+    "New Seed changes actual Hull",
+    "All production debug modes",
+    "Surface finish and texture/decal debug are rendering-only",
+    "OFF LOW HIGH AUTO visibility only; JSON unchanged",
+    "Real UI export/import + WebGL pixel reproduction",
+    "Stored reload without regeneration",
+    "Orbit / Zoom / Fit",
+    "Doctrine intent, target/actual and resource explanation in real Inspector",
+    "Expanded doctrine Inspector stays inside 390px viewport",
+    "Requirements summary on Production design",
+    "Actual required XL on former failed Seed 11 and same-order JSON",
+    "Impossible XL order rejected with reason; no invalid shipment replaces Blueprint",
+    "Historical import undefined",
+    "Historical import 1.8.1",
+    "Historical import 1.8.2",
+    "Historical import 1.8.3",
+    "390px responsive layout only (no mobile GPU claim)"
+  ],
+  "errors": [],
+  "pixels": true,
+  "environment": "Chromium / SwiftShader; actual production bundle"
+}

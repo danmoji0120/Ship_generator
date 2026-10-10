@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "WIDE_ROOT_FAIRING",
+    "accepted": 2
+  },
+  {
+    "variant": "NARROW_ROOT_FAIRING",
+    "accepted": 2
+  },
+  {
+    "variant": "SEGMENTED_ROOT_SUPPORT",
+    "accepted": 2
+  },
+  {
+    "variant": "LOW_PROFILE_TRANSITION",
+    "accepted": 2
+  }
+]

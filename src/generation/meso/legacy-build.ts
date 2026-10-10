@@ -1,5 +1,3 @@
-import {mesoConnectorScene} from './connector-scene';
-import {engineRootZones,junctionZones,omissionCategory,availableFootprint} from './root-planner';
 import type {ShipBlueprint,Vec3} from '../../blueprint/types';
 import type {MesoZone,MesoKind,MesoPlacement,MesoStructurePlan} from './types';
 import {MESO_KINDS} from './types';
@@ -42,7 +40,10 @@ export function detectMesoZones(b:ShipBlueprint):MesoZone[]{
    emit('SERVICE_CHANNEL',id,ch.parentStructureId,{x:f.x+sign*(ch.width*.5+L*.012),y:f.y,z:f.z}, {x:0,y:1,z:0},['MACHINERY_GALLERY','SERVICE_RECESS_FRAME'],'Coping on the bank of an already open service channel; keep its center lane',ch.id);
   }
  }
- const surfaces=mesoSurfaces(b);zones.push(...engineRootZones(b,surfaces),...junctionZones(b,surfaces));
+ for(const hostId of [...new Set(b.engines.map(e=>e.parentId))]){const host=b.structuralVolumes.find(v=>v.id===hostId);if(!host)continue;
+  const z=host.position.z+host.geometry.stations[0].z+host.dimensions.z*.82;
+  for(const side of[-1,1])emit('PROPULSION_ROOT',hostId,hostId,{...host.position,z},{x:side,y:0,z:0},['ENGINE_ROOT_TRANSITION'],'Supply/root fairing on real propulsion host, upstream of reserved nozzle outlet',b.engines.find(e=>e.parentId===hostId)!.id);
+ }
  return zones;
 }
 export function mesoAsDetail(p:MesoPlacement):DetailPlacement{
@@ -74,60 +75,52 @@ function stationPatch(surfaces:ArmorSurfaces,contacts:MesoPlacement['attachment'
  }
  const requested=area(polygon);if(covered<requested*.998||covered>requested*1.002)throw Error('Actual station patch is incomplete, occluded or overlaps itself');return{vertices,indices};
 }
-export function addMesoStructures(b:ShipBlueprint,options:{kinds?:readonly MesoKind[];rootVariants?:readonly import('./types').RootVariant[];onTimings?:(t:{planningMs:number;validationMs:number;totalMs:number})=>void}={}):ShipBlueprint{
- const start=performance.now(),surfaces=mesoSurfaces(b),scene=[...detailScene(b,surfaces),...mesoConnectorScene(b)],style=MESO_STYLE[b.shipyardId as keyof typeof MESO_STYLE],L=b.order.length;
- const plan:MesoStructurePlan={version:'1.8.5.3.1',generationSeed:b.seed,namespace:'meso-structure-v1',styleLanguage:b.shipyardId,sourceBlueprintVersion:b.generatorVersion??'1.8.4.2',detectedZones:detectMesoZones(b),placements:[],decisions:[],bounds:structuredClone(b.exteriorDetailPlan?.bounds??b.productionDesign!.overallBounds),validation:{issues:[],checks:[]}};
+export function addMesoStructures(b:ShipBlueprint,options:{kinds?:readonly MesoKind[];onTimings?:(t:{planningMs:number;validationMs:number;totalMs:number})=>void}={}):ShipBlueprint{
+ const start=performance.now(),surfaces=mesoSurfaces(b),scene=detailScene(b,surfaces),style=MESO_STYLE[b.shipyardId as keyof typeof MESO_STYLE],L=b.order.length;
+ const plan:MesoStructurePlan={version:'1.8.5.3',generationSeed:b.seed,namespace:'meso-structure-v1',styleLanguage:b.shipyardId,sourceBlueprintVersion:b.generatorVersion??'1.8.4.2',detectedZones:detectMesoZones(b),placements:[],decisions:[],bounds:structuredClone(b.exteriorDetailPlan?.bounds??b.productionDesign!.overallBounds),validation:{issues:[],checks:[]}};
  const limit=L<70?7:L<160?14:26;
  // Resolve major cannon integration before optional terraces occupy its adjacent armor.
- const zonePriority=(z:MesoZone)=>z.kind==='WEAPON_FOUNDATION'&&b.weaponLayout?.mounts.some(m=>m.equipment.prefabId===z.equipmentId&&m.standard.size==='L')?-4:z.kind==='PROPULSION_ROOT'?-3:z.connectorId?-2.5:z.kind==='PRIMARY_ARMOR'||z.kind==='ARMOR_SHOULDER'?-2:z.kind==='WEAPON_FOUNDATION'?-1:0;
+ const zonePriority=(z:MesoZone)=>z.kind==='WEAPON_FOUNDATION'&&b.weaponLayout?.mounts.some(m=>m.equipment.prefabId===z.equipmentId&&m.standard.size==='L')?-3:z.kind==='PRIMARY_ARMOR'||z.kind==='ARMOR_SHOULDER'?-2:z.kind==='WEAPON_FOUNDATION'?-1:0;
  plan.detectedZones.sort((a,c)=>zonePriority(a)-zonePriority(c));
- plan.functionBudget={limit,engineEvaluationPriority:true,rootZones:plan.detectedZones.filter(z=>z.root).length,junctionZones:plan.detectedZones.filter(z=>z.connectorId).length};
  for(const zone of plan.detectedZones){
   const target=surfaces.find(s=>s.id===zone.parentSurfaceId);if(!target)continue;
-  if(!zone.root&&!zone.connectorId)zone.availableAreaM2=target.triangles.filter(t=>dot(t.n,zone.normal)>.65).reduce((s,t)=>s+area(t.vertices),0);
+  zone.availableAreaM2=target.triangles.filter(t=>dot(t.n,zone.normal)>.65).reduce((s,t)=>s+area(t.vertices),0);
   const availableKinds=zone.allowed.filter(k=>(options.kinds??MESO_KINDS).includes(k));
   // Selection varies at the design level, never jitters independent fasteners or functional equipment.
   const kind=availableKinds.length?availableKinds[surfaceHash(`${b.seed}/${zone.id}`)%availableKinds.length]:undefined;if(!kind)continue;
   let accepted=false;const seedPhase=(surfaceHash(`meso-structure-v1/${b.seed}/${zone.parentSurfaceId}`)%3)-1;
-  const candidates:{fit:number;fraction:number;variant?:import('./types').RootVariant}[]=zone.root?(options.rootVariants??[zone.root.variant,...(['WIDE_ROOT_FAIRING','NARROW_ROOT_FAIRING','LOW_PROFILE_TRANSITION','SEGMENTED_ROOT_SUPPORT'] as const).filter(v=>v!==zone.root!.variant)]).flatMap(variant=>[1,.8,.65].map(fit=>({fit,fraction:0,variant}))):[1,.8,.65].flatMap(fit=>[seedPhase*.19,-.26,.26,-.40,.40].map(fraction=>({fit,fraction})));
-  for(const [candidate,proposal]of candidates.entries()){
-   if(plan.placements.length>=limit){plan.decisions.push({zoneId:zone.id,kind,candidate,status:'omitted',reason:'Meso visual hierarchy budget exhausted',category:'BUDGET_EXHAUSTED'});break;}
-   if(zone.root&&plan.placements.filter(p=>p.parentEquipmentId===zone.equipmentId&&p.kind==='ENGINE_ROOT_TRANSITION').length>=2){plan.decisions.push({zoneId:zone.id,kind,candidate,status:'omitted',reason:'Actual engine already has two accepted root supports; retain other exposed armor',category:'ROOT_ALREADY_SUPPORTED'});break;}
-   const {fraction,fit}=proposal;const variant=proposal.variant;
+  const candidates=[1,.8,.65].flatMap(fit=>[seedPhase*.19,-.26,.26,-.40,.40].map(fraction=>({fit,fraction})));
+  for(const [candidate,{fraction,fit}]of candidates.entries()){
    zone.candidateCount++;
    try{
     if(plan.placements.length>=limit)throw Error('Meso visual hierarchy budget; retain broad empty armor');
     const mount=b.weaponLayout?.mounts.find(m=>m.equipment.prefabId===zone.equipmentId),channel=b.productionDesign?.channels.find(c=>c.id===zone.equipmentId);
-    const searchSpan=zone.connectorId?b.order.length*.025:mount?mount.footprint.length:channel?Math.max(0,Math.max(...channel.floor.map(p=>p.z))-Math.min(...channel.floor.map(p=>p.z))-L*.10):zone.kind==='PROPULSION_ROOT'?target.box.max.z-target.box.min.z>0?(target.box.max.z-target.box.min.z)*.14:0:target.box.max.z-target.box.min.z;
+    const searchSpan=mount?mount.footprint.length:channel?Math.max(0,Math.max(...channel.floor.map(p=>p.z))-Math.min(...channel.floor.map(p=>p.z))-L*.10):zone.kind==='PROPULSION_ROOT'?target.box.max.z-target.box.min.z>0?(target.box.max.z-target.box.min.z)*.14:0:target.box.max.z-target.box.min.z;
     const hint=mount?add(zone.hint,mul(mount.frame.forward,-searchSpan*fraction)):{...zone.hint,z:zone.hint.z+searchSpan*fraction},hit=surfaceRay(surfaces,hint,zone.normal);if(!hit||hit.structureId!==zone.parentStructureId||dot(hit.normal,zone.normal)<.65)throw Error('No exposed coherent parent surface');
     const frame=detailFrame(hit.normal),support=surfaces.find(s=>s.id===hit.surfaceId)!;
     const face=target.triangles.filter(t=>dot(t.n,hit.normal)>.88).flatMap(t=>t.vertices);if(face.length<3)throw Error('No finite planar support region');
     const xs=face.map(v=>dot(sub(v,hit.position),frame.right)),zs=face.map(v=>-dot(sub(v,hit.position),frame.forward));
     const spanX=Math.max(...xs)-Math.min(...xs),spanZ=Math.max(...zs)-Math.min(...zs);
     const desired=kind==='MACHINERY_GALLERY'||kind==='SERVICE_RECESS_FRAME'?{w:Math.min(L*.018,6),l:L*.10,h:L*.012}:kind==='WEAPON_BARBETTE_INTEGRATION'?{w:L*.036,l:L*.10,h:L*.014}:kind==='FLANK_ARMOR_BELT'?{w:L*.028,l:L*.15,h:L*.012}:kind==='VENTRAL_KEEL_SUPPORT'?{w:L*.055,l:L*.14,h:L*.018}:kind==='ENGINE_ROOT_TRANSITION'?{w:L*.05,l:L*.12,h:L*.015}:{w:L*(zone.kind==='PRIMARY_ARMOR'&&Math.abs(zone.hint.x-(target.box.min.x+target.box.max.x)/2)>L*.015?.078:.12),l:L*.19,h:L*.023};
-    if(zone.root){const r=zone.root.radius;desired.w=Math.max(1.3,r*(variant==='WIDE_ROOT_FAIRING'?.8:variant==='LOW_PROFILE_TRANSITION'?.5:variant==='SEGMENTED_ROOT_SUPPORT'?.36:.4));desired.l=Math.max(3,r*(variant==='WIDE_ROOT_FAIRING'?1.25:1.4));desired.h=Math.max(.8,r*(variant==='LOW_PROFILE_TRANSITION'?.13:.22));}
-    const freeJunction=zone.connectorId?availableFootprint(surfaces,hit.position,hit.normal,zone.parentStructureId,L*.05):undefined;
-    const w=Math.min(desired.w*style.width*fit,freeJunction?freeJunction.width*.8:zone.root?zone.root.availableWidth*.8:spanX*.65),l=Math.min(desired.l*fit,freeJunction?freeJunction.length*.8:zone.root?zone.root.availableLength*.8:spanZ*.62),h=Math.min(desired.h*style.height,w*(kind==='MACHINERY_GALLERY'||kind==='SERVICE_RECESS_FRAME'?.5:.27),l*.17);
-    if(w<(zone.root||zone.connectorId?.8:Math.max(.8,L*.007))||l<(zone.root||zone.connectorId?2:Math.max(2,L*.021))||h<(zone.root||zone.connectorId?.25:Math.max(.25,L*.0018)))throw Error('Insufficient meso-sized coherent area');
+    const w=Math.min(desired.w*style.width*fit,spanX*.65),l=Math.min(desired.l*fit,spanZ*.62),h=Math.min(desired.h*style.height,w*(kind==='MACHINERY_GALLERY'||kind==='SERVICE_RECESS_FRAME'?.5:.27),l*.17);
+    if(w<Math.max(.8,L*.007)||l<Math.max(2,L*.021)||h<Math.max(.25,L*.0018))throw Error('Insufficient meso-sized coherent area');
     const inset=Math.min(.12,Math.max(.035,L*.00028)),contacts=[];
     for(const p of [...mesoPerimeter(w,l,style.clip,style.taper),{x:0,y:0,z:0},{x:-w*.25,y:0,z:0},{x:w*.25,y:0,z:0},{x:0,y:0,z:-l*.25},{x:0,y:0,z:l*.25}]){
      const q=worldPoint(hit.position,frame,p),c=surfaceRay(surfaces,q,hit.normal);if(!c||c.structureId!==hit.structureId||!surfaces.some(s=>s.id===c.surfaceId&&(b.productionDesign?.armor.some(a=>a.id===s.id)||b.productionDesign?.finish.some(a=>a.id===s.id)||b.structuralVolumes.some(v=>v.id===s.id)))||dot(c.normal,hit.normal)<.88||Math.abs(dot(sub(c.position,q),hit.normal))>h*1.2)throw Error('Unsupported footprint: '+JSON.stringify({surface:c?.surfaceId,parent:c?.structureId,normalDot:c?dot(c.normal,hit.normal):null,relief:c?dot(sub(c.position,q),hit.normal):null,height:h}));contacts.push(c);
     }
     const rootPatch=stationPatch(surfaces,contacts,hit.position,frame,w,l,style.clip,style.taper);
-    const parameters={width:w,length:l,height:h,taper:style.taper,clip:style.clip,style:b.shipyardId,...(zone.root?{rootVariant:variant}:{})},attachment={position:hit.position,frame,contacts,inset,footprint:{width:w,length:l},rootPatch},id='meso/'+zone.id+'/'+kind,parts=mesoGeometry(id,kind,parameters,attachment);
+    const parameters={width:w,length:l,height:h,taper:style.taper,clip:style.clip,style:b.shipyardId},attachment={position:hit.position,frame,contacts,inset,footprint:{width:w,length:l},rootPatch},id='meso/'+zone.id+'/'+kind,parts=mesoGeometry(id,kind,parameters,attachment);
     const p:MesoPlacement={id,kind,zoneId:zone.id,parentStructureId:zone.parentStructureId,parentSurfaceId:hit.surfaceId,parentEquipmentId:zone.equipmentId,attachment,parameters,parts,bounds:boundsOf(parts.flatMap(p=>p.solid.vertices)),lodClass:h>=L*.009?'SILHOUETTE_RELEVANT':'STRUCTURAL_READABLE',importance:kind==='WEAPON_BARBETTE_INTEGRATION'?1:.8,physicalOrVisualRole:'VISUAL_STRUCTURE_ONLY',combatProtection:'NOT_SIMULATED',references:[zone.parentSurfaceId,...(zone.equipmentId?[zone.equipmentId]:[])]};
     const prior=[...(b.exteriorDetailPlan?.kitPlacements??[]),...plan.placements.map(mesoAsDetail)];
     let errors=mesoIssues(b,p,prior,scene);
     // Re-plan the cover height under retained weapon clearance; never relax the firing test.
     for(const factor of [.65,.40]){if(!errors.length||!errors.every(e=>/Static firing path|Weapon operating envelope|Other equipment\/armor interference/.test(e)))break;p.parameters={...parameters,height:h*factor};p.parts=mesoGeometry(id,kind,p.parameters,attachment);p.bounds=boundsOf(p.parts.flatMap(a=>a.solid.vertices));errors=mesoIssues(b,p,prior,scene);}
     if(errors.length)throw Error(errors.join('; '));
-    plan.placements.push(p);plan.decisions.push({zoneId:zone.id,kind,candidate,status:'accepted',reason:'Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved',...(variant?{variant}:{})});accepted=true;break;
-   }catch(e){plan.decisions.push({zoneId:zone.id,kind,candidate,status:'omitted',reason:(e as Error).message,category:omissionCategory((e as Error).message),...(zone.root?{variant:proposal.variant??zone.root.variant}:{})});}
+    plan.placements.push(p);plan.decisions.push({zoneId:zone.id,kind,candidate,status:'accepted',reason:'Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved'});accepted=true;break;
+   }catch(e){plan.decisions.push({zoneId:zone.id,kind,candidate,status:'omitted',reason:(e as Error).message});}
   }
-  zone.finalStatus=accepted?'accepted':'omitted';if(!accepted)zone.omissionCategory=plan.decisions.filter(d=>d.zoneId===zone.id).at(-1)?.category;
   if(!accepted)continue;
  }
- for(const engine of b.engines){const segments=plan.placements.filter(p=>p.parentEquipmentId===engine.id&&p.parameters.rootVariant==='SEGMENTED_ROOT_SUPPORT');if(segments.length===1){const p=segments[0];plan.placements=plan.placements.filter(a=>a!==p);plan.decisions.push({zoneId:p.zoneId,kind:p.kind,candidate:-1,status:'omitted',reason:'Segmented root requires two independently contacted supports; single support omitted',category:'INSUFFICIENT_FOOTPRINT',variant:'SEGMENTED_ROOT_SUPPORT'});}}
  const planningEnd=performance.now();plan.bounds=boundsOf([plan.bounds.min,plan.bounds.max,...plan.placements.flatMap(p=>p.parts.flatMap(p=>p.solid.vertices))]);b.mesoStructurePlan=plan;
  // Optional structures cannot convert a released physical ship into a design rejection.
  plan.validation=validateMesoStructures(b);
@@ -135,6 +128,5 @@ export function addMesoStructures(b:ShipBlueprint,options:{kinds?:readonly MesoK
   for(const candidate of candidates){plan.placements.push(candidate);const replay=validateMesoStructures(b);if(replay.issues.length){plan.placements.pop();plan.decisions.push({zoneId:candidate.zoneId,kind:candidate.kind,candidate:-1,status:'omitted',reason:'Optional meso safety replay: '+replay.issues.join('; ')});}}
   const base=b.exteriorDetailPlan?.bounds??b.productionDesign!.overallBounds;plan.bounds=boundsOf([base.min,base.max,...plan.placements.flatMap(p=>p.parts.flatMap(p=>p.solid.vertices))]);plan.validation=validateMesoStructures(b);
  }
- for(const zone of plan.detectedZones){zone.finalStatus=plan.placements.some(p=>p.zoneId===zone.id)?'accepted':'omitted';if(zone.finalStatus==='omitted')zone.omissionCategory=plan.decisions.filter(d=>d.zoneId===zone.id).at(-1)?.category;}
- b.generatorVersion='1.8.5.3.1';options.onTimings?.({planningMs:planningEnd-start,validationMs:performance.now()-planningEnd,totalMs:performance.now()-start});return b;
+ b.generatorVersion='1.8.5.3';options.onTimings?.({planningMs:planningEnd-start,validationMs:performance.now()-planningEnd,totalMs:performance.now()-start});return b;
 }

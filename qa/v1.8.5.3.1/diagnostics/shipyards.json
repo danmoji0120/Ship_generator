@@ -1,0 +1,300 @@
+{
+  "rows": [
+    {
+      "yard": "aegis",
+      "length": 300,
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "roots": [
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 5.274031369733962,
+            "length": 2.1096125478935845,
+            "height": 0.3586341331419094,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "cap-surface-citadel-163-13",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 2.1096125478935845,
+            "length": 6.328837643680754,
+            "height": 0.5695953879312678,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "cap-surface-citadel-167-21",
+          "engine": "engine-0",
+          "contacts": 13
+        }
+      ],
+      "issues": []
+    },
+    {
+      "yard": "vesper",
+      "length": 300,
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "roots": [
+        {
+          "variant": "NARROW_ROOT_FAIRING",
+          "parameters": {
+            "width": 1.0885007881777862,
+            "length": 3.023613300493851,
+            "height": 0.2938952128080023,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "NARROW_ROOT_FAIRING",
+          "parameters": {
+            "width": 1.0885007881777862,
+            "length": 3.023613300493851,
+            "height": 0.2938952128080023,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-1",
+          "contacts": 13
+        },
+        {
+          "variant": "NARROW_ROOT_FAIRING",
+          "parameters": {
+            "width": 1.0885007881777862,
+            "length": 3.023613300493851,
+            "height": 0.2938952128080023,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-1",
+          "contacts": 13
+        },
+        {
+          "variant": "NARROW_ROOT_FAIRING",
+          "parameters": {
+            "width": 1.0885007881777862,
+            "length": 5.2913232758642375,
+            "height": 0.2938952128080023,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-3",
+          "contacts": 13
+        }
+      ],
+      "issues": []
+    },
+    {
+      "yard": "forge",
+      "length": 300,
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "roots": [
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-1",
+          "contacts": 13
+        },
+        {
+          "variant": "NARROW_ROOT_FAIRING",
+          "parameters": {
+            "width": 1.7216809852223807,
+            "length": 3.912911330050865,
+            "height": 0.4648538660100428,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-1",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-2",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-2",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 6.847594827589013,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-3",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 0.9782278325127163,
+            "length": 5.869366995076298,
+            "height": 0.26412151477843343,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "citadel",
+          "engine": "engine-3",
+          "contacts": 13
+        }
+      ],
+      "issues": []
+    },
+    {
+      "yard": "serein",
+      "length": 300,
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "roots": [
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 3.4175723275876075,
+            "length": 6.328837643680754,
+            "height": 0.3702370021553241,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "skin-citadel-6-1",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 3.4175723275876075,
+            "length": 6.328837643680754,
+            "height": 0.3702370021553241,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "skin-citadel-2-0",
+          "engine": "engine-0",
+          "contacts": 13
+        },
+        {
+          "variant": "LOW_PROFILE_TRANSITION",
+          "parameters": {
+            "width": 3.4175723275876075,
+            "length": 6.328837643680754,
+            "height": 0.3702370021553241,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          },
+          "parentSurface": "skin-citadel-6-1",
+          "engine": "engine-1",
+          "contacts": 13
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "errors": []
+}

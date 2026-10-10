@@ -49,8 +49,8 @@ export function mesoGeometry(id:string,kind:MesoKind,p:MesoPlacement['parameters
   block('BARBETTE_APRON',p.width,p.length,p.height,0,0,-attachment.inset,.68);
   block('SUPPLY_HAUNCH',p.width*.52,p.length*.34,p.height*.42,0,p.length*.24,p.height-attachment.inset-.035,.80,'MECHANICAL_STRUCTURE');
  }else if(kind==='ENGINE_ROOT_TRANSITION'){
-  block('ENGINE_HAUNCH',p.width,p.length,p.height,0,0,-attachment.inset,.65);
-  block('SUPPLY_COVER',p.width*.48,p.length*.45,p.height*.38,0,-p.length*.14,p.height-attachment.inset-.035,.8,'MECHANICAL_STRUCTURE');
+  block('ENGINE_HAUNCH',p.width,p.length,p.height,0,0,-attachment.inset,p.rootVariant==='NARROW_ROOT_FAIRING'?.78:p.rootVariant==='LOW_PROFILE_TRANSITION'?.9:.65);
+  block('SUPPLY_COVER',p.width*(p.rootVariant==='SEGMENTED_ROOT_SUPPORT'?.3:.48),p.length*.45,p.height*(p.rootVariant==='LOW_PROFILE_TRANSITION'?.25:.38),0,-p.length*.14,p.height-attachment.inset-.035,.8,'MECHANICAL_STRUCTURE');
  }else if(kind==='FLANK_ARMOR_BELT'){
   block('BELT_OVERLAP',p.width,p.length,p.height,0,0,-attachment.inset,.76);
   block('BELT_JUNCTION',p.width*.58,p.length*.28,p.height*.35,0,p.length*.25,p.height-attachment.inset-.035,.8);

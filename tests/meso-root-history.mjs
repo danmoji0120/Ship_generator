@@ -1,0 +1,21 @@
+import {renderSession,png} from './helpers/render-session.mjs';
+import {readBlueprint} from './helpers/blueprint-artifact.mjs';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const out=process.env.OUT||'qa/v1.8.5.3.1/history';await mkdir(out,{recursive:true});
+const paths=['qa/v1/export.blueprint.json','qa/v1.5/regression/export.blueprint.json','qa/v1.7/regression/export.blueprint.json','qa/v1.8/regression/export.blueprint.json','qa/v1.8.1/regression/export.blueprint.json','qa/v1.8.2/functional-exterior/final-review/blueprint.json','qa/v1.8.3/final-review/blueprint.json','qa/v1.8.4.2/history/v1.8.4.1.blueprint.json'];
+const blueprints=[];for(const path of paths)blueprints.push({path,b:await readBlueprint(path)});
+process.env.QA_URL=process.env.BASELINE_URL||'http://localhost:5197';const baseline=await renderSession();
+const b1842=await baseline.page.evaluate(async()=>{const {generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.4.2'});});blueprints.push({path:'Frozen V1.8.4.2 Requirements-first Seed 7',b:b1842});
+const b185=await baseline.page.evaluate(async()=>{const{generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.5'});});blueprints.push({path:'Frozen V1.8.5 baseline actual commit',b:b185});
+const b1851=await baseline.page.evaluate(async()=>{const{generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.5.1'});});blueprints.push({path:'Frozen V1.8.5.1 actual commit',b:b1851});
+const b1852=await baseline.page.evaluate(async()=>{const{generateBlueprint,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprint(DEFAULT_ORDER,7,{version:'1.8.5.2'});});blueprints.push({path:'Frozen V1.8.5.2 actual baseline',b:b1852});
+blueprints.push({path:'V1.8.5.3 approved final stored Seed 7',b:await readBlueprint('qa/v1.8.5.3/release-render/blueprint.json')});
+const v0=await baseline.page.evaluate(async()=>{const{generateBlueprintV0,DEFAULT_ORDER}=await import('/src/generation/generate.ts');return generateBlueprintV0(DEFAULT_ORDER,7);});
+blueprints.unshift({path:'Frozen unmodified V0 generator from 41e5d8b',b:v0});await writeFile(`${out}/v0.blueprint.json`,JSON.stringify(v0));
+async function captures(page,b){return page.evaluate(async b=>{const{ArmorQARenderer}=await import('/src/rendering/armor-qa.ts');const r=new ArmorQARenderer(480),shots=[];for(const view of['TOP','BOTTOM','LEFT','ISOMETRIC','LOW-ISOMETRIC'])shots.push({view,...r.capture(b,'COMPLETE',view,{reviewLighting:true,underbodyLighting:view==='BOTTOM'||view==='LOW-ISOMETRIC',scale:'fixed',closeup:{center:{x:0,y:0,z:0},extent:b.order.length*1.5}})});r.dispose();return shots;},b);}
+const old=[];try{for(const{b}of blueprints)old.push(await captures(baseline.page,b));}finally{await baseline.browser.close();}
+process.env.QA_URL=process.env.TARGET_URL||'http://localhost:5198';const current=await renderSession(),rows=[];
+try{for(const[index,{path,b}]of blueprints.entries()){const shots=await captures(current.page,b);const repeated=await captures(current.page,JSON.parse(JSON.stringify(b)));const checks=shots.map((s,j)=>({view:s.view,historicalPixels:s.pixels===old[index][j].pixels,jsonReloadPixels:s.pixels===repeated[j].pixels,sha256:createHash('sha256').update(png(s.pixels)).digest('hex')}));assert(checks.every(c=>c.historicalPixels&&c.jsonReloadPixels),`Historical pixel regression ${b.generatorVersion??'V0'}`);rows.push({path,version:b.generatorVersion??'V0',checks});if(index===0)await writeFile(`${out}/v0-reloaded.png`,png(shots[3].pixels));}
+assert.deepEqual(current.errors,[]);assert.deepEqual(baseline.errors,[]);await writeFile(`${out}/report.json`,JSON.stringify({baselineCommit:'a9969d2b0e6341a7800e1e1659f95b9256d983f9',rows,errors:current.errors,baselineErrors:baseline.errors,environment:'Same Chromium / SwiftShader, 480px orthographic, identical light/material/camera'},null,2));console.log(JSON.stringify({versions:rows.length,views:rows.length*5,historicalPixels:true,reloadPixels:true,errors:current.errors}));}finally{await current.browser.close();}

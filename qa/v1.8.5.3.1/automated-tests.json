@@ -1,0 +1,11 @@
+{
+  "files": 25,
+  "passed": 699,
+  "failed": 0,
+  "existingTests": 689,
+  "addedTests": 10,
+  "durationSeconds": 1378.02,
+  "source": "Frozen staged final release snapshot with actual connector obstacles",
+  "typescript": "PASS",
+  "productionBuild": "PASS"
+}

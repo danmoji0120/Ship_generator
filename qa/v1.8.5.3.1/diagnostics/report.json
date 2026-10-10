@@ -1,0 +1,1875 @@
+{
+  "rows": [
+    {
+      "shipyardId": "vesper",
+      "length": 120,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 63,
+        "Actual station patch is incomplete, occluded or overlaps itself": 16,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 6,
+        "Other equipment/armor interference": 5
+      },
+      "rootSearchMs": 501.90000000596046,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -37.66231505554172,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.7371423290193353,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -18.141222269379163,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.2652212378091052,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 37.66231505554172,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 3.316634853462721,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 18.141222269379163,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.744801258038114,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9994676260557998,\"relief\":0.12386857264409688,\"height\":0.9359999999999999}",
+          "Unsupported footprint: {\"surface\":\"exterior-rear-lateral-drive--1-18\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.8222723905852977,\"relief\":0.14233563095197937,\"height\":0.9359999999999999}"
+        ],
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Earlier detail access blocked detail/vertical-drive--1/engine-service--1/VENT_LOUVER",
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat"
+        ]
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 120,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 8,
+        "Unsupported footprint": 59,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 21,
+        "Other equipment/armor interference": 2
+      },
+      "rootSearchMs": 393.5,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -31.317118041106433,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.6369209116431374,
+          "acceptedRoots": 1,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -16.821590330962728,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.182279375152941,
+          "acceptedRoots": 1,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 31.317118041106433,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.6369209116431374,
+          "acceptedRoots": 1,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 16.821590330962728,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.182279375152941,
+          "acceptedRoots": 1,
+          "detectedZones": 19
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.96572151353659,\"relief\":-6.810114044767197,\"height\":0.9359999999999999}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9990287701742225,\"relief\":0.10136748414412615,\"height\":0.9359999999999999}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference vertical-drive-1/belt--1; Meso edge crosses other solid vertical-drive-1/belt--1",
+          "Other equipment/armor interference vertical-drive-1/belt-1; Meso edge crosses other solid vertical-drive-1/belt-1"
+        ]
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 300,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 38,
+        "Actual station patch is incomplete, occluded or overlaps itself": 31,
+        "No exposed coherent parent surface": 30,
+        "Other equipment/armor interference": 10,
+        "Station patch has holes or disconnected boundaries": 11
+      },
+      "rootSearchMs": 443.40000000596046,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -94.15578763885429,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 6.842855822548338,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -45.353055673447905,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.663053094522762,
+          "acceptedRoots": 1,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 94.15578763885429,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 8.291587133656803,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 45.353055673447905,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 6.862003145095284,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":1.0000000000000004,\"relief\":1.4193804959918934e-14,\"height\":2.34}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9994676260558,\"relief\":0.21340027761908006,\"height\":2.34}"
+        ],
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Intrusion deeper than measured station inset vertical-drive--1/belt--1",
+          "Other equipment/armor interference vertical-drive--1/belt--1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Meso edge crosses other solid vertical-drive--1/belt--1"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ]
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 300,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 60,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 17,
+        "Actual station patch is incomplete, occluded or overlaps itself": 10,
+        "Other equipment/armor interference": 3
+      },
+      "rootSearchMs": 697.8000000119209,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -78.29279510276608,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 6.592302279107843,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -42.05397582740682,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.455698437882353,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 78.29279510276608,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 6.592302279107843,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 42.05397582740682,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.455698437882353,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9999999999999999,\"relief\":0,\"height\":2.34}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9999999999999999,\"relief\":-1.4181171444836586e-14,\"height\":2.34}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference vertical-drive--1/belt--1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive--1/belt--1",
+          "Other equipment/armor interference vertical-drive--1/belt-1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive--1/belt-1"
+        ]
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 600,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 25,
+        "Unsupported footprint": 35,
+        "No exposed coherent parent surface": 30,
+        "Other equipment/armor interference": 20,
+        "Station patch has holes or disconnected boundaries": 10
+      },
+      "rootSearchMs": 605,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -188.31157527770858,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 13.685711645096676,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -90.70611134689581,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 11.326106189045523,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 188.31157527770858,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 16.583174267313606,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 90.70611134689581,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 13.724006290190568,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"exterior-rear-lateral-drive--1-18\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.8222723905853047,\"relief\":0.7116781547598823,\"height\":4.68}",
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9657965947849679,\"relief\":-31.930647989380084,\"height\":4.68}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Intrusion deeper than measured station inset vertical-drive--1/belt--1",
+          "Other equipment/armor interference vertical-drive--1/belt--1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Meso edge crosses other solid vertical-drive--1/belt--1"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ]
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 600,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 21,
+        "Unsupported footprint": 41,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 25,
+        "Other equipment/armor interference": 3
+      },
+      "rootSearchMs": 577.7000000178814,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -156.58559020553216,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 13.184604558215685,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -84.10795165481365,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 10.911396875764707,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 156.58559020553216,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 13.184604558215685,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 84.10795165481365,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 10.911396875764707,
+          "acceptedRoots": 2,
+          "detectedZones": 19
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9657215135365897,\"relief\":-33.86581013364728,\"height\":4.68}",
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9657215135365897,\"relief\":-33.78838019361696,\"height\":4.68}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference vertical-drive--1/belt-1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER; Meso edge crosses other solid vertical-drive--1/belt-1",
+          "Other equipment/armor interference vertical-drive-1/belt--1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive-1/belt--1"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 120,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 84,
+        "No exposed coherent parent surface": 33,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 410.7999999821186,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -43.54302800456321,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 3.6053771818818285,
+          "acceptedRoots": 2,
+          "detectedZones": 22
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -22.42625823096127,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.983760426384961,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 43.54302800456321,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 4.292115692716463,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 22.42625823096127,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 3.552095745696383,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.952082411398549,\"relief\":2.140712396432709,\"height\":1.2691661332557562}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.952082411398549,\"relief\":2.308262680208888,\"height\":1.2691661332557562}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 120,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 78,
+        "No exposed coherent parent surface": 42
+      },
+      "rootSearchMs": 567.5,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -36.56630548977783,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 3.4733650437065164,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -20.768528663598826,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.8745090016881507,
+          "acceptedRoots": 0,
+          "detectedZones": 23
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 36.56630548977783,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 3.4733650437065164,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 20.768528663598826,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.8745090016881507,
+          "acceptedRoots": 1,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.916488837362834,\"relief\":2.9608781256318,\"height\":1.2226951743245367}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9164888373628342,\"relief\":3.1380118696170647,\"height\":1.2226951743245367}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 300,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 487.60000002384186,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -108.85757001140803,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 9.013442954704571,
+          "acceptedRoots": 2,
+          "detectedZones": 22
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -56.065645577403174,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 7.459401065962404,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 108.85757001140803,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 10.730289231791156,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 56.065645577403174,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 8.880239364240957,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9520824113985521,\"relief\":5.10373577436593,\"height\":3.17291533313939}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9520824113985495,\"relief\":5.770656700522164,\"height\":3.17291533313939}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 300,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 90,
+        "No exposed coherent parent surface": 30
+      },
+      "rootSearchMs": 596.1999999880791,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -91.41576372444457,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 8.683412609266291,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -51.921321658997066,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 7.186272504220378,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 91.41576372444457,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 8.683412609266291,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 51.921321658997066,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 7.186272504220378,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9164888373628349,\"relief\":7.135988374027402,\"height\":3.056737935811341}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9164888373628352,\"relief\":7.578822733990572,\"height\":3.056737935811341}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 600,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 807.0999999940395,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -217.71514002281606,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 18.026885909409142,
+          "acceptedRoots": 2,
+          "detectedZones": 22
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -112.13129115480635,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 14.918802131924808,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 217.71514002281606,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 21.460578463582312,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 112.13129115480635,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 17.760478728481914,
+          "acceptedRoots": 2,
+          "detectedZones": 21
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9520824113985495,\"relief\":10.703561982163459,\"height\":6.34583066627878}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9520824113985495,\"relief\":11.541313401044327,\"height\":6.34583066627878}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 600,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 33
+      },
+      "rootSearchMs": 596.2000000178814,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -182.83152744888915,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 17.366825218532583,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -103.84264331799413,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 14.372545008440756,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 182.83152744888915,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 17.366825218532583,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 103.84264331799413,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 14.372545008440756,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9164888373628334,\"relief\":14.80439062815903,\"height\":6.113475871622682}",
+          "Unsupported footprint: {\"surface\":\"lateral-drive--1/belt--1\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9164888373628336,\"relief\":15.690059348085368,\"height\":6.113475871622682}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 120,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 12,
+        "Unsupported footprint": 74,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 1,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 685.5999999940395,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -41.43532087411932,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.3185205610516726,
+          "acceptedRoots": 1,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -15.039823569356468,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 1.9187756367324187,
+          "acceptedRoots": 0,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 41.43532087411932,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.809384817050776,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 15.039823569356468,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.3250081244558145,
+          "acceptedRoots": 1,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"exterior-rear-lateral-drive--1-18\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.610184523997169,\"relief\":0.4119456128264681,\"height\":0.8099999999999999}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9999999999999999,\"relief\":0.029435239999996806,\"height\":0.8099999999999999}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 120,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 31,
+        "Unsupported footprint": 58,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 1
+      },
+      "rootSearchMs": 496.19999998807907,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -36.10336852691179,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.23362712515654,
+          "acceptedRoots": 0,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -13.937582397991957,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 1.8485190001295508,
+          "acceptedRoots": 0,
+          "detectedZones": 15
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 36.10336852691179,
+            "y": 0,
+            "z": 59.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 2.23362712515654,
+          "acceptedRoots": 0,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 13.937582397991957,
+            "z": 47.99988
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 1.8485190001295508,
+          "acceptedRoots": 0,
+          "detectedZones": 15
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"cap-surface-lateral-drive--1-71-35\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9972602610148131,\"relief\":-7.94026510604636,\"height\":0.8099999999999999}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9999999999999999,\"relief\":0.029435239999999165,\"height\":0.8099999999999999}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 300,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Unsupported footprint": 60,
+        "Actual station patch is incomplete, occluded or overlaps itself": 25,
+        "Other equipment/armor interference": 2,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 606,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -103.5883021852983,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.796301402629181,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -37.59955892339117,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 4.796939091831046,
+          "acceptedRoots": 0,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 103.5883021852983,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 7.02346204262694,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 37.59955892339117,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.8125203111395365,
+          "acceptedRoots": 2,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":1.0000000000000002,\"relief\":0,\"height\":2.025}",
+          "Unsupported footprint: {\"surface\":\"detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat\",\"parent\":\"lateral-drive--1\",\"normalDot\":1.0000000000000002,\"relief\":0.029435239999983414,\"height\":2.025}"
+        ],
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/lateral-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/lateral-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/lateral-drive--1/rcs-port/RCS_CLUSTER; Earlier detail access blocked detail/lateral-drive--1/rcs-port/RCS_CLUSTER",
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Intrusion deeper than measured station inset skin-vertical-drive--1-0-0"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 300,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 35,
+        "Unsupported footprint": 53,
+        "Station patch has holes or disconnected boundaries": 2,
+        "No exposed coherent parent surface": 30
+      },
+      "rootSearchMs": 446.10000002384186,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -90.25842131727947,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.58406781289135,
+          "acceptedRoots": 2,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -34.84395599497989,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 4.621297500323877,
+          "acceptedRoots": 0,
+          "detectedZones": 15
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 90.25842131727947,
+            "y": 0,
+            "z": 149.9997
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 5.58406781289135,
+          "acceptedRoots": 2,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 34.84395599497989,
+            "z": 119.99969999999999
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 4.621297500323877,
+          "acceptedRoots": 2,
+          "detectedZones": 15
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"cap-surface-lateral-drive--1-71-35\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9972602610148131,\"relief\":-19.776669777574565,\"height\":2.025}",
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.7051694931714411,\"relief\":-23.07528692082085,\"height\":2.025}"
+        ],
+        "Station patch has holes or disconnected boundaries": [
+          "Station patch has holes or disconnected boundaries"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 600,
+      "seed": 0,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 23,
+        "Unsupported footprint": 60,
+        "Other equipment/armor interference": 4,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      },
+      "rootSearchMs": 590.7000000178814,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -207.1766043705966,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 11.592602805258363,
+          "acceptedRoots": 2,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -75.19911784678234,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 9.593878183662092,
+          "acceptedRoots": 1,
+          "detectedZones": 19
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 207.1766043705966,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 14.04692408525388,
+          "acceptedRoots": 1,
+          "detectedZones": 24
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 75.19911784678234,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 11.625040622279073,
+          "acceptedRoots": 1,
+          "detectedZones": 23
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"exterior-rear-lateral-drive--1-18\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.6101845239971704,\"relief\":2.05972806413244,\"height\":4.05}",
+          "Unsupported footprint: {\"surface\":\"exterior-rear-lateral-drive--1-18\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.6101845239971704,\"relief\":2.0154280897670143,\"height\":4.05}"
+        ],
+        "Other equipment/armor interference": [
+          "Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/lateral-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/lateral-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/lateral-drive--1/rcs-port/RCS_CLUSTER",
+          "Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER; Intrusion deeper than measured station inset skin-vertical-drive--1-4-0"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ],
+        "No finite planar support region": [
+          "No finite planar support region"
+        ]
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 600,
+      "seed": 13,
+      "legacyRootOnly": 0,
+      "legacyFailureClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 42,
+        "Unsupported footprint": 48,
+        "No exposed coherent parent surface": 30
+      },
+      "rootSearchMs": 556.4000000059605,
+      "engines": [
+        {
+          "id": "engine-0",
+          "position": {
+            "x": -180.51684263455894,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 11.1681356257827,
+          "acceptedRoots": 2,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-1",
+          "position": {
+            "x": 0,
+            "y": -69.68791198995979,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 9.242595000647754,
+          "acceptedRoots": 0,
+          "detectedZones": 15
+        },
+        {
+          "id": "engine-2",
+          "position": {
+            "x": 180.51684263455894,
+            "y": 0,
+            "z": 299.9994
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 11.1681356257827,
+          "acceptedRoots": 2,
+          "detectedZones": 20
+        },
+        {
+          "id": "engine-3",
+          "position": {
+            "x": 0,
+            "y": 69.68791198995979,
+            "z": 239.99939999999998
+          },
+          "direction": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "radius": 9.242595000647754,
+          "acceptedRoots": 2,
+          "detectedZones": 15
+        }
+      ],
+      "legacyFailureExamples": {
+        "Actual station patch is incomplete, occluded or overlaps itself": [
+          "Actual station patch is incomplete, occluded or overlaps itself"
+        ],
+        "Unsupported footprint": [
+          "Unsupported footprint: {\"surface\":\"cap-surface-lateral-drive--1-71-35\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.9972602610148131,\"relief\":-39.55333955514913,\"height\":4.05}",
+          "Unsupported footprint: {\"surface\":\"engine-0-casing\",\"parent\":\"lateral-drive--1\",\"normalDot\":0.7051694931714411,\"relief\":-46.1505738416417,\"height\":4.05}"
+        ],
+        "No exposed coherent parent surface": [
+          "No exposed coherent parent surface"
+        ]
+      }
+    }
+  ],
+  "variants": [
+    {
+      "variant": "WIDE_ROOT_FAIRING",
+      "accepted": 2,
+      "issues": [],
+      "parts": [
+        {
+          "id": "meso/meso-root/engine-0/cap-2-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": 1.0980003580430625e-15,
+            "y": 17.931706657095468,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 8.438450191574338,
+            "length": 2.1096125478935845,
+            "height": 0.3586341331419094,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "WIDE_ROOT_FAIRING"
+          }
+        },
+        {
+          "id": "meso/meso-root/engine-0/cap-4-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": -17.931706657095468,
+            "y": 2.196000716086125e-15,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 2.1096125478935845,
+            "length": 6.328837643680754,
+            "height": 0.5695953879312678,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "WIDE_ROOT_FAIRING"
+          }
+        }
+      ]
+    },
+    {
+      "variant": "NARROW_ROOT_FAIRING",
+      "accepted": 2,
+      "issues": [],
+      "parts": [
+        {
+          "id": "meso/meso-root/engine-0/cap-2-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": 1.0980003580430625e-15,
+            "y": 17.931706657095468,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 4.219225095787169,
+            "length": 2.1096125478935845,
+            "height": 0.3586341331419094,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          }
+        },
+        {
+          "id": "meso/meso-root/engine-0/cap-4-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": -17.931706657095468,
+            "y": 2.196000716086125e-15,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 2.1096125478935845,
+            "length": 6.328837643680754,
+            "height": 0.5695953879312678,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "NARROW_ROOT_FAIRING"
+          }
+        }
+      ]
+    },
+    {
+      "variant": "SEGMENTED_ROOT_SUPPORT",
+      "accepted": 2,
+      "issues": [],
+      "parts": [
+        {
+          "id": "meso/meso-root/engine-0/cap-2-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": 1.0980003580430625e-15,
+            "y": 17.931706657095468,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 3.797302586208452,
+            "length": 2.1096125478935845,
+            "height": 0.3586341331419094,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "SEGMENTED_ROOT_SUPPORT"
+          }
+        },
+        {
+          "id": "meso/meso-root/engine-0/cap-4-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": -17.931706657095468,
+            "y": 2.196000716086125e-15,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 2.1096125478935845,
+            "length": 6.328837643680754,
+            "height": 0.5695953879312678,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "SEGMENTED_ROOT_SUPPORT"
+          }
+        }
+      ]
+    },
+    {
+      "variant": "LOW_PROFILE_TRANSITION",
+      "accepted": 2,
+      "issues": [],
+      "parts": [
+        {
+          "id": "meso/meso-root/engine-0/cap-2-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": 1.0980003580430625e-15,
+            "y": 17.931706657095468,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 5.274031369733962,
+            "length": 2.1096125478935845,
+            "height": 0.3586341331419094,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          }
+        },
+        {
+          "id": "meso/meso-root/engine-0/cap-4-0/ENGINE_ROOT_TRANSITION",
+          "contacts": 13,
+          "position": {
+            "x": -17.931706657095468,
+            "y": 2.196000716086125e-15,
+            "z": 151.41866666666667
+          },
+          "parameters": {
+            "width": 2.1096125478935845,
+            "length": 6.328837643680754,
+            "height": 0.5695953879312678,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis",
+            "rootVariant": "LOW_PROFILE_TRANSITION"
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

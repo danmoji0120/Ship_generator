@@ -1,0 +1,331 @@
+{
+  "cases": [
+    {
+      "yard": "aegis",
+      "seed": 7,
+      "length": 300,
+      "root": "meso/meso-root/engine-0/cap-4-0/ENGINE_ROOT_TRANSITION",
+      "parameters": {
+        "width": 2.1096125478935845,
+        "length": 6.328837643680754,
+        "height": 0.5695953879312678,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis",
+        "rootVariant": "LOW_PROFILE_TRANSITION"
+      },
+      "engine": "engine-0"
+    },
+    {
+      "yard": "vesper",
+      "seed": 13,
+      "length": 600,
+      "root": "meso/meso-root/engine-2/cap-0-2/ENGINE_ROOT_TRANSITION",
+      "parameters": {
+        "width": 7.594332225532235,
+        "length": 13.184604558215689,
+        "height": 1.5083187614598743,
+        "taper": 0.62,
+        "clip": 0.12,
+        "style": "vesper",
+        "rootVariant": "WIDE_ROOT_FAIRING"
+      },
+      "engine": "engine-2"
+    },
+    {
+      "yard": "forge",
+      "seed": 0,
+      "length": 600,
+      "root": "meso/meso-root/engine-2/cap-7-0/ENGINE_ROOT_TRANSITION",
+      "parameters": {
+        "width": 4.910180352467633,
+        "length": 8.584231385432926,
+        "height": 1.3257486951662611,
+        "taper": 0.96,
+        "clip": 0.26,
+        "style": "forge",
+        "rootVariant": "NARROW_ROOT_FAIRING"
+      },
+      "engine": "engine-2"
+    },
+    {
+      "yard": "serein",
+      "seed": 13,
+      "length": 600,
+      "root": "meso/meso-root/engine-0/upstream-2/ENGINE_ROOT_TRANSITION",
+      "parameters": {
+        "width": 6.0307932379226585,
+        "length": 6.700881375469621,
+        "height": 0.6533359341082879,
+        "taper": 0.88,
+        "clip": 0.14,
+        "style": "serein",
+        "rootVariant": "LOW_PROFILE_TRANSITION"
+      },
+      "engine": "engine-0"
+    }
+  ],
+  "cameras": [
+    {
+      "name": "aegis-rear-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 52.740313697339616,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 13928
+      }
+    },
+    {
+      "name": "aegis-whole-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 540,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "aegis-rear-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 52.740313697339616,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 14120
+      }
+    },
+    {
+      "name": "aegis-whole-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 540,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20812
+      }
+    },
+    {
+      "name": "vesper-rear-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 65.92302279107842,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 11,
+        "triangles": 12676
+      }
+    },
+    {
+      "name": "vesper-whole-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 82,
+        "triangles": 31648
+      }
+    },
+    {
+      "name": "vesper-rear-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 65.92302279107842,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 13,
+        "triangles": 13954
+      }
+    },
+    {
+      "name": "vesper-whole-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 82,
+        "triangles": 32574
+      }
+    },
+    {
+      "name": "forge-rear-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 107.30289231791156,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 12,
+        "triangles": 13872
+      }
+    },
+    {
+      "name": "forge-whole-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 120,
+        "triangles": 33940
+      }
+    },
+    {
+      "name": "forge-rear-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 107.30289231791156,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 12,
+        "triangles": 14062
+      }
+    },
+    {
+      "name": "forge-whole-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 120,
+        "triangles": 34306
+      }
+    },
+    {
+      "name": "serein-rear-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 55.840678128913495,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 15290
+      }
+    },
+    {
+      "name": "serein-whole-before",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 82,
+        "triangles": 32034
+      }
+    },
+    {
+      "name": "serein-rear-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 55.840678128913495,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 14534
+      }
+    },
+    {
+      "name": "serein-whole-after",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 1080,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 82,
+        "triangles": 31278
+      }
+    },
+    {
+      "name": "WIDE_ROOT_FAIRING-close",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 42.19225095787169,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 11578
+      }
+    },
+    {
+      "name": "NARROW_ROOT_FAIRING-close",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 42.19225095787169,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 11578
+      }
+    },
+    {
+      "name": "SEGMENTED_ROOT_SUPPORT-close",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 42.19225095787169,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 11578
+      }
+    },
+    {
+      "name": "LOW_PROFILE_TRANSITION-close",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 42.19225095787169,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 16,
+        "triangles": 11578
+      }
+    }
+  ],
+  "errors": []
+}

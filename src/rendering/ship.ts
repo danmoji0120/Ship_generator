@@ -1,4 +1,4 @@
-import {renderMesoStructures} from './meso';
+import {renderMesoStructures,renderMesoDiagnostics} from './meso';
 import {setSurfacePresentation} from './textured-surface';
 import {renderExteriorDetails} from './details';
 import type {DetailMode} from '../generation/details/types';
@@ -12,7 +12,7 @@ import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
 export type DebugView =
-  | "Meso Structures" | "Without Meso"
+  | "Meso Structures" | "Without Meso" | "Engine Root Zones" | "Structural Junctions"
   | "Surface Texture" | "Decal Markings"
   | "Normal"
   | "Hull Sections"
@@ -27,6 +27,7 @@ export type DebugView =
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
+  if(mode==='Engine Root Zones'||mode==='Structural Junctions'){const root=createShip(b,'Normal',detailMode);if(b.schemaVersion===2)root.add(renderMesoDiagnostics(b,mode==='Structural Junctions'));return root;}
   if(mode==='Without Meso'){const c=structuredClone(b);if(c.schemaVersion===2)c.mesoStructurePlan=undefined;return createShip(c,'Normal',detailMode);}
   if(mode==='Meso Structures'){const root=createShip(b,'Normal',detailMode);root.children.forEach(n=>n.visible=Boolean(n.userData.mesoStructures));return root;}
   if(mode==='Surface Texture'||mode==='Decal Markings'){const r=createShip(b,'Normal',detailMode);setSurfacePresentation(r,undefined,mode==='Surface Texture'?'TEXTURE':'DECAL');return r;}

@@ -59,7 +59,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       b.generatorVersion === "1.5" ||
       b.generatorVersion === "1.6" ||
       b.generatorVersion === "1.7" ||
-      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || b.generatorVersion === "1.8.5.3"))))))))
+      (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))
     ) {
       if (
         !v.shape ||
@@ -114,7 +114,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       (b.generatorVersion === "1.5" ||
         b.generatorVersion === "1.6" ||
         b.generatorVersion === "1.7" ||
-        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || b.generatorVersion === "1.8.5.3"))))))))) &&
+        (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))) &&
       (!c.join ||
         !JOIN_TYPES.includes(c.join.type) ||
         Math.min(c.join.width, c.join.height, c.join.length) <= 0)
@@ -306,7 +306,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
         errors.push("Detached prefab " + p.id);
     }
   }
-  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || b.generatorVersion === "1.8.5.3")))))))))
+  if (b.generatorVersion === "1.7" || (b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1"))))))))))
     errors.push(...validateIntegration(b));
   if(b.weaponLayout){const result=validateWeaponLayout(b);if(details)details.weapon=result;errors.push(...result.issues);}
   if(b.functionalExterior)errors.push(...validateFunctionalExterior(b).issues);
@@ -325,7 +325,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   errors.push(
     ...validateSilhouette(b.order, b.silhouette, b.macroDesign?.family),
   );
-  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || b.generatorVersion === "1.8.5.3"))))))))) errors.push(...validateMacro(b));
+  if ((b.generatorVersion === "1.8" || (b.generatorVersion === "1.8.1" || (b.generatorVersion === "1.8.2" || (b.generatorVersion === "1.8.3" || (b.generatorVersion === "1.8.4" || (b.generatorVersion === "1.8.5" || (b.generatorVersion === "1.8.5.1" || (b.generatorVersion === "1.8.5.2" || (b.generatorVersion === "1.8.5.3" || b.generatorVersion === "1.8.5.3.1")))))))))) errors.push(...validateMacro(b));
   errors.push(...validateLayeredArmor(b));
   if(b.productionDesign){const result=validateProduction(b);if(details)details.production=result;errors.push(...result.issues);}
   errors.push(...validateSurfaceAppearance(b));

@@ -1,0 +1,11 @@
+/prototype/
+/render/*.png
+/render/*.blueprint.json
+/history/*.png
+/history/*.blueprint.json
+/ui/*.png
+/gallery/*.png
+/gallery/*.blueprint.json
+/performance/raw/
+
+/diagnostics/*.png
