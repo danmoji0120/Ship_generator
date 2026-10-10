@@ -1,0 +1,507 @@
+{
+  "baselineCommit": "5454dba41136622ca88b0e16916ac7c8ac786dee",
+  "environment": "Same Chromium/SwiftShader and hardware, 10 alternating paired CPU samples after two warm-ups; 600px WebGL",
+  "generationBeforeMs": {
+    "median": 1058.4000000059605,
+    "p95": 1154,
+    "samples": [
+      994,
+      1011.8999999761581,
+      1012.9000000059605,
+      1041.5,
+      1049.7999999821186,
+      1058.4000000059605,
+      1111.199999988079,
+      1111.7999999821186,
+      1112.7000000178814,
+      1154
+    ]
+  },
+  "generationAfterMs": {
+    "median": 1725.4000000059605,
+    "p95": 1760.9000000059605,
+    "samples": [
+      1639.7999999821186,
+      1656.300000011921,
+      1684.9000000059605,
+      1696.300000011921,
+      1698.2999999821186,
+      1725.4000000059605,
+      1731.800000011921,
+      1744.5999999940395,
+      1759.4000000059605,
+      1760.9000000059605
+    ]
+  },
+  "mesoPlanningMs": {
+    "median": 447.5,
+    "p95": 477.40000000596046,
+    "samples": [
+      407.19999998807907,
+      407.40000000596046,
+      412.19999998807907,
+      414.09999999403954,
+      427,
+      447.5,
+      455.90000000596046,
+      460.59999999403954,
+      468.10000002384186,
+      477.40000000596046
+    ]
+  },
+  "mesoSafetyReplayMs": {
+    "median": 135.59999999403954,
+    "p95": 161.90000000596046,
+    "samples": [
+      118.30000001192093,
+      119,
+      119.80000001192093,
+      121.7999999821186,
+      128.5,
+      135.59999999403954,
+      136.69999998807907,
+      139.5,
+      142.09999999403954,
+      161.90000000596046
+    ]
+  },
+  "mesoPlanningAndSafetyReplayMs": {
+    "median": 577.6999999880791,
+    "p95": 609.4000000059605,
+    "samples": [
+      526.4000000059605,
+      530.5,
+      533.9000000059605,
+      546.6999999880791,
+      563.8000000119209,
+      577.6999999880791,
+      602.6999999880791,
+      603.7000000178814,
+      606,
+      609.4000000059605
+    ]
+  },
+  "meshConstructionBeforeMs": {
+    "median": 38.69999998807907,
+    "p95": 69.69999998807907,
+    "samples": [
+      33.19999998807907,
+      36.39999997615814,
+      38.099999994039536,
+      38.099999994039536,
+      38.69999998807907,
+      38.69999998807907,
+      39.69999998807907,
+      40,
+      60.19999998807907,
+      69.69999998807907
+    ]
+  },
+  "meshConstructionAfterMs": {
+    "median": 41.30000001192093,
+    "p95": 44.20000001788139,
+    "samples": [
+      38.30000001192093,
+      39,
+      39.30000001192093,
+      39.70000001788139,
+      40,
+      41.30000001192093,
+      41.900000005960464,
+      42,
+      43.60000002384186,
+      44.20000001788139
+    ]
+  },
+  "draws": {
+    "OFF": {
+      "before": {
+        "calls": 14,
+        "triangles": 11386
+      },
+      "after": {
+        "calls": 17,
+        "triangles": 13972
+      }
+    },
+    "LOW": {
+      "before": {
+        "calls": 18,
+        "triangles": 16694
+      },
+      "after": {
+        "calls": 21,
+        "triangles": 19280
+      }
+    },
+    "HIGH": {
+      "before": {
+        "calls": 22,
+        "triangles": 18034
+      },
+      "after": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    "AUTO": {
+      "before": {
+        "calls": 18,
+        "triangles": 16694
+      },
+      "after": {
+        "calls": 21,
+        "triangles": 19280
+      }
+    }
+  },
+  "renderBefore": {
+    "initialAssets": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 33,
+      "hits": 0
+    },
+    "threeShipMainPass": {
+      "frame": 21,
+      "calls": 68,
+      "triangles": 53878,
+      "points": 0,
+      "lines": 183,
+      "readbackWallMs": 214.80000001192093,
+      "programs": 8
+    },
+    "meshConstructionMs": 49,
+    "firstShaderCompileWallMs": 23.80000001192093,
+    "firstFrameReadbackWallMs": 685.4000000059605,
+    "frameSubmitWallMs": {
+      "median": 0.29999998211860657,
+      "p95": 0.4000000059604645,
+      "samples": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.29999998211860657,
+        0.29999998211860657,
+        0.29999998211860657,
+        0.29999998211860657,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    },
+    "steadyFrameWithReadbackWallMs": {
+      "median": 126.2999999821186,
+      "p95": 163,
+      "samples": [
+        122.90000000596046,
+        123.59999999403954,
+        126.2999999821186,
+        162.69999998807907,
+        163
+      ]
+    },
+    "mainPass": {
+      "frame": 2,
+      "calls": 23,
+      "triangles": 18034,
+      "points": 0,
+      "lines": 61
+    },
+    "shadowPass": {
+      "calls": 13,
+      "triangles": 17078
+    },
+    "geometryAttributeAndIndexBytes": 5234672,
+    "accountedTextureBytesIncludingMipmaps": 1485483,
+    "memoryObjectCountsBefore": {
+      "geometries": 23,
+      "textures": 3
+    },
+    "reloadCycles": [
+      {
+        "geometries": 23,
+        "textures": 3
+      },
+      {
+        "geometries": 23,
+        "textures": 3
+      },
+      {
+        "geometries": 23,
+        "textures": 3
+      },
+      {
+        "geometries": 23,
+        "textures": 3
+      },
+      {
+        "geometries": 23,
+        "textures": 3
+      }
+    ],
+    "memoryObjectCountsAfterShipDispose": {
+      "geometries": 0,
+      "textures": 1
+    },
+    "assetBefore": {
+      "entries": 2,
+      "references": 2,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 34,
+      "hits": 2
+    },
+    "shared": {
+      "entries": 2,
+      "references": 3,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 39,
+      "hits": 4
+    },
+    "released": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 39,
+      "hits": 4
+    },
+    "gpuTimerAvailable": true,
+    "gpuTimerResultMs": 124.702181,
+    "gpuNote": "Actual extension query in software SwiftShader; not a physical GPU benchmark",
+    "textureAnisotropyLimit": 16
+  },
+  "renderAfter": {
+    "initialAssets": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 39,
+      "hits": 4
+    },
+    "threeShipMainPass": {
+      "frame": 21,
+      "calls": 77,
+      "triangles": 61636,
+      "points": 0,
+      "lines": 183,
+      "readbackWallMs": 277.10000002384186,
+      "programs": 8
+    },
+    "meshConstructionMs": 90.5,
+    "firstShaderCompileWallMs": 2341.9000000059605,
+    "firstFrameReadbackWallMs": 746.7000000178814,
+    "frameSubmitWallMs": {
+      "median": 0.10000002384185791,
+      "p95": 0.4000000059604645,
+      "samples": [
+        0.09999999403953552,
+        0.09999999403953552,
+        0.09999999403953552,
+        0.09999999403953552,
+        0.09999999403953552,
+        0.10000002384185791,
+        0.19999998807907104,
+        0.20000001788139343,
+        0.20000001788139343,
+        0.4000000059604645
+      ]
+    },
+    "steadyFrameWithReadbackWallMs": {
+      "median": 172,
+      "p95": 196.40000000596046,
+      "samples": [
+        155,
+        170.19999998807907,
+        172,
+        180,
+        196.40000000596046
+      ]
+    },
+    "mainPass": {
+      "frame": 2,
+      "calls": 26,
+      "triangles": 20620,
+      "points": 0,
+      "lines": 61
+    },
+    "shadowPass": {
+      "calls": 16,
+      "triangles": 19664
+    },
+    "geometryAttributeAndIndexBytes": 6010472,
+    "accountedTextureBytesIncludingMipmaps": 1485483,
+    "memoryObjectCountsBefore": {
+      "geometries": 26,
+      "textures": 3
+    },
+    "reloadCycles": [
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      }
+    ],
+    "memoryObjectCountsAfterShipDispose": {
+      "geometries": 0,
+      "textures": 1
+    },
+    "assetBefore": {
+      "entries": 2,
+      "references": 2,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 40,
+      "hits": 6
+    },
+    "shared": {
+      "entries": 2,
+      "references": 3,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 45,
+      "hits": 8
+    },
+    "released": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 45,
+      "hits": 8
+    },
+    "gpuTimerAvailable": true,
+    "gpuTimerResultMs": 135.836313,
+    "gpuNote": "Actual extension query in software SwiftShader; not a physical GPU benchmark",
+    "textureAnisotropyLimit": 16
+  },
+  "warmRenderAfter": {
+    "initialAssets": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 45,
+      "hits": 8
+    },
+    "threeShipMainPass": {
+      "frame": 21,
+      "calls": 77,
+      "triangles": 61636,
+      "points": 0,
+      "lines": 183,
+      "readbackWallMs": 218.59999999403954,
+      "programs": 8
+    },
+    "meshConstructionMs": 42.599999994039536,
+    "firstShaderCompileWallMs": 17.5,
+    "firstFrameReadbackWallMs": 3198.5,
+    "frameSubmitWallMs": {
+      "median": 0.19999998807907104,
+      "p95": 0.5999999940395355,
+      "samples": [
+        0.10000002384185791,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.20000001788139343,
+        0.20000001788139343,
+        0.5999999940395355
+      ]
+    },
+    "steadyFrameWithReadbackWallMs": {
+      "median": 178.59999999403954,
+      "p95": 199.5,
+      "samples": [
+        150.59999999403954,
+        169,
+        178.59999999403954,
+        196.09999999403954,
+        199.5
+      ]
+    },
+    "mainPass": {
+      "frame": 2,
+      "calls": 26,
+      "triangles": 20620,
+      "points": 0,
+      "lines": 61
+    },
+    "shadowPass": {
+      "calls": 16,
+      "triangles": 19664
+    },
+    "geometryAttributeAndIndexBytes": 6010472,
+    "accountedTextureBytesIncludingMipmaps": 1485483,
+    "memoryObjectCountsBefore": {
+      "geometries": 26,
+      "textures": 3
+    },
+    "reloadCycles": [
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      },
+      {
+        "geometries": 26,
+        "textures": 3
+      }
+    ],
+    "memoryObjectCountsAfterShipDispose": {
+      "geometries": 0,
+      "textures": 1
+    },
+    "assetBefore": {
+      "entries": 2,
+      "references": 2,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 46,
+      "hits": 10
+    },
+    "shared": {
+      "entries": 2,
+      "references": 3,
+      "allocatedTextureBytesIncludingMipmaps": 2970966,
+      "builds": 51,
+      "hits": 12
+    },
+    "released": {
+      "entries": 1,
+      "references": 1,
+      "allocatedTextureBytesIncludingMipmaps": 1485483,
+      "builds": 51,
+      "hits": 12
+    },
+    "gpuTimerAvailable": true,
+    "gpuTimerResultMs": 202.531768,
+    "gpuNote": "Actual extension query in software SwiftShader; not a physical GPU benchmark",
+    "textureAnisotropyLimit": 16
+  },
+  "errors": []
+}

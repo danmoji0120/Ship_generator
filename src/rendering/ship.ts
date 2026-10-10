@@ -1,3 +1,4 @@
+import {renderMesoStructures} from './meso';
 import {setSurfacePresentation} from './textured-surface';
 import {renderExteriorDetails} from './details';
 import type {DetailMode} from '../generation/details/types';
@@ -11,6 +12,7 @@ import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
 export type DebugView =
+  | "Meso Structures" | "Without Meso"
   | "Surface Texture" | "Decal Markings"
   | "Normal"
   | "Hull Sections"
@@ -25,10 +27,13 @@ export type DebugView =
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
+  if(mode==='Without Meso'){const c=structuredClone(b);if(c.schemaVersion===2)c.mesoStructurePlan=undefined;return createShip(c,'Normal',detailMode);}
+  if(mode==='Meso Structures'){const root=createShip(b,'Normal',detailMode);root.children.forEach(n=>n.visible=Boolean(n.userData.mesoStructures));return root;}
   if(mode==='Surface Texture'||mode==='Decal Markings'){const r=createShip(b,'Normal',detailMode);setSurfacePresentation(r,undefined,mode==='Surface Texture'?'TEXTURE':'DECAL');return r;}
   if(b.schemaVersion===2&&b.productionDesign&&["Structural Armor Only","Functional Exterior Only","Hardpoint Layout Only","Mount Size","Symmetry Groups","Firing Arc"].includes(mode)){
     const copy=structuredClone(b);
     if(mode!=="Functional Exterior Only")copy.exteriorDetailPlan=undefined;
+    if(mode!=="Structural Armor Only")copy.mesoStructurePlan=undefined;
     if(mode==="Structural Armor Only"){copy.hardpoints=[];copy.engines=[];copy.surfaceFeatures=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>p.exterior&&["integration","bow","stern"].includes(p.exterior.phase));copy.productionDesign!.finish=[];}
     if(mode==="Functional Exterior Only"){copy.productionDesign=undefined;copy.hardpoints=[];copy.prefabPlacements=copy.prefabPlacements?.filter(p=>b.productionDesign!.functionalPrefabIds.includes(p.id));copy.structuralVolumes=[];copy.structuralConnectors=[];copy.trusses=[];}
     const r=createShip(copy,"Normal",detailMode);
@@ -441,6 +446,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
     }
   if(b.schemaVersion===2&&b.exteriorDetailPlan&&["Normal","Equipment"].includes(mode))root.add(renderExteriorDetails(b,m,detailMode));
   if(b.schemaVersion===2&&b.materialAppearance?.version==='1.8.5.2')root.userData.surfaceMaterials=Object.values(m);
+  if(b.schemaVersion===2&&b.mesoStructurePlan&&['Normal','Equipment','Complete Ship'].includes(mode))root.add(renderMesoStructures(b,m));
   root.userData.blueprint = b;
   return root;
 }

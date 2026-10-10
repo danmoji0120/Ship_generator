@@ -16,6 +16,7 @@ export function applySurfaceAppearance(b:ShipBlueprint,finish:FinishProfile='CLE
  const surfaces=armorSurfaces(b),known=new Set(surfaces.map(s=>s.id));
  const parts=(b.prefabPlacements??[]).flatMap(p=>(p.assembly?.parts??[]).map(part=>({...part,parent:p.socket.hostId}))).concat((b.exteriorDetailPlan?.kitPlacements??[]).flatMap(p=>p.assembly.parts.map(part=>({...part,parent:p.parentStructureId}))));
  for(const part of parts)if(!known.has(part.id))surfaces.push({id:part.id,structureId:part.parent,solid:part.solid,box:part.bounds,triangles:solidTriangles(part.solid).map(t=>({vertices:t,n:normal(t)}))});
+ for(const m of b.mesoStructurePlan?.placements??[])for(const part of m.parts){const compatible={...part,material:part.materialRole==='MECHANICAL_STRUCTURE'?'engine' as const:'secondary' as const,parent:m.parentStructureId};parts.push(compatible);surfaces.push({id:part.id,structureId:m.parentStructureId,solid:part.solid,box:part.bounds,triangles:solidTriangles(part.solid).map(t=>({vertices:t,n:normal(t)}))});}
  const surfaceEnd=performance.now();
  const plan:SurfaceAppearancePlan={version:'1.8.5.2',language,finish,texture:{namespace:'ship-surface-v1',seed,grainPeriodMeters:style.grain,tileResolution:128,projection:'OBJECT_LOCAL_TRIPLANAR'},componentVariations:[],decals:[],decisions:[],policy:{maximumDecals:48,atlasWidth:512,rowHeight:32,defaultFinish:'CLEAN',visibility:'derivative-filtered / physical footprint'}};
  const materialRoles=new Map(parts.map(p=>[p.id,functionalPartAppearance(p.role,p.material).material] as const));
@@ -76,6 +77,7 @@ export function applySurfaceAppearance(b:ShipBlueprint,finish:FinishProfile='CLE
   const hazard=kit.kit==='MISSILE_CELL_DETAIL',word=hazard?'CAUTION':kit.kit==='DRONE_DOCK'?'DRONE':kit.kit==='MACHINE_ACCESS_COVER'?'HOT':`S${String(surfaceHash(kit.id)%100).padStart(2,'0')}`;
   place(s,hazard?'HAZARD':'MAINTENANCE',word,.9,.22,kit.attachment.normal,'NEAR',kit.functionalConnection);
  }
+ for(const m of b.mesoStructurePlan?.placements??[]){const part=m.parts[0],s=surfaces.find(s=>s.id===part.id);if(s)place(s,'COMPARTMENT','M'+String(surfaceHash(m.id)%100).padStart(2,'0'),Math.min(5,b.order.length*.018),Math.min(1.1,b.order.length*.005),m.attachment.frame.normal,'MEDIUM','New meso structure compartment; no armor authority change');}
  // Yard insignia uses its own silhouette and lives on a command housing, never on a sensor lens/window.
  for(const s of surfaces.filter(s=>roles.get(s.id)==='COMMAND_HOUSING'))place(s,'SHIPYARD',language.toUpperCase(),Math.min(2.5,b.order.length*.012),.6,{x:0,y:1,z:0},'MEDIUM','Shipyard geometric insignia on command roof');
  b.materialAppearance=plan;b.generatorVersion='1.8.5.2';onTimings?.({surfacesMs:surfaceEnd-start,metadataMs:metadataEnd-surfaceEnd,placementMs:performance.now()-metadataEnd,totalMs:performance.now()-start});return b;

@@ -1,0 +1,24 @@
+# Original captures and interim prototypes are retained locally.
+/prototype*/
+/rendering/**/*.png
+/rendering/blueprint*.json
+/history/*.png
+/ui/*.png
+/performance/raw/
+/library-review/
+/matrix/*.png
+/final/*.png
+/final/blueprint.json
+/history/*.blueprint.json
+/final-verified/*.png
+/final-verified/blueprint.json
+/release-render/*.png
+/release-render/blueprint.json
+/matrix-release/*.png
+/history-verified/*.png
+/history-verified/*.blueprint.json
+/history-release/*.png
+/history-release/*.blueprint.json
+
+/engine-root/report.json
+/engine-root/*.png

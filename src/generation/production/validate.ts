@@ -11,7 +11,7 @@ import{reservationBounds,reservationSamples,overlappingBounds}from'../armor/geom
 import{FAMILY_COMPATIBILITY}from'../macro/plan';
 export function validateProduction(b:ShipBlueprint){
  const d=b.productionDesign;if(!d)return{issues:[],checks:[]};const issues:string[]=[],ids=new Set<string>(),volumes=new Map(b.structuralVolumes.map(v=>[v.id,v]));
- if(!['1.8.4','1.8.5','1.8.5.1','1.8.5.2'].includes(b.generatorVersion)||d.pipelineVersion!=='1.8.4'||d.status!=='generated'||b.structuralArmorPilot||b.functionalExterior||b.layeredArmor||!b.weaponLayout||b.weaponLayout.status!=='production')issues.push('Invalid production ownership/version');
+ if(!['1.8.4','1.8.5','1.8.5.1','1.8.5.2','1.8.5.3'].includes(b.generatorVersion)||d.pipelineVersion!=='1.8.4'||d.status!=='generated'||b.structuralArmorPilot||b.functionalExterior||b.layeredArmor||!b.weaponLayout||b.weaponLayout.status!=='production')issues.push('Invalid production ownership/version');
  if(d.family!==b.macroDesign?.family||!FAMILY_COMPATIBILITY[b.architecture.grammar].includes(d.family))issues.push('Unsupported family/architecture');
  if(!d.armor.length||!d.armor.some(c=>c.role==='VENTRAL_KEEL'||c.role==='BELLY_CITADEL'))issues.push('Missing mandatory structural armor / ventral protection');
  const solids=[...d.armor,...d.finish];

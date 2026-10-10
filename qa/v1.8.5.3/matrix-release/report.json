@@ -1,0 +1,5194 @@
+{
+  "rows": [
+    {
+      "case": {
+        "label": "architecture-MONOLITHIC",
+        "architecture": "MONOLITHIC",
+        "family": "WEDGE_CITADEL",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 36,
+            "length": 57,
+            "height": 4.484999999999999,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 23.89239161644035,
+            "height": 4.06170657479486,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 10.725,
+            "length": 27.300000000000004,
+            "height": 2.89575,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 212,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-BLOCK_ASSEMBLY",
+        "architecture": "BLOCK_ASSEMBLY",
+        "family": "HAMMERHEAD",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 36,
+            "length": 9.087802634285634,
+            "height": 1.5449264478285578,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 36,
+            "length": 9.087802634285634,
+            "height": 1.5449264478285578,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.349659402417483,
+            "height": 1.5894420984109723,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.349659402417483,
+            "height": 1.5894420984109723,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.6094898652294,
+            "length": 7.271489530989586,
+            "height": 1.2361532202682297,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "combat-core/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 23.44404390292985,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 23.073150323216584,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 23.073150323216584,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 23.479689828900238,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.02,
+            "length": 19.5,
+            "height": 1.8954,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.02,
+            "length": 19.5,
+            "height": 1.8954,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 43.8094118715871,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 43.8094118715871,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 3.373866199101835,
+            "length": 42.00000000000001,
+            "height": 0.9109438737574955,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "combat-core/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 33.97587599999999,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-magazine--1-0-0",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 33.97587599999999,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-magazine-1-4-0",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 14.34945138398378,
+            "height": 2.4394067352772426,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 14.390457210624936,
+            "height": 2.446377725806239,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 11.733753244469577,
+            "height": 1.9947380515598283,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 16.735601046256267,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 19.65662903012812,
+            "height": 2.1599999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "combat-core/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 873,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-SPINE_AND_MODULES",
+        "architecture": "SPINE_AND_MODULES",
+        "family": "WEAPON_DOMINANT",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "SPINE_AND_MODULES",
+      "family": "WEAPON_DOMINANT",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 12.615952667581647,
+            "length": 6.647096759935661,
+            "height": 1.1300064491890625,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "breech-1/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "breech--1/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "breech--1/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "breech-1/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 13.200000000000001,
+            "length": 6.371924449700777,
+            "height": 1.0832271564491323,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive--1/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-1/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 784,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-TRUSS_POD",
+        "architecture": "TRUSS_POD",
+        "family": "SPLIT_FRAME",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "TRUSS_POD",
+      "family": "SPLIT_FRAME",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.02,
+            "length": 19.5,
+            "height": 1.8954,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "pressure-core/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.02,
+            "length": 19.5,
+            "height": 1.8954,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "pressure-core/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 3.664393566246724,
+            "length": 27.300000000000004,
+            "height": 0.9893862628866156,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "weapon-pod--1/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 3.664393566246724,
+            "length": 42.00000000000001,
+            "height": 0.9893862628866156,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "weapon-pod-1/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "engine-pod--1/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 15.90486726405295,
+            "length": 10.951793419275745,
+            "height": 1.8618048812768768,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "engine-pod-1/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 26.858399999999996,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-sensor-forebody-0-0",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 26.858399999999996,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-sensor-forebody-4-0",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 27.854384717413527,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "pressure-core/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 27.90474917318057,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "pressure-core/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 24.839907855670905,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "weapon-pod-1/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 24.879370725198445,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "weapon-pod-1/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 1095,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-TWIN_HULL",
+        "architecture": "TWIN_HULL",
+        "family": "WIDE_CARRIER",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "TWIN_HULL",
+      "family": "WIDE_CARRIER",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 12.952378072050493,
+            "length": 38.415961220980456,
+            "height": 3.497142079453633,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull--1/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 18.600339096589757,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-independent-hull--1-0-4",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 18.600339096589757,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-independent-hull--1-0-4",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 18.60033909658976,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-independent-hull-1-4-4",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 18.60033909658976,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-independent-hull-1-4-4",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 4.3901496730757374,
+            "length": 33.60000000000001,
+            "height": 1.1853404117304491,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull--1/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 4.3901496730757374,
+            "length": 42.00000000000001,
+            "height": 1.1853404117304491,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull-1/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 10.725,
+            "length": 27.300000000000004,
+            "height": 2.89575,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull-1/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull--1/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "independent-hull--1/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 24,
+            "height": 2.1599999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "central-bridge/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 24,
+            "height": 2.1599999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "central-bridge/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 740,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-CORE_AND_NACELLES",
+        "architecture": "CORE_AND_NACELLES",
+        "family": "ENGINE_DOMINANT",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 15.619750921767759,
+            "length": 52.739379171789516,
+            "height": 4.217332748877295,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-core/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 4.87336228759154,
+            "length": 33.60000000000001,
+            "height": 1.3158078176497159,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-core/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "lateral-drive--1/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 2.48316552253895,
+            "length": 42.00000000000001,
+            "height": 0.6704546910855166,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "lateral-drive--1/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-lateral-drive-1-4-0",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-vertical-drive-1-0-0",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-vertical-drive-1-4-0",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-core/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-core/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 904,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-STACKED_BLOCKS",
+        "architecture": "STACKED_BLOCKS",
+        "family": "WEDGE_CITADEL",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "STACKED_BLOCKS",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-command-deck-6-1",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-command-deck-6-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 12.89566636101146,
+            "length": 42.00000000000001,
+            "height": 3.4818299174730942,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 13.200000000000001,
+            "length": 33.60000000000001,
+            "height": 3.5640000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 24,
+            "height": 2.1599999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/shoulder--1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 372,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "architecture-HYBRID",
+        "architecture": "HYBRID",
+        "family": "SPLIT_FRAME",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "HYBRID",
+      "family": "SPLIT_FRAME",
+      "placements": [
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "breech-1/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-1/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 795,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Corvette",
+        "role": "Corvette",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.75863258155029,
+            "height": 4.20896753886355,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 26.266198543570393,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 5.976236785936748,
+            "length": 11.849863813561578,
+            "height": 1.613583932202922,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 13.200000000000001,
+            "length": 33.60000000000001,
+            "height": 3.5640000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 155,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Frigate",
+        "role": "Frigate",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 233,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Destroyer",
+        "role": "Destroyer",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.79708287361456,
+            "height": 4.215504088514476,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 28.82875449904068,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 8.800925200280094,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 268,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Cruiser",
+        "role": "Cruiser",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 248,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Battlecruiser",
+        "role": "Battlecruiser",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 248,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Battleship",
+        "role": "Battleship",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.849183005326456,
+            "height": 4.224361110905498,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 33.804225,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 237,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Missile Ship",
+        "role": "Missile Ship",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 150,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Spinal Gun Ship",
+        "role": "Spinal Gun Ship",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEAPON_DOMINANT",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 10.96875,
+            "length": 15.756034459085798,
+            "height": 2.678525858044586,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 8.034198647474874,
+            "length": 27.300000000000004,
+            "height": 2.169233634818216,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.37901980927333,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 4.319999999999999,
+            "length": 24,
+            "height": 2.1599999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 142,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "role-Patrol Ship",
+        "role": "Patrol Ship",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 150,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "yard-aegis",
+        "shipyardId": "aegis",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 28.8,
+            "length": 45.6,
+            "height": 6.8999999999999995,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 36,
+            "length": 57,
+            "height": 4.484999999999999,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 23.89239161644035,
+            "height": 4.06170657479486,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 10.725,
+            "length": 27.300000000000004,
+            "height": 2.89575,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 212,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "yard-vesper",
+        "shipyardId": "vesper",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.775999999999999,
+            "length": 30,
+            "height": 2.09952,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.775999999999999,
+            "length": 30,
+            "height": 2.09952,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 16.848,
+            "length": 57,
+            "height": 1.4352,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 16.848,
+            "length": 57,
+            "height": 1.4352,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 20.736,
+            "length": 45.6,
+            "height": 3.5879999999999996,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 20.736,
+            "length": 45.6,
+            "height": 3.5879999999999996,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 25.919999999999998,
+            "length": 33.389529287890724,
+            "height": 3.5879999999999996,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.775999999999999,
+            "length": 30,
+            "height": 2.09952,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 6.2208,
+            "length": 24,
+            "height": 1.679616,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.775999999999999,
+            "length": 30,
+            "height": 2.09952,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.775999999999999,
+            "length": 30,
+            "height": 2.09952,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 4.8384,
+            "length": 36,
+            "height": 1.3063680000000002,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 4.8384,
+            "length": 36,
+            "height": 1.3063680000000002,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 11.879999999999999,
+            "length": 42.00000000000001,
+            "height": 2.808,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 9.504,
+            "length": 33.60000000000001,
+            "height": 2.56608,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 3.8879999999999995,
+            "length": 30,
+            "height": 1.872,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 3.8879999999999995,
+            "length": 30,
+            "height": 1.872,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.8879999999999995,
+            "length": 30,
+            "height": 1.872,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 3.8879999999999995,
+            "length": 30,
+            "height": 1.872,
+            "taper": 0.62,
+            "clip": 0.12,
+            "style": "vesper"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 118,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "yard-forge",
+        "shipyardId": "forge",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.504,
+            "length": 30,
+            "height": 2.56608,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.504,
+            "length": 30,
+            "height": 2.56608,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 13.3848,
+            "length": 37.050000000000004,
+            "height": 3.6138960000000004,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 25.344,
+            "length": 45.6,
+            "height": 5.795999999999999,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 31.68,
+            "length": 57,
+            "height": 5.795999999999999,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 31.68,
+            "length": 32.88544348000107,
+            "height": 5.590525391600183,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.504,
+            "length": 30,
+            "height": 2.56608,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 7.6032,
+            "length": 24,
+            "height": 2.052864,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.504,
+            "length": 30,
+            "height": 2.56608,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.504,
+            "length": 30,
+            "height": 2.56608,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.913600000000001,
+            "length": 36,
+            "height": 1.5966720000000003,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.913600000000001,
+            "length": 36,
+            "height": 1.5966720000000003,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 14.52,
+            "length": 42.00000000000001,
+            "height": 3.9204000000000003,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 9.438,
+            "length": 27.300000000000004,
+            "height": 2.5482600000000004,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 4.752,
+            "length": 30,
+            "height": 2.376,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 4.752,
+            "length": 30,
+            "height": 2.376,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 4.752,
+            "length": 30,
+            "height": 2.376,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 4.752,
+            "length": 30,
+            "height": 2.376,
+            "taper": 0.96,
+            "clip": 0.26,
+            "style": "forge"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 211,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "yard-serein",
+        "shipyardId": "serein",
+        "seed": 7
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 11.664,
+            "length": 30,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 11.664,
+            "length": 30,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 20.2176,
+            "length": 45.6,
+            "height": 3.105,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 20.2176,
+            "length": 45.6,
+            "height": 3.105,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 31.104000000000003,
+            "length": 45.6,
+            "height": 3.105,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 31.104000000000003,
+            "length": 45.6,
+            "height": 3.105,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 31.104000000000003,
+            "length": 33.26056635371493,
+            "height": 3.105,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 11.664,
+            "length": 30,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 9.3312,
+            "length": 24,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 11.664,
+            "length": 30,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 11.664,
+            "length": 30,
+            "height": 1.8900000000000001,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 17.82,
+            "length": 42.00000000000001,
+            "height": 2.4299999999999997,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 14.256,
+            "length": 33.60000000000001,
+            "height": 2.4299999999999997,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.832,
+            "length": 30,
+            "height": 1.62,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.832,
+            "length": 30,
+            "height": 1.62,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.832,
+            "length": 30,
+            "height": 1.62,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.832,
+            "length": 30,
+            "height": 1.62,
+            "taper": 0.88,
+            "clip": 0.14,
+            "style": "serein"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 153,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "length-40",
+        "length": 40,
+        "role": "Corvette",
+        "seed": 41
+      },
+      "status": "RELEASED",
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 1.5061438715721458,
+            "length": 5.257407550886154,
+            "height": 0.4066588453244794,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-core/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 1.6883641085881986,
+            "length": 4.206005342360644,
+            "height": 0.45585830931881366,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "lateral-drive--1/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 1.3973215514852262,
+            "length": 4.239353531105113,
+            "height": 0.3772768189010111,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "vertical-drive-1/fore-guard",
+          "contacts": 13
+        }
+      ],
+      "omissions": 765,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "length-120",
+        "length": 120,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "status": "RELEASED",
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 2.808,
+            "length": 7.800000000000001,
+            "height": 0.7581600000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-command-deck-6-1",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 2.808,
+            "length": 7.800000000000001,
+            "height": 0.7581600000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-command-deck-6-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 2.688,
+            "length": 14.4,
+            "height": 0.7257600000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 2.688,
+            "length": 14.4,
+            "height": 0.7257600000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 5.28,
+            "length": 13.440000000000001,
+            "height": 1.4256000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 2.688,
+            "length": 14.4,
+            "height": 0.7257600000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 3.36,
+            "length": 18,
+            "height": 0.9072,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 2.184,
+            "length": 11.700000000000001,
+            "height": 0.5896800000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 2.184,
+            "length": 11.700000000000001,
+            "height": 0.5896800000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 297,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "length-300",
+        "length": 300,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "status": "RELEASED",
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 13.200000000000001,
+            "length": 33.60000000000001,
+            "height": 3.5640000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 450,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "length-600",
+        "length": 600,
+        "role": "Cruiser",
+        "seed": 41
+      },
+      "status": "RELEASED",
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 13.440000000000001,
+            "length": 72,
+            "height": 3.6288000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 13.440000000000001,
+            "length": 72,
+            "height": 3.6288000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 26.400000000000002,
+            "length": 67.20000000000002,
+            "height": 7.128000000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 16.8,
+            "length": 90,
+            "height": 4.5360000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 16.8,
+            "length": 90,
+            "height": 4.5360000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 10.920000000000002,
+            "length": 58.5,
+            "height": 2.948400000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 10.920000000000002,
+            "length": 58.5,
+            "height": 2.948400000000001,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 510,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "seed-11",
+        "seed": 11
+      },
+      "status": "RELEASED",
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.752470325372322,
+            "height": 1.6579199553132948,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.752470325372322,
+            "height": 1.6579199553132948,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.234992227644979,
+            "height": 1.5699486786996464,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 36,
+            "length": 9.234992227644979,
+            "height": 1.5699486786996464,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 12.811062777720116,
+            "length": 8.941800475510034,
+            "height": 1.520106080836706,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 12.806528792861547,
+            "length": 8.941800475510034,
+            "height": 1.520106080836706,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 19.8010434818404,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 20.059556102378668,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 20.059556102378668,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 19.96461023311181,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 38.69280385977124,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 9.6178036185617,
+            "height": 1.635026615155489,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 8.183514707146532,
+            "height": 1.3911975002149106,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "combat-core/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 33.975876,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-magazine--1-0-0",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 33.975876,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "skin-magazine-1-4-0",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 12.33697982005325,
+            "height": 2.097286569409053,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 12.37265294413434,
+            "height": 2.1033510005028377,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "fore-armor/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 12.45363122171301,
+            "height": 2.117117307691212,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "MACHINERY_GALLERY",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 17.58372806510944,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "drive-block/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 803,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "seed-23",
+        "seed": 23
+      },
+      "status": "RELEASED",
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL",
+      "placements": [
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 23.4,
+            "length": 24.833276735913653,
+            "height": 4.221657045105322,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder--1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_SHOULDER_EXTENSION",
+          "size": {
+            "width": 23.400000000000002,
+            "length": 37.050000000000004,
+            "height": 6.2985000000000015,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/shoulder-1",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 32.03194944337854,
+            "length": 12.75243982272599,
+            "height": 2.1679147698634185,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/fore-guard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-port",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 10.799999999999999,
+            "length": 30,
+            "height": 2.916,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "WEAPON_BARBETTE_INTEGRATION",
+          "size": {
+            "width": 8.639999999999999,
+            "length": 24,
+            "height": 2.3327999999999998,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belly-starboard",
+          "contacts": 13
+        },
+        {
+          "kind": "ARMOR_STEP",
+          "size": {
+            "width": 9.778805778088996,
+            "length": 13.315448955359985,
+            "height": 2.2636263224111977,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/command-plinth",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 42.00000000000001,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/keel",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 16.5,
+            "length": 31.24530267947221,
+            "height": 4.455,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 3.51,
+            "length": 19.5,
+            "height": 1.755,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        },
+        {
+          "kind": "SERVICE_RECESS_FRAME",
+          "size": {
+            "width": 5.3999999999999995,
+            "length": 30,
+            "height": 2.6999999999999997,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "citadel/primary",
+          "contacts": 13
+        }
+      ],
+      "omissions": 248,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    },
+    {
+      "case": {
+        "label": "seed-41",
+        "seed": 41
+      },
+      "status": "RELEASED",
+      "architecture": "STACKED_BLOCKS",
+      "family": "HAMMERHEAD",
+      "placements": [
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 6.720000000000001,
+            "length": 36,
+            "height": 1.8144000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "VENTRAL_KEEL_SUPPORT",
+          "size": {
+            "width": 13.200000000000001,
+            "length": 33.60000000000001,
+            "height": 3.5640000000000005,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "armored-keel/rear-cradle",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 8.4,
+            "length": 45,
+            "height": 2.2680000000000002,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "magazine-deck/belt-1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt--1",
+          "contacts": 13
+        },
+        {
+          "kind": "FLANK_ARMOR_BELT",
+          "size": {
+            "width": 5.460000000000001,
+            "length": 29.25,
+            "height": 1.4742000000000004,
+            "taper": 0.85,
+            "clip": 0.18,
+            "style": "aegis"
+          },
+          "parent": "command-deck/belt-1",
+          "contacts": 13
+        }
+      ],
+      "omissions": 450,
+      "issues": [],
+      "physicalJSONUnchanged": true,
+      "seedDeterminism": true
+    }
+  ],
+  "errors": []
+}

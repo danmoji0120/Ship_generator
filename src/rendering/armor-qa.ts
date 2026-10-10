@@ -41,13 +41,13 @@ export class ArmorQARenderer {
     this.scene.add(this.ambient,this.key,this.fill,this.ventral,this.key.target);
     this.key.castShadow=true; this.key.shadow.mapSize.set(1024,1024); this.key.shadow.bias=-.0012;
   }
-  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{surfaceDebug?:'NONE'|'TEXTURE'|'DECAL';finish?:import('../generation/appearance/types').FinishProfile;environment?:'INSPECTION'|'SPACE'|'SIDE';inspectionLighting?:boolean;viewDirection?:{x:number;y:number;z:number};detailMode?:import("../generation/details/types").DetailMode;weaponDebug?:WeaponDebug;sizeComparison?:boolean;neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
-    const visualKey=`${options.detailMode??"HIGH"}/${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}/${options.weaponDebug??''}/${Boolean(options.sizeComparison)}/${options.environment??'default'}/${options.surfaceDebug??'NONE'}/${options.finish??'default'}`;
+  capture(b:ShipBlueprint,stage:ArmorStage,view:ArmorView,options:{meso?:'ONLY'|'OFF';surfaceDebug?:'NONE'|'TEXTURE'|'DECAL';finish?:import('../generation/appearance/types').FinishProfile;environment?:'INSPECTION'|'SPACE'|'SIDE';inspectionLighting?:boolean;viewDirection?:{x:number;y:number;z:number};detailMode?:import("../generation/details/types").DetailMode;weaponDebug?:WeaponDebug;sizeComparison?:boolean;neutral?:boolean;black?:boolean;scale?:'fixed'|'fit';isolate?:number;reviewLighting?:boolean;underbodyLighting?:boolean;closeup?:{center:THREE.Vector3;extent:number}}={}) {
+    const visualKey=`${options.meso??'ALL'}/${options.detailMode??"HIGH"}/${stage}/${Boolean(options.neutral)}/${Boolean(options.black)}/${options.isolate??'all'}/${Boolean(options.reviewLighting)}/${Boolean(options.underbodyLighting)}/${options.weaponDebug??''}/${Boolean(options.sizeComparison)}/${options.environment??'default'}/${options.surfaceDebug??'NONE'}/${options.finish??'default'}`;
     // QA blueprints are immutable. Reuse the exact geometry across camera views, not design data.
     if(this.cachedBlueprint!==b||this.cachedVisualKey!==visualKey) {
     if(this.ship) {this.scene.remove(this.ship);disposeShip(this.ship);}
     const rendered=options.sizeComparison?sizeComparisonBlueprint(b):options.weaponDebug?weaponDebugBlueprint(b):armorStageBlueprint(b,stage);
-    this.ship=createShip(rendered,'Normal',options.detailMode??'HIGH');
+    this.ship=createShip(rendered,options.meso==='ONLY'?'Meso Structures':options.meso==='OFF'?'Without Meso':'Normal',options.detailMode??'HIGH');
     setSurfacePresentation(this.ship,options.finish,options.surfaceDebug);
     const shared=new THREE.MeshStandardMaterial({color:options.reviewLighting?0x798b9a:0x98a4af,roughness:.82,metalness:.12});
     // A consistent neutral clay rig, equally applied to source and prototype, reveals deep structural walls.
@@ -79,7 +79,7 @@ export class ArmorQARenderer {
     const up=view==='TOP'||view==='BOTTOM'?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
     const right=up.clone().cross(direction).normalize(), vertical=direction.clone().cross(right).normalize();
     // Use Complete's authoritative bounds for every progression stage, including fitted views.
-    const bounds=b.exteriorDetailPlan?.bounds??b.productionDesign?.overallBounds??b.functionalExterior?.overallBounds??b.structuralArmorPilot?.overallBounds??b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
+    const bounds=b.mesoStructurePlan?.bounds??b.exteriorDetailPlan?.bounds??b.productionDesign?.overallBounds??b.functionalExterior?.overallBounds??b.structuralArmorPilot?.overallBounds??b.layeredArmor?.overallBounds??b.hullIntegration?.overallBounds;
     const center=options.scale==='fit'&&bounds?new THREE.Vector3().addVectors(new THREE.Vector3(bounds.min.x,bounds.min.y,bounds.min.z),new THREE.Vector3(bounds.max.x,bounds.max.y,bounds.max.z)).multiplyScalar(.5):new THREE.Vector3();
     let extent=b.order.length*1.50;
     if(options.scale==='fit'&&bounds) {

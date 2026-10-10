@@ -1,6 +1,6 @@
-# Procedural Shipyard V1.8.5.2 — Surface Texture & Decal Language
+# Procedural Shipyard V1.8.5.3 — Structural Visual Hierarchy & Meso Geometry
 
-일반 주문서의 기본 생성기는 **V1.8.5.2**입니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
+일반 주문서의 기본 생성기는 **V1.8.5.3**입니다. 무장과 기존 외장 Kit 이후에 실제 표면에 부착되는 Meso 구조를 생성하고, 최종 노출 면의 질감·마킹을 계획합니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.
 
 ```bash
 npm install
@@ -667,3 +667,12 @@ npx vitest run tests/weapon-layout.test.ts
 ```
 
 저장된 검토 Blueprint와 전체 시점·규격·대칭·법선 이미지는 `qa/v1.8.3/final-review/`에 있습니다. `qa/v1.8.3/QA.md`에 이전 렌더와의 동일 조건 비교, 성능, 충돌 검사 한계를 기록했습니다. 실제 발사, 조준 애니메이션, 전투 AI, 다른 설계로의 확장은 포함하지 않습니다.
+
+### V1.8.5.3 — Structural Visual Hierarchy & Meso Geometry
+
+The default Requirements-first generator now adds a deterministic, optional Meso structure plan after weapons and existing exterior kits. Eight functional structures provide broad armor terraces, cannon support haunches, open machinery frames, local flank/keel reinforcement and engine-root transitions. Actual station-surface patches form closed attached solids; candidates protect existing weapons, openings, XL spaces and service access. Physical Hull, armor coverage, weapons and requirements remain unchanged.
+
+`version: '1.8.5.2'` retains the prior generator. Historical JSON receives no new structures. Exterior detail OFF keeps major Meso geometry; **Meso Structures** and **Without Meso** debug views compare the new layer without changing the Blueprint. Parts reuse material batching and surface/decal recipes. New geometry is visual structure only, with no simulated armor strength or mass bonus.
+
+- [Meso architecture and safety contract](docs/MESO_STRUCTURE.md)
+- [V1.8.5.3 QA evidence and limitations](qa/v1.8.5.3/QA.md)

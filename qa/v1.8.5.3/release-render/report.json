@@ -1,0 +1,2278 @@
+{
+  "placements": [
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/primary",
+      "size": {
+        "width": 10.799999999999999,
+        "length": 30,
+        "height": 2.916,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/primary",
+      "size": {
+        "width": 10.799999999999999,
+        "length": 30,
+        "height": 2.916,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "id": "meso/meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2/ARMOR_SHOULDER_EXTENSION",
+      "parent": "citadel/shoulder--1",
+      "size": {
+        "width": 28.8,
+        "length": 45.6,
+        "height": 6.8999999999999995,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "id": "meso/meso-zone/citadel/shoulder-1/ARMOR_SHOULDER/3/ARMOR_SHOULDER_EXTENSION",
+      "parent": "citadel/shoulder-1",
+      "size": {
+        "width": 36,
+        "length": 57,
+        "height": 4.484999999999999,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "ARMOR_STEP",
+      "id": "meso/meso-zone/citadel/fore-guard/PRIMARY_ARMOR/4/ARMOR_STEP",
+      "parent": "citadel/primary",
+      "size": {
+        "width": 36,
+        "length": 23.89239161644035,
+        "height": 4.06170657479486,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/belly-port/WEAPON_FOUNDATION/14/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/belly-port",
+      "size": {
+        "width": 10.799999999999999,
+        "length": 30,
+        "height": 2.916,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/belly-port",
+      "size": {
+        "width": 8.639999999999999,
+        "length": 24,
+        "height": 2.3327999999999998,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/16/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/belly-starboard",
+      "size": {
+        "width": 10.799999999999999,
+        "length": 30,
+        "height": 2.916,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "id": "meso/meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/17/WEAPON_BARBETTE_INTEGRATION",
+      "parent": "citadel/belly-starboard",
+      "size": {
+        "width": 10.799999999999999,
+        "length": 30,
+        "height": 2.916,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "FLANK_ARMOR_BELT",
+      "id": "meso/meso-zone/citadel/belt--1/SIDE_BELT/6/FLANK_ARMOR_BELT",
+      "parent": "citadel/belt--1",
+      "size": {
+        "width": 6.720000000000001,
+        "length": 36,
+        "height": 1.8144000000000002,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "FLANK_ARMOR_BELT",
+      "id": "meso/meso-zone/citadel/belt-1/SIDE_BELT/7/FLANK_ARMOR_BELT",
+      "parent": "citadel/belt-1",
+      "size": {
+        "width": 6.720000000000001,
+        "length": 36,
+        "height": 1.8144000000000002,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "id": "meso/meso-zone/citadel/keel/VENTRAL_KEEL/8/VENTRAL_KEEL_SUPPORT",
+      "parent": "citadel/keel",
+      "size": {
+        "width": 16.5,
+        "length": 42.00000000000001,
+        "height": 4.455,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "id": "meso/meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11/VENTRAL_KEEL_SUPPORT",
+      "parent": "citadel/rear-cradle",
+      "size": {
+        "width": 10.725,
+        "length": 27.300000000000004,
+        "height": 2.89575,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "SERVICE_RECESS_FRAME",
+      "id": "meso/meso-zone/citadel/primary/SERVICE_CHANNEL/22/SERVICE_RECESS_FRAME",
+      "parent": "citadel/primary",
+      "size": {
+        "width": 5.3999999999999995,
+        "length": 30,
+        "height": 2.6999999999999997,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "SERVICE_RECESS_FRAME",
+      "id": "meso/meso-zone/citadel/shoulder--1/SERVICE_CHANNEL/23/SERVICE_RECESS_FRAME",
+      "parent": "citadel/shoulder--1",
+      "size": {
+        "width": 5.3999999999999995,
+        "length": 30,
+        "height": 2.6999999999999997,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "SERVICE_RECESS_FRAME",
+      "id": "meso/meso-zone/citadel/primary/SERVICE_CHANNEL/24/SERVICE_RECESS_FRAME",
+      "parent": "citadel/primary",
+      "size": {
+        "width": 5.3999999999999995,
+        "length": 30,
+        "height": 2.6999999999999997,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    },
+    {
+      "kind": "MACHINERY_GALLERY",
+      "id": "meso/meso-zone/citadel/shoulder-1/SERVICE_CHANNEL/25/MACHINERY_GALLERY",
+      "parent": "citadel/shoulder-1",
+      "size": {
+        "width": 5.3999999999999995,
+        "length": 30,
+        "height": 2.6999999999999997,
+        "taper": 0.85,
+        "clip": 0.18,
+        "style": "aegis"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "zoneId": "meso-zone/citadel/primary/WEAPON_FOUNDATION/12",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/WEAPON_FOUNDATION/13",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Earlier detail access blocked detail/cannon-0-0/service/ACCESS_HATCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/WEAPON_FOUNDATION/13",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Earlier detail access blocked detail/cannon-0-0/service/ACCESS_HATCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/WEAPON_FOUNDATION/13",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Earlier detail access blocked detail/cannon-0-0/service/ACCESS_HATCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/WEAPON_FOUNDATION/13",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/SUPPLY_HAUNCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.915439306311079,\"relief\":-10.602542060671533,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Static firing path point_defense-2-1; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8752655884853484,\"relief\":-6.768453658075287,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.2705117321601596,\"relief\":-3.0265329340027103,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/SUPPLY_HAUNCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8865423135173451,\"relief\":-8.101007602026838,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8752655884853484,\"relief\":-5.063345257806278,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.950176847171566,\"relief\":-7.4084847550198525,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8865423135173451,\"relief\":-5.9930265844215445,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/12/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.4401445508299004,\"relief\":-1.6811728148804324,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/0",
+      "kind": "ARMOR_STEP",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.950176847171566,\"relief\":-5.521106007888594,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-1; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/SUPPLY_HAUNCH"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8814254038230774,\"relief\":-12.342828738936888,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-0; Static firing path point_defense-2-1; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8630603700161371,\"relief\":-5.3449197574084675,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.2678667687350807,\"relief\":-3.095746024247365,\"height\":6.318}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-1; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8814254038230774,\"relief\":-9.191386446995498,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION; Static firing path point_defense-2-1; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/fore-guard\",\"parent\":\"citadel\",\"normalDot\":0.30377702445017996,\"relief\":2.4165873740892123,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.9550136184300446,\"relief\":-7.331183504352242,\"height\":5.0544}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION; Meso edge crosses other solid meso/meso-zone/citadel/primary/WEAPON_FOUNDATION/13/WEAPON_BARBETTE_INTEGRATION/BARBETTE_APRON"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8814254038230774,\"relief\":-6.827804728039463,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Static firing path point_defense-2-1"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.8630603700161371,\"relief\":-1.161513894621837,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/PRIMARY_ARMOR/1",
+      "kind": "ARMOR_STEP",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.2678667687350807,\"relief\":-6.478511039278325,\"height\":4.1067}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.9983561596339291,\"relief\":-13.41216583068367,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-7-0\",\"parent\":\"citadel\",\"normalDot\":0.9304058297555278,\"relief\":-13.380426400174787,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"missile-0-0-foundation\",\"parent\":\"citadel\",\"normalDot\":0.9999099110762889,\"relief\":1.4048029160271553,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"normalDot\":null,\"relief\":null,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.9823663177681077,\"relief\":-8.69100502947129,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 5,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder-1/ARMOR_SHOULDER/3",
+      "kind": "ARMOR_SHOULDER_EXTENSION",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/fore-guard/PRIMARY_ARMOR/4",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/primary\",\"parent\":\"citadel\",\"normalDot\":0.41627225292396003,\"relief\":0,\"height\":4.061706574794859}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/fore-guard/PRIMARY_ARMOR/4",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-6-0\",\"parent\":\"citadel\",\"normalDot\":0.9995818818216121,\"relief\":-7.183450909352218,\"height\":5.697299059608392}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/fore-guard/PRIMARY_ARMOR/4",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-1-0\",\"parent\":\"citadel\",\"normalDot\":0.9529692266460774,\"relief\":-8.56520647644642,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference cannon-1-0-foundation; Other equipment/armor interference detail/cannon-1-0/service/WEAPON_SERVICE_RING-outer-1; Other equipment/armor interference detail/cannon-1-0/service/WEAPON_SERVICE_RING-outer1; Other equipment/armor interference detail/cannon-1-0/service/WEAPON_SERVICE_RING-brace-1; Other equipment/armor interference detail/cannon-1-0/service/WEAPON_SERVICE_RING-brace1; Other equipment/armor interference cannon-1-0-seat; Other equipment/armor interference cannon-1-0-breech; Other equipment/armor interference cannon-1-0-shroud-0; Other equipment/armor interference cannon-1-0-mantlet-0; Other equipment/armor interference cannon-1-0-shroud-1; Other equipment/armor interference cannon-1-0-mantlet-1; Detail collision detail/cannon-1-0/service/WEAPON_SERVICE_RING; Weapon operating envelope cannon-1-0; Meso edge crosses other solid cannon-1-0-foundation; Meso edge crosses other solid cannon-1-0-breech; Meso edge crosses other solid cannon-1-0-shroud-0"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belly-port\",\"parent\":\"citadel\",\"normalDot\":0.2782999499369474,\"relief\":-4.346230858171685,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belly-port\",\"parent\":\"citadel\",\"normalDot\":0.21084602416919637,\"relief\":-0.6149028563527006,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.9997624198824979,\"relief\":-8.901461850162214,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-1-0-foundation\",\"parent\":\"citadel\",\"normalDot\":0.9726912620609102,\"relief\":-3.6437828251753013,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-2-0\",\"parent\":\"citadel\",\"normalDot\":0.9997624198824979,\"relief\":-7.558885161767568,\"height\":6.2985000000000015}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-1-0-foundation\",\"parent\":\"citadel\",\"normalDot\":0.9726912620609102,\"relief\":-2.6236858026534873,\"height\":6.2985000000000015}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/PRIMARY_ARMOR/9",
+      "kind": "ARMOR_STEP",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-3-0\",\"parent\":\"citadel\",\"normalDot\":0.9552984067235233,\"relief\":-8.6896183560572,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belly-starboard\",\"parent\":\"citadel\",\"normalDot\":0.2892057473091194,\"relief\":-4.094337102501543,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belly-starboard\",\"parent\":\"citadel\",\"normalDot\":0.21084602416919637,\"relief\":-0.6149028563527006,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel\",\"parent\":\"citadel\",\"normalDot\":0.9997624198824977,\"relief\":-8.901461850162208,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-1-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.9726912620609101,\"relief\":-3.643782825175294,\"height\":6.8999999999999995}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-2-0\",\"parent\":\"citadel\",\"normalDot\":0.9997624198824978,\"relief\":-7.558885161767568,\"height\":6.2985000000000015}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-1-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.9726912620609102,\"relief\":-2.6236858026534873,\"height\":6.2985000000000015}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/PRIMARY_ARMOR/10",
+      "kind": "ARMOR_STEP",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/14",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-port/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1\",\"parent\":\"citadel\",\"normalDot\":1,\"relief\":0.38661449999999686,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-port/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Earlier detail access blocked detail/cannon-1-0/service/WEAPON_SERVICE_RING"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support-11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-port/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-port/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-port/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-port/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-port/WEAPON_FOUNDATION/15",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 6,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/16",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-1-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-11; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-starboard/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-starboard/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-starboard/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/16",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross-1\",\"parent\":\"citadel\",\"normalDot\":1.0000000000000002,\"relief\":0.3866144999999969,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/16",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-1-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support-11; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-long1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support1-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-support11; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross-1; Other equipment/armor interference detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET-cross1; Other equipment/armor interference detail/citadel/belly-starboard/joint/ARMOR_CLAMP-seat; Other equipment/armor interference detail/citadel/belly-starboard/joint/ARMOR_CLAMP-lock; Detail collision detail/citadel/belly-starboard/joint/REINFORCEMENT_BRACKET; Detail collision detail/citadel/belly-starboard/joint/ARMOR_CLAMP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/16",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belly-starboard/WEAPON_FOUNDATION/17",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-3.896694943619418,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-3.9848937615654236,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-3.8084961256734244,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-4.032385432767117,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-3.7610044544717196,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-5.342008522717285,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-5.430207340663289,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-5.25380970477126,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-5.477699011864982,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.7510317425528235,\"relief\":-5.206318033569565,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.6601019727309587,\"relief\":-4.031821572234841,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.6601019727309587,\"relief\":-4.03182157223483,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.6601019727309587,\"relief\":-4.03182157223484,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.6601019727309587,\"relief\":-4.03182157223483,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/18",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.6601019727309587,\"relief\":-4.03182157223484,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-2.7665311261436476,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-2.369071526813897,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-3.1639907254733806,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-2.1550548194824954,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-3.3780074328047855,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-1.6886140129818412,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-1.2911544136520907,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-2.086073612311574,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-1.1629655971935573,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-2.3000903196429787,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-0.8801761781104676,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-0.5820986050436792,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123599,\"relief\":-1.2776357774402007,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-0.5940201926007349,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/WEAPON_FOUNDATION/19",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7705346371123603,\"relief\":-1.4916524847716173,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-1.5003238452874763,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-1.5224639364648271,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-1.4781837541101182,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-1.5343855240218947,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-1.4662621665530498,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.8191647616894859,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.8413048528668388,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.7970246705121039,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.8532264404238814,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.7851030829550614,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.30829544899097244,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.33043554016832444,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.2861553578135896,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.34235712772536697,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/20",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103126,\"relief\":-0.274233770256577,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"detail/citadel/rcs-0.81/RCS_CLUSTER-seat\",\"parent\":\"citadel\",\"normalDot\":0.8362286815828199,\"relief\":-5.954824797427079,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.20811956231239254,\"relief\":-5.445960660279362,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-6.914340526150364,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-3.918842681914841,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-7.229162964854252,\"height\":2.916}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-4.369235899494561,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-2.2947749569515774,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-4.95390614280178,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-2.2789040514849845,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-5.268728581505678,\"height\":2.3327999999999998}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7511598870103142,\"relief\":-2.9847053071821765,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.8285943025258596,\"relief\":-2.181744769460322,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-3.483580355290349,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"cannon-2-1-foundation\",\"parent\":\"citadel\",\"normalDot\":0.8285943025258596,\"relief\":-2.178106553506913,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/WEAPON_FOUNDATION/21",
+      "kind": "WEAPON_BARBETTE_INTEGRATION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7449140751009239,\"relief\":-3.7984027939942453,\"height\":1.8954}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":1.0000000000000002,\"relief\":0,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/command-plinth\",\"parent\":\"citadel\",\"normalDot\":0.5866755097836037,\"relief\":-10.066694918837046,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":0.8687359352398025,\"relief\":2.1331084589375235,\"height\":2.282590714963463}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "No exposed coherent parent surface"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":1.0000000000000002,\"relief\":0,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/command-plinth\",\"parent\":\"citadel\",\"normalDot\":0.5866755097836037,\"relief\":-10.066694918837046,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":0.8687359352398025,\"relief\":2.1331084589375235,\"height\":2.282590714963463}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "No exposed coherent parent surface"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":1.0000000000000002,\"relief\":0,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/command-plinth\",\"parent\":\"citadel\",\"normalDot\":0.5866755097836037,\"relief\":-10.066694918837046,\"height\":2.842495249151755}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"command-body\",\"parent\":\"citadel\",\"normalDot\":0.8687359352398025,\"relief\":2.1331084589375235,\"height\":2.282590714963463}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "No exposed coherent parent surface"
+    },
+    {
+      "zoneId": "meso-zone/citadel/command-plinth/COMMAND_BASE/5",
+      "kind": "ARMOR_STEP",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.9924865658316456,\"relief\":-2.773797963075102,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.965459415613062,\"relief\":-5.877815193850691,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.7282536413525911,\"relief\":1.5010919933300866,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "No exposed coherent parent surface"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.544824999999988,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.9924865658316456,\"relief\":-2.2190383704600882,\"height\":1.8144000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt--1\",\"parent\":\"citadel\",\"normalDot\":0.965459415613062,\"relief\":-4.663377125818314,\"height\":1.8144000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt--1/SIDE_BELT/6",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 7,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.9924865658316456,\"relief\":-2.773797963075102,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.9654594156130621,\"relief\":-5.877815193850691,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.7282536413525917,\"relief\":1.5010919933300866,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "No exposed coherent parent surface"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.544824999999988,\"height\":2.2680000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.9924865658316456,\"relief\":-2.2190383704600882,\"height\":1.8144000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/belt-1\",\"parent\":\"citadel\",\"normalDot\":0.9654594156130621,\"relief\":-4.663377125818314,\"height\":1.8144000000000002}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/belt-1/SIDE_BELT/7",
+      "kind": "FLANK_ARMOR_BELT",
+      "candidate": 7,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/keel/VENTRAL_KEEL/8",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/keel\",\"parent\":\"citadel\",\"normalDot\":0.7130159717292063,\"relief\":-2.299872805657931,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/keel/VENTRAL_KEEL/8",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 1,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/keel\",\"parent\":\"citadel\",\"normalDot\":0.7398520073874307,\"relief\":0.14947919067102405,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/keel\",\"parent\":\"citadel\",\"normalDot\":0.6947857051810566,\"relief\":-1.581036111103281,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-2-0\",\"parent\":\"citadel\",\"normalDot\":0.9981065295306577,\"relief\":-9.866289162338088,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/keel\",\"parent\":\"citadel\",\"normalDot\":0.7094667396551038,\"relief\":-2.626789073043322,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/rear-cradle\",\"parent\":\"citadel\",\"normalDot\":0.44353361736152697,\"relief\":-0.4874385604222796,\"height\":4.455}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/rear-cradle\",\"parent\":\"citadel\",\"normalDot\":0.9218420032829869,\"relief\":-5.235767329518443,\"height\":3.5640000000000005}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"citadel/rear-cradle\",\"parent\":\"citadel\",\"normalDot\":0.44353361736152697,\"relief\":-0.4874385604222796,\"height\":3.5640000000000005}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/rear-cradle/VENTRAL_KEEL/11",
+      "kind": "VENTRAL_KEEL_SUPPORT",
+      "candidate": 10,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/SERVICE_CHANNEL/22",
+      "kind": "SERVICE_RECESS_FRAME",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/SERVICE_CHANNEL/23",
+      "kind": "SERVICE_RECESS_FRAME",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2/ARMOR_SHOULDER_EXTENSION; Meso edge crosses other solid meso/meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2/ARMOR_SHOULDER_EXTENSION/TERRACE"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/SERVICE_CHANNEL/23",
+      "kind": "SERVICE_RECESS_FRAME",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2/ARMOR_SHOULDER_EXTENSION; Meso edge crosses other solid meso/meso-zone/citadel/shoulder--1/ARMOR_SHOULDER/2/ARMOR_SHOULDER_EXTENSION/TERRACE"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder--1/SERVICE_CHANNEL/23",
+      "kind": "SERVICE_RECESS_FRAME",
+      "candidate": 2,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/primary/SERVICE_CHANNEL/24",
+      "kind": "SERVICE_RECESS_FRAME",
+      "candidate": 0,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder-1/SERVICE_CHANNEL/25",
+      "kind": "MACHINERY_GALLERY",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Detail collision meso/meso-zone/citadel/shoulder-1/ARMOR_SHOULDER/3/ARMOR_SHOULDER_EXTENSION; Meso edge crosses other solid meso/meso-zone/citadel/shoulder-1/ARMOR_SHOULDER/3/ARMOR_SHOULDER_EXTENSION/TERRACE"
+    },
+    {
+      "zoneId": "meso-zone/citadel/shoulder-1/SERVICE_CHANNEL/25",
+      "kind": "MACHINERY_GALLERY",
+      "candidate": 1,
+      "status": "accepted",
+      "reason": "Thirteen measured contacts; parent inset only; existing openings, weapon envelopes, firing rays and kit access preserved"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246908,\"relief\":2.386245086836794,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.501685673990947,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.9983811200108346,\"relief\":-7.032711129507861,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.633377499999998,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.451567405415722,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.567007992569862,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-0-0\",\"parent\":\"citadel\",\"normalDot\":0.9983811200108346,\"relief\":-7.2008880825723605,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.633377499999998,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.5005591443499378,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246908,\"relief\":2.5273889398894527,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9609710946678364,\"relief\":-0.2808234375000152,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference thermal-citadel--1-housing; Detail collision meso/meso-zone/citadel/belt--1/SIDE_BELT/6/FLANK_ARMOR_BELT; Meso edge crosses other solid meso/meso-zone/citadel/belt--1/SIDE_BELT/6/FLANK_ARMOR_BELT/BELT_OVERLAP; Meso edge crosses other solid thermal-citadel--1-housing"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/26",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel--1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9609710946678354,\"relief\":2.352554062499983,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 0,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246908,\"relief\":2.386245086836794,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 1,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.501685673990947,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 2,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-4-0\",\"parent\":\"citadel\",\"normalDot\":0.9983811200108346,\"relief\":-7.032711129507861,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 3,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 4,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.633377499999998,\"height\":4.050000000000001}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 5,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.451567405415722,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 6,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.567007992569862,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 7,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"skin-citadel-4-0\",\"parent\":\"citadel\",\"normalDot\":0.9983811200108346,\"relief\":-7.2008880825723605,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 8,
+      "status": "omitted",
+      "reason": "Actual station patch is incomplete, occluded or overlaps itself"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 9,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9999999999999999,\"relief\":2.633377499999998,\"height\":3.24}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 10,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-fin-1\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246911,\"relief\":2.5005591443499378,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 11,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9993421612246908,\"relief\":2.5273889398894527,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 12,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9609710946678364,\"relief\":-0.2808234375000152,\"height\":2.6325000000000003}"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 13,
+      "status": "omitted",
+      "reason": "Other equipment/armor interference thermal-citadel-1-housing; Detail collision meso/meso-zone/citadel/belt-1/SIDE_BELT/7/FLANK_ARMOR_BELT; Meso edge crosses other solid thermal-citadel-1-housing; Meso edge crosses other solid meso/meso-zone/citadel/belt-1/SIDE_BELT/7/FLANK_ARMOR_BELT/BELT_OVERLAP"
+    },
+    {
+      "zoneId": "meso-zone/citadel/PROPULSION_ROOT/27",
+      "kind": "ENGINE_ROOT_TRANSITION",
+      "candidate": 14,
+      "status": "omitted",
+      "reason": "Unsupported footprint: {\"surface\":\"thermal-citadel-1-housing\",\"parent\":\"citadel\",\"normalDot\":0.9609710946678354,\"relief\":2.352554062499983,\"height\":2.6325000000000003}"
+    }
+  ],
+  "physicalJSONUnchanged": true,
+  "issues": [],
+  "reloadPixels": true,
+  "errors": [],
+  "captures": [
+    {
+      "name": "before-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-LEFT",
+      "stage": "COMPLETE",
+      "view": "LEFT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-LEFT",
+      "stage": "COMPLETE",
+      "view": "LEFT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-RIGHT",
+      "stage": "COMPLETE",
+      "view": "RIGHT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-RIGHT",
+      "stage": "COMPLETE",
+      "view": "RIGHT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-FRONT",
+      "stage": "COMPLETE",
+      "view": "FRONT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-FRONT",
+      "stage": "COMPLETE",
+      "view": "FRONT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-AFT",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-AFT",
+      "stage": "COMPLETE",
+      "view": "AFT",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "before-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 22,
+        "triangles": 18034
+      }
+    },
+    {
+      "name": "after-LOW-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "clay-TOP",
+      "stage": "COMPLETE",
+      "view": "TOP",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 17,
+        "triangles": 13972
+      }
+    },
+    {
+      "name": "clay-BOTTOM",
+      "stage": "COMPLETE",
+      "view": "BOTTOM",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 17,
+        "triangles": 13972
+      }
+    },
+    {
+      "name": "clay-ISOMETRIC",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 17,
+        "triangles": 13972
+      }
+    },
+    {
+      "name": "meso-only",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 450,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 3,
+        "triangles": 2586
+      }
+    },
+    {
+      "name": "before-close-citadel",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 66,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 15,
+        "triangles": 17294
+      }
+    },
+    {
+      "name": "after-close-citadel",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 66,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 18,
+        "triangles": 19880
+      }
+    },
+    {
+      "name": "before-close-barbette",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 57.06403610323639,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 15,
+        "triangles": 17294
+      }
+    },
+    {
+      "name": "after-close-barbette",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 57.06403610323639,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 18,
+        "triangles": 19880
+      }
+    },
+    {
+      "name": "before-close-gallery",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 57.003653542014845,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 15,
+        "triangles": 17294
+      }
+    },
+    {
+      "name": "after-close-gallery",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 57.003653542014845,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 18,
+        "triangles": 19880
+      }
+    },
+    {
+      "name": "before-close-flank",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 61.73636648531722,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 14,
+        "triangles": 17250
+      }
+    },
+    {
+      "name": "after-close-flank",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 61.73636648531722,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 17,
+        "triangles": 19836
+      }
+    },
+    {
+      "name": "before-close-ventral",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 75.83496103285322,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 15,
+        "triangles": 17294
+      }
+    },
+    {
+      "name": "after-close-ventral",
+      "stage": "COMPLETE",
+      "view": "LOW-ISOMETRIC",
+      "frameMeters": 75.83496103285322,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 18,
+        "triangles": 19880
+      }
+    },
+    {
+      "name": "detail-OFF",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 17,
+        "triangles": 13972
+      }
+    },
+    {
+      "name": "detail-LOW",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 21,
+        "triangles": 19280
+      }
+    },
+    {
+      "name": "detail-HIGH",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    },
+    {
+      "name": "detail-AUTO",
+      "stage": "COMPLETE",
+      "view": "ISOMETRIC",
+      "frameMeters": 360,
+      "projection": "orthographic",
+      "scale": "fixed",
+      "size": 900,
+      "diagnostics": {
+        "calls": 25,
+        "triangles": 20620
+      }
+    }
+  ]
+}

@@ -1,0 +1,1343 @@
+{
+  "baselineCommit": "5454dba41136622ca88b0e16916ac7c8ac786dee",
+  "total": 222,
+  "statuses": {
+    "released": 200,
+    "rejected": 22
+  },
+  "sameBaselineDecisions": true,
+  "cases": [
+    {
+      "experiment": "A",
+      "label": "XL aegis",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL aegis",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL aegis",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL aegis",
+      "seed": 41,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL vesper",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL vesper",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL vesper",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL vesper",
+      "seed": 41,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL forge",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL forge",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL forge",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL forge",
+      "seed": 41,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL serein",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL serein",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL serein",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "XL serein",
+      "seed": 41,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "MONOLITHIC/WEAPON_DOMINANT",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "MONOLITHIC/WEAPON_DOMINANT",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "SPINE_AND_MODULES/WEAPON_DOMINANT",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "SPINE_AND_MODULES/WEAPON_DOMINANT",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "SPINE_AND_MODULES/SPLIT_FRAME",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "SPINE_AND_MODULES/SPLIT_FRAME",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "HYBRID/WEAPON_DOMINANT",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "HYBRID/WEAPON_DOMINANT",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "HYBRID/SPLIT_FRAME",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "A",
+      "label": "HYBRID/SPLIT_FRAME",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Corvette",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Corvette",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Corvette",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Frigate",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Frigate",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Frigate",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Destroyer",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Destroyer",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Destroyer",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Cruiser",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Cruiser",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Cruiser",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battlecruiser",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battlecruiser",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battlecruiser",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battleship",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battleship",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Battleship",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Missile Ship",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Missile Ship",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Missile Ship",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Spinal Gun Ship",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Spinal Gun Ship",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Spinal Gun Ship",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Patrol Ship",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Patrol Ship",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "B",
+      "label": "Patrol Ship",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Light",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Light",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Standard",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Standard",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Heavy",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Heavy",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Superheavy",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 40m Superheavy",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Light",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Light",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Standard",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Standard",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Heavy",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Heavy",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Superheavy",
+      "seed": 7,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 100m Superheavy",
+      "seed": 23,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Standard",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Standard",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Heavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Heavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 200m Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Standard",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Standard",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Heavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Heavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 300m Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Standard",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Standard",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Heavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Heavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 500m Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Standard",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Standard",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Heavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Heavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "XL 600m Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 100m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 100m",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 100m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 200m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 200m",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 200m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 300m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 300m",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 300m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 500m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 500m",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 500m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 40m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 40m",
+      "seed": 11,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 40m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 600m",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 600m",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser 600m",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Light",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Standard",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Standard",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Standard",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Heavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Heavy",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Heavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Superheavy",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Corvette boundary 40",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Corvette boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Frigate boundary 40",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Frigate boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Destroyer boundary 40",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Destroyer boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser boundary 40",
+      "seed": 11,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "Cruiser boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Battlecruiser boundary 40",
+      "seed": 11,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "Battlecruiser boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Battleship boundary 40",
+      "seed": 11,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "Battleship boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Missile Ship boundary 40",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Missile Ship boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Spinal Gun Ship boundary 40",
+      "seed": 11,
+      "status": "rejected"
+    },
+    {
+      "experiment": "C",
+      "label": "Spinal Gun Ship boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Patrol Ship boundary 40",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "C",
+      "label": "Patrol Ship boundary 600",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "firepower=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "survivability=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "mobility=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "endurance=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "missile=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=0",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=0",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=0",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=50",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=50",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=50",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=100",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=100",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "D",
+      "label": "sensor=100",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Light",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Superheavy",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Cruiser all100 Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Light",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Superheavy",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Spinal Gun Ship all100 Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Light",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Light",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Light",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Superheavy",
+      "seed": 7,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Superheavy",
+      "seed": 11,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "Missile Ship all100 Superheavy",
+      "seed": 23,
+      "status": "released"
+    },
+    {
+      "experiment": "E",
+      "label": "forced unsupported axial architecture",
+      "seed": 11,
+      "status": "rejected"
+    }
+  ]
+}

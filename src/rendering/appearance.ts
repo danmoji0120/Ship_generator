@@ -56,6 +56,7 @@ export function kitPartAppearance(kit:DetailKitType,role:string):SurfaceAppearan
  return base;
 }
 export function functionalPartAppearance(role:string,material:string):SurfaceAppearance{
+ if(role.startsWith('MESO_'))return {material:/SERVICE_HEADER|SUPPLY_HAUNCH|SUPPLY_COVER|VENTRAL_WEB/.test(role)?'MECHANICAL_STRUCTURE':role==='MESO_RAISED_CREST'?'PRIMARY_ARMOR':'SECONDARY_ARMOR',pattern:'NONE'};
  if(role==='COMMAND_HOUSING')return{material:'PRIMARY_ARMOR',emissive:'BRIDGE_LIGHT',pattern:'WINDOW'};
  if(role==='PROTECTED_SENSOR')return{material:'FUNCTIONAL_SURFACE',emissive:'SENSOR_EMISSIVE',pattern:'LENS'};
  if(/OPEN_WEAPON_SHROUD|REINFORCED_MANTLET/.test(role))return{material:'MECHANICAL_STRUCTURE',pattern:'NONE'};

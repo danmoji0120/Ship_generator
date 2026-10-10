@@ -1,0 +1,228 @@
+{
+  "cases": 18,
+  "acceptedExamples": 0,
+  "errors": [],
+  "rows": [
+    {
+      "shipyardId": "vesper",
+      "length": 120,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 120,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 300,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 300,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 60,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 17,
+        "Actual station patch is incomplete, occluded or overlaps itself": 10,
+        "Other equipment/armor interference vertical-drive--1/belt--1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive--1/belt--1": 1,
+        "Other equipment/armor interference vertical-drive--1/belt-1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive--1/belt-1": 1,
+        "Other equipment/armor interference vertical-drive-1/belt--1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive-1/belt--1": 1
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 600,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 25,
+        "Unsupported footprint": 35,
+        "No exposed coherent parent surface": 30,
+        "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Intrusion deeper than measured station inset vertical-drive--1/belt--1": 2,
+        "Station patch has holes or disconnected boundaries": 10,
+        "Other equipment/armor interference vertical-drive--1/belt--1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER; Meso edge crosses other solid vertical-drive--1/belt--1": 2,
+        "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-port/RCS_CLUSTER": 2,
+        "Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER; Intrusion deeper than measured station inset vertical-drive--1/belt-1": 1,
+        "Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER": 2,
+        "Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service--1/COOLANT_PIPE; Intrusion deeper than measured station inset vertical-drive-1/belt--1": 1,
+        "Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service--1/COOLANT_PIPE": 4,
+        "Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service-1/COOLANT_PIPE; Intrusion deeper than measured station inset vertical-drive-1/belt-1": 2,
+        "Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service-1/COOLANT_PIPE": 4
+      }
+    },
+    {
+      "shipyardId": "vesper",
+      "length": 600,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 21,
+        "Unsupported footprint": 41,
+        "No exposed coherent parent surface": 30,
+        "Station patch has holes or disconnected boundaries": 25,
+        "Other equipment/armor interference vertical-drive--1/belt-1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-seat; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER-nozzle11; Detail collision detail/vertical-drive--1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service-1/COOLANT_PIPE; Detail collision detail/vertical-drive--1/rcs-0.81/RCS_CLUSTER; Meso edge crosses other solid vertical-drive--1/belt-1": 1,
+        "Other equipment/armor interference vertical-drive-1/belt--1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service--1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive-1/belt--1": 1,
+        "Other equipment/armor interference vertical-drive-1/belt-1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/VENT_LOUVER-blade5; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive-1/engine-service-1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive-1/engine-service-1/VENT_LOUVER; Detail collision detail/vertical-drive-1/engine-service-1/COOLANT_PIPE; Meso edge crosses other solid vertical-drive-1/belt-1": 1
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 120,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 120,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 78,
+        "No exposed coherent parent surface": 42
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 300,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 300,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 90,
+        "No exposed coherent parent surface": 30
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 600,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 30,
+        "No finite planar support region": 3
+      }
+    },
+    {
+      "shipyardId": "forge",
+      "length": 600,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 87,
+        "No exposed coherent parent surface": 33
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 120,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 120,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 300,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Unsupported footprint": 60,
+        "Actual station patch is incomplete, occluded or overlaps itself": 25,
+        "Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-seat; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle-11; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle1-1; Other equipment/armor interference detail/lateral-drive--1/rcs-port/RCS_CLUSTER-nozzle11; Detail collision detail/lateral-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/lateral-drive--1/engine-service--1/COOLANT_PIPE; Detail collision detail/lateral-drive--1/rcs-port/RCS_CLUSTER; Detail collision meso/meso-zone/lateral-drive--1/belt--1/SIDE_BELT/17/FLANK_ARMOR_BELT; Earlier detail access blocked detail/lateral-drive--1/rcs-port/RCS_CLUSTER; Meso edge crosses other solid meso/meso-zone/lateral-drive--1/belt--1/SIDE_BELT/17/FLANK_ARMOR_BELT/BELT_OVERLAP; Meso edge crosses other solid meso/meso-zone/lateral-drive--1/belt--1/SIDE_BELT/17/FLANK_ARMOR_BELT/BELT_JUNCTION": 1,
+        "No exposed coherent parent surface": 30,
+        "Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-seat; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade2; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade3; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/VENT_LOUVER-blade4; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run0; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-run1; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp-1.0499999999999998; Other equipment/armor interference detail/vertical-drive--1/engine-service--1/COOLANT_PIPE-clamp1.0499999999999998; Detail collision detail/vertical-drive--1/engine-service--1/VENT_LOUVER; Detail collision detail/vertical-drive--1/engine-service--1/COOLANT_PIPE; Intrusion deeper than measured station inset skin-vertical-drive--1-0-0": 1,
+        "No finite planar support region": 3
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 300,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 35,
+        "Unsupported footprint": 53,
+        "Station patch has holes or disconnected boundaries": 2,
+        "No exposed coherent parent surface": 30
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 600,
+      "seed": 0,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Meso visual hierarchy budget; retain broad empty armor": 120
+      }
+    },
+    {
+      "shipyardId": "serein",
+      "length": 600,
+      "seed": 13,
+      "accepted": [],
+      "rejection": null,
+      "omissionClasses": {
+        "Actual station patch is incomplete, occluded or overlaps itself": 42,
+        "Unsupported footprint": 48,
+        "No exposed coherent parent surface": 30
+      }
+    }
+  ]
+}
