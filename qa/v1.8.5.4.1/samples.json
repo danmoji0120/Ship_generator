@@ -1,0 +1,392 @@
+[
+  {
+    "seed": 11,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "length": 300,
+    "role": "Cruiser",
+    "oldGenerationMs": 5420.701351,
+    "newPlanningMs": 613.7189559999997,
+    "before": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 47,
+        "M": 18,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 33,
+        "FIXED": 15,
+        "MISSILE": 17,
+        "SPINAL": 0,
+        "UTILITY": 13,
+        "DEFENSIVE": 35
+      },
+      "byRegion": {
+        "TOP": 28,
+        "BOTTOM": 27,
+        "PORT": 6,
+        "STARBOARD": 5,
+        "FORE": 2,
+        "AFT": 0
+      }
+    },
+    "after": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 39,
+        "M": 24,
+        "L": 5,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 59,
+        "FIXED": 22,
+        "MISSILE": 24,
+        "SPINAL": 0,
+        "UTILITY": 32,
+        "DEFENSIVE": 61
+      },
+      "byRegion": {
+        "TOP": 26,
+        "BOTTOM": 32,
+        "PORT": 4,
+        "STARBOARD": 4,
+        "FORE": 2,
+        "AFT": 0
+      }
+    },
+    "pairs": 24,
+    "issues": []
+  },
+  {
+    "seed": 13,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "length": 300,
+    "role": "Cruiser",
+    "oldGenerationMs": 5043.39589,
+    "newPlanningMs": 622.7603429999999,
+    "before": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 48,
+        "M": 18,
+        "L": 2,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 32,
+        "FIXED": 15,
+        "MISSILE": 17,
+        "SPINAL": 0,
+        "UTILITY": 13,
+        "DEFENSIVE": 34
+      },
+      "byRegion": {
+        "TOP": 24,
+        "BOTTOM": 26,
+        "PORT": 7,
+        "STARBOARD": 7,
+        "FORE": 1,
+        "AFT": 3
+      }
+    },
+    "after": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 39,
+        "M": 27,
+        "L": 2,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 59,
+        "FIXED": 22,
+        "MISSILE": 24,
+        "SPINAL": 0,
+        "UTILITY": 32,
+        "DEFENSIVE": 61
+      },
+      "byRegion": {
+        "TOP": 23,
+        "BOTTOM": 23,
+        "PORT": 9,
+        "STARBOARD": 9,
+        "FORE": 1,
+        "AFT": 3
+      }
+    },
+    "pairs": 23,
+    "issues": []
+  },
+  {
+    "seed": 23,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "length": 300,
+    "role": "Cruiser",
+    "oldGenerationMs": 5819.544943999999,
+    "newPlanningMs": 1030.859364,
+    "before": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 50,
+        "M": 15,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 33,
+        "FIXED": 15,
+        "MISSILE": 17,
+        "SPINAL": 0,
+        "UTILITY": 13,
+        "DEFENSIVE": 35
+      },
+      "byRegion": {
+        "TOP": 22,
+        "BOTTOM": 37,
+        "PORT": 3,
+        "STARBOARD": 3,
+        "FORE": 2,
+        "AFT": 1
+      }
+    },
+    "after": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 42,
+        "M": 23,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 59,
+        "FIXED": 19,
+        "MISSILE": 21,
+        "SPINAL": 0,
+        "UTILITY": 35,
+        "DEFENSIVE": 61
+      },
+      "byRegion": {
+        "TOP": 34,
+        "BOTTOM": 24,
+        "PORT": 4,
+        "STARBOARD": 4,
+        "FORE": 2,
+        "AFT": 0
+      }
+    },
+    "pairs": 24,
+    "issues": []
+  },
+  {
+    "seed": 41,
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "length": 300,
+    "role": "Cruiser",
+    "oldGenerationMs": 4075.7739550000006,
+    "newPlanningMs": 932.3542750000015,
+    "before": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 48,
+        "M": 16,
+        "L": 4,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 34,
+        "FIXED": 16,
+        "MISSILE": 18,
+        "SPINAL": 0,
+        "UTILITY": 12,
+        "DEFENSIVE": 36
+      },
+      "byRegion": {
+        "TOP": 20,
+        "BOTTOM": 21,
+        "PORT": 11,
+        "STARBOARD": 11,
+        "FORE": 1,
+        "AFT": 4
+      }
+    },
+    "after": {
+      "total": 68,
+      "empty": 54,
+      "occupied": 14,
+      "bySize": {
+        "S": 46,
+        "M": 18,
+        "L": 4,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 59,
+        "FIXED": 15,
+        "MISSILE": 17,
+        "SPINAL": 0,
+        "UTILITY": 39,
+        "DEFENSIVE": 61
+      },
+      "byRegion": {
+        "TOP": 20,
+        "BOTTOM": 21,
+        "PORT": 13,
+        "STARBOARD": 13,
+        "FORE": 1,
+        "AFT": 0
+      }
+    },
+    "pairs": 26,
+    "issues": []
+  },
+  {
+    "seed": 7,
+    "architecture": "TRUSS_POD",
+    "family": "SPLIT_FRAME",
+    "length": 300,
+    "role": "Frigate",
+    "oldGenerationMs": 12036.575789999999,
+    "newPlanningMs": 757.9228660000008,
+    "before": {
+      "total": 56,
+      "empty": 39,
+      "occupied": 17,
+      "bySize": {
+        "S": 37,
+        "M": 16,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 25,
+        "FIXED": 12,
+        "MISSILE": 14,
+        "SPINAL": 0,
+        "UTILITY": 9,
+        "DEFENSIVE": 32
+      },
+      "byRegion": {
+        "TOP": 25,
+        "BOTTOM": 12,
+        "PORT": 5,
+        "STARBOARD": 3,
+        "FORE": 9,
+        "AFT": 2
+      }
+    },
+    "after": {
+      "total": 56,
+      "empty": 39,
+      "occupied": 17,
+      "bySize": {
+        "S": 27,
+        "M": 26,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 43,
+        "FIXED": 23,
+        "MISSILE": 25,
+        "SPINAL": 0,
+        "UTILITY": 16,
+        "DEFENSIVE": 50
+      },
+      "byRegion": {
+        "TOP": 24,
+        "BOTTOM": 14,
+        "PORT": 4,
+        "STARBOARD": 4,
+        "FORE": 9,
+        "AFT": 1
+      }
+    },
+    "pairs": 18,
+    "issues": []
+  },
+  {
+    "seed": 11,
+    "architecture": "TWIN_HULL",
+    "family": "WIDE_CARRIER",
+    "length": 400,
+    "role": "Frigate",
+    "oldGenerationMs": 5543.925535000002,
+    "newPlanningMs": 1472.485756999995,
+    "before": {
+      "total": 79,
+      "empty": 60,
+      "occupied": 19,
+      "bySize": {
+        "S": 54,
+        "M": 22,
+        "L": 3,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 36,
+        "FIXED": 17,
+        "MISSILE": 19,
+        "SPINAL": 0,
+        "UTILITY": 14,
+        "DEFENSIVE": 45
+      },
+      "byRegion": {
+        "TOP": 11,
+        "BOTTOM": 20,
+        "PORT": 25,
+        "STARBOARD": 15,
+        "FORE": 5,
+        "AFT": 3
+      }
+    },
+    "after": {
+      "total": 79,
+      "empty": 60,
+      "occupied": 19,
+      "bySize": {
+        "S": 43,
+        "M": 27,
+        "L": 9,
+        "XL": 0
+      },
+      "byType": {
+        "TURRET": 64,
+        "FIXED": 32,
+        "MISSILE": 34,
+        "SPINAL": 0,
+        "UTILITY": 28,
+        "DEFENSIVE": 73
+      },
+      "byRegion": {
+        "TOP": 14,
+        "BOTTOM": 31,
+        "PORT": 14,
+        "STARBOARD": 14,
+        "FORE": 3,
+        "AFT": 3
+      }
+    },
+    "pairs": 28,
+    "issues": []
+  }
+]

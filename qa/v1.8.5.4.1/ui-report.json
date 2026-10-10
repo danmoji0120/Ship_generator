@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "name": "Production bundle without DEV helpers",
+      "passed": true
+    },
+    {
+      "name": "Patch Blueprint imported without regeneration",
+      "passed": true
+    },
+    {
+      "name": "Selected slot exposes Pair / Battery / Zone",
+      "passed": true
+    },
+    {
+      "name": "Hardpoints is render-only",
+      "passed": true
+    },
+    {
+      "name": "Hardpoint Layout Only is render-only",
+      "passed": true
+    },
+    {
+      "name": "Normal is render-only",
+      "passed": true
+    },
+    {
+      "name": "Export canonical JSON unchanged",
+      "passed": true
+    },
+    {
+      "name": "Import and stored Reload preserve layout",
+      "passed": true
+    },
+    {
+      "name": "V1.8.5.4 replay stays historical",
+      "passed": true
+    },
+    {
+      "name": "Production Regenerate uses new default",
+      "passed": true
+    },
+    {
+      "name": "Console errors zero",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

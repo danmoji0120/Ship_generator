@@ -1,3 +1,4 @@
+import {addModularHardpoints as addLegacyModularHardpoints} from "./hardpoint-system/legacy-planner";
 import {addModularHardpoints,normalizeHardpointOrder} from "./hardpoint-system/planner";
 import {validateModularHardpoints} from "./hardpoint-system/validate";
 import {addMesoStructures as addLegacyMesoStructures} from './meso/legacy-build';
@@ -38,7 +39,7 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4";
+    version?: "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1";
     productionBase?: boolean;
     requirementPlan?: RequirementPlan;
     minimumMacroCandidate?: number;
@@ -47,11 +48,11 @@ export function generateBlueprint(
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if((!qaOptions?.version)||qaOptions?.version==='1.8.4.2'||qaOptions?.version==='1.8.5'||qaOptions?.version==='1.8.5.1'||qaOptions?.version==='1.8.5.2'||qaOptions?.version==='1.8.5.3'||qaOptions?.version==='1.8.5.3.1'||qaOptions?.version==='1.8.5.4'){
+  if((!qaOptions?.version)||qaOptions?.version==='1.8.4.2'||qaOptions?.version==='1.8.5'||qaOptions?.version==='1.8.5.1'||qaOptions?.version==='1.8.5.2'||qaOptions?.version==='1.8.5.3'||qaOptions?.version==='1.8.5.3.1'||(qaOptions?.version==='1.8.5.4'||qaOptions?.version==='1.8.5.4.1')){
     // Normalize/validate before planning; historical generation remains separately callable.
     const order=structuredClone(input),normalizedSeed=normalizeSeed(seed);
     if(!ROLES.includes(order.role)||!['Light','Standard','Heavy','Superheavy'].includes(order.massClass)||!Number.isFinite(order.length)||order.length<40||order.length>600||PRIORITIES.some(k=>!Number.isFinite(order.priorities[k])||order.priorities[k]<0||order.priorities[k]>100))throw Error('Invalid Ship Order');
-    const modular=!qaOptions?.version||qaOptions.version==='1.8.5.4';if(modular)normalizeHardpointOrder(order);
+    const modular=!qaOptions?.version||(qaOptions.version==='1.8.5.4'||qaOptions.version==='1.8.5.4.1');if(modular)normalizeHardpointOrder(order);
     const plan=planRequirements(order),candidates=requirementCandidates(order,normalizedSeed,plan,qaOptions);
     if(!candidates.length)throw new DesignRejection(plan.spinal?['REQUIRED_XL_STRUCTURE_UNSUPPORTED']:['REQUIRED_ARCHITECTURE_FAMILY_UNSUPPORTED'],plan.rejectedCandidates,'No compatible requirements-first Architecture/Family candidate');
     for(const [index,c] of candidates.entries())try{
@@ -64,11 +65,11 @@ export function generateBlueprint(
       if(qaOptions?.version==='1.8.4.2')return released;
       const detailed=addExteriorDetails(released);
       if(qaOptions?.version==='1.8.5')return detailed;
-      const modern=!qaOptions?.version||qaOptions.version==='1.8.5.3'||qaOptions.version==='1.8.5.3.1'||qaOptions.version==='1.8.5.4';
+      const modern=!qaOptions?.version||qaOptions.version==='1.8.5.3'||qaOptions.version==='1.8.5.3.1'||(qaOptions.version==='1.8.5.4'||qaOptions.version==='1.8.5.4.1');
       const structured=modern?(qaOptions?.version==='1.8.5.3'?addLegacyMesoStructures(detailed):addMesoStructures(detailed)):detailed;
       const appeared=applyMaterialAppearance(structured);
       if(qaOptions?.version==='1.8.5.1')return appeared;
-      const result=applySurfaceAppearance(appeared);if(modern)result.generatorVersion=qaOptions?.version==='1.8.5.3'?'1.8.5.3':'1.8.5.3.1';if(modular){addModularHardpoints(result);const errors=validateModularHardpoints(result);if(errors.length)throw Error(errors.join('; '));}return result;
+      const result=applySurfaceAppearance(appeared);if(modern)result.generatorVersion=qaOptions?.version==='1.8.5.3'?'1.8.5.3':'1.8.5.3.1';if(modular){(qaOptions?.version==='1.8.5.4'?addLegacyModularHardpoints:addModularHardpoints)(result);const errors=validateModularHardpoints(result);if(errors.length)throw Error(errors.join('; '));}return result;
     }catch(e){if(e instanceof DesignRejection&&e.codes.includes('REQUIRED_HARDPOINT_CAPACITY_UNAVAILABLE'))throw e;const reason=(e as Error).message;plan.rejectedCandidates.push({candidate:index,architecture:c.architecture,family:c.family,stage:'physical-candidate',codes:[...new Set(reason.match(/REQUIRED_[A-Z_]+/g)??['REQUIRED_PHYSICAL_DESIGN_INVALID'])],reasons:[reason]});}
     throw new DesignRejection(plan.rejectedCandidates.flatMap(a=>a.codes),plan.rejectedCandidates,'No requirements-compliant physical candidate: '+JSON.stringify(plan.rejectedCandidates));
   }

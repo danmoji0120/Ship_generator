@@ -1,3 +1,9 @@
+## V1.8.5.4.1 — Large-first symmetric hardpoint layout
+
+Empty interface capacity now searches XL → L → M → S after mandatory slots and installed equipment. Real armor row candidates, atomic mirrored pairs and contiguous battery metadata replace fixed L/M quotas. Normal geometry and existing installed weapons remain unchanged. SPARSE/STANDARD/DENSE targets and all physical clearance/support checks remain in force. Explicit V1.8.5.4 generation and saved Blueprint replay are preserved.
+
+[Design contract](docs/LARGE_FIRST_HARDPOINTS.md) · [Focused QA and comparisons](qa/v1.8.5.4.1/QA.md). Only related tests are run for this patch; the full test suite is intentionally excluded.
+
 # Procedural Shipyard V1.8.5.3.1 — Engine Root & Sparse Architecture Refinement
 
 일반 주문서의 기본 생성기는 **V1.8.5.3.1**입니다. 무장과 기존 외장 Kit 이후에 실제 표면에 부착되는 Meso 구조를 생성하고, 최종 노출 면의 질감·마킹을 계획합니다. V1.8.4.2 Requirements-first 출고 설계를 그대로 완성한 뒤 기능 구역별 외장 디테일을 추가합니다. V1.8.4.1 Design Doctrine 위에 선체 이전 필수 요구사항 계획·공간 예약·최종 출고 계약을 적용합니다. 주문서·조선소·Seed에서 새 Hull을 만든 뒤, 대형 상부 장갑층·측면 Belt·Ventral Keel, 선택적인 함교·추진 보호·정비 설비, 실제 장갑 표면의 상하좌우 무장을 생성합니다. 저장된 Seed 7이나 검토용 Blueprint를 읽지 않습니다. 과거 저장 설계는 생성 규칙을 소급 적용하지 않고 원래 Geometry를 재생합니다.

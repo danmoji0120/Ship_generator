@@ -1,0 +1,15 @@
+{
+  "relatedTests": 13,
+  "relatedTestsPassed": 13,
+  "files": [
+    "tests/modular-hardpoints.test.ts",
+    "tests/large-first-layout.test.ts",
+    "tests/large-first-samples.test.ts"
+  ],
+  "additionalDirectionalRerun": 4,
+  "typecheck": "PASS",
+  "productionBuild": "PASS",
+  "fullSuiteRun": false,
+  "fullHistoryPixelsRun": false,
+  "controlMatrixRun": false
+}

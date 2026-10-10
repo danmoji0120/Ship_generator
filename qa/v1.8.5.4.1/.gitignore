@@ -1,0 +1,5 @@
+# Full generated Blueprint and raw captures remain local; compact review sheets are tracked.
+*.png
+1.8.5.4.json
+1.8.5.4.1.json
+export.json

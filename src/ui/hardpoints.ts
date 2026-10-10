@@ -159,7 +159,7 @@ export function showHardpointInspector(b: AnyShipBlueprint) {
 }
 function showSelected(h?: Hardpoint) {
   el("hardpoint-selection-info").textContent = h
-    ? `${h.id} / ${h.modular?.state}\n${h.size} · ${h.modular?.mountTypes.join("/")} · ${h.modular?.region}\nParent ${h.parentId}\nPosition ${[h.position.x, h.position.y, h.position.z]
+    ? `${h.id} / ${h.modular?.state}\n${h.size} · ${h.modular?.mountTypes.join("/")} · ${h.modular?.region}\nZone ${h.modular?.zoneId ?? "Historical"}\nPair ${h.modular?.pairId ?? "—"} · Battery ${h.modular?.batteryGroupId ?? "—"}\n${h.modular?.symmetryReason ?? ""}\nParent ${h.parentId}\nPosition ${[h.position.x, h.position.y, h.position.z]
         .map((v) => v.toFixed(2))
         .join(", ")} m\nNormal ${[h.normal.x, h.normal.y, h.normal.z]
         .map((v) => v.toFixed(3))

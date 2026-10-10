@@ -1,0 +1,9 @@
+{
+  "display": "QA render-only TOP region filter; canonical JSON unchanged",
+  "markerPick": {
+    "expected": "slot-22",
+    "selected": "slot-22",
+    "method": "Actual canvas pointer → InstancedMesh raycast → ShipViewer callback"
+  },
+  "errors": []
+}

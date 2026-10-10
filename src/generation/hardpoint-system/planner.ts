@@ -404,7 +404,7 @@ export function slotPhysicalIssues(
   }
   return errors;
 }
-function* candidates(
+function* legacyCandidates(
   b: ShipBlueprint,
   size: MountSize,
   density: ModularHardpointPlan["density"],
@@ -468,6 +468,42 @@ function* candidates(
   });
   for (let i = 0; lists.some((xs) => i < xs.length); i++)
     for (const xs of lists) if (xs[i]) yield xs[i];
+}
+/** Ship-local bilateral X axis and longitudinal -Z are the existing Hull/mountFrame contract.
+ * Rows derive from each real armor solid; bounds propose hints, never prove support. */
+function* batteryCandidates(b:ShipBlueprint,size:MountSize,density:ModularHardpointPlan["density"],env:ReturnType<typeof slotEnvironment>){
+ const s=slotStandard(size,b.order.length), gap={SPARSE:1.7,STANDARD:1.25,DENSE:1.08}[density];
+ const dx=s.envelope.width*gap,dz=s.envelope.length*gap;
+ const seen=new Set<string>();
+ const surfaces=[...env.surfaces].sort((a,c)=>((c.box.max.x-c.box.min.x)*(c.box.max.z-c.box.min.z))-((a.box.max.x-a.box.min.x)*(a.box.max.z-a.box.min.z)) || a.id.localeCompare(c.id));
+ const lists=surfaces.map(surface=>{
+  const out:{hint:Vec3;region:SlotRegion;zoneId:string;batteryId:string}[]=[];
+  const box=surface.box;
+  const rows=Math.max(1,Math.floor((box.max.z-box.min.z)/dz));
+  for(const region of ["TOP","BOTTOM","PORT","STARBOARD"] as const){
+   if(region==="STARBOARD")continue; // pairs are resolved atomically from port
+   const dorsal=region==="TOP"||region==="BOTTOM";
+   const lo=dorsal?box.min.x:box.min.y,hi=dorsal?box.max.x:box.max.y;
+   const cols=Math.max(1,Math.floor((hi-lo)/dx));
+   for(let j=0;j<cols;j++){
+    const lateral=cols===1?(lo+hi)/2:lo+(j+.5)*(hi-lo)/cols;
+    if(dorsal&&lateral>1e-5)continue;
+    const zoneId=`${surface.structureId}/${region}/${Math.abs(lateral)<1e-5?"CENTERLINE":"BATTERY"}`;
+    for(let i=0;i<rows;i++){
+     const z=box.min.z+(i+.5)*(box.max.z-box.min.z)/rows;
+     const hint={x:dorsal?lateral:(box.min.x+box.max.x)/2,y:dorsal?(box.min.y+box.max.y)/2:lateral,z};
+     out.push({hint,region,zoneId,batteryId:`${surface.id}/${region}/${size}/row-${j}`});
+    }
+   }
+  }
+  const rowGroups=new Map<string,typeof out>();
+  for(const c of out)rowGroups.set(c.batteryId,[...(rowGroups.get(c.batteryId)??[]),c]);
+  return [...rowGroups.values()];
+ }).flat();
+ // Bounded three-station row blocks preserve battery continuity, then give other
+ // surface/region rows their turn instead of exhausting one host.
+ for(let i=0;lists.some(xs=>i<xs.length);i+=3)for(const xs of lists)for(const c of xs.slice(i,i+3)){const k=[c.region,c.hint.x,c.hint.y,c.hint.z].join('/');if(!seen.has(k)){seen.add(k);yield c;}}
+ for(const c of legacyCandidates(b,size,density))yield {...c,zoneId:`${c.region}/RESIDUAL`,batteryId:`${c.region}/${size}/RESIDUAL`};
 }
 export function fulfillRequests(b: ShipBlueprint) {
   const slots = b.hardpoints.filter((h) => h.modular),
@@ -591,7 +627,7 @@ export function addModularHardpoints(b: ShipBlueprint) {
     ),
   );
   const plan: ModularHardpointPlan = {
-    version: "1.8.5.4",
+    version: "1.8.5.4.1",
     density,
     target,
     limit: SLOT_LIMIT,
@@ -685,135 +721,82 @@ export function addModularHardpoints(b: ShipBlueprint) {
     plan.diagnostics.rejections[reason] =
       (plan.diagnostics.rejections[reason] ?? 0) + 1;
   };
-  const pools = new Map<MountSize, ReturnType<typeof candidates>>(),
-    examined = new Set<string>();
+  const examined = new Set<string>();
   function place(size: MountSize, wanted: number, request?: HardpointRequest) {
     if (wanted <= 0) return 0;
-    let adopted = 0,
-      pool = request ? candidates(b, size, density) : pools.get(size);
-    if (!pool) {
-      pool = candidates(b, size, density);
-      pools.set(size, pool);
-    }
-    let attempts = 0;
-    for (const c of pool) {
-      if (
-        adopted >= wanted ||
-        b.hardpoints.length >= SLOT_LIMIT ||
-        plan.diagnostics.candidates >= 18000 ||
-        attempts++ >= 6000
-      )
-        break;
-      if (request && request.region && request.region !== c.region) continue;
-      const key = [
-        size,
-        c.region,
-        c.hint.x,
-        c.hint.y,
-        c.hint.z,
-        request?.type ?? "auto",
-      ].join("/");
+    const passStart=plan.diagnostics.candidates;
+    let adopted = 0;
+    for (const c of batteryCandidates(b, size, density, env)) {
+      if (adopted >= wanted || b.hardpoints.length >= SLOT_LIMIT || plan.diagnostics.candidates >= 18000) break;
+      if (request?.region && request.region !== c.region) continue;
+      const key = [size,c.region,c.hint.x,c.hint.y,c.hint.z,request?.id ?? "auto"].join("/");
       if (examined.has(key)) continue;
       examined.add(key);
       plan.diagnostics.candidates++;
       try {
-        const r = surfaceSlot(b, c.hint, c.region, size, env),
-          m = r.slot;
-        const autoTypes: ModularMountType[] =
-          size === "XL" || size === "L"
-            ? ["TURRET", "FIXED", "MISSILE", "DEFENSIVE"]
-            : b.hardpoints.length % 4 === 0
-              ? ["UTILITY"]
-              : b.hardpoints.length % 3 === 0 || b.role === "Missile Ship"
-                ? ["MISSILE", "FIXED"]
-                : ["TURRET", "DEFENSIVE"];
-        m.mountTypes = request ? [request.type] : autoTypes;
-        const h: Hardpoint = {
-          id: `slot-${b.hardpoints.length}`,
-          type: m.mountTypes.includes("UTILITY")
-            ? "Utility"
-            : m.mountTypes.includes("MISSILE") &&
-                !m.mountTypes.includes("TURRET")
-              ? "Missile"
-              : size === "S"
-                ? "Small Turret"
-                : size === "M"
-                  ? "Medium Turret"
-                  : "Large Turret",
-          size,
-          position: r.position,
-          normal: m.frame.normal,
-          parentId: r.parentId,
-          radius: m.footprint.width / 2,
-          allowedCategories: [...m.mountTypes],
-          modular: m,
-        };
-        if (request && !matchesRequest(h, request)) {
-          bad("REQUEST_REGION_PARENT_DIRECTION");
-          continue;
+        const first = surfaceSlot(b,c.hint,c.region,size,env);
+        const reflected = {...c.hint,x:-c.hint.x};
+        const opposite = c.region === "PORT" ? "STARBOARD" : c.region === "STARBOARD" ? "PORT" : c.region;
+        const centered = Math.abs(first.position.x) < 1e-5;
+        const mirrorHit = centered ? undefined : surfaceRay(env.surfaces,reflected,DIRECTIONS[opposite]);
+        const symmetric = !centered && mirrorHit && Math.abs(mirrorHit.position.y-first.slot.contacts[8].position.y)<0.05 && Math.abs(mirrorHit.position.z-first.slot.contacts[8].position.z)<0.05;
+        const resolved = [first];
+        if (symmetric && !request?.parentId && (!request?.direction || Math.abs(request.direction.x)<1e-5) && (!request?.region || request.region===opposite)) {
+          if ((!request && wanted-adopted < 2) || b.hardpoints.length+2>SLOT_LIMIT) continue;
+          const mate = surfaceSlot(b,reflected,opposite,size,env);
+          if (Math.abs(mate.position.x+first.position.x)>0.05 || Math.abs(mate.position.y-first.position.y)>0.05 || Math.abs(mate.position.z-first.position.z)>0.05 || Math.abs(mate.slot.frame.normal.x+first.slot.frame.normal.x)>1e-4 || Math.abs(mate.slot.frame.normal.y-first.slot.frame.normal.y)>1e-4 || Math.abs(mate.slot.frame.normal.z-first.slot.frame.normal.z)>1e-4) throw Error("ASYMMETRIC_SUPPORT_FRAME");
+          resolved.push(mate);
+        } else if (!centered && symmetric && !request) continue;
+        const pending: Hardpoint[] = [];
+        const hostAdds = new Map<string,number>();
+        for (const r of resolved) {
+          const m=r.slot;
+          m.mountTypes=request ? [request.type] : size === "S" ? ["TURRET","DEFENSIVE","UTILITY"] : ["TURRET","FIXED","MISSILE","DEFENSIVE"];
+          m.zoneId=`${r.parentId}/${m.region}/${c.zoneId.endsWith("RESIDUAL")?"RESIDUAL":Math.abs(r.position.x)<1e-5?"CENTERLINE":"BATTERY"}`;
+          m.batteryGroupId=c.zoneId.endsWith("RESIDUAL") ? undefined : c.batteryId;
+          m.pairId=resolved.length===2 ? `pair-${b.hardpoints.length}` : undefined;
+          m.symmetryReason=centered ? "CENTERLINE" : resolved.length===2 ? "BILATERAL_VERIFIED" : request ? "EXPLICIT_REQUEST_CONSTRAINT" : "NO_CORRESPONDING_EXPOSED_SURFACE";
+          const h:Hardpoint={id:`slot-${b.hardpoints.length+pending.length}`,type:request?.type==="UTILITY" ? "Utility" : size==="S" ? "Small Turret" : size==="M" ? "Medium Turret" : "Large Turret",size,position:r.position,normal:m.frame.normal,parentId:r.parentId,radius:m.footprint.width/2,allowedCategories:[...m.mountTypes],modular:m};
+          if(request && !matchesRequest(h,request)) throw Error("REQUEST_REGION_PARENT_DIRECTION");
+          const total= (hostAdds.get(h.parentId)??0)+m.internalVolumeM3;
+          hostAdds.set(h.parentId,total);
+          if(!budget.byHost[h.parentId] || budget.byHost[h.parentId].reservedM3+total>budget.byHost[h.parentId].availableM3+1e-6) throw Error("SUPPORT_ALLOCATION_EXHAUSTED");
+          if(external.query(m.envelope).some(a=>boxesOverlap(a,m.envelope)) || internal.query(m.internal!).some(a=>boxesOverlap(a,m.internal!)) || pending.some(a=>boxesOverlap(a.modular!.envelope,m.envelope)||boxesOverlap(a.modular!.internal!,m.internal!))) throw Error("SLOT_ORIENTED_ENVELOPE_OVERLAP");
+          const issues=slotPhysicalIssues(b,m,env);
+          if(issues.length) throw Error(issues[0]);
+          pending.push(h);
         }
-        const host = budget.byHost[h.parentId];
-        if (
-          !host ||
-          host.reservedM3 + m.internalVolumeM3 > host.availableM3 + 1e-6 ||
-          budget.reservedM3 + m.internalVolumeM3 > budget.availableM3 + 1e-6
-        ) {
-          bad("SUPPORT_ALLOCATION_EXHAUSTED");
-          continue;
-        }
-        if (
-          external.query(m.envelope).some((a) => boxesOverlap(a, m.envelope)) ||
-          internal.query(m.internal!).some((a) => boxesOverlap(a, m.internal!))
-        ) {
-          bad("SLOT_ORIENTED_ENVELOPE_OVERLAP");
-          continue;
-        }
-        const issues = slotPhysicalIssues(b, m, env);
-        if (issues.length) {
-          issues.forEach(bad);
-          continue;
-        }
-        b.hardpoints.push(h);
-        external.add(m.envelope);
-        internal.add(m.internal!);
-        host.reservedM3 += m.internalVolumeM3;
-        budget.reservedM3 += m.internalVolumeM3;
-        adopted++;
-      } catch (e) {
-        bad((e as Error).message);
-      }
+        const volume=pending.reduce((n,h)=>n+h.modular!.internalVolumeM3,0);
+        if(budget.reservedM3+volume>budget.availableM3+1e-6) throw Error("SUPPORT_ALLOCATION_EXHAUSTED");
+        // Atomic pair: no reservations are mutated until every member is valid.
+        for(const h of pending){b.hardpoints.push(h);external.add(h.modular!.envelope);internal.add(h.modular!.internal!);budget.byHost[h.parentId].reservedM3+=h.modular!.internalVolumeM3;budget.reservedM3+=h.modular!.internalVolumeM3;}
+        adopted+=pending.length;
+      } catch(e){bad((e as Error).message);}
     }
+    (plan.diagnostics.passes??=[]).push({size,phase:request?(request.mandatory?"REQUIRED":"PREFERRED"):"AUTOMATIC",candidates:plan.diagnostics.candidates-passStart,accepted:adopted});
     return adopted;
   }
-  const requests = [...(b.order.hardpointRequests ?? [])].sort(
-    (a, c) =>
-      Number(c.mandatory) - Number(a.mandatory) ||
-      c.priority - a.priority ||
-      SIZE_RANK[c.size] - SIZE_RANK[a.size],
-  );
-  for (const r of requests) {
-    const results = fulfillRequests(b),
-      need = results.find((a) => a.request.id === r.id)!.missing;
-    if (r.type !== "SPINAL") place(r.size, need, r);
-  }
+  const requests = [...(b.order.hardpointRequests ?? [])].sort((a,c)=>Number(c.mandatory)-Number(a.mandatory)||SIZE_RANK[c.size]-SIZE_RANK[a.size]||c.priority-a.priority||a.id.localeCompare(c.id));
+  const fulfill = (r:HardpointRequest)=>{
+    const need=fulfillRequests(b).find(a=>a.request.id===r.id)!.missing;
+    if(r.type!=="SPINAL")place(r.size,need,r);
+  };
+  for(const r of requests.filter(r=>r.mandatory))fulfill(r);
   const remaining = () => Math.max(0, target - b.hardpoints.length);
-  if (b.order.length >= 250)
-    place(
-      "L",
-      Math.min(
-        remaining(),
-        Math.floor(target * 0.06 * (0.5 + b.order.priorities.firepower / 100)),
-      ),
-    );
-  if (b.order.length >= 100)
-    place(
-      "M",
-      Math.min(
-        remaining(),
-        Math.floor(target * 0.22 * (0.75 + b.order.priorities.missile / 200)),
-      ),
-    );
-  place("S", remaining());
+  // Optional requests share their size pass; preferred S never precedes automatic XL/L.
+  for(const size of ["XL","L","M","S"] as const){
+    for(const r of requests.filter(r=>!r.mandatory&&r.size===size))fulfill(r);
+    place(size,remaining());
+  }
+  const batteries=new Map<string,typeof b.hardpoints>();
+  for(const h of b.hardpoints){const id=h.modular?.batteryGroupId;if(id)batteries.set(id,[...(batteries.get(id)??[]),h]);}
+  for(const [id,hs] of batteries){
+    const stations=[...new Set(hs.map(h=>Math.round(h.position.z*1e4)/1e4))].sort((a,c)=>a-c);
+    const maxGap=slotStandard(hs[0].size,b.order.length).envelope.length*{SPARSE:1.7,STANDARD:1.25,DENSE:1.08}[density]*1.6;
+    let part=0;const groups=new Map<number,typeof hs>();let prev=-Infinity;
+    for(const z of stations){if(z-prev>maxGap)part++;groups.set(part,[...(groups.get(part)??[]),...hs.filter(h=>Math.abs(h.position.z-z)<.0001)]);prev=z;}
+    for(const [segment,row] of groups){const distinct=new Set(row.map(h=>Math.round(h.position.z*1e4)/1e4));for(const h of row)h.modular!.batteryGroupId=distinct.size>=2?`${id}/segment-${segment}`:undefined;}
+  }
   plan.requests = fulfillRequests(b);
   plan.summary = summarizeSlots(b);
   plan.diagnostics.stopReason =
@@ -823,7 +806,7 @@ export function addModularHardpoints(b: ShipBlueprint) {
         ? "BOUNDED_SEARCH_LIMIT"
         : "AVAILABLE_COHERENT_SURFACE_OR_RESOURCE_LIMIT";
   b.modularHardpoints = plan;
-  b.generatorVersion = "1.8.5.4";
+  b.generatorVersion = "1.8.5.4.1";
   const failed = plan.requests.filter((r) => r.status === "FAILED");
   if (failed.length)
     throw new DesignRejection(

@@ -1,0 +1,466 @@
+{
+  "environment": "Node, same machine and same 470m Seed 7 physical Blueprint; one warmup pair, three measured alternating pairs",
+  "rows": [
+    {
+      "iteration": 0,
+      "version": "old",
+      "planningMs": 515.135052,
+      "candidates": 487,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 80,
+          "M": 35,
+          "L": 5,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 60,
+          "FIXED": 27,
+          "MISSILE": 29,
+          "SPINAL": 0,
+          "UTILITY": 24,
+          "DEFENSIVE": 62
+        },
+        "byRegion": {
+          "TOP": 23,
+          "BOTTOM": 56,
+          "PORT": 19,
+          "STARBOARD": 19,
+          "FORE": 3,
+          "AFT": 0
+        }
+      }
+    },
+    {
+      "iteration": 0,
+      "version": "new",
+      "planningMs": 1200.4086949999999,
+      "candidates": 2151,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 42,
+          "M": 69,
+          "L": 9,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 108,
+          "FIXED": 68,
+          "MISSILE": 70,
+          "SPINAL": 0,
+          "UTILITY": 32,
+          "DEFENSIVE": 110
+        },
+        "byRegion": {
+          "TOP": 40,
+          "BOTTOM": 53,
+          "PORT": 11,
+          "STARBOARD": 11,
+          "FORE": 3,
+          "AFT": 2
+        }
+      }
+    },
+    {
+      "iteration": 1,
+      "version": "new",
+      "planningMs": 1181.724126,
+      "candidates": 2151,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 42,
+          "M": 69,
+          "L": 9,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 108,
+          "FIXED": 68,
+          "MISSILE": 70,
+          "SPINAL": 0,
+          "UTILITY": 32,
+          "DEFENSIVE": 110
+        },
+        "byRegion": {
+          "TOP": 40,
+          "BOTTOM": 53,
+          "PORT": 11,
+          "STARBOARD": 11,
+          "FORE": 3,
+          "AFT": 2
+        }
+      }
+    },
+    {
+      "iteration": 1,
+      "version": "old",
+      "planningMs": 459.4653089999997,
+      "candidates": 487,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 80,
+          "M": 35,
+          "L": 5,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 60,
+          "FIXED": 27,
+          "MISSILE": 29,
+          "SPINAL": 0,
+          "UTILITY": 24,
+          "DEFENSIVE": 62
+        },
+        "byRegion": {
+          "TOP": 23,
+          "BOTTOM": 56,
+          "PORT": 19,
+          "STARBOARD": 19,
+          "FORE": 3,
+          "AFT": 0
+        }
+      }
+    },
+    {
+      "iteration": 2,
+      "version": "old",
+      "planningMs": 459.70538000000033,
+      "candidates": 487,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 80,
+          "M": 35,
+          "L": 5,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 60,
+          "FIXED": 27,
+          "MISSILE": 29,
+          "SPINAL": 0,
+          "UTILITY": 24,
+          "DEFENSIVE": 62
+        },
+        "byRegion": {
+          "TOP": 23,
+          "BOTTOM": 56,
+          "PORT": 19,
+          "STARBOARD": 19,
+          "FORE": 3,
+          "AFT": 0
+        }
+      }
+    },
+    {
+      "iteration": 2,
+      "version": "new",
+      "planningMs": 1100.968003,
+      "candidates": 2151,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 42,
+          "M": 69,
+          "L": 9,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 108,
+          "FIXED": 68,
+          "MISSILE": 70,
+          "SPINAL": 0,
+          "UTILITY": 32,
+          "DEFENSIVE": 110
+        },
+        "byRegion": {
+          "TOP": 40,
+          "BOTTOM": 53,
+          "PORT": 11,
+          "STARBOARD": 11,
+          "FORE": 3,
+          "AFT": 2
+        }
+      }
+    },
+    {
+      "iteration": 3,
+      "version": "new",
+      "planningMs": 1107.6464219999998,
+      "candidates": 2151,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 42,
+          "M": 69,
+          "L": 9,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 108,
+          "FIXED": 68,
+          "MISSILE": 70,
+          "SPINAL": 0,
+          "UTILITY": 32,
+          "DEFENSIVE": 110
+        },
+        "byRegion": {
+          "TOP": 40,
+          "BOTTOM": 53,
+          "PORT": 11,
+          "STARBOARD": 11,
+          "FORE": 3,
+          "AFT": 2
+        }
+      }
+    },
+    {
+      "iteration": 3,
+      "version": "old",
+      "planningMs": 428.26466400000027,
+      "candidates": 487,
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 80,
+          "M": 35,
+          "L": 5,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 60,
+          "FIXED": 27,
+          "MISSILE": 29,
+          "SPINAL": 0,
+          "UTILITY": 24,
+          "DEFENSIVE": 62
+        },
+        "byRegion": {
+          "TOP": 23,
+          "BOTTOM": 56,
+          "PORT": 19,
+          "STARBOARD": 19,
+          "FORE": 3,
+          "AFT": 0
+        }
+      }
+    }
+  ],
+  "fullGeneration": {
+    "method": "Three alternating same Order/Seed full-generation pairs after planner warmup; no other test or browser job active",
+    "rows": [
+      {
+        "iteration": 0,
+        "version": "1.8.5.4",
+        "generationMs": 5476.732870000001,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 80,
+            "M": 35,
+            "L": 5,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 60,
+            "FIXED": 27,
+            "MISSILE": 29,
+            "SPINAL": 0,
+            "UTILITY": 24,
+            "DEFENSIVE": 62
+          },
+          "byRegion": {
+            "TOP": 23,
+            "BOTTOM": 56,
+            "PORT": 19,
+            "STARBOARD": 19,
+            "FORE": 3,
+            "AFT": 0
+          }
+        }
+      },
+      {
+        "iteration": 0,
+        "version": "1.8.5.4.1",
+        "generationMs": 5728.026002999999,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 42,
+            "M": 69,
+            "L": 9,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 108,
+            "FIXED": 68,
+            "MISSILE": 70,
+            "SPINAL": 0,
+            "UTILITY": 32,
+            "DEFENSIVE": 110
+          },
+          "byRegion": {
+            "TOP": 40,
+            "BOTTOM": 53,
+            "PORT": 11,
+            "STARBOARD": 11,
+            "FORE": 3,
+            "AFT": 2
+          }
+        }
+      },
+      {
+        "iteration": 1,
+        "version": "1.8.5.4.1",
+        "generationMs": 5710.688737999997,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 42,
+            "M": 69,
+            "L": 9,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 108,
+            "FIXED": 68,
+            "MISSILE": 70,
+            "SPINAL": 0,
+            "UTILITY": 32,
+            "DEFENSIVE": 110
+          },
+          "byRegion": {
+            "TOP": 40,
+            "BOTTOM": 53,
+            "PORT": 11,
+            "STARBOARD": 11,
+            "FORE": 3,
+            "AFT": 2
+          }
+        }
+      },
+      {
+        "iteration": 1,
+        "version": "1.8.5.4",
+        "generationMs": 5202.668545,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 80,
+            "M": 35,
+            "L": 5,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 60,
+            "FIXED": 27,
+            "MISSILE": 29,
+            "SPINAL": 0,
+            "UTILITY": 24,
+            "DEFENSIVE": 62
+          },
+          "byRegion": {
+            "TOP": 23,
+            "BOTTOM": 56,
+            "PORT": 19,
+            "STARBOARD": 19,
+            "FORE": 3,
+            "AFT": 0
+          }
+        }
+      },
+      {
+        "iteration": 2,
+        "version": "1.8.5.4",
+        "generationMs": 5158.662117,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 80,
+            "M": 35,
+            "L": 5,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 60,
+            "FIXED": 27,
+            "MISSILE": 29,
+            "SPINAL": 0,
+            "UTILITY": 24,
+            "DEFENSIVE": 62
+          },
+          "byRegion": {
+            "TOP": 23,
+            "BOTTOM": 56,
+            "PORT": 19,
+            "STARBOARD": 19,
+            "FORE": 3,
+            "AFT": 0
+          }
+        }
+      },
+      {
+        "iteration": 2,
+        "version": "1.8.5.4.1",
+        "generationMs": 6099.511973000001,
+        "summary": {
+          "total": 120,
+          "empty": 100,
+          "occupied": 20,
+          "bySize": {
+            "S": 42,
+            "M": 69,
+            "L": 9,
+            "XL": 0
+          },
+          "byType": {
+            "TURRET": 108,
+            "FIXED": 68,
+            "MISSILE": 70,
+            "SPINAL": 0,
+            "UTILITY": 32,
+            "DEFENSIVE": 110
+          },
+          "byRegion": {
+            "TOP": 40,
+            "BOTTOM": 53,
+            "PORT": 11,
+            "STARBOARD": 11,
+            "FORE": 3,
+            "AFT": 2
+          }
+        }
+      }
+    ]
+  }
+}

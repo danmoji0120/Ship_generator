@@ -214,7 +214,7 @@ it("integrates the default Production pipeline and preserves the historical Blue
     { architecture: "STACKED_BLOCKS", family: "WEDGE_CITADEL" },
   );
   expect(JSON.stringify(repeated)).toBe(JSON.stringify(b));
-  expect(b.generatorVersion).toBe("1.8.5.4");
+  expect(b.generatorVersion).toBe("1.8.5.4.1");
   expect(validateBlueprint(JSON.parse(JSON.stringify(b)))).toEqual([]);
   const old = baseline(),
     copy = JSON.stringify(old);

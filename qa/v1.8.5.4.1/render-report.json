@@ -1,0 +1,269 @@
+{
+  "errors": [],
+  "layouts": [
+    {
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 80,
+          "M": 35,
+          "L": 5,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 60,
+          "FIXED": 27,
+          "MISSILE": 29,
+          "SPINAL": 0,
+          "UTILITY": 24,
+          "DEFENSIVE": 62
+        },
+        "byRegion": {
+          "TOP": 23,
+          "BOTTOM": 56,
+          "PORT": 19,
+          "STARBOARD": 19,
+          "FORE": 3,
+          "AFT": 0
+        }
+      },
+      "diagnostics": {
+        "candidates": 487,
+        "rejections": {
+          "Insufficient coherent installation footprint": 131,
+          "NO_EXPOSED_SURFACE": 16,
+          "INSUFFICIENT_INTERNAL_POCKET": 166,
+          "SLOT_ORIENTED_ENVELOPE_OVERLAP": 56,
+          "OPERATING_ENVELOPE_INTERFERENCE": 12,
+          "PROTECTED_OPENING_OR_PROPULSION": 3,
+          "EXISTING_FIRING_PATH": 4,
+          "Paired foundation cannot safely absorb surface relief": 2
+        },
+        "surfaceAreaM2": 379950.39592952596,
+        "stopReason": "TARGET_REACHED"
+      },
+      "pairs": 0,
+      "batteries": 0,
+      "emptyTop": {
+        "S": 11,
+        "M": 8,
+        "L": 0,
+        "XL": 0
+      }
+    },
+    {
+      "summary": {
+        "total": 120,
+        "empty": 100,
+        "occupied": 20,
+        "bySize": {
+          "S": 42,
+          "M": 69,
+          "L": 9,
+          "XL": 0
+        },
+        "byType": {
+          "TURRET": 108,
+          "FIXED": 68,
+          "MISSILE": 70,
+          "SPINAL": 0,
+          "UTILITY": 32,
+          "DEFENSIVE": 110
+        },
+        "byRegion": {
+          "TOP": 40,
+          "BOTTOM": 53,
+          "PORT": 11,
+          "STARBOARD": 11,
+          "FORE": 3,
+          "AFT": 2
+        }
+      },
+      "diagnostics": {
+        "candidates": 2151,
+        "rejections": {
+          "Insufficient coherent installation footprint": 982,
+          "NO_EXPOSED_SURFACE": 420,
+          "OPERATING_ENVELOPE_INTERFERENCE": 29,
+          "INSUFFICIENT_INTERNAL_POCKET": 471,
+          "INCOHERENT_FOOTPRINT": 5,
+          "EXISTING_FIRING_PATH": 3,
+          "SLOT_ORIENTED_ENVELOPE_OVERLAP": 160,
+          "Paired foundation cannot safely absorb surface relief": 6,
+          "NO_PARENT_INTERNAL_SUPPORT": 1
+        },
+        "surfaceAreaM2": 379950.39592952596,
+        "stopReason": "TARGET_REACHED",
+        "passes": [
+          {
+            "size": "XL",
+            "phase": "AUTOMATIC",
+            "candidates": 169,
+            "accepted": 0
+          },
+          {
+            "size": "L",
+            "phase": "AUTOMATIC",
+            "candidates": 413,
+            "accepted": 7
+          },
+          {
+            "size": "M",
+            "phase": "AUTOMATIC",
+            "candidates": 1397,
+            "accepted": 61
+          },
+          {
+            "size": "S",
+            "phase": "AUTOMATIC",
+            "candidates": 172,
+            "accepted": 32
+          }
+        ]
+      },
+      "pairs": 46,
+      "batteries": 9,
+      "emptyTop": {
+        "S": 14,
+        "M": 20,
+        "L": 2,
+        "XL": 0
+      }
+    }
+  ],
+  "0-Normal-top": {
+    "drawCalls": 30,
+    "triangles": 26314,
+    "camera": [
+      0,
+      897.1329006338393,
+      5.643673948650934
+    ],
+    "radius": 356.64530678458243,
+    "geometryFinite": true
+  },
+  "0-Normal-iso": {
+    "drawCalls": 30,
+    "triangles": 26314,
+    "camera": [
+      -429.33515801088004,
+      351.6950069788179,
+      -492.16728473432806
+    ],
+    "radius": 356.64530678458243,
+    "geometryFinite": true
+  },
+  "0-Hardpoints-top": {
+    "drawCalls": 12,
+    "triangles": 5172,
+    "camera": [
+      0,
+      911.4748409155397,
+      -0.6337625152044674
+    ],
+    "radius": 355.7381763800733,
+    "geometryFinite": true
+  },
+  "0-Hardpoints-iso": {
+    "drawCalls": 12,
+    "triangles": 5172,
+    "camera": [
+      -420.63734904323184,
+      350.1619423770138,
+      -488.38660057219187
+    ],
+    "radius": 355.7381763800733,
+    "geometryFinite": true
+  },
+  "0-Hardpoint Layout Only-top": {
+    "drawCalls": 45,
+    "triangles": 19398,
+    "camera": [
+      0,
+      911.8512607698295,
+      -0.6306282447470094
+    ],
+    "radius": 380.86882878323945,
+    "geometryFinite": true
+  },
+  "0-Hardpoint Layout Only-iso": {
+    "drawCalls": 45,
+    "triangles": 19398,
+    "camera": [
+      -426.17744215526244,
+      351.9182418174656,
+      -494.7987453777828
+    ],
+    "radius": 380.86882878323945,
+    "geometryFinite": true
+  },
+  "1-Normal-top": {
+    "drawCalls": 30,
+    "triangles": 26314,
+    "camera": [
+      0,
+      897.1329006338393,
+      5.643673948650934
+    ],
+    "radius": 356.64530678458243,
+    "geometryFinite": true
+  },
+  "1-Normal-iso": {
+    "drawCalls": 30,
+    "triangles": 26314,
+    "camera": [
+      -429.33515801088004,
+      351.6950069788179,
+      -492.16728473432806
+    ],
+    "radius": 356.64530678458243,
+    "geometryFinite": true
+  },
+  "1-Hardpoints-top": {
+    "drawCalls": 15,
+    "triangles": 7764,
+    "camera": [
+      0,
+      911.4748409155397,
+      -0.6337625152044674
+    ],
+    "radius": 355.7381763800733,
+    "geometryFinite": true
+  },
+  "1-Hardpoints-iso": {
+    "drawCalls": 15,
+    "triangles": 7764,
+    "camera": [
+      -420.63734904323184,
+      350.1619423770138,
+      -488.38660057219187
+    ],
+    "radius": 355.7381763800733,
+    "geometryFinite": true
+  },
+  "1-Hardpoint Layout Only-top": {
+    "drawCalls": 48,
+    "triangles": 21990,
+    "camera": [
+      0,
+      911.8512607698295,
+      -0.6306282447470094
+    ],
+    "radius": 380.86882878323945,
+    "geometryFinite": true
+  },
+  "1-Hardpoint Layout Only-iso": {
+    "drawCalls": 48,
+    "triangles": 21990,
+    "camera": [
+      -426.17744215526244,
+      351.9182418174656,
+      -494.7987453777828
+    ],
+    "radius": 380.86882878323945,
+    "geometryFinite": true
+  },
+  "normalEqual": true
+}

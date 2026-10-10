@@ -36,6 +36,10 @@ export interface SlotBox {
   localBounds: BoundsData;
 }
 export interface ModularSlot {
+  zoneId?: string;
+  pairId?: string;
+  batteryGroupId?: string;
+  symmetryReason?: string;
   state: "EMPTY" | "OCCUPIED";
   mountTypes: ModularMountType[];
   region: SlotRegion;
@@ -54,7 +58,7 @@ export interface ModularSlot {
   clearanceMeters: number;
 }
 export interface ModularHardpointPlan {
-  version: "1.8.5.4";
+  version: "1.8.5.4" | "1.8.5.4.1";
   density: HardpointDensity;
   target: number;
   limit: number;
@@ -74,6 +78,7 @@ export interface ModularHardpointPlan {
     reason: string;
   }[];
   diagnostics: {
+    passes?: {size:MountSize;phase:"REQUIRED"|"PREFERRED"|"AUTOMATIC";candidates:number;accepted:number}[];
     candidates: number;
     rejections: Record<string, number>;
     surfaceAreaM2: number;

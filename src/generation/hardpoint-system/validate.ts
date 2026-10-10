@@ -39,7 +39,7 @@ export function validateModularHardpoints(b: ShipBlueprint) {
     fail(String(e));
   }
   if (
-    p.version !== "1.8.5.4" ||
+    !["1.8.5.4","1.8.5.4.1"].includes(p.version) ||
     p.limit !== SLOT_LIMIT ||
     p.density !== (b.order.hardpointDensity ?? "STANDARD") ||
     p.target > SLOT_LIMIT ||
@@ -226,6 +226,15 @@ export function validateModularHardpoints(b: ShipBlueprint) {
     JSON.stringify(p.budget) !== JSON.stringify(budget)
   )
     fail("Support suballocation accounting mismatch");
+  if(p.version === "1.8.5.4.1") {
+    const groups=new Map<string,typeof b.hardpoints>();
+    for(const h of b.hardpoints) if(h.modular?.pairId) groups.set(h.modular.pairId,[...(groups.get(h.modular.pairId)??[]),h]);
+    for(const [id,hs] of groups){
+      if(hs.length!==2){fail("Incomplete bilateral pair "+id);continue;}
+      const [a,c]=hs;
+      if(a.size!==c.size || JSON.stringify(a.modular!.mountTypes)!==JSON.stringify(c.modular!.mountTypes) || Math.abs(a.position.x+c.position.x)>.05 || Math.abs(a.position.y-c.position.y)>.05 || Math.abs(a.position.z-c.position.z)>.05 || Math.abs(a.normal.x+c.normal.x)>1e-4 || Math.abs(a.normal.y-c.normal.y)>1e-4 || Math.abs(a.normal.z-c.normal.z)>1e-4) fail("Invalid bilateral pair "+id);
+    }
+  }
   const actual = fulfillRequests(b);
   if (
     JSON.stringify(actual) !== JSON.stringify(p.requests) ||

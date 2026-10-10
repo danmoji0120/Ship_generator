@@ -48,6 +48,28 @@ export function renderModularHardpoints(b: ShipBlueprint) {
     mesh.computeBoundingSphere();
     root.add(mesh);
   }
+  // Exact measured footprint boundary, not the nominal marker radius. Historical
+  // plans retain their original debug rendering; Normal never calls this helper.
+  if(b.modularHardpoints?.version === "1.8.5.4.1")for(const size of ["S","M","L","XL"] as const){
+    const boundary:number[]=[];
+    for(const h of b.hardpoints.filter(h=>h.size===size&&h.modular?.state==="EMPTY")){
+      const m=h.modular!,points=m.contacts.slice(0,m.region==="FORE"||m.region==="AFT"?4:8);
+      for(let i=0;i<points.length;i++){const a=points[i].position,c=points[(i+1)%points.length].position;boundary.push(a.x,a.y,a.z,c.x,c.y,c.z);}
+    }
+    if(boundary.length){const g=new THREE.BufferGeometry();g.setAttribute("position",new THREE.Float32BufferAttribute(boundary,3));const l=new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:colors[size],depthTest:false,transparent:true,opacity:.55}));l.renderOrder=18;root.add(l);}
+  }
+  const pairLines:number[]=[];
+  const pairs=new Map<string,typeof b.hardpoints>();
+  for(const h of b.hardpoints){const id=h.modular?.pairId;if(id)pairs.set(id,[...(pairs.get(id)??[]),h]);}
+  for(const hs of pairs.values())if(hs.length===2){for(const h of hs)pairLines.push(h.position.x,h.position.y,h.position.z);}
+  if(pairLines.length){const g=new THREE.BufferGeometry();g.setAttribute("position",new THREE.Float32BufferAttribute(pairLines,3));const l=new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:0xd7b98c,depthTest:false,transparent:true,opacity:.35}));l.renderOrder=18;root.add(l);}
+  const groups = new Map<string, typeof b.hardpoints>();
+  for(const h of b.hardpoints){const id=h.modular?.batteryGroupId;if(id)groups.set(id,[...(groups.get(id)??[]),h]);}
+  for(const hs of groups.values()){
+    for(const side of [-1,1]){const row=hs.filter(h=>side<0?h.position.x<-.01:h.position.x>=-.01).sort((a,c)=>a.position.z-c.position.z);
+      for(let i=1;i<row.length;i++){const a=row[i-1].position,c=row[i].position;lines.push(a.x,a.y,a.z,c.x,c.y,c.z);}
+    }
+  }
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute("position", new THREE.Float32BufferAttribute(lines, 3));
   const arrows = new THREE.LineSegments(
