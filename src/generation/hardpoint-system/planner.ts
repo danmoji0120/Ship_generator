@@ -821,3 +821,22 @@ export function addModularHardpoints(b: ShipBlueprint) {
     );
   return b;
 }
+
+/** On-demand diagnosis only. Reuses actual XL candidates and unchanged safety predicates.
+ * Evaluate before EMPTY slots as well as after them to distinguish surface failure from occupation. */
+export function diagnoseXLSlots(b:ShipBlueprint,limit=250){
+ const env=slotEnvironment(b),attempts:{region:SlotRegion;hint:Vec3;supportSurfaceIds:string[];colliderIds:string[];reasons:string[]}[]=[];
+ for(const c of batteryCandidates(b,'XL',b.modularHardpoints?.density??'STANDARD',env)){
+  if(attempts.length>=limit)break;const entry={region:c.region,hint:c.hint,supportSurfaceIds:[] as string[],colliderIds:[] as string[],reasons:[] as string[]};
+  const hit=surfaceRay(env.surfaces,c.hint,DIRECTIONS[c.region]);if(hit)entry.supportSurfaceIds=[hit.surfaceId];
+  try{
+   const r=surfaceSlot(b,c.hint,c.region,'XL',env);entry.supportSurfaceIds=[...new Set(r.slot.contacts.map(p=>p.surfaceId))];entry.reasons=slotPhysicalIssues(b,r.slot,env);
+   const bounds=boxBounds(r.slot.envelope),solid=boxSolid(r.slot.envelope);entry.colliderIds=env.sceneQuery(bounds).filter(s=>solidsIntrude(solid,bounds,s.solid,s.bounds)).map(s=>s.id);
+   for(const h of b.hardpoints.filter(h=>h.modular?.state==='EMPTY'))if(boxesOverlap(r.slot.envelope,h.modular!.envelope)||r.slot.internal&&h.modular?.internal&&boxesOverlap(r.slot.internal,h.modular.internal))entry.reasons.push('EMPTY_SLOT_OCCUPATION:'+h.id);
+   const physical=entry.reasons.filter(r=>!r.startsWith('EMPTY_SLOT_OCCUPATION'));
+   if(!physical.length)entry.reasons.push('SURFACE_VALID_PENDING_PAIR_BUDGET_AND_INTERNAL_INTERFACE');
+  }catch(e){entry.reasons=[(e as Error).message];}
+  attempts.push(entry);
+ }
+ return {limit,bounded:true,attempts,counts:attempts.reduce((c,a)=>(a.reasons.forEach(r=>{const key=r.split(':')[0];c[key]=(c[key]??0)+1;}),c),{} as Record<string,number>),limitations:['Diagnostics are not placement; pair and budget still require planner transaction','Surface continuity is checked before slot occupancy; no safety relaxation']};
+}

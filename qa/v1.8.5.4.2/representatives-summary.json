@@ -1,0 +1,399 @@
+{
+  "report": [
+    {
+      "name": "stacked-blocks",
+      "request": {
+        "equipmentId": "gun-210",
+        "scope": "BATTERY",
+        "slotId": "slot-25"
+      },
+      "elapsedMs": 213.10000002384186,
+      "geometryPreserved": true,
+      "results": [
+        {
+          "slotId": "slot-25",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:command-deck, FIRING_PATH:skin-command-deck-6-0, FIRING_PATH:skin-command-deck-7-0"
+          ],
+          "pairId": "pair-25",
+          "batteryId": "skin-armored-keel-6-1/TOP/M/row-1/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-26",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:command-deck, FIRING_PATH:skin-command-deck-5-0, FIRING_PATH:skin-command-deck-6-0, FIRING_PATH:command-deck/belt--1, FIRING_PATH:slot-25/armored-turret, FIRING_PATH:slot-25/mantlet-0"
+          ],
+          "pairId": "pair-25",
+          "batteryId": "skin-armored-keel-6-1/TOP/M/row-1/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-27",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:magazine-deck, FIRING_PATH:skin-magazine-deck-6-0, FIRING_PATH:skin-magazine-deck-7-0, FIRING_PATH:skin-magazine-deck-0-1"
+          ],
+          "pairId": "pair-27",
+          "batteryId": "skin-armored-keel-6-1/TOP/M/row-1/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 42,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-28",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:magazine-deck, FIRING_PATH:skin-magazine-deck-6-0, FIRING_PATH:slot-27/armored-turret"
+          ],
+          "pairId": "pair-27",
+          "batteryId": "skin-armored-keel-6-1/TOP/M/row-1/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 42,
+          "testedSamples": 52
+        }
+      ]
+    },
+    {
+      "name": "spinal-modules",
+      "request": {
+        "equipmentId": "gun-210",
+        "scope": "BATTERY",
+        "slotId": "slot-27"
+      },
+      "elapsedMs": 284.59999999403954,
+      "geometryPreserved": true,
+      "results": [
+        {
+          "slotId": "slot-27",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:axis-reinforcement, FIRING_PATH:axis-reinforcement/primary, FIRING_PATH:exterior-link-4-2"
+          ],
+          "pairId": "pair-27",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 44,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-28",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:exterior-link-4-2, FIRING_PATH:axis-reinforcement, FIRING_PATH:axis-reinforcement/primary, FIRING_PATH:axis-reinforcement/belt--1, FIRING_PATH:slot-27/cheek--1"
+          ],
+          "pairId": "pair-27",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 44,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-29",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-28/cheek--1, FIRING_PATH:slot-28/mantlet-1, FIRING_PATH:slot-27/mantlet-0, FIRING_PATH:slot-27/mantlet-1"
+          ],
+          "pairId": "pair-29",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-30",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:exterior-link-4-2, FIRING_PATH:slot-27/mantlet-0, FIRING_PATH:slot-27/mantlet-1, FIRING_PATH:slot-29/cheek--1, FIRING_PATH:slot-29/mantlet-0"
+          ],
+          "pairId": "pair-29",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-36",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-30/mantlet-0, FIRING_PATH:slot-30/mantlet-1, FIRING_PATH:slot-27/mantlet-0, FIRING_PATH:slot-27/mantlet-1"
+          ],
+          "pairId": "pair-36",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-37",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-28/mantlet-0, FIRING_PATH:slot-28/armored-turret, FIRING_PATH:slot-29/mantlet-0, FIRING_PATH:slot-29/barrel-1, FIRING_PATH:slot-36/cheek--1"
+          ],
+          "pairId": "pair-36",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-38",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-37/cheek--1, FIRING_PATH:slot-37/armored-turret, FIRING_PATH:slot-29/barrel-0, FIRING_PATH:slot-29/barrel-1"
+          ],
+          "pairId": "pair-38",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-39",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-30/barrel-0, FIRING_PATH:slot-30/barrel-1, FIRING_PATH:slot-36/mantlet-0, FIRING_PATH:slot-36/armored-turret, FIRING_PATH:slot-38/cheek--1"
+          ],
+          "pairId": "pair-38",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-40",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-39/barrel-0, FIRING_PATH:slot-39/mantlet-1, FIRING_PATH:slot-36/barrel-0, FIRING_PATH:slot-36/armored-turret"
+          ],
+          "pairId": "pair-40",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-41",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-37/mantlet-0, FIRING_PATH:slot-37/armored-turret, FIRING_PATH:slot-38/mantlet-0, FIRING_PATH:slot-38/barrel-1, FIRING_PATH:slot-40/cheek--1"
+          ],
+          "pairId": "pair-40",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-49",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-41/cheek--1, FIRING_PATH:slot-41/mantlet-1, FIRING_PATH:slot-38/barrel-0, FIRING_PATH:slot-38/armored-turret"
+          ],
+          "pairId": "pair-49",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 49,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-50",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-39/barrel-0, FIRING_PATH:slot-39/armored-turret, FIRING_PATH:slot-40/mantlet-0, FIRING_PATH:slot-40/armored-turret, FIRING_PATH:slot-49/cheek--1"
+          ],
+          "pairId": "pair-49",
+          "batteryId": "axial-spine/TOP/M/row-1/segment-2",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 49,
+          "testedSamples": 52
+        }
+      ]
+    },
+    {
+      "name": "truss-pods",
+      "request": {
+        "equipmentId": "gun-210",
+        "scope": "PAIR",
+        "slotId": "slot-11"
+      },
+      "elapsedMs": 129,
+      "geometryPreserved": true,
+      "results": [
+        {
+          "slotId": "slot-11",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:meso/meso-zone/pressure-core/primary/SERVICE_CHANNEL/65/SERVICE_RECESS_FRAME/GALLERY_RAIL_-1"
+          ],
+          "pairId": "pair-11",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52
+        },
+        {
+          "slotId": "slot-12",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-11/cheek--1, FIRING_PATH:slot-11/mantlet-0, FIRING_PATH:meso/meso-zone/pressure-core/primary/SERVICE_CHANNEL/63/SERVICE_RECESS_FRAME/GALLERY_RAIL_1"
+          ],
+          "pairId": "pair-11",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52
+        }
+      ]
+    }
+  ],
+  "lifecycle": {
+    "baseline": {
+      "geometries": 30,
+      "textures": 3
+    },
+    "on": {
+      "geometries": 34,
+      "textures": 3
+    },
+    "after": {
+      "geometries": 30,
+      "textures": 3
+    },
+    "offCalls": 29,
+    "onCalls": 33,
+    "offTriangles": 26270,
+    "onTriangles": 27646
+  },
+  "errors": []
+}

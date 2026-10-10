@@ -1,0 +1,35 @@
+{
+  "environment": "Node 24.19.0, same container, three paired comparisons with reversed middle-pair order; no simultaneous QA jobs",
+  "pairs": [
+    {
+      "order": "baseline→current",
+      "baselineMs": 5755.786211,
+      "currentMs": 6188.099428999999,
+      "identical": true
+    },
+    {
+      "order": "current→baseline",
+      "baselineMs": 6240.106361000002,
+      "currentMs": 6088.539570000001,
+      "identical": true
+    },
+    {
+      "order": "baseline→current",
+      "baselineMs": 5959.608901,
+      "currentMs": 6013.313877000004,
+      "identical": true
+    }
+  ],
+  "preview": {
+    "refinedBatteryMs": 234.85137699999905,
+    "cachedMs": 0.016784999999799766,
+    "autoMs": 21688.060713000006,
+    "autoCounts": {
+      "PARTIAL_ARC": 30,
+      "VALID": 2,
+      "BLOCKED": 1
+    }
+  },
+  "generationPath": "unchanged 1.8.5.4.1 canonical generator",
+  "gpu": "Software SwiftShader browser only; hardware GPU/frame time NOT measured"
+}

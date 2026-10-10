@@ -1,0 +1,6 @@
+# Preserve local source captures and full per-sample diagnostics; commit compact review artifacts.
+*.png
+*.json
+!*-summary.json
+!performance.json
+!ui-report.json

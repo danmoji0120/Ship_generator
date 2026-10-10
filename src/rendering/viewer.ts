@@ -1,3 +1,5 @@
+import {renderEquipmentPreview} from './equipment-preview';
+import type {PreviewPlan} from '../equipment-preview/fitment';
 import {setSurfacePresentation} from './textured-surface';
 import type {FinishProfile} from '../generation/appearance/types';
 import {setDetailVisibility} from './details';
@@ -13,6 +15,9 @@ export class ShipViewer {
   private renderer: THREE.WebGLRenderer;
   private controls: OrbitControls;
   private ship?: THREE.Group;
+  private equipmentPreview?: THREE.Group;
+  private previewPlan?: PreviewPlan;
+  private previewDebug=false;
   private blueprint?: AnyShipBlueprint;
   private resizeObserver: ResizeObserver;
   private detailMode:DetailMode="AUTO";
@@ -81,6 +86,7 @@ export class ShipViewer {
     this.renderer.render(this.scene, this.camera);
   };
   show(b: AnyShipBlueprint, reset = true) {
+    this.setEquipmentPreview();
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -111,9 +117,16 @@ export class ShipViewer {
   }
   setSurfaceFinish(finish:FinishProfile){this.finish=finish;if(this.ship)setSurfacePresentation(this.ship,finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');}
   setDetailMode(mode:DetailMode){this.detailMode=mode;if(this.ship)setDetailVisibility(this.ship,mode,Infinity);}
+  setEquipmentPreview(plan?:PreviewPlan,debug=false){
+    if(this.equipmentPreview){this.scene.remove(this.equipmentPreview);disposeShip(this.equipmentPreview);this.equipmentPreview=undefined;}
+    this.previewPlan=plan;this.previewDebug=debug;
+    if(plan&&this.blueprint?.schemaVersion===2){this.equipmentPreview=renderEquipmentPreview(plan,this.blueprint,debug);this.scene.add(this.equipmentPreview);}
+  }
   setMode(mode: DebugView) {
     this.mode = mode;
+    const plan=this.previewPlan,debug=this.previewDebug;
     if (this.blueprint) this.show(this.blueprint, false);
+    if(plan)this.setEquipmentPreview(plan,debug);
   }
   fit(reset = true) {
     if (!this.ship) return;
@@ -211,6 +224,7 @@ export class ShipViewer {
     };
   }
   dispose() {
+    this.setEquipmentPreview();
     this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();

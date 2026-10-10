@@ -1,3 +1,4 @@
+import {setupEquipmentPreview} from './ui/equipment-preview';
 import {setupHardpointOrder,readHardpointOrder,applyHardpointOrder,showHardpointInspector,selectHardpoint} from "./ui/hardpoints";
 import type {DetailMode} from './generation/details/types';
 import {DesignRejection} from './generation/production/requirements';
@@ -33,6 +34,8 @@ try {
     "WebGL을 시작할 수 없습니다. 하드웨어 가속을 지원하는 브라우저를 사용하세요.";
   console.error(e);
 }
+const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
+if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
 $<HTMLSelectElement>("surface-finish").onchange=()=>viewer?.setSurfaceFinish($<HTMLSelectElement>("surface-finish").value as FinishProfile);
 function syncRanges() {
@@ -112,6 +115,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     viewer?.show(next);
     blueprint = next;
     showHardpointInspector(next);
+    equipmentPreview.reset();
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
     $("ship-name").textContent = next.designName;

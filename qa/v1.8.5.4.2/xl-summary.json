@@ -1,0 +1,117 @@
+{
+  "attempts": 169,
+  "counts": {
+    "Insufficient coherent installation footprint": 144,
+    "NO_EXPOSED_SURFACE": 20,
+    "OPERATING_ENVELOPE_INTERFERENCE": 1,
+    "EMPTY_SLOT_OCCUPATION": 4,
+    "INSUFFICIENT_INTERNAL_POCKET": 1,
+    "INCOHERENT_FOOTPRINT": 3
+  },
+  "examples": {
+    "Insufficient coherent installation footprint": {
+      "region": "TOP",
+      "hint": {
+        "x": -156.68624999999997,
+        "y": -0.5107406752283588,
+        "z": -117.5
+      },
+      "supportSurfaceIds": [
+        "citadel/shoulder--1"
+      ],
+      "colliderIds": [],
+      "reasons": [
+        "Insufficient coherent installation footprint"
+      ]
+    },
+    "NO_EXPOSED_SURFACE": {
+      "region": "TOP",
+      "hint": {
+        "x": -156.68624999999997,
+        "y": -0.5107406752283588,
+        "z": 117.5
+      },
+      "supportSurfaceIds": [],
+      "colliderIds": [],
+      "reasons": [
+        "NO_EXPOSED_SURFACE"
+      ]
+    },
+    "OPERATING_ENVELOPE_INTERFERENCE": {
+      "region": "TOP",
+      "hint": {
+        "x": -52.22874999999999,
+        "y": -0.5107406752283588,
+        "z": 117.5
+      },
+      "supportSurfaceIds": [
+        "skin-citadel-6-1"
+      ],
+      "colliderIds": [
+        "citadel/shoulder--1"
+      ],
+      "reasons": [
+        "OPERATING_ENVELOPE_INTERFERENCE",
+        "EMPTY_SLOT_OCCUPATION:slot-22",
+        "EMPTY_SLOT_OCCUPATION:slot-54",
+        "EMPTY_SLOT_OCCUPATION:slot-71",
+        "EMPTY_SLOT_OCCUPATION:slot-84"
+      ]
+    },
+    "EMPTY_SLOT_OCCUPATION": {
+      "region": "TOP",
+      "hint": {
+        "x": -52.22874999999999,
+        "y": -0.5107406752283588,
+        "z": 117.5
+      },
+      "supportSurfaceIds": [
+        "skin-citadel-6-1"
+      ],
+      "colliderIds": [
+        "citadel/shoulder--1"
+      ],
+      "reasons": [
+        "OPERATING_ENVELOPE_INTERFERENCE",
+        "EMPTY_SLOT_OCCUPATION:slot-22",
+        "EMPTY_SLOT_OCCUPATION:slot-54",
+        "EMPTY_SLOT_OCCUPATION:slot-71",
+        "EMPTY_SLOT_OCCUPATION:slot-84"
+      ]
+    },
+    "INSUFFICIENT_INTERNAL_POCKET": {
+      "region": "TOP",
+      "hint": {
+        "x": 0,
+        "y": 53.50163897722069,
+        "z": -72.84999999999998
+      },
+      "supportSurfaceIds": [
+        "citadel/primary"
+      ],
+      "colliderIds": [],
+      "reasons": [
+        "INSUFFICIENT_INTERNAL_POCKET"
+      ]
+    },
+    "INCOHERENT_FOOTPRINT": {
+      "region": "FORE",
+      "hint": {
+        "x": -44.457111999999995,
+        "y": 0,
+        "z": -235
+      },
+      "supportSurfaceIds": [
+        "exterior-bow-citadel-0"
+      ],
+      "colliderIds": [],
+      "reasons": [
+        "INCOHERENT_FOOTPRINT"
+      ]
+    }
+  },
+  "limitations": [
+    "Diagnostics are not placement; pair and budget still require planner transaction",
+    "Surface continuity is checked before slot occupancy; no safety relaxation"
+  ]
+}

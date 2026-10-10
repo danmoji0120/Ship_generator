@@ -688,3 +688,9 @@ The default Requirements-first generator now adds a deterministic, optional Meso
 실제 Engine Mount 좌표·축·노즐 반경에서 Root 후보와 실제 노출 표면의 지지 간격을 찾습니다. Wide/Narrow/Segmented/Low-profile는 기존 ENGINE_ROOT_TRANSITION의 변형이며, 접촉·충돌·배기·사격 기준은 유지합니다. 실제 Connector 주변의 Pod/Spine/Nacelle/Twin/Hybrid 접합 후보와 기능별 예산 우선순위를 추가했습니다. `{version: '1.8.5.3'}`는 이전 생성기를 그대로 실행합니다. 기존 저장 설계에는 신규 구조를 소급 적용하지 않습니다.
 
 [설계 계약](docs/MESO_ROOT_REFINEMENT.md) · [실제 설치·회귀·성능 QA](qa/v1.8.5.3.1/QA.md)
+
+### V1.8.5.4.2 — temporary equipment fitment
+
+Blueprint Inspector → **Equipment fitment preview** supports Single / Pair / Battery / Auto, seven procedural gun/missile modules, local-frame sampled operating arcs and explicit failure reasons. An optional preview-only action tests longer paired M batteries by relocating nearby empty slots. Preview OFF restores the original ship; Export stays canonical V1.8.5.4.1 / schema 2. Strength, ammunition and combat simulation are not included.
+
+See [fitment contracts](docs/EQUIPMENT_FITMENT_PREVIEW.md) and [targeted visual QA](qa/v1.8.5.4.2/QA.md). This patch does not modify combat-demo or run the full test/history matrix.

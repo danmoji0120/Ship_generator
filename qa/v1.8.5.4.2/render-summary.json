@@ -1,0 +1,1970 @@
+{
+  "plans": [
+    {
+      "name": "pair",
+      "elapsedMs": 233.40000000596046,
+      "omissions": [],
+      "results": [
+        {
+          "slotId": "slot-27",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/shoulder--1, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/fore-guard"
+          ],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder--1"
+          ]
+        },
+        {
+          "slotId": "slot-28",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/primary, FIRING_PATH:citadel/shoulder-1, FIRING_PATH:citadel/fore-guard"
+          ],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder-1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "battery",
+      "elapsedMs": 88.5,
+      "omissions": [],
+      "results": [
+        {
+          "slotId": "slot-54",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-54",
+          "batteryId": "skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-60/armored-turret"
+          ]
+        },
+        {
+          "slotId": "slot-55",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-54",
+          "batteryId": "skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-61/armored-turret",
+            "FIRING_PATH:slot-61/mantlet-0"
+          ]
+        },
+        {
+          "slotId": "slot-60",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth, FIRING_PATH:slot-54/barrel-0, FIRING_PATH:slot-54/barrel-1"
+          ],
+          "pairId": "pair-60",
+          "batteryId": "skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-54/barrel-0",
+            "FIRING_PATH:slot-54/barrel-1"
+          ]
+        },
+        {
+          "slotId": "slot-61",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-55/armored-turret, FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-60",
+          "batteryId": "skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-55/armored-turret"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "missile",
+      "elapsedMs": 15,
+      "omissions": [],
+      "results": [
+        {
+          "slotId": "slot-27",
+          "equipmentId": "missile-medium",
+          "status": "VALID",
+          "reasons": [],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 90
+          },
+          "parts": 28,
+          "contacts": 17,
+          "clearSamples": 1,
+          "testedSamples": 1,
+          "blockedBy": [],
+          "clearYawByElevation": {
+            "90": [
+              0
+            ]
+          }
+        },
+        {
+          "slotId": "slot-28",
+          "equipmentId": "missile-medium",
+          "status": "VALID",
+          "reasons": [],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 90
+          },
+          "parts": 28,
+          "contacts": 17,
+          "clearSamples": 1,
+          "testedSamples": 1,
+          "blockedBy": [],
+          "clearYawByElevation": {
+            "90": [
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "refined",
+      "elapsedMs": 168.5,
+      "batteryRefinement": {
+        "accepted": true,
+        "attempts": [
+          {
+            "rows": 5,
+            "reasons": [
+              "Error: RESERVED_SLOT_OVERLAP:slot-22"
+            ]
+          },
+          {
+            "rows": 4,
+            "reasons": [
+              "Error: RESERVED_SLOT_OVERLAP:slot-22"
+            ]
+          },
+          {
+            "rows": 3,
+            "reasons": []
+          }
+        ],
+        "movedIds": [
+          "slot-54",
+          "slot-55",
+          "slot-60",
+          "slot-61",
+          "slot-71",
+          "slot-72"
+        ],
+        "reason": "3 measured M slots per side; preview-only empty slot relocation"
+      },
+      "omissions": [],
+      "results": [
+        {
+          "slotId": "slot-54",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-54",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 44,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-60/barrel-1",
+            "FIRING_PATH:slot-60/mantlet-0"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -150,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-55",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-54",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 44,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-61/barrel-1",
+            "FIRING_PATH:slot-61/mantlet-0"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              150
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-60",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth, FIRING_PATH:slot-54/barrel-0, FIRING_PATH:slot-54/armored-turret"
+          ],
+          "pairId": "pair-60",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-54/armored-turret",
+            "FIRING_PATH:slot-54/barrel-0",
+            "FIRING_PATH:slot-71/armored-turret"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -150,
+              -120,
+              -90,
+              30,
+              60,
+              90,
+              120,
+              150
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-61",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-55/barrel-0, FIRING_PATH:slot-55/barrel-1, FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-60",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 46,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-55/barrel-0",
+            "FIRING_PATH:slot-55/barrel-1",
+            "FIRING_PATH:slot-72/armored-turret",
+            "FIRING_PATH:slot-72/mantlet-0"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              90,
+              120,
+              150
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-71",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth, FIRING_PATH:slot-60/barrel-0, FIRING_PATH:slot-54/armored-turret"
+          ],
+          "pairId": "pair-71",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-54/armored-turret",
+            "FIRING_PATH:slot-60/barrel-0"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-72",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-55/armored-turret, FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-71",
+          "batteryId": "preview-battery/skin-citadel-6-1/TOP/M/row-2/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:slot-55/armored-turret"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "large",
+      "elapsedMs": 44.30000001192093,
+      "omissions": [],
+      "results": [
+        {
+          "slotId": "slot-22",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/shoulder--1"
+          ],
+          "pairId": "pair-22",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 43,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder--1"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -180,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "20": [
+              -180,
+              -150,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        },
+        {
+          "slotId": "slot-23",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/shoulder-1, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-22",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 43,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder-1"
+          ],
+          "clearYawByElevation": {
+            "0": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              180
+            ],
+            "20": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              150,
+              180
+            ],
+            "45": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "70": [
+              -180,
+              -150,
+              -120,
+              -90,
+              -60,
+              -30,
+              0,
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "auto",
+      "elapsedMs": 5604.5,
+      "omissions": [
+        {
+          "slotId": "slot-52",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-53",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-54",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-55",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-56",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-57",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-58",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-59",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-60",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-61",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-62",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-63",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-65",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-66",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-67",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-68",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-69",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-70",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-71",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-72",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-73",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-74",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-75",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-76",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-77",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-78",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-79",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-80",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-81",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-82",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-83",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-84",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-85",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-86",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-87",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-88",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-89",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-90",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-91",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-92",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-93",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-94",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-95",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-96",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-97",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-98",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-99",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-100",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-101",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-102",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-103",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-104",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-105",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-106",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-107",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-108",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-109",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-110",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-111",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-112",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-113",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-114",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-115",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-116",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-117",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-118",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        },
+        {
+          "slotId": "slot-119",
+          "reason": "REPRESENTATIVE_PREVIEW_LIMIT_32 \u2014 not geometrically tested"
+        }
+      ],
+      "results": [
+        {
+          "slotId": "slot-20",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-port"
+          ],
+          "pairId": "pair-20",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 49,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-port"
+          ]
+        },
+        {
+          "slotId": "slot-21",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-starboard"
+          ],
+          "pairId": "pair-20",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 49,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-starboard"
+          ]
+        },
+        {
+          "slotId": "slot-22",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/shoulder--1"
+          ],
+          "pairId": "pair-22",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 43,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder--1"
+          ]
+        },
+        {
+          "slotId": "slot-23",
+          "equipmentId": "gun-406",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/shoulder-1, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/command-plinth"
+          ],
+          "pairId": "pair-22",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 43,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder-1"
+          ]
+        },
+        {
+          "slotId": "slot-24",
+          "equipmentId": "gun-406",
+          "status": "VALID",
+          "reasons": [],
+          "pairId": "pair-24",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 52,
+          "testedSamples": 52,
+          "blockedBy": []
+        },
+        {
+          "slotId": "slot-25",
+          "equipmentId": "gun-406",
+          "status": "VALID",
+          "reasons": [],
+          "pairId": "pair-24",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 52,
+          "testedSamples": 52,
+          "blockedBy": []
+        },
+        {
+          "slotId": "slot-26",
+          "equipmentId": "gun-406",
+          "status": "BLOCKED",
+          "reasons": [
+            "detail/citadel/cap-service--1/ACCESS_HATCH-hinge1",
+            "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle1-1",
+            "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle11",
+            "detail/citadel/cap-service--1/ACCESS_HATCH-handle",
+            "detail/citadel/axial-rcs--1/RCS_CLUSTER-seat",
+            "detail/citadel/cap-service--1/ACCESS_HATCH-inset",
+            "detail/citadel/cap-service--1/ACCESS_HATCH-seat",
+            "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle-1-1",
+            "detail/citadel/axial-rcs--1/RCS_CLUSTER-nozzle-11",
+            "detail/citadel/cap-service--1/ACCESS_HATCH-hinge-1"
+          ],
+          "interfaceOffsetMeters": 0,
+          "compatibleAlternatives": [
+            "slot-20",
+            "slot-21",
+            "slot-22",
+            "slot-23"
+          ],
+          "parts": 0,
+          "contacts": 17,
+          "clearSamples": 0,
+          "testedSamples": 0,
+          "blockedBy": []
+        },
+        {
+          "slotId": "slot-27",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/shoulder--1, FIRING_PATH:citadel/primary, FIRING_PATH:citadel/fore-guard"
+          ],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder--1"
+          ]
+        },
+        {
+          "slotId": "slot-28",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/primary, FIRING_PATH:citadel/shoulder-1, FIRING_PATH:citadel/fore-guard"
+          ],
+          "pairId": "pair-27",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder-1"
+          ]
+        },
+        {
+          "slotId": "slot-29",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/fore-guard, FIRING_PATH:citadel/primary, FIRING_PATH:slot-27/cheek--1, FIRING_PATH:slot-27/mantlet-0, FIRING_PATH:citadel/shoulder--1"
+          ],
+          "pairId": "pair-29",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder--1",
+            "FIRING_PATH:slot-27/cheek--1",
+            "FIRING_PATH:slot-27/mantlet-0"
+          ]
+        },
+        {
+          "slotId": "slot-30",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/primary, FIRING_PATH:citadel/fore-guard, FIRING_PATH:citadel/shoulder-1, FIRING_PATH:slot-28/mantlet-1, FIRING_PATH:slot-28/cheek--1"
+          ],
+          "pairId": "pair-29",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/fore-guard",
+            "FIRING_PATH:citadel/primary",
+            "FIRING_PATH:citadel/shoulder-1",
+            "FIRING_PATH:slot-28/cheek--1",
+            "FIRING_PATH:slot-28/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-31",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-20/armored-turret, FIRING_PATH:citadel/keel"
+          ],
+          "pairId": "pair-31",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-20/armored-turret"
+          ]
+        },
+        {
+          "slotId": "slot-32",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/keel, FIRING_PATH:slot-21/armored-turret"
+          ],
+          "pairId": "pair-31",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-21/armored-turret"
+          ]
+        },
+        {
+          "slotId": "slot-33",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-31/barrel-0, FIRING_PATH:citadel/keel"
+          ],
+          "pairId": "pair-33",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 48,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-31/barrel-0",
+            "FIRING_PATH:slot-35/armored-turret",
+            "FIRING_PATH:slot-37/barrel-1"
+          ]
+        },
+        {
+          "slotId": "slot-34",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/keel, FIRING_PATH:slot-32/barrel-1"
+          ],
+          "pairId": "pair-33",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 48,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-32/barrel-1",
+            "FIRING_PATH:slot-36/cheek-1",
+            "FIRING_PATH:slot-38/barrel-0"
+          ]
+        },
+        {
+          "slotId": "slot-35",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-33/cheek-1, FIRING_PATH:citadel/keel"
+          ],
+          "pairId": "pair-35",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 47,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-33/cheek-1",
+            "FIRING_PATH:slot-37/barrel-0",
+            "FIRING_PATH:slot-37/barrel-1"
+          ]
+        },
+        {
+          "slotId": "slot-36",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/keel, FIRING_PATH:slot-34/cheek-1"
+          ],
+          "pairId": "pair-35",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 47,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:slot-34/cheek-1",
+            "FIRING_PATH:slot-38/barrel-0",
+            "FIRING_PATH:slot-38/barrel-1"
+          ]
+        },
+        {
+          "slotId": "slot-37",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-31/mantlet-1, FIRING_PATH:slot-31/cheek-1, FIRING_PATH:citadel/keel, FIRING_PATH:meso/meso-zone/citadel/keel/VENTRAL_KEEL/8/VENTRAL_KEEL_SUPPORT/KEEL_HAUNCH"
+          ],
+          "pairId": "pair-37",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 42,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:meso/meso-zone/citadel/keel/VENTRAL_KEEL/8/VENTRAL_KEEL_SUPPORT/KEEL_HAUNCH",
+            "FIRING_PATH:slot-31/cheek-1",
+            "FIRING_PATH:slot-31/mantlet-1",
+            "FIRING_PATH:slot-39/barrel-0",
+            "FIRING_PATH:slot-39/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-38",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/keel, FIRING_PATH:meso/meso-zone/citadel/keel/VENTRAL_KEEL/8/VENTRAL_KEEL_SUPPORT/KEEL_HAUNCH, FIRING_PATH:slot-32/cheek-1, FIRING_PATH:slot-32/mantlet-1"
+          ],
+          "pairId": "pair-37",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 42,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:meso/meso-zone/citadel/keel/VENTRAL_KEEL/8/VENTRAL_KEEL_SUPPORT/KEEL_HAUNCH",
+            "FIRING_PATH:slot-32/cheek-1",
+            "FIRING_PATH:slot-32/mantlet-1",
+            "FIRING_PATH:slot-40/barrel-0",
+            "FIRING_PATH:slot-40/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-39",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-port, FIRING_PATH:point_defense-4-0-shroud-0, FIRING_PATH:slot-37/barrel-0, FIRING_PATH:slot-37/barrel-1, FIRING_PATH:citadel/keel"
+          ],
+          "pairId": "pair-39",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 35,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-port",
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:point_defense-4-0-shroud-0",
+            "FIRING_PATH:slot-37/barrel-0",
+            "FIRING_PATH:slot-37/barrel-1",
+            "FIRING_PATH:slot-45/cheek-1",
+            "FIRING_PATH:slot-45/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-40",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/keel, FIRING_PATH:slot-38/armored-turret, FIRING_PATH:slot-38/mantlet-1, FIRING_PATH:point_defense-4-1-shroud-0, FIRING_PATH:citadel/belly-starboard"
+          ],
+          "pairId": "pair-39",
+          "batteryId": "citadel/BOTTOM/M/row-6/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 35,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-starboard",
+            "FIRING_PATH:citadel/keel",
+            "FIRING_PATH:point_defense-4-1-shroud-0",
+            "FIRING_PATH:slot-38/armored-turret",
+            "FIRING_PATH:slot-38/mantlet-1",
+            "FIRING_PATH:slot-46/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-41",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt--1, FIRING_PATH:exterior-bow-citadel-0"
+          ],
+          "pairId": "pair-41",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt--1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-48/cheek--1",
+            "FIRING_PATH:slot-50/cheek--1"
+          ]
+        },
+        {
+          "slotId": "slot-42",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt-1, FIRING_PATH:exterior-bow-citadel-0"
+          ],
+          "pairId": "pair-41",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt-1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-49/cheek-1",
+            "FIRING_PATH:slot-51/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-43",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:slot-20/armored-turret, FIRING_PATH:citadel/belly-port"
+          ],
+          "pairId": "pair-43",
+          "batteryId": "skin-citadel-2-0/BOTTOM/M/row-0/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 48,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-port",
+            "FIRING_PATH:slot-20/armored-turret",
+            "FIRING_PATH:slot-45/cheek-1",
+            "FIRING_PATH:slot-45/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-44",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-starboard, FIRING_PATH:slot-21/armored-turret"
+          ],
+          "pairId": "pair-43",
+          "batteryId": "skin-citadel-2-0/BOTTOM/M/row-0/segment-1",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 48,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-starboard",
+            "FIRING_PATH:slot-21/armored-turret",
+            "FIRING_PATH:slot-46/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-45",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-port, FIRING_PATH:slot-43/cheek-1, FIRING_PATH:slot-20/armored-turret, FIRING_PATH:slot-39/cheek-1, FIRING_PATH:slot-39/mantlet-1"
+          ],
+          "pairId": "pair-45",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-port",
+            "FIRING_PATH:slot-20/armored-turret",
+            "FIRING_PATH:slot-39/cheek-1",
+            "FIRING_PATH:slot-39/mantlet-1",
+            "FIRING_PATH:slot-43/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-46",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belly-starboard, FIRING_PATH:slot-40/mantlet-0, FIRING_PATH:slot-40/cheek-1, FIRING_PATH:slot-21/armored-turret, FIRING_PATH:slot-44/cheek-1, FIRING_PATH:slot-44/mantlet-1"
+          ],
+          "pairId": "pair-45",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belly-starboard",
+            "FIRING_PATH:slot-21/armored-turret",
+            "FIRING_PATH:slot-40/cheek-1",
+            "FIRING_PATH:slot-40/mantlet-0",
+            "FIRING_PATH:slot-44/cheek-1",
+            "FIRING_PATH:slot-44/mantlet-1"
+          ]
+        },
+        {
+          "slotId": "slot-47",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/shoulder--1"
+          ],
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/shoulder--1"
+          ]
+        },
+        {
+          "slotId": "slot-48",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt--1, FIRING_PATH:slot-41/cheek--1, FIRING_PATH:slot-41/mantlet-0, FIRING_PATH:exterior-bow-citadel-0"
+          ],
+          "pairId": "pair-48",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt--1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-41/cheek--1",
+            "FIRING_PATH:slot-41/mantlet-0"
+          ]
+        },
+        {
+          "slotId": "slot-49",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt-1, FIRING_PATH:exterior-bow-citadel-0, FIRING_PATH:slot-42/mantlet-0, FIRING_PATH:slot-42/cheek-1"
+          ],
+          "pairId": "pair-48",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt-1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-42/cheek-1",
+            "FIRING_PATH:slot-42/mantlet-0"
+          ]
+        },
+        {
+          "slotId": "slot-50",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt--1, FIRING_PATH:exterior-bow-citadel-0, FIRING_PATH:slot-48/cheek-1, FIRING_PATH:slot-41/armored-turret"
+          ],
+          "pairId": "pair-50",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt--1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-41/armored-turret",
+            "FIRING_PATH:slot-48/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-51",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/belt-1, FIRING_PATH:slot-42/armored-turret, FIRING_PATH:slot-49/cheek-1, FIRING_PATH:exterior-bow-citadel-0"
+          ],
+          "pairId": "pair-50",
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 20
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 45,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/belt-1",
+            "FIRING_PATH:exterior-bow-citadel-0",
+            "FIRING_PATH:slot-42/armored-turret",
+            "FIRING_PATH:slot-49/cheek-1"
+          ]
+        },
+        {
+          "slotId": "slot-64",
+          "equipmentId": "gun-210",
+          "status": "PARTIAL_ARC",
+          "reasons": [
+            "Sampled operating arc limited by FIRING_PATH:citadel/command-plinth"
+          ],
+          "interfaceOffsetMeters": 0,
+          "pose": {
+            "yaw": 0,
+            "elevation": 45
+          },
+          "parts": 10,
+          "contacts": 17,
+          "clearSamples": 50,
+          "testedSamples": 52,
+          "blockedBy": [
+            "FIRING_PATH:citadel/command-plinth"
+          ]
+        }
+      ]
+    }
+  ],
+  "canonicalStable": true,
+  "errors": [],
+  "pixelRestoration": {
+    "top": {
+      "equal": true,
+      "baselinePngSha256": "fbe07409d4b04c32bf7884b34d0b5567101d7917ead82b76220e6f202819f5b3"
+    },
+    "front": {
+      "equal": true,
+      "baselinePngSha256": "2ca17f292f592a09cce784dc1d929df2e4a75a76b2f79a2d11d67b77f3223b1f"
+    },
+    "side": {
+      "equal": true,
+      "baselinePngSha256": "cd07d7223efde6dba754487536b70351ca8cb346e4c85b679c4c9b6270048cf1"
+    },
+    "iso": {
+      "equal": true,
+      "baselinePngSha256": "b2ede356e72f1323deee0d865011a314f16cf29bdc85d4f1732d367fc8e29517"
+    },
+    "largeCloseup": true
+  }
+}
