@@ -4,6 +4,8 @@ export interface PreviewEquipment extends EquipmentModule {
   kind: "GUN" | "MISSILE";
   caliberMm?: number;
   tubes: number;
+  /** Free editor launcher tilt; absent in historical modules. */
+  launchTiltDegrees?:number;
   body: { width: number; height: number; length: number; z: number };
   barrel: { length: number; radius: number };
   pivotHeight: number;

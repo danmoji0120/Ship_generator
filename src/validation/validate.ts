@@ -1,3 +1,4 @@
+import {validateFreeMountPlan} from "../free-mount/store";
 import {validateModularHardpoints} from "../generation/hardpoint-system/validate";
 import {validateMesoStructures} from '../generation/meso/validate';
 import {validateSurfaceAppearance} from '../generation/appearance/validate';
@@ -336,5 +337,6 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {
-  return b.schemaVersion === 1 ? validateV0(b) : validateArchitecture(b,details);
+  if(b.schemaVersion===2&&b.generatorVersion==='1.8.5.5')return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b)];
+  return b.schemaVersion === 1 ? validateV0(b) : [...validateArchitecture(b,details),...validateFreeMountPlan(b)];
 }

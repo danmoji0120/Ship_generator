@@ -1,0 +1,5 @@
+*.png
+*.json
+!summary.json
+!performance.json
+!ui-report.json

@@ -180,12 +180,18 @@ function directionalExhaust(b: ShipBlueprint) {
 }
 const successful = (r: FitResult) =>
   r.status === "VALID" || r.status === "PARTIAL_ARC";
+export interface ExteriorFitOptions {
+  foundation:ReturnType<typeof previewFoundation>;
+  quick?:boolean;
+  additionalIssues?:(parts:PreviewPart[])=>string[];
+}
 export function fitEquipment(
   b: ShipBlueprint,
   h: Hardpoint,
   e: PreviewEquipment,
   placed: FitResult[] = [],
   env = environment(b),
+  external?:ExteriorFitOptions,
 ): FitResult {
   const result: FitResult = {
     slotId: h.id,
@@ -199,7 +205,7 @@ export function fitEquipment(
     pairId: h.modular?.pairId,
     batteryId: h.modular?.batteryGroupId,
   };
-  const compatibility = moduleCompatibility(h, e);
+  const compatibility = external ? {allowed:true,reasons:[]} : moduleCompatibility(h, e);
   if (!compatibility.allowed) {
     result.reasons = compatibility.reasons;
     return result;
@@ -207,7 +213,7 @@ export function fitEquipment(
   result.interfaceOffsetMeters=dot(sub(equipmentOrigin(h),h.position),h.modular!.frame.normal);
   let foundation: ReturnType<typeof previewFoundation>;
   try {
-    foundation = previewFoundation(h, e, env);
+    foundation = external?.foundation ?? previewFoundation(h, e, env);
   } catch (err) {
     result.status = "INSUFFICIENT_SUPPORT";
     result.reasons = [String(err)];
@@ -274,7 +280,7 @@ export function fitEquipment(
     const errors: string[] = [];
     for (const p of parts) {
       for (const s of query(p.bounds))
-        if (solidsIntrude(p.solid, p.bounds, s.solid, s.bounds))
+        if (!(p===foundation.part&&supportIds.has(s.id))&&solidsIntrude(p.solid, p.bounds, s.solid, s.bounds))
           errors.push(s.id);
       for (const x of env.exclusions(p.bounds)) {
         const box = {
@@ -311,16 +317,18 @@ export function fitEquipment(
         ]);
       if (hit) errors.push("FIRING_PATH:" + hit);
     }
+    if(external?.additionalIssues)errors.push(...external.additionalIssues(parts));
     return [...new Set(errors)];
   };
+  if(external){const baseProblems=problems([foundation.part],[]);if(baseProblems.length){result.status="BLOCKED";result.reasons=baseProblems;return result;}}
   const poses: {
     yaw: number;
     elevation: number;
     parts: PreviewPart[];
     shots: Shot[];
   }[] = [];
-  for (const yaw of e.yaw)
-    for (const elevation of e.elevation) {
+  for (const yaw of external?.quick?[0]:e.yaw)
+    for (const elevation of external?.quick?(e.kind==='MISSILE'?[90]:[20,45]):e.elevation) {
       const geo = equipmentGeometry(h, e, yaw, elevation),
         blockers = problems(geo.parts, geo.shots);
       result.samples.push({

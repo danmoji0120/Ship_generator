@@ -1,3 +1,4 @@
+import {renderFreeMounts} from "./free-mount";
 import {renderModularHardpoints} from "./modular-hardpoints";
 import {renderMesoStructures,renderMesoDiagnostics} from './meso';
 import {setSurfacePresentation} from './textured-surface';
@@ -452,6 +453,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
   if(b.schemaVersion===2&&b.materialAppearance?.version==='1.8.5.2')root.userData.surfaceMaterials=Object.values(m);
   if(b.schemaVersion===2&&b.mesoStructurePlan&&['Normal','Equipment','Complete Ship'].includes(mode))root.add(renderMesoStructures(b,m));
   if(b.schemaVersion===2&&b.modularHardpoints&&mode==="Hardpoints")root.add(renderModularHardpoints(b));
+  if(b.schemaVersion===2&&b.freeMountPlan?.entries.length&&['Normal','Equipment','Complete Ship','Hardpoints','Hardpoint Layout Only'].includes(mode))root.add(renderFreeMounts(b));
   root.userData.blueprint = b;
   return root;
 }

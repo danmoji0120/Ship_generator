@@ -203,15 +203,15 @@ it("detects detached positions and rewritten capacity instead of trusting saved 
   );
 });
 
-it("integrates the default Production pipeline and preserves the historical Blueprint validator", () => {
+it("integrates the explicit historical modular pipeline and preserves the Blueprint validator", () => {
   const b = generateBlueprint(
     { ...structuredClone(DEFAULT_ORDER), shipyardId: "aegis" },
     7,
-    { architecture: "STACKED_BLOCKS", family: "WEDGE_CITADEL" },
+    { architecture: "STACKED_BLOCKS", family: "WEDGE_CITADEL", version:"1.8.5.4.1" },
   );
   const repeated = generateBlueprint(
     { ...structuredClone(DEFAULT_ORDER), shipyardId: "aegis" }, 7,
-    { architecture: "STACKED_BLOCKS", family: "WEDGE_CITADEL" },
+    { architecture: "STACKED_BLOCKS", family: "WEDGE_CITADEL", version:"1.8.5.4.1" },
   );
   expect(JSON.stringify(repeated)).toBe(JSON.stringify(b));
   expect(b.generatorVersion).toBe("1.8.5.4.1");

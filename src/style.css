@@ -1022,3 +1022,4 @@ pre {
 .hardpoint-request .wide { grid-column: 1 / -1; }
 .hardpoint-inspector { margin: 14px 20px; font-size: 12px; color: #bdd1dc; }
 #hardpoint-selection-info { white-space: pre-wrap; font: 11px/1.6 monospace; }
+.free-editor{padding:16px;border:1px solid var(--border,#334453);margin:16px 0;background:#14212d}.free-editor p{font-size:12px;color:#aabccc}.free-tools{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.free-tools label{display:flex;gap:5px;align-items:center}.free-tools input[type=number]{width:72px}.free-editor select{max-width:100%}.free-editor button{margin:4px;padding:7px 10px}.free-editor pre{white-space:pre-wrap;max-height:200px;overflow:auto;font-size:12px}

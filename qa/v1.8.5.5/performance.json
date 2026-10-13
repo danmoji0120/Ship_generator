@@ -1,0 +1,159 @@
+{
+  "environment": "Node 24.19.0, same container, three alternating pairs, isolated CPU run",
+  "pairs": [
+    {
+      "order": "legacy→new",
+      "legacyMs": 6016.760364,
+      "freeMs": 4409.9132309999995,
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "productionDesign": true,
+        "weaponLayout": true,
+        "designRequirements": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "mesoStructurePlan": true,
+        "exteriorDetailPlan": true,
+        "materialAppearance": true
+      },
+      "installedWeaponMountsEqual": true,
+      "legacyEmpty": 100,
+      "newEmpty": 0
+    },
+    {
+      "order": "new→legacy",
+      "legacyMs": 5631.246884,
+      "freeMs": 4594.010002999999,
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "productionDesign": true,
+        "weaponLayout": true,
+        "designRequirements": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "mesoStructurePlan": true,
+        "exteriorDetailPlan": true,
+        "materialAppearance": true
+      },
+      "installedWeaponMountsEqual": true,
+      "legacyEmpty": 100,
+      "newEmpty": 0
+    },
+    {
+      "order": "legacy→new",
+      "legacyMs": 5322.492524000001,
+      "freeMs": 4187.981947,
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "productionDesign": true,
+        "weaponLayout": true,
+        "designRequirements": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "mesoStructurePlan": true,
+        "exteriorDetailPlan": true,
+        "materialAppearance": true
+      },
+      "installedWeaponMountsEqual": true,
+      "legacyEmpty": 100,
+      "newEmpty": 0
+    }
+  ],
+  "surfaceSetupMs": 21.909770000002027,
+  "preview": {
+    "coldMs": 8.529944999998406,
+    "warmMedianMs": 4.959997000001749,
+    "warmP95Ms": 17.05970900000102,
+    "samples": [
+      {
+        "ms": 4.959997000001749,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.090844000002107,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 9.241469000000507,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.383265000000392,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.7434400000020105,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.33379000000059,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.512630999997782,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.6059019999993325,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 17.05970900000102,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.9511229999989155,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.481214000003092,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.4755760000007285,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.404387999999017,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.106368000000657,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 5.337336000000505,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 8.824859000000288,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.431949999998324,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.530527999999322,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.4910280000003695,
+        "status": "DIRECT_VALID"
+      },
+      {
+        "ms": 4.447251999998116,
+        "status": "DIRECT_VALID"
+      }
+    ],
+    "fullSingleMs": 34.03058400000009,
+    "battery8Ms": 330.35423199999786,
+    "batteryStatus": "DIRECT_VALID",
+    "challengingPositionMs": 112.56465000000026,
+    "challengingStatus": "INVALID"
+  },
+  "gpu": "Software SwiftShader browser; hardware GPU timing / actual memory / fleet performance not measured"
+}

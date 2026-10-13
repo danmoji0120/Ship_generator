@@ -1,3 +1,5 @@
+import {retainFreeLoadout} from "./free-mount/store";
+import {setupFreeEquipment} from "./ui/free-equipment";
 import {setupEquipmentPreview} from './ui/equipment-preview';
 import {setupHardpointOrder,readHardpointOrder,applyHardpointOrder,showHardpointInspector,selectHardpoint} from "./ui/hardpoints";
 import type {DetailMode} from './generation/details/types';
@@ -35,6 +37,9 @@ try {
   console.error(e);
 }
 const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
+const freeEditor=setupFreeEquipment(viewer,()=>blueprint,next=>{
+ blueprint=next;storedBlueprint=JSON.stringify(next);$("json-content").textContent=JSON.stringify(next,null,2);viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);
+});
 if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
 $<HTMLSelectElement>("surface-finish").onchange=()=>viewer?.setSurfaceFinish($<HTMLSelectElement>("surface-finish").value as FinishProfile);
@@ -101,8 +106,8 @@ function generate() {
     )
       throw new Error("Seed는 0–4294967295 사이 정수여야 합니다.");
     const start = performance.now(),
-      next = generateBlueprint(order(), seed);
-    present(next, start);
+      next = generateBlueprint(order(), seed,$<HTMLSelectElement>('mount-design-mode').value==='LEGACY'?{version:'1.8.5.4.1'}:undefined);
+    present(blueprint?.schemaVersion===2?retainFreeLoadout(blueprint,next):next, start);
   } catch (e) {
     const failure=$("design-rejection");failure.replaceChildren();
     if(e instanceof DesignRejection){$("order-status").textContent=`설계 거절 · ${[...new Set(e.codes)].join(' / ')}`;const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='필수 요구사항 실패 상세';details.append(summary);const why=document.createElement('p');why.textContent=e.message;details.append(why);failure.append(details);}
@@ -115,7 +120,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     viewer?.show(next);
     blueprint = next;
     showHardpointInspector(next);
-    equipmentPreview.reset();
+    equipmentPreview.reset();freeEditor.reset();
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
     $("ship-name").textContent = next.designName;
@@ -311,6 +316,7 @@ if (import.meta.env.DEV)
       },
       validate: () => validateBlueprint(blueprint),
       diagnostics: () => viewer?.getDiagnostics(),
+      projectMount: (p:import("./blueprint/types").Vec3)=>viewer?.projectShipPoint(p),
       priorities: PRIORITY_LABELS,
     },
   });

@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "name": "New default has no empty reserved slots",
+      "passed": true
+    },
+    {
+      "name": "Mouse hover shows real surface battery ghost",
+      "passed": true
+    },
+    {
+      "name": "Hover leaves canonical data unchanged",
+      "passed": true
+    },
+    {
+      "name": "Pointer drag commits four mirrored rows atomically",
+      "passed": true
+    },
+    {
+      "name": "Hull, armor and baseline weapons unchanged",
+      "passed": true
+    },
+    {
+      "name": "Individual rotation revalidates geometry while retaining stable equipment ID",
+      "passed": true
+    },
+    {
+      "name": "Undo rotation restores original symmetric battery exactly",
+      "passed": true
+    },
+    {
+      "name": "Group deletion removes all owned platforms",
+      "passed": true
+    },
+    {
+      "name": "Undo restores equipment and platforms exactly",
+      "passed": true
+    },
+    {
+      "name": "Redo restores deletion",
+      "passed": true
+    },
+    {
+      "name": "Editor OFF preserves installed equipment",
+      "passed": true
+    },
+    {
+      "name": "Saved file contains actual equipment plan",
+      "passed": true
+    },
+    {
+      "name": "Stored reload preserves anchors, platforms and groups",
+      "passed": true
+    },
+    {
+      "name": "Console errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "firstGhostWallMs": 853
+}

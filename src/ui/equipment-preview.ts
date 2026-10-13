@@ -47,6 +47,7 @@ export function setupEquipmentPreview(
       return;
     }
     const b = getBlueprint();
+    if(b.schemaVersion===2&&b.freeMountPlan?.entries.length){viewer?.setEquipmentPreview();el("equipment-results").textContent="This edited ship contains actual free equipment. Use Equipment Editor for fitment; legacy reserved-slot Preview is limited to unedited ships.";return;}
     if (b.schemaVersion !== 2) {
       el("equipment-results").textContent =
         "Historical Blueprint has no modular preview contract";

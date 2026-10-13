@@ -1,0 +1,3 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {EquipmentHistory} from '../src/free-mount/store';
+const b=JSON.parse(readFileSync('qa/v1.8.5.5/470-equipped.json','utf8')),entry=b.freeMountPlan.entries.find((e:any)=>e.equipmentId==='missile-medium'),ids=b.freeMountPlan.entries.filter((e:any)=>e.pairId===entry.pairId).map((e:any)=>e.id),h=new EquipmentHistory(b);
+h.install({equipmentId:entry.equipmentId,anchor:entry.anchor,headingDegrees:0,launchTiltDegrees:20,platforms:true,mode:'MIRROR',replaceIds:ids});writeFileSync('qa/v1.8.5.5/470-tilted.json',JSON.stringify(h.blueprint));console.log('Tilted launchers installed:',h.blueprint.freeMountPlan!.entries.filter(e=>e.equipmentId==='missile-medium').map(e=>[e.id,e.launchTiltDegrees,e.platform.kind]));

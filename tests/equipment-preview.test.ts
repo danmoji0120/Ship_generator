@@ -1,5 +1,5 @@
 import { beforeAll, it, expect } from "vitest";
-import { generateBlueprint, DEFAULT_ORDER } from "../src/generation/generate";
+import { generateBlueprint as generateHistorical, DEFAULT_ORDER } from "../src/generation/generate";
 import { PREVIEW_EQUIPMENT } from "../src/equipment-preview/library";
 import {
   fitEquipment,
@@ -20,6 +20,7 @@ import { worldPoint } from "../src/generation/weapons/surfaces";
 import { boundsIndex } from "../src/generation/hardpoint-system/geometry";
 import type { ShipBlueprint, Hardpoint } from "../src/blueprint/types";
 let b: ShipBlueprint, m: Hardpoint, original: string;
+const generateBlueprint:typeof generateHistorical=(order,seed,options)=>generateHistorical(order,seed,{...options,version:options?.version??'1.8.5.4.1'});
 const gun = PREVIEW_EQUIPMENT.find((e) => e.id === "gun-210")!;
 const launcher = PREVIEW_EQUIPMENT.find((e) => e.id === "missile-medium")!;
 beforeAll(() => {

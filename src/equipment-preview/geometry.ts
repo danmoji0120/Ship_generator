@@ -69,6 +69,8 @@ function generateEquipmentGeometry(
   const frame = h.modular!.frame,
     parts: PreviewPart[] = [],
     shots: Shot[] = [];
+  const launcherTilt=e.launchTiltDegrees??0,launcherLift=Math.abs(Math.sin(launcherTilt*Math.PI/180))*e.body.length*.5;
+  const launcherPoint=(p:Vec3)=>{const q=posePoint(p,yaw,-launcherTilt,{x:0,y:1,z:0});return {...q,y:q.y+launcherLift};};
   const append = (
     name: string,
     role: PreviewPart["role"],
@@ -83,7 +85,7 @@ function generateEquipmentGeometry(
           h.position,
           frame,
           turn
-            ? posePoint(
+            ? e.kind==='MISSILE'&&launcherTilt?launcherPoint(p):posePoint(
                 p,
                 yaw,
                 tilt ? elevation : 0,
@@ -183,7 +185,11 @@ function generateEquipmentGeometry(
         }),
       });
     }
+  } else if(e.id==='test-pod') {
+    append('utility-pod','ARMOR',facetedBox({x:0,y:1+e.body.height/2,z:0},{x:e.body.width,y:e.body.height,z:e.body.length}),true);
+    append('pod-service-spine','MECHANICAL',facetedBox({x:0,y:1+e.body.height,z:0},{x:1,y:.5,z:e.body.length*.7}),true);
   } else {
+    if(launcherTilt)append('tilt-yoke','MECHANICAL',facetedBox({x:0,y:.85+launcherLift/2,z:0},{x:e.footprint.width*.35,y:launcherLift+.4,z:1.2}));
     append(
       "launcher-cradle",
       "ARMOR",
@@ -223,12 +229,9 @@ function generateEquipmentGeometry(
         origin: worldPoint(
           h.position,
           frame,
-          posePoint(
-            { x, y: 1 + e.body.height * 0.65 + height / 2 + 0.05, z },
-            yaw,
-          ),
+          launcherTilt?launcherPoint({ x, y: 1 + e.body.height * 0.65 + height / 2 + 0.05, z }):posePoint({ x, y: 1 + e.body.height * 0.65 + height / 2 + 0.05, z },yaw),
         ),
-        direction: frame.normal,
+        direction: launcherTilt?worldDirection(frame,posePoint({x:0,y:1,z:0},yaw,-launcherTilt,{x:0,y:0,z:0})):frame.normal,
       });
     }
   }

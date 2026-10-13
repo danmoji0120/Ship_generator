@@ -420,8 +420,9 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
+  freeMountPlan?: import("../free-mount/types").FreeMountPlan;
   modularHardpoints?: import("../generation/hardpoint-system/types").ModularHardpointPlan;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1" | "1.8.5.5";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";

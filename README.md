@@ -694,3 +694,9 @@ The default Requirements-first generator now adds a deterministic, optional Meso
 Blueprint Inspector → **Equipment fitment preview** supports Single / Pair / Battery / Auto, seven procedural gun/missile modules, local-frame sampled operating arcs and explicit failure reasons. An optional preview-only action tests longer paired M batteries by relocating nearby empty slots. Preview OFF restores the original ship; Export stays canonical V1.8.5.4.1 / schema 2. Strength, ammunition and combat simulation are not included.
 
 See [fitment contracts](docs/EQUIPMENT_FITMENT_PREVIEW.md) and [targeted visual QA](qa/v1.8.5.4.2/QA.md). This patch does not modify combat-demo or run the full test/history matrix.
+
+### V1.8.5.5 — free exterior equipment editor
+
+Default generation no longer preallocates EMPTY hardpoints. The Equipment Editor mounts real-size modules on picked Hull/Armor triangles, generates measured adaptive supports, and provides Mirror / Battery, editing, Undo/Redo and Blueprint persistence. Heading and launcher tilt are separate; free placement validates exterior geometry and firing paths without internal-space/feed/power checks. Original automatic weapons are read-only. Legacy reserved-slot generation remains an explicit UI/QA mode; legacy slot orders require that mode.
+
+See [Free-Mount contract](docs/FREE_MOUNT.md) and [actual targeted QA / limitations](qa/v1.8.5.5/QA.md). Historical playback remains unchanged. No combat runtime or full test/history matrix is added.

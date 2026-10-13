@@ -1,0 +1,771 @@
+{
+  "scenarios": [
+    {
+      "name": "470",
+      "cases": [
+        {
+          "label": "Mirrored 210mm battery: four per side",
+          "status": "DIRECT_VALID",
+          "count": 8,
+          "elapsedMs": 440.11497900000006,
+          "request": {
+            "equipmentId": "gun-210",
+            "anchor": {
+              "surfaceId": "skin-citadel-6-1",
+              "structureId": "citadel",
+              "position": {
+                "x": -55,
+                "y": 41.2431653652243,
+                "z": 185
+              },
+              "normal": {
+                "x": 4.967297361045645e-17,
+                "y": 1,
+                "z": 1.5461519878725566e-17
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "platforms": true,
+            "mode": "BATTERY",
+            "count": 4,
+            "spacing": 30,
+            "mirrorBattery": true
+          }
+        },
+        {
+          "label": "Central 500mm main gun",
+          "request": {
+            "equipmentId": "gun-500",
+            "anchor": {
+              "surfaceId": "citadel/command-plinth",
+              "structureId": "citadel",
+              "position": {
+                "x": 0,
+                "y": 67.25432967478163,
+                "z": 150.4
+              },
+              "normal": {
+                "x": 0,
+                "y": 0.828862529413843,
+                "z": 0.5594523280259777
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-9",
+              "platform": "RAISED_BARBETTE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 20
+              }
+            }
+          ],
+          "elapsedMs": 1228.8532139999998
+        },
+        {
+          "label": "Side missile module",
+          "request": {
+            "equipmentId": "missile-medium",
+            "anchor": {
+              "surfaceId": "citadel/belt--1",
+              "structureId": "citadel",
+              "position": {
+                "x": -215.5675284210526,
+                "y": 0,
+                "z": -141
+              },
+              "normal": {
+                "x": -0.5845613576706948,
+                "y": 0,
+                "z": -0.8113495049103032
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "MIRROR",
+            "platforms": true
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-10",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            },
+            {
+              "id": "free-11",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 296.91991600000074
+        },
+        {
+          "label": "Utility pod with external pylon",
+          "request": {
+            "equipmentId": "test-pod",
+            "anchor": {
+              "surfaceId": "skin-citadel-4-0",
+              "structureId": "citadel",
+              "position": {
+                "x": 94.26692391069543,
+                "y": 0,
+                "z": 188
+              },
+              "normal": {
+                "x": 0.9281171169657334,
+                "y": 0,
+                "z": 0.3722883522153426
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true,
+            "platformPreference": "PYLON_BRACE"
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-12",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 50.97166399999969
+        }
+      ],
+      "count": 12,
+      "basePreserved": true
+    },
+    {
+      "name": "stacked-blocks",
+      "cases": [
+        {
+          "label": "Central 500mm main gun",
+          "status": "FAILED",
+          "reasons": [
+            "Error: Error: Platform intersects cap-command-deck-1",
+            "Error: Error: Platform penetrates parent beyond support inset skin-command-deck-6-0",
+            "Error: Error: Platform intersects meso/meso-zone/armored-keel/fore-guard/PRIMARY_ARMOR/0/ARMOR_STEP/TERRACE; Platform intersects meso/meso-zone/armored-keel/fore-guard/PRIMARY_ARMOR/0/ARMOR_STEP/RAISED_CREST",
+            "Error: Error: cannon-0-0-shroud-0; cannon-0-0-shroud-1; EXISTING_ARC:cannon-0-0",
+            "Error: Error: Platform penetrates parent beyond support inset command-deck/fore-guard",
+            "Error: Error: Platform intersects magazine-deck; Platform intersects cap-magazine-deck-1"
+          ]
+        },
+        {
+          "label": "Side missile module",
+          "request": {
+            "equipmentId": "missile-medium",
+            "anchor": {
+              "surfaceId": "armored-keel/belt--1",
+              "structureId": "armored-keel",
+              "position": {
+                "x": -101.58700894337402,
+                "y": -9,
+                "z": -90
+              },
+              "normal": {
+                "x": -0.8290265671139325,
+                "y": 0,
+                "z": -0.5592092193618485
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "MIRROR",
+            "platforms": true
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-1",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            },
+            {
+              "id": "free-2",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 723.7308979999998
+        },
+        {
+          "label": "Utility pod with external pylon",
+          "request": {
+            "equipmentId": "test-pod",
+            "anchor": {
+              "surfaceId": "skin-armored-keel-5-0",
+              "structureId": "armored-keel",
+              "position": {
+                "x": 89.48346855011768,
+                "y": 0,
+                "z": 120
+              },
+              "normal": {
+                "x": 0.20459209184258131,
+                "y": 0.9761979697726973,
+                "z": 0.0719694363403014
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true,
+            "platformPreference": "PYLON_BRACE"
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-3",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 43.16972999999962
+        },
+        {
+          "label": "Mirrored 210mm battery",
+          "request": {
+            "equipmentId": "gun-210",
+            "anchor": {
+              "surfaceId": "skin-magazine-deck-7-0",
+              "structureId": "magazine-deck",
+              "position": {
+                "x": -45,
+                "y": 29.02956549562527,
+                "z": 108
+              },
+              "normal": {
+                "x": -0.17090607317977366,
+                "y": 0.9820055477245313,
+                "z": 0.08035059669046218
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "BATTERY",
+            "platforms": true,
+            "count": 3,
+            "spacing": 27,
+            "mirrorBattery": true
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-4",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 20
+              }
+            },
+            {
+              "id": "free-5",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 20
+              }
+            },
+            {
+              "id": "free-6",
+              "platform": "FLUSH_BASE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 45
+              }
+            },
+            {
+              "id": "free-7",
+              "platform": "FLUSH_BASE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 45
+              }
+            },
+            {
+              "id": "free-8",
+              "platform": "FLUSH_BASE",
+              "pose": {
+                "yaw": -90,
+                "elevation": 70
+              }
+            },
+            {
+              "id": "free-9",
+              "platform": "FLUSH_BASE",
+              "pose": {
+                "yaw": 90,
+                "elevation": 70
+              }
+            }
+          ],
+          "elapsedMs": 10404.407828000001
+        }
+      ],
+      "count": 9,
+      "basePreserved": true
+    },
+    {
+      "name": "spinal-modules",
+      "cases": [
+        {
+          "label": "Central 500mm main gun",
+          "request": {
+            "equipmentId": "gun-500",
+            "anchor": {
+              "surfaceId": "axial-spine",
+              "structureId": "axial-spine",
+              "position": {
+                "x": 0,
+                "y": 24.131249999999998,
+                "z": 96
+              },
+              "normal": {
+                "x": 0,
+                "y": 0.9999999999999999,
+                "z": 0
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true
+          },
+          "status": "DIRECT_VALID",
+          "mounts": [
+            {
+              "id": "free-1",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 20
+              }
+            }
+          ],
+          "elapsedMs": 20.991542999996454
+        },
+        {
+          "label": "Side missile module",
+          "request": {
+            "equipmentId": "missile-medium",
+            "anchor": {
+              "surfaceId": "axial-spine",
+              "structureId": "axial-spine",
+              "position": {
+                "x": -33.75,
+                "y": 0,
+                "z": -90
+              },
+              "normal": {
+                "x": -1,
+                "y": 0,
+                "z": 0
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "MIRROR",
+            "platforms": true
+          },
+          "status": "DIRECT_VALID",
+          "mounts": [
+            {
+              "id": "free-2",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            },
+            {
+              "id": "free-3",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 23.63923999999679
+        },
+        {
+          "label": "Utility pod with external pylon",
+          "request": {
+            "equipmentId": "test-pod",
+            "anchor": {
+              "surfaceId": "drive-1/belt-1",
+              "structureId": "drive-1",
+              "position": {
+                "x": 102.00203816881265,
+                "y": 0,
+                "z": 120
+              },
+              "normal": {
+                "x": 0.9991723710751598,
+                "y": 0,
+                "z": 0.04067644133946882
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true,
+            "platformPreference": "PYLON_BRACE"
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-4",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 9.504855999999563
+        },
+        {
+          "label": "Mirrored 210mm battery",
+          "status": "FAILED",
+          "reasons": [
+            "Error: No nearby exposed Hull / Armor surface",
+            "Error: Error: Platform penetrates parent beyond support inset drive--1/primary",
+            "Error: Error: Platform intersects structural-connector/link-0/0; Platform intersects structural-connector/link-0/2",
+            "Error: Error: Support footprint has no continuous exposed parent surface"
+          ]
+        }
+      ],
+      "count": 4,
+      "basePreserved": true
+    },
+    {
+      "name": "truss-pods",
+      "cases": [
+        {
+          "label": "Central 500mm main gun",
+          "request": {
+            "equipmentId": "gun-500",
+            "anchor": {
+              "surfaceId": "skin-pressure-core-6-0",
+              "structureId": "pressure-core",
+              "position": {
+                "x": 0,
+                "y": 19.76111696073745,
+                "z": -96
+              },
+              "normal": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-1",
+              "platform": "RAISED_BARBETTE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 20
+              }
+            }
+          ],
+          "elapsedMs": 26.701722000005248
+        },
+        {
+          "label": "Side missile module",
+          "request": {
+            "equipmentId": "missile-medium",
+            "anchor": {
+              "surfaceId": "skin-pressure-core-0-0",
+              "structureId": "pressure-core",
+              "position": {
+                "x": -35.88271108794598,
+                "y": 0,
+                "z": -90
+              },
+              "normal": {
+                "x": -1,
+                "y": 0,
+                "z": 0
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "MIRROR",
+            "platforms": true
+          },
+          "status": "DIRECT_VALID",
+          "mounts": [
+            {
+              "id": "free-2",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            },
+            {
+              "id": "free-3",
+              "platform": "DIRECT",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 25.260506999999052
+        },
+        {
+          "label": "Utility pod with external pylon",
+          "request": {
+            "equipmentId": "test-pod",
+            "anchor": {
+              "surfaceId": "engine-pod-1/belt-1",
+              "structureId": "engine-pod-1",
+              "position": {
+                "x": 124.16326351789716,
+                "y": 0,
+                "z": 120
+              },
+              "normal": {
+                "x": 0.9988363597863431,
+                "y": 0,
+                "z": 0.04822785884493685
+              },
+              "space": "SHIP_LOCAL"
+            },
+            "headingDegrees": 0,
+            "mode": "SINGLE",
+            "platforms": true,
+            "platformPreference": "PYLON_BRACE"
+          },
+          "status": "PLATFORM_VALID",
+          "mounts": [
+            {
+              "id": "free-4",
+              "platform": "PYLON_BRACE",
+              "pose": {
+                "yaw": 0,
+                "elevation": 90
+              }
+            }
+          ],
+          "elapsedMs": 12.065771000001405
+        },
+        {
+          "label": "Mirrored 210mm battery",
+          "status": "FAILED",
+          "reasons": [
+            "Error: No nearby exposed Hull / Armor surface"
+          ]
+        }
+      ],
+      "count": 4,
+      "basePreserved": true
+    }
+  ],
+  "render": {
+    "report": [
+      {
+        "name": "470",
+        "off": {
+          "frame": 31,
+          "calls": 30,
+          "triangles": 26314,
+          "points": 0,
+          "lines": 60,
+          "memory": {
+            "geometries": 30,
+            "textures": 3
+          }
+        },
+        "on": {
+          "frame": 33,
+          "calls": 34,
+          "triangles": 36306,
+          "points": 0,
+          "lines": 60,
+          "memory": {
+            "geometries": 34,
+            "textures": 3
+          }
+        },
+        "details": [
+          {
+            "name": "main-gun",
+            "type": "RAISED_BARBETTE"
+          },
+          {
+            "name": "side-missile",
+            "type": "PYLON_BRACE"
+          }
+        ],
+        "reloadPixelsEqual": true,
+        "jsonUnchanged": true
+      },
+      {
+        "name": "stacked-blocks",
+        "off": {
+          "frame": 61,
+          "calls": 31,
+          "triangles": 21748,
+          "points": 0,
+          "lines": 122,
+          "memory": {
+            "geometries": 31,
+            "textures": 3
+          }
+        },
+        "on": {
+          "frame": 63,
+          "calls": 35,
+          "triangles": 29768,
+          "points": 0,
+          "lines": 122,
+          "memory": {
+            "geometries": 35,
+            "textures": 3
+          }
+        },
+        "details": [],
+        "reloadPixelsEqual": true,
+        "jsonUnchanged": true
+      },
+      {
+        "name": "spinal-modules",
+        "off": {
+          "frame": 91,
+          "calls": 66,
+          "triangles": 27024,
+          "points": 0,
+          "lines": 219,
+          "memory": {
+            "geometries": 66,
+            "textures": 3
+          }
+        },
+        "on": {
+          "frame": 93,
+          "calls": 70,
+          "triangles": 31352,
+          "points": 0,
+          "lines": 219,
+          "memory": {
+            "geometries": 70,
+            "textures": 3
+          }
+        },
+        "details": [],
+        "reloadPixelsEqual": true,
+        "jsonUnchanged": true
+      },
+      {
+        "name": "truss-pods",
+        "off": {
+          "frame": 121,
+          "calls": 135,
+          "triangles": 31126,
+          "points": 0,
+          "lines": 292,
+          "memory": {
+            "geometries": 135,
+            "textures": 3
+          }
+        },
+        "on": {
+          "frame": 123,
+          "calls": 139,
+          "triangles": 35470,
+          "points": 0,
+          "lines": 292,
+          "memory": {
+            "geometries": 139,
+            "textures": 3
+          }
+        },
+        "details": [],
+        "reloadPixelsEqual": true,
+        "jsonUnchanged": true
+      }
+    ],
+    "errors": []
+  },
+  "historicalPixels": {
+    "top": true,
+    "front": true,
+    "side": true,
+    "iso": true
+  },
+  "productionUI": {
+    "checks": [
+      {
+        "name": "Production has no QA hook and no empty slots",
+        "passed": true
+      },
+      {
+        "name": "Production import replays exact saved install geometry",
+        "passed": true
+      },
+      {
+        "name": "Production battery deletion preserves unrelated equipment",
+        "passed": true
+      },
+      {
+        "name": "Production Undo restores full saved Blueprint",
+        "passed": true
+      },
+      {
+        "name": "Editor OFF retains committed equipment",
+        "passed": true
+      },
+      {
+        "name": "Production stored reload is stable",
+        "passed": true
+      },
+      {
+        "name": "Production Export preserves anchors/platforms/groups",
+        "passed": true
+      },
+      {
+        "name": "Console errors zero",
+        "passed": true
+      }
+    ],
+    "errors": []
+  }
+}

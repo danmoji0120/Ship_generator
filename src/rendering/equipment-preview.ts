@@ -45,6 +45,7 @@ export function renderEquipmentPreview(
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     mesh.userData.previewParts = parts.map((p) => p.id);
+    let triangleStart=0;mesh.userData.previewRanges=parts.map((p,i)=>{const triangles=(geometries[i].getIndex()?.count??geometries[i].getAttribute('position').count)/3;const range={start:triangleStart,end:triangleStart+triangles,id:p.id.split('/')[0]};triangleStart+=triangles;return range;});
     root.add(mesh);
   }
   if (debug) {
