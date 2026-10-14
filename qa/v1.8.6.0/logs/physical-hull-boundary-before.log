@@ -1,0 +1,293 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+stdout | tests/physical-probe-inspect.test.ts > inspect actual hull seam ray
+{
+  x: 0,
+  z: 0,
+  raw: [
+    {
+      entry: 1007.8043260521854,
+      exit: 1040.0420689379032,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4085925401828,
+      exit: 1007.8043260521854,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8496096670691,
+      exit: 1000.4085925401828,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.0473180484363,
+      exit: 967.8496096670691,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 964.0473180484363,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1007.8043260521854,
+      exit: 1040.0420689379032,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4085925401828,
+      exit: 1007.8043260521854,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8496096670691,
+      exit: 1000.4085925401828,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.0473180484363,
+      exit: 967.8496096670691,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 964.0473180484363,
+      entryNormal: [Object]
+    }
+  ],
+  hits: [
+    [ 'plate/citadel/primary', 940.648216287909, 940.8685330970843 ],
+    [ 'plate/citadel/primary', 940.8685330970843, 940.978691501672 ],
+    [ 'plate/citadel/primary', 940.978691501672, 941.0888499062573 ],
+    [ 'plate/citadel/keel', 1067.0337111685312, 1067.0807596423986 ],
+    [ 'plate/citadel/keel', 1067.0807596423986, 1067.1513323531992 ],
+    [ 'plate/citadel/keel', 1067.1513323531992, 1067.2689535378677 ]
+  ]
+}
+{
+  x: 0.001,
+  z: 0,
+  raw: [
+    {
+      entry: 1007.804550023986,
+      exit: 1040.0420689379032,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4087750541556,
+      exit: 1007.804550023986,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8496096670691,
+      exit: 1000.4087750541556,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.047296734154,
+      exit: 967.8496096670691,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 964.047296734154,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1007.804550023986,
+      exit: 1040.0420689379032,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4087750541556,
+      exit: 1007.804550023986,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8496096670691,
+      exit: 1000.4087750541556,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.047296734154,
+      exit: 967.8496096670691,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 964.047296734154,
+      entryNormal: [Object]
+    }
+  ],
+  hits: [
+    [ 'plate/citadel/primary', 940.648216287909, 940.8685330970843 ],
+    [ 'plate/citadel/primary', 940.8685330970843, 940.978691501672 ],
+    [ 'plate/citadel/primary', 940.978691501672, 941.0888499062573 ],
+    [ 'plate/citadel/keel', 1067.0337111685312, 1067.0807596423986 ],
+    [ 'plate/citadel/keel', 1067.0807596423986, 1067.1513323531992 ],
+    [ 'plate/citadel/keel', 1067.1513323531992, 1067.2689535378677 ]
+  ]
+}
+{
+  x: 0,
+  z: 0.001,
+  raw: [
+    {
+      entry: 1040.0403845803573,
+      exit: 1040.0420689379034,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 960.9810924233703,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1007.8040135134856,
+      exit: 1040.0403845803573,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4085947135474,
+      exit: 1007.8040135134856,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8509973290666,
+      exit: 1000.4085947135474,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.0488675100771,
+      exit: 967.8509973290666,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9810924233703,
+      exit: 964.0488675100771,
+      entryNormal: [Object]
+    }
+  ],
+  hits: [
+    [ 'plate/citadel/primary', 940.6484779018436, 940.868794711019 ],
+    [ 'plate/citadel/primary', 940.868794711019, 940.9789531156066 ],
+    [ 'plate/citadel/primary', 940.9789531156066, 941.089111520192 ],
+    [ 'shell/citadel', 960.9794124125535, 961.0020570325535 ],
+    [ 'shell/citadel', 1040.0194243179033, 1040.0420689379032 ],
+    [ 'plate/citadel/keel', 1067.033690652816, 1067.0807391266833 ],
+    [ 'plate/citadel/keel', 1067.0807391266833, 1067.151311837484 ],
+    [ 'plate/citadel/keel', 1067.151311837484, 1067.2689330221522 ]
+  ]
+}
+{
+  x: 0.001,
+  z: 0.001,
+  raw: [
+    {
+      entry: 1040.0403845803573,
+      exit: 1040.0420689379034,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 960.9810924233703,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1007.8042374852863,
+      exit: 1040.0403845803573,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.4087772275202,
+      exit: 1007.8042374852863,
+      entryNormal: [Object]
+    },
+    {
+      entry: 967.8509973290666,
+      exit: 1000.4087772275202,
+      entryNormal: [Object]
+    },
+    {
+      entry: 964.0488461957948,
+      exit: 967.8509973290666,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9810924233703,
+      exit: 964.0488461957948,
+      entryNormal: [Object]
+    }
+  ],
+  hits: [
+    [ 'plate/citadel/primary', 940.6484779018436, 940.868794711019 ],
+    [ 'plate/citadel/primary', 940.868794711019, 940.9789531156066 ],
+    [ 'plate/citadel/primary', 940.9789531156066, 941.089111520192 ],
+    [ 'shell/citadel', 960.9794124125535, 961.0020570325535 ],
+    [ 'shell/citadel', 1040.0194243179033, 1040.0420689379032 ],
+    [ 'plate/citadel/keel', 1067.033690652816, 1067.0807391266833 ],
+    [ 'plate/citadel/keel', 1067.0807391266833, 1067.151311837484 ],
+    [ 'plate/citadel/keel', 1067.151311837484, 1067.2689330221522 ]
+  ]
+}
+{
+  x: 1,
+  z: 1,
+  raw: [
+    {
+      entry: 1038.3577113919373,
+      exit: 1040.0420689379034,
+      entryNormal: [Object]
+    },
+    {
+      entry: 960.9794124125535,
+      exit: 962.6594232293683,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1007.7157591530832,
+      exit: 1038.3577113919373,
+      entryNormal: [Object]
+    },
+    {
+      entry: 1000.5932798776158,
+      exit: 1007.7157591530832,
+      entryNormal: [Object]
+    },
+    {
+      entry: 969.2372716645431,
+      exit: 1000.5932798776158,
+      entryNormal: [Object]
+    },
+    {
+      entry: 965.5754654070508,
+      exit: 969.2372716645431,
+      entryNormal: [Object]
+    },
+    {
+      entry: 962.6594232293683,
+      exit: 965.5754654070508,
+      entryNormal: [Object]
+    }
+  ],
+  hits: [
+    [ 'plate/citadel/primary', 940.9098302225627, 941.130147031738 ],
+    [ 'plate/citadel/primary', 941.130147031738, 941.2403054363257 ],
+    [ 'plate/citadel/primary', 941.2403054363257, 941.3504638409112 ],
+    [ 'shell/citadel', 960.9794124125535, 961.0020570325535 ],
+    [ 'shell/citadel', 1040.0194243179033, 1040.0420689379032 ],
+    [ 'plate/citadel/keel', 1067.0131954531369, 1067.0602439270042 ],
+    [ 'plate/citadel/keel', 1067.0602439270042, 1067.1308166378049 ],
+    [ 'plate/citadel/keel', 1067.1308166378049, 1067.248437822473 ]
+  ]
+}
+
+ ✓ tests/physical-probe-inspect.test.ts (1 test) 3521ms
+   ✓ inspect actual hull seam ray  3520ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  17:47:50
+   Duration  4.25s (transform 266ms, setup 0ms, collect 382ms, tests 3.52s, environment 0ms, prepare 92ms)

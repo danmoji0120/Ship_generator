@@ -1,3 +1,4 @@
+import {validatePhysicalDesign} from "../physical/validate";
 import {validateFreeMountPlan} from "../free-mount/store";
 import {validateModularHardpoints} from "../generation/hardpoint-system/validate";
 import {validateMesoStructures} from '../generation/meso/validate';
@@ -337,6 +338,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {
-  if(b.schemaVersion===2&&b.generatorVersion==='1.8.5.5')return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b)];
-  return b.schemaVersion === 1 ? validateV0(b) : [...validateArchitecture(b,details),...validateFreeMountPlan(b)];
+  if(b.schemaVersion===2&&b.generatorVersion==='1.8.6.0'&&!b.physicalDesign)return ['Physical design absent from V1.8.6.0'];
+  if(b.schemaVersion===2&&['1.8.5.5','1.8.6.0'].includes(b.generatorVersion))return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b),...validatePhysicalDesign(b)];
+  return b.schemaVersion === 1 ? validateV0(b) : [...validateArchitecture(b,details),...validateFreeMountPlan(b),...validatePhysicalDesign(b)];
 }

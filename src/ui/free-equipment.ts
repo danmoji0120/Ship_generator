@@ -41,7 +41,7 @@ export function setupFreeEquipment(viewer:ShipViewer|undefined,get:()=>AnyShipBl
    const next=pending;pending=undefined;if(next&&enabled())send(next.request,next.quick,next.install);
   };
   worker.onerror=()=>{busy=false;worker?.terminate();worker=undefined;lastBlueprint=undefined;status('Preview worker failed; retry');};
-  busy=true;installing=install;worker.postMessage({id,request,quick,...(lastBlueprint!==b?{blueprint:b}:{})});lastBlueprint=b;
+  busy=true;installing=install;worker.postMessage({id,request,quick,...(lastBlueprint!==b?{blueprint:{...b,physicalDesign:undefined}}:{})});lastBlueprint=b;
  };
  const refresh=(install=false)=>{const r=makeRequest();if(r)send(r,!install,install);};
  const cancel=()=>{sequence++;pending=undefined;anchor=undefined;start=undefined;direction=undefined;replacing=[];latestRequest=undefined;viewer?.setFreeGhost();status(enabled()?'Pick an exposed Hull / Armor surface':'Editor OFF');};

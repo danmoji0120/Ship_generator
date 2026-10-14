@@ -1,0 +1,24 @@
+
+> procedural-shipyard@1.8.6.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 151 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/qa.html                        0.53 kB │ gzip:   0.33 kB
+dist/index.html                     0.58 kB │ gzip:   0.35 kB
+dist/assets/worker-Bn7MhgEY.js    154.90 kB
+dist/assets/worker-CYv20iJh.js    157.32 kB
+dist/assets/qa-2_SQwrGg.css         1.51 kB │ gzip:   0.74 kB
+dist/assets/main-Bd3kQ_Z0.css      15.55 kB │ gzip:   4.22 kB
+dist/assets/qa-JInXpQ1t.js         17.03 kB │ gzip:   6.75 kB
+dist/assets/main-px53NfVn.js       46.23 kB │ gzip:  16.66 kB
+dist/assets/viewer-BFWRKAyn.js  1,009.89 kB │ gzip: 291.56 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 6.13s

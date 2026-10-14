@@ -1,0 +1,87 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+stdout | tests/physical-build-inspect.test.ts > inspect physical generation
+aegis470 10714.578556 39 12380 {
+  hullShellMassKg: 65985600.008768536,
+  armorMassKg: 696842981.9048266,
+  structuralMassEstimateKg: 641312460,
+  coreEquipmentMassEstimateKg: 5630204.293057634,
+  playerMountedEquipmentMassEstimateKg: 0,
+  unresolvedMassEstimateKg: 356284700,
+  totalEstimatedDryMassKg: 1766055946.2066529,
+  targetMassKg: 3562847000,
+  remainingMassKg: 1796791053.7933471,
+  armorBudgetRemainingKg: 5514486.345236659,
+  manufacturingCostIndexKg: 2826390453.6070232,
+  estimatedComponents: [
+    'Structural frame estimate: 18% of historical volume-based target; no new frame generated',
+    'Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems',
+    'Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation',
+    'Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment'
+  ],
+  legacyMassEstimateReplacedKg: 3562847000
+}
+vesper200 24590.323287000003 196 31330 {
+  hullShellMassKg: 1387377.6418454228,
+  armorMassKg: 13605928.539902195,
+  structuralMassEstimateKg: 10152900,
+  coreEquipmentMassEstimateKg: 374737.11725873314,
+  playerMountedEquipmentMassEstimateKg: 0,
+  unresolvedMassEstimateKg: 5640500,
+  totalEstimatedDryMassKg: 31161443.29900635,
+  targetMassKg: 56405000,
+  remainingMassKg: 25243556.70099365,
+  armorBudgetRemainingKg: 285015.96801990643,
+  manufacturingCostIndexKg: 57426416.217265904,
+  estimatedComponents: [
+    'Structural frame estimate: 18% of historical volume-based target; no new frame generated',
+    'Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems',
+    'Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation',
+    'Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment'
+  ],
+  legacyMassEstimateReplacedKg: 56405000
+}
+forge300 25004.080081 155 35540 {
+  hullShellMassKg: 22702834.544124432,
+  armorMassKg: 159647682.22060198,
+  structuralMassEstimateKg: 101769300,
+  coreEquipmentMassEstimateKg: 1878232.5555714418,
+  playerMountedEquipmentMassEstimateKg: 0,
+  unresolvedMassEstimateKg: 56538500,
+  totalEstimatedDryMassKg: 342536549.32029784,
+  targetMassKg: 565385000,
+  remainingMassKg: 222848450.67970216,
+  armorBudgetRemainingKg: 2457162.6957980394,
+  manufacturingCostIndexKg: 451881364.7482609,
+  estimatedComponents: [
+    'Structural frame estimate: 18% of historical volume-based target; no new frame generated',
+    'Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems',
+    'Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation',
+    'Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment'
+  ],
+  legacyMassEstimateReplacedKg: 565385000
+}
+
+ ✓ tests/physical-build-inspect.test.ts (1 test) 60431ms
+   ✓ inspect physical generation  60429ms
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:635:17
+ ❯ processTimers node:internal/timers:571:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+     Errors  1 error
+   Start at  17:00:02
+   Duration  61.45s (transform 532ms, setup 0ms, collect 751ms, tests 60.43s, environment 0ms, prepare 87ms)

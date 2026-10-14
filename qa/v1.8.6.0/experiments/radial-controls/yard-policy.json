@@ -1,0 +1,30 @@
+[
+  {
+    "shipyardId": "aegis",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armor": "CERAMIC_COMPOSITE",
+    "critical": "TUNGSTEN_COMPOSITE",
+    "tech": 4
+  },
+  {
+    "shipyardId": "vesper",
+    "hull": "LIGHT_STRUCTURAL_ALLOY",
+    "armor": "TITANIUM_ARMOR",
+    "critical": "TUNGSTEN_COMPOSITE",
+    "tech": 4
+  },
+  {
+    "shipyardId": "forge",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armor": "ARMORED_STEEL",
+    "critical": "TUNGSTEN_COMPOSITE",
+    "tech": 3
+  },
+  {
+    "shipyardId": "serein",
+    "hull": "TITANIUM_STRUCTURAL_ALLOY",
+    "armor": "NANO_LAMINATE",
+    "critical": "NANO_LAMINATE",
+    "tech": 5
+  }
+]

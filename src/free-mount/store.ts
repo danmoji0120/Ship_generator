@@ -1,3 +1,4 @@
+import {refreshPhysicalMass} from "../physical/policy";
 import type {ShipBlueprint} from '../blueprint/types';
 import {evaluateFreeMount,exteriorEnvironment,savedFit,negativeSpaceIssues,nearbyAnchor} from './planner';
 import {mountForEntry,platformPart,platformCandidate,supportIssues} from './platform';
@@ -18,9 +19,9 @@ export class EquipmentHistory{
   const replacing=new Set(request.replaceIds??[]),before=this.blueprint,entries=[...(before.freeMountPlan?.entries??[]).filter(p=>!replacing.has(p.id)),...r.entries];
   const next={...before,freeMountPlan:{version:'1.8.5.5' as const,nextId:(before.freeMountPlan?.nextId??1)+r.entries.length,entries:normalizeOwnedGroups(structuredClone(entries)),internalValidation:'NOT_PERFORMED' as const}};
   const replay=validateFreeMountPlan(next,true);if(replay.length)throw Error(replay.slice(0,2).join('; '));
-  return this.record(next);
+  return this.record(refreshPhysicalMass(next));
  }
- remove(ids:string[]){const set=new Set(ids),next:ShipBlueprint={...this.blueprint,freeMountPlan:{version:'1.8.5.5',nextId:this.blueprint.freeMountPlan?.nextId??1,entries:normalizeOwnedGroups(structuredClone((this.blueprint.freeMountPlan?.entries??[]).filter(p=>!set.has(p.id)))),internalValidation:'NOT_PERFORMED'}};const errors=validateFreeMountPlan(next,true);if(errors.length)throw Error(errors[0]);return this.record(next);}
+ remove(ids:string[]){const set=new Set(ids),next:ShipBlueprint={...this.blueprint,freeMountPlan:{version:'1.8.5.5',nextId:this.blueprint.freeMountPlan?.nextId??1,entries:normalizeOwnedGroups(structuredClone((this.blueprint.freeMountPlan?.entries??[]).filter(p=>!set.has(p.id)))),internalValidation:'NOT_PERFORMED'}};const errors=validateFreeMountPlan(next,true);if(errors.length)throw Error(errors[0]);return this.record(refreshPhysicalMass(next));}
  undo(){const prior=this.past.pop();if(prior){this.future.push(this.blueprint);this.blueprint=prior;}return this.blueprint;}
  redo(){const next=this.future.pop();if(next){this.past.push(this.blueprint);this.blueprint=next;}return this.blueprint;}
 }
@@ -56,5 +57,5 @@ export function retainFreeLoadout(previous:ShipBlueprint,next:ShipBlueprint){
  if(!previous.freeMountPlan?.entries.length)return next;
  const candidate={...next,freeMountPlan:structuredClone(previous.freeMountPlan)},errors=validateFreeMountPlan(candidate);
  if(errors.length)throw Error('Regeneration would invalidate equipment anchors; current ship is retained. Export or remove player equipment before changing the design. '+errors[0]);
- return candidate;
+ return refreshPhysicalMass(candidate);
 }

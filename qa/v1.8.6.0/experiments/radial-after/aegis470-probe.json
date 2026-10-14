@@ -1,0 +1,222 @@
+{
+  "valid": true,
+  "exactForStoredCells": true,
+  "approximation": "BOUNDED_FACET_SKINS",
+  "warnings": [
+    "Exact entry/exit and integrated layer mass for stored finite convex cells. Radial inset for verified enclosing cells, otherwise separately verified finite parallel triangle skins with an explicit source warning. Collinear clip edges are simplified within 1e-7m. Geometry follows retained faceted render geometry, not a uniform normal-offset smooth shell. Curves are faceted; corners taper. Source contacts/buried regions are removed by convex subtraction. No penetration coefficients calibrated.",
+    "citadel/shoulder--1: facet depth saturation; nominal 101.686mm, actual 0.001–101.686mm",
+    "citadel/shoulder-1: facet depth saturation; nominal 101.686mm, actual 0.000–101.686mm"
+  ],
+  "hits": [
+    {
+      "surfaceId": "plate/citadel/primary",
+      "plateId": "plate/citadel/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "TUNGSTEN_RICH_ALLOY",
+      "layerId": "plate/citadel/primary/heavy",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 92.15292323854297,
+      "localFacetLayerThicknessMm": 92.15292323854295,
+      "pathLengthM": 0.09525429384268591,
+      "entryPoint": {
+        "x": 0,
+        "y": 59.35178371209099,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 59.256529418248306,
+        "z": 0
+      },
+      "entryDistanceM": 880.648216287909,
+      "exitDistanceM": 880.7434705817517,
+      "incidenceDegrees": 6.2308239561384955,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9674411464401628,
+        "z": 0.25309608486609086
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9940927186686789,
+        "z": -0.10853417291302574
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/citadel/primary",
+      "plateId": "plate/citadel/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "TITANIUM_BACKING",
+      "layerId": "plate/citadel/primary/support",
+      "layerOrder": 1,
+      "nominalLayerThicknessMm": 46.076461619271484,
+      "localFacetLayerThicknessMm": 46.07646161927148,
+      "pathLengthM": 0.04762714692128611,
+      "entryPoint": {
+        "x": 0,
+        "y": 59.256529418248306,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 59.20890227132702,
+        "z": 0
+      },
+      "entryDistanceM": 880.7434705817517,
+      "exitDistanceM": 880.791097728673,
+      "incidenceDegrees": 14.660798477695453,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9674411464401628,
+        "z": 0.25309608486609086
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9674411464401629,
+        "z": 0.25309608486609125
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/citadel/primary",
+      "plateId": "plate/citadel/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "LIGHT_SPALL_BACKING",
+      "layerId": "plate/citadel/primary/spall",
+      "layerOrder": 2,
+      "nominalLayerThicknessMm": 46.076461619271484,
+      "localFacetLayerThicknessMm": 46.07646161927148,
+      "pathLengthM": 0.047627146921513486,
+      "entryPoint": {
+        "x": 0,
+        "y": 59.20890227132702,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 59.161275124405506,
+        "z": 0
+      },
+      "entryDistanceM": 880.791097728673,
+      "exitDistanceM": 880.8387248755945,
+      "incidenceDegrees": 14.660798477695426,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9674411464401628,
+        "z": 0.25309608486609086
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9674411464401629,
+        "z": 0.25309608486609075
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/citadel/keel",
+      "plateId": "plate/citadel/keel",
+      "materialId": "CERAMIC_COMPOSITE",
+      "constituentMaterialId": "FIBER_SPALL_BACKING",
+      "layerId": "plate/citadel/keel/spall",
+      "layerOrder": 2,
+      "nominalLayerThicknessMm": 20.33719685264397,
+      "localFacetLayerThicknessMm": 20.337196852643967,
+      "pathLengthM": 0.020341476310250073,
+      "entryPoint": {
+        "x": 0,
+        "y": -67.1672461563162,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": -67.18758763262645,
+        "z": 0
+      },
+      "entryDistanceM": 1007.1672461563162,
+      "exitDistanceM": 1007.1875876326264,
+      "incidenceDegrees": 1.1752990319651042,
+      "surfaceNormal": {
+        "x": 0,
+        "y": -0.9997896191197277,
+        "z": 0.0205113992801586
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9997896191197275,
+        "z": -0.02051139928015859
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/citadel/keel",
+      "plateId": "plate/citadel/keel",
+      "materialId": "CERAMIC_COMPOSITE",
+      "constituentMaterialId": "STEEL_BACKING",
+      "layerId": "plate/citadel/keel/support",
+      "layerOrder": 1,
+      "nominalLayerThicknessMm": 30.505795278965948,
+      "localFacetLayerThicknessMm": 30.505795278965948,
+      "pathLengthM": 0.030512214465488796,
+      "entryPoint": {
+        "x": 0,
+        "y": -67.18758763262633,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": -67.21809984709182,
+        "z": 0
+      },
+      "entryDistanceM": 1007.1875876326263,
+      "exitDistanceM": 1007.2180998470918,
+      "incidenceDegrees": 1.1752990319651053,
+      "surfaceNormal": {
+        "x": 0,
+        "y": -0.9997896191197277,
+        "z": 0.0205113992801586
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9997896191197276,
+        "z": -0.020511399280158608
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/citadel/keel",
+      "plateId": "plate/citadel/keel",
+      "materialId": "CERAMIC_COMPOSITE",
+      "constituentMaterialId": "CERAMIC_STRIKE_FACE",
+      "layerId": "plate/citadel/keel/ceramic",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 50.84299213160992,
+      "localFacetLayerThicknessMm": 50.84299213160992,
+      "pathLengthM": 0.050853690775852556,
+      "entryPoint": {
+        "x": 0,
+        "y": -67.21809984709182,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": -67.26895353786767,
+        "z": 0
+      },
+      "entryDistanceM": 1007.2180998470918,
+      "exitDistanceM": 1007.2689535378677,
+      "incidenceDegrees": 1.175299031965098,
+      "surfaceNormal": {
+        "x": 0,
+        "y": -0.9997896191197277,
+        "z": 0.0205113992801586
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9997896191197276,
+        "z": -0.02051139928015848
+      },
+      "coveredByArmor": true
+    }
+  ]
+}

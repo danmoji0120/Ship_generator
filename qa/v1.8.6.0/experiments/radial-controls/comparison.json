@@ -1,0 +1,1161 @@
+[
+  {
+    "name": "ARMOR_FIRST",
+    "planningMs": 2980.7999999998137,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 65970334.91757129,
+      "armorMassKg": 364080376.3212477,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1433278075.5318766,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2129568924.4681234,
+      "armorBudgetRemainingKg": 418332774.4231366,
+      "manufacturingCostIndexKg": 1519266218.1717856,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 226.69242846060834,
+      "areaWeightedNominalMm": 123.23711270506168,
+      "materials": [
+        "TUNGSTEN_COMPOSITE",
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 22.644619999999996,
+      "maxMm": 22.644619999999996,
+      "areaWeightedNominalMm": 22.644619999999996,
+      "materials": [
+        "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 100,
+        "mobility": 50,
+        "endurance": 50,
+        "missile": 50,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 849566576.4844257,
+        "armor": 782413150.7443843,
+        "propulsion": 550014488.0884957,
+        "endurance": 522727873.9154527,
+        "sensor": 279771975.1146586,
+        "equipment": 578352935.6525832
+      },
+      "hullMaterialPreference": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "TUNGSTEN_COMPOSITE",
+      "hullThicknessMm": 22.644619999999996,
+      "armorCoveragePreference": 0.95,
+      "criticalZoneProtectionPreference": 1,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.9,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.8,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.75,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Armor mass competition: nominal thickness scaled by 0.345528 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.95865136804,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.42294610506622227,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "MOBILITY_FIRST",
+    "planningMs": 734.5,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 20002417.762156498,
+      "armorMassKg": 200810901.79336196,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1224040683.848576,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2338806316.151424,
+      "armorBudgetRemainingKg": 251420754.7139085,
+      "manufacturingCostIndexKg": 666597787.0533462,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 185.96954641562627,
+      "areaWeightedNominalMm": 101.09888788988283,
+      "materials": [
+        "TITANIUM_ARMOR"
+      ]
+    },
+    "hull": {
+      "minMm": 19.247926999999997,
+      "maxMm": 19.247926999999997,
+      "areaWeightedNominalMm": 19.247926999999997,
+      "materials": [
+        "LIGHT_STRUCTURAL_ALLOY"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 50,
+        "mobility": 100,
+        "endurance": 50,
+        "missile": 50,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 812065681.5999221,
+        "armor": 452231656.50727046,
+        "propulsion": 844154341.1919527,
+        "endurance": 545411173.9792047,
+        "sensor": 296462974.8214329,
+        "equipment": 612521171.9002172
+      },
+      "hullMaterialPreference": "LIGHT_STRUCTURAL_ALLOY",
+      "armorMaterialPreference": "TITANIUM_ARMOR",
+      "criticalArmorMaterialPreference": "TITANIUM_ARMOR",
+      "hullThicknessMm": 19.247926999999997,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.55,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 1.0142857142857142,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Mobility: lower-density hull/armor selected at higher manufacturing cost; normalized propulsion reserve competes with armor.",
+        "Armor mass competition: nominal thickness scaled by 0.383975 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.8335634797,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.42294598902185365,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "FIREPOWER_FIRST",
+    "planningMs": 990.2999999998137,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 65970334.91757129,
+      "armorMassKg": 196753800.89609975,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1265951500.1067288,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2296895499.8932714,
+      "armorBudgetRemainingKg": 247288741.39004683,
+      "manufacturingCostIndexKg": 538179457.0682108,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 191.09508211513793,
+      "areaWeightedNominalMm": 103.88528872719787,
+      "materials": [
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 22.644619999999996,
+      "maxMm": 22.644619999999996,
+      "areaWeightedNominalMm": 22.644619999999996,
+      "materials": [
+        "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 100,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "missile": 50,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 855323820.7474955,
+        "armor": 444042542.2861466,
+        "propulsion": 563622519.9830246,
+        "endurance": 538115417.6731124,
+        "sensor": 291094555.4986961,
+        "equipment": 870648143.811525
+      },
+      "hullMaterialPreference": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+      "hullThicknessMm": 22.644619999999996,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.65,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.9166666666666666,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Armor mass competition: nominal thickness scaled by 0.394558 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.84920519736,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.42294600353271694,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "ENDURANCE_FIRST",
+    "planningMs": 1366.300000000745,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 40841451.238103665,
+      "armorMassKg": 194606578.7045967,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1238675394.235758,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2324171605.764242,
+      "armorBudgetRemainingKg": 244435814.56637698,
+      "manufacturingCostIndexKg": 589580142.6053431,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 188.94325251403038,
+      "areaWeightedNominalMm": 102.71548714829899,
+      "materials": [
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 24.4561896,
+      "maxMm": 24.4561896,
+      "areaWeightedNominalMm": 24.456189600000002,
+      "materials": [
+        "TITANIUM_STRUCTURAL_ALLOY"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 100,
+        "missile": 50,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 828519325.0261128,
+        "armor": 439042393.2709737,
+        "propulsion": 559683008.6377368,
+        "endurance": 852964298.2021209,
+        "sensor": 287816680.0331939,
+        "equipment": 594821294.8298621
+      },
+      "hullMaterialPreference": "TITANIUM_STRUCTURAL_ALLOY",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+      "hullThicknessMm": 24.4561896,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.65,
+        "frameRedundancyPreference": 0.7555555555555555,
+        "compartmentSubdivisionPreference": 0.875,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.8666666666666667,
+        "systemPlacementPreference": "DISTRIBUTED",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Endurance: support reserve and redundancy/subdivision preferences increased; no fabricated internal rooms or simulated endurance bonus.",
+        "Armor mass competition: nominal thickness scaled by 0.390115 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.8426348201,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.4229459974373604,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "BALANCED",
+    "planningMs": 1995.5,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 65970334.91757129,
+      "armorMassKg": 219727244.59662452,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1288924943.8072534,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2273922056.1927466,
+      "armorBudgetRemainingKg": 278034763.0120388,
+      "manufacturingCostIndexKg": 593315721.9494702,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 214.21342024583987,
+      "areaWeightedNominalMm": 116.45313637300951,
+      "materials": [
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 22.644619999999996,
+      "maxMm": 22.644619999999996,
+      "areaWeightedNominalMm": 22.644619999999996,
+      "materials": [
+        "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "missile": 50,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 873230309.1883345,
+        "armor": 497762007.6086634,
+        "propulsion": 605946947.2068257,
+        "endurance": 585974577.6877182,
+        "sensor": 326310649.432346,
+        "equipment": 673622508.8761123
+      },
+      "hullMaterialPreference": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+      "hullThicknessMm": 22.644619999999996,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.65,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Armor mass competition: nominal thickness scaled by 0.442290 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.92012213083,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.4229460693225458,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "MISSILES_FIRST",
+    "planningMs": 1657.0999999996275,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 65970334.91757129,
+      "armorMassKg": 202812452.24147522,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1272010151.452104,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2290836848.547896,
+      "armorBudgetRemainingKg": 255357699.63035882,
+      "manufacturingCostIndexKg": 552720220.2971119,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 197.17494261671985,
+      "areaWeightedNominalMm": 107.19049014820379,
+      "materials": [
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 22.644619999999996,
+      "maxMm": 22.644619999999996,
+      "areaWeightedNominalMm": 22.644619999999996,
+      "materials": [
+        "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "missile": 100,
+        "sensor": 50
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 860033023.9427247,
+        "armor": 458170151.87183404,
+        "propulsion": 574753363.8990207,
+        "endurance": 550701833.4858158,
+        "sensor": 300355988.44931346,
+        "equipment": 818832638.3512912
+      },
+      "hullMaterialPreference": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+      "hullThicknessMm": 22.644619999999996,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.65,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.9166666666666666,
+        "sensorSupportProtectionPreference": 0.5833333333333333
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Armor mass competition: nominal thickness scaled by 0.407111 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.86779745435,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.4229460207808035,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "SENSORS_FIRST",
+    "planningMs": 1067.7999999998137,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 65970334.91757129,
+      "armorMassKg": 198483194.0713472,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1267680893.2819762,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2295166106.718024,
+      "armorBudgetRemainingKg": 249589085.8091196,
+      "manufacturingCostIndexKg": 542330000.6888046,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 192.8292921584469,
+      "areaWeightedNominalMm": 104.82805929991494,
+      "materials": [
+        "CERAMIC_COMPOSITE"
+      ]
+    },
+    "hull": {
+      "minMm": 22.644619999999996,
+      "maxMm": 22.644619999999996,
+      "areaWeightedNominalMm": 22.644619999999996,
+      "materials": [
+        "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 50,
+        "survivability": 50,
+        "mobility": 50,
+        "endurance": 50,
+        "missile": 50,
+        "sensor": 100
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 856667066.6122689,
+        "armor": 448072279.8804668,
+        "propulsion": 566797464.7543072,
+        "endurance": 541705547.5298704,
+        "sensor": 542665316.744121,
+        "equipment": 606939324.4789655
+      },
+      "hullMaterialPreference": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "armorMaterialPreference": "CERAMIC_COMPOSITE",
+      "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+      "hullThicknessMm": 22.644619999999996,
+      "armorCoveragePreference": 0.825,
+      "criticalZoneProtectionPreference": 0.75,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.65,
+        "frameRedundancyPreference": 0.4777777777777778,
+        "compartmentSubdivisionPreference": 0.5625,
+        "bulkheadProtectionPreference": 0.55,
+        "systemRedundancyPreference": 0.5333333333333333,
+        "systemPlacementPreference": "PROTECTED_CORE",
+        "protectedVolumePreference": 0.55,
+        "propulsionSupportPreference": 0.6571428571428571,
+        "fireControlProtectionPreference": 0.5833333333333333,
+        "missileSupportProtectionPreference": 0.5833333333333333,
+        "sensorSupportProtectionPreference": 0.9166666666666666
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Armor mass competition: nominal thickness scaled by 0.398138 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.85450419795,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.42294600844861396,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  },
+  {
+    "name": "ALL_HIGH",
+    "planningMs": 740,
+    "issues": [],
+    "mass": {
+      "hullShellMassKg": 21602013.530572306,
+      "armorMassKg": 248465298.22068825,
+      "structuralMassEstimateKg": 641312460,
+      "coreEquipmentMassEstimateKg": 5630204.293057634,
+      "playerMountedEquipmentMassEstimateKg": 0,
+      "unresolvedMassEstimateKg": 356284700,
+      "totalEstimatedDryMassKg": 1273294676.0443182,
+      "targetMassKg": 3562847000,
+      "remainingMassKg": 2289552323.955682,
+      "armorBudgetRemainingKg": 282043921.07661176,
+      "manufacturingCostIndexKg": 1088113068.8980105,
+      "estimatedComponents": [
+        "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+        "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+        "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+        "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+      ],
+      "legacyMassEstimateReplacedKg": 3562847000
+    },
+    "armor": {
+      "minMm": 0.00015974602831647644,
+      "maxMm": 150.5789928958478,
+      "areaWeightedNominalMm": 81.8594786866478,
+      "materials": [
+        "TUNGSTEN_COMPOSITE",
+        "TITANIUM_ARMOR"
+      ]
+    },
+    "hull": {
+      "minMm": 20.78776116,
+      "maxMm": 20.78776116,
+      "areaWeightedNominalMm": 20.78776116,
+      "materials": [
+        "LIGHT_STRUCTURAL_ALLOY"
+      ]
+    },
+    "policy": {
+      "version": "1.8.6.0",
+      "priorityWeights": {
+        "firepower": 100,
+        "survivability": 100,
+        "mobility": 100,
+        "endurance": 100,
+        "missile": 100,
+        "sensor": 100
+      },
+      "priorityMapping": {
+        "ARMOR": "survivability",
+        "MISSILES": "missile",
+        "SENSORS": "sensor"
+      },
+      "targetMassBudgetKg": 3562847000,
+      "budgetSource": "ORDER_TARGET",
+      "allocationsKg": {
+        "structure": 759378764.6757166,
+        "armor": 530509219.29730004,
+        "propulsion": 617133201.614476,
+        "endurance": 610764992.5698483,
+        "sensor": 350457605.47518605,
+        "equipment": 694603216.3674732
+      },
+      "hullMaterialPreference": "LIGHT_STRUCTURAL_ALLOY",
+      "armorMaterialPreference": "TITANIUM_ARMOR",
+      "criticalArmorMaterialPreference": "TUNGSTEN_COMPOSITE",
+      "hullThicknessMm": 20.78776116,
+      "armorCoveragePreference": 0.95,
+      "criticalZoneProtectionPreference": 1,
+      "future": {
+        "status": "POLICY_ONLY_NOT_GENERATED",
+        "frameDensityPreference": 0.8,
+        "frameRedundancyPreference": 0.7555555555555555,
+        "compartmentSubdivisionPreference": 0.875,
+        "bulkheadProtectionPreference": 0.8,
+        "systemRedundancyPreference": 0.8666666666666667,
+        "systemPlacementPreference": "DISTRIBUTED",
+        "protectedVolumePreference": 0.75,
+        "propulsionSupportPreference": 1.0142857142857142,
+        "fireControlProtectionPreference": 0.9166666666666666,
+        "missileSupportProtectionPreference": 0.9166666666666666,
+        "sensorSupportProtectionPreference": 0.9166666666666666
+      },
+      "costPreference": 0.6,
+      "manufacturingTechPreference": 4,
+      "tradeoffs": [
+        "Legacy volume-derived total is a target estimate, replaced by the new mass breakdown, never added to it.",
+        "Existing doctrine equipment/support reservations are not additional measured mass.",
+        "Armor footprint is bounded by retained geometry: increased coverage target cannot create plates across openings or previously unarmored gaps.",
+        "Frame, bulkhead, supply and sensor capability values below are future policy only.",
+        "Mobility: lower-density hull/armor selected at higher manufacturing cost; normalized propulsion reserve competes with armor.",
+        "Endurance: support reserve and redundancy/subdivision preferences increased; no fabricated internal rooms or simulated endurance bonus.",
+        "All priorities high: fixed target mass retained, competing reserves normalized; simultaneous maximum targets cannot all be funded.",
+        "Armor mass competition: nominal thickness scaled by 0.229515 against conservative actual-area/density upper bound; no budget value overwritten.",
+        "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+      ],
+      "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS"
+    },
+    "coverage": {
+      "method": "AREA_WEIGHTED_FACET_CENTER_AND_3_INSET_CORNER_RAYS_APPROXIMATE",
+      "ratio": 0.9955432873998453,
+      "samples": 688,
+      "skipped": 0,
+      "directions": {
+        "fore": {
+          "sampledAreaM2": 28758.071760711515,
+          "armoredAreaM2": 28758.071760711515,
+          "ratio": 1
+        },
+        "bottom": {
+          "sampledAreaM2": 138625.79855586286,
+          "armoredAreaM2": 138625.79855586286,
+          "ratio": 1
+        },
+        "top": {
+          "sampledAreaM2": 138553.85050580406,
+          "armoredAreaM2": 137170.09622794238,
+          "ratio": 0.9900128774999024
+        },
+        "left": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "right": {
+          "sampledAreaM2": 26364.72443217296,
+          "armoredAreaM2": 26364.72443217296,
+          "ratio": 1
+        },
+        "aft": {
+          "sampledAreaM2": 12603.537199909299,
+          "armoredAreaM2": 12332.644640320985,
+          "ratio": 0.9785066243474678
+        }
+      }
+    },
+    "sourceAreaRetention": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 455906.7263653838,
+      "hullOuterAreaM2": 371270.7068866337,
+      "eligibleArmorAreaM2": 1077931.5690352202,
+      "armorRetainedFraction": 0.4229458895738933,
+      "criticalRetainedFraction": 0.5183148367603302
+    }
+  }
+]

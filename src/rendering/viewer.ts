@@ -1,3 +1,5 @@
+import {armorRayProbe, type ProbeHit} from "../physical/probe";
+import {renderArmorProbe} from "./physical";
 import {createMountPicking,pickMountSurface} from '../free-mount/picking';
 import type {SurfaceAnchor,FreeMountResult} from '../free-mount/types';
 import {renderEquipmentPreview} from './equipment-preview';
@@ -11,6 +13,8 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  onArmorProbe?: (result:ReturnType<typeof armorRayProbe>)=>void;
+  private armorProbeVisual?:THREE.Group;
   onFreePointer?: (phase:'move'|'down'|'up',anchor:SurfaceAnchor|undefined,event:PointerEvent)=>void;
   onFreeSelect?: (id:string)=>void;
   private freeEditor=false;
@@ -51,6 +55,12 @@ export class ShipViewer {
     container.append(this.renderer.domElement);
     let down={x:0,y:0};this.renderer.domElement.addEventListener("pointerdown",e=>{down={x:e.clientX,y:e.clientY};});
     this.renderer.domElement.addEventListener("pointerup",e=>{if(this.freeEditor||!this.ship||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const rect=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),this.camera);const markers:THREE.Object3D[]=[];this.ship.traverse(n=>{if(n.userData.modularSlotIds)markers.push(n);});const hit=ray.intersectObjects(markers,false)[0];if(hit?.instanceId!==undefined)this.onHardpointSelect?.(hit.object.userData.modularSlotIds[hit.instanceId]);});
+    this.renderer.domElement.addEventListener('pointerup',e=>{
+      if(this.freeEditor||!this.ship||this.mode!=='Armor Ray Probe'||this.blueprint?.schemaVersion!==2||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;
+      const ray=this.screenRay(e.clientX,e.clientY).ray,position=new THREE.Vector3(),quaternion=new THREE.Quaternion(),scale=new THREE.Vector3();this.ship.matrixWorld.decompose(position,quaternion,scale);
+      const vec=(p:THREE.Vector3)=>({x:p.x,y:p.y,z:p.z}),max=this.blueprint.order.length*8,result=armorRayProbe(this.blueprint,vec(ray.origin),vec(ray.direction),max,{position:vec(position),quaternion});
+      this.setArmorProbeVisual(vec(ray.origin),vec(ray.direction),max,result.hits);this.onArmorProbe?.(result);
+    });
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     for(const [event,phase]of [['pointermove','move'],['pointerdown','down'],['pointerup','up']] as const)this.renderer.domElement.addEventListener(event,(e:PointerEvent)=>{
       if(!this.freeEditor||!this.ship||e.button>0&&phase!=='move')return;
@@ -100,7 +110,7 @@ export class ShipViewer {
     this.renderer.render(this.scene, this.camera);
   };
   show(b: AnyShipBlueprint, reset = true) {
-    this.setEquipmentPreview();this.setFreeGhost();
+    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
     this.blueprint = b;
     if (this.ship) {
@@ -135,6 +145,8 @@ export class ShipViewer {
   setDetailMode(mode:DetailMode){this.detailMode=mode;if(this.ship)setDetailVisibility(this.ship,mode,Infinity);}
   projectShipPoint(p:{x:number;y:number;z:number}){this.ship?.updateMatrixWorld(true);const q=new THREE.Vector3(p.x,p.y,p.z).applyMatrix4(this.ship?.matrixWorld??new THREE.Matrix4()).project(this.camera),r=this.renderer.domElement.getBoundingClientRect();return{x:r.left+(q.x+1)*r.width/2,y:r.top+(1-q.y)*r.height/2};}
   screenRay(x:number,y:number){const rect=this.renderer.domElement.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((x-rect.left)/rect.width*2-1,-(y-rect.top)/rect.height*2+1),this.camera);return ray;}
+  clearArmorProbe(){if(this.armorProbeVisual){this.scene.remove(this.armorProbeVisual);disposeShip(this.armorProbeVisual);this.armorProbeVisual=undefined;}}
+  setArmorProbeVisual(origin:import('../blueprint/types').Vec3,direction:import('../blueprint/types').Vec3,max:number,hits:ProbeHit[]){this.clearArmorProbe();this.armorProbeVisual=renderArmorProbe(origin,direction,max,hits);this.scene.add(this.armorProbeVisual);}
   setFreeEditor(enabled:boolean){this.freeEditor=enabled;this.controls.mouseButtons.LEFT=enabled?null!:THREE.MOUSE.ROTATE;this.controls.mouseButtons.RIGHT=enabled?THREE.MOUSE.ROTATE:THREE.MOUSE.PAN;if(enabled&&this.blueprint?.schemaVersion===2&&!this.mountPicking)this.mountPicking=createMountPicking(this.blueprint);if(!enabled)this.setFreeGhost();this.controls.minDistance=enabled?.1:this.radius*1.08;this.renderer.domElement.style.cursor=enabled?'crosshair':'';}
   setFreeGhost(result?:FreeMountResult){if(this.freeGhost){this.scene.remove(this.freeGhost);disposeShip(this.freeGhost);this.freeGhost=undefined;}if(result&&this.blueprint?.schemaVersion===2&&result.fits.length){this.freeGhost=renderEquipmentPreview({version:'1.8.5.4.2',request:{scope:'AUTO',equipmentId:'gun-210'},results:result.fits,elapsedMs:0,cached:false,limitations:[]},this.blueprint);this.freeGhost.traverse(n=>{if(n instanceof THREE.Mesh){const m=n.material as THREE.MeshStandardMaterial;m.transparent=true;m.opacity=.65;m.color.lerp(new THREE.Color(result.status==='DIRECT_VALID'?0x71d7ac:0x76abdf),.4);}});this.freeGhost.matrixAutoUpdate=false;this.freeGhost.matrix.copy(this.ship?.matrixWorld??new THREE.Matrix4());this.scene.add(this.freeGhost);}}
   setEquipmentPreview(plan?:PreviewPlan,debug=false){
@@ -244,7 +256,7 @@ export class ShipViewer {
     };
   }
   dispose() {
-    this.setEquipmentPreview();this.setFreeGhost();if(this.mountPicking)disposeShip(this.mountPicking);
+    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();if(this.mountPicking)disposeShip(this.mountPicking);
     this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();

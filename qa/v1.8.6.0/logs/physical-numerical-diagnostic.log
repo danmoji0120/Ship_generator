@@ -1,0 +1,22 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+ ❯ tests/physical-one-inspect.test.ts (1 test | 1 failed) 9597ms
+   × profile and validate latest controlled geometry 9596ms
+     → INVALID_PHYSICAL_CONVEX_FRAGMENT: Error: INVALID_PHYSICAL_CONVEX_FRAGMENT volume=0.19004089213286052 violation=0.00007805276737826716
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/physical-one-inspect.test.ts > profile and validate latest controlled geometry
+DesignRejection: INVALID_PHYSICAL_CONVEX_FRAGMENT: Error: INVALID_PHYSICAL_CONVEX_FRAGMENT volume=0.19004089213286052 violation=0.00007805276737826716
+ ❯ addPhysicalDesign src/physical/build.ts:81:197
+
+ ❯ tests/physical-one-inspect.test.ts:2:258
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  17:23:44
+   Duration  10.76s (transform 583ms, setup 0ms, collect 815ms, tests 9.60s, environment 0ms, prepare 93ms)

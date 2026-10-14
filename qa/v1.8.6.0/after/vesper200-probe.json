@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "exactForStoredCells": true,
+  "approximation": "BOUNDED_NORMAL_FACET_SKINS",
+  "warnings": [
+    "Exact entry/exit and integrated layer mass for stored finite convex cells. Normal-directed finite facet skins clipped to local supporting planes, Hull contact volumes and prior physical skins. Nonconvex enclosing interiors are a faceted-shell approximation, not a complete structural solid. Unverified enclosing bodies are not registered; their valid finite facets use a separately verified local skin approximation with explicit warnings. Collinear clip edges are simplified within 1e-7m. Geometry follows retained faceted render geometry, not a uniform normal-offset smooth shell. Curves are faceted; corners taper. Source contacts/buried regions are removed by convex subtraction. No penetration coefficients calibrated.",
+    "vertical-drive-1/belt-1: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE vertical-drive-1/belt-1/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction",
+    "skin-vertical-drive-1-1-0: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE skin-vertical-drive-1-1-0/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction",
+    "skin-vertical-drive-1-5-0: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE skin-vertical-drive-1-5-0/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction"
+  ],
+  "hits": []
+}

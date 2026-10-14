@@ -1,0 +1,116 @@
+[
+  {
+    "case": {
+      "id": "aegis470",
+      "shipyardId": "aegis",
+      "length": 470,
+      "role": "Cruiser",
+      "seed": 7,
+      "architecture": "MONOLITHIC",
+      "family": "WEDGE_CITADEL"
+    },
+    "ms": 3748.600000000093,
+    "massTonnes": 3562847,
+    "pose": {
+      "position": [
+        -426.4436326027153,
+        349.3389492388318,
+        -488.7392600511619
+      ],
+      "target": [
+        0,
+        1.8663597106933594,
+        4.829759164943695
+      ],
+      "near": 1.0327680193311448,
+      "far": 20655.3603866229
+    },
+    "rendering": {
+      "drawCalls": 25,
+      "triangles": 25788,
+      "camera": [
+        -426.4436326027153,
+        349.3389492388318,
+        -488.7392600511619
+      ],
+      "radius": 344.25600644371497,
+      "geometryFinite": true
+    }
+  },
+  {
+    "case": {
+      "id": "vesper200",
+      "shipyardId": "vesper",
+      "length": 200,
+      "role": "Frigate",
+      "seed": 11,
+      "architecture": "CORE_AND_NACELLES",
+      "family": "ENGINE_DOMINANT"
+    },
+    "ms": 6101.399999999907,
+    "massTonnes": 56405,
+    "pose": {
+      "position": [
+        -153.8055560501902,
+        125.70687287999802,
+        -177.21672702839047
+      ],
+      "target": [
+        0,
+        0.38382720947265625,
+        0.798962844514847
+      ],
+      "near": 0.394793782474438,
+      "far": 7895.87564948876
+    },
+    "rendering": {
+      "drawCalls": 68,
+      "triangles": 25138,
+      "camera": [
+        -153.8055560501902,
+        125.70687287999802,
+        -177.21672702839047
+      ],
+      "radius": 131.59792749147934,
+      "geometryFinite": true
+    }
+  },
+  {
+    "case": {
+      "id": "forge300",
+      "shipyardId": "forge",
+      "length": 300,
+      "role": "Battleship",
+      "seed": 23,
+      "architecture": "BLOCK_ASSEMBLY",
+      "family": "WEDGE_CITADEL"
+    },
+    "ms": 9175.899999999907,
+    "massTonnes": 565385,
+    "pose": {
+      "position": [
+        -243.97871398120552,
+        201.2210393769386,
+        -279.4246585671175
+      ],
+      "target": [
+        0,
+        2.423568725585937,
+        2.9581122444629666
+      ],
+      "near": 0.6990482689161842,
+      "far": 13980.965378323684
+    },
+    "rendering": {
+      "drawCalls": 69,
+      "triangles": 32544,
+      "camera": [
+        -243.97871398120552,
+        201.2210393769386,
+        -279.4246585671175
+      ],
+      "radius": 233.01608963872806,
+      "geometryFinite": true
+    }
+  }
+]

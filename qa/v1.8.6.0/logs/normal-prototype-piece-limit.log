@@ -1,0 +1,25 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+ ✓ tests/physical-foundation.test.ts (9 tests) 1364ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  718ms
+   ✓ physical material, finite layer and accounting foundation > keeps finite shell data deterministic, validates JSON and marks explicit migration without rewriting historical geometry  312ms
+ ❯ tests/physical-one-inspect.test.ts (1 test | 1 failed) 11139ms
+   × profile and validate latest controlled geometry 11138ms
+     → REQUIRED_PHYSICAL_DESIGN_INVALID: Error: PHYSICAL_SHIP_PIECE_LIMIT
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/physical-one-inspect.test.ts > profile and validate latest controlled geometry
+DesignRejection: REQUIRED_PHYSICAL_DESIGN_INVALID: Error: PHYSICAL_SHIP_PIECE_LIMIT
+ ❯ addPhysicalDesign src/physical/build.ts:72:197
+
+ ❯ tests/physical-one-inspect.test.ts:2:155
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 9 passed (10)
+   Start at  16:19:29
+   Duration  12.38s (transform 802ms, setup 0ms, collect 1.68s, tests 12.50s, environment 0ms, prepare 261ms)

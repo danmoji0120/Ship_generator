@@ -1,0 +1,226 @@
+{
+  "valid": true,
+  "exactForStoredCells": true,
+  "approximation": "BOUNDED_FACET_SKINS",
+  "warnings": [
+    "Exact entry/exit and integrated layer mass for stored finite convex cells. Radial inset for verified enclosing cells, otherwise separately verified finite parallel triangle skins with an explicit source warning. Collinear clip edges are simplified within 1e-7m. Geometry follows retained faceted render geometry, not a uniform normal-offset smooth shell. Curves are faceted; corners taper. Source contacts/buried regions are removed by convex subtraction. No penetration coefficients calibrated.",
+    "fore-armor/belt-1: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE fore-armor/belt-1/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction",
+    "skin-fore-armor-1-0: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE skin-fore-armor-1-0/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction",
+    "skin-fore-armor-5-0: Error: PHYSICAL_SECTION_KERNEL_UNAVAILABLE skin-fore-armor-5-0/0; enclosing body unregistered; bounded local triangle skins only, cap-fan overlap removed by convex subtraction",
+    "cap-fore-armor-1: entirely buried / duplicate skin; no physical coating registered",
+    "skin-combat-core-3-0: facet depth saturation; nominal 35.000mm, actual 31.731–35.000mm",
+    "cap-drive-block--1: entirely buried / duplicate skin; no physical coating registered"
+  ],
+  "hits": [
+    {
+      "surfaceId": "plate/combat-core/primary",
+      "plateId": "plate/combat-core/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "TUNGSTEN_RICH_ALLOY",
+      "layerId": "plate/combat-core/primary/heavy",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 38.623453773839664,
+      "localFacetLayerThicknessMm": 38.623453773839664,
+      "pathLengthM": 0.03864583298332036,
+      "entryPoint": {
+        "x": 0,
+        "y": 32.357291279611786,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 32.318645446628466,
+        "z": 0
+      },
+      "entryDistanceM": 567.6427087203882,
+      "exitDistanceM": 567.6813545533715,
+      "incidenceDegrees": 1.9499776054400353,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9994209153314862,
+        "z": 0.03402695986970447
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9994209153314862,
+        "z": 0.03402695986970447
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/combat-core/primary",
+      "plateId": "plate/combat-core/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "TITANIUM_BACKING",
+      "layerId": "plate/combat-core/primary/support",
+      "layerOrder": 1,
+      "nominalLayerThicknessMm": 19.311726886919832,
+      "localFacetLayerThicknessMm": 19.311726886919832,
+      "pathLengthM": 0.019322916491546493,
+      "entryPoint": {
+        "x": 0,
+        "y": 32.318645446628466,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 32.29932253013692,
+        "z": 0
+      },
+      "entryDistanceM": 567.6813545533715,
+      "exitDistanceM": 567.7006774698631,
+      "incidenceDegrees": 1.9499776054400382,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9994209153314862,
+        "z": 0.03402695986970447
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.999420915331486,
+        "z": 0.03402695986970451
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "plate/combat-core/primary",
+      "plateId": "plate/combat-core/primary",
+      "materialId": "TUNGSTEN_COMPOSITE",
+      "constituentMaterialId": "LIGHT_SPALL_BACKING",
+      "layerId": "plate/combat-core/primary/spall",
+      "layerOrder": 2,
+      "nominalLayerThicknessMm": 19.311726886919832,
+      "localFacetLayerThicknessMm": 19.311726886919832,
+      "pathLengthM": 0.01932291649166018,
+      "entryPoint": {
+        "x": 0,
+        "y": 32.29932253013692,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 32.27999961364526,
+        "z": 0
+      },
+      "entryDistanceM": 567.7006774698631,
+      "exitDistanceM": 567.7200003863547,
+      "incidenceDegrees": 1.9499776054400246,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9994209153314862,
+        "z": 0.03402695986970447
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.999420915331486,
+        "z": 0.034026959869704276
+      },
+      "coveredByArmor": true
+    },
+    {
+      "surfaceId": "shell/combat-core",
+      "shellId": "shell/combat-core",
+      "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "constituentMaterialId": "STEEL_STRUCTURAL",
+      "layerId": "shell/combat-core/steel",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 19.367,
+      "localFacetLayerThicknessMm": 19.367,
+      "pathLengthM": 0.019366999999988366,
+      "entryPoint": {
+        "x": 0,
+        "y": 20.471869139036357,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": 20.45250213903637,
+        "z": 0
+      },
+      "entryDistanceM": 579.5281308609636,
+      "exitDistanceM": 579.5474978609636,
+      "incidenceDegrees": 0,
+      "surfaceNormal": {
+        "x": 0,
+        "y": 0.9999999999999999,
+        "z": 0
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9999999999999999,
+        "z": 0
+      },
+      "coveredByArmor": false
+    },
+    {
+      "surfaceId": "shell/combat-core",
+      "shellId": "shell/combat-core",
+      "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+      "constituentMaterialId": "STEEL_STRUCTURAL",
+      "layerId": "shell/combat-core/steel",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 19.367,
+      "localFacetLayerThicknessMm": 19.367,
+      "pathLengthM": 0.019367000000102053,
+      "entryPoint": {
+        "x": 0,
+        "y": -20.988414943723114,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": -21.007781943723217,
+        "z": 0
+      },
+      "entryDistanceM": 620.9884149437231,
+      "exitDistanceM": 621.0077819437232,
+      "incidenceDegrees": 0,
+      "surfaceNormal": {
+        "x": 0,
+        "y": -0.9999999999999999,
+        "z": 0
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "coveredByArmor": false
+    },
+    {
+      "surfaceId": "plate/combat-core/keel",
+      "plateId": "plate/combat-core/keel",
+      "materialId": "ARMORED_STEEL",
+      "constituentMaterialId": "ARMOR_STEEL",
+      "layerId": "plate/combat-core/keel/steel",
+      "layerOrder": 0,
+      "nominalLayerThicknessMm": 42.6189834745817,
+      "localFacetLayerThicknessMm": 42.6189834745817,
+      "pathLengthM": 0.04263663275753515,
+      "entryPoint": {
+        "x": 0,
+        "y": -32.25290985358674,
+        "z": 0
+      },
+      "exitPoint": {
+        "x": 0,
+        "y": -32.29554648634428,
+        "z": 0
+      },
+      "entryDistanceM": 632.2529098535867,
+      "exitDistanceM": 632.2955464863443,
+      "incidenceDegrees": 1.6486356888168692,
+      "surfaceNormal": {
+        "x": 0,
+        "y": -0.999586053543952,
+        "z": 0.028770150511032516
+      },
+      "entryBoundaryNormal": {
+        "x": 0,
+        "y": 0.9995860535439519,
+        "z": -0.028770150511032613
+      },
+      "coveredByArmor": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+ARMOR_FIRST 835497t armor 9040ms
+MOBILITY_FIRST 506900t armor 3752ms
+FIREPOWER_FIRST 495817t armor 4739ms
+ENDURANCE_FIRST 491158t armor 4711ms
+BALANCED 510117t armor 4875ms
+MISSILES_FIRST 509307t armor 4839ms
+SENSORS_FIRST 499665t armor 4953ms
+ALL_HIGH 598961t armor 3835ms
+aegis470 probe intervals 8
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Target page, context or browser has been closed
+    at /workspace/shipyard-v1.8.6.0/tests/physical-controls.mjs:140:30 {
+  log: []
+}
+
+Node.js v24.19.0

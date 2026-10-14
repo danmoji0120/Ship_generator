@@ -1,3 +1,4 @@
+import {renderPhysicalDesign} from "./physical";
 import {renderFreeMounts} from "./free-mount";
 import {renderModularHardpoints} from "./modular-hardpoints";
 import {renderMesoStructures,renderMesoDiagnostics} from './meso';
@@ -13,7 +14,7 @@ import { loftGeometry, moduleGeometry, beamBetween } from "./geometry";
 import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
-export type DebugView =
+export type DebugView = "Armor Thickness" | "Physical Materials" | "Physical Coverage" | "Armor Ray Probe"
   | "Meso Structures" | "Without Meso" | "Engine Root Zones" | "Structural Junctions"
   | "Surface Texture" | "Decal Markings"
   | "Normal"
@@ -29,6 +30,8 @@ export type DebugView =
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
+  if(mode==='Armor Ray Probe')return createShip(b,'Normal',detailMode);
+  if(['Armor Thickness','Physical Materials','Physical Coverage'].includes(mode))return b.schemaVersion===2&&b.physicalDesign?renderPhysicalDesign(b,mode):createShip(b,'Normal',detailMode);
   if(mode==='Engine Root Zones'||mode==='Structural Junctions'){const root=createShip(b,'Normal',detailMode);if(b.schemaVersion===2)root.add(renderMesoDiagnostics(b,mode==='Structural Junctions'));return root;}
   if(mode==='Without Meso'){const c=structuredClone(b);if(c.schemaVersion===2)c.mesoStructurePlan=undefined;return createShip(c,'Normal',detailMode);}
   if(mode==='Meso Structures'){const root=createShip(b,'Normal',detailMode);root.children.forEach(n=>n.visible=Boolean(n.userData.mesoStructures));return root;}

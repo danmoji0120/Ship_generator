@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "id": "aegis470",
+      "beforeMs": 3656.199999999255,
+      "firstMs": 10184.5,
+      "repeatedMs": 3524.800000000745,
+      "deterministic": true,
+      "surfaces": 39,
+      "pieces": 12380
+    },
+    {
+      "id": "vesper200",
+      "beforeMs": 4646.0999999996275,
+      "firstMs": 19158.099999999627,
+      "repeatedMs": 6725.700000001118,
+      "deterministic": true,
+      "surfaces": 196,
+      "pieces": 31330
+    },
+    {
+      "id": "forge300",
+      "beforeMs": 8027.5,
+      "firstMs": 25645,
+      "repeatedMs": 10818.099999999627,
+      "deterministic": true,
+      "surfaces": 155,
+      "pieces": 35540
+    }
+  ],
+  "errors": []
+}

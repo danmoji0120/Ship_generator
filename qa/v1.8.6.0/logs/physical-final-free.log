@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+ ✓ tests/free-mount.test.ts (18 tests | 12 skipped) 1808ms
+   ✓ direct fit uses actual geometry and no internal capacity / slot compatibility  552ms
+   ✓ history includes platform removal and restores exact JSON without changing original hull  425ms
+   ✓ regeneration keeps exact player anchors or explicitly rejects a changed surface without losing the current design  402ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 12 skipped (18)
+   Start at  17:33:29
+   Duration  7.62s (transform 3.14s, setup 0ms, collect 4.76s, tests 1.81s, environment 0ms, prepare 313ms)

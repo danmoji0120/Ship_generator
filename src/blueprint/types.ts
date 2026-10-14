@@ -21,6 +21,8 @@ export const PRIORITIES = [
 export type Priority = (typeof PRIORITIES)[number];
 export type MassClass = "Light" | "Standard" | "Heavy" | "Superheavy";
 export interface ShipOrder {
+  /** Optional physical dry-mass design target in kg; not a free-mount installation gate. */
+  targetDryMassKg?: number;
   hardpointDensity?: import("../generation/hardpoint-system/types").HardpointDensity;
   hardpointRequests?: import("../generation/hardpoint-system/types").HardpointRequest[];
   role: ShipRole;
@@ -420,9 +422,10 @@ export interface ShipBlueprint extends Omit<
   "schemaVersion"
 > {
   schemaVersion: 2;
+  physicalDesign?: import("../physical/types").PhysicalDesign;
   freeMountPlan?: import("../free-mount/types").FreeMountPlan;
   modularHardpoints?: import("../generation/hardpoint-system/types").ModularHardpointPlan;
-  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1" | "1.8.5.5";
+  generatorVersion: "1.0" | "1.5" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.2" | "1.8.3" | "1.8.4" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1" | "1.8.5.5" | "1.8.6.0";
   architecture: {
     composition?: string;
     source?: "order" | "qa-fixed";

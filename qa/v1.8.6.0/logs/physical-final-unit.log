@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0
+
+ ✓ tests/physical-foundation.test.ts (9 tests) 2054ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  947ms
+   ✓ physical material, finite layer and accounting foundation > keeps finite shell data deterministic, validates JSON and marks explicit migration without rewriting historical geometry  468ms
+   ✓ physical material, finite layer and accounting foundation > keeps free mounts external-only, preserves owned platforms, refreshes estimates once and restores exact undo JSON  490ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  17:51:25
+   Duration  4.38s (transform 1.33s, setup 0ms, collect 2.01s, tests 2.05s, environment 0ms, prepare 72ms)
