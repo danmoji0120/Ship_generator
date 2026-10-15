@@ -38,7 +38,7 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
   line(
     `Total estimated dry mass ${t(m.totalEstimatedDryMassKg)} / target ${t(m.targetMassKg)} · remaining ${t(m.remainingMassKg)} · cost ${m.manufacturingCostIndexKg.toLocaleString(undefined, { maximumFractionDigits: 0 })} index·kg (not currency)`,
   );
-  if(m.ledger){const l=m.ledger;line(`Base ${t(l.baseEstimatedDryMassKg)} · mounted dry ${t(l.mountedEstimatedDryMassKg)} · base budget ${l.baseBudgetViolation?'EXCEEDED':'WITHIN'} · mounted ${l.mountedLoadoutOverTarget?'OVER TARGET':'WITHIN TARGET'} · maximum allowed mass unspecified; consumables not included`);for(const e of l.entries)line(`${e.component}: ${t(e.massKg)} [${e.source}] — ${e.basis}`);}
+  if(m.ledger){const l=m.ledger;line(`Base ${t(l.baseEstimatedDryMassKg)} · mounted dry ${t(l.mountedEstimatedDryMassKg)} · base budget ${l.baseBudgetViolation?'EXCEEDED':'WITHIN'} · mounted ${l.mountedLoadoutOverTarget?'OVER TARGET':'WITHIN TARGET'} · maximum allowed mass ${l.maximumAllowedMassKg==null?'unspecified':t(l.maximumAllowedMassKg)}; consumables not included`);for(const e of l.entries)line(`${e.component}: ${t(e.massKg)} [${e.source}] — ${e.basis}`);}
   if(b.schemaVersion===2&&b.structuralVolumes.some(v=>v.type==='SPINE'))line(`Unspecified SPINE structures: ${b.structuralVolumes.filter(v=>v.type==='SPINE').length}. Visible finite boundaries are traced, but material/shell thickness are unresolved; no invented armor mass.`);
   line(`Physical cells ${d.surfaces.reduce((n,s)=>n+s.pieces.length,0)} · material layers ${d.surfaces.reduce((n,s)=>n+s.layerStack.length,0)} · geometry warnings ${d.warnings.length}`);
   line(

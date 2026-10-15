@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "Production entry has no DEV API",
+      "passed": true
+    },
+    {
+      "name": "Native unarmed base with propulsion/control",
+      "passed": true
+    },
+    {
+      "name": "Only four design priorities exposed",
+      "passed": true
+    },
+    {
+      "name": "Legacy import retains weapons/materials/geometry exact",
+      "passed": true
+    },
+    {
+      "name": "Legacy requires explicit conversion",
+      "passed": true
+    },
+    {
+      "name": "Explicit conversion only changes form, keeps original armed ship",
+      "passed": true
+    },
+    {
+      "name": "Conversion warning explains new unarmed design",
+      "passed": true
+    },
+    {
+      "name": "New order resets form without deleting loaded ship",
+      "passed": true
+    },
+    {
+      "name": "125% UI major action accessible",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Narrow screen has no horizontal page overflow\n    at check (file:///workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:3:25)\n    at file:///workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:32:405"
+}

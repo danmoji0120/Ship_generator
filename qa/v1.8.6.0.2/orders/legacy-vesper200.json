@@ -1,0 +1,23 @@
+{
+  "order": {
+    "role": "Frigate",
+    "shipyardId": "vesper",
+    "length": 200,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 11,
+  "architecture": {
+    "grammar": "CORE_AND_NACELLES"
+  },
+  "macroDesign": {
+    "family": "ENGINE_DOMINANT"
+  }
+}

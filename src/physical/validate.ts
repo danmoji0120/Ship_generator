@@ -1,3 +1,4 @@
+import {procurementWeights} from '../procurement/order';
 import { integratedLayerVolumes } from "./integration";
 import type { ShipBlueprint } from "../blueprint/types";
 import { MATERIALS, ARMOR_MATERIALS, HULL_MATERIALS } from "./materials";
@@ -35,6 +36,7 @@ export function validatePhysicalDesign(
       cacheKey = JSON.stringify([
         d,
         b.order,
+        b.procurement?.order,
         b.dimensions,
         b.role,
         b.structuralVolumes,
@@ -54,19 +56,19 @@ export function validatePhysicalDesign(
     if (
       !close(
         d.policy.targetMassBudgetKg,
-        b.order.targetDryMassKg ?? b.dimensions.estimatedMass * 1000,
+        b.procurement?.order.targetMassKg ?? b.order.targetDryMassKg ?? b.dimensions.estimatedMass * 1000,
       )
     )
       issues.push("Physical target differs from order/legacy target");
     if (
       JSON.stringify(d.policy.priorityWeights) !==
-      JSON.stringify(b.order.priorities)
+      JSON.stringify(b.procurement?procurementWeights(b.procurement.order):b.order.priorities)
     )
       issues.push("Physical policy differs from order priorities");
     if (
       !close(
         Object.values(d.policy.allocationsKg).reduce((n, v) => n + v, 0),
-        d.policy.targetMassBudgetKg,
+        d.policy.planningMassBudgetKg??d.policy.targetMassBudgetKg,
       ) ||
       Object.values(d.policy.allocationsKg).some(
         (v) => !Number.isFinite(v) || v < 0,

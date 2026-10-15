@@ -1,0 +1,24 @@
+{
+  "order": {
+    "role": "Battleship",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 50,
+      "survivability": 50,
+      "mobility": 50,
+      "endurance": 50,
+      "missile": 50,
+      "sensor": 50
+    },
+    "targetDryMassKg": 3562847000
+  },
+  "seed": 7,
+  "generatorVersion": "1.8.6.0.1",
+  "exactJSONEqual": true,
+  "bytes": 25425993,
+  "beforeSHA256": "430cc840e37fb7aa1b4b4a2f8ef3bd0bb99ce0ff29143b2fa2266619d109caf9",
+  "afterSHA256": "430cc840e37fb7aa1b4b4a2f8ef3bd0bb99ce0ff29143b2fa2266619d109caf9",
+  "scope": "Same legacy order/seed/architecture/family through pristine f8b8e74 and current code. No native procurement conversion."
+}

@@ -1,0 +1,43 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0.1
+
+ ❯ tests/free-mount.test.ts (18 tests | 1 failed | 17 skipped) 15221ms
+   × generates without empty slots; keeps historical explicit generator and mandatory migration 15219ms
+     → expected '1.8.6.0.1' to be '1.8.5.5' // Object.is equality
+   ↓ direct fit uses actual geometry and no internal capacity / slot compatibility
+   ↓ raises a supported platform over a narrow actual hull
+   ↓ rejects unsupported anchor and platform collision
+   ↓ mirror and 4-row battery are atomic; rejects partial overlap
+   ↓ missile outward paths and base geometry are closed solids
+   ↓ history includes platform removal and restores exact JSON without changing original hull
+   ↓ modified saved anchor / support cannot be silently reinterpreted
+   ↓ external validation ignores legacy empty slots and internal / feed reservations
+   ↓ follows actual inclined and FORE cap normals without world-up mounting
+   ↓ pylon has individually attached supports and moving preserves stable equipment ID
+   ↓ rejects a mirrored group when the real counterpart hull surface does not exist
+   ↓ real triangle picking survives whole-ship rotation / translation and ignores separate ghosts
+   ↓ explicit individual editing dissolves obsolete pair metadata and undo restores the original group
+   ↓ all five adaptive support recipes build on actual clear surfaces without internal assumptions
+   ↓ saved restricted-arc equipment is certified by the full inspector, never rejected by quick ghost samples
+   ↓ launcher direction adjusts independently from gun heading and reproduces tilted tube geometry
+   ↓ regeneration keeps exact player anchors or explicitly rejects a changed surface without losing the current design
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/free-mount.test.ts > generates without empty slots; keeps historical explicit generator and mandatory migration
+AssertionError: expected '1.8.6.0.1' to be '1.8.5.5' // Object.is equality
+
+Expected: "1.8.5.5"
+Received: "1.8.6.0.1"
+
+ ❯ tests/free-mount.test.ts:11:357
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 17 skipped (18)
+   Start at  15:36:53
+   Duration  17.05s (transform 1.05s, setup 0ms, collect 1.51s, tests 15.22s, environment 0ms, prepare 95ms)
+

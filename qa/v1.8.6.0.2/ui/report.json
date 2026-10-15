@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "name": "Production entry has no DEV API",
+      "passed": true
+    },
+    {
+      "name": "Native unarmed base with propulsion/control",
+      "passed": true
+    },
+    {
+      "name": "Only four design priorities exposed",
+      "passed": true
+    },
+    {
+      "name": "Input edits do not regenerate",
+      "passed": true
+    },
+    {
+      "name": "Material choice defaults to PREFER",
+      "passed": true
+    },
+    {
+      "name": "Primary/secondary/material/distribution/architecture/maximum persisted",
+      "passed": true
+    },
+    {
+      "name": "Required main Titanium and Hull Steel actually applied",
+      "passed": true
+    },
+    {
+      "name": "Hard maximum REJECT shown",
+      "passed": true
+    },
+    {
+      "name": "Rejected order retains previous exact Blueprint",
+      "passed": true
+    },
+    {
+      "name": "Unavailable REQUIRE technology rejected",
+      "passed": true
+    },
+    {
+      "name": "Technology rejection keeps previous ship",
+      "passed": true
+    },
+    {
+      "name": "PREFER substitution becomes COMPROMISE",
+      "passed": true
+    },
+    {
+      "name": "Native reload/export round trip exact",
+      "passed": true
+    },
+    {
+      "name": "Native loaded form retains its order",
+      "passed": true
+    },
+    {
+      "name": "Advanced settings close",
+      "passed": true
+    },
+    {
+      "name": "Invalid field disables generation",
+      "passed": true
+    },
+    {
+      "name": "Production real surface install gun-105",
+      "passed": true
+    },
+    {
+      "name": "Production real surface install missile-small",
+      "passed": true
+    },
+    {
+      "name": "Mounted mass grows while base mass remains separate",
+      "passed": true
+    },
+    {
+      "name": "Delete selected equipment",
+      "passed": true
+    },
+    {
+      "name": "Undo exact equipment restoration",
+      "passed": true
+    },
+    {
+      "name": "Redo removal",
+      "passed": true
+    },
+    {
+      "name": "Player equipped Blueprint save/load exact",
+      "passed": true
+    },
+    {
+      "name": "Legacy import retains weapons/materials/geometry exact",
+      "passed": true
+    },
+    {
+      "name": "Legacy requires explicit conversion",
+      "passed": true
+    },
+    {
+      "name": "Explicit conversion only changes form, keeps original armed ship",
+      "passed": true
+    },
+    {
+      "name": "Conversion warning explains new unarmed design",
+      "passed": true
+    },
+    {
+      "name": "New order resets form without deleting loaded ship",
+      "passed": true
+    },
+    {
+      "name": "125% UI major action accessible",
+      "passed": true
+    },
+    {
+      "name": "Narrow screen has no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "Narrow Generate accessible",
+      "passed": true
+    },
+    {
+      "name": "Console/page errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "execution": "Native procurement/editor checks from first complete native pass; corrected Legacy/responsive checks from focused follow-up. This is a combined report, not a claim that the earlier whole run passed.",
+  "nativePassArtifact": "legacy-large-file-timeout-run.json",
+  "correctedFollowupArtifact": "legacy-followup.json",
+  "fixedFailures": [
+    "50MB Playwright buffer upload changed to path upload",
+    "Cross-engine mount standard ULP equality prevented historical load; dimensions preserved, validator fixed",
+    "Mobile free-equipment select caused horizontal overflow; wrapping fixed"
+  ],
+  "scope": "32 unique Production checks across two focused runs; no DEV hooks used."
+}

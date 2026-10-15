@@ -1,3 +1,4 @@
+import {procurementWeights} from '../../procurement/order';
 import type{ShipBlueprint,StructuralVolume,Vec3}from'../../blueprint/types';
 import type{StructuralArmorComponent}from'../armor/structural-pilot/types';
 import{armorBodyBuilder,addBodyBelt}from'../armor/structural-pilot/geometry';
@@ -31,7 +32,7 @@ export function generateStructuralArmor(b:ShipBlueprint,d:ProductionDesign,candi
    const count=parts.length;try{builder.deck(`${hull.id}/${id}`,role,fraction(a),fraction(c),inner,outer,rise,side,parent,{bevel:yard.structure==='heavy'?.23:yard.structure==='clean'?.14:.18,rise:[[0,.4],[.20,1],[.72,.9],[1,.42]]});}catch(e){parts.splice(count);d.decisions.push({stage:'armor',sourceId:`${hull.id}/${id}`,status:'omitted',reason:(e as Error).message});}
   }
   deck('primary','CITADEL',start,end,0,small?.52:[.30,.38,.26][layoutVariant],crest);
-  if(!small&&hull.dimensions.x>hull.dimensions.y*1.5){
+  if(!(b.procurement&&procurementWeights(b.procurement.order).ECONOMY>=70)&&!small&&hull.dimensions.x>hull.dimensions.y*1.5){
    for(const side of[-1,1])deck('shoulder-'+side,'SHOULDER',Math.max(.08,start-.07),Math.min(.93,end+.08),.44,.88,crest*.67,side);
   }
   deck('fore-guard','AXIAL_PROTECTION',.04,Math.max(.20,start+.09),0,small?.55:.25,crest*.42);
@@ -45,7 +46,7 @@ export function generateStructuralArmor(b:ShipBlueprint,d:ProductionDesign,candi
    ['belly-port','BELLY_CITADEL',.29,.75,.22,.68,crest*.54,-1],
    ['belly-starboard','BELLY_CITADEL',.29,.75,.22,.68,crest*.54,1],
    ['rear-cradle','LOWER_HOUSING',.72,.94,0,.43,crest*.73,0],
-  ]as const){try{vb.deck(`${hull.id}/${id}`,role,fraction(a),fraction(c),inner,outer,rise,side,undefined,{bevel:.2,rise:[[0,.30],[.25,1],[.78,.85],[1,.35]]});}catch(e){d.decisions.push({stage:'ventral',sourceId:`${hull.id}/${id}`,status:'omitted',reason:(e as Error).message});}}
+  ]as const){if(b.procurement&&procurementWeights(b.procurement.order).ECONOMY>=70&&id==='rear-cradle')continue;try{vb.deck(`${hull.id}/${id}`,role,fraction(a),fraction(c),inner,outer,rise,side,undefined,{bevel:.2,rise:[[0,.30],[.25,1],[.78,.85],[1,.35]]});}catch(e){d.decisions.push({stage:'ventral',sourceId:`${hull.id}/${id}`,status:'omitted',reason:(e as Error).message});}}
   for(const c of lower){const reflect=(p:Vec3)=>({...p,y:-p.y});c.rings=c.rings.map(r=>r.map(reflect).reverse());c.solid.vertices=c.solid.vertices.map(reflect);for(let i=0;i<c.solid.indices.length;i+=3)[c.solid.indices[i+1],c.solid.indices[i+2]]=[c.solid.indices[i+2],c.solid.indices[i+1]];c.contactSamples=c.contactSamples.map(reflect);c.bounds=boundsOf(c.solid.vertices);parts.push(c);}
   for(const c of parts){
    const samples=geometrySamples(c.solid),conflict=d.zones.find(z=>overlappingBounds(c.bounds,reservationBounds(z))&&(samples.some(p=>inReservedZone(p,z))||reservationSamples(z).some(p=>solidContains(c.solid,p))))
@@ -72,6 +73,8 @@ export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign){
  d.coverage={method:'actual-triangle-area / exposed contact samples',directions:Object.fromEntries(directions.map(k=>[k,{exposedM2:0,eligibleM2:0,coveredM2:0,excludedM2:0,ratio:0}]))as ProductionDesign['coverage']['directions'],excluded:[]};
  const thickness=l*(yard.structure==='heavy'?.0038:yard.structure==='clean'?.0015:.0023)*(0.8+b.order.priorities.survivability/180);
  const emit=(id:string,parent:string,solid:import('../armor/types').PanelSolid,root:Vec3[],n:Vec3)=>{
+  const distribution=b.procurement?.order.armorDistribution;
+  if(distribution==='CITADEL'||distribution==='BALANCED'&&['top','bottom'].includes(classifyNormal(n))){d.decisions.push({stage:'finish',sourceId:id,status:'omitted',reason:'Procurement '+distribution+': existing critical masses retained; optional broad skin not commissioned here'});return true;}
   const bounds=boundsOf(solid.vertices);
   if(d.zones.some(z=>overlappingBounds(bounds,reservationBounds(z))&&(geometrySamples(solid).some(p=>inReservedZone(p,z))||reservationSamples(z).some(p=>solidContains(solid,p))))){d.decisions.push({stage:'finish',sourceId:id,status:'omitted',reason:'Broad finishing skin intersects a protected opening; bounded local sections will be tried'});return false;}
   d.finish.push({id,parentStructureId:parent,solid,bounds,direction:classifyNormal(n),root,normal:n,thickness});return true;

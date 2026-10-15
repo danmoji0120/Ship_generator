@@ -1,0 +1,24 @@
+{
+  "order": {
+    "role": "Battleship",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 50,
+      "survivability": 50,
+      "mobility": 50,
+      "endurance": 50,
+      "missile": 50,
+      "sensor": 50
+    },
+    "targetDryMassKg": 3562847000
+  },
+  "seed": 7,
+  "architecture": {
+    "grammar": "MONOLITHIC"
+  },
+  "macroDesign": {
+    "family": "WEDGE_CITADEL"
+  }
+}

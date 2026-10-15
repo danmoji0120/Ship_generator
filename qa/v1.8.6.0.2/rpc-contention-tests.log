@@ -1,0 +1,37 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0.2
+
+ ✓ tests/free-mount.test.ts (18 tests) 5361ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4304ms
+ ✓ tests/procurement.test.ts (12 tests) 60085ms
+   ✓ delivers no attack mounts, integrated cannon, combat reservations or empty slots; keeps real core propulsion/navigation  577ms
+   ✓ repeats deterministically with cache hit; export/import retains the native order and actual physical design  3200ms
+   ✓ honors REQUIRE on critical main armor and independent Hull, including actual composite layer accounting  6318ms
+   ✓ records PREFER tech substitution while impossible REQUIRE is rejected before hull construction  6284ms
+   ✓ uses soft target vs hard maximum and refuses hard cost/material/mass violations without changing the source ship  13314ms
+   ✓ audits finite critical facet centers; explicit unsupported full-zone guarantees are not invented  1284ms
+   ✓ preserves historical Blueprint JSON on load and only converts old attack priorities on explicit new-order conversion  5764ms
+   ✓ does not accept native documents with resurrected combat policy or changed REQUIRE/maximum  1076ms
+   ✓ replans an invalid SPINE family without forcing another Architecture or reserving a spinal cannon  14880ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 1630ms
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:635:17
+ ❯ processTimers node:internal/timers:571:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  3 passed (3)
+      Tests  46 passed (46)
+     Errors  1 error
+   Start at  15:45:03
+   Duration  69.40s (transform 806ms, setup 0ms, collect 1.48s, tests 67.08s, environment 0ms, prepare 182ms)
+

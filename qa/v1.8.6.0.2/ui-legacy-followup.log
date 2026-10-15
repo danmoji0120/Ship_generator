@@ -1,0 +1,13 @@
+PASS Production entry has no DEV API
+PASS Native unarmed base with propulsion/control
+PASS Only four design priorities exposed
+PASS Legacy import retains weapons/materials/geometry exact
+PASS Legacy requires explicit conversion
+PASS Explicit conversion only changes form, keeps original armed ship
+PASS Conversion warning explains new unarmed design
+PASS New order resets form without deleting loaded ship
+PASS 125% UI major action accessible
+PASS Narrow screen has no horizontal page overflow
+PASS Narrow Generate accessible
+PASS Console/page errors zero
+12 Production checks passed

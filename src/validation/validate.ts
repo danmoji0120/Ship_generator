@@ -1,3 +1,4 @@
+import {procurementDesignIssues} from '../procurement/result';
 import {validatePhysicalDesign} from "../physical/validate";
 import {validateFreeMountPlan} from "../free-mount/store";
 import {validateModularHardpoints} from "../generation/hardpoint-system/validate";
@@ -250,7 +251,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
       }
     }
   }
-  if (b.hardpoints.length < (b.productionDesign ? 1 : 3) || b.hardpoints.length > (b.modularHardpoints ? 512 : 100))
+  if (b.hardpoints.length < (b.procurement ? 0 : b.productionDesign ? 1 : 3) || b.hardpoints.length > (b.modularHardpoints ? 512 : 100))
     errors.push("Hardpoint count");
   if (b.surfaceFeatures.some((f) => !volumes.has(f.parentId)))
     errors.push("Surface parent");
@@ -338,6 +339,10 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {
+  if(b.schemaVersion===2&&b.generatorVersion==='1.8.6.0.2'){
+   if(!b.procurement||!b.physicalDesign?.mass?.ledger)return ['Native procurement/physical mass contract absent'];
+   return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b),...validatePhysicalDesign(b),...procurementDesignIssues(b)];
+  }
   if(b.schemaVersion===2&&b.generatorVersion==='1.8.6.0.1'&&!b.physicalDesign?.mass?.ledger)return ['Physical mass ledger absent from V1.8.6.0.1'];
   if(b.schemaVersion===2&&['1.8.6.0','1.8.6.0.1'].includes(b.generatorVersion)&&!b.physicalDesign)return ['Physical design absent from V1.8.6.0'];
   if(b.schemaVersion===2&&['1.8.5.5','1.8.6.0','1.8.6.0.1'].includes(b.generatorVersion))return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b),...validatePhysicalDesign(b)];

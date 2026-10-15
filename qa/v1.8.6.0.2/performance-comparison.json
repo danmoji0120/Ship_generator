@@ -1,0 +1,35 @@
+[
+  {
+    "id": "battleship470",
+    "beforeColdMs": 7200.49093,
+    "afterColdMs": 6776.313991,
+    "beforeRepeatMs": 3044.3634390000007,
+    "afterRepeatMs": 2912.0770629999997,
+    "massLedgerEqual": true,
+    "serializedByteLengthEqual": true,
+    "beforePeakRssMiB": 806.30859375,
+    "afterPeakRssMiB": 893.5703125
+  },
+  {
+    "id": "vesper200",
+    "beforeColdMs": 14711.139246,
+    "afterColdMs": 13057.295764,
+    "beforeRepeatMs": 4603.440866000001,
+    "afterRepeatMs": 4025.9891670000015,
+    "massLedgerEqual": true,
+    "serializedByteLengthEqual": true,
+    "beforePeakRssMiB": 1195.16796875,
+    "afterPeakRssMiB": 1119.42578125
+  },
+  {
+    "id": "spine300",
+    "beforeColdMs": 9909.955348,
+    "afterColdMs": 9665.64485,
+    "beforeRepeatMs": 3703.532368,
+    "afterRepeatMs": 3877.8039289999997,
+    "massLedgerEqual": true,
+    "serializedByteLengthEqual": true,
+    "beforePeakRssMiB": 1147.54296875,
+    "afterPeakRssMiB": 1199.640625
+  }
+]

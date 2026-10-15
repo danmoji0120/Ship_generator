@@ -56,15 +56,17 @@ export interface ProtectionSurface {
   coverage: "FINITE_MESH";
 }
 export interface DesignPolicy {
-  version: "1.8.6.0";
-  priorityWeights: Record<Priority, number>;
+  version: "1.8.6.0" | "1.8.6.0.2";
+  priorityWeights: Record<Priority, number> | Record<import("../procurement/types").ProcurementPriority,number>;
   priorityMapping: {
     ARMOR: "survivability";
     MISSILES: "missile";
     SENSORS: "sensor";
-  };
+  } | {ARMOR:"ARMOR";MOBILITY:"MOBILITY";ENDURANCE:"ENDURANCE";ECONOMY:"ECONOMY"};
   targetMassBudgetKg: number;
-  budgetSource: "ORDER_TARGET" | "LEGACY_ESTIMATE_AS_TARGET";
+  planningMassBudgetKg?:number;
+  maximumBaseMassKg?:number|null;
+  budgetSource: "ORDER_TARGET" | "LEGACY_ESTIMATE_AS_TARGET" | "PROCUREMENT_TARGET";
   allocationsKg: {
     structure: number;
     armor: number;
@@ -103,8 +105,8 @@ export interface MassLedger {
  entries:{component:'HULL_SHELL'|'ARMOR'|'STRUCTURE'|'CORE_EQUIPMENT'|'MOUNTED_EQUIPMENT'|'PLATFORM'|'OTHER_ESTIMATED';massKg:number;source:'GEOMETRY_DERIVED'|'ESTIMATED'|'LEGACY_ESTIMATE';basis:string}[];
  baseEstimatedDryMassKg:number;
  mountedEstimatedDryMassKg:number;
- targetSemantics:'EXISTING_BASE_DESIGN_LIMIT';
- maximumAllowedMassKg:null;
+ targetSemantics:'EXISTING_BASE_DESIGN_LIMIT'|'SOFT_TARGET_WITH_OPTIONAL_MAXIMUM';
+ maximumAllowedMassKg:number|null;
  baseRemainingKg:number;
  mountedRemainingKg:number;
  baseBudgetViolation:boolean;

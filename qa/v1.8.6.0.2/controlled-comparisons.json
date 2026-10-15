@@ -1,0 +1,1687 @@
+[
+  {
+    "id": "BALANCED",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 293041.27236377826,
+    "hullMassT": 59017.36673231328,
+    "baseMassT": 1041899.9457321244,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 762316420.405381,
+      "fabrication": 13022364.33826744,
+      "estimatedStructureAndCore": 135821775.27206576,
+      "yardProcessFactor": 1,
+      "total": 911160560.0157142,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      128.98512,
+      322.4628
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144075.5191265196,
+        "eligibleM2": 141776.60891468823,
+        "coveredM2": 89136.33223290478,
+        "excludedM2": 2298.910211831367,
+        "ratio": 0.6287097209846592
+      },
+      "bottom": {
+        "exposedM2": 144136.4027678994,
+        "eligibleM2": 141833.92299658075,
+        "coveredM2": 21297.71131956888,
+        "excludedM2": 2302.479771318636,
+        "ratio": 0.15015950253369437
+      },
+      "left": {
+        "exposedM2": 24296.860874050082,
+        "eligibleM2": 24296.860874050082,
+        "coveredM2": 24208.74763710865,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "right": {
+        "exposedM2": 24296.86087405008,
+        "eligibleM2": 24296.86087405008,
+        "coveredM2": 24208.747637108645,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "fore": {
+        "exposedM2": 52136.60587187989,
+        "eligibleM2": 28289.720655129484,
+        "coveredM2": 28061.298477653236,
+        "excludedM2": 23846.88521675042,
+        "ratio": 0.9919256121238924
+      },
+      "aft": {
+        "exposedM2": 36892.2213594914,
+        "eligibleM2": 9836.543310212084,
+        "coveredM2": 9721.170497008032,
+        "excludedM2": 27055.678049279417,
+        "ratio": 0.9882710003335954
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 293098.7634871176,
+      "hullOuterAreaM2": 371587.14122748846,
+      "eligibleArmorAreaM2": 617778.6431627008,
+      "armorRetainedFraction": 0.4744397798969005,
+      "criticalRetainedFraction": 0.5149338305214235
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 38,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 783350174.1185236,
+      "armor": 883352156.1492271,
+      "propulsion": 880286048.042763,
+      "endurance": 831121588.042763,
+      "sensor": 42276500.079390176,
+      "equipment": 142460533.56733346
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 322.462799992067,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      128.98512,
+      322.4628
+    ]
+  },
+  {
+    "id": "ARMOR",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "ARMOR",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "TUNGSTEN_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 785995.0020521681,
+    "hullMassT": 60595.71210406769,
+    "baseMassT": 2018210.3807922686,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 3272745036.4305315,
+      "fabrication": 16008601.118808296,
+      "estimatedStructureAndCore": 228736173.27206576,
+      "yardProcessFactor": 1,
+      "total": 3517489810.8214054,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      189.684,
+      474.21
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144362.0229976201,
+        "eligibleM2": 142048.80140786202,
+        "coveredM2": 89248.9991410384,
+        "excludedM2": 2313.221589758104,
+        "ratio": 0.6282981500475984
+      },
+      "bottom": {
+        "exposedM2": 144436.1198585122,
+        "eligibleM2": 142118.58078274978,
+        "coveredM2": 21357.146824237036,
+        "excludedM2": 2317.539075762413,
+        "ratio": 0.1502769497598962
+      },
+      "left": {
+        "exposedM2": 26955.959381725082,
+        "eligibleM2": 26955.959381725082,
+        "coveredM2": 26858.20285061195,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840173
+      },
+      "right": {
+        "exposedM2": 26955.959381725082,
+        "eligibleM2": 26955.959381725082,
+        "coveredM2": 26858.20285061195,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840173
+      },
+      "fore": {
+        "exposedM2": 57760.61807691558,
+        "eligibleM2": 31303.8806154135,
+        "coveredM2": 31050.45944426496,
+        "excludedM2": 26456.73746150208,
+        "ratio": 0.9919044806533104
+      },
+      "aft": {
+        "exposedM2": 40909.82418757391,
+        "eligibleM2": 11222.908834965903,
+        "coveredM2": 11098.267533348655,
+        "excludedM2": 29686.915352608037,
+        "ratio": 0.9888940288609565
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 330999.6500107323,
+      "hullOuterAreaM2": 381523.5782514735,
+      "eligibleArmorAreaM2": 676489.8649472118,
+      "armorRetainedFraction": 0.48928988764164416,
+      "criticalRetainedFraction": 0.542611606075942
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 35,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 981475463.3074296,
+      "armor": 1175194521.2291818,
+      "propulsion": 689288110.589936,
+      "endurance": 605710910.589936,
+      "sensor": 25301337.149419382,
+      "equipment": 85876657.13409749
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.6599999999999999,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.6,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.7,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 474.2099999958639,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      189.684,
+      474.21
+    ]
+  },
+  {
+    "id": "MOBILITY",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "MOBILITY",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "TITANIUM_ARMOR",
+    "auxiliary": "TITANIUM_ARMOR",
+    "hull": "LIGHT_STRUCTURAL_ALLOY",
+    "armorMassT": 242196.0353484407,
+    "hullMassT": 18059.88463884586,
+    "baseMassT": 939122.2458722709,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 796699174.6816251,
+      "fabrication": 10439373.271009734,
+      "estimatedStructureAndCore": 133200507.76996867,
+      "yardProcessFactor": 1,
+      "total": 940339055.7226034,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      102.60179999999998,
+      256.50449999999995
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 141857.1105427365,
+        "eligibleM2": 139593.42440484453,
+        "coveredM2": 87755.98491890394,
+        "excludedM2": 2263.686137891952,
+        "ratio": 0.6286541453728991
+      },
+      "bottom": {
+        "exposedM2": 141918.22361850366,
+        "eligibleM2": 139650.99627881887,
+        "coveredM2": 20966.97815692471,
+        "excludedM2": 2267.227339684783,
+        "ratio": 0.15013840728399308
+      },
+      "left": {
+        "exposedM2": 24242.52156736353,
+        "eligibleM2": 24242.52156736353,
+        "coveredM2": 24154.449972411672,
+        "excludedM2": 0,
+        "ratio": 0.9963670612932269
+      },
+      "right": {
+        "exposedM2": 24242.52156736353,
+        "eligibleM2": 24242.52156736353,
+        "coveredM2": 24154.449972411672,
+        "excludedM2": 0,
+        "ratio": 0.9963670612932269
+      },
+      "fore": {
+        "exposedM2": 51435.43892100199,
+        "eligibleM2": 27946.502812253526,
+        "coveredM2": 27719.927300229454,
+        "excludedM2": 23488.936108748458,
+        "ratio": 0.9918925271778647
+      },
+      "aft": {
+        "exposedM2": 36322.11970846788,
+        "eligibleM2": 10783.33459921108,
+        "coveredM2": 10659.566064358958,
+        "excludedM2": 25538.785109256765,
+        "ratio": 0.9885222392281904
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 291172.42694444733,
+      "hullOuterAreaM2": 366604.31503898196,
+      "eligibleArmorAreaM2": 613720.1928533966,
+      "armorRetainedFraction": 0.4744384009766509,
+      "criticalRetainedFraction": 0.5154670324945098
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 45,
+    "automaticWeapons": 0,
+    "engines": 4,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 673635603.4013067,
+      "armor": 699224638.6086719,
+      "propulsion": 1377027271.8404753,
+      "endurance": 668720096.2116493,
+      "sensor": 32995334.781441305,
+      "equipment": 111244055.15645534
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.42000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.7,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 256.5044999944348,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      102.60179999999998,
+      256.50449999999995
+    ]
+  },
+  {
+    "id": "ENDURANCE",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "ENDURANCE",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "TITANIUM_STRUCTURAL_ALLOY",
+    "armorMassT": 301515.4286246786,
+    "hullMassT": 37338.27368129757,
+    "baseMassT": 1078115.057737948,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 835651849.743121,
+      "fabrication": 13559220.172882259,
+      "estimatedStructureAndCore": 146577392.8639439,
+      "yardProcessFactor": 1,
+      "total": 995788462.7799472,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      128.98512,
+      322.4628
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144258.04277375367,
+        "eligibleM2": 141950.01419470174,
+        "coveredM2": 89208.20184852027,
+        "excludedM2": 2308.028579051929,
+        "ratio": 0.6284479952651526
+      },
+      "bottom": {
+        "exposedM2": 144327.3516099355,
+        "eligibleM2": 142015.27561350315,
+        "coveredM2": 21335.72978280358,
+        "excludedM2": 2312.0759964323656,
+        "ratio": 0.1502354566481222
+      },
+      "left": {
+        "exposedM2": 26017.454026075073,
+        "eligibleM2": 26017.454026075073,
+        "coveredM2": 25923.10101055195,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "right": {
+        "exposedM2": 26017.454026075073,
+        "eligibleM2": 26017.454026075073,
+        "coveredM2": 25923.10101055195,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "fore": {
+        "exposedM2": 55774.9677677388,
+        "eligibleM2": 30239.35462791378,
+        "coveredM2": 29994.75663100252,
+        "excludedM2": 25535.613139825025,
+        "ratio": 0.9919112692740647
+      },
+      "aft": {
+        "exposedM2": 39491.69613201307,
+        "eligibleM2": 10736.42046522041,
+        "coveredM2": 10617.981927480856,
+        "excludedM2": 28755.275666792633,
+        "ratio": 0.9889685265100018
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 302874.3646289456,
+      "hullOuterAreaM2": 378011.1183995263,
+      "eligibleArmorAreaM2": 638966.1352016327,
+      "armorRetainedFraction": 0.47400691201478196,
+      "criticalRetainedFraction": 0.5188100744189033
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 37,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 724945722.523596,
+      "armor": 680443090.1396272,
+      "propulsion": 713783328.8081913,
+      "endurance": 1302497055.8945656,
+      "sensor": 32067989.354318723,
+      "equipment": 109109813.27970104
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.7,
+      "compartmentSubdivisionPreference": 0.8,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.8,
+      "systemPlacementPreference": "DISTRIBUTED",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 322.46279999192495,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      128.98512,
+      322.4628
+    ]
+  },
+  {
+    "id": "ECONOMY",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "ECONOMY",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "ARMORED_STEEL",
+    "auxiliary": "ARMORED_STEEL",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 431140.7554967812,
+    "hullMassT": 59017.366732301,
+    "baseMassT": 1179944.9441438417,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 490158122.2290822,
+      "fabrication": 9728796.221767988,
+      "estimatedStructureAndCore": 135712805.8295187,
+      "yardProcessFactor": 1,
+      "total": 635599724.2803689,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      128.98512,
+      322.4628
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144075.5191265196,
+        "eligibleM2": 141776.60891468823,
+        "coveredM2": 20502.128516357898,
+        "excludedM2": 2298.910211831367,
+        "ratio": 0.14460868173744176
+      },
+      "bottom": {
+        "exposedM2": 144136.4027678994,
+        "eligibleM2": 141833.92299658075,
+        "coveredM2": 17891.022134768577,
+        "excludedM2": 2302.479771318636,
+        "ratio": 0.12614064221575458
+      },
+      "left": {
+        "exposedM2": 24296.860874050082,
+        "eligibleM2": 24296.860874050082,
+        "coveredM2": 24208.74763710865,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "right": {
+        "exposedM2": 24296.86087405008,
+        "eligibleM2": 24296.86087405008,
+        "coveredM2": 24208.747637108645,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "fore": {
+        "exposedM2": 52136.60587187989,
+        "eligibleM2": 28289.720655129484,
+        "coveredM2": 28061.298477653236,
+        "excludedM2": 23846.88521675042,
+        "ratio": 0.9919256121238924
+      },
+      "aft": {
+        "exposedM2": 36892.2213594914,
+        "eligibleM2": 9836.543310212084,
+        "coveredM2": 9721.170497008032,
+        "excludedM2": 27055.678049279417,
+        "ratio": 0.9882710003335954
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 231912.42942770204,
+      "hullOuterAreaM2": 371587.14122775116,
+      "eligibleArmorAreaM2": 494554.1639265746,
+      "armorRetainedFraction": 0.4689323158992421,
+      "criticalRetainedFraction": 0.5199798330986898
+    },
+    "armorGeometryCount": 8,
+    "finishCount": 38,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 781648562.6703207,
+      "armor": 895062679.2906891,
+      "propulsion": 875861858.277436,
+      "endurance": 826697398.277436,
+      "sensor": 42021258.362159766,
+      "equipment": 141555243.12195855
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 322.462799992067,
+      "samples": 406,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      128.98512,
+      322.4628
+    ]
+  },
+  {
+    "id": "CITADEL",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "CITADEL",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 254558.10322305377,
+    "hullMassT": 59017.36673231338,
+    "baseMassT": 1003416.7765913999,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 669956814.4676424,
+      "fabrication": 12070122.576057944,
+      "estimatedStructureAndCore": 135821775.27206576,
+      "yardProcessFactor": 1,
+      "total": 817848712.3157661,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      154.782144,
+      399.853872
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144075.5191265196,
+        "eligibleM2": 141776.60891468823,
+        "coveredM2": 89136.33223290478,
+        "excludedM2": 2298.910211831367,
+        "ratio": 0.6287097209846592
+      },
+      "bottom": {
+        "exposedM2": 144136.4027678994,
+        "eligibleM2": 141833.92299658075,
+        "coveredM2": 21297.71131956888,
+        "excludedM2": 2302.479771318636,
+        "ratio": 0.15015950253369437
+      },
+      "left": {
+        "exposedM2": 24296.860874050082,
+        "eligibleM2": 24296.860874050082,
+        "coveredM2": 5581.685780221859,
+        "excludedM2": 0,
+        "ratio": 0.229728680143339
+      },
+      "right": {
+        "exposedM2": 24296.86087405008,
+        "eligibleM2": 24296.86087405008,
+        "coveredM2": 5581.685780221859,
+        "excludedM2": 0,
+        "ratio": 0.22972868014333903
+      },
+      "fore": {
+        "exposedM2": 52136.60587187989,
+        "eligibleM2": 28289.720655129484,
+        "coveredM2": 15860.885360721248,
+        "excludedM2": 23846.88521675042,
+        "ratio": 0.5606589599832389
+      },
+      "aft": {
+        "exposedM2": 36892.2213594914,
+        "eligibleM2": 9836.543310212084,
+        "coveredM2": 1940.8056763441537,
+        "excludedM2": 27055.678049279417,
+        "ratio": 0.19730566065105937
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 240777.78754154092,
+      "hullOuterAreaM2": 371587.1412274885,
+      "eligibleArmorAreaM2": 444630.61039602273,
+      "armorRetainedFraction": 0.5415231923125703,
+      "criticalRetainedFraction": 0.5149243762512269
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 0,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 784036363.0314798,
+      "armor": 878651762.0954759,
+      "propulsion": 882070139.2164495,
+      "endurance": 832905679.2164495,
+      "sensor": 42379428.416333616,
+      "equipment": 142803628.0238116
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 399.85387199809696,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      154.782144,
+      399.853872
+    ]
+  },
+  {
+    "id": "BROAD_COVERAGE",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BROAD_COVERAGE",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 381305.4214685169,
+    "hullMassT": 59017.366732304465,
+    "baseMassT": 1130164.0948368541,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 974150378.256745,
+      "fabrication": 15592630.491881773,
+      "estimatedStructureAndCore": 135821775.27206576,
+      "yardProcessFactor": 1,
+      "total": 1125564784.0206923,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      167.680656,
+      270.86875200000003
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 144075.5191265196,
+        "eligibleM2": 141776.60891468823,
+        "coveredM2": 138909.95357785857,
+        "excludedM2": 2298.910211831367,
+        "ratio": 0.979780477479507
+      },
+      "bottom": {
+        "exposedM2": 144136.4027678994,
+        "eligibleM2": 141833.92299658075,
+        "coveredM2": 139639.20161052386,
+        "excludedM2": 2302.479771318636,
+        "ratio": 0.9845261180140255
+      },
+      "left": {
+        "exposedM2": 24296.860874050082,
+        "eligibleM2": 24296.860874050082,
+        "coveredM2": 24208.74763710865,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "right": {
+        "exposedM2": 24296.86087405008,
+        "eligibleM2": 24296.86087405008,
+        "coveredM2": 24208.747637108645,
+        "excludedM2": 0,
+        "ratio": 0.9963734723840172
+      },
+      "fore": {
+        "exposedM2": 52136.60587187989,
+        "eligibleM2": 28289.720655129484,
+        "coveredM2": 28061.298477653236,
+        "excludedM2": 23846.88521675042,
+        "ratio": 0.9919256121238924
+      },
+      "aft": {
+        "exposedM2": 36892.2213594914,
+        "eligibleM2": 9836.543310212084,
+        "coveredM2": 9721.170497008032,
+        "excludedM2": 27055.678049279417,
+        "ratio": 0.9882710003335954
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 434322.1785208731,
+      "hullOuterAreaM2": 371587.1412274868,
+      "eligibleArmorAreaM2": 1050076.6491036653,
+      "armorRetainedFraction": 0.4136099768446485,
+      "criticalRetainedFraction": 0.49946784201022904
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 45,
+    "automaticWeapons": 0,
+    "engines": 2,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 781498319.967676,
+      "armor": 896037357.0825322,
+      "propulsion": 875471227.2505596,
+      "endurance": 826306767.2505596,
+      "sensor": 41998721.95676305,
+      "equipment": 141534606.4919097
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "actualCriticalCenterAudit": {
+      "minimumMm": 270.86875199184135,
+      "samples": 396,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "plannedFacetDepthMm": [
+      167.680656,
+      270.86875200000003
+    ]
+  },
+  {
+    "id": "require-titanium-steel",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "REQUIRE",
+        "materialId": "TITANIUM_ARMOR"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "REQUIRE",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": []
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "TITANIUM_ARMOR",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 84495.560523112,
+    "hullMassT": 17427.124098473796,
+    "baseMassT": 262899.1118961283,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 249657900.85284784,
+      "fabrication": 5638472.858665287,
+      "estimatedStructureAndCore": 31704170.54908495,
+      "yardProcessFactor": 1,
+      "total": 287000544.26059806,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      96.9408,
+      242.35199999999998
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 52727.68854624127,
+        "eligibleM2": 51885.8622941779,
+        "coveredM2": 32599.31990009617,
+        "excludedM2": 841.8262520633604,
+        "ratio": 0.6282890648567698
+      },
+      "bottom": {
+        "exposedM2": 52753.24548549284,
+        "eligibleM2": 51910.038227813,
+        "coveredM2": 7786.490824685471,
+        "excludedM2": 843.2072576798416,
+        "ratio": 0.1499997127822096
+      },
+      "left": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "right": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "fore": {
+        "exposedM2": 16538.768358845486,
+        "eligibleM2": 8439.462581661677,
+        "coveredM2": 8439.462581661677,
+        "excludedM2": 8099.30577718381,
+        "ratio": 1
+      },
+      "aft": {
+        "exposedM2": 13495.71885661705,
+        "eligibleM2": 4237.318218916956,
+        "coveredM2": 4234.401605410403,
+        "excludedM2": 9258.40063770011,
+        "ratio": 0.9993116840992655
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 110826.6413687935,
+      "hullOuterAreaM2": 137994.0243211652,
+      "eligibleArmorAreaM2": 235157.76501597112,
+      "armorRetainedFraction": 0.4712863356277711,
+      "criticalRetainedFraction": 0.5187127138703236
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 20,
+    "automaticWeapons": 0,
+    "engines": 1,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 202619063.42751902,
+      "armor": 260318778.55077237,
+      "propulsion": 247455173.66540715,
+      "endurance": 235982893.66540715,
+      "sensor": 12290673.096081182,
+      "equipment": 41333417.59481308
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "requirements": [
+      {
+        "id": "unarmed-delivery",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 0,
+        "target": 0,
+        "unit": "automatic offensive mounts",
+        "reason": "Automatic composition planner and role weapon requirements bypassed; player loadout remains separate."
+      },
+      {
+        "id": "base-mass",
+        "mandatory": false,
+        "status": "SATISFIED",
+        "actual": 262899111.89612827,
+        "target": 1000000000,
+        "unit": "estimated kg",
+        "reason": "Includes unresolved frame/support estimates; compliance is an estimate, not a certified true mass bound."
+      }
+    ]
+  },
+  {
+    "id": "prefer-ceramic",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "PREFER",
+        "materialId": "CERAMIC_COMPOSITE"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": []
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 82848.19799319179,
+    "hullMassT": 17427.124098473796,
+    "baseMassT": 261251.74936620807,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 216262799.28213415,
+      "fabrication": 5031392.286938295,
+      "estimatedStructureAndCore": 31704170.54908495,
+      "yardProcessFactor": 1,
+      "total": 252998362.1181574,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      96.9408,
+      242.35199999999998
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 52727.68854624127,
+        "eligibleM2": 51885.8622941779,
+        "coveredM2": 32599.31990009617,
+        "excludedM2": 841.8262520633604,
+        "ratio": 0.6282890648567698
+      },
+      "bottom": {
+        "exposedM2": 52753.24548549284,
+        "eligibleM2": 51910.038227813,
+        "coveredM2": 7786.490824685471,
+        "excludedM2": 843.2072576798416,
+        "ratio": 0.1499997127822096
+      },
+      "left": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "right": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "fore": {
+        "exposedM2": 16538.768358845486,
+        "eligibleM2": 8439.462581661677,
+        "coveredM2": 8439.462581661677,
+        "excludedM2": 8099.30577718381,
+        "ratio": 1
+      },
+      "aft": {
+        "exposedM2": 13495.71885661705,
+        "eligibleM2": 4237.318218916956,
+        "coveredM2": 4234.401605410403,
+        "excludedM2": 9258.40063770011,
+        "ratio": 0.9993116840992655
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 110826.6413687935,
+      "hullOuterAreaM2": 137994.0243211652,
+      "eligibleArmorAreaM2": 235157.76501597112,
+      "armorRetainedFraction": 0.4712863356277711,
+      "criticalRetainedFraction": 0.5187127138703236
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 20,
+    "automaticWeapons": 0,
+    "engines": 1,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 202639812.91670752,
+      "armor": 260176644.54983112,
+      "propulsion": 247509122.3372973,
+      "endurance": 236036842.3372973,
+      "sensor": 12293785.519459458,
+      "equipment": 41343792.33940733
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "requirements": [
+      {
+        "id": "unarmed-delivery",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 0,
+        "target": 0,
+        "unit": "automatic offensive mounts",
+        "reason": "Automatic composition planner and role weapon requirements bypassed; player loadout remains separate."
+      },
+      {
+        "id": "base-mass",
+        "mandatory": false,
+        "status": "SATISFIED",
+        "actual": 261251749.36620808,
+        "target": 1000000000,
+        "unit": "estimated kg",
+        "reason": "Includes unresolved frame/support estimates; compliance is an estimate, not a certified true mass bound."
+      }
+    ]
+  },
+  {
+    "id": "prefer-nano-tech-substitution",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "PREFER",
+        "materialId": "NANO_LAMINATE"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": []
+    },
+    "status": "COMPROMISE",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 82848.19799319179,
+    "hullMassT": 17427.124098473796,
+    "baseMassT": 261251.74936620807,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 216262799.28213415,
+      "fabrication": 5031392.286938295,
+      "estimatedStructureAndCore": 31704170.54908495,
+      "yardProcessFactor": 1,
+      "total": 252998362.1181574,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      96.9408,
+      242.35199999999998
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 52727.68854624127,
+        "eligibleM2": 51885.8622941779,
+        "coveredM2": 32599.31990009617,
+        "excludedM2": 841.8262520633604,
+        "ratio": 0.6282890648567698
+      },
+      "bottom": {
+        "exposedM2": 52753.24548549284,
+        "eligibleM2": 51910.038227813,
+        "coveredM2": 7786.490824685471,
+        "excludedM2": 843.2072576798416,
+        "ratio": 0.1499997127822096
+      },
+      "left": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "right": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "fore": {
+        "exposedM2": 16538.768358845486,
+        "eligibleM2": 8439.462581661677,
+        "coveredM2": 8439.462581661677,
+        "excludedM2": 8099.30577718381,
+        "ratio": 1
+      },
+      "aft": {
+        "exposedM2": 13495.71885661705,
+        "eligibleM2": 4237.318218916956,
+        "coveredM2": 4234.401605410403,
+        "excludedM2": 9258.40063770011,
+        "ratio": 0.9993116840992655
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 110826.6413687935,
+      "hullOuterAreaM2": 137994.0243211652,
+      "eligibleArmorAreaM2": 235157.76501597112,
+      "armorRetainedFraction": 0.4712863356277711,
+      "criticalRetainedFraction": 0.5187127138703236
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 20,
+    "automaticWeapons": 0,
+    "engines": 1,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 202639812.91670752,
+      "armor": 260176644.54983112,
+      "propulsion": 247509122.3372973,
+      "endurance": 236036842.3372973,
+      "sensor": 12293785.519459458,
+      "equipment": 41343792.33940733
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [
+      "mainArmor: Preferred material exceeds available tech 4; explicit substitution (NANO_LAMINATE → CERAMIC_COMPOSITE)"
+    ],
+    "requirements": [
+      {
+        "id": "unarmed-delivery",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 0,
+        "target": 0,
+        "unit": "automatic offensive mounts",
+        "reason": "Automatic composition planner and role weapon requirements bypassed; player loadout remains separate."
+      },
+      {
+        "id": "base-mass",
+        "mandatory": false,
+        "status": "SATISFIED",
+        "actual": 261251749.36620808,
+        "target": 1000000000,
+        "unit": "estimated kg",
+        "reason": "Includes unresolved frame/support estimates; compliance is an estimate, not a certified true mass bound."
+      }
+    ]
+  },
+  {
+    "id": "critical-centers-1mm",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [
+        {
+          "zone": "CRITICAL_ZONE",
+          "verification": "EXPOSED_FACET_CENTERS",
+          "minimumThicknessMm": 1
+        }
+      ]
+    },
+    "status": "PASS",
+    "architecture": "MONOLITHIC",
+    "family": "WEDGE_CITADEL",
+    "main": "CERAMIC_COMPOSITE",
+    "auxiliary": "CERAMIC_COMPOSITE",
+    "hull": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "armorMassT": 82848.19799319179,
+    "hullMassT": 17427.124098473796,
+    "baseMassT": 261251.74936620807,
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 216262799.28213415,
+      "fabrication": 5031392.286938295,
+      "estimatedStructureAndCore": 31704170.54908495,
+      "yardProcessFactor": 1,
+      "total": 252998362.1181574,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    },
+    "thicknessMm": [
+      96.9408,
+      242.35199999999998
+    ],
+    "coverage": {
+      "top": {
+        "exposedM2": 52727.68854624127,
+        "eligibleM2": 51885.8622941779,
+        "coveredM2": 32599.31990009617,
+        "excludedM2": 841.8262520633604,
+        "ratio": 0.6282890648567698
+      },
+      "bottom": {
+        "exposedM2": 52753.24548549284,
+        "eligibleM2": 51910.038227813,
+        "coveredM2": 7786.490824685471,
+        "excludedM2": 843.2072576798416,
+        "ratio": 0.1499997127822096
+      },
+      "left": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "right": {
+        "exposedM2": 11169.07389613867,
+        "eligibleM2": 10842.436060488302,
+        "coveredM2": 10762.54300292119,
+        "excludedM2": 326.63783565036914,
+        "ratio": 0.992631447663477
+      },
+      "fore": {
+        "exposedM2": 16538.768358845486,
+        "eligibleM2": 8439.462581661677,
+        "coveredM2": 8439.462581661677,
+        "excludedM2": 8099.30577718381,
+        "ratio": 1
+      },
+      "aft": {
+        "exposedM2": 13495.71885661705,
+        "eligibleM2": 4237.318218916956,
+        "coveredM2": 4234.401605410403,
+        "excludedM2": 9258.40063770011,
+        "ratio": 0.9993116840992655
+      }
+    },
+    "physicalArea": {
+      "method": "AREA_OF_SURVIVING_OUTER_FACET_POLYGONS",
+      "armorOuterAreaM2": 110826.6413687935,
+      "hullOuterAreaM2": 137994.0243211652,
+      "eligibleArmorAreaM2": 235157.76501597112,
+      "armorRetainedFraction": 0.4712863356277711,
+      "criticalRetainedFraction": 0.5187127138703236
+    },
+    "armorGeometryCount": 11,
+    "finishCount": 20,
+    "automaticWeapons": 0,
+    "engines": 1,
+    "navigation": 1,
+    "allocationsKg": {
+      "structure": 202639812.91670752,
+      "armor": 260176644.54983112,
+      "propulsion": 247509122.3372973,
+      "endurance": 236036842.3372973,
+      "sensor": 12293785.519459458,
+      "equipment": 41343792.33940733
+    },
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.4,
+      "compartmentSubdivisionPreference": 0.44,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.44,
+      "systemPlacementPreference": "PROTECTED_CORE",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "compromises": [],
+    "requirements": [
+      {
+        "id": "unarmed-delivery",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 0,
+        "target": 0,
+        "unit": "automatic offensive mounts",
+        "reason": "Automatic composition planner and role weapon requirements bypassed; player loadout remains separate."
+      },
+      {
+        "id": "base-mass",
+        "mandatory": false,
+        "status": "SATISFIED",
+        "actual": 261251749.36620808,
+        "target": 1000000000,
+        "unit": "estimated kg",
+        "reason": "Includes unresolved frame/support estimates; compliance is an estimate, not a certified true mass bound."
+      },
+      {
+        "id": "critical-center-thickness",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 242.35199998885543,
+        "target": 1,
+        "unit": "mm",
+        "reason": "397 actual finite-volume center rays. LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum. Hull thickness excluded."
+      }
+    ]
+  },
+  {
+    "id": "require-nano-unavailable",
+    "status": "REJECT",
+    "codes": [
+      "REQUIRED_MATERIAL_TECH_UNAVAILABLE"
+    ],
+    "reason": "REQUIRED_MATERIAL_TECH_UNAVAILABLE: mainArmor: NANO_LAMINATE requires tech 5; available 4"
+  },
+  {
+    "id": "require-titanium-strict-mass",
+    "status": "REJECT",
+    "codes": [
+      "REQUIRED_MAXIMUM_BASE_MASS_UNAVAILABLE"
+    ],
+    "reason": "REQUIRED_MAXIMUM_BASE_MASS_UNAVAILABLE: Minimum Hull/armor and estimated structure/support 178407150.1kg exceeds maximum 1kg; REQUIRE materials were not relaxed"
+  },
+  {
+    "id": "hard-cost-reject",
+    "status": "REJECT",
+    "codes": [
+      "REQUIRED_CONSTRUCTION_COST_EXCEEDED"
+    ],
+    "reason": "REQUIRED_CONSTRUCTION_COST_EXCEEDED: REQUIRED_CONSTRUCTION_COST_EXCEEDED"
+  },
+  {
+    "id": "unknown-material",
+    "status": "REJECT",
+    "codes": [
+      "INVALID_PROCUREMENT_ORDER"
+    ],
+    "reason": "INVALID_PROCUREMENT_ORDER: INVALID_MATERIAL_SELECTION_mainArmor"
+  },
+  {
+    "id": "unsupported-full-zone",
+    "status": "REJECT",
+    "codes": [
+      "INVALID_PROCUREMENT_ORDER"
+    ],
+    "reason": "INVALID_PROCUREMENT_ORDER: UNSUPPORTED_ARMOR_ZONE_OR_VERIFICATION"
+  }
+]

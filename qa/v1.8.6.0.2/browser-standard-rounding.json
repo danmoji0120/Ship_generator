@@ -1,0 +1,33 @@
+{
+  "stored": {
+    "size": "M",
+    "mode": "SURFACE",
+    "footprint": {
+      "width": 10.046175344467436,
+      "length": 11.356546041571885
+    },
+    "envelope": {
+      "width": 11.356546041571885,
+      "height": 16.598028829989676,
+      "length": 19.218770224198572
+    },
+    "foundationHeight": 1.2230126506308183,
+    "cost": 3
+  },
+  "chromium": {
+    "size": "M",
+    "mode": "SURFACE",
+    "footprint": {
+      "width": 10.046175344467438,
+      "length": 11.356546041571885
+    },
+    "envelope": {
+      "width": 11.356546041571885,
+      "height": 16.59802882998968,
+      "length": 19.218770224198575
+    },
+    "foundationHeight": 1.2230126506308183,
+    "cost": 3
+  },
+  "maximumAbsoluteDifference": 3.552713678800501e-15
+}

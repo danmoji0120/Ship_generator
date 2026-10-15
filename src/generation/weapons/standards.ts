@@ -12,3 +12,14 @@ export function mountStandard(size:MountSize,length=300):MountStandard{
  for(const d of[s.footprint,s.envelope])for(const k of Object.keys(d)as (keyof typeof d)[])d[k]*=scale;
  s.foundationHeight*=scale;return s;
 }
+/** Transcendental scale evaluation can differ by a few ULPs across JS engines.
+ * Compare the same physical standard without rewriting the stored geometry.
+ * The bound is 16 machine epsilons, many orders below a micrometre. */
+export function sameMountStandard(actual:MountStandard,expected:MountStandard):boolean{
+ const same=(a:unknown,b:unknown):boolean=>{
+  if(typeof b==='number')return typeof a==='number'&&Number.isFinite(a)&&Math.abs(a-b)<=16*Number.EPSILON*Math.max(1,Math.abs(b));
+  if(b&&typeof b==='object'){if(!a||typeof a!=='object')return false;const keys=Object.keys(b);return keys.length===Object.keys(a).length&&keys.every(k=>Object.hasOwn(a,k)&&same((a as Record<string,unknown>)[k],(b as Record<string,unknown>)[k]));}
+  return a===b;
+ };
+ return actual?.size===expected.size&&actual?.mode===expected.mode&&actual?.cost===expected.cost&&same(actual,expected);
+}

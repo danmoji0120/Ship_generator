@@ -9,8 +9,8 @@ import{geometrySamples,solidContains}from'../weapons/collision';
 import{solidVolume,fits,plus,emptyResources,type DesignSector}from'./doctrine';
 import{inReservedZone}from'../integration/reservations';
 import{reservationBounds,reservationSamples,overlappingBounds}from'../armor/geometry';
-export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
- const l=b.order.length,surfaces=armorSurfaces(b),doctrine=b.designDoctrine!;
+export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign,support?:Pick<NonNullable<ShipBlueprint['designDoctrine']>,'allocations'|'total'|'adjustments'>){
+ const l=b.order.length,surfaces=armorSurfaces(b),doctrine=support??b.designDoctrine!;
  const installed={propulsion:emptyResources(),sensor:emptyResources(),endurance:emptyResources()};
  function emit(id:string,kind:PrefabPlacement['kind'],parentId:string,position:Vec3,n:Vec3,parts:ParametricPrefabAssembly['parts'],equipmentIds:string[]=[]){
   const own=kind==='ENGINE_HOUSING'?equipmentIds:[];
@@ -31,7 +31,7 @@ export function generateFunctionalExterior(b:ShipBlueprint,d:ProductionDesign){
   }
  }else d.decisions.push({stage:'functional',sourceId:'command-house',status:'omitted',reason:'No attached command plinth on this architecture; retained sensor-role volume'});
  // A sensing mission needs a real attached sensor even when this architecture has no command plinth.
- if(b.designRequirements&&['Cruiser','Patrol Ship'].includes(b.role)&&!d.functionalPrefabIds.some(id=>b.prefabPlacements!.find(p=>p.id===id)?.functionality==='sensor')){
+ if((b.procurement||b.designRequirements&&['Cruiser','Patrol Ship'].includes(b.role))&&!d.functionalPrefabIds.some(id=>b.prefabPlacements!.find(p=>p.id===id)?.functionality==='sensor')){
   const host=b.structuralVolumes.find(v=>v.type!=='SPINE'&&v.purpose!=='propulsion');
   if(host){const hint={...host.position,z:host.position.z+host.geometry.stations[0].z+host.dimensions.z*.25},hit=surfaceRay(surfaces,hint,{x:0,y:1,z:0});
    if(hit){const size=Math.min(l*.018,host.dimensions.x*.10),solid=transformSolid(facetedBox({x:0,y:size*.3-l*.0002,z:0},{x:size,y:size*.6,z:size}),hit.position,mountFrame(hit.normal));

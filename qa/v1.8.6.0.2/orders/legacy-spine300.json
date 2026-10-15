@@ -1,0 +1,23 @@
+{
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "vesper",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 12,
+  "architecture": {
+    "grammar": "SPINE_AND_MODULES"
+  },
+  "macroDesign": {
+    "family": "WEAPON_DOMINANT"
+  }
+}

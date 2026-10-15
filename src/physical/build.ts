@@ -1,3 +1,4 @@
+import {minimumProcurementThickness,nominalProcurementThickness} from '../procurement/policy';
 import {activePhysicalDiagnostics,timedPhysical,recordPhysicalStage} from './diagnostics';
 import { integratedLayerVolumes } from "./integration";
 import type { ShipBlueprint } from "../blueprint/types";
@@ -36,6 +37,7 @@ export function addPhysicalDesign(
     const cacheKey = JSON.stringify([
       1, b.schemaVersion, b.architecture.grammar, b.macroDesign?.family,
       provenance,
+      b.procurement?.order,
       b.seed,
       b.role,
       b.shipyardId,
@@ -74,7 +76,7 @@ export function addPhysicalDesign(
                 : 0),
             0,
           ) *
-            Math.max(35, preliminary.hullThicknessMm * 1.25)) /
+             (b.procurement?minimumProcurementThickness(b,s,preliminary.hullThicknessMm):Math.max(35, preliminary.hullThicknessMm * 1.25))) /
             1000) *
             MATERIALS[
               s.zone === "CRITICAL"
@@ -89,7 +91,7 @@ export function addPhysicalDesign(
         s.id,
         s.kind === "HULL"
           ? policy.hullThicknessMm
-          : Math.max(
+          : b.procurement?nominalProcurementThickness(b,s):Math.max(
               55,
               (90 + b.order.length * 0.45) *
                 (0.65 + b.order.priorities.survivability / 140) *
@@ -108,6 +110,10 @@ export function addPhysicalDesign(
         : s.zone === "CRITICAL"
           ? policy.criticalArmorMaterialPreference
           : policy.armorMaterialPreference;
+    const nativeArmorBounds = b.procurement?sources.filter(s=>s.kind==='ARMOR').map(s=>({
+      coefficient:s.triangles.reduce((a,t,i)=>a+(area(t)>1e-10?exposed(s,i).reduce((n,p)=>n+area(p),0):0),0)/1000*MATERIALS[material(s)].densityKgM3,
+      minimum:minimumProcurementThickness(b,s,policy.hullThicknessMm),nominal:nominal.get(s.id)!
+    })):undefined;
     const armorUpper = sources
       .filter((s) => s.kind === "ARMOR")
       .reduce(
@@ -126,10 +132,16 @@ export function addPhysicalDesign(
             MATERIALS[material(s)].densityKgM3,
         0,
       );
-    const scale = Math.min(
+    let scale = Math.min(
       1,
       policy.allocationsKg.armor / Math.max(1, armorUpper),
     );
+    if(nativeArmorBounds){
+      // A uniform ratio alone overspends once individual minimum depths clamp.
+      // Solve the actual bounded sum, preserving all minimum/REQUIRE depths.
+      const bound=(ratio:number)=>nativeArmorBounds.reduce((n,s)=>n+s.coefficient*Math.max(s.minimum,s.nominal*ratio),0);
+      if(bound(scale)>policy.allocationsKg.armor){let lo=0,hi=scale;for(let i=0;i<40;i++){const mid=(lo+hi)/2;if(bound(mid)<=policy.allocationsKg.armor)lo=mid;else hi=mid;}scale=lo;}
+    }
     if (scale < 1)
       policy.tradeoffs.push(
         `Armor mass competition: nominal thickness scaled by ${scale.toFixed(6)} against conservative exposed-area/density upper bound; no budget value overwritten.`,
@@ -169,7 +181,7 @@ export function addPhysicalDesign(
     ]) {
       if (source.approximation)
         warnings.push(source.id + ": " + source.approximation);
-      const minimum =
+      const minimum = b.procurement?minimumProcurementThickness(b,source,policy.hullThicknessMm):
           source.kind === "HULL"
             ? 8
             : Math.max(35, policy.hullThicknessMm * 1.25),
@@ -346,9 +358,9 @@ export function addPhysicalDesign(
       b.physicalDesign.mass.ledger!.baseBudgetViolation
     )
       throw Error(
-        "REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED: minimum valid skin / retained equipment exceeds target",
+        b.procurement?"REQUIRED_MAXIMUM_BASE_MASS_EXCEEDED: finite skin / estimated base exceeds hard limit":"REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED: minimum valid skin / retained equipment exceeds target",
       );
-    if (b.physicalDesign.mass.remainingMassKg < 0)
+    if (!b.procurement && b.physicalDesign.mass.remainingMassKg < 0)
       policy.tradeoffs.push(
         "Player exterior equipment exceeds dry-mass target; reported, not an internal/load/mass installation gate.",
       );

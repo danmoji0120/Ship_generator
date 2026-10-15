@@ -1,0 +1,353 @@
+{
+  "order": {
+    "version": "1.8.6.0.2",
+    "shipyardId": "aegis",
+    "shipClass": "Battleship",
+    "lengthM": 470,
+    "seed": 7,
+    "targetMassKg": 3562847000,
+    "primaryPriority": "ENDURANCE",
+    "architecture": {
+      "mode": "REQUIRE",
+      "grammar": "MONOLITHIC"
+    },
+    "mainArmor": {
+      "mode": "AUTO"
+    },
+    "auxiliaryArmor": {
+      "mode": "AUTO"
+    },
+    "hull": {
+      "mode": "AUTO"
+    },
+    "armorDistribution": "BALANCED",
+    "armorZoneRequirements": [],
+    "maximumBaseMassKg": 5000000000
+  },
+  "firstMs": 5150.678365,
+  "repeatedMs": 2512.6869749999996,
+  "deterministic": true,
+  "queryMs": 397.5000519999994,
+  "queryHits": 8,
+  "architecture": "MONOLITHIC",
+  "physicalSurfaces": 49,
+  "pieces": 9449,
+  "mass": {
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 37338273.68129757,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 301515428.62467855,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 473814540,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 2216515.43197195,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 263230300,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 1078115057.737948,
+      "mountedEstimatedDryMassKg": 1078115057.737948,
+      "targetSemantics": "SOFT_TARGET_WITH_OPTIONAL_MAXIMUM",
+      "maximumAllowedMassKg": 5000000000,
+      "baseRemainingKg": 2484731942.262052,
+      "mountedRemainingKg": 2484731942.262052,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "hullShellMassKg": 37338273.68129757,
+    "armorMassKg": 301515428.62467855,
+    "structuralMassEstimateKg": 473814540,
+    "coreEquipmentMassEstimateKg": 2216515.43197195,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 263230300,
+    "totalEstimatedDryMassKg": 1078115057.737948,
+    "targetMassKg": 3562847000,
+    "remainingMassKg": 2484731942.262052,
+    "armorBudgetRemainingKg": 378927661.51494867,
+    "manufacturingCostIndexKg": 835651849.743121,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 2632303000
+  },
+  "delivery": {
+    "version": "1.8.6.0.2",
+    "contract": "UNARMED_YARD_DESIGN",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "ENDURANCE",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "compromises": [],
+    "materialDecisions": [
+      {
+        "field": "mainArmor",
+        "requested": "AUTO",
+        "selected": "CERAMIC_COMPOSITE",
+        "reason": "Yard, four priorities and available technology"
+      },
+      {
+        "field": "auxiliaryArmor",
+        "requested": "AUTO",
+        "selected": "CERAMIC_COMPOSITE",
+        "reason": "Yard, four priorities and available technology"
+      },
+      {
+        "field": "hull",
+        "requested": "AUTO",
+        "selected": "TITANIUM_STRUCTURAL_ALLOY",
+        "reason": "Yard, four priorities and available technology"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "unarmed-delivery",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 0,
+        "target": 0,
+        "unit": "automatic offensive mounts",
+        "reason": "Automatic composition planner and role weapon requirements bypassed; player loadout remains separate."
+      },
+      {
+        "id": "base-mass",
+        "mandatory": true,
+        "status": "SATISFIED",
+        "actual": 1078115057.737948,
+        "target": 5000000000,
+        "unit": "estimated kg",
+        "reason": "Includes unresolved frame/support estimates; compliance is an estimate, not a certified true mass bound."
+      }
+    ],
+    "massConfidence": "ESTIMATE_INCLUDES_UNGENERATED_FRAME_AND_SUPPORT",
+    "coreSystems": {
+      "propulsionIds": [
+        "engine-0",
+        "engine-1"
+      ],
+      "navigationControlIds": [
+        "command-house"
+      ],
+      "description": "Existing attached propulsion/nozzles, navigation/control housings and visual RCS. No simulated reactor, navigation performance, endurance or flight bonus is claimed."
+    },
+    "cost": {
+      "model": "MATERIAL_AND_FABRICATION_INDEX_V1",
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 835651849.743121,
+      "fabrication": 13559220.172882259,
+      "estimatedStructureAndCore": 146577392.8639439,
+      "yardProcessFactor": 1,
+      "total": 995788462.7799472,
+      "assumptions": [
+        "Material: actual finite layer mass × shared registry manufacturing cost index.",
+        "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame/core costs use explicitly estimated mass; no market prices or currency, no cost for uninstalled player weapons."
+      ]
+    }
+  },
+  "policy": {
+    "version": "1.8.6.0.2",
+    "priorityWeights": {
+      "ARMOR": 40,
+      "MOBILITY": 40,
+      "ENDURANCE": 100,
+      "ECONOMY": 40
+    },
+    "priorityMapping": {
+      "ARMOR": "ARMOR",
+      "MOBILITY": "MOBILITY",
+      "ENDURANCE": "ENDURANCE",
+      "ECONOMY": "ECONOMY"
+    },
+    "targetMassBudgetKg": 3562847000,
+    "planningMassBudgetKg": 3562847000,
+    "maximumBaseMassKg": 5000000000,
+    "budgetSource": "PROCUREMENT_TARGET",
+    "allocationsKg": {
+      "structure": 724945722.523596,
+      "armor": 680443090.1396272,
+      "propulsion": 713783328.8081913,
+      "endurance": 1302497055.8945656,
+      "sensor": 32067989.354318723,
+      "equipment": 109109813.27970104
+    },
+    "hullMaterialPreference": "TITANIUM_STRUCTURAL_ALLOY",
+    "armorMaterialPreference": "CERAMIC_COMPOSITE",
+    "criticalArmorMaterialPreference": "CERAMIC_COMPOSITE",
+    "hullThicknessMm": 21.9535,
+    "armorCoveragePreference": 0.75,
+    "criticalZoneProtectionPreference": 0.7100000000000001,
+    "costPreference": 0.4,
+    "manufacturingTechPreference": 4,
+    "legacyDoctrineReference": "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS",
+    "future": {
+      "status": "POLICY_ONLY_NOT_GENERATED",
+      "frameDensityPreference": 0.48000000000000004,
+      "frameRedundancyPreference": 0.7,
+      "compartmentSubdivisionPreference": 0.8,
+      "bulkheadProtectionPreference": 0.42,
+      "systemRedundancyPreference": 0.8,
+      "systemPlacementPreference": "DISTRIBUTED",
+      "protectedVolumePreference": 0.52,
+      "propulsionSupportPreference": 0.45999999999999996,
+      "fireControlProtectionPreference": 0,
+      "missileSupportProtectionPreference": 0,
+      "sensorSupportProtectionPreference": 0
+    },
+    "tradeoffs": [
+      "Four native procurement priorities share finite mass reserves; no offensive weapon targets or XL reservations.",
+      "Target mass is a soft objective. Maximum base mass, if supplied, is enforced against an estimate including unresolved frame/support.",
+      "Endurance subdivisions/redundancy and maneuver performance are future policy only; no fabricated internal systems.",
+      "Core navigation/control housings and attached propulsion are preserved; player combat sensors are not automatically fitted.",
+      "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+    ]
+  },
+  "profile": {
+    "totalMs": 5150.473563,
+    "stages": {
+      "Procurement hull": {
+        "ms": 17.589710000000004,
+        "calls": 1
+      },
+      "Procurement structural armor": {
+        "ms": 14.148438999999996,
+        "calls": 1
+      },
+      "Procurement armor coverage": {
+        "ms": 32.49372300000002,
+        "calls": 1
+      },
+      "Procurement core systems": {
+        "ms": 28.632393000000008,
+        "calls": 1
+      },
+      "Procurement exterior details": {
+        "ms": 445.85166100000004,
+        "calls": 1
+      },
+      "Procurement meso": {
+        "ms": 1253.333239,
+        "calls": 1
+      },
+      "Cache key": {
+        "ms": 2.2891130000002704,
+        "calls": 1
+      },
+      "Source geometry": {
+        "ms": 38.20324699999992,
+        "calls": 1
+      },
+      "Design policy": {
+        "ms": 1.6078489999995327,
+        "calls": 2
+      },
+      "Outer area union": {
+        "ms": 155.26869899998428,
+        "calls": 2338
+      },
+      "Layer integration": {
+        "ms": 74.46686299998237,
+        "calls": 9449
+      },
+      "ARMOR physical construction": {
+        "ms": 1869.2571660000003,
+        "calls": 48
+      },
+      "HULL physical construction": {
+        "ms": 265.640762,
+        "calls": 1
+      },
+      "Mass ledger": {
+        "ms": 0.6091480000004594,
+        "calls": 1
+      },
+      "Cache store": {
+        "ms": 143.48355699999956,
+        "calls": 1
+      },
+      "Procurement physical build": {
+        "ms": 2436.017286,
+        "calls": 1
+      },
+      "Procurement requirement verification": {
+        "ms": 0.8900309999999081,
+        "calls": 1
+      },
+      "Procurement final validation": {
+        "ms": 677.4646059999995,
+        "calls": 1
+      }
+    },
+    "cache": {
+      "hits": 0,
+      "misses": 1
+    }
+  },
+  "memory": {
+    "rss": 601169920,
+    "heapTotal": 526913536,
+    "heapUsed": 414970312,
+    "external": 3743535,
+    "arrayBuffers": 145631
+  },
+  "peakRss": 621961216
+}

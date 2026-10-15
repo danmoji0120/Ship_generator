@@ -1,20 +1,20 @@
+import {generateProcurementBlueprint} from './procurement/generate';
+import {DEFAULT_PROCUREMENT_ORDER,convertLegacyOrder} from './procurement/order';
+import type {ProcurementOrder,ProcurementDelivery} from './procurement/types';
+import {readProcurementForm,applyProcurementForm,syncProcurementFields,procurementInputErrors,showProcurementResult} from './ui/procurement';
 import {setupPhysicalInspector,showPhysicalInspector} from "./ui/physical";
 import {retainFreeLoadout} from "./free-mount/store";
 import {setupFreeEquipment} from "./ui/free-equipment";
 import {setupEquipmentPreview} from './ui/equipment-preview';
-import {setupHardpointOrder,readHardpointOrder,applyHardpointOrder,showHardpointInspector,selectHardpoint} from "./ui/hardpoints";
+import {showHardpointInspector,selectHardpoint} from "./ui/hardpoints";
 import type {DetailMode} from './generation/details/types';
 import {DesignRejection} from './generation/production/requirements';
 import "./style.css";
-import { layout, PRIORITY_LABELS } from "./ui/layout";
-import { DEFAULT_ORDER, generateBlueprint } from "./generation/generate";
+import { layout } from "./ui/layout";
+import { generateBlueprint } from "./generation/generate";
 import {
-  PRIORITIES,
   type ShipOrder,
-  type ShipBlueprint,
   type AnyShipBlueprint,
-  type ShipRole,
-  type MassClass,
 } from "./blueprint/types";
 import { getShipyard } from "./shipyards/config";
 import { validateBlueprint } from "./validation/validate";
@@ -24,7 +24,7 @@ import type { DebugView } from "./rendering/ship";
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 $("app").innerHTML = layout();
-setupHardpointOrder();
+
 let yardId = "aegis",
   blueprint: AnyShipBlueprint,
   storedBlueprint: string,
@@ -40,47 +40,15 @@ try {
 setupPhysicalInspector(viewer,()=>blueprint,next=>present(next));
 const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
 const freeEditor=setupFreeEquipment(viewer,()=>blueprint,next=>{
- blueprint=next;storedBlueprint=JSON.stringify(next);$("json-content").textContent=JSON.stringify(next,null,2);viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);
+ blueprint=next;storedBlueprint=JSON.stringify(next);$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showProcurementResult(next);
 });
 if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
 $<HTMLSelectElement>("surface-finish").onchange=()=>viewer?.setSurfaceFinish($<HTMLSelectElement>("surface-finish").value as FinishProfile);
-function syncRanges() {
-  for (const id of ["length", ...PRIORITIES]) {
-    const input = $<HTMLInputElement>(id);
-    $(id + "-value").innerHTML =
-      id === "length" ? `${input.value} <span>m</span>` : input.value;
-    input.style.setProperty(
-      "--progress",
-      `${((Number(input.value) - Number(input.min)) / (Number(input.max) - Number(input.min))) * 100}%`,
-    );
-  }
-}
-function order(): ShipOrder {
-  return {
-    ...readHardpointOrder(),
-    ...($<HTMLInputElement>('target-dry-mass').value.trim()?{targetDryMassKg:Number($<HTMLInputElement>('target-dry-mass').value)*1000}:{}),
-    role: $<HTMLSelectElement>("role").value as ShipRole,
-    shipyardId: yardId,
-    length: Number($<HTMLInputElement>("length").value),
-    massClass: $<HTMLSelectElement>("mass").value as MassClass,
-    priorities: Object.fromEntries(
-      PRIORITIES.map((k) => [k, Number($<HTMLInputElement>(k).value)]),
-    ) as ShipOrder["priorities"],
-  };
-}
-function applyOrder(o: ShipOrder) {
-  $<HTMLInputElement>('target-dry-mass').value=o.targetDryMassKg===undefined?'':String(o.targetDryMassKg/1000);
-  applyHardpointOrder(o);
-  yardId = o.shipyardId;
-  $<HTMLSelectElement>("role").value = o.role;
-  $<HTMLInputElement>("length").value = String(o.length);
-  $<HTMLSelectElement>("mass").value = o.massClass;
-  for (const k of PRIORITIES)
-    $<HTMLInputElement>(k).value = String(o.priorities[k]);
-  syncYard();
-  syncRanges();
-}
+let legacyMode=false;
+let conversion:ProcurementDelivery['conversion'];
+function applyOrder(o:ProcurementOrder){yardId=o.shipyardId;applyProcurementForm(o);syncYard();}
+function setLegacyMode(value:boolean){legacyMode=value;$('legacy-order-notice').hidden=!value;$<HTMLButtonElement>('generate').disabled=value;$<HTMLButtonElement>('regenerate').disabled=value;}
 function syncYard() {
   const y = getShipyard(yardId);
   $("doctrine").textContent = y.description;
@@ -94,36 +62,32 @@ function randomSeed() {
   crypto.getRandomValues(a);
   $<HTMLInputElement>("seed").value = String(a[0]);
 }
-function stale() {
-  $("order-status").textContent = "주문서 변경됨 · 재생성하여 적용";
-  $("order-status").classList.add("stale");
+function stale(){
+ const errors=procurementInputErrors(yardId);
+ $<HTMLButtonElement>('generate').disabled=legacyMode||errors.length>0;
+ $<HTMLButtonElement>('regenerate').disabled=legacyMode||errors.length>0;
+ $('order-status').textContent=legacyMode?'과거 설계 · 명시적 변환 또는 새 발주를 선택하세요':errors.length?'입력 조건을 확인하세요':'주문서 변경됨 · Generate로 적용';
+ $('order-status').classList.add('stale');
 }
-function generate() {
-  try {
-    const seedInput = $<HTMLInputElement>("seed"),
-      seed = Number(seedInput.value);
-    if (
-      seedInput.value === "" ||
-      !Number.isInteger(seed) ||
-      seed < 0 ||
-      seed > 4294967295
-    )
-      throw new Error("Seed는 0–4294967295 사이 정수여야 합니다.");
-    const start = performance.now(),
-      next = generateBlueprint(order(), seed,$<HTMLSelectElement>('mount-design-mode').value==='LEGACY'?{version:'1.8.5.4.1'}:undefined);
-    present(blueprint?.schemaVersion===2?retainFreeLoadout(blueprint,next):next, start);
-  } catch (e) {
-    const failure=$("design-rejection");failure.replaceChildren();
-    if(e instanceof DesignRejection){$("order-status").textContent=`설계 거절 · ${[...new Set(e.codes)].join(' / ')}`;const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='필수 요구사항 실패 상세';details.append(summary);const why=document.createElement('p');why.textContent=e.message;details.append(why);failure.append(details);}
-    else $("order-status").textContent = e instanceof Error ? e.message : String(e);
-    $("validated").textContent = "ORDER INVALID";
-  }
+function failure(e:unknown){
+ const node=$('design-rejection');node.replaceChildren();
+ $('order-status').textContent=e instanceof DesignRejection?`REJECT · ${[...new Set(e.codes)].join(' / ')}`:String(e);
+ const why=document.createElement('p');why.textContent=e instanceof Error?e.message:String(e);node.append(why);
+ $('validated').textContent=blueprint?'PREVIOUS DESIGN RETAINED':'ORDER REJECTED';
+}
+function generate(){
+ try{
+  if(legacyMode)throw Error('Explicit conversion is required before new procurement.');
+  const start=performance.now(),next=generateProcurementBlueprint(readProcurementForm(yardId));
+  if(conversion)next.procurement!.conversion=structuredClone(conversion);
+  present(blueprint?.schemaVersion===2?retainFreeLoadout(blueprint,next):next,start);
+ }catch(e){failure(e);}
 }
 function present(next: AnyShipBlueprint, start=performance.now()) {
     $("design-rejection").replaceChildren();
     viewer?.show(next);
     blueprint = next;
-    showHardpointInspector(next);showPhysicalInspector(next);
+    showHardpointInspector(next);showPhysicalInspector(next);showProcurementResult(next);
     equipmentPreview.reset();freeEditor.reset();
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
@@ -199,7 +163,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
       `${y.doctrine} · ${next.generationStats.enginePattern} propulsion`;
     $("generation-time").textContent =
       `${Math.round(performance.now() - start)} ms · validated`;
-    $("json-content").textContent = JSON.stringify(next, null, 2);
+    $('json-content').textContent='Open View JSON to format the current Blueprint.';
     $("order-status").textContent = "생성 완료 · 현재 주문서가 적용되었습니다";
     $("order-status").classList.remove("stale");
     $("validated").textContent = "✓ BLUEPRINT VALID";
@@ -207,7 +171,6 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
 }
 $("order-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  randomSeed();
   generate();
 });
 $("regenerate").addEventListener("click", generate);
@@ -216,10 +179,10 @@ $("random").addEventListener("click", () => {
   stale();
 });
 $("order-form").addEventListener("input", () => {
-  syncRanges();
+  syncProcurementFields();
   stale();
 });
-$("order-form").addEventListener("change", stale);
+$('order-form').addEventListener('change',e=>{syncProcurementFields(e.target as HTMLElement);stale();});
 for (const el of document.querySelectorAll<HTMLButtonElement>("[data-yard]"))
   el.onclick = () => {
     yardId = el.dataset.yard!;
@@ -274,7 +237,7 @@ function importBlueprint(text: string) {
  const value:AnyShipBlueprint=JSON.parse(text);
  if(![1,2].includes(value.schemaVersion))throw Error("Unsupported Blueprint schema");
  const errors=validateBlueprint(value);if(errors.length)throw Error(errors.join("; "));
- present(value);applyOrder(value.order);$<HTMLInputElement>("seed").value=String(value.seed);
+ present(value);conversion=undefined;if(value.schemaVersion===2&&value.procurement){setLegacyMode(false);applyOrder(value.procurement.order);}else setLegacyMode(true);
  $("order-status").textContent="저장된 Blueprint 로드 완료 · 재생성 없이 원본 재현";
 }
 $("import").onclick=()=>$<HTMLInputElement>("import-file").click();
@@ -293,7 +256,7 @@ $("export").onclick = () => {
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
-$("inspect").onclick = () => $<HTMLDialogElement>("json-dialog").showModal();
+$('inspect').onclick=()=>{$('json-content').textContent=JSON.stringify(blueprint,null,2);$<HTMLDialogElement>('json-dialog').showModal();};
 $("close-json").onclick = () => $<HTMLDialogElement>("json-dialog").close();
 $("copy-json").onclick = async () => {
   try {
@@ -304,7 +267,10 @@ $("copy-json").onclick = async () => {
       "복사 불가 · JSON을 선택하거나 Export를 사용하세요";
   }
 };
-applyOrder(DEFAULT_ORDER);
+$('new-order').onclick=()=>{conversion=undefined;setLegacyMode(false);applyOrder(DEFAULT_PROCUREMENT_ORDER);stale();};
+$('convert-legacy').onclick=()=>{try{if(blueprint.schemaVersion!==2)throw Error('Schema 1 is read-only. Create a new procurement order explicitly.');const c=convertLegacyOrder(blueprint);conversion=c.conversion;setLegacyMode(false);applyOrder(c.order);stale();$('order-status').textContent=c.conversion.warning;}catch(e){failure(e);}};
+$('replay-legacy').onclick=()=>{try{if(blueprint.schemaVersion!==2)throw Error('Historical Schema 1 is read-only.');const b=blueprint,start=performance.now();const allowed=['1.8','1.8.1','1.8.2','1.8.3','1.8.4','1.8.4.1','1.8.4.2','1.8.5','1.8.5.1','1.8.5.2','1.8.5.3','1.8.5.3.1','1.8.5.4','1.8.5.4.1','1.8.5.5','1.8.6.0','1.8.6.0.1'];if(!allowed.includes(b.generatorVersion))throw Error('This historical generation contract is read-only.');const next=generateBlueprint(b.order,b.seed,{version:b.generatorVersion as any,architecture:b.architecture.grammar,family:b.macroDesign?.family});present(retainFreeLoadout(b,next),start);setLegacyMode(true);$('order-status').textContent='Original generation contract replayed; original stored Blueprint can be reimported.';}catch(e){failure(e);}};
+applyOrder(DEFAULT_PROCUREMENT_ORDER);
 generate();
 // Read-only QA hooks. Generation still goes through the same pipeline used by the UI.
 if (import.meta.env.DEV)
@@ -313,14 +279,14 @@ if (import.meta.env.DEV)
       getBlueprint: () => structuredClone(blueprint),
       sample: generateBlueprint,
       generate: (o: ShipOrder, seed: number) => {
-        applyOrder(o);
-        $<HTMLInputElement>("seed").value = String(seed);
-        generate();
+        present(generateBlueprint(o,seed));setLegacyMode(true);
         return structuredClone(blueprint);
       },
       validate: () => validateBlueprint(blueprint),
       diagnostics: () => viewer?.getDiagnostics(),
       projectMount: (p:import("./blueprint/types").Vec3)=>viewer?.projectShipPoint(p),
-      priorities: PRIORITY_LABELS,
+      generateProcurement:(o:ProcurementOrder)=>{setLegacyMode(false);applyOrder(o);generate();},
+      importBlueprint,
+      procurementOrder:()=>readProcurementForm(yardId),
     },
   });

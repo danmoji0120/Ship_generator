@@ -1,0 +1,16 @@
+BALANCED: PASS · 1041900t
+ARMOR: PASS · 2018210t
+MOBILITY: PASS · 939122t
+ENDURANCE: PASS · 1078115t
+ECONOMY: PASS · 1179945t
+CITADEL: PASS · 1003417t
+BROAD_COVERAGE: PASS · 1130164t
+require-titanium-steel: PASS · 262899t
+prefer-ceramic: PASS · 261252t
+prefer-nano-tech-substitution: COMPROMISE · 261252t
+critical-centers-1mm: PASS · 261252t
+require-nano-unavailable: REJECT
+require-titanium-strict-mass: REJECT
+hard-cost-reject: REJECT
+unknown-material: REJECT
+unsupported-full-zone: REJECT

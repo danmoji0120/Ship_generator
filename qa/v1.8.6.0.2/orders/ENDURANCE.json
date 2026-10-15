@@ -1,0 +1,25 @@
+{
+  "version": "1.8.6.0.2",
+  "shipyardId": "aegis",
+  "shipClass": "Battleship",
+  "lengthM": 470,
+  "seed": 7,
+  "targetMassKg": 3562847000,
+  "primaryPriority": "ENDURANCE",
+  "architecture": {
+    "mode": "REQUIRE",
+    "grammar": "MONOLITHIC"
+  },
+  "mainArmor": {
+    "mode": "AUTO"
+  },
+  "auxiliaryArmor": {
+    "mode": "AUTO"
+  },
+  "hull": {
+    "mode": "AUTO"
+  },
+  "armorDistribution": "BALANCED",
+  "armorZoneRequirements": [],
+  "maximumBaseMassKg": 5000000000
+}

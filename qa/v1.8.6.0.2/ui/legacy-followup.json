@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "name": "Production entry has no DEV API",
+      "passed": true
+    },
+    {
+      "name": "Native unarmed base with propulsion/control",
+      "passed": true
+    },
+    {
+      "name": "Only four design priorities exposed",
+      "passed": true
+    },
+    {
+      "name": "Legacy import retains weapons/materials/geometry exact",
+      "passed": true
+    },
+    {
+      "name": "Legacy requires explicit conversion",
+      "passed": true
+    },
+    {
+      "name": "Explicit conversion only changes form, keeps original armed ship",
+      "passed": true
+    },
+    {
+      "name": "Conversion warning explains new unarmed design",
+      "passed": true
+    },
+    {
+      "name": "New order resets form without deleting loaded ship",
+      "passed": true
+    },
+    {
+      "name": "125% UI major action accessible",
+      "passed": true
+    },
+    {
+      "name": "Narrow screen has no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "Narrow Generate accessible",
+      "passed": true
+    },
+    {
+      "name": "Console/page errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "installed": [],
+  "scope": "Production preview; real UI changes, downloads/imports, canvas picking and worker installation"
+}

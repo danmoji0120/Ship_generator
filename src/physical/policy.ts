@@ -1,3 +1,4 @@
+import {createProcurementPolicy} from '../procurement/policy';
 import type { ShipBlueprint } from "../blueprint/types";
 import { DOCTRINES, solidVolume } from "../generation/production/doctrine";
 import { ARMOR_MATERIALS, HULL_MATERIALS } from "./materials";
@@ -39,6 +40,7 @@ export function createDesignPolicy(
   sources: PhysicalSource[],
   minimumArmorMassKg = 0,
 ): DesignPolicy {
+  if(b.procurement)return createProcurementPolicy(b,sources,minimumArmorMassKg);
   const p = b.order.priorities,
     role = DOCTRINES[b.role],
     yard = b.shipyardId,
@@ -212,7 +214,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
    {component:'MOUNTED_EQUIPMENT',massKg:mounted.equipmentKg,source:'ESTIMATED',basis:'Actually installed saved equipment geometry × 160kg/m³, owned platform excluded'},
    {component:'PLATFORM',massKg:mounted.platformKg,source:'ESTIMATED',basis:'Owned platform geometry × 2800kg/m³, counted once'},
    {component:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,source:'LEGACY_ESTIMATE',basis:'Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated'}
-  ],baseEstimatedDryMassKg,mountedEstimatedDryMassKg:totalEstimatedDryMassKg,targetSemantics:'EXISTING_BASE_DESIGN_LIMIT',maximumAllowedMassKg:null,baseRemainingKg:policy.targetMassBudgetKg-baseEstimatedDryMassKg,mountedRemainingKg:policy.targetMassBudgetKg-totalEstimatedDryMassKg,baseBudgetViolation:baseEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,mountedLoadoutOverTarget:totalEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,operationalConsumables:'NOT_INCLUDED'};
+  ],baseEstimatedDryMassKg,mountedEstimatedDryMassKg:totalEstimatedDryMassKg,targetSemantics:b.procurement?'SOFT_TARGET_WITH_OPTIONAL_MAXIMUM':'EXISTING_BASE_DESIGN_LIMIT',maximumAllowedMassKg:b.procurement?.order.maximumBaseMassKg??null,baseRemainingKg:policy.targetMassBudgetKg-baseEstimatedDryMassKg,mountedRemainingKg:policy.targetMassBudgetKg-totalEstimatedDryMassKg,baseBudgetViolation:b.procurement?baseEstimatedDryMassKg>(b.procurement.order.maximumBaseMassKg??Infinity)+1e-3:baseEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,mountedLoadoutOverTarget:totalEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,operationalConsumables:'NOT_INCLUDED'};
   return {
     ledger,
     hullShellMassKg,

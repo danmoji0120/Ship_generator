@@ -1,0 +1,12 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 120000ms exceeded.
+    at load (/workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:5:279)
+    at async file:///workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:28:103 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,173 @@
+{
+  "kind": "cold",
+  "priority": "original",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "vesper",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 12,
+  "moduleInitMs": 21.623962000000006,
+  "firstMs": 9909.955348,
+  "validationMs": 292.78036299999985,
+  "serializationMs": 384.7552940000005,
+  "physicalSerializationMs": 296.8341959999998,
+  "repeatedMs": 3703.532368,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 84334856,
+    "rss": 188948480,
+    "maxRssBytes": 319684608
+  },
+  "afterMemory": {
+    "heapUsed": 790643616,
+    "rss": 1124642816,
+    "maxRssBytes": 1203286016
+  },
+  "physicalBytes": 41198855,
+  "blueprintBytes": 43655773,
+  "surfaces": 129,
+  "triangles": 238189,
+  "pieces": 24366,
+  "queryMs": 909.2348469999997,
+  "queryHits": 0,
+  "mass": {
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 3337571.3711404847,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 54563266.50269362,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 46074060,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 621646.337852411,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 25596700,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 130193244.21168652,
+      "mountedEstimatedDryMassKg": 130193244.21168652,
+      "targetSemantics": "EXISTING_BASE_DESIGN_LIMIT",
+      "maximumAllowedMassKg": null,
+      "baseRemainingKg": 125773755.78831348,
+      "mountedRemainingKg": 125773755.78831348,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "hullShellMassKg": 3337571.3711404847,
+    "armorMassKg": 54563266.50269362,
+    "structuralMassEstimateKg": 46074060,
+    "coreEquipmentMassEstimateKg": 621646.337852411,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 25596700,
+    "totalEstimatedDryMassKg": 130193244.21168652,
+    "targetMassKg": 255967000,
+    "remainingMassKg": 125773755.78831348,
+    "armorBudgetRemainingKg": 1568986.2834826335,
+    "manufacturingCostIndexKg": 224006993.03778756,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 255967000
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 30.142057000000023,
+      "armorMs": 113.54013900000007,
+      "coverageMs": 77.30982899999992,
+      "functionalMs": 534.8104310000001,
+      "installationMs": 80.458214,
+      "validationMs": 113.4998599999999,
+      "totalMs": 949.76053
+    },
+    {
+      "hullMs": 142.08038699999997,
+      "armorMs": 131.32541200000014,
+      "coverageMs": 56.780172000000675,
+      "functionalMs": 508.7409319999988,
+      "installationMs": 75.31572400000005,
+      "validationMs": 98.68038700000034,
+      "totalMs": 1012.923014
+    }
+  ],
+  "stages": [
+    {
+      "label": "generation",
+      "ms": 9909.955348,
+      "functions": []
+    },
+    {
+      "label": "validation",
+      "ms": 292.78036299999985,
+      "functions": []
+    },
+    {
+      "label": "serialization",
+      "ms": 384.7552940000005,
+      "functions": []
+    },
+    {
+      "label": "physicalSerialization",
+      "ms": 296.8341959999998,
+      "functions": []
+    },
+    {
+      "label": "cache-hit",
+      "ms": 3703.532368,
+      "functions": []
+    },
+    {
+      "label": "first-ray-query",
+      "ms": 909.2348469999997,
+      "functions": []
+    }
+  ],
+  "functions": []
+}

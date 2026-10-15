@@ -1,0 +1,117 @@
+[
+  {
+    "id": "titanium-realistic-cap",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "REQUIRE",
+        "materialId": "TITANIUM_ARMOR"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "REQUIRE",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 200000000
+    },
+    "status": "PASS",
+    "baseKg": 195033579.55377916,
+    "armorKg": 16630028.180795515,
+    "main": "TITANIUM_ARMOR",
+    "planningBudgetKg": 200000000,
+    "allocationsKg": {
+      "structure": 121400789.3158439,
+      "armor": 16663956.215746991,
+      "propulsion": 36287660.975051835,
+      "endurance": 24815380.97505184,
+      "sensor": 107931.9793299137,
+      "equipment": 724280.5389755203
+    },
+    "actualCriticalCenters": {
+      "minimumMm": 44.08235321954376,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "tradeoffs": [
+      "Four native procurement priorities share finite mass reserves; no offensive weapon targets or XL reservations.",
+      "Target mass is a soft objective. Maximum base mass, if supplied, is enforced against an estimate including unresolved frame/support.",
+      "Endurance subdivisions/redundancy and maneuver performance are future policy only; no fabricated internal systems.",
+      "Core navigation/control housings and attached propulsion are preserved; player combat sensors are not automatically fitted.",
+      "Armor mass competition: nominal thickness scaled by 0.181894 against conservative exposed-area/density upper bound; no budget value overwritten.",
+      "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+    ]
+  },
+  {
+    "id": "critical-center-2000mm",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1000000000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [
+        {
+          "zone": "CRITICAL_ZONE",
+          "verification": "EXPOSED_FACET_CENTERS",
+          "minimumThicknessMm": 2000
+        }
+      ],
+      "maximumBaseMassKg": 5000000000
+    },
+    "status": "PASS",
+    "baseKg": 496365765.7103194,
+    "armorKg": 317962214.3373032,
+    "main": "CERAMIC_COMPOSITE",
+    "planningBudgetKg": 1000000000,
+    "allocationsKg": {
+      "structure": 173344992.43073475,
+      "armor": 460846164.8787447,
+      "propulsion": 171342589.07376805,
+      "endurance": 159870309.07376805,
+      "sensor": 7899562.446563542,
+      "equipment": 26696382.096420947
+    },
+    "actualCriticalCenters": {
+      "minimumMm": 1999.9999999981967,
+      "samples": 397,
+      "scope": "LARGEST_SURVIVING_OUTER_TRIANGLE_CENTER_PER_CRITICAL_FACET; not full-surface or edge minimum"
+    },
+    "tradeoffs": [
+      "Four native procurement priorities share finite mass reserves; no offensive weapon targets or XL reservations.",
+      "Target mass is a soft objective. Maximum base mass, if supplied, is enforced against an estimate including unresolved frame/support.",
+      "Endurance subdivisions/redundancy and maneuver performance are future policy only; no fabricated internal systems.",
+      "Core navigation/control housings and attached propulsion are preserved; player combat sensors are not automatically fitted.",
+      "Actual coverage is fixed by surviving finite surfaces; policy target is recorded as saturated by retained geometry. Physical coverage ratios are exposed-skin area retention, not an omnidirectional ship protection percentage."
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 import type{ShipBlueprint}from'../../blueprint/types';
-import{mountStandard}from'./standards';
+import{mountStandard,sameMountStandard}from'./standards';
 import{armorSurfaces,localPoint,worldDirection,REGION_NORMAL}from'./surfaces';
 import{solidTriangles,normal,inPolygon,area,cross}from'../armor/panels';
 import{dot,sub,add,mul,boundsOf}from'../integration/contours';
@@ -26,7 +26,7 @@ export function validateWeaponLayout(b:ShipBlueprint){
  for(const{mount:m,assembly:a}of active){
   if(!a){issues.push(`Missing weapon assembly ${m.id}`);continue;}
   cost+=m.standard.cost;counts[m.region]++;
-  if(JSON.stringify(m.standard)!==JSON.stringify(mountStandard(m.standard.size,b.order.length))||m.standard.mode!=='SURFACE')issues.push(`Invalid standard ${m.id}`);
+  if(!sameMountStandard(m.standard,mountStandard(m.standard.size,b.order.length))||m.standard.mode!=='SURFACE')issues.push(`Invalid standard ${m.id}`);
   const h=b.hardpoints.find(h=>h.id===m.id);
   if(!h||h.plannedMountId!==m.id||h.size!==m.standard.size||!h.allowedCategories.includes(m.category)||JSON.stringify(h.position)!==JSON.stringify(m.position)||JSON.stringify(h.normal)!==JSON.stringify(m.frame.normal)||h.radius!==m.footprint.width/2||m.category==='SPINAL')issues.push(`Mount authority mismatch ${m.id}`);
   const axes=[m.frame.right,m.frame.normal,m.frame.forward];
@@ -60,7 +60,7 @@ export function validateWeaponLayout(b:ShipBlueprint){
  if(b.productionDesign){
   const spinal=b.hardpoints.filter(h=>h.type==='Spinal'),integrated=w.integrated??[];
   if(integrated.length!==spinal.length||new Set(integrated.map(m=>m.hardpointId)).size!==integrated.length||w.budget.integratedReserve!==integrated.reduce((n,m)=>n+m.standard.cost,0))issues.push('Invalid integrated XL budget/count');
-  for(const m of integrated)if(!spinal.some(h=>h.id===m.hardpointId)||m.category!=='SPINAL'||JSON.stringify(m.standard)!==JSON.stringify(mountStandard('XL',b.order.length))||!b.productionDesign.zones.some(z=>z.id===m.reservationId&&z.equipmentId===m.hardpointId))issues.push(`Invalid integrated XL reservation ${m.hardpointId}`);
+  for(const m of integrated)if(!spinal.some(h=>h.id===m.hardpointId)||m.category!=='SPINAL'||!sameMountStandard(m.standard,mountStandard('XL',b.order.length))||!b.productionDesign.zones.some(z=>z.id===m.reservationId&&z.equipmentId===m.hardpointId))issues.push(`Invalid integrated XL reservation ${m.hardpointId}`);
  }
  if(cost!==w.budget.allocated||cost>w.budget.available||JSON.stringify(counts)!==JSON.stringify(w.budget.byRegion))issues.push('Invalid weapon budget distribution');
  if(JSON.stringify((b.productionDesign?.overallBounds??b.functionalExterior?.overallBounds))!==JSON.stringify(w.overallBounds)||active.some(o=>o.assembly?.parts.some(p=>(['x','y','z']as const).some(k=>p.bounds.min[k]<w.overallBounds.min[k]-.001||p.bounds.max[k]>w.overallBounds.max[k]+.001))))issues.push('Weapon overall bounds do not include installations');

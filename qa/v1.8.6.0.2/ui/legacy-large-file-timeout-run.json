@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "name": "Production entry has no DEV API",
+      "passed": true
+    },
+    {
+      "name": "Native unarmed base with propulsion/control",
+      "passed": true
+    },
+    {
+      "name": "Only four design priorities exposed",
+      "passed": true
+    },
+    {
+      "name": "Input edits do not regenerate",
+      "passed": true
+    },
+    {
+      "name": "Material choice defaults to PREFER",
+      "passed": true
+    },
+    {
+      "name": "Primary/secondary/material/distribution/architecture/maximum persisted",
+      "passed": true
+    },
+    {
+      "name": "Required main Titanium and Hull Steel actually applied",
+      "passed": true
+    },
+    {
+      "name": "Hard maximum REJECT shown",
+      "passed": true
+    },
+    {
+      "name": "Rejected order retains previous exact Blueprint",
+      "passed": true
+    },
+    {
+      "name": "Unavailable REQUIRE technology rejected",
+      "passed": true
+    },
+    {
+      "name": "Technology rejection keeps previous ship",
+      "passed": true
+    },
+    {
+      "name": "PREFER substitution becomes COMPROMISE",
+      "passed": true
+    },
+    {
+      "name": "Native reload/export round trip exact",
+      "passed": true
+    },
+    {
+      "name": "Native loaded form retains its order",
+      "passed": true
+    },
+    {
+      "name": "Advanced settings close",
+      "passed": true
+    },
+    {
+      "name": "Invalid field disables generation",
+      "passed": true
+    },
+    {
+      "name": "Production real surface install gun-105",
+      "passed": true
+    },
+    {
+      "name": "Production real surface install missile-small",
+      "passed": true
+    },
+    {
+      "name": "Mounted mass grows while base mass remains separate",
+      "passed": true
+    },
+    {
+      "name": "Delete selected equipment",
+      "passed": true
+    },
+    {
+      "name": "Undo exact equipment restoration",
+      "passed": true
+    },
+    {
+      "name": "Redo removal",
+      "passed": true
+    },
+    {
+      "name": "Player equipped Blueprint save/load exact",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForFunction: Timeout 120000ms exceeded.\n    at load (/workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:5:279)\n    at async file:///workspace/shipyard-v1.8.6.0.2/tests/procurement-ui.mjs:28:103"
+}

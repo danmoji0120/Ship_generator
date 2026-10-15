@@ -1,0 +1,22 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0.2
+
+ ✓ tests/procurement.test.ts (13 tests) 34561ms
+   ✓ delivers no attack mounts, integrated cannon, combat reservations or empty slots; keeps real core propulsion/navigation  363ms
+   ✓ repeats deterministically with cache hit; export/import retains the native order and actual physical design  2016ms
+   ✓ honors REQUIRE on critical main armor and independent Hull, including actual composite layer accounting  3450ms
+   ✓ records PREFER tech substitution while impossible REQUIRE is rejected before hull construction  3251ms
+   ✓ uses soft target vs hard maximum and refuses hard cost/material/mass violations without changing the source ship  7634ms
+   ✓ audits finite critical facet centers; explicit unsupported full-zone guarantees are not invented  843ms
+   ✓ preserves historical Blueprint JSON on load and only converts old attack priorities on explicit new-order conversion  3273ms
+   ✓ does not accept native documents with resurrected combat policy or changed REQUIRE/maximum  811ms
+   ✓ replans an invalid SPINE family without forcing another Architecture or reserving a spinal cannon  8749ms
+ ✓ tests/free-mount.test.ts (18 tests) 5802ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4617ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 875ms
+
+ Test Files  3 passed (3)
+      Tests  47 passed (47)
+   Start at  15:50:23
+   Duration  43.33s (transform 841ms, setup 0ms, collect 1.45s, tests 41.24s, environment 0ms, prepare 184ms)
+
