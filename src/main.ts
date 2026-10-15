@@ -1,3 +1,4 @@
+import {showStructuralInspector,setupStructuralInspector} from './ui/structure';
 import {generateProcurementBlueprint} from './procurement/generate';
 import {DEFAULT_PROCUREMENT_ORDER,convertLegacyOrder} from './procurement/order';
 import type {ProcurementOrder,ProcurementDelivery} from './procurement/types';
@@ -38,9 +39,10 @@ try {
   console.error(e);
 }
 setupPhysicalInspector(viewer,()=>blueprint,next=>present(next));
+setupStructuralInspector(viewer,()=>blueprint);
 const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
 const freeEditor=setupFreeEquipment(viewer,()=>blueprint,next=>{
- blueprint=next;storedBlueprint=JSON.stringify(next);$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showProcurementResult(next);
+ blueprint=next;storedBlueprint=JSON.stringify(next);$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showProcurementResult(next);
 });
 if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
@@ -87,7 +89,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     $("design-rejection").replaceChildren();
     viewer?.show(next);
     blueprint = next;
-    showHardpointInspector(next);showPhysicalInspector(next);showProcurementResult(next);
+    showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showProcurementResult(next);
     equipmentPreview.reset();freeEditor.reset();
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);
@@ -200,7 +202,7 @@ for (const el of document.querySelectorAll<HTMLButtonElement>("[data-debug]"))
     const mode = el.dataset.debug as DebugView;
     viewer?.setMode(mode);
     $("debug-legend").hidden = mode === "Normal";
-    const armorLegend:Partial<Record<DebugView,string>>={"Armor Thickness":"ACTUAL LOCAL FACET THICKNESS: BLUE → RED (600mm) · HULL GRAY · saturation shown in Inspector","Physical Materials":"STEEL GRAY · TITANIUM CYAN · CERAMIC GOLD · TUNGSTEN VIOLET · NANO GREEN · STRUCTURAL HULL MUTED","Physical Coverage":"FINITE ARMOR SKINS / AMBER · HULL SHELL / BLUE · retained source area, not a whole-ship protection percentage","Armor Ray Probe":"CLICK TO TRACE ACTUAL MATERIAL INTERVALS · FREE EDITOR OFF · blue ray / amber armor / cyan hull","Hull Only":"STRUCTURAL HULL + FITTED CONNECTIONS","Armor Coverage":"TOP / CYAN · BOTTOM / VIOLET · PORT / GREEN · STARBOARD / AMBER · FORE / BLUE · AFT / ROSE","Armor Panels":"CLOSED GEOMETRIC PLATES / PHYSICAL THICKNESS + CHAMFER","Panel Seams":"LOW UNDERLAYER / ACTUAL GAPS BETWEEN PLATES","Secondary Armor":"LOCAL LOW, BROAD OVERLAYS","Hardpoint Mounts":"AMBER / FOUNDATION · CYAN / MOUNT · ARMOR RETAINED","Complete Ship":"COMPLETE ARMOR + SURFACE-MOUNTED EQUIPMENT"};
+    const armorLegend:Partial<Record<DebugView,string>>={"Frame":"REAL EXCLUSIVE FRAME MATERIAL · WHITE / LONGITUDINAL · CYAN / FRAMES · AMBER / REINFORCEMENT · HULL BOUNDARY GHOST · CLICK TO INSPECT","Connectivity":"FINITE MEMBERS / CYAN · ROOTS / GREEN · IDEAL WELDED CONTACTS, NO STRESS SOLUTION","Critical Connections":"RED / BRIDGE MEMBER · AMBER / ARTICULATION · GREEN / ROOT · TOPOLOGY, NOT FAILURE STRENGTH","Structural Mass":"MEMBER MATERIAL MASS: BLUE → RED (LOG SCALE) · GEOMETRY-DERIVED, EXCLUSIVE OWNERSHIP","Armor Thickness":"ACTUAL LOCAL FACET THICKNESS: BLUE → RED (600mm) · HULL GRAY · saturation shown in Inspector","Physical Materials":"STEEL GRAY · TITANIUM CYAN · CERAMIC GOLD · TUNGSTEN VIOLET · NANO GREEN · STRUCTURAL HULL MUTED","Physical Coverage":"FINITE ARMOR SKINS / AMBER · HULL SHELL / BLUE · retained source area, not a whole-ship protection percentage","Armor Ray Probe":"CLICK TO TRACE ACTUAL MATERIAL INTERVALS · FREE EDITOR OFF · blue ray / amber armor / cyan hull","Hull Only":"STRUCTURAL HULL + FITTED CONNECTIONS","Armor Coverage":"TOP / CYAN · BOTTOM / VIOLET · PORT / GREEN · STARBOARD / AMBER · FORE / BLUE · AFT / ROSE","Armor Panels":"CLOSED GEOMETRIC PLATES / PHYSICAL THICKNESS + CHAMFER","Panel Seams":"LOW UNDERLAYER / ACTUAL GAPS BETWEEN PLATES","Secondary Armor":"LOCAL LOW, BROAD OVERLAYS","Hardpoint Mounts":"AMBER / FOUNDATION · CYAN / MOUNT · ARMOR RETAINED","Complete Ship":"COMPLETE ARMOR + SURFACE-MOUNTED EQUIPMENT"};
     $("debug-legend").textContent = armorLegend[mode] ?? (
       mode === "Hardpoints"
         ? "COLOR / SIZE: S CYAN · M GREEN · L AMBER · XL VIOLET · SHAPE / TYPE · CLICK A MARKER TO INSPECT"

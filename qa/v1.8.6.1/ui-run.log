@@ -1,0 +1,24 @@
+PASS Production default generates a real frame and unarmed base
+PASS Production has no development API
+PASS Frame Blueprint import exact
+PASS Editing inputs does not regenerate
+PASS Frame view responds
+PASS Connectivity view responds
+PASS Critical Connections view responds
+PASS Structural Mass view responds
+PASS Member Inspector reads geometry/material/mass/node references
+PASS Disabled member analysis reports components
+PASS Debug analysis never changes stored design
+PASS On-demand finite structural Ray Query hits actual member
+PASS Actual structural floor rejects impossible cap
+PASS Rejected design retains previous exact ship
+PASS Real Production surface picking installs external gun with internal frame present
+PASS Mounted mass rises, frame/base remain unchanged
+PASS External equipment removal preserves frame
+PASS Undo restores exact equipment and frame
+PASS Redo removes equipment
+PASS Equipped frame Blueprint export/import exact
+PASS Historical weapons/geometry/materials preserved with no automatic frame
+PASS Legacy frame Inspector explicitly absent
+PASS Narrow layout has no page overflow
+PASS Console/page errors zero

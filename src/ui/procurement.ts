@@ -77,11 +77,12 @@ export function showProcurementResult(b: AnyShipBlueprint) {
     line('Nominal armor thickness', `${Math.min(...mm).toFixed(1)}–${Math.max(...mm).toFixed(1)} mm · tapered boundaries vary`);
     line('Armor coverage', `${Object.entries(b.productionDesign!.coverage.directions).map(([k, v]) => `${k} ${(v.ratio * 100).toFixed(0)}%`).join(' / ')} · sampled source surfaces`);
     line('Hull / armor', t(m.hullShellMassKg) + ' / ' + t(m.armorMassKg));
-    line('Other base mass (estimated)', t(l.baseEstimatedDryMassKg - m.hullShellMassKg - m.armorMassKg));
+    if(b.structuralFrame)line('Actual frame / connector',t(m.actualFrameMassKg??0)+' / '+t(m.actualStructuralConnectorMassKg??0));
+    line('Other base mass (estimated)', t(l.baseEstimatedDryMassKg - m.hullShellMassKg - m.armorMassKg-(m.actualFrameMassKg??0)-(m.actualStructuralConnectorMassKg??0)));
     line('Base / target / maximum', `${t(l.baseEstimatedDryMassKg)} / ${t(o.targetMassKg)} / ${o.maximumBaseMassKg === undefined ? 'Unspecified' : t(o.maximumBaseMassKg)}`);
     line('Operational dry mass', t(m.totalEstimatedDryMassKg) + ' · mounted equipment counted separately');
     line('Construction cost', d.cost!.total.toLocaleString(undefined, { maximumFractionDigits: 0 }) + ' relative index · material + fabrication + estimated core');
-    line('Mass confidence', 'Frame / support estimated; upper limit checked against this estimate, not certified actual mass.');
+    line('Mass confidence', b.structuralFrame?'Primary frame geometry derived; fittings/service equipment unresolved. Maximum checks estimated base, not certified actual mass.':'Frame / support estimated; upper limit checked against this estimate, not certified actual mass.');
     const details = document.createElement('details'), summary = document.createElement('summary');
     summary.textContent = `Requirements & compromises · ${d.compromises.length}`;
     details.append(summary);
@@ -97,7 +98,7 @@ export function showProcurementResult(b: AnyShipBlueprint) {
     }
     for(const rejected of d.candidateRejections??[]){const x=document.createElement('p');x.textContent=`Rejected hull candidate ${rejected.architecture}/${rejected.family}: ${rejected.reason}`;details.append(x);}
     const future = document.createElement('p');
-    future.textContent = `Future policy only: frame redundancy ${p.policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${p.policy.future.compartmentSubdivisionPreference.toFixed(2)}. No generated frame, compartments or endurance performance.`;
+    future.textContent = `Policy ${p.policy.future.status}: frame redundancy ${p.policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${p.policy.future.compartmentSubdivisionPreference.toFixed(2)}. Compartments, systems and endurance performance remain ungenerated.`;
     details.append(future);
     root.append(details);
 }

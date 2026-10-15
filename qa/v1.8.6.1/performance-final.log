@@ -1,0 +1,32 @@
+after BALANCED 1 MONOLITHIC 5024 [ 1897 ] 74 7
+after BALANCED 2 MONOLITHIC 4814 [ 1886 ] 74 7
+after BALANCED 3 MONOLITHIC 4835 [ 1932 ] 74 7
+after SPINE_AND_MODULES 1 SPINE_AND_MODULES 8648 [ 3088 ] 285 41
+after CORE_AND_NACELLES 1 CORE_AND_NACELLES 18103 [ 4603 ] 257 32
+after TRUSS_POD 1 TRUSS_POD 13799 [ 7067 ] 397 94
+[
+  {
+    "version": "before",
+    "coldN": 3,
+    "coldMedianMs": 4525.457812,
+    "coldP95Ms": 4647.0881660000005,
+    "repeatN": 3,
+    "repeatMedianMs": 1708.3802540000006,
+    "repeatP95Ms": 1818.9186820000004,
+    "medianModuleInitMs": 21.027811999999997,
+    "peakRssBytes": 617758720,
+    "deterministic": true
+  },
+  {
+    "version": "after",
+    "coldN": 3,
+    "coldMedianMs": 4835.308812,
+    "coldP95Ms": 5023.8797779999995,
+    "repeatN": 3,
+    "repeatMedianMs": 1897.0488719999994,
+    "repeatP95Ms": 1932.2824449999998,
+    "medianModuleInitMs": 24.399233000000002,
+    "peakRssBytes": 707706880,
+    "deterministic": true
+  }
+]

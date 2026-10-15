@@ -1,0 +1,12 @@
+BALANCED: PASS, 74 members, 7 cycles, 14510.0t internal frame, 0 skin thickness changes
+ARMOR: PASS, 88 members, 11 cycles, 39994.6t internal frame,
+MOBILITY: PASS, 60 members, 5 cycles, 2624.0t internal frame,
+ENDURANCE: PASS, 148 members, 55 cycles, 17507.4t internal frame,
+ECONOMY: PASS, 58 members, 5 cycles, 3526.4t internal frame,
+SPINE_AND_MODULES: PASS, 285 members, 41 cycles, 5242.5t internal frame, 0 skin thickness changes
+CORE_AND_NACELLES: COMPROMISE, 257 members, 32 cycles, 1337.0t internal frame, 0 skin thickness changes
+BLOCK_ASSEMBLY: PASS, 274 members, 45 cycles, 36615.2t internal frame, 0 skin thickness changes
+TRUSS_POD: PASS, 397 members, 94 cycles, 6677.2t internal frame, 0 skin thickness changes
+TWIN_HULL: PASS, 300 members, 61 cycles, 14056.3t internal frame, 0 skin thickness changes
+STACKED_BLOCKS: PASS, 227 members, 35 cycles, 8633.3t internal frame, 0 skin thickness changes
+HYBRID: PASS, 345 members, 71 cycles, 5713.8t internal frame, 0 skin thickness changes

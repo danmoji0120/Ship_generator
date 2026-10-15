@@ -1,0 +1,10 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: TypeError: Failed to fetch
+    at /workspace/shipyard-v1.8.6.1/tests/structural-visual.mjs:7:125 {
+  log: []
+}
+
+Node.js v24.19.0

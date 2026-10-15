@@ -1,0 +1,702 @@
+{
+  "rows": [
+    {
+      "id": "vesper200",
+      "kind": "historical",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 68,
+        "triangles": 25138,
+        "camera": [
+          -153.8055560501902,
+          125.70687287999802,
+          -177.21672702839047
+        ],
+        "radius": 131.59792749147934,
+        "geometryFinite": true
+      },
+      "after": {
+        "drawCalls": 68,
+        "triangles": 25138,
+        "camera": [
+          -153.8055560501902,
+          125.70687287999802,
+          -177.21672702839047
+        ],
+        "radius": 131.59792749147934,
+        "geometryFinite": true
+      }
+    },
+    {
+      "id": "cruiser470",
+      "kind": "historical",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 25,
+        "triangles": 25788,
+        "camera": [
+          -426.4436326027153,
+          349.3389492388318,
+          -488.7392600511619
+        ],
+        "radius": 344.25600644371497,
+        "geometryFinite": true
+      },
+      "after": {
+        "drawCalls": 25,
+        "triangles": 25788,
+        "camera": [
+          -426.4436326027153,
+          349.3389492388318,
+          -488.7392600511619
+        ],
+        "radius": 344.25600644371497,
+        "geometryFinite": true
+      }
+    },
+    {
+      "id": "spine300",
+      "kind": "historical",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 58,
+        "triangles": 22918,
+        "camera": [
+          -217.0735298229559,
+          178.47007826939293,
+          -250.15271458299662
+        ],
+        "radius": 177.3843360108844,
+        "geometryFinite": true
+      },
+      "after": {
+        "drawCalls": 58,
+        "triangles": 22918,
+        "camera": [
+          -217.0735298229559,
+          178.47007826939293,
+          -250.15271458299662
+        ],
+        "radius": 177.3843360108844,
+        "geometryFinite": true
+      }
+    },
+    {
+      "id": "BALANCED",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 229.80000000074506,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 6398,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          },
+          "pickedMember": "citadel/long-1-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 414,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 15244,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 317.495440264106,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 400.3999999985099,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 15244,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 317.495440264106,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Structural Mass",
+          "ms": 277.69999999925494,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 6398,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 57,
+        "triangles": 16874,
+        "camera": [
+          -215.9919289480341,
+          176.76227387850386,
+          -248.22744479901633
+        ],
+        "radius": 173.45146864957175,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 57,
+        "triangles": 16874,
+        "camera": [
+          -215.9919289480341,
+          176.76227387850386,
+          -248.22744479901633
+        ],
+        "radius": 173.45146864957175,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 696.1000000014901,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 45112,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          },
+          "pickedMember": "axial-spine/long--1-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 1055.800000000745,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 99044,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 163.3691692926181,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 1082.9000000022352,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 99044,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 163.3691692926181,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 67,
+        "triangles": 21702,
+        "camera": [
+          -151.28865144263034,
+          123.70928818922985,
+          -174.13997454532202
+        ],
+        "radius": 129.25630316582445,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 67,
+        "triangles": 21702,
+        "camera": [
+          -151.28865144263034,
+          123.70928818922985,
+          -174.13997454532202
+        ],
+        "radius": 129.25630316582445,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 1109.800000000745,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 101893,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          },
+          "pickedMember": "command-core/long--1-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 1747.1000000014901,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 211922,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.32087301143771,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 1560.8999999985099,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 211922,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.32087301143771,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 49,
+        "triangles": 23958,
+        "camera": [
+          -513.4029727880365,
+          421.83758428616494,
+          -588.5132221506747
+        ],
+        "radius": 359.2653996505092,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 49,
+        "triangles": 23958,
+        "camera": [
+          -513.4029727880365,
+          421.83758428616494,
+          -588.5132221506747
+        ],
+        "radius": 359.2653996505092,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 401.19999999925494,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 27036,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          },
+          "pickedMember": "fore-armor/long-0-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 663.5999999977648,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 62352,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 333.92221694713885,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 576.3000000007451,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 62352,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 333.92221694713885,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "TRUSS_POD",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 135,
+        "triangles": 22780,
+        "camera": [
+          -233.0459248824458,
+          191.97387052641204,
+          -267.18527492556865
+        ],
+        "radius": 199.43394662252757,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 135,
+        "triangles": 22780,
+        "camera": [
+          -233.04592488244577,
+          191.97387052641201,
+          -267.1852749255686
+        ],
+        "radius": 199.43394662252757,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 745.4000000022352,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 65515,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          },
+          "pickedMember": "pressure-core/long-0-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 1036.0999999977648,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 141974,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 192.16499449059216,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 1045.699999999255,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 141974,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 192.16499449059216,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "TWIN_HULL",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.91427685318536,
+          237.03908513540077,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 683.8999999985099,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 43739,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          },
+          "pickedMember": "central-bridge/long-1-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 946.8000000007451,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 96118,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.82824136685014,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 912.3000000007451,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 96118,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.82824136685014,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 29,
+        "triangles": 12314,
+        "camera": [
+          -246.3398423603029,
+          203.51869724208456,
+          -282.0980100006158
+        ],
+        "radius": 204.60214428652552,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 12314,
+        "camera": [
+          -246.33984236030287,
+          203.51869724208453,
+          -282.0980100006158
+        ],
+        "radius": 204.60214428652552,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 431,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 22556,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          },
+          "pickedMember": "armored-keel/long-0-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 598.6999999992549,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 52060,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.36443039158456,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 541.4000000022352,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 52060,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.36443039158456,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "HYBRID",
+      "kind": "native",
+      "pixelsEqual": true,
+      "before": {
+        "drawCalls": 97,
+        "triangles": 18968,
+        "camera": [
+          -212.31962395403002,
+          175.303019423268,
+          -242.50567567928033
+        ],
+        "radius": 185.71114269991648,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 97,
+        "triangles": 18968,
+        "camera": [
+          -212.31962395403002,
+          175.303019423268,
+          -242.50567567928033
+        ],
+        "radius": 185.71114269991648,
+        "geometryFinite": true
+      },
+      "shots": [
+        {
+          "mode": "Frame",
+          "ms": 674,
+          "diagnostics": {
+            "drawCalls": 2,
+            "triangles": 50615,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          },
+          "pickedMember": "axial-spine/long--1-1"
+        },
+        {
+          "mode": "Connectivity",
+          "ms": 962,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 111130,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 176.54345582232935,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Critical Connections",
+          "ms": 973.3999999985099,
+          "diagnostics": {
+            "drawCalls": 5,
+            "triangles": 111130,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 176.54345582232935,
+            "geometryFinite": true
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "8 actual Architecture frame/connectivity/critical views; 8 native + 3 original Normal exact pixel comparisons"
+}

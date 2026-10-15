@@ -62,7 +62,9 @@ export interface ProcurementDelivery {
         reason: string;
     }[];
     cost?: {
-        model: 'MATERIAL_AND_FABRICATION_INDEX_V1';
+        model: 'MATERIAL_AND_FABRICATION_INDEX_V1'|'MATERIAL_FRAME_AND_FABRICATION_INDEX_V2';
+        structuralMaterial?:number;
+        structuralFabrication?:number;
         unit: 'RELATIVE_INDEX_NOT_CURRENCY';
         material: number;
         fabrication: number;
@@ -71,7 +73,7 @@ export interface ProcurementDelivery {
         total: number;
         assumptions: string[];
     };
-    massConfidence: 'ESTIMATE_INCLUDES_UNGENERATED_FRAME_AND_SUPPORT';
+    massConfidence: 'ESTIMATE_INCLUDES_UNGENERATED_FRAME_AND_SUPPORT'|'FRAME_GEOMETRY_WITH_UNRESOLVED_SUPPORT_AND_FITTINGS';
     coreSystems?: {
         propulsionIds: string[];
         navigationControlIds: string[];

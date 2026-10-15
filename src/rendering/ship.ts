@@ -1,3 +1,4 @@
+import {STRUCTURAL_VIEWS,renderStructuralFrame} from './structure';
 import {renderPhysicalDesign} from "./physical";
 import {renderFreeMounts} from "./free-mount";
 import {renderModularHardpoints} from "./modular-hardpoints";
@@ -14,7 +15,7 @@ import { loftGeometry, moduleGeometry, beamBetween } from "./geometry";
 import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
-export type DebugView = "Armor Thickness" | "Physical Materials" | "Physical Coverage" | "Armor Ray Probe"
+export type DebugView = typeof STRUCTURAL_VIEWS[number] | "Armor Thickness" | "Physical Materials" | "Physical Coverage" | "Armor Ray Probe"
   | "Meso Structures" | "Without Meso" | "Engine Root Zones" | "Structural Junctions"
   | "Surface Texture" | "Decal Markings"
   | "Normal"
@@ -30,6 +31,7 @@ export type DebugView = "Armor Thickness" | "Physical Materials" | "Physical Cov
   | "Hull Only" | "Armor Coverage" | "Armor Panels" | "Panel Seams" | "Secondary Armor" | "Hardpoint Mounts" | "Complete Ship" | "Structural Armor Only" | "Functional Exterior Only" | "Hardpoint Layout Only" | "Mount Size" | "Symmetry Groups" | "Firing Arc";
 const v = (p: Vec3) => new THREE.Vector3(p.x, p.y, p.z);
 export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:DetailMode="HIGH"): THREE.Group {
+  if((STRUCTURAL_VIEWS as readonly string[]).includes(mode))return b.schemaVersion===2&&b.structuralFrame?renderStructuralFrame(b,mode):createShip(b,'Normal',detailMode);
   if(mode==='Armor Ray Probe')return createShip(b,'Normal',detailMode);
   if(['Armor Thickness','Physical Materials','Physical Coverage'].includes(mode))return b.schemaVersion===2&&b.physicalDesign?renderPhysicalDesign(b,mode):createShip(b,'Normal',detailMode);
   if(mode==='Engine Root Zones'||mode==='Structural Junctions'){const root=createShip(b,'Normal',detailMode);if(b.schemaVersion===2)root.add(renderMesoDiagnostics(b,mode==='Structural Junctions'));return root;}

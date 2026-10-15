@@ -38,6 +38,7 @@ export function addPhysicalDesign(
       1, b.schemaVersion, b.architecture.grammar, b.macroDesign?.family,
       provenance,
       b.procurement?.order,
+      ...(b.structuralFrame?[[b.structuralFrame.version,b.structuralFrame.sourceSignature,b.structuralFrame.massAccounting.preSkinMassUpperBoundKg]]:[]),
       b.seed,
       b.role,
       b.shipyardId,

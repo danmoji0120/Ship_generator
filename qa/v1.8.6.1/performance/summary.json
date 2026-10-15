@@ -1,0 +1,29 @@
+{
+  "method": "Fresh Node v24 process per cold sample; same 470m AEGIS/Battleship/Monolithic/seed7/target3,562,847t/maximum5,000,000t. Opt-in profiling enabled on both. Each cold sample followed by one same-process cache-hit generation. Module import measured separately. Three samples: p95 is the maximum, not a robust tail estimate. Additional architectures n=1; after data in ../after. No browser or test runner concurrent.",
+  "summary": [
+    {
+      "version": "before",
+      "coldN": 3,
+      "coldMedianMs": 4525.457812,
+      "coldP95Ms": 4647.0881660000005,
+      "repeatN": 3,
+      "repeatMedianMs": 1708.3802540000006,
+      "repeatP95Ms": 1818.9186820000004,
+      "medianModuleInitMs": 21.027811999999997,
+      "peakRssBytes": 617758720,
+      "deterministic": true
+    },
+    {
+      "version": "after",
+      "coldN": 3,
+      "coldMedianMs": 4835.308812,
+      "coldP95Ms": 5023.8797779999995,
+      "repeatN": 3,
+      "repeatMedianMs": 1897.0488719999994,
+      "repeatP95Ms": 1932.2824449999998,
+      "medianModuleInitMs": 24.399233000000002,
+      "peakRssBytes": 707706880,
+      "deterministic": true
+    }
+  ]
+}

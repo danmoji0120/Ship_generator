@@ -1,3 +1,4 @@
+import {STRUCTURAL_VIEWS,structuralHighlight} from './structure';
 import {armorRayProbe, type ProbeHit} from "../physical/probe";
 import {renderArmorProbe} from "./physical";
 import {createMountPicking,pickMountSurface} from '../free-mount/picking';
@@ -13,6 +14,8 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  onStructuralSelect?:(id:string)=>void;
+  private structuralSelection?:THREE.Group;
   onArmorProbe?: (result:ReturnType<typeof armorRayProbe>)=>void;
   private armorProbeVisual?:THREE.Group;
   onFreePointer?: (phase:'move'|'down'|'up',anchor:SurfaceAnchor|undefined,event:PointerEvent)=>void;
@@ -61,6 +64,7 @@ export class ShipViewer {
       const vec=(p:THREE.Vector3)=>({x:p.x,y:p.y,z:p.z}),max=this.blueprint.order.length*8,result=armorRayProbe(this.blueprint,vec(ray.origin),vec(ray.direction),max,{position:vec(position),quaternion});
       this.setArmorProbeVisual(vec(ray.origin),vec(ray.direction),max,result.hits);this.onArmorProbe?.(result);
     });
+    this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hits=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true);for(const hit of hits){const ranges=hit.object.userData.structuralRanges as {start:number;end:number;id:string}[]|undefined;const selected=ranges?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onStructuralSelect?.(selected.id);break;}}});
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     for(const [event,phase]of [['pointermove','move'],['pointerdown','down'],['pointerup','up']] as const)this.renderer.domElement.addEventListener(event,(e:PointerEvent)=>{
       if(!this.freeEditor||!this.ship||e.button>0&&phase!=='move')return;
@@ -109,8 +113,9 @@ export class ShipViewer {
     if(this.ship){const pixels=this.radius*2/Math.max(1,this.camera.position.distanceTo(this.controls.target))/Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))*this.container.clientHeight/2;setDetailVisibility(this.ship,this.detailMode,pixels);}
     this.renderer.render(this.scene, this.camera);
   };
+  selectStructuralMember(id?:string){if(this.structuralSelection){this.ship?.remove(this.structuralSelection);disposeShip(this.structuralSelection);this.structuralSelection=undefined;}if(id&&this.ship&&this.blueprint?.schemaVersion===2&&(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)){this.structuralSelection=structuralHighlight(this.blueprint,id);this.ship.add(this.structuralSelection);}}
   show(b: AnyShipBlueprint, reset = true) {
-    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();
+    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
     this.blueprint = b;
     if (this.ship) {
@@ -256,7 +261,7 @@ export class ShipViewer {
     };
   }
   dispose() {
-    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();if(this.mountPicking)disposeShip(this.mountPicking);
+    this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();if(this.mountPicking)disposeShip(this.mountPicking);
     this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();

@@ -82,7 +82,7 @@ export interface DesignPolicy {
   armorCoveragePreference: number;
   criticalZoneProtectionPreference: number;
   future: {
-    status: "POLICY_ONLY_NOT_GENERATED";
+    status: "POLICY_ONLY_NOT_GENERATED" | "FRAME_APPLIED_INTERNAL_SYSTEMS_NOT_GENERATED";
     frameDensityPreference: number;
     frameRedundancyPreference: number;
     compartmentSubdivisionPreference: number;
@@ -102,7 +102,7 @@ export interface DesignPolicy {
 }
 export interface MassLedger {
  version:1;
- entries:{component:'HULL_SHELL'|'ARMOR'|'STRUCTURE'|'CORE_EQUIPMENT'|'MOUNTED_EQUIPMENT'|'PLATFORM'|'OTHER_ESTIMATED';massKg:number;source:'GEOMETRY_DERIVED'|'ESTIMATED'|'LEGACY_ESTIMATE';basis:string}[];
+ entries:{component:'HULL_SHELL'|'ARMOR'|'STRUCTURAL_FRAME'|'STRUCTURAL_CONNECTOR'|'STRUCTURE'|'CORE_EQUIPMENT'|'MOUNTED_EQUIPMENT'|'PLATFORM'|'OTHER_ESTIMATED';massKg:number;source:'GEOMETRY_DERIVED'|'ESTIMATED'|'LEGACY_ESTIMATE';basis:string}[];
  baseEstimatedDryMassKg:number;
  mountedEstimatedDryMassKg:number;
  targetSemantics:'EXISTING_BASE_DESIGN_LIMIT'|'SOFT_TARGET_WITH_OPTIONAL_MAXIMUM';
@@ -118,6 +118,8 @@ export interface PhysicalMass {
   hullShellMassKg: number;
   armorMassKg: number;
   structuralMassEstimateKg: number;
+  actualFrameMassKg?:number;
+  actualStructuralConnectorMassKg?:number;
   coreEquipmentMassEstimateKg: number;
   playerMountedEquipmentMassEstimateKg: number;
   unresolvedMassEstimateKg: number;
@@ -125,6 +127,7 @@ export interface PhysicalMass {
   targetMassKg: number;
   remainingMassKg: number;
   armorBudgetRemainingKg: number;
+  /** Hull/armor material index only; full base construction cost is procurement.cost. */
   manufacturingCostIndexKg: number;
   estimatedComponents: string[];
   legacyMassEstimateReplacedKg: number;

@@ -38,24 +38,46 @@ export function createProcurementPolicy(b: ShipBlueprint, sources: PhysicalSourc
     let hull = chosen.hull;
     const hullThicknessMm = Math.max(8, Math.min(32, (9 + o.lengthM * .025) * (1 - w.MOBILITY * .002) * (1 + w.ENDURANCE * .0015)));
     const shell = (material: HullMaterialId) => sources.filter(s => s.kind === 'HULL').reduce((n, s) => n + s.areaM2 * hullThicknessMm / 1000 * HULL_MATERIALS[material].densityKgM3, 0);
-    const fixedOther = legacy * .28 + coreEquipmentMass(b) + minimumArmorMassKg;
+    const structural=b.structuralFrame?b.structuralFrame.massAccounting.preSkinMassUpperBoundKg:legacy*.18;
+    const fixedOther = structural + legacy * .1 + coreEquipmentMass(b) + minimumArmorMassKg;
     if (o.maximumBaseMassKg !== undefined && fixedOther + shell(hull) > o.maximumBaseMassKg && o.hull.mode === 'PREFER' && hull !== 'LIGHT_STRUCTURAL_ALLOY') {
         const decision = chosen.decisions.find(d => d.field === 'hull')!;
         decision.selected = hull = 'LIGHT_STRUCTURAL_ALLOY';
         decision.reason = 'Preferred Hull conservative minimum exceeds maximum base mass; substituted lighter structural alloy';
     }
-    const floors = { structure: legacy * .18 + shell(hull), armor: minimumArmorMassKg, propulsion: legacy * .06, endurance: legacy * .04, sensor: 0, equipment: coreEquipmentMass(b) }, fixed = Object.values(floors).reduce((a, c) => a + c, 0);
+    const floors = { structure: structural + shell(hull), armor: minimumArmorMassKg, propulsion: legacy * .06, endurance: legacy * .04, sensor: 0, equipment: coreEquipmentMass(b) }, fixed = Object.values(floors).reduce((a, c) => a + c, 0);
     if (o.maximumBaseMassKg !== undefined && fixed >= o.maximumBaseMassKg)
         rejectProcurement('REQUIRED_MAXIMUM_BASE_MASS_UNAVAILABLE', `Minimum Hull/armor and estimated structure/support ${fixed.toFixed(1)}kg exceeds maximum ${o.maximumBaseMassKg}kg; REQUIRE materials were not relaxed`);
-    const planning = Math.min(o.maximumBaseMassKg ?? Infinity, Math.max(o.targetMassKg, fixed * 1.05)), weights = { structure: 1, armor: .6 + w.ARMOR * .06, propulsion: .6 + w.MOBILITY * .05, endurance: .6 + w.ENDURANCE * .05, sensor: .15, equipment: .5 }, sum = Object.values(weights).reduce((a, c) => a + c, 0);
+    const weights = { structure: 1, armor: .6 + w.ARMOR * .06, propulsion: .6 + w.MOBILITY * .05, endurance: .6 + w.ENDURANCE * .05, sensor: .15, equipment: .5 }, sum = Object.values(weights).reduce((a, c) => a + c, 0);
+    let planning = Math.min(o.maximumBaseMassKg ?? Infinity, Math.max(o.targetMassKg, fixed * 1.05));
+    let preservedProtectionAllocation:number|undefined;
+    if(b.structuralFrame){
+      // Preserve the prior skin design contract. A newly quantified solid connector must
+      // not silently halve existing armor to make room for its structural reservation.
+      // The old frame PROXY is used only to reconstruct the historical skin allowance;
+      // it is never retained in the new structure floor or mass ledger.
+      const legacyFloors={...floors,structure:legacy*.18+shell(hull)},legacyFixed=Object.values(legacyFloors).reduce((a,c)=>a+c,0),legacyPlanning=Math.min(o.maximumBaseMassKg??Infinity,Math.max(o.targetMassKg,legacyFixed*1.05));
+      const reference=minimumArmorMassKg+(legacyPlanning-legacyFixed)*weights.armor/sum,current=minimumArmorMassKg+(planning-fixed)*weights.armor/sum;
+      if(reference>current){
+        const requiredPlanning=fixed+Math.max(0,reference-minimumArmorMassKg);
+        if(requiredPlanning>(o.maximumBaseMassKg??Infinity)+1e-3)rejectProcurement('REQUIRED_PRESERVED_PROTECTION_BUDGET_UNAVAILABLE','Actual structural reserve and retained protection allowance exceed the maximum base design allocation. No armor thickness or REQUIRE material was silently relaxed.');
+        planning=Math.max(planning,requiredPlanning);preservedProtectionAllocation=reference;
+      }
+    }
     const allocationsKg = Object.fromEntries(Object.entries(weights).map(([key, v]) => [key, floors[key as keyof typeof floors] + (planning - fixed) * v / sum])) as DesignPolicy['allocationsKg'];
+    if(preservedProtectionAllocation!==undefined){
+      const remaining=planning-fixed-(preservedProtectionAllocation-minimumArmorMassKg);
+      allocationsKg.armor=preservedProtectionAllocation;
+      for(const key of ['structure','propulsion','endurance','sensor','equipment']as const)allocationsKg[key]=floors[key]+Math.max(0,remaining)*weights[key]/(sum-weights.armor);
+    }
     b.procurement!.materialDecisions = chosen.decisions;
-    return { version: '1.8.6.0.2', priorityWeights: w, priorityMapping: { ARMOR: 'ARMOR', MOBILITY: 'MOBILITY', ENDURANCE: 'ENDURANCE', ECONOMY: 'ECONOMY' }, targetMassBudgetKg: o.targetMassKg, planningMassBudgetKg: planning, maximumBaseMassKg: o.maximumBaseMassKg ?? null, budgetSource: 'PROCUREMENT_TARGET', allocationsKg, hullMaterialPreference: hull, armorMaterialPreference: chosen.auxiliary, criticalArmorMaterialPreference: chosen.main, hullThicknessMm, armorCoveragePreference: { CITADEL: .55, BALANCED: .75, BROAD_COVERAGE: .95 }[o.armorDistribution], criticalZoneProtectionPreference: .55 + w.ARMOR * .004, costPreference: w.ECONOMY / 100, manufacturingTechPreference: chosen.tech, legacyDoctrineReference: 'RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS', future: { status: 'POLICY_ONLY_NOT_GENERATED', frameDensityPreference: .4 + w.ARMOR * .003 - w.MOBILITY * .001, frameRedundancyPreference: .2 + w.ENDURANCE * .005, compartmentSubdivisionPreference: .2 + w.ENDURANCE * .006, bulkheadProtectionPreference: .3 + w.ARMOR * .003, systemRedundancyPreference: .2 + w.ENDURANCE * .006, systemPlacementPreference: w.ENDURANCE >= 70 ? 'DISTRIBUTED' : 'PROTECTED_CORE', protectedVolumePreference: .4 + w.ARMOR * .003, propulsionSupportPreference: .3 + w.MOBILITY * .004, fireControlProtectionPreference: 0, missileSupportProtectionPreference: 0, sensorSupportProtectionPreference: 0 }, tradeoffs: [
+    return { version: '1.8.6.0.2', priorityWeights: w, priorityMapping: { ARMOR: 'ARMOR', MOBILITY: 'MOBILITY', ENDURANCE: 'ENDURANCE', ECONOMY: 'ECONOMY' }, targetMassBudgetKg: o.targetMassKg, planningMassBudgetKg: planning, maximumBaseMassKg: o.maximumBaseMassKg ?? null, budgetSource: 'PROCUREMENT_TARGET', allocationsKg, hullMaterialPreference: hull, armorMaterialPreference: chosen.auxiliary, criticalArmorMaterialPreference: chosen.main, hullThicknessMm, armorCoveragePreference: { CITADEL: .55, BALANCED: .75, BROAD_COVERAGE: .95 }[o.armorDistribution], criticalZoneProtectionPreference: .55 + w.ARMOR * .004, costPreference: w.ECONOMY / 100, manufacturingTechPreference: chosen.tech, legacyDoctrineReference: 'RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS', future: { status: b.structuralFrame?'FRAME_APPLIED_INTERNAL_SYSTEMS_NOT_GENERATED':'POLICY_ONLY_NOT_GENERATED', frameDensityPreference: .4 + w.ARMOR * .003 - w.MOBILITY * .001, frameRedundancyPreference: .2 + w.ENDURANCE * .005, compartmentSubdivisionPreference: .2 + w.ENDURANCE * .006, bulkheadProtectionPreference: .3 + w.ARMOR * .003, systemRedundancyPreference: .2 + w.ENDURANCE * .006, systemPlacementPreference: w.ENDURANCE >= 70 ? 'DISTRIBUTED' : 'PROTECTED_CORE', protectedVolumePreference: .4 + w.ARMOR * .003, propulsionSupportPreference: .3 + w.MOBILITY * .004, fireControlProtectionPreference: 0, missileSupportProtectionPreference: 0, sensorSupportProtectionPreference: 0 }, tradeoffs: [
             'Four native procurement priorities share finite mass reserves; no offensive weapon targets or XL reservations.',
+            ...(preservedProtectionAllocation!==undefined?['Prior physical skin allowance preserved by reallocating optional reserves. Required structural/protection floors can raise planning above the soft target; a hard maximum that cannot retain protection is explicitly rejected, never met by silently thinning armor.']:[]),
             'Target mass is a soft objective. Maximum base mass, if supplied, is enforced against an estimate including unresolved frame/support.',
-            'Endurance subdivisions/redundancy and maneuver performance are future policy only; no fabricated internal systems.',
+            b.structuralFrame?'Frame density/material/redundant paths applied; compartments, system redundancy and maneuver performance remain future policy.':'Endurance subdivisions/redundancy and maneuver performance are future policy only; no fabricated internal systems.',
             'Core navigation/control housings and attached propulsion are preserved; player combat sensors are not automatically fitted.',
-            ...(planning > o.targetMassKg ? ['Minimum valid design allocation exceeds soft target; no mandatory system removed.'] : []),
+            ...(planning > o.targetMassKg ? [preservedProtectionAllocation!==undefined?'Retaining the prior protection allowance raises planning reserves above the soft target; actual installed mass is accounted separately.':'Minimum valid design allocation exceeds soft target; no mandatory system removed.'] : []),
             ...chosen.decisions.filter(d => d.requested !== 'AUTO' && d.requested !== d.selected).map(d => d.reason)
         ] };
 }

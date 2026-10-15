@@ -1,0 +1,83 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.1
+
+ ❯ tests/structural-frame.test.ts (21 tests | 4 failed) 39913ms
+   ✓ real BALANCED frame/graph/geometry/material/mass/module and unarmed contract  1121ms
+   ✓ real BLOCK_ASSEMBLY frame/graph/geometry/material/mass/module and unarmed contract  1740ms
+   ✓ real SPINE_AND_MODULES frame/graph/geometry/material/mass/module and unarmed contract  1464ms
+   × real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract 2131ms
+     → expected 197.284586143805 to be close to 197.28451719760116, received difference is 0.00006894620383945949, but expected 0.00005
+   ✓ real TWIN_HULL frame/graph/geometry/material/mass/module and unarmed contract  1883ms
+   × real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract 2618ms
+     → expected 11283.00322193552 to be close to 11283.00211875942, received difference is 0.001103176100514247, but expected 0.00005
+   ✓ real STACKED_BLOCKS frame/graph/geometry/material/mass/module and unarmed contract  909ms
+   ✓ real HYBRID frame/graph/geometry/material/mass/module and unarmed contract  1465ms
+   ✓ volume units, hexagonal existing rails and exclusive weld union use finite geometry 1ms
+   ✓ Tarjan multigraph fixtures identify bridges, cut vertices, independent paths and unsupported modules 1ms
+   ✓ coincident names without finite contact cannot certify a welded joint 1ms
+   × four policies change real section/material/mass and ENDURANCE adds physical alternative paths 591ms
+     → expected 4 to be less than or equal to 2
+   ✓ cold and cached raw+skin frame results are identical and invalidate on seed, geometry and priorities  824ms
+   ✓ JSON restore retains complete frame; existing native and armed historical loads never insert new frame  5427ms
+   ✓ frame instance disable analysis changes connectivity without mutating design or another instance  482ms
+   ✓ prepared finite OBB/loft queries retain real entry/exit, material, local/world rotation and point candidates 191ms
+   ✓ independent pair intersections find no double-counted frame material or frame/skin overlap  1588ms
+   ✓ validates missing/floating/edited physical members instead of certifying a synthetic connected graph  1130ms
+   ✓ rejects an impossible base mass with actual frame retained as a mandatory floor  1584ms
+   ✓ native default is deterministic with query/debug data absent from JSON; explicit prior version still replays original  11976ms
+   × new frame has no influence on external fitting, owned platforms, mass, move/delete/undo or old armor probe 2781ms
+     → expected { status: 'PLATFORM_VALID', …(6) } to deeply equal { status: 'PLATFORM_VALID', …(6) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/structural-frame.test.ts > real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract
+AssertionError: expected 197.284586143805 to be close to 197.28451719760116, received difference is 0.00006894620383945949, but expected 0.00005
+ ❯ tests/structural-frame.test.ts:30:109
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/structural-frame.test.ts > real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract
+AssertionError: expected 11283.00322193552 to be close to 11283.00211875942, received difference is 0.001103176100514247, but expected 0.00005
+ ❯ tests/structural-frame.test.ts:30:109
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/structural-frame.test.ts > four policies change real section/material/mass and ENDURANCE adds physical alternative paths
+AssertionError: expected 4 to be less than or equal to 2
+ ❯ tests/structural-frame.test.ts:56:313
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/structural-frame.test.ts > new frame has no influence on external fitting, owned platforms, mass, move/delete/undo or old armor probe
+AssertionError: expected { status: 'PLATFORM_VALID', …(6) } to deeply equal { status: 'PLATFORM_VALID', …(6) }
+
+- Expected
++ Received
+
+@@ -3,11 +3,11 @@
+      {
+        "kind": "DIRECT",
+        "reason": "Error: Direct contact crosses a surface step",
+      },
+    ],
+-   "elapsedMs": 321.69641299999785,
++   "elapsedMs": 309.67268400000466,
+    "entries": [
+      {
+        "anchor": {
+          "normal": {
+            "x": 0.1123676770983377,
+
+ ❯ tests/structural-frame.test.ts:94:137
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 17 passed (21)
+   Start at  17:25:18
+   Duration  41.36s (transform 905ms, setup 0ms, collect 1.23s, tests 39.91s, environment 0ms, prepare 60ms)

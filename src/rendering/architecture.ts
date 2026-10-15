@@ -1,3 +1,4 @@
+import {connectorGeometryParts} from '../generation/architecture/connector-geometry';
 import * as THREE from "three";
 import type {
   ShipBlueprint,
@@ -7,7 +8,6 @@ import type {
 import { loftGeometry, beamBetween } from "./geometry";
 import type { DebugView } from "./ship";
 import {
-  shapeDefinition,
   shapeStations,
 } from "../generation/shapes/definition";
 import { shipMaterials } from "./materials";
@@ -28,149 +28,14 @@ export function connectorGroup(
   material: THREE.Material,
   scale: number,
 ) {
-  const root = new THREE.Group(),
-    start = vector(c.start),
-    end = vector(c.end),
-    delta = end.clone().sub(start),
-    length = delta.length(),
-    axis = delta.clone().normalize();
-  root.userData.connectorId = c.id;
-  root.userData.joinType = c.join?.type ?? c.type;
-  if (c.join && !["TRUSS", "BOOM"].includes(c.join.type)) {
-    const j = c.join;
-    const bodyLength = Math.max(length, j.length) + j.inset * 2;
-    const shape = shapeDefinition(
-      j.type === "TRANSITION" || j.type === "NACELLE_MOUNT"
-        ? "TAPERED_PRISM"
-        : "CHAMFERED_BOX",
-      { x: j.width, y: j.height, z: bodyLength },
-    );
-    shape.frontScale =
-      j.type === "TRANSITION"
-        ? Math.min(1.6, j.transitionRatio)
-        : j.type === "STRUCTURAL_NECK"
-          ? 0.78
-          : 1;
-    shape.rearScale = j.type === "NACELLE_MOUNT" ? 1.35 : 1;
-    shape.topSlope = 0.02;
-    const mesh = new THREE.Mesh(loftGeometry(shapeStations(shape)), material);
-    mesh.position.copy(start).add(end).multiplyScalar(0.5);
-    mesh.quaternion.setFromUnitVectors(
-      new THREE.Vector3(0, 0, 1),
-      length > 1e-8 ? axis : new THREE.Vector3(0, 0, 1),
-    );
-    root.add(mesh);
-    if (j.type === "ARMORED_COLLAR") {
-      for (const t of [0.18, 0.82]) {
-        const collar = new THREE.Mesh(
-          loftGeometry(
-            shapeStations(
-              shapeDefinition("CHAMFERED_BOX", {
-                x: j.width * 1.12,
-                y: j.height * 1.12,
-                z: Math.min(bodyLength * 0.22, scale * 0.018),
-              }),
-            ),
-          ),
-          material,
-        );
-        collar.position
-          .copy(mesh.position)
-          .addScaledVector(axis, (t - 0.5) * bodyLength);
-        collar.quaternion.copy(mesh.quaternion);
-        root.add(collar);
-      }
-    }
-    return root;
+  const root=new THREE.Group();root.userData.connectorId=c.id;root.userData.joinType=c.join?.type??c.type;
+  if((!c.join||['TRUSS','BOOM'].includes(c.join.type))&&c.style==='armored collar'){
+    const start=vector(c.start),end=vector(c.end),delta=end.clone().sub(start),mesh=new THREE.Mesh(new THREE.BoxGeometry(c.thickness,c.thickness,delta.length()+scale*.003),material);mesh.position.copy(start).add(end).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),delta.normalize());root.add(mesh);return root;
   }
-  if (c.style === "armored collar") {
-    const collar = new THREE.Mesh(
-      new THREE.BoxGeometry(c.thickness, c.thickness, length + scale * 0.003),
-      material,
-    );
-    collar.position.copy(start).add(end).multiplyScalar(0.5);
-    collar.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), axis);
-    root.add(collar);
-    return root;
+  for(const p of connectorGeometryParts(c,scale)){
+    if(p.kind==='BEAM')root.add(beamBetween(vector(p.start),vector(p.end),p.radius,material));
+    else{const mesh=new THREE.Mesh(loftGeometry(shapeStations(p.shape)),material);mesh.position.copy(vector(p.position));mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),vector(p.axis));root.add(mesh);}
   }
-  if (c.style === "straight beam") {
-    root.add(beamBetween(start, end, c.thickness * 0.5, material));
-    return root;
-  }
-  const up =
-      Math.abs(axis.y) > 0.85
-        ? new THREE.Vector3(1, 0, 0)
-        : new THREE.Vector3(0, 1, 0),
-    u = axis
-      .clone()
-      .cross(up)
-      .normalize()
-      .multiplyScalar(c.thickness * 0.65),
-    v = axis
-      .clone()
-      .cross(u)
-      .normalize()
-      .multiplyScalar(c.thickness * 0.65);
-  const corners =
-    c.style === "double beam"
-      ? [u.clone(), u.clone().negate()]
-      : c.style === "triangular truss"
-        ? [
-            u.clone(),
-            u.clone().multiplyScalar(-0.5).add(v),
-            u.clone().multiplyScalar(-0.5).sub(v),
-          ]
-        : [
-            u.clone().add(v),
-            u.clone().sub(v),
-            u.clone().negate().sub(v),
-            u.clone().negate().add(v),
-          ];
-  const bays = Math.max(2, Math.min(4, Math.ceil(length / (c.thickness * 5))));
-  // End shoes extend a little into the mating face; no free-standing decorative rails.
-  const a = start.clone().addScaledVector(axis, -c.thickness * 0.7),
-    b = end.clone().addScaledVector(axis, c.thickness * 0.7),
-    d = b.clone().sub(a);
-  for (const offset of corners)
-    root.add(
-      beamBetween(
-        a.clone().add(offset),
-        b.clone().add(offset),
-        c.thickness * 0.13,
-        material,
-      ),
-    );
-  for (let i = 0; i < bays; i++)
-    for (let j = 0; j < corners.length; j++) {
-      const next = (j + 1) % corners.length;
-      root.add(
-        beamBetween(
-          a
-            .clone()
-            .addScaledVector(d, i / bays)
-            .add(corners[j]),
-          a
-            .clone()
-            .addScaledVector(d, (i + 1) / bays)
-            .add(corners[next]),
-          c.thickness * 0.085,
-          material,
-        ),
-      );
-    }
-  for (const t of [0, 1])
-    for (let j = 0; j < corners.length; j++)
-      root.add(
-        beamBetween(
-          a.clone().addScaledVector(d, t).add(corners[j]),
-          a
-            .clone()
-            .addScaledVector(d, t)
-            .add(corners[(j + 1) % corners.length]),
-          c.thickness * 0.14,
-          material,
-        ),
-      );
   return root;
 }
 export function renderArchitecture(

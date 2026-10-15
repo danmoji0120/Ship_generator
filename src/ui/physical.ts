@@ -33,10 +33,10 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
     `Hull shell ${t(m.hullShellMassKg)} · Armor ${t(m.armorMassKg)} (finite layer volumes × constituent density)`,
   );
   line(
-    `Estimated structure ${t(m.structuralMassEstimateKg)} · Core equipment ${t(m.coreEquipmentMassEstimateKg)} · Player equipment ${t(m.playerMountedEquipmentMassEstimateKg)} · Unresolved ${t(m.unresolvedMassEstimateKg)}`,
+    `Actual frame ${t(m.actualFrameMassKg??0)} / connector ${t(m.actualStructuralConnectorMassKg??0)} · Remaining estimated structure ${t(m.structuralMassEstimateKg)} · Core equipment ${t(m.coreEquipmentMassEstimateKg)} · Player equipment ${t(m.playerMountedEquipmentMassEstimateKg)} · Unresolved ${t(m.unresolvedMassEstimateKg)}`,
   );
   line(
-    `Total estimated dry mass ${t(m.totalEstimatedDryMassKg)} / target ${t(m.targetMassKg)} · remaining ${t(m.remainingMassKg)} · cost ${m.manufacturingCostIndexKg.toLocaleString(undefined, { maximumFractionDigits: 0 })} index·kg (not currency)`,
+    `Total estimated dry mass ${t(m.totalEstimatedDryMassKg)} / target ${t(m.targetMassKg)} · remaining ${t(m.remainingMassKg)} · skin material cost ${m.manufacturingCostIndexKg.toLocaleString(undefined, { maximumFractionDigits: 0 })} index·kg (not currency)`,
   );
   if(m.ledger){const l=m.ledger;line(`Base ${t(l.baseEstimatedDryMassKg)} · mounted dry ${t(l.mountedEstimatedDryMassKg)} · base budget ${l.baseBudgetViolation?'EXCEEDED':'WITHIN'} · mounted ${l.mountedLoadoutOverTarget?'OVER TARGET':'WITHIN TARGET'} · maximum allowed mass ${l.maximumAllowedMassKg==null?'unspecified':t(l.maximumAllowedMassKg)}; consumables not included`);for(const e of l.entries)line(`${e.component}: ${t(e.massKg)} [${e.source}] — ${e.basis}`);}
   if(b.schemaVersion===2&&b.structuralVolumes.some(v=>v.type==='SPINE'))line(`Unspecified SPINE structures: ${b.structuralVolumes.filter(v=>v.type==='SPINE').length}. Visible finite boundaries are traced, but material/shell thickness are unresolved; no invented armor mass.`);
@@ -52,7 +52,7 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
       `${k} allocation ${t(v)} (unused/future reserves are not installed systems)`,
     );
   line(
-    `Future policy only: frame density ${policy.future.frameDensityPreference.toFixed(2)}, redundancy ${policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${policy.future.compartmentSubdivisionPreference.toFixed(2)}, system ${policy.future.systemPlacementPreference}`,
+    `Policy (${policy.future.status}): frame density ${policy.future.frameDensityPreference.toFixed(2)}, redundancy ${policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${policy.future.compartmentSubdivisionPreference.toFixed(2)}, system ${policy.future.systemPlacementPreference}`,
   );
   for (const text of [...policy.tradeoffs, ...d.warnings]) line(text);
   line(d.approximation);

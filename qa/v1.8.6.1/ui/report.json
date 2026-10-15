@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "name": "Production default generates a real frame and unarmed base",
+      "passed": true
+    },
+    {
+      "name": "Production has no development API",
+      "passed": true
+    },
+    {
+      "name": "Frame Blueprint import exact",
+      "passed": true
+    },
+    {
+      "name": "Editing inputs does not regenerate",
+      "passed": true
+    },
+    {
+      "name": "Frame view responds",
+      "passed": true
+    },
+    {
+      "name": "Connectivity view responds",
+      "passed": true
+    },
+    {
+      "name": "Critical Connections view responds",
+      "passed": true
+    },
+    {
+      "name": "Structural Mass view responds",
+      "passed": true
+    },
+    {
+      "name": "Member Inspector reads geometry/material/mass/node references",
+      "passed": true
+    },
+    {
+      "name": "Disabled member analysis reports components",
+      "passed": true
+    },
+    {
+      "name": "Debug analysis never changes stored design",
+      "passed": true
+    },
+    {
+      "name": "On-demand finite structural Ray Query hits actual member",
+      "passed": true
+    },
+    {
+      "name": "Actual structural floor rejects impossible cap",
+      "passed": true
+    },
+    {
+      "name": "Rejected design retains previous exact ship",
+      "passed": true
+    },
+    {
+      "name": "Real Production surface picking installs external gun with internal frame present",
+      "passed": true
+    },
+    {
+      "name": "Mounted mass rises, frame/base remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "External equipment removal preserves frame",
+      "passed": true
+    },
+    {
+      "name": "Undo restores exact equipment and frame",
+      "passed": true
+    },
+    {
+      "name": "Redo removes equipment",
+      "passed": true
+    },
+    {
+      "name": "Equipped frame Blueprint export/import exact",
+      "passed": true
+    },
+    {
+      "name": "Historical weapons/geometry/materials preserved with no automatic frame",
+      "passed": true
+    },
+    {
+      "name": "Legacy frame Inspector explicitly absent",
+      "passed": true
+    },
+    {
+      "name": "Legacy Frame request preserves original rendering without inserting data",
+      "passed": true
+    },
+    {
+      "name": "Narrow layout has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Console/page errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Targeted Production UI; actual canvas free mount worker; explicit structural debug only"
+}

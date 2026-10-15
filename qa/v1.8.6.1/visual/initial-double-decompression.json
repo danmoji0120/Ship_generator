@@ -1,0 +1,5 @@
+{
+  "rows": [],
+  "errors": [],
+  "error": "page.evaluate: TypeError: Failed to fetch\n    at /workspace/shipyard-v1.8.6.1/tests/structural-visual.mjs:7:125"
+}

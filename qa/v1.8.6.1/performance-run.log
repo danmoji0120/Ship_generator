@@ -1,0 +1,35 @@
+before BALANCED 1 4525 1708 PASS 9575 0
+after BALANCED 1 MONOLITHIC 4263 [ 1801 ] 58 7
+before BALANCED 2 4099 1662 PASS 9575 0
+after BALANCED 2 MONOLITHIC 4316 [ 1682 ] 58 7
+before BALANCED 3 4647 1819 PASS 9575 0
+after BALANCED 3 MONOLITHIC 5039 [ 1738 ] 58 7
+before SPINE_AND_MODULES 1 6845 2339 PASS 17204 0
+before CORE_AND_NACELLES 1 11326 3437 PASS 29386 0
+before TRUSS_POD 1 11436 6064 PASS 22653 0
+[
+  {
+    "version": "before",
+    "coldN": 3,
+    "coldMedianMs": 4525.457812,
+    "coldP95Ms": 4647.0881660000005,
+    "repeatN": 3,
+    "repeatMedianMs": 1708.3802540000006,
+    "repeatP95Ms": 1818.9186820000004,
+    "medianModuleInitMs": 21.027811999999997,
+    "peakRssBytes": 617758720,
+    "deterministic": true
+  },
+  {
+    "version": "after",
+    "coldN": 3,
+    "coldMedianMs": 4316.432589999999,
+    "coldP95Ms": 5039.214936,
+    "repeatN": 3,
+    "repeatMedianMs": 1738.4947330000005,
+    "repeatP95Ms": 1801.053175,
+    "medianModuleInitMs": 21.096454,
+    "peakRssBytes": 690999296,
+    "deterministic": true
+  }
+]

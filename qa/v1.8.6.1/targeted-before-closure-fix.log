@@ -1,0 +1,63 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.1
+
+ ❯ tests/structural-frame.test.ts (22 tests | 2 failed) 42466ms
+   ✓ real BALANCED frame/graph/geometry/material/mass/module and unarmed contract  1142ms
+   ✓ real BLOCK_ASSEMBLY frame/graph/geometry/material/mass/module and unarmed contract  1880ms
+   ✓ real SPINE_AND_MODULES frame/graph/geometry/material/mass/module and unarmed contract  1567ms
+   × real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract 2183ms
+     → expected 197.284586143805 to be close to 197.2845171976012, received difference is 0.00006894620381103778, but expected 0.00005
+   ✓ real TWIN_HULL frame/graph/geometry/material/mass/module and unarmed contract  2049ms
+   × real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract 2577ms
+     → expected 11283.00322193552 to be close to 11283.002118780427, received difference is 0.0011031550930056255, but expected 0.00005
+   ✓ real STACKED_BLOCKS frame/graph/geometry/material/mass/module and unarmed contract  1051ms
+   ✓ real HYBRID frame/graph/geometry/material/mass/module and unarmed contract  1586ms
+   ✓ volume units, hexagonal existing rails and exclusive weld union use finite geometry 1ms
+   ✓ Tarjan multigraph fixtures identify bridges, cut vertices, independent paths and unsupported modules 1ms
+   ✓ coincident names without finite contact cannot certify a welded joint 1ms
+   ✓ four policies change real section/material/mass and ENDURANCE adds physical alternative paths  562ms
+   ✓ cold and cached raw+skin frame results are identical and invalidate on seed, geometry and priorities  809ms
+   ✓ JSON restore retains complete frame; existing native and armed historical loads never insert new frame  5431ms
+   ✓ frame instance disable analysis changes connectivity without mutating design or another instance  358ms
+   ✓ prepared finite OBB/loft queries retain real entry/exit, material, local/world rotation and point candidates 152ms
+   ✓ independent pair intersections find no double-counted frame material or frame/skin overlap  1603ms
+   ✓ validates missing/floating/edited physical members instead of certifying a synthetic connected graph  1148ms
+   ✓ rejects an impossible base mass with actual frame retained as a mandatory floor  1592ms
+   ✓ native default is deterministic with query/debug data absent from JSON; explicit prior version still replays original  12446ms
+   ✓ new frame has no influence on external fitting, owned platforms, mass, move/delete/undo or old armor probe  4318ms
+   ✓ historical no-join box collar stays an actual finite box, not a chamfered loft approximation 1ms
+ ✓ tests/procurement.test.ts (13 tests) 34608ms
+   ✓ delivers no attack mounts, integrated cannon, combat reservations or empty slots; keeps real core propulsion/navigation  348ms
+   ✓ repeats deterministically with cache hit; export/import retains the native order and actual physical design  2231ms
+   ✓ honors REQUIRE on critical main armor and independent Hull, including actual composite layer accounting  3556ms
+   ✓ records PREFER tech substitution while impossible REQUIRE is rejected before hull construction  3561ms
+   ✓ uses soft target vs hard maximum and refuses hard cost/material/mass violations without changing the source ship  7400ms
+   ✓ audits finite critical facet centers; explicit unsupported full-zone guarantees are not invented  743ms
+   ✓ preserves historical Blueprint JSON on load and only converts old attack priorities on explicit new-order conversion  3246ms
+   ✓ does not accept native documents with resurrected combat policy or changed REQUIRE/maximum  757ms
+   ✓ replans an invalid SPINE family without forcing another Architecture or reserving a spinal cannon  8409ms
+ ✓ tests/free-mount.test.ts (18 tests) 5555ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4439ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 907ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/structural-frame.test.ts > real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract
+AssertionError: expected 197.284586143805 to be close to 197.2845171976012, received difference is 0.00006894620381103778, but expected 0.00005
+ ❯ tests/structural-frame.test.ts:34:416
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/structural-frame.test.ts > real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract
+AssertionError: expected 11283.00322193552 to be close to 11283.002118780427, received difference is 0.0011031550930056255, but expected 0.00005
+ ❯ tests/structural-frame.test.ts:34:416
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  2 failed | 67 passed (69)
+   Start at  17:32:13
+   Duration  85.95s (transform 846ms, setup 0ms, collect 1.65s, tests 83.54s, environment 1ms, prepare 204ms)

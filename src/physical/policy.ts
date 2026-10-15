@@ -193,7 +193,8 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     armorMassKg = sum(
       d.surfaces.filter((s) => s.kind === "ARMOR").map((s) => s.massKg),
     );
-  const structuralMassEstimateKg = legacy * 0.18,
+  const frame=b.structuralFrame, actualFrameMassKg=frame?.massAccounting.frameMassKg??0, actualStructuralConnectorMassKg=frame?.massAccounting.connectorMassKg??0;
+  const structuralMassEstimateKg = frame?.massAccounting.remainingStructuralEstimateKg ?? legacy * 0.18,
     coreEquipmentMassEstimateKg = coreEquipmentMass(b),
     unresolvedMassEstimateKg = legacy * 0.1,
     mounted = mountedMassComponents(b),
@@ -201,15 +202,19 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
   const totalEstimatedDryMassKg =
     hullShellMassKg +
     armorMassKg +
-    structuralMassEstimateKg +
+    structuralMassEstimateKg + actualFrameMassKg + actualStructuralConnectorMassKg +
     coreEquipmentMassEstimateKg +
     unresolvedMassEstimateKg +
     playerMountedEquipmentMassEstimateKg;
-  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
+  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+actualFrameMassKg+actualStructuralConnectorMassKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
   const ledger:NonNullable<PhysicalMass['ledger']>={version:1,entries:[
    {component:'HULL_SHELL',massKg:hullShellMassKg,source:'GEOMETRY_DERIVED',basis:'Finite shell material volumes × constituent kg/m³'},
    {component:'ARMOR',massKg:armorMassKg,source:'GEOMETRY_DERIVED',basis:'Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again'},
-   {component:'STRUCTURE',massKg:structuralMassEstimateKg,source:'LEGACY_ESTIMATE',basis:'Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry'},
+   ...(frame?[
+    {component:'STRUCTURAL_FRAME' as const,massKg:actualFrameMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Exclusive finite internal frame material × shared registry density'},
+    {component:'STRUCTURAL_CONNECTOR' as const,massKg:actualStructuralConnectorMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Existing connector/rail material union, alias trusses excluded, skins subtracted'},
+   ]:[]),
+   {component:'STRUCTURE',massKg:structuralMassEstimateKg,source:'LEGACY_ESTIMATE',basis:frame?frame.massAccounting.scope:'Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry'},
    {component:'CORE_EQUIPMENT',massKg:coreEquipmentMassEstimateKg,source:'ESTIMATED',basis:'Unique existing assembly-part solid volumes × 160kg/m³ representation density'},
    {component:'MOUNTED_EQUIPMENT',massKg:mounted.equipmentKg,source:'ESTIMATED',basis:'Actually installed saved equipment geometry × 160kg/m³, owned platform excluded'},
    {component:'PLATFORM',massKg:mounted.platformKg,source:'ESTIMATED',basis:'Owned platform geometry × 2800kg/m³, counted once'},
@@ -220,6 +225,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     hullShellMassKg,
     armorMassKg,
     structuralMassEstimateKg,
+    ...(frame?{actualFrameMassKg,actualStructuralConnectorMassKg}:{}),
     coreEquipmentMassEstimateKg,
     playerMountedEquipmentMassEstimateKg,
     unresolvedMassEstimateKg,
@@ -238,7 +244,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
       ),
     ),
     estimatedComponents: [
-      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      ...(frame?[frame.massAccounting.scope,...frame.massAccounting.unquantified]:["Structural frame estimate: 18% of historical volume-based target; no new frame generated"]),
       "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
       "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
       "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment",

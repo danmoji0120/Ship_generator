@@ -1,0 +1,24 @@
+{
+  "version": "1.8.6.0.2",
+  "shipyardId": "vesper",
+  "shipClass": "Cruiser",
+  "lengthM": 300,
+  "seed": 12,
+  "targetMassKg": 255967000,
+  "primaryPriority": "BALANCED",
+  "architecture": {
+    "mode": "REQUIRE",
+    "grammar": "SPINE_AND_MODULES"
+  },
+  "mainArmor": {
+    "mode": "AUTO"
+  },
+  "auxiliaryArmor": {
+    "mode": "AUTO"
+  },
+  "hull": {
+    "mode": "AUTO"
+  },
+  "armorDistribution": "BALANCED",
+  "armorZoneRequirements": []
+}
