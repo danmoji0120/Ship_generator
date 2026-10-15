@@ -1,0 +1,8 @@
+file:///workspace/shipyard-v1.8.6.0.1/tests/physical-patch-visual.mjs:13
+  const x=await old.evaluate(async json=>window.capture(json,undefined,'Normal'),a),y=await now.evaluate(async({json,pose})=>window.capture(json,pose,'Normal'),{json:b,pose:x.pose,before:{rendererInitMs:x.rendererInitMs,snapshotMs:x.snapshotMs,drawMs:x.drawMs},after:{rendererInitMs:y.rendererInitMs,snapshotMs:y.snapshotMs,drawMs:y.drawMs}});
+                                                                                                                                                                                                                                                                                           ^
+
+ReferenceError: Cannot access 'y' before initialization
+    at file:///workspace/shipyard-v1.8.6.0.1/tests/physical-patch-visual.mjs:13:284
+
+Node.js v24.19.0

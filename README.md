@@ -1,3 +1,9 @@
+## V1.8.6.0.1 — Physical Geometry Performance & Mass Integrity
+
+물리 장갑·선체의 재질과 유한 셀을 유지하면서 반복적인 층 Geometry 절단을 체적 적분 및 준비된 Plane Query로 대체합니다. 질량 Ledger는 실제 Hull/Armor와 추정 구조·장비·플랫폼을 분리하며, 미지정 SPINE 재질은 부분 조회로 명시합니다. 기존 저장본·Normal View·외부 자유 장착 규칙을 보존합니다.
+
+[데이터 계약](docs/PHYSICAL_GEOMETRY_PATCH.md) · [성능/질량/선택 QA 및 남은 한계](qa/v1.8.6.0.1/REPORT.md) · [프로파일 재현](tests/performance/README.md). 이번 패치는 관련 테스트만 실행하며 전체 suite와 원격 Push를 수행하지 않습니다.
+
 ## V1.8.5.4.1 — Large-first symmetric hardpoint layout
 
 Empty interface capacity now searches XL → L → M → S after mandatory slots and installed equipment. Real armor row candidates, atomic mirrored pairs and contiguous battery metadata replace fixed L/M quotas. Normal geometry and existing installed weapons remain unchanged. SPARSE/STANDARD/DENSE targets and all physical clearance/support checks remain in force. Explicit V1.8.5.4 generation and saved Blueprint replay are preserved.

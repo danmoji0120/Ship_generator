@@ -1,5 +1,5 @@
 import type { ShipBlueprint } from "../../src/blueprint/types";
-import { armorRayProbe } from "../../src/physical/probe";
+import { preparePhysicalQueries } from "../../src/physical/probe";
 import { physicalSources } from "../../src/physical/geometry";
 import {
   add,
@@ -15,6 +15,7 @@ export function sampledHullArmorCoverage(b: ShipBlueprint) {
       string,
       { sampledAreaM2: number; armoredAreaM2: number; ratio: number }
     > = {};
+  const prepared=preparePhysicalQueries(b);
   let skipped = 0,
     samples = 0;
   for (const surface of b.physicalDesign!.surfaces.filter(
@@ -35,8 +36,7 @@ export function sampledHullArmorCoverage(b: ShipBlueprint) {
           });
         for (const point of [c, ...tri.map((p) => mix(p, c, 0.15))]) {
           const offset = b.order.length * 2,
-            r = armorRayProbe(
-              b,
+            r = prepared.probe(
               add(point, mul(f.normal, offset)),
               mul(f.normal, -1),
               offset + b.order.length * 0.05,

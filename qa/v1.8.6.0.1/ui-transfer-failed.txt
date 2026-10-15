@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.textContent: Target crashed
+Call log:
+  - waiting for locator('#json-content')
+
+    at current (/workspace/shipyard-v1.8.6.0.1/tests/physical-patch-ui.mjs:29:33)
+    at /workspace/shipyard-v1.8.6.0.1/tests/physical-patch-ui.mjs:196:25 {
+  log: [ "  - waiting for locator('#json-content')" ],
+  name: 'Error'
+}
+
+Node.js v24.19.0

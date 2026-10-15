@@ -15,9 +15,9 @@ export function solidContains(s:PanelSolid,p:Vec3){
  let prepared=solidCache.get(s);if(!prepared){const ts=solidTriangles(s),planes=ts.map(t=>({p:t[0],n:normal(t)})),ray={x:1,y:.3713907,z:.529817};
   prepared={planes,convex:planes.every(f=>s.vertices.every(v=>dot(f.n,sub(v,f.p))<=1e-7)),faces:ts.map(([a,b,c])=>{const e1=sub(b,a),e2=sub(c,a),h=cross(ray,e2);return{a,e1,e2,h,det:dot(e1,h)};})};solidCache.set(s,prepared);
  }
- if(prepared.convex)return prepared.planes.every(f=>dot(f.n,sub(p,f.p))<-.00001);
+ if(prepared.convex)return prepared.planes.every(f=>f.n.x*(p.x-f.p.x)+f.n.y*(p.y-f.p.y)+f.n.z*(p.z-f.p.z)<-.00001);
  const ray={x:1,y:.3713907,z:.529817},hits:number[]=[];
- for(const f of prepared.faces){if(Math.abs(f.det)<1e-10)continue;const d=sub(p,f.a),u=dot(d,f.h)/f.det;if(u< -1e-9||u>1+1e-9)continue;const q=cross(d,f.e1),v=dot(ray,q)/f.det;if(v< -1e-9||u+v>1+1e-9)continue;const t=dot(f.e2,q)/f.det;if(t>1e-7)hits.push(t);}
+ for(const f of prepared.faces){if(Math.abs(f.det)<1e-10)continue;const dx=p.x-f.a.x,dy=p.y-f.a.y,dz=p.z-f.a.z,u=(dx*f.h.x+dy*f.h.y+dz*f.h.z)/f.det;if(u< -1e-9||u>1+1e-9)continue;const qx=dy*f.e1.z-dz*f.e1.y,qy=dz*f.e1.x-dx*f.e1.z,qz=dx*f.e1.y-dy*f.e1.x,v=(ray.x*qx+ray.y*qy+ray.z*qz)/f.det;if(v< -1e-9||u+v>1+1e-9)continue;const t=(f.e2.x*qx+f.e2.y*qy+f.e2.z*qz)/f.det;if(t>1e-7)hits.push(t);}
  hits.sort((a,b)=>a-b);return hits.filter((t,i)=>i===0||Math.abs(t-hits[i-1])>1e-6).length%2===1;
 }
 const inside=solidContains;

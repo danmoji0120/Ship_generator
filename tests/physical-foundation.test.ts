@@ -1,3 +1,9 @@
+import {setPhysicalProfilingEnabled,capturePhysicalGeneration,physicalDiagnostics} from '../src/physical/diagnostics';
+import {integratedLayerVolumes,tetraBelow} from '../src/physical/integration';
+import {pieceLayers} from '../src/physical/layers';
+import {tetra} from '../src/physical/convex';
+import {preparePhysicalQueries} from '../src/physical/probe';
+import {finishPhysicalMass} from '../src/physical/policy';
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { Vector3, Quaternion, Euler } from "three";
@@ -550,4 +556,49 @@ describe("physical material, finite layer and accounting foundation", () => {
     history.undo();
     expect(JSON.stringify(history.blueprint)).toBe(before);
   });
+});
+
+describe('V1.8.6.0.1 physical performance and integrity',()=>{
+ it('integrates the same finite layer volumes as independent plane clipping, including clipped corner cells',()=>{
+  const b=sandbox();addPhysicalDesign(b);
+  for(const s of b.physicalDesign!.surfaces)for(const p of s.pieces){const fast=integratedLayerVolumes(s,p),reference=pieceLayers(s,p);for(let i=0;i<s.layerStack.length;i++)expect(fast.find(v=>v.layerOrder===i)?.volumeM3??0).toBeCloseTo(reference.find(v=>v.layerOrder===i)?.volumeM3??0,6);}
+  const p=[{x:0,y:0,z:0},{x:1,y:0,z:0},{x:0,y:1,z:0},{x:0,y:0,z:1}],c=tetra(...p as [Vec3,Vec3,Vec3,Vec3]);
+  for(const n of [{x:1,y:2,z:3},{x:-2,y:3,z:-1}])for(const d of [-3,-1,0,.2,.7,1,1.5,2.5,4]){const h=p.map(v=>v.x*n.x+v.y*n.y+v.z*n.z),clipped=clipCell(c,n,d,true);expect(tetraBelow(p,h,d,1/6)).toBeCloseTo(clipped?cellVolume(clipped):0,10);}
+ });
+ it('invalidates content caches for changed policy, seed, dimensions and source geometry while hit/miss data agree',()=>{
+  const original=sandbox();addPhysicalDesign(original);const hit=sandbox();addPhysicalDesign(hit);expect(hit.physicalDesign).toEqual(original.physicalDesign);
+  const changed=sandbox();changed.seed++;changed.order.priorities.mobility=100;changed.structuralVolumes[0].geometry.stations.forEach(s=>s.width-=20);changed.dimensions.width*=.9;addPhysicalDesign(changed);expect(changed.physicalDesign!.policy.hullMaterialPreference).toBe('LIGHT_STRUCTURAL_ALLOY');expect(changed.physicalDesign!.surfaces[0].bounds).not.toEqual(original.physicalDesign!.surfaces[0].bounds);
+  const restored=sandbox();addPhysicalDesign(restored);expect(restored.physicalDesign).toEqual(original.physicalDesign);
+ });
+ it('reuses immutable query snapshots and invalidates edited geometry/material without serializing cache state',()=>{
+  const b=rayFixture(),json=JSON.stringify(b),q=preparePhysicalQueries(b),o={x:0,y:0,z:5},d={x:0,y:0,z:-1};expect(preparePhysicalQueries(b)).toBe(q);expect(JSON.stringify(b)).toBe(json);
+  const old=q.probe(o,d,20);b.physicalDesign!.surfaces[0].materialId='TUNGSTEN_COMPOSITE';for(const p of b.physicalDesign!.surfaces[0].pieces)for(const v of p.solid.vertices)v.x+=100;
+  const fresh=preparePhysicalQueries(b);expect(fresh).not.toBe(q);expect(fresh.probe(o,d,20).hits.map(h=>h.surfaceId)).toEqual(['hull']);expect(q.probe(o,d,20)).toEqual(old);expect(armorRayProbe(b,o,d,20)).toEqual(fresh.probe(o,d,20));b.physicalDesign!.surfaces[1].materialId='TITANIUM_STRUCTURAL_ALLOY';b.physicalDesign!.surfaces[1].layerStack[0].thicknessMm+=1;const edited=preparePhysicalQueries(b);expect(edited).not.toBe(fresh);expect(edited.probe(o,d,20).hits[0].materialId).toBe('TITANIUM_STRUCTURAL_ALLOY');
+ });
+ it('splits owned platforms once, reconciles the ledger and reports a mounted overrun without excusing invalid base mass',()=>{
+  const b=sandbox();addPhysicalDesign(b);const h=new EquipmentHistory(b),request={equipmentId:'gun-210',anchor:nearbyAnchor(b,{x:0,y:0,z:0},{x:0,y:1,z:0},30),headingDegrees:0,platforms:true,mode:'SINGLE' as const};h.install(request);const ship=h.blueprint,m=ship.physicalDesign!.mass,l=m.ledger!;
+  expect(l.entries).toHaveLength(7);expect(l.entries.reduce((n,e)=>n+e.massKg,0)).toBeCloseTo(m.totalEstimatedDryMassKg,5);expect(l.entries.find(e=>e.component==='PLATFORM')!.massKg).toBeGreaterThan(0);expect(l.entries.filter(e=>['MOUNTED_EQUIPMENT','PLATFORM'].includes(e.component)).reduce((n,e)=>n+e.massKg,0)).toBe(m.playerMountedEquipmentMassEstimateKg);
+  const target=(value:number)=>{const p=ship.physicalDesign!.policy,f=value/p.targetMassBudgetKg;for(const k of Object.keys(p.allocationsKg) as (keyof typeof p.allocationsKg)[])p.allocationsKg[k]*=f;ship.order.targetDryMassKg=value;p.targetMassBudgetKg=value;ship.physicalDesign!.mass=finishPhysicalMass(ship);};target(l.baseEstimatedDryMassKg+m.playerMountedEquipmentMassEstimateKg/2);expect(ship.physicalDesign!.mass.ledger!.mountedLoadoutOverTarget).toBe(true);expect(validatePhysicalDesign(ship)).toEqual([]);
+  target(l.baseEstimatedDryMassKg-1);expect(validatePhysicalDesign(ship)).toContain('Physical ship mass target exceeded');
+ });
+ it('reports real SPINE boundary intersections as unresolved rather than inventing shell material or silently omitting them',()=>{
+  const b=sandbox();addPhysicalDesign(b);const spine=structuredClone(b.structuralVolumes[0]);spine.id='unclassified-axial';spine.type='SPINE';spine.purpose='axial-weapon';spine.position.x=200;b.structuralVolumes.push(spine);
+  const q=preparePhysicalQueries(b),r=q.probe({x:200,y:100,z:0},{x:0,y:-1,z:0},200);expect(r.valid).toBe(true);expect(r.complete).toBe(false);expect(r.hits).toHaveLength(0);expect(r.unresolvedCrossings).toHaveLength(2);expect(r.unresolvedCrossings[0].distanceM).toBeCloseTo(80,8);expect(r.unresolvedCrossings[1].distanceM).toBeCloseTo(120,8);expect(r.unresolvedCrossings.every(c=>c.structureId===spine.id)).toBe(true);expect(q.probe({x:400,y:100,z:0},{x:0,y:-1,z:0},200).complete).toBe(true);
+ });
+});
+
+it('keeps diagnostics runtime-only, reports real hits/misses and invalidates a seed-only cache change',()=>{
+ setPhysicalProfilingEnabled(true);
+ try{const make=(seed:number)=>{const b=sandbox();b.seed=seed;return capturePhysicalGeneration(()=>addPhysicalDesign(b));};
+ const first=make(1000),hit=make(1000),changed=make(1001);
+ expect(physicalDiagnostics(first)!.cache).toEqual({hits:0,misses:1});expect(physicalDiagnostics(hit)!.cache).toEqual({hits:1,misses:0});expect(physicalDiagnostics(changed)!.cache).toEqual({hits:0,misses:1});expect(JSON.stringify(first)).toBe(JSON.stringify(hit));
+ setPhysicalProfilingEnabled(false);const off=make(1000);expect(physicalDiagnostics(off)).toBeUndefined();expect(JSON.stringify(off)).toBe(JSON.stringify(first));
+ }finally{setPhysicalProfilingEnabled(false);}
+});
+
+it('keeps the represented-volume cutoff for constituent query intervals without cutting the finite outer cell',()=>{
+ const b=rayFixture(false),poly=tri.map(p=>({x:p.x/1000,y:p.y/1000,z:p.z})),s=plate('tiny-constituent','ARMOR',poly,300,'CERAMIC_COMPOSITE') as any;
+ s.facets[0].planeOffsetM=0;s.layerStack[0].thicknessMm=.001;s.layerStack[1].thicknessMm=149.999;s.layerStack[2].thicknessMm=150;
+ const cell=triangleLayer(poly,0,.3);s.pieces=[{facetIndex:0,layerOrder:-1,solid:cellSolid(cell),volumeM3:cellVolume(cell)}];b.physicalDesign!.surfaces=[s];
+ expect(pieceLayers(s,s.pieces[0]).map(p=>p.layerOrder)).toEqual([1,2]);expect(preparePhysicalQueries(b).probe({x:0,y:0,z:1},{x:0,y:0,z:-1},2).hits.map(h=>h.layerOrder)).toEqual([1,2]);
 });

@@ -1,0 +1,85 @@
+{
+  "kind": "cold",
+  "priority": "original",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 7,
+  "moduleInitMs": 30.33669500000002,
+  "firstMs": 9507.518062,
+  "validationMs": 169.40646099999867,
+  "serializationMs": 224.29537399999936,
+  "physicalSerializationMs": 130.97112299999935,
+  "repeatedMs": 3802.250628,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 17909608,
+    "rss": 95145984,
+    "maxRssBytes": 111255552
+  },
+  "afterMemory": {
+    "heapUsed": 583730760,
+    "rss": 833114112,
+    "maxRssBytes": 844910592
+  },
+  "physicalBytes": 20816722,
+  "blueprintBytes": 23101924,
+  "surfaces": 39,
+  "triangles": 120014,
+  "pieces": 12380,
+  "queryMs": 1433.6725570000017,
+  "queryHits": 8,
+  "mass": {
+    "hullShellMassKg": 65985600.008768536,
+    "armorMassKg": 696842981.9048266,
+    "structuralMassEstimateKg": 641312460,
+    "coreEquipmentMassEstimateKg": 5630204.293057631,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 356284700,
+    "totalEstimatedDryMassKg": 1766055946.2066529,
+    "targetMassKg": 3562847000,
+    "remainingMassKg": 1796791053.7933471,
+    "armorBudgetRemainingKg": 5514486.345236659,
+    "manufacturingCostIndexKg": 2826390453.6070232,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 3562847000
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 21.63225699999998,
+      "armorMs": 47.395557,
+      "coverageMs": 44.981559000000004,
+      "functionalMs": 217.00033200000007,
+      "installationMs": 957.1630009999999,
+      "validationMs": 174.46346500000004,
+      "totalMs": 1462.6361709999999
+    },
+    {
+      "hullMs": 4.404931999999462,
+      "armorMs": 35.89089400000012,
+      "coverageMs": 81.68261999999959,
+      "functionalMs": 157.79128800000035,
+      "installationMs": 872.7777740000001,
+      "validationMs": 177.21027200000026,
+      "totalMs": 1329.75778
+    }
+  ],
+  "functions": []
+}

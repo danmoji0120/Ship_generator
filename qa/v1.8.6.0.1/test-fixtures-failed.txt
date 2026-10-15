@@ -1,0 +1,62 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0.1
+
+ ❯ tests/physical-foundation.test.ts (14 tests | 2 failed) 764ms
+   ✓ physical material, finite layer and accounting foundation > defines exactly five armor and three hull materials, immutable densities and honest composite thickness/mass 4ms
+   ✓ physical material, finite layer and accounting foundation > integrates finite volumes and layer density without double shell mass, and isolates instance state 1ms
+   ✓ physical material, finite layer and accounting foundation > returns actual entry/exit for 0/30/60-degree incidence and armor layers before the separate hull shell 6ms
+   ✓ physical material, finite layer and accounting foundation > clips edge escape, reports bare hull, stays finite at grazing incidence and rejects invalid rays 2ms
+   ✓ physical material, finite layer and accounting foundation > transforms normals/entry points with a rotated translated ship and traces inclined nonparallel facets 3ms
+   ✓ physical material, finite layer and accounting foundation > subtracts real overlapping volumes without mass duplication, including collinear clipped face vertices 6ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors 229ms
+   ✓ physical material, finite layer and accounting foundation > keeps finite shell data deterministic, validates JSON and marks explicit migration without rewriting historical geometry 151ms
+   ✓ physical material, finite layer and accounting foundation > keeps free mounts external-only, preserves owned platforms, refreshes estimates once and restores exact undo JSON 120ms
+   ✓ V1.8.6.0.1 physical performance and integrity > integrates the same finite layer volumes as independent plane clipping, including clipped corner cells 22ms
+   ✓ V1.8.6.0.1 physical performance and integrity > invalidates content caches for changed policy, seed, dimensions and source geometry while hit/miss data agree 123ms
+   ✓ V1.8.6.0.1 physical performance and integrity > reuses immutable query snapshots and invalidates edited geometry/material without serializing cache state 2ms
+   × V1.8.6.0.1 physical performance and integrity > splits owned platforms once, reconciles the ledger and reports a mounted overrun without excusing invalid base mass 65ms
+     → expected [ …(2) ] to deeply equal []
+   × V1.8.6.0.1 physical performance and integrity > reports real SPINE boundary intersections as unresolved rather than inventing shell material or silently omitting them 29ms
+     → expected [ 80, 120.00000000000001 ] to deeply equal [ 80, 120 ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/physical-foundation.test.ts > V1.8.6.0.1 physical performance and integrity > splits owned platforms once, reconciles the ledger and reports a mounted overrun without excusing invalid base mass
+AssertionError: expected [ …(2) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "Physical target differs from order/legacy target",
++   "Physical sector budget invalid",
++ ]
+
+ ❯ tests/physical-foundation.test.ts:580:282
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/physical-foundation.test.ts > V1.8.6.0.1 physical performance and integrity > reports real SPINE boundary intersections as unresolved rather than inventing shell material or silently omitting them
+AssertionError: expected [ 80, 120.00000000000001 ] to deeply equal [ 80, 120 ]
+
+- Expected
++ Received
+
+  [
+    80,
+-   120,
++   120.00000000000001,
+  ]
+
+ ❯ tests/physical-foundation.test.ts:585:224
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 12 passed (14)
+   Start at  13:37:42
+   Duration  1.68s (transform 445ms, setup 0ms, collect 633ms, tests 764ms, environment 0ms, prepare 62ms)

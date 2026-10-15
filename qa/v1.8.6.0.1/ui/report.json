@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "name": "Production no DEV API",
+      "passed": true
+    },
+    {
+      "name": "Physical Blueprint import exact",
+      "passed": true
+    },
+    {
+      "name": "Physical inspector reads registry/data",
+      "passed": true
+    },
+    {
+      "name": "Selected plate layer stack",
+      "passed": true
+    },
+    {
+      "name": "Armor Thickness view",
+      "passed": true
+    },
+    {
+      "name": "Physical Materials view",
+      "passed": true
+    },
+    {
+      "name": "Physical Coverage view",
+      "passed": true
+    },
+    {
+      "name": "Manual probe actual finite intervals",
+      "passed": true
+    },
+    {
+      "name": "Explicit query prewarm reports cell/plane cost",
+      "passed": true
+    },
+    {
+      "name": "Export preserves physical data",
+      "passed": true
+    },
+    {
+      "name": "Reload stored exact",
+      "passed": true
+    },
+    {
+      "name": "Old import does not synthesize physical data",
+      "passed": true
+    },
+    {
+      "name": "Explicit migration option visible",
+      "passed": true
+    },
+    {
+      "name": "Migration marks estimates and keeps exact hull/armor/weapons",
+      "passed": true
+    },
+    {
+      "name": "Free mount editor retained",
+      "passed": true
+    },
+    {
+      "name": "Free mount editor toggles on",
+      "passed": true
+    },
+    {
+      "name": "Free mount editor returns off",
+      "passed": true
+    },
+    {
+      "name": "Normal view returns",
+      "passed": true
+    },
+    {
+      "name": "Opt-in runtime diagnostics show physical timings",
+      "passed": true
+    },
+    {
+      "name": "New version has explicit seven-component ledger",
+      "passed": true
+    },
+    {
+      "name": "Runtime diagnostics never enter JSON",
+      "passed": true
+    },
+    {
+      "name": "Impossible dry-mass target displays concrete rejection",
+      "passed": true
+    },
+    {
+      "name": "Rejected order retains the previous valid Blueprint",
+      "passed": true
+    },
+    {
+      "name": "Console errors zero",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

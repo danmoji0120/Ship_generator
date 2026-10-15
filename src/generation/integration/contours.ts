@@ -37,7 +37,7 @@ export function sectionRing(v: StructuralVolume, z: number): Vec3[] {
   );
 }
 export function center(ring: Vec3[]): Vec3 {
-  return mul(ring.reduce(add, { x: 0, y: 0, z: 0 }), 1 / ring.length);
+  let x=0,y=0,z=0;for(const p of ring){x+=p.x;y+=p.y;z+=p.z;}const k=1/ring.length;return {x:x*k||0,y:y*k||0,z:z*k||0};
 }
 export function scaledRing(
   ring: Vec3[],
@@ -89,18 +89,9 @@ export function contactPatch(
 export function boundsOf(points: Vec3[]): BoundsData {
   if (!points.length)
     return { min: { x: 0, y: 0, z: 0 }, max: { x: 0, y: 0, z: 0 } };
-  return {
-    min: {
-      x: Math.min(...points.map((p) => p.x)),
-      y: Math.min(...points.map((p) => p.y)),
-      z: Math.min(...points.map((p) => p.z)),
-    },
-    max: {
-      x: Math.max(...points.map((p) => p.x)),
-      y: Math.max(...points.map((p) => p.y)),
-      z: Math.max(...points.map((p) => p.z)),
-    },
-  };
+  const min={x:Infinity,y:Infinity,z:Infinity},max={x:-Infinity,y:-Infinity,z:-Infinity};
+  for(const p of points){min.x=Math.min(min.x,p.x);min.y=Math.min(min.y,p.y);min.z=Math.min(min.z,p.z);max.x=Math.max(max.x,p.x);max.y=Math.max(max.y,p.y);max.z=Math.max(max.z,p.z);}
+  return {min,max};
 }
 /** Vertices, edge midpoints and face centers reveal intrusion between contour stations as well. */
 export function contourSamples(rings: Vec3[][]) {

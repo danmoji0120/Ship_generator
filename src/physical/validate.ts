@@ -1,4 +1,4 @@
-import { pieceLayers } from "./layers";
+import { integratedLayerVolumes } from "./integration";
 import type { ShipBlueprint } from "../blueprint/types";
 import { MATERIALS, ARMOR_MATERIALS, HULL_MATERIALS } from "./materials";
 import { physicalSources } from "./geometry";
@@ -200,7 +200,7 @@ export function validatePhysicalDesign(
           )
         )
           issues.push("Detached / expanded physical layer " + s.id);
-        for (const part of pieceLayers(s, p))
+        for (const part of integratedLayerVolumes(s, p))
           volumes[part.layerOrder] += part.volumeM3;
         if (checkOverlaps)
           all.push({
@@ -259,10 +259,11 @@ export function validatePhysicalDesign(
         !close(d.mass[k as keyof typeof d.mass] as number, v)
       )
         issues.push("Mass accounting mismatch " + k);
+    if(d.mass.ledger&&JSON.stringify(d.mass.ledger)!==JSON.stringify(expected.ledger))issues.push('Mass ledger/source/budget mismatch');
     if (d.mass.armorBudgetRemainingKg < -1e-3)
       issues.push("Armor mass budget exceeded");
     // Free mounts never acquire a new internal/mass installation gate: an over-target loadout is a reported warning.
-    if (d.mass.remainingMassKg < -1e-3 && !b.freeMountPlan?.entries.length)
+    if (expected.ledger!.baseBudgetViolation)
       issues.push("Physical ship mass target exceeded");
     if (!d.surfaces.length) issues.push("No physical shells/armor registered");
   } catch (e) {

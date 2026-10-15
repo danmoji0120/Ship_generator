@@ -1,0 +1,5 @@
+import {readFile,writeFile} from 'node:fs/promises';import {gunzipSync,gzipSync} from 'node:zlib';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
+const out='qa/v1.8.6.0.1';await writeFile(`${out}/fixtures/battleship470-after.json.gz`,gzipSync(await readFile('/tmp/battleship470-after.json')));
+const rows=[],hash=b=>createHash('sha256').update(JSON.stringify(b)).digest('hex');
+for(const id of ['battleship470','cruiser470','vesper200','forge300','spine300','truss300']){const a=JSON.parse(gunzipSync(await readFile(`${out}/fixtures/${id}-before.json.gz`))),b=JSON.parse(gunzipSync(await readFile(`${out}/fixtures/${id}-after.json.gz`)));delete a.physicalDesign;delete b.physicalDesign;delete a.generatorVersion;delete b.generatorVersion;assert.equal(hash(a),hash(b),id+' historical hull/armor/equipment data changed');rows.push({id,allNonPhysicalDesignFieldsSHA256:hash(a),exact:true});}
+await writeFile(`${out}/blueprint-regression.json`,JSON.stringify(rows,null,2));console.log(rows.length,'complete nonphysical Blueprint comparisons exact');

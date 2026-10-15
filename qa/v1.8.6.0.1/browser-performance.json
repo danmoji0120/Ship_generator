@@ -1,0 +1,24 @@
+{
+  "samplesPerVersion": 1,
+  "rows": [
+    {
+      "version": "before",
+      "moduleLoadMs": 742.7999999988824,
+      "firstMs": 8546,
+      "hitMs": 3118.5,
+      "deterministic": true,
+      "pieces": 13777,
+      "errors": []
+    },
+    {
+      "version": "after",
+      "moduleLoadMs": 771.8999999985099,
+      "firstMs": 6355.800000000745,
+      "hitMs": 2819.300000000745,
+      "deterministic": true,
+      "pieces": 13777,
+      "errors": []
+    }
+  ],
+  "note": "Fresh browser pages, no renderer; Vite module network/compilation separate from generation. Exploratory N=1."
+}

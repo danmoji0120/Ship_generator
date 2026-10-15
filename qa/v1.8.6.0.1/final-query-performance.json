@@ -1,0 +1,155 @@
+{
+  "rows": [
+    {
+      "version": "before",
+      "sample": 0,
+      "ms": 2231.205692,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004644049553,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    },
+    {
+      "version": "before",
+      "sample": 1,
+      "ms": 2144.157319,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004644049553,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    },
+    {
+      "version": "before",
+      "sample": 2,
+      "ms": 2317.275453,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004644049553,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    },
+    {
+      "version": "after",
+      "sample": 0,
+      "ms": 509.4754149999999,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004643685756,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    },
+    {
+      "version": "after",
+      "sample": 1,
+      "ms": 459.0677190000006,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004643685756,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    },
+    {
+      "version": "after",
+      "sample": 2,
+      "ms": 526.9488930000007,
+      "ids": [
+        "plate/citadel/primary/ceramic",
+        "plate/citadel/primary/support",
+        "plate/citadel/primary/spall",
+        "shell/citadel/steel",
+        "shell/citadel/steel",
+        "plate/citadel/keel/spall",
+        "plate/citadel/keel/support",
+        "plate/citadel/keel/ceramic"
+      ],
+      "paths": [
+        0.33727511609208705,
+        0.20236506965534318,
+        0.13491004643685756,
+        0.02427829999999176,
+        0.02427829999999176,
+        0.07288652924364669,
+        0.10932979386529951,
+        0.18221632310871883
+      ]
+    }
+  ],
+  "note": "Final query implementation including original minimum represented layer volume cutoff. N=3 fresh Blueprint objects per version in one process; first query cold, subsequent runtime warm/cache miss. Fixture parse and explicit GC excluded. API includes exact signature construction/preparation/first shot. This replaces the preliminary first-query figures in initial generation timing snapshots; generation behavior/timings were unaffected by the query-only correction."
+}

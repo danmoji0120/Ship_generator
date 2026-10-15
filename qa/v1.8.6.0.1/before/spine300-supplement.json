@@ -1,0 +1,117 @@
+{
+  "kind": "cold",
+  "priority": "original",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "vesper",
+    "length": 300,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 12,
+  "moduleInitMs": 19.753951999999998,
+  "firstMs": 13086.279305999999,
+  "validationMs": 287.5471290000005,
+  "serializationMs": 379.0301210000016,
+  "physicalSerializationMs": 271.31225799999993,
+  "repeatedMs": 4166.717903999999,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 18116608,
+    "rss": 94691328,
+    "maxRssBytes": 111390720
+  },
+  "afterMemory": {
+    "heapUsed": 638023264,
+    "rss": 942219264,
+    "maxRssBytes": 948932608
+  },
+  "physicalBytes": 41197501,
+  "blueprintBytes": 43654417,
+  "surfaces": 129,
+  "triangles": 238189,
+  "pieces": 24366,
+  "queryMs": 1258.2186720000027,
+  "queryHits": 0,
+  "mass": {
+    "hullShellMassKg": 3337571.3709228453,
+    "armorMassKg": 54563266.510664366,
+    "structuralMassEstimateKg": 46074060,
+    "coreEquipmentMassEstimateKg": 621646.337852411,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 25596700,
+    "totalEstimatedDryMassKg": 130193244.21943963,
+    "targetMassKg": 255967000,
+    "remainingMassKg": 125773755.78056037,
+    "armorBudgetRemainingKg": 1568986.2755118906,
+    "manufacturingCostIndexKg": 224006993.07813224,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 255967000
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 27.320381999999995,
+      "armorMs": 82.37014999999997,
+      "coverageMs": 71.34388100000001,
+      "functionalMs": 581.623969,
+      "installationMs": 126.37044500000002,
+      "validationMs": 160.53725600000007,
+      "totalMs": 1049.5660830000002
+    },
+    {
+      "hullMs": 31.435327000001053,
+      "armorMs": 206.1887139999999,
+      "coverageMs": 72.31848700000046,
+      "functionalMs": 585.684643999999,
+      "installationMs": 116.25445600000057,
+      "validationMs": 89.87127099999998,
+      "totalMs": 1101.752899000001
+    }
+  ],
+  "stages": [
+    {
+      "label": "generation",
+      "ms": 13086.279305999999,
+      "functions": []
+    },
+    {
+      "label": "validation",
+      "ms": 287.5471290000005,
+      "functions": []
+    },
+    {
+      "label": "serialization",
+      "ms": 379.0301210000016,
+      "functions": []
+    },
+    {
+      "label": "physicalSerialization",
+      "ms": 271.31225799999993,
+      "functions": []
+    },
+    {
+      "label": "cache-hit",
+      "ms": 4166.717903999999,
+      "functions": []
+    },
+    {
+      "label": "first-ray-query",
+      "ms": 1258.2186720000027,
+      "functions": []
+    }
+  ],
+  "functions": []
+}

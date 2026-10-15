@@ -1,0 +1,119 @@
+{
+  "kind": "cold",
+  "priority": "mobility",
+  "order": {
+    "role": "Battleship",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 50,
+      "survivability": 50,
+      "mobility": 100,
+      "endurance": 50,
+      "missile": 50,
+      "sensor": 50
+    },
+    "targetDryMassKg": 3562847000
+  },
+  "seed": 7,
+  "moduleInitMs": 23.525672999999983,
+  "firstMs": 8310.368391999998,
+  "validationMs": 153.7873039999995,
+  "serializationMs": 223.41158899999937,
+  "physicalSerializationMs": 142.2561800000003,
+  "repeatedMs": 3514.622320999999,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 55015144,
+    "rss": 139268096,
+    "maxRssBytes": 213835776
+  },
+  "afterMemory": {
+    "heapUsed": 366350248,
+    "rss": 784728064,
+    "maxRssBytes": 808607744
+  },
+  "physicalBytes": 23813231,
+  "blueprintBytes": 26020674,
+  "surfaces": 62,
+  "triangles": 138194,
+  "pieces": 14162,
+  "queryMs": 504.1481100000001,
+  "queryHits": 4,
+  "mass": {
+    "hullShellMassKg": 21625385.250956494,
+    "armorMassKg": 703461915.1905682,
+    "structuralMassEstimateKg": 496205100,
+    "coreEquipmentMassEstimateKg": 6248104.241464009,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 275669500,
+    "totalEstimatedDryMassKg": 1503210004.6829886,
+    "targetMassKg": 3562847000,
+    "remainingMassKg": 2059636995.3170114,
+    "armorBudgetRemainingKg": 69468163.30924809,
+    "manufacturingCostIndexKg": 2277028590.9109664,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 2756695000
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 25.05724399999997,
+      "armorMs": 57.77270699999997,
+      "coverageMs": 49.58587,
+      "functionalMs": 182.3409230000001,
+      "installationMs": 708.7993619999999,
+      "validationMs": 152.18366300000002,
+      "totalMs": 1175.7397689999998
+    },
+    {
+      "hullMs": 4.743159999999989,
+      "armorMs": 31.874908000001597,
+      "coverageMs": 23.065684999999576,
+      "functionalMs": 129.555871999999,
+      "installationMs": 643.8773689999998,
+      "validationMs": 143.97063100000014,
+      "totalMs": 977.0876250000001
+    }
+  ],
+  "stages": [
+    {
+      "label": "generation",
+      "ms": 8310.368391999998,
+      "functions": []
+    },
+    {
+      "label": "validation",
+      "ms": 153.7873039999995,
+      "functions": []
+    },
+    {
+      "label": "serialization",
+      "ms": 223.41158899999937,
+      "functions": []
+    },
+    {
+      "label": "physicalSerialization",
+      "ms": 142.2561800000003,
+      "functions": []
+    },
+    {
+      "label": "cache-hit",
+      "ms": 3514.622320999999,
+      "functions": []
+    },
+    {
+      "label": "first-ray-query",
+      "ms": 504.1481100000001,
+      "functions": []
+    }
+  ],
+  "functions": [],
+  "processWallMs": 13596.674748999998
+}

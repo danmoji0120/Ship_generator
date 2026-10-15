@@ -1,0 +1,6 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {generateBlueprint,setPhysicalProfilingEnabled,physicalDiagnostics} from '/tmp/physical-after.mjs';
+const source=JSON.parse(await readFile('qa/v1.8.6.0.1/fixtures/battleship470-order.json','utf8')),rows=[];
+setPhysicalProfilingEnabled(true);
+for(const priority of ['survivability','mobility','balanced']){const order=structuredClone(source.order);if(priority!=='balanced')order.priorities[priority]=100;const b=generateBlueprint(order,source.seed,{architecture:source.architecture.grammar,family:source.macroDesign.family}),d=b.physicalDesign,armor=d.surfaces.filter(s=>s.kind==='ARMOR');rows.push({priority,diagnostics:physicalDiagnostics(b),sourceArmorAreaM2:armor.reduce((n,s)=>n+s.surfaceAreaM2,0),physicalArmorOuterAreaM2:armor.reduce((n,s)=>n+s.physicalOuterAreaM2,0),armorVolumeM3:armor.reduce((n,s)=>n+s.volumeM3,0),materials:[...new Set(armor.map(s=>s.materialId))],thicknessMm:[Math.min(...armor.map(s=>s.thicknessMm)),Math.max(...armor.map(s=>s.thicknessMm))],pieces:d.surfaces.reduce((n,s)=>n+s.pieces.length,0),mass:d.mass,policy:d.policy});}
+await writeFile('qa/v1.8.6.0.1/primary-policy-details.json',JSON.stringify(rows,null,2));console.log(rows.map(r=>({priority:r.priority,armorArea:r.physicalArmorOuterAreaM2,armorKg:r.mass.armorMassKg})));

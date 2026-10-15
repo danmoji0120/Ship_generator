@@ -1,0 +1,28 @@
+before qa/v1.8.6.0.1/before/battleship470-cold-1.json 9985 4226 1449 13777 0
+before qa/v1.8.6.0.1/before/battleship470-cold-2.json 9892 4186 1543 13777 0
+before qa/v1.8.6.0.1/before/battleship470-cold-3.json 10361 3829 1530 13777 0
+file:///workspace/shipyard-v1.8.6.0.1/tests/performance/run-patch-benchmark.mjs:11
+ if(r.status!==0)throw Error(r.stderr||r.stdout);const row=JSON.parse(readFileSync(output));row.processWallMs=performance.now()-start;writeFileSync(output,JSON.stringify(row,null,2));console.log(version,r.stdout.trim());
+                       ^
+
+Error: file:///tmp/physical-before.mjs:23173
+    throw new DesignRejection([code], [], reason);
+          ^
+
+DesignRejection: REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED: Error: REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED: minimum valid skin / retained equipment exceeds target
+    at addPhysicalDesign (file:///tmp/physical-before.mjs:23173:11)
+    at Module.generateBlueprint (file:///tmp/physical-before.mjs:28487:5)
+    at file:///workspace/shipyard-v1.8.6.0.1/tests/performance/physical-harness.mjs:40:23 {
+  codes: [ 'REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED' ],
+  candidates: []
+}
+
+Node.js v24.19.0
+
+    at run (file:///workspace/shipyard-v1.8.6.0.1/tests/performance/run-patch-benchmark.mjs:11:24)
+    at file:///workspace/shipyard-v1.8.6.0.1/tests/performance/run-patch-benchmark.mjs:6:57
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

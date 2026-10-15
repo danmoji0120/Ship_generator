@@ -1,0 +1,266 @@
+{
+  "kind": "cold",
+  "priority": "original",
+  "order": {
+    "role": "Cruiser",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 80,
+      "survivability": 80,
+      "mobility": 30,
+      "endurance": 65,
+      "missile": 60,
+      "sensor": 45
+    }
+  },
+  "seed": 7,
+  "moduleInitMs": 22.446207999999984,
+  "firstMs": 9416.73445,
+  "validationMs": 140.94279199999983,
+  "serializationMs": 189.76038599999993,
+  "physicalSerializationMs": 131.971015000001,
+  "repeatedMs": 3536.1492020000005,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 17870248,
+    "rss": 95195136,
+    "maxRssBytes": 111620096
+  },
+  "afterMemory": {
+    "heapUsed": 526535336,
+    "rss": 805228544,
+    "maxRssBytes": 810921984
+  },
+  "physicalBytes": 20816722,
+  "blueprintBytes": 23101924,
+  "surfaces": 39,
+  "triangles": 120014,
+  "pieces": 12380,
+  "queryMs": 1579.4557239999995,
+  "queryHits": 8,
+  "mass": {
+    "hullShellMassKg": 65985600.008768536,
+    "armorMassKg": 696842981.9048266,
+    "structuralMassEstimateKg": 641312460,
+    "coreEquipmentMassEstimateKg": 5630204.293057631,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 356284700,
+    "totalEstimatedDryMassKg": 1766055946.2066529,
+    "targetMassKg": 3562847000,
+    "remainingMassKg": 1796791053.7933471,
+    "armorBudgetRemainingKg": 5514486.345236659,
+    "manufacturingCostIndexKg": 2826390453.6070232,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 3562847000
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 14.881230000000016,
+      "armorMs": 38.18198799999999,
+      "coverageMs": 29.789449999999988,
+      "functionalMs": 161.84081299999997,
+      "installationMs": 755.507951,
+      "validationMs": 192.31756999999993,
+      "totalMs": 1192.519002
+    },
+    {
+      "hullMs": 3.73686699999962,
+      "armorMs": 26.775621999999203,
+      "coverageMs": 30.171447000000626,
+      "functionalMs": 152.38947299999927,
+      "installationMs": 765.4499360000009,
+      "validationMs": 177.10468799999944,
+      "totalMs": 1155.628032999999
+    }
+  ],
+  "functions": [
+    {
+      "name": "generation/generate.ts:generateBlueprint",
+      "calls": 8,
+      "ms": 25918.520948
+    },
+    {
+      "name": "physical/build.ts:addPhysicalDesign",
+      "calls": 2,
+      "ms": 4838.4655870000015
+    },
+    {
+      "name": "physical/convex.ts:clipCell",
+      "calls": 531187,
+      "ms": 3725.147744000568
+    },
+    {
+      "name": "physical/layers.ts:pieceLayers",
+      "calls": 37140,
+      "ms": 3123.364903000163
+    },
+    {
+      "name": "generation/production/build.ts:buildProduction",
+      "calls": 2,
+      "ms": 2329.5695889999993
+    },
+    {
+      "name": "physical/validate.ts:validatePhysicalDesign",
+      "calls": 7,
+      "ms": 1780.0433089999997
+    },
+    {
+      "name": "physical/probe.ts:armorRayProbe",
+      "calls": 1,
+      "ms": 1579.0267010000007
+    },
+    {
+      "name": "physical/probe.ts:makeIndex",
+      "calls": 1,
+      "ms": 1577.1813409999995
+    },
+    {
+      "name": "physical/convex.ts:subtractCell",
+      "calls": 144960,
+      "ms": 1469.820182999823
+    },
+    {
+      "name": "physical/convex.ts:orientCell",
+      "calls": 307626,
+      "ms": 1448.6398119996152
+    },
+    {
+      "name": "physical/convex.ts:faceNormal",
+      "calls": 5933540,
+      "ms": 768.2789789969174
+    },
+    {
+      "name": "physical/convex.ts:unique",
+      "calls": 181044,
+      "ms": 429.541868000249
+    },
+    {
+      "name": "physical/convex.ts:outerFacetArea",
+      "calls": 2750,
+      "ms": 286.48700400003236
+    },
+    {
+      "name": "physical/convex.ts:mergeConvexCells",
+      "calls": 2750,
+      "ms": 262.8719290000099
+    },
+    {
+      "name": "physical/convex.ts:subtractPolygon",
+      "calls": 129477,
+      "ms": 252.89889300002596
+    },
+    {
+      "name": "physical/convex.ts:canonicalSolid",
+      "calls": 12380,
+      "ms": 210.72735799991005
+    },
+    {
+      "name": "physical/geometry.ts:facetSupportPlanes",
+      "calls": 3282,
+      "ms": 156.12927599996374
+    },
+    {
+      "name": "physical/convex.ts:polygonLayer",
+      "calls": 28776,
+      "ms": 130.33782700008805
+    },
+    {
+      "name": "physical/geometry.ts:physicalSources",
+      "calls": 2,
+      "ms": 84.30328699999973
+    },
+    {
+      "name": "physical/geometry.ts:sourceGeometry",
+      "calls": 39,
+      "ms": 81.1535300000005
+    },
+    {
+      "name": "physical/convex.ts:triangleLayer",
+      "calls": 12380,
+      "ms": 48.446232999998756
+    },
+    {
+      "name": "physical/geometry.ts:kernel",
+      "calls": 255,
+      "ms": 42.481158000001415
+    },
+    {
+      "name": "physical/geometry.ts:exposedFacetPolygons",
+      "calls": 1,
+      "ms": 28.303885000000264
+    },
+    {
+      "name": "physical/convex.ts:tetra",
+      "calls": 8882,
+      "ms": 27.810254000006807
+    },
+    {
+      "name": "physical/geometry.ts:sourceExclusions",
+      "calls": 1,
+      "ms": 16.410566000000017
+    },
+    {
+      "name": "physical/policy.ts:coreEquipmentMass",
+      "calls": 4,
+      "ms": 6.312663999999586
+    },
+    {
+      "name": "physical/policy.ts:createDesignPolicy",
+      "calls": 2,
+      "ms": 3.907039000000168
+    },
+    {
+      "name": "physical/policy.ts:finishPhysicalMass",
+      "calls": 2,
+      "ms": 3.4182679999994434
+    },
+    {
+      "name": "generation/macro/plan.ts:createMacroPlan",
+      "calls": 2,
+      "ms": 2.2123999999991497
+    },
+    {
+      "name": "physical/geometry.ts:oriented",
+      "calls": 255,
+      "ms": 1.7023480000002564
+    },
+    {
+      "name": "generation/architecture/layout.ts:architectureLayout",
+      "calls": 2,
+      "ms": 1.622240999999235
+    },
+    {
+      "name": "physical/materials.ts:materialLayers",
+      "calls": 39,
+      "ms": 0.381003000000419
+    },
+    {
+      "name": "physical/convex.ts:rayCell",
+      "calls": 28,
+      "ms": 0.31927400000313355
+    },
+    {
+      "name": "physical/materials.ts:material",
+      "calls": 8,
+      "ms": 0.09550999999993337
+    },
+    {
+      "name": "generation/macro/plan.ts:macroWeights",
+      "calls": 2,
+      "ms": 0.05633299999965402
+    },
+    {
+      "name": "physical/policy.ts:playerEquipmentMass",
+      "calls": 2,
+      "ms": 0.00930400000015652
+    }
+  ]
+}

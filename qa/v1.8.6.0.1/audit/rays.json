@@ -1,0 +1,282 @@
+[
+  {
+    "id": "aegis470",
+    "label": "center",
+    "hits": 8,
+    "maxNumericDifference": 7.332801033044234e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "ARMOR-edge-0",
+    "hits": 18,
+    "maxNumericDifference": 5.6843418860808015e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "ARMOR-edge-30",
+    "hits": 9,
+    "maxNumericDifference": 5.6843418860808015e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "ARMOR-edge-60",
+    "hits": 9,
+    "maxNumericDifference": 5.6843418860808015e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "ARMOR-edge-89.999",
+    "hits": 2,
+    "maxNumericDifference": 5.6843418860808015e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "HULL-edge-0",
+    "hits": 5,
+    "maxNumericDifference": 8.526512829121202e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "HULL-edge-30",
+    "hits": 5,
+    "maxNumericDifference": 8.526512829121202e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "HULL-edge-60",
+    "hits": 6,
+    "maxNumericDifference": 8.526512829121202e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "HULL-edge-89.999",
+    "hits": 7,
+    "maxNumericDifference": 8.526512829121202e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "aegis470",
+    "label": "rotated-translated-center",
+    "hits": 8,
+    "maxNumericDifference": 8.526512829121202e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "center",
+    "hits": 0,
+    "maxNumericDifference": 0,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "ARMOR-edge-0",
+    "hits": 19,
+    "maxNumericDifference": 3.566924533515703e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "ARMOR-edge-30",
+    "hits": 10,
+    "maxNumericDifference": 3.566924533515703e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "ARMOR-edge-60",
+    "hits": 6,
+    "maxNumericDifference": 3.566924533515703e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "ARMOR-edge-89.999",
+    "hits": 3,
+    "maxNumericDifference": 3.566924533515703e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "HULL-edge-0",
+    "hits": 3,
+    "maxNumericDifference": 1.7763568394002505e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "HULL-edge-30",
+    "hits": 2,
+    "maxNumericDifference": 1.7763568394002505e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "HULL-edge-60",
+    "hits": 2,
+    "maxNumericDifference": 1.7763568394002505e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "HULL-edge-89.999",
+    "hits": 2,
+    "maxNumericDifference": 1.7763568394002505e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "vesper200",
+    "label": "rotated-translated-center",
+    "hits": 0,
+    "maxNumericDifference": 1.7763568394002505e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "center",
+    "hits": 6,
+    "maxNumericDifference": 2.8393287720973603e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "ARMOR-edge-0",
+    "hits": 8,
+    "maxNumericDifference": 2.8393287720973603e-11,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "ARMOR-edge-30",
+    "hits": 8,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "ARMOR-edge-60",
+    "hits": 8,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "ARMOR-edge-89.999",
+    "hits": 3,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "HULL-edge-0",
+    "hits": 8,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "HULL-edge-30",
+    "hits": 3,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "HULL-edge-60",
+    "hits": 2,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "HULL-edge-89.999",
+    "hits": 3,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "forge300",
+    "label": "rotated-translated-center",
+    "hits": 6,
+    "maxNumericDifference": 6.110383310442558e-10,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "center",
+    "hits": 0,
+    "maxNumericDifference": 0,
+    "unresolvedCrossings": 2
+  },
+  {
+    "id": "spine300",
+    "label": "ARMOR-edge-0",
+    "hits": 16,
+    "maxNumericDifference": 5.684341886080802e-14,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "ARMOR-edge-30",
+    "hits": 6,
+    "maxNumericDifference": 5.684341886080802e-14,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "ARMOR-edge-60",
+    "hits": 5,
+    "maxNumericDifference": 5.684341886080802e-14,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "ARMOR-edge-89.999",
+    "hits": 3,
+    "maxNumericDifference": 5.684341886080802e-14,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "HULL-edge-0",
+    "hits": 8,
+    "maxNumericDifference": 7.105427357601002e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "HULL-edge-30",
+    "hits": 5,
+    "maxNumericDifference": 7.105427357601002e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "HULL-edge-60",
+    "hits": 2,
+    "maxNumericDifference": 7.105427357601002e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "HULL-edge-89.999",
+    "hits": 2,
+    "maxNumericDifference": 7.105427357601002e-12,
+    "unresolvedCrossings": 0
+  },
+  {
+    "id": "spine300",
+    "label": "rotated-translated-center",
+    "hits": 0,
+    "maxNumericDifference": 7.105427357601002e-12,
+    "unresolvedCrossings": 2
+  }
+]

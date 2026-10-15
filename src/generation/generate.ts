@@ -1,3 +1,4 @@
+import {capturePhysicalGeneration,timedPhysical,recordPhysicalStage} from '../physical/diagnostics';
 import {addPhysicalDesign} from "../physical/build";
 import {validatePhysicalDesign} from "../physical/validate";
 import {addModularHardpoints as addLegacyModularHardpoints} from "./hardpoint-system/legacy-planner";
@@ -41,7 +42,7 @@ export function generateBlueprint(
   input: ShipOrder,
   seed: number,
   qaOptions?: {
-    version?: "1.8.6.0" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1" | "1.8.5.5";
+    version?: "1.8.6.0.1" | "1.8.6.0" | "1.6" | "1.7" | "1.8" | "1.8.1" | "1.8.4" | "1.8.4.1" | "1.8.4.2" | "1.8.5" | "1.8.5.1" | "1.8.5.2" | "1.8.5.3" | "1.8.5.3.1" | "1.8.5.4" | "1.8.5.4.1" | "1.8.5.5";
     productionBase?: boolean;
     requirementPlan?: RequirementPlan;
     minimumMacroCandidate?: number;
@@ -50,12 +51,12 @@ export function generateBlueprint(
     architecture?: import("../blueprint/types").ArchitectureGrammar;
   },
 ): ShipBlueprint {
-  if(!qaOptions?.version||qaOptions.version==='1.8.6.0'){
-    const b=generateBlueprint(input,seed,{...qaOptions,version:'1.8.5.5'});
-    b.generatorVersion='1.8.6.0';addPhysicalDesign(b);
-    const errors=validatePhysicalDesign(b);if(errors.length)throw new DesignRejection(['REQUIRED_PHYSICAL_DESIGN_INVALID'],[],errors.join('; '));
+  if(!qaOptions?.version||qaOptions.version==='1.8.6.0'||qaOptions.version==='1.8.6.0.1')return capturePhysicalGeneration(()=>{
+    const b=timedPhysical('Base generation',()=>generateBlueprint(input,seed,{...qaOptions,version:'1.8.5.5',onTimings:t=>{qaOptions?.onTimings?.(t);for(const [name,ms]of Object.entries(t))if(typeof ms==='number')recordPhysicalStage('Production/'+name,ms);}}));
+    b.generatorVersion=qaOptions?.version==='1.8.6.0'?'1.8.6.0':'1.8.6.0.1';timedPhysical('Physical build',()=>addPhysicalDesign(b));
+    const errors=timedPhysical('Physical validation',()=>validatePhysicalDesign(b));if(errors.length)throw new DesignRejection(['REQUIRED_PHYSICAL_DESIGN_INVALID'],[],errors.join('; '));
     return b;
-  }
+  });
   if(!qaOptions?.version||qaOptions.version==='1.8.5.5'){
     if(input.hardpointRequests?.length)throw new DesignRejection(['LEGACY_SLOT_ORDER_REQUIRES_LEGACY_MODE'],[], '예약 슬롯 요구사항은 Legacy 1.8.5.4.1 모드로 생성하세요. Free-Mount는 해당 요구를 성공 처리하지 않습니다.');
     const result=generateBlueprint(input,seed,{...qaOptions,version:'1.8.5.3.1'});

@@ -1,0 +1,1009 @@
+{
+  "kind": "cold",
+  "priority": "balanced",
+  "order": {
+    "role": "Battleship",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 50,
+      "survivability": 50,
+      "mobility": 50,
+      "endurance": 50,
+      "missile": 50,
+      "sensor": 50
+    },
+    "targetDryMassKg": 3562847000
+  },
+  "seed": 7,
+  "moduleInitMs": 28.669463000000007,
+  "firstMs": 8912.520402,
+  "validationMs": 142.75391300000047,
+  "serializationMs": 204.92148199999974,
+  "physicalSerializationMs": 142.25848299999961,
+  "repeatedMs": 4189.970035999999,
+  "deterministic": true,
+  "beforeMemory": {
+    "heapUsed": 55007928,
+    "rss": 138727424,
+    "maxRssBytes": 212979712
+  },
+  "afterMemory": {
+    "heapUsed": 390216776,
+    "rss": 838844416,
+    "maxRssBytes": 844947456
+  },
+  "physicalBytes": 23185186,
+  "blueprintBytes": 25425977,
+  "surfaces": 56,
+  "triangles": 134234,
+  "pieces": 13777,
+  "queryMs": 587.8711770000009,
+  "queryHits": 8,
+  "mass": {
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 71325408.86838885,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 670631806.8470433,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 496205100,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 6551464.212826867,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 275669500,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 1520383279.9282591,
+      "mountedEstimatedDryMassKg": 1520383279.9282591,
+      "targetSemantics": "EXISTING_BASE_DESIGN_LIMIT",
+      "maximumAllowedMassKg": null,
+      "baseRemainingKg": 2042463720.0717409,
+      "mountedRemainingKg": 2042463720.0717409,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "hullShellMassKg": 71325408.86838885,
+    "armorMassKg": 670631806.8470433,
+    "structuralMassEstimateKg": 496205100,
+    "coreEquipmentMassEstimateKg": 6551464.212826867,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 275669500,
+    "totalEstimatedDryMassKg": 1520383279.9282591,
+    "targetMassKg": 3562847000,
+    "remainingMassKg": 2042463720.0717409,
+    "armorBudgetRemainingKg": 143167318.5438851,
+    "manufacturingCostIndexKg": 1680841745.301292,
+    "estimatedComponents": [
+      "Structural frame estimate: 18% of historical volume-based target; no new frame generated",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 2756695000
+  },
+  "diagnostics": {
+    "totalMs": 8911.865859,
+    "stages": {
+      "Production/hullMs": {
+        "ms": 16.215785000000096,
+        "calls": 1
+      },
+      "Production/armorMs": {
+        "ms": 50.50155799999993,
+        "calls": 1
+      },
+      "Production/coverageMs": {
+        "ms": 52.80556300000001,
+        "calls": 1
+      },
+      "Production/functionalMs": {
+        "ms": 212.916963,
+        "calls": 1
+      },
+      "Production/installationMs": {
+        "ms": 844.5246179999999,
+        "calls": 1
+      },
+      "Production/validationMs": {
+        "ms": 141.19147500000008,
+        "calls": 1
+      },
+      "Production/totalMs": {
+        "ms": 1318.155962,
+        "calls": 1
+      },
+      "Base generation": {
+        "ms": 4219.026594999999,
+        "calls": 1
+      },
+      "Cache key": {
+        "ms": 3.8469349999995757,
+        "calls": 1
+      },
+      "Source geometry": {
+        "ms": 61.16079400000035,
+        "calls": 1
+      },
+      "Design policy": {
+        "ms": 3.511008999999831,
+        "calls": 2
+      },
+      "Outer area union": {
+        "ms": 290.9246400000111,
+        "calls": 3054
+      },
+      "Layer integration": {
+        "ms": 223.4155540000438,
+        "calls": 13777
+      },
+      "ARMOR physical construction": {
+        "ms": 3198.812989999995,
+        "calls": 55
+      },
+      "HULL physical construction": {
+        "ms": 261.2370520000004,
+        "calls": 1
+      },
+      "Mass ledger": {
+        "ms": 2.3137710000009974,
+        "calls": 1
+      },
+      "Cache store": {
+        "ms": 191.34246100000018,
+        "calls": 1
+      },
+      "Physical build": {
+        "ms": 4015.6452990000007,
+        "calls": 1
+      },
+      "Physical validation": {
+        "ms": 677.1014770000002,
+        "calls": 1
+      }
+    },
+    "cache": {
+      "hits": 0,
+      "misses": 1
+    }
+  },
+  "issues": [],
+  "productionTimings": [
+    {
+      "hullMs": 16.215785000000096,
+      "armorMs": 50.50155799999993,
+      "coverageMs": 52.80556300000001,
+      "functionalMs": 212.916963,
+      "installationMs": 844.5246179999999,
+      "validationMs": 141.19147500000008,
+      "totalMs": 1318.155962
+    },
+    {
+      "hullMs": 5.76722300000074,
+      "armorMs": 31.714249000000564,
+      "coverageMs": 22.681180999999924,
+      "functionalMs": 185.38682999999946,
+      "installationMs": 670.7272040000007,
+      "validationMs": 129.20736099999885,
+      "totalMs": 1045.4840480000003
+    }
+  ],
+  "stages": [
+    {
+      "label": "generation",
+      "ms": 8912.520402,
+      "functions": [
+        {
+          "name": "generation/generate.ts:generateBlueprint",
+          "calls": 4,
+          "ms": 17366.024883
+        },
+        {
+          "name": "physical/diagnostics.ts:timedPhysical",
+          "calls": 16839,
+          "ms": 9696.032204000081
+        },
+        {
+          "name": "physical/diagnostics.ts:capturePhysicalGeneration",
+          "calls": 1,
+          "ms": 8911.890585
+        },
+        {
+          "name": "physical/build.ts:addPhysicalDesign",
+          "calls": 1,
+          "ms": 4015.078544
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:indexedFaces",
+          "calls": 32017,
+          "ms": 2659.6546669999657
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:meets",
+          "calls": 10407619,
+          "ms": 1758.415095999769
+        },
+        {
+          "name": "physical/convex.ts:subtractCell",
+          "calls": 186012,
+          "ms": 1651.6242890000867
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:visit",
+          "calls": 1290870,
+          "ms": 1627.7267030003468
+        },
+        {
+          "name": "physical/convex.ts:clipCell",
+          "calls": 402894,
+          "ms": 1374.2226590000755
+        },
+        {
+          "name": "generation/production/build.ts:buildProduction",
+          "calls": 1,
+          "ms": 1302.0833670000002
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:build",
+          "calls": 13936,
+          "ms": 1046.1195730001066
+        },
+        {
+          "name": "physical/validate.ts:validatePhysicalDesign",
+          "calls": 3,
+          "ms": 677.0267769999983
+        },
+        {
+          "name": "generation/weapons/collision.ts:solidsIntrude",
+          "calls": 117252,
+          "ms": 606.290905000016
+        },
+        {
+          "name": "physical/convex.ts:orientCell",
+          "calls": 198322,
+          "ms": 553.8275830000957
+        },
+        {
+          "name": "generation/weapons/collision.ts:solidContains",
+          "calls": 230832,
+          "ms": 446.6599050000615
+        },
+        {
+          "name": "physical/convex.ts:faceNormal",
+          "calls": 3244123,
+          "ms": 430.0074660006949
+        },
+        {
+          "name": "generation/weapons/collision.ts:candidateIssues",
+          "calls": 470,
+          "ms": 428.58678
+        },
+        {
+          "name": "physical/integration.ts:integratedLayerVolumes",
+          "calls": 27554,
+          "ms": 420.8403539999608
+        },
+        {
+          "name": "physical/convex.ts:outerFacetArea",
+          "calls": 3054,
+          "ms": 288.92444500000875
+        },
+        {
+          "name": "physical/convex.ts:subtractPolygon",
+          "calls": 136838,
+          "ms": 274.10969700005626
+        },
+        {
+          "name": "physical/convex.ts:mergeConvexCells",
+          "calls": 3054,
+          "ms": 265.39289600000484
+        },
+        {
+          "name": "physical/integration.ts:tetraBelow",
+          "calls": 1042056,
+          "ms": 243.89061299933928
+        },
+        {
+          "name": "generation/weapons/collision.ts:geometrySamples",
+          "calls": 4408,
+          "ms": 199.84656100000007
+        },
+        {
+          "name": "physical/convex.ts:canonicalSolid",
+          "calls": 13777,
+          "ms": 185.8963140000269
+        },
+        {
+          "name": "physical/geometry.ts:facetSupportPlanes",
+          "calls": 3608,
+          "ms": 176.96983200005798
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:build",
+          "calls": 5271,
+          "ms": 154.2858029999661
+        },
+        {
+          "name": "physical/convex.ts:polygonLayer",
+          "calls": 31118,
+          "ms": 129.07011399992734
+        },
+        {
+          "name": "generation/weapons/collision.ts:rayBlocked",
+          "calls": 65329,
+          "ms": 76.3335940000012
+        },
+        {
+          "name": "physical/convex.ts:unique",
+          "calls": 100410,
+          "ms": 69.47595499987074
+        },
+        {
+          "name": "physical/geometry.ts:physicalSources",
+          "calls": 2,
+          "ms": 62.46379600000091
+        },
+        {
+          "name": "physical/geometry.ts:sourceGeometry",
+          "calls": 56,
+          "ms": 58.797639999996136
+        },
+        {
+          "name": "physical/integration.ts:tetraVolume",
+          "calls": 1175436,
+          "ms": 55.74407999981577
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:boundsIndex",
+          "calls": 217,
+          "ms": 47.90344699999696
+        },
+        {
+          "name": "physical/convex.ts:triangleLayer",
+          "calls": 13777,
+          "ms": 43.10637499987388
+        },
+        {
+          "name": "physical/geometry.ts:kernel",
+          "calls": 306,
+          "ms": 33.466774999990776
+        },
+        {
+          "name": "physical/convex.ts:tetra",
+          "calls": 9194,
+          "ms": 19.414679999988948
+        },
+        {
+          "name": "physical/geometry.ts:exposedFacetPolygons",
+          "calls": 1,
+          "ms": 16.40056199999981
+        },
+        {
+          "name": "physical/geometry.ts:sourceExclusions",
+          "calls": 1,
+          "ms": 14.864555999999538
+        },
+        {
+          "name": "generation/weapons/collision.ts:envelopesOverlap",
+          "calls": 1979,
+          "ms": 13.496942999995895
+        },
+        {
+          "name": "physical/policy.ts:coreEquipmentMass",
+          "calls": 4,
+          "ms": 5.79704799999854
+        },
+        {
+          "name": "physical/policy.ts:finishPhysicalMass",
+          "calls": 2,
+          "ms": 3.7807540000012523
+        },
+        {
+          "name": "physical/policy.ts:createDesignPolicy",
+          "calls": 2,
+          "ms": 3.133481999999276
+        },
+        {
+          "name": "physical/diagnostics.ts:recordPhysicalStage",
+          "calls": 16903,
+          "ms": 3.0980399999416477
+        },
+        {
+          "name": "generation/macro/plan.ts:createMacroPlan",
+          "calls": 1,
+          "ms": 1.858795999999984
+        },
+        {
+          "name": "physical/geometry.ts:oriented",
+          "calls": 306,
+          "ms": 1.5057540000007066
+        },
+        {
+          "name": "generation/architecture/layout.ts:architectureLayout",
+          "calls": 1,
+          "ms": 1.193316999999979
+        },
+        {
+          "name": "physical/materials.ts:materialLayers",
+          "calls": 56,
+          "ms": 0.4469459999991159
+        },
+        {
+          "name": "generation/weapons/collision.ts:provideGeometrySamples",
+          "calls": 821,
+          "ms": 0.3947560000001431
+        },
+        {
+          "name": "generation/weapons/collision.ts:collisionScene",
+          "calls": 2,
+          "ms": 0.1629200000000992
+        },
+        {
+          "name": "generation/macro/plan.ts:macroWeights",
+          "calls": 1,
+          "ms": 0.0434139999999843
+        },
+        {
+          "name": "physical/policy.ts:mountedMassComponents",
+          "calls": 2,
+          "ms": 0.04019899999912013
+        },
+        {
+          "name": "generation/weapons/collision.ts:resetCollisionCache",
+          "calls": 1,
+          "ms": 0.004167000000052212
+        }
+      ]
+    },
+    {
+      "label": "validation",
+      "ms": 142.75391300000047,
+      "functions": [
+        {
+          "name": "physical/validate.ts:validatePhysicalDesign",
+          "calls": 1,
+          "ms": 142.7280950000004
+        }
+      ]
+    },
+    {
+      "label": "serialization",
+      "ms": 204.92148199999974,
+      "functions": []
+    },
+    {
+      "label": "physicalSerialization",
+      "ms": 142.25848299999961,
+      "functions": []
+    },
+    {
+      "label": "cache-hit",
+      "ms": 4189.970035999999,
+      "functions": [
+        {
+          "name": "generation/generate.ts:generateBlueprint",
+          "calls": 4,
+          "ms": 11822.488263
+        },
+        {
+          "name": "physical/diagnostics.ts:timedPhysical",
+          "calls": 4,
+          "ms": 4418.798113999999
+        },
+        {
+          "name": "physical/diagnostics.ts:capturePhysicalGeneration",
+          "calls": 1,
+          "ms": 4189.859753000001
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:indexedFaces",
+          "calls": 32017,
+          "ms": 2549.0899640000157
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:meets",
+          "calls": 10407619,
+          "ms": 1685.44162899844
+        },
+        {
+          "name": "generation/weapons/surface-index.ts:build",
+          "calls": 13936,
+          "ms": 1065.0413219999643
+        },
+        {
+          "name": "generation/production/build.ts:buildProduction",
+          "calls": 1,
+          "ms": 1039.8081989999991
+        },
+        {
+          "name": "generation/weapons/collision.ts:solidsIntrude",
+          "calls": 117252,
+          "ms": 532.8232510004254
+        },
+        {
+          "name": "generation/weapons/collision.ts:solidContains",
+          "calls": 230832,
+          "ms": 379.33517199977905
+        },
+        {
+          "name": "generation/weapons/collision.ts:candidateIssues",
+          "calls": 470,
+          "ms": 354.1300610000162
+        },
+        {
+          "name": "physical/build.ts:addPhysicalDesign",
+          "calls": 1,
+          "ms": 236.196285
+        },
+        {
+          "name": "generation/weapons/collision.ts:geometrySamples",
+          "calls": 4315,
+          "ms": 152.20944400004555
+        },
+        {
+          "name": "physical/validate.ts:validatePhysicalDesign",
+          "calls": 3,
+          "ms": 139.97748800000045
+        },
+        {
+          "name": "generation/weapons/collision.ts:rayBlocked",
+          "calls": 65329,
+          "ms": 63.247507999758454
+        },
+        {
+          "name": "generation/weapons/collision.ts:envelopesOverlap",
+          "calls": 1979,
+          "ms": 15.741633999943588
+        },
+        {
+          "name": "generation/macro/plan.ts:createMacroPlan",
+          "calls": 1,
+          "ms": 0.41235799999958545
+        },
+        {
+          "name": "generation/weapons/collision.ts:provideGeometrySamples",
+          "calls": 821,
+          "ms": 0.4119050000590505
+        },
+        {
+          "name": "generation/architecture/layout.ts:architectureLayout",
+          "calls": 1,
+          "ms": 0.24714500000118278
+        },
+        {
+          "name": "physical/diagnostics.ts:recordPhysicalStage",
+          "calls": 12,
+          "ms": 0.1330259999995178
+        },
+        {
+          "name": "generation/weapons/collision.ts:collisionScene",
+          "calls": 2,
+          "ms": 0.048801999999341206
+        },
+        {
+          "name": "generation/macro/plan.ts:macroWeights",
+          "calls": 1,
+          "ms": 0.010825999999724445
+        },
+        {
+          "name": "generation/weapons/collision.ts:resetCollisionCache",
+          "calls": 1,
+          "ms": 0.005618999999569496
+        }
+      ]
+    },
+    {
+      "label": "first-ray-query",
+      "ms": 587.8711770000009,
+      "functions": [
+        {
+          "name": "physical/probe.ts:armorRayProbe",
+          "calls": 1,
+          "ms": 587.7141359999987
+        },
+        {
+          "name": "physical/probe.ts:preparePhysicalQueries",
+          "calls": 1,
+          "ms": 586.00137
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:build",
+          "calls": 4095,
+          "ms": 505.5215909999697
+        },
+        {
+          "name": "physical/probe.ts:queryKey",
+          "calls": 1,
+          "ms": 142.70812500000102
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:boundsIndex",
+          "calls": 1,
+          "ms": 113.69945499999994
+        },
+        {
+          "name": "physical/convex.ts:faceNormal",
+          "calls": 268468,
+          "ms": 104.21522100031325
+        },
+        {
+          "name": "physical/convex.ts:orientCell",
+          "calls": 13777,
+          "ms": 54.24961100005021
+        },
+        {
+          "name": "generation/hardpoint-system/geometry.ts:visit",
+          "calls": 823,
+          "ms": 2.6512839999959397
+        },
+        {
+          "name": "physical/probe.ts:probePrepared",
+          "calls": 1,
+          "ms": 1.1516179999998712
+        },
+        {
+          "name": "physical/convex.ts:rayPlanes",
+          "calls": 34,
+          "ms": 0.10837200000241864
+        },
+        {
+          "name": "physical/probe.ts:invalidInput",
+          "calls": 2,
+          "ms": 0.018536999998104875
+        },
+        {
+          "name": "physical/unresolved.ts:prepareUnresolvedSpines",
+          "calls": 1,
+          "ms": 0.016573999999309308
+        },
+        {
+          "name": "physical/unresolved.ts:unresolvedCrossings",
+          "calls": 1,
+          "ms": 0.0019029999984923052
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "generation/generate.ts:generateBlueprint",
+      "calls": 8,
+      "ms": 29188.513145999998
+    },
+    {
+      "name": "physical/diagnostics.ts:timedPhysical",
+      "calls": 16843,
+      "ms": 14114.83031800008
+    },
+    {
+      "name": "physical/diagnostics.ts:capturePhysicalGeneration",
+      "calls": 2,
+      "ms": 13101.750338
+    },
+    {
+      "name": "generation/weapons/surface-index.ts:indexedFaces",
+      "calls": 64034,
+      "ms": 5208.744630999981
+    },
+    {
+      "name": "physical/build.ts:addPhysicalDesign",
+      "calls": 2,
+      "ms": 4251.274829
+    },
+    {
+      "name": "generation/weapons/surface-index.ts:meets",
+      "calls": 20815238,
+      "ms": 3443.856724998209
+    },
+    {
+      "name": "generation/production/build.ts:buildProduction",
+      "calls": 2,
+      "ms": 2341.8915659999993
+    },
+    {
+      "name": "generation/weapons/surface-index.ts:build",
+      "calls": 27872,
+      "ms": 2111.160895000071
+    },
+    {
+      "name": "physical/convex.ts:subtractCell",
+      "calls": 186012,
+      "ms": 1651.6242890000867
+    },
+    {
+      "name": "generation/hardpoint-system/geometry.ts:visit",
+      "calls": 1291693,
+      "ms": 1630.3779870003427
+    },
+    {
+      "name": "physical/convex.ts:clipCell",
+      "calls": 402894,
+      "ms": 1374.2226590000755
+    },
+    {
+      "name": "generation/weapons/collision.ts:solidsIntrude",
+      "calls": 234504,
+      "ms": 1139.1141560004414
+    },
+    {
+      "name": "physical/validate.ts:validatePhysicalDesign",
+      "calls": 7,
+      "ms": 959.7323599999992
+    },
+    {
+      "name": "generation/weapons/collision.ts:solidContains",
+      "calls": 461664,
+      "ms": 825.9950769998405
+    },
+    {
+      "name": "generation/weapons/collision.ts:candidateIssues",
+      "calls": 940,
+      "ms": 782.7168410000162
+    },
+    {
+      "name": "generation/hardpoint-system/geometry.ts:build",
+      "calls": 9366,
+      "ms": 659.8073939999358
+    },
+    {
+      "name": "physical/convex.ts:orientCell",
+      "calls": 212099,
+      "ms": 608.0771940001459
+    },
+    {
+      "name": "physical/probe.ts:armorRayProbe",
+      "calls": 1,
+      "ms": 587.7141359999987
+    },
+    {
+      "name": "physical/probe.ts:preparePhysicalQueries",
+      "calls": 1,
+      "ms": 586.00137
+    },
+    {
+      "name": "physical/convex.ts:faceNormal",
+      "calls": 3512591,
+      "ms": 534.2226870010081
+    },
+    {
+      "name": "physical/integration.ts:integratedLayerVolumes",
+      "calls": 27554,
+      "ms": 420.8403539999608
+    },
+    {
+      "name": "generation/weapons/collision.ts:geometrySamples",
+      "calls": 8723,
+      "ms": 352.0560050000456
+    },
+    {
+      "name": "physical/convex.ts:outerFacetArea",
+      "calls": 3054,
+      "ms": 288.92444500000875
+    },
+    {
+      "name": "physical/convex.ts:subtractPolygon",
+      "calls": 136838,
+      "ms": 274.10969700005626
+    },
+    {
+      "name": "physical/convex.ts:mergeConvexCells",
+      "calls": 3054,
+      "ms": 265.39289600000484
+    },
+    {
+      "name": "physical/integration.ts:tetraBelow",
+      "calls": 1042056,
+      "ms": 243.89061299933928
+    },
+    {
+      "name": "physical/convex.ts:canonicalSolid",
+      "calls": 13777,
+      "ms": 185.8963140000269
+    },
+    {
+      "name": "physical/geometry.ts:facetSupportPlanes",
+      "calls": 3608,
+      "ms": 176.96983200005798
+    },
+    {
+      "name": "generation/hardpoint-system/geometry.ts:boundsIndex",
+      "calls": 218,
+      "ms": 161.6029019999969
+    },
+    {
+      "name": "physical/probe.ts:queryKey",
+      "calls": 1,
+      "ms": 142.70812500000102
+    },
+    {
+      "name": "generation/weapons/collision.ts:rayBlocked",
+      "calls": 130658,
+      "ms": 139.58110199975965
+    },
+    {
+      "name": "physical/convex.ts:polygonLayer",
+      "calls": 31118,
+      "ms": 129.07011399992734
+    },
+    {
+      "name": "physical/convex.ts:unique",
+      "calls": 100410,
+      "ms": 69.47595499987074
+    },
+    {
+      "name": "physical/geometry.ts:physicalSources",
+      "calls": 2,
+      "ms": 62.46379600000091
+    },
+    {
+      "name": "physical/geometry.ts:sourceGeometry",
+      "calls": 56,
+      "ms": 58.797639999996136
+    },
+    {
+      "name": "physical/integration.ts:tetraVolume",
+      "calls": 1175436,
+      "ms": 55.74407999981577
+    },
+    {
+      "name": "physical/convex.ts:triangleLayer",
+      "calls": 13777,
+      "ms": 43.10637499987388
+    },
+    {
+      "name": "physical/geometry.ts:kernel",
+      "calls": 306,
+      "ms": 33.466774999990776
+    },
+    {
+      "name": "generation/weapons/collision.ts:envelopesOverlap",
+      "calls": 3958,
+      "ms": 29.238576999939482
+    },
+    {
+      "name": "physical/convex.ts:tetra",
+      "calls": 9194,
+      "ms": 19.414679999988948
+    },
+    {
+      "name": "physical/geometry.ts:exposedFacetPolygons",
+      "calls": 1,
+      "ms": 16.40056199999981
+    },
+    {
+      "name": "physical/geometry.ts:sourceExclusions",
+      "calls": 1,
+      "ms": 14.864555999999538
+    },
+    {
+      "name": "physical/policy.ts:coreEquipmentMass",
+      "calls": 4,
+      "ms": 5.79704799999854
+    },
+    {
+      "name": "physical/policy.ts:finishPhysicalMass",
+      "calls": 2,
+      "ms": 3.7807540000012523
+    },
+    {
+      "name": "physical/diagnostics.ts:recordPhysicalStage",
+      "calls": 16915,
+      "ms": 3.2310659999411655
+    },
+    {
+      "name": "physical/policy.ts:createDesignPolicy",
+      "calls": 2,
+      "ms": 3.133481999999276
+    },
+    {
+      "name": "generation/macro/plan.ts:createMacroPlan",
+      "calls": 2,
+      "ms": 2.2711539999995694
+    },
+    {
+      "name": "physical/geometry.ts:oriented",
+      "calls": 306,
+      "ms": 1.5057540000007066
+    },
+    {
+      "name": "generation/architecture/layout.ts:architectureLayout",
+      "calls": 2,
+      "ms": 1.4404620000011619
+    },
+    {
+      "name": "physical/probe.ts:probePrepared",
+      "calls": 1,
+      "ms": 1.1516179999998712
+    },
+    {
+      "name": "generation/weapons/collision.ts:provideGeometrySamples",
+      "calls": 1642,
+      "ms": 0.8066610000591936
+    },
+    {
+      "name": "physical/materials.ts:materialLayers",
+      "calls": 56,
+      "ms": 0.4469459999991159
+    },
+    {
+      "name": "generation/weapons/collision.ts:collisionScene",
+      "calls": 4,
+      "ms": 0.2117219999994404
+    },
+    {
+      "name": "physical/convex.ts:rayPlanes",
+      "calls": 34,
+      "ms": 0.10837200000241864
+    },
+    {
+      "name": "physical/materials.ts:material",
+      "calls": 8,
+      "ms": 0.06927299999995284
+    },
+    {
+      "name": "generation/macro/plan.ts:macroWeights",
+      "calls": 2,
+      "ms": 0.05423999999970874
+    },
+    {
+      "name": "physical/policy.ts:mountedMassComponents",
+      "calls": 2,
+      "ms": 0.04019899999912013
+    },
+    {
+      "name": "physical/probe.ts:invalidInput",
+      "calls": 2,
+      "ms": 0.018536999998104875
+    },
+    {
+      "name": "physical/unresolved.ts:prepareUnresolvedSpines",
+      "calls": 1,
+      "ms": 0.016573999999309308
+    },
+    {
+      "name": "generation/weapons/collision.ts:resetCollisionCache",
+      "calls": 2,
+      "ms": 0.009785999999621708
+    },
+    {
+      "name": "physical/unresolved.ts:unresolvedCrossings",
+      "calls": 1,
+      "ms": 0.0019029999984923052
+    }
+  ]
+}

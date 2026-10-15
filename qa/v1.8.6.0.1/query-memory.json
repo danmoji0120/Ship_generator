@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "iteration": 0,
+      "startHeap": 5342520,
+      "blueprintHeap": 95086440,
+      "preparationIncludingKeyMs": 1122.5885520000002,
+      "preparedRetainedHeap": 210918096,
+      "retainedQueryDeltaBytes": 115831656,
+      "preparedHeap": 210921760,
+      "releasedHeap": 72284056,
+      "planes": 254944,
+      "estimatedBytes": 10163328
+    },
+    {
+      "iteration": 1,
+      "startHeap": 5803752,
+      "blueprintHeap": 95542232,
+      "preparationIncludingKeyMs": 936.7583360000003,
+      "preparedRetainedHeap": 210999848,
+      "retainedQueryDeltaBytes": 115457616,
+      "preparedHeap": 211000088,
+      "releasedHeap": 5808408,
+      "planes": 254944,
+      "estimatedBytes": 10163328
+    },
+    {
+      "iteration": 2,
+      "startHeap": 5764360,
+      "blueprintHeap": 95520504,
+      "preparationIncludingKeyMs": 999.4373640000003,
+      "preparedRetainedHeap": 211001992,
+      "retainedQueryDeltaBytes": 115481488,
+      "preparedHeap": 211005336,
+      "releasedHeap": 5814960,
+      "planes": 254944,
+      "estimatedBytes": 10163328
+    },
+    {
+      "iteration": 3,
+      "startHeap": 5793728,
+      "blueprintHeap": 95527832,
+      "preparationIncludingKeyMs": 993.7701399999996,
+      "preparedRetainedHeap": 211008016,
+      "retainedQueryDeltaBytes": 115480184,
+      "preparedHeap": 211008272,
+      "releasedHeap": 5821312,
+      "planes": 254944,
+      "estimatedBytes": 10163328
+    },
+    {
+      "iteration": 4,
+      "startHeap": 5801432,
+      "blueprintHeap": 95543832,
+      "preparationIncludingKeyMs": 1050.0884919999999,
+      "preparedRetainedHeap": 211014400,
+      "retainedQueryDeltaBytes": 115470568,
+      "preparedHeap": 211014656,
+      "releasedHeap": 5835072,
+      "planes": 254944,
+      "estimatedBytes": 10163328
+    }
+  ],
+  "finalHeap": 5832056,
+  "note": "Weak-key query cache, 5 allocation/release cycles, explicit GC. Heap plateau is evidence only; not a long-duration leak proof. Plane estimate excludes JS and BVH overhead."
+}

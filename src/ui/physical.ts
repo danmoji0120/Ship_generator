@@ -1,7 +1,8 @@
+import {physicalDiagnostics,setPhysicalProfilingEnabled} from '../physical/diagnostics';
 import type { AnyShipBlueprint, ShipBlueprint, Vec3 } from "../blueprint/types";
 import { MATERIALS } from "../physical/materials";
 import { migratePhysicalDesign } from "../physical/build";
-import { armorRayProbe } from "../physical/probe";
+import { armorRayProbe, preparePhysicalQueries } from "../physical/probe";
 import type { ShipViewer } from "../rendering/viewer";
 const el = (id: string) => document.getElementById(id)!;
 export function showPhysicalInspector(b: AnyShipBlueprint) {
@@ -16,6 +17,8 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
   el("physical-selection").replaceChildren();
   el("physical-selection-info").textContent = "";
   el("physical-probe-result").textContent = "";
+  const perf=b.schemaVersion===2?physicalDiagnostics(b):undefined;
+  el("physical-performance").textContent=perf?`Generation ${perf.totalMs.toFixed(1)}ms · cache ${perf.cache.hits} hit / ${perf.cache.misses} miss · ${Object.entries(perf.stages).map(([name,v])=>`${name} ${v.ms.toFixed(1)}ms (${v.calls})`).join(' · ')} (nested timings overlap)`:'No runtime profile retained; enable before regeneration. Not serialized.';
   if (!d) return;
   const line = (text: string) => {
       const p = document.createElement("p");
@@ -35,6 +38,9 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
   line(
     `Total estimated dry mass ${t(m.totalEstimatedDryMassKg)} / target ${t(m.targetMassKg)} · remaining ${t(m.remainingMassKg)} · cost ${m.manufacturingCostIndexKg.toLocaleString(undefined, { maximumFractionDigits: 0 })} index·kg (not currency)`,
   );
+  if(m.ledger){const l=m.ledger;line(`Base ${t(l.baseEstimatedDryMassKg)} · mounted dry ${t(l.mountedEstimatedDryMassKg)} · base budget ${l.baseBudgetViolation?'EXCEEDED':'WITHIN'} · mounted ${l.mountedLoadoutOverTarget?'OVER TARGET':'WITHIN TARGET'} · maximum allowed mass unspecified; consumables not included`);for(const e of l.entries)line(`${e.component}: ${t(e.massKg)} [${e.source}] — ${e.basis}`);}
+  if(b.schemaVersion===2&&b.structuralVolumes.some(v=>v.type==='SPINE'))line(`Unspecified SPINE structures: ${b.structuralVolumes.filter(v=>v.type==='SPINE').length}. Visible finite boundaries are traced, but material/shell thickness are unresolved; no invented armor mass.`);
+  line(`Physical cells ${d.surfaces.reduce((n,s)=>n+s.pieces.length,0)} · material layers ${d.surfaces.reduce((n,s)=>n+s.layerStack.length,0)} · geometry warnings ${d.warnings.length}`);
   line(
     `Hull ${MATERIALS[policy.hullMaterialPreference].displayName} / nominal ${policy.hullThicknessMm.toFixed(1)}mm · Armor ${MATERIALS[policy.armorMaterialPreference].displayName} · Critical ${MATERIALS[policy.criticalArmorMaterialPreference].displayName}`,
   );
@@ -69,7 +75,7 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
 }
 export function showProbeResult(r: ReturnType<typeof armorRayProbe>) {
   el("physical-probe-result").textContent =
-    `${r.valid ? "VALID" : "INVALID"} · ${r.hits.length} material intervals · exact for stored cells: ${r.exactForStoredCells}\n${r.hits.map((h) => `${h.surfaceId} / ${h.constituentMaterialId}\n${h.entryDistanceM.toFixed(4)}→${h.exitDistanceM.toFixed(4)} m · path ${(h.pathLengthM * 1000).toFixed(3)} mm · normal measured ${h.measuredNormalThicknessMm.toFixed(3)} mm / planned ${h.localFacetLayerThicknessMm.toFixed(3)} mm · incidence ${h.incidenceDegrees?.toFixed(2) ?? "inside"}°\nEntry ${[h.entryPoint.x, h.entryPoint.y, h.entryPoint.z].map((n) => n.toFixed(3)).join(", ")} · Exit ${[h.exitPoint.x, h.exitPoint.y, h.exitPoint.z].map((n) => n.toFixed(3)).join(", ")}`).join("\n")}\n${r.warnings.join("\n")}`;
+    `${r.valid ? "VALID" : "INVALID"} · ${r.complete?"COMPLETE":"PARTIAL / unresolved geometry"} · ${r.hits.length} material intervals · exact for stored cells: ${r.exactForStoredCells}\n${r.hits.map((h) => `${h.surfaceId} / ${h.constituentMaterialId}\n${h.entryDistanceM.toFixed(4)}→${h.exitDistanceM.toFixed(4)} m · path ${(h.pathLengthM * 1000).toFixed(3)} mm · normal measured ${h.measuredNormalThicknessMm.toFixed(3)} mm / planned ${h.localFacetLayerThicknessMm.toFixed(3)} mm · incidence ${h.incidenceDegrees?.toFixed(2) ?? "inside"}°\nEntry ${[h.entryPoint.x, h.entryPoint.y, h.entryPoint.z].map((n) => n.toFixed(3)).join(", ")} · Exit ${[h.exitPoint.x, h.exitPoint.y, h.exitPoint.z].map((n) => n.toFixed(3)).join(", ")}`).join("\n")}\n${r.unresolvedCrossings.map(c=>`${c.structureId} @ ${c.distanceM.toFixed(4)}m: ${c.reason}`).join("\n")}\n${r.warnings.join("\n")}`;
 }
 export function setupPhysicalInspector(
   viewer: ShipViewer | undefined,
@@ -77,6 +83,8 @@ export function setupPhysicalInspector(
   changed: (b: ShipBlueprint) => void,
 ) {
   if (viewer) viewer.onArmorProbe = showProbeResult;
+  el("physical-profile").onchange=()=>setPhysicalProfilingEnabled((el("physical-profile") as HTMLInputElement).checked);
+  el("prepare-physical-queries").onclick=()=>{try{const b=current();if(b.schemaVersion!==2)throw Error('Schema 2 required');const t=performance.now(),q=preparePhysicalQueries(b);el("physical-probe-result").textContent=`Query preparation/check ${(performance.now()-t).toFixed(1)}ms · initial build ${q.preparationMs.toFixed(1)}ms · ${q.pieceCount} cells / ${q.planeCount} planes · plane storage estimate ${q.estimatedBytes} bytes (excludes JS/index overhead)`;}catch(e){el("physical-probe-result").textContent=String(e);}};
   el("migrate-physical").onclick = () => {
     try {
       const b = current();

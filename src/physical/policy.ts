@@ -27,21 +27,13 @@ export function coreEquipmentMass(b: ShipBlueprint) {
     }
   return volume * 160;
 }
-export function playerEquipmentMass(b: ShipBlueprint) {
-  let mass = 0;
-  for (const entry of b.freeMountPlan?.entries ?? []) {
-    const fit = savedFit(entry);
-    mass +=
-      sum(
-        fit.parts
-          .filter((p) => p.id !== entry.id + "/platform")
-          .map((p) => solidVolume(p.solid)),
-      ) *
-        160 +
-      solidVolume(platformPart(entry.id, entry.platform).solid) * 2800;
-  }
-  return mass;
+/** Separate real installed equipment and its owned support; neither is a slot reservation. */
+export function mountedMassComponents(b:ShipBlueprint){
+ let equipmentKg=0,platformKg=0;
+ for(const entry of b.freeMountPlan?.entries??[]){const fit=savedFit(entry);equipmentKg+=sum(fit.parts.filter(p=>p.id!==entry.id+'/platform').map(p=>solidVolume(p.solid)))*160;platformKg+=solidVolume(platformPart(entry.id,entry.platform).solid)*2800;}
+ return {equipmentKg,platformKg};
 }
+export function playerEquipmentMass(b:ShipBlueprint){const p=mountedMassComponents(b);return p.equipmentKg+p.platformKg;}
 export function createDesignPolicy(
   b: ShipBlueprint,
   sources: PhysicalSource[],
@@ -202,7 +194,8 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
   const structuralMassEstimateKg = legacy * 0.18,
     coreEquipmentMassEstimateKg = coreEquipmentMass(b),
     unresolvedMassEstimateKg = legacy * 0.1,
-    playerMountedEquipmentMassEstimateKg = playerEquipmentMass(b);
+    mounted = mountedMassComponents(b),
+    playerMountedEquipmentMassEstimateKg = mounted.equipmentKg+mounted.platformKg;
   const totalEstimatedDryMassKg =
     hullShellMassKg +
     armorMassKg +
@@ -210,7 +203,18 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     coreEquipmentMassEstimateKg +
     unresolvedMassEstimateKg +
     playerMountedEquipmentMassEstimateKg;
+  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
+  const ledger:NonNullable<PhysicalMass['ledger']>={version:1,entries:[
+   {component:'HULL_SHELL',massKg:hullShellMassKg,source:'GEOMETRY_DERIVED',basis:'Finite shell material volumes × constituent kg/m³'},
+   {component:'ARMOR',massKg:armorMassKg,source:'GEOMETRY_DERIVED',basis:'Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again'},
+   {component:'STRUCTURE',massKg:structuralMassEstimateKg,source:'LEGACY_ESTIMATE',basis:'Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry'},
+   {component:'CORE_EQUIPMENT',massKg:coreEquipmentMassEstimateKg,source:'ESTIMATED',basis:'Unique existing assembly-part solid volumes × 160kg/m³ representation density'},
+   {component:'MOUNTED_EQUIPMENT',massKg:mounted.equipmentKg,source:'ESTIMATED',basis:'Actually installed saved equipment geometry × 160kg/m³, owned platform excluded'},
+   {component:'PLATFORM',massKg:mounted.platformKg,source:'ESTIMATED',basis:'Owned platform geometry × 2800kg/m³, counted once'},
+   {component:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,source:'LEGACY_ESTIMATE',basis:'Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated'}
+  ],baseEstimatedDryMassKg,mountedEstimatedDryMassKg:totalEstimatedDryMassKg,targetSemantics:'EXISTING_BASE_DESIGN_LIMIT',maximumAllowedMassKg:null,baseRemainingKg:policy.targetMassBudgetKg-baseEstimatedDryMassKg,mountedRemainingKg:policy.targetMassBudgetKg-totalEstimatedDryMassKg,baseBudgetViolation:baseEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,mountedLoadoutOverTarget:totalEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,operationalConsumables:'NOT_INCLUDED'};
   return {
+    ledger,
     hullShellMassKg,
     armorMassKg,
     structuralMassEstimateKg,

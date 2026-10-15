@@ -47,7 +47,7 @@ export function reservationBounds(z: import('../../blueprint/types').EquipmentZo
   return {min,max};
 }
 export function overlappingBounds(a: import('../../blueprint/types').BoundsData,b: import('../../blueprint/types').BoundsData) {
-  return (['x','y','z'] as const).every(k=>a.max[k]>b.min[k]&&b.max[k]>a.min[k]);
+  return a.max.x>b.min.x&&b.max.x>a.min.x&&a.max.y>b.min.y&&b.max.y>a.min.y&&a.max.z>b.min.z&&b.max.z>a.min.z;
 }
 
 /** Reciprocal probes catch a narrow equipment corridor wholly contained by a broad armor prism. */

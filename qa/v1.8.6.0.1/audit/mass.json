@@ -1,0 +1,264 @@
+[
+  {
+    "priority": "survivability",
+    "geometryAndPolicySHA256": "de38af5a94090acedfb80b64998ee893c14f548f01a3b76dba0ed714109efe01",
+    "pieces": 12387,
+    "duplicateExactCells": 0,
+    "beforeArmorKg": 835496813.57185,
+    "afterArmorKg": 835496813.5774572,
+    "armorDeltaKg": 0.005607247352600098,
+    "beforeHullKg": 65985600.00877658,
+    "afterHullKg": 65985600.00876424,
+    "hullDeltaKg": -0.000012345612049102783,
+    "independentLayerSumKg": 901482413.5862217,
+    "scalarMassKg": 901482413.5862215,
+    "thicknessMm": [
+      169.46062538034712,
+      511.91230583646524
+    ],
+    "materials": [
+      "TUNGSTEN_COMPOSITE",
+      "CERAMIC_COMPOSITE"
+    ],
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 65985600.00876424,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 835496813.5774572,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 641312460,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 5630204.293057634,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 356284700,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 1904709777.8792791,
+      "mountedEstimatedDryMassKg": 1904709777.8792791,
+      "targetSemantics": "EXISTING_BASE_DESIGN_LIMIT",
+      "maximumAllowedMassKg": null,
+      "baseRemainingKg": 1658137222.1207209,
+      "mountedRemainingKg": 1658137222.1207209,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "targetKg": 3562847000,
+    "allocationsKg": {
+      "structure": 844493688.2064236,
+      "armor": 843434945.8010254,
+      "propulsion": 538024024.8859454,
+      "endurance": 509169427.06333834,
+      "sensor": 269795294.834588,
+      "equipment": 557929619.2086791
+    },
+    "validation": []
+  },
+  {
+    "priority": "mobility",
+    "geometryAndPolicySHA256": "15db6cb569b5da0cb302e93318c3638932f7f883dc30f16483d18d3cfce9fd77",
+    "pieces": 12384,
+    "duplicateExactCells": 0,
+    "beforeArmorKg": 506900009.9801756,
+    "afterArmorKg": 506900009.98138034,
+    "armorDeltaKg": 0.0012047290802001953,
+    "beforeHullKg": 20006351.828724608,
+    "afterHullKg": 20006351.828720987,
+    "hullDeltaKg": -0.0000036209821701049805,
+    "independentLayerSumKg": 526906361.8101017,
+    "scalarMassKg": 526906361.81010133,
+    "thicknessMm": [
+      152.08495316352054,
+      459.4232960148016
+    ],
+    "materials": [
+      "TITANIUM_ARMOR"
+    ],
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 20006351.828720987,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 506900009.98138034,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 641312460,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 5630204.293057634,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 356284700,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 1530133726.103159,
+      "mountedEstimatedDryMassKg": 1530133726.103159,
+      "targetSemantics": "EXISTING_BASE_DESIGN_LIMIT",
+      "maximumAllowedMassKg": null,
+      "baseRemainingKg": 2032713273.896841,
+      "mountedRemainingKg": 2032713273.896841,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "targetKg": 3562847000,
+    "allocationsKg": {
+      "structure": 807812841.4642583,
+      "armor": 511121525.5200302,
+      "propulsion": 826369736.9882681,
+      "endurance": 534044492.16206706,
+      "sensor": 288099055.887961,
+      "equipment": 595399347.9774153
+    },
+    "validation": []
+  },
+  {
+    "priority": "balanced",
+    "geometryAndPolicySHA256": "f52b241fb3d2268c7f4c7536a03722888163a19e5275e15340679ba623ec3b85",
+    "pieces": 12376,
+    "duplicateExactCells": 0,
+    "beforeArmorKg": 510117312.2367847,
+    "afterArmorKg": 510117312.24144775,
+    "armorDeltaKg": 0.004663050174713135,
+    "beforeHullKg": 65985600.00876594,
+    "afterHullKg": 65985600.00875355,
+    "hullDeltaKg": -0.000012390315532684326,
+    "independentLayerSumKg": 576102912.2502013,
+    "scalarMassKg": 576102912.2502013,
+    "thicknessMm": [
+      160.32908571428572,
+      484.3274464285715
+    ],
+    "materials": [
+      "CERAMIC_COMPOSITE"
+    ],
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 65985600.00875355,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 510117312.24144775,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 641312460,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry"
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 5630204.293057634,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 356284700,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 1579330276.543259,
+      "mountedEstimatedDryMassKg": 1579330276.543259,
+      "targetSemantics": "EXISTING_BASE_DESIGN_LIMIT",
+      "maximumAllowedMassKg": null,
+      "baseRemainingKg": 1983516723.456741,
+      "mountedRemainingKg": 1983516723.456741,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "targetKg": 3562847000,
+    "allocationsKg": {
+      "structure": 868674849.9537847,
+      "armor": 552559646.4616648,
+      "propulsion": 595179498.1069808,
+      "endurance": 573799077.5517397,
+      "sensor": 317351579.60439813,
+      "equipment": 655282348.3214315
+    },
+    "validation": []
+  }
+]

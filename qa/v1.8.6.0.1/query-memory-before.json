@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "iteration": 0,
+      "startHeap": 5337088,
+      "blueprintHeap": 95081176,
+      "preparationIncludingKeyMs": 1567.1993260000002,
+      "preparedRetainedHeap": 194376336,
+      "retainedQueryDeltaBytes": 99295160,
+      "preparedHeap": 194379984,
+      "releasedHeap": 189436560
+    },
+    {
+      "iteration": 1,
+      "startHeap": 5606224,
+      "blueprintHeap": 95357944,
+      "preparationIncludingKeyMs": 1644.95611,
+      "preparedRetainedHeap": 194555496,
+      "retainedQueryDeltaBytes": 99197552,
+      "preparedHeap": 194559160,
+      "releasedHeap": 5742712
+    },
+    {
+      "iteration": 2,
+      "startHeap": 5707704,
+      "blueprintHeap": 95464000,
+      "preparationIncludingKeyMs": 1584.7276920000004,
+      "preparedRetainedHeap": 194550032,
+      "retainedQueryDeltaBytes": 99086032,
+      "preparedHeap": 194553376,
+      "releasedHeap": 5749424
+    },
+    {
+      "iteration": 3,
+      "startHeap": 5734488,
+      "blueprintHeap": 95486232,
+      "preparationIncludingKeyMs": 1654.442156000001,
+      "preparedRetainedHeap": 194556072,
+      "retainedQueryDeltaBytes": 99069840,
+      "preparedHeap": 194556328,
+      "releasedHeap": 5746064
+    },
+    {
+      "iteration": 4,
+      "startHeap": 5726704,
+      "blueprintHeap": 95481920,
+      "preparationIncludingKeyMs": 1829.3765949999997,
+      "preparedRetainedHeap": 194572512,
+      "retainedQueryDeltaBytes": 99090592,
+      "preparedHeap": 194572768,
+      "releasedHeap": 5772488
+    }
+  ],
+  "finalHeap": 5758384,
+  "note": "Weak-key query cache, 5 allocation/release cycles, explicit GC. Heap plateau is evidence only; not a long-duration leak proof. Plane estimate excludes JS and BVH overhead."
+}

@@ -2,8 +2,9 @@ import type { Vec3 } from '../../blueprint/types';
 import type { PanelSolid } from './types';
 import {add,sub,mul,dot,unit,center} from '../integration/contours';
 export const cross=(a:Vec3,b:Vec3):Vec3=>({x:a.y*b.z-a.z*b.y,y:a.z*b.x-a.x*b.z,z:a.x*b.y-a.y*b.x});
-export const normal=(p:Vec3[])=>unit(cross(sub(p[1],p[0]),sub(p[2],p[0])));
-export const area=(p:Vec3[])=>{let a=0;for(let i=1;i<p.length-1;i++)a+=Math.hypot(...Object.values(cross(sub(p[i],p[0]),sub(p[i+1],p[0]))))/2;return a;};
+/** Scalar form of the same cross/normal arithmetic, without temporary vectors. */
+export const normal=(p:Vec3[])=>{const ax=p[1].x-p[0].x,ay=p[1].y-p[0].y,az=p[1].z-p[0].z,bx=p[2].x-p[0].x,by=p[2].y-p[0].y,bz=p[2].z-p[0].z,x=ay*bz-az*by,y=az*bx-ax*bz,z=ax*by-ay*bx,k=1/Math.hypot(x,y,z);return{x:x*k||0,y:y*k||0,z:z*k||0};};
+export const area=(p:Vec3[])=>{let a=0;for(let i=1;i<p.length-1;i++){const ax=p[i].x-p[0].x,ay=p[i].y-p[0].y,az=p[i].z-p[0].z,bx=p[i+1].x-p[0].x,by=p[i+1].y-p[0].y,bz=p[i+1].z-p[0].z;a+=Math.hypot(ay*bz-az*by,az*bx-ax*bz,ax*by-ay*bx)/2;}return a;};
 export const scalePolygon=(p:Vec3[],ratio:number)=>{const c=center(p);return p.map(v=>add(c,mul(sub(v,c),ratio)));};
 /** Closed convex prism. The bottom is embedded, bevel slopes inward to a lower, broad cap. */
 export function panelSolid(root:Vec3[],n:Vec3,thickness:number,inset:number,chamfer:number):{solid:PanelSolid;top:Vec3[]} {

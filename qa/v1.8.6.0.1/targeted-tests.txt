@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.0.1
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1327ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  326ms
+ ✓ tests/free-mount.test.ts (18 tests | 7 skipped) 1328ms
+   ✓ mirror and 4-row battery are atomic; rejects partial overlap  344ms
+
+ Test Files  2 passed (2)
+      Tests  27 passed | 7 skipped (34)
+   Start at  14:09:41
+   Duration  3.03s (transform 1.30s, setup 0ms, collect 2.02s, tests 2.66s, environment 0ms, prepare 258ms)

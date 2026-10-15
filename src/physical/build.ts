@@ -1,4 +1,5 @@
-import { pieceLayers } from "./layers";
+import {activePhysicalDiagnostics,timedPhysical,recordPhysicalStage} from './diagnostics';
+import { integratedLayerVolumes } from "./integration";
 import type { ShipBlueprint } from "../blueprint/types";
 import { normal, area } from "../generation/armor/panels";
 import { boundsOf, dot, sub } from "../generation/integration/contours";
@@ -31,7 +32,9 @@ export function addPhysicalDesign(
   onProgress?: (sourceId: string, pieces: number) => void,
 ) {
   try {
+    const keyStart=activePhysicalDiagnostics()?performance.now():0;
     const cacheKey = JSON.stringify([
+      1, b.schemaVersion, b.architecture.grammar, b.macroDesign?.family,
       provenance,
       b.seed,
       b.role,
@@ -40,18 +43,20 @@ export function addPhysicalDesign(
       b.dimensions,
       b.designDoctrine?.profile.protection,
       b.structuralVolumes,
-      b.productionDesign?.armor,
+      b.productionDesign?.armor ?? b.structuralArmorPilot?.components,
       b.productionDesign?.finish,
       b.prefabPlacements,
       b.freeMountPlan,
     ]);
-    const cached = designCache.get(cacheKey);
+    if(keyStart)recordPhysicalStage("Cache key",performance.now()-keyStart);
+    const cached = designCache.get(cacheKey),diagnostics=activePhysicalDiagnostics();
+    if(diagnostics)diagnostics.cache[cached?"hits":"misses"]++;
     if (cached) {
-      b.physicalDesign = structuredClone(cached);
+      b.physicalDesign = timedPhysical("Cache clone",()=>structuredClone(cached));
       return b;
     }
-    const sources = physicalSources(b),
-      preliminary = createDesignPolicy(b, sources),
+    const sources = timedPhysical("Source geometry",()=>physicalSources(b)),
+      preliminary = timedPhysical("Design policy",()=>createDesignPolicy(b, sources)),
       warnings: string[] = [],
       exclude = sourceExclusions(sources),
       exposed = exposedFacetPolygons(sources),
@@ -78,7 +83,7 @@ export function addPhysicalDesign(
             ].densityKgM3,
         0,
       );
-    const policy = createDesignPolicy(b, sources, minimumArmor);
+    const policy = timedPhysical("Design policy",()=>createDesignPolicy(b, sources, minimumArmor));
     const nominal = new Map(
       sources.map((s) => [
         s.id,
@@ -203,6 +208,7 @@ export function addPhysicalDesign(
           bounds: boundsOf(source.solid.vertices),
           coverage: "FINITE_MESH",
         };
+      const sourceStart=diagnostics?performance.now():0;
       for (const [index, tri] of source.triangles.entries()) {
         if (area(tri) < 1e-10) continue;
         const facetIndex = surface.facets.length,
@@ -251,7 +257,7 @@ export function addPhysicalDesign(
           facetCells.push(...pieces);
         }
         const finalCells = mergeConvexCells(facetCells);
-        surface.physicalOuterAreaM2 += outerFacetArea(finalCells, tri);
+        surface.physicalOuterAreaM2 += timedPhysical("Outer area union",()=>outerFacetArea(finalCells, tri));
         for (const cell of finalCells) {
           if (cellVolume(cell) < 1e-9) continue;
           remember(cell);
@@ -260,13 +266,14 @@ export function addPhysicalDesign(
             volumeM3 = cellVolume(solidCell(solid)),
             piece = { facetIndex, layerOrder: -1, solid, volumeM3 };
           surface.pieces.push(piece);
-          for (const part of pieceLayers(surface, piece)) {
+          for (const part of timedPhysical("Layer integration",()=>integratedLayerVolumes(surface, piece))) {
             const layer = stack[part.layerOrder];
             layer.volumeM3 += part.volumeM3;
             layer.massKg += part.volumeM3 * layer.densityKgM3;
           }
         }
       }
+      if(sourceStart)recordPhysicalStage(source.kind+" physical construction",performance.now()-sourceStart);
       const active = new Set(surface.pieces.map((p) => p.facetIndex)),
         used = surface.facets.filter((_, i) => active.has(i));
       surface.minimumFacetThicknessMm = used.length
@@ -333,11 +340,10 @@ export function addPhysicalDesign(
           : 0,
       },
     };
-    b.physicalDesign.mass = finishPhysicalMass(b);
+    b.physicalDesign.mass = timedPhysical("Mass ledger",()=>finishPhysicalMass(b));
     if (
       b.physicalDesign.mass.armorBudgetRemainingKg < -1e-3 ||
-      (b.physicalDesign.mass.remainingMassKg < -1e-3 &&
-        !b.freeMountPlan?.entries.length)
+      b.physicalDesign.mass.ledger!.baseBudgetViolation
     )
       throw Error(
         "REQUIRED_PHYSICAL_MASS_BUDGET_EXCEEDED: minimum valid skin / retained equipment exceeds target",
@@ -351,7 +357,7 @@ export function addPhysicalDesign(
     );
     if (designCache.size >= 1)
       designCache.delete(designCache.keys().next().value!);
-    designCache.set(cacheKey, structuredClone(b.physicalDesign));
+    designCache.set(cacheKey, timedPhysical("Cache store",()=>structuredClone(b.physicalDesign!)));
     return b;
   } catch (e) {
     delete b.physicalDesign;

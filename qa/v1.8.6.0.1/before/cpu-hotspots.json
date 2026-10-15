@@ -1,0 +1,275 @@
+{
+  "note": "V8 self samples; not inclusive counters. Old plain Cruiser470 run contains generation + hit + validation + serialization + query.",
+  "rows": [
+    {
+      "function": "solidContains",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19781,
+      "selfSampleMs": 1513.3090000000025
+    },
+    {
+      "function": "(garbage collector)",
+      "url": "",
+      "line": 0,
+      "selfSampleMs": 1397.2059999999992
+    },
+    {
+      "function": "visit",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19342,
+      "selfSampleMs": 1389.5389999999993
+    },
+    {
+      "function": "clipCell",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17425,
+      "selfSampleMs": 775.6259999999997
+    },
+    {
+      "function": "meets",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19315,
+      "selfSampleMs": 575.9710000000006
+    },
+    {
+      "function": "boundsOf",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17209,
+      "selfSampleMs": 575.8790000000004
+    },
+    {
+      "function": "area",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17260,
+      "selfSampleMs": 514.9830000000001
+    },
+    {
+      "function": "validatePhysicalDesign",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 23184,
+      "selfSampleMs": 471.673
+    },
+    {
+      "function": "structuredClone",
+      "url": "node:internal/worker/js_transferable",
+      "line": 113,
+      "selfSampleMs": 384.96300000000014
+    },
+    {
+      "function": "",
+      "url": "file:///workspace/shipyard-v1.8.6.0.1/tests/performance/physical-harness.mjs",
+      "line": 43,
+      "selfSampleMs": 353.8690000000003
+    },
+    {
+      "function": "orientCell",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17355,
+      "selfSampleMs": 352.5570000000004
+    },
+    {
+      "function": "cellVolume",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17380,
+      "selfSampleMs": 337.80500000000035
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17338,
+      "selfSampleMs": 311.64700000000016
+    },
+    {
+      "function": "add",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17141,
+      "selfSampleMs": 310.97899999999976
+    },
+    {
+      "function": "faceNormal",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17343,
+      "selfSampleMs": 310.67500000000007
+    },
+    {
+      "function": "geometrySamples",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19811,
+      "selfSampleMs": 243.682
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17421,
+      "selfSampleMs": 240.7070000000001
+    },
+    {
+      "function": "clipHalfSpace",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17330,
+      "selfSampleMs": 238.74500000000012
+    },
+    {
+      "function": "build",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19329,
+      "selfSampleMs": 231.732
+    },
+    {
+      "function": "visit",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 20267,
+      "selfSampleMs": 215.42300000000003
+    },
+    {
+      "function": "unit",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17157,
+      "selfSampleMs": 184.07499999999996
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19754,
+      "selfSampleMs": 182.78499999999994
+    },
+    {
+      "function": "rayBlocked",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19847,
+      "selfSampleMs": 165.93600000000004
+    },
+    {
+      "function": "mergeConvexCells",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17594,
+      "selfSampleMs": 160.92399999999998
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 24520,
+      "selfSampleMs": 149.61399999999998
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19332,
+      "selfSampleMs": 148.55599999999998
+    },
+    {
+      "function": "planes",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17364,
+      "selfSampleMs": 144.82599999999996
+    },
+    {
+      "function": "pieceLayers",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17639,
+      "selfSampleMs": 137.05999999999997
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 20599,
+      "selfSampleMs": 113.20599999999997
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17443,
+      "selfSampleMs": 106.76800000000001
+    },
+    {
+      "function": "subtractCell",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17452,
+      "selfSampleMs": 104.76099999999997
+    },
+    {
+      "function": "solidsIntrude",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19827,
+      "selfSampleMs": 100.16699999999997
+    },
+    {
+      "function": "build2",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 20246,
+      "selfSampleMs": 96.92899999999996
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17371,
+      "selfSampleMs": 83.021
+    },
+    {
+      "function": "addPhysicalDesign",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 22943,
+      "selfSampleMs": 81.64099999999999
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19821,
+      "selfSampleMs": 78.14500000000001
+    },
+    {
+      "function": "solidCell",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17412,
+      "selfSampleMs": 76.09099999999998
+    },
+    {
+      "function": "unique",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17418,
+      "selfSampleMs": 76.05
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19826,
+      "selfSampleMs": 73.65899999999998
+    },
+    {
+      "function": "detailIssues",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 21030,
+      "selfSampleMs": 64.48599999999999
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 20254,
+      "selfSampleMs": 62.14699999999999
+    },
+    {
+      "function": "post",
+      "url": "node:inspector",
+      "line": 115,
+      "selfSampleMs": 60.67
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 19829,
+      "selfSampleMs": 56.326
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 28741,
+      "selfSampleMs": 53.450999999999986
+    },
+    {
+      "function": "",
+      "url": "file:///tmp/physical-before.mjs",
+      "line": 17214,
+      "selfSampleMs": 48.109
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "battleship470",
+    "version": "before",
+    "generatorVersion": "1.8.6.0",
+    "issues": []
+  },
+  {
+    "id": "battleship470",
+    "version": "after",
+    "generatorVersion": "1.8.6.0.1",
+    "issues": []
+  },
+  {
+    "id": "battleship470",
+    "mutation": "new patch ledger removed",
+    "issues": [
+      "Physical mass ledger absent from V1.8.6.0.1"
+    ],
+    "rejected": true
+  },
+  {
+    "id": "spine300",
+    "version": "after",
+    "generatorVersion": "1.8.6.0.1",
+    "issues": []
+  }
+]

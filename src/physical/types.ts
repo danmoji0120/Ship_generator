@@ -98,7 +98,21 @@ export interface DesignPolicy {
   tradeoffs: string[];
   legacyDoctrineReference: "RESERVATION_MODEL_NOT_ADDITIONAL_PHYSICAL_MASS";
 }
+export interface MassLedger {
+ version:1;
+ entries:{component:'HULL_SHELL'|'ARMOR'|'STRUCTURE'|'CORE_EQUIPMENT'|'MOUNTED_EQUIPMENT'|'PLATFORM'|'OTHER_ESTIMATED';massKg:number;source:'GEOMETRY_DERIVED'|'ESTIMATED'|'LEGACY_ESTIMATE';basis:string}[];
+ baseEstimatedDryMassKg:number;
+ mountedEstimatedDryMassKg:number;
+ targetSemantics:'EXISTING_BASE_DESIGN_LIMIT';
+ maximumAllowedMassKg:null;
+ baseRemainingKg:number;
+ mountedRemainingKg:number;
+ baseBudgetViolation:boolean;
+ mountedLoadoutOverTarget:boolean;
+ operationalConsumables:'NOT_INCLUDED';
+}
 export interface PhysicalMass {
+ ledger?:MassLedger;
   hullShellMassKg: number;
   armorMassKg: number;
   structuralMassEstimateKg: number;

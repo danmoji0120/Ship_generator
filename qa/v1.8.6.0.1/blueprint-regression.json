@@ -1,0 +1,32 @@
+[
+  {
+    "id": "battleship470",
+    "allNonPhysicalDesignFieldsSHA256": "90090c7d4c78016c9398bf93f1c614dbce3dc29f478cb6d4f09fcd11121a541f",
+    "exact": true
+  },
+  {
+    "id": "cruiser470",
+    "allNonPhysicalDesignFieldsSHA256": "3e7f7b87aa82cd195e166fe66386cada4dd3c488f0389fbd2a559e49fec925d1",
+    "exact": true
+  },
+  {
+    "id": "vesper200",
+    "allNonPhysicalDesignFieldsSHA256": "e4ff25c60c3a0571a66d782bacab0c2786197645e69c3524604d8b21783eb35f",
+    "exact": true
+  },
+  {
+    "id": "forge300",
+    "allNonPhysicalDesignFieldsSHA256": "d2576943f95934fa57cf2f6a045c290af95ea6362bffbbdf09929fbd5e350a88",
+    "exact": true
+  },
+  {
+    "id": "spine300",
+    "allNonPhysicalDesignFieldsSHA256": "ee3f029454e89574cd48f98c3b161c8ed5e7a02ad5e53a7ae992ad2ade4f2c63",
+    "exact": true
+  },
+  {
+    "id": "truss300",
+    "allNonPhysicalDesignFieldsSHA256": "911034329d5352f9d5f4ef7f3152b924e602881ffb202873c14b5734b2b65dc2",
+    "exact": true
+  }
+]

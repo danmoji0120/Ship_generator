@@ -52,7 +52,7 @@ export const planes = (c: ConvexCell) => {
       if (
         !p.some(
           (q) =>
-            Math.hypot(...Object.values(sub(n, q.n))) < 1e-9 &&
+            Math.hypot(n.x-q.n.x,n.y-q.n.y,n.z-q.n.z) < 1e-9 &&
             Math.abs(d - q.d) < 1e-7,
         )
       )
@@ -88,7 +88,7 @@ export const cellSolid = (c: ConvexCell): PanelSolid => {
           len = Math.hypot(v.x, v.y, v.z);
         if (
           len > EPS &&
-          Math.hypot(...Object.values(cross(v, w))) / len < EPS &&
+          Math.hypot(v.y*w.z-v.z*w.y,v.z*w.x-v.x*w.z,v.x*w.y-v.y*w.x) / len < EPS &&
           dot(w, v) >= -EPS &&
           dot(w, v) <= dot(v, v) + EPS
         ) {
@@ -116,7 +116,7 @@ export const solidCell = (s: PanelSolid) =>
 function unique(ps: Vec3[], tolerance = EPS) {
   const out: Vec3[] = [];
   for (const p of ps)
-    if (!out.some((q) => Math.hypot(...Object.values(sub(p, q))) < tolerance))
+    if (!out.some((q) => Math.hypot(p.x-q.x,p.y-q.y,p.z-q.z) < tolerance))
       out.push(p);
   return out;
 }
@@ -219,10 +219,13 @@ export function rayCell(
   dir: Vec3,
   maxDistance: number,
 ) {
+  return rayPlanes(planes(c),origin,dir,maxDistance);
+}
+export function rayPlanes(ps: readonly {n:Vec3;d:number}[],origin:Vec3,dir:Vec3,maxDistance:number){
   let entry = 0,
     exit = maxDistance,
     entryNormal: Vec3 | undefined;
-  for (const { n, d } of planes(c)) {
+  for (const { n, d } of ps) {
     const den = dot(n, dir),
       dist = d - dot(n, origin);
     if (Math.abs(den) < 1e-12) {

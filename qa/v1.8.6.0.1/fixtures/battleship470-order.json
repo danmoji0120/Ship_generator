@@ -1,0 +1,195 @@
+{
+  "order": {
+    "role": "Battleship",
+    "shipyardId": "aegis",
+    "length": 470,
+    "massClass": "Standard",
+    "priorities": {
+      "firepower": 50,
+      "survivability": 50,
+      "mobility": 50,
+      "endurance": 50,
+      "missile": 50,
+      "sensor": 50
+    },
+    "targetDryMassKg": 3562847000
+  },
+  "seed": 7,
+  "architecture": {
+    "composition": "FORWARD_SHOULDERS",
+    "source": "qa-fixed",
+    "grammar": "MONOLITHIC",
+    "requestedGrammar": "MONOLITHIC",
+    "components": [
+      "MONOLITHIC"
+    ],
+    "rootVolumeId": "citadel",
+    "nose": "blunt armored",
+    "engineArchitecture": "Twin Integrated",
+    "selectionWeights": {
+      "MONOLITHIC": 63,
+      "BLOCK_ASSEMBLY": 58.49999999999999,
+      "SPINE_AND_MODULES": 0.72,
+      "TRUSS_POD": 0.1435,
+      "TWIN_HULL": 1.0499999999999998,
+      "CORE_AND_NACELLES": 0.4,
+      "STACKED_BLOCKS": 31.5,
+      "HYBRID": 0.5
+    },
+    "parameters": {
+      "volumeBudget": 1,
+      "beamRatio": 0.8889999999999998,
+      "armorRatio": 0.15716757315180574
+    }
+  },
+  "macroDesign": {
+    "family": "WEDGE_CITADEL",
+    "architecture": "MONOLITHIC",
+    "composition": "FORWARD_SHOULDERS",
+    "dominantMassRegion": "mid",
+    "structuralAxis": "+Z aft; -Z bow; X lateral; Y dorsal",
+    "negativeSpaceTargets": [],
+    "majorModuleRoles": [
+      {
+        "id": "citadel",
+        "purpose": "habitat",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "dimensions": {
+          "x": 417.8299999999999,
+          "y": 76.35013889545084,
+          "z": 470
+        },
+        "shape": {
+          "kind": "COMPOUND_LOFT",
+          "length": 470,
+          "width": 417.8299999999999,
+          "height": 76.35013889545084,
+          "frontScale": 0.66,
+          "rearScale": 0.78,
+          "topSlope": 0.045,
+          "bottomSlope": 0.02,
+          "sideSlope": 0.02,
+          "chamfer": 0.19314299280755223,
+          "roundness": 0.15,
+          "frontProfile": "chamfer",
+          "rearProfile": "chamfer",
+          "taper": 0.1997144892113283,
+          "waist": 0.6414287410094403,
+          "shoulder": 0.2731429928075522,
+          "stationScales": [
+            {
+              "t": 0,
+              "width": 0.42560000000000003,
+              "height": 0.82
+            },
+            {
+              "t": 0.1,
+              "width": 0.6608,
+              "height": 1
+            },
+            {
+              "t": 0.2,
+              "width": 0.9520000000000001,
+              "height": 1
+            },
+            {
+              "t": 0.3,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "t": 0.4,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "t": 0.5,
+              "width": 0.88,
+              "height": 1
+            },
+            {
+              "t": 0.6,
+              "width": 0.72,
+              "height": 1
+            },
+            {
+              "t": 0.7,
+              "width": 0.61,
+              "height": 1
+            },
+            {
+              "t": 0.8,
+              "width": 0.53,
+              "height": 1
+            },
+            {
+              "t": 0.9,
+              "width": 0.44,
+              "height": 1
+            },
+            {
+              "t": 1,
+              "width": 0.4,
+              "height": 1
+            }
+          ]
+        },
+        "role": "dominant"
+      }
+    ],
+    "symmetryPolicy": "BILATERAL",
+    "silhouetteParameters": {
+      "beam": 1.27,
+      "depth": 1.1603364573776722,
+      "neckRatio": 0.18,
+      "machineryBudget": 0.9016000000000001,
+      "weaponBudget": 1.045,
+      "supplyBudget": 1,
+      "sensorBudget": 0.95
+    },
+    "selectedVariant": "FORWARD_SHOULDERS/3",
+    "generationSeed": 7,
+    "source": "qa-fixed",
+    "approximateVolumeM3": 10209979.753237298,
+    "densityTonnesPerM3": 0.27,
+    "estimatedMassTonnes": 2756694.5333740707,
+    "primaryMassRatio": 1,
+    "foreMassRatio": 0.3650119735278893,
+    "midMassRatio": 0.3997383079648479,
+    "aftMassRatio": 0.23524971850726295,
+    "lateralSpread": 0.8889999999999998,
+    "verticalSpread": 0.15716757315180574,
+    "centerOfVolume": {
+      "x": 0,
+      "y": 0,
+      "z": -20.07560901124358
+    },
+    "moduleVolumesM3": {
+      "citadel": 10209979.753237298
+    },
+    "realized": {
+      "approximateVolumeM3": 10209979.753237298,
+      "densityTonnesPerM3": 0.27,
+      "estimatedMassTonnes": 2756694.5333740707,
+      "primaryMassRatio": 1,
+      "foreMassRatio": 0.3650119735278893,
+      "midMassRatio": 0.3997383079648479,
+      "aftMassRatio": 0.23524971850726295,
+      "lateralSpread": 0.8889999999999998,
+      "verticalSpread": 0.15716757315180574,
+      "centerOfVolume": {
+        "x": 0,
+        "y": 0,
+        "z": -20.07560901124358
+      },
+      "moduleVolumesM3": {
+        "citadel": 10209979.753237298
+      }
+    },
+    "attempts": []
+  }
+}
