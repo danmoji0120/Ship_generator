@@ -1,0 +1,599 @@
+{
+  "elapsedMs": 11796.525683,
+  "intervalUs": 1000,
+  "self": [
+    {
+      "ms": 872.294,
+      "name": "(garbage collector)",
+      "line": 0,
+      "parent": "(root)"
+    },
+    {
+      "ms": 581.647,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 323.546,
+      "name": "clipCell",
+      "line": 15012,
+      "parent": "subtractCell"
+    },
+    {
+      "ms": 317.499,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 294.697,
+      "name": "clipCell",
+      "line": 15012,
+      "parent": "intersectCells"
+    },
+    {
+      "ms": 184.402,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 166.206,
+      "name": "subtractCell",
+      "line": 15039,
+      "parent": ""
+    },
+    {
+      "ms": 155.856,
+      "name": "interiorInput",
+      "line": 20991,
+      "parent": ""
+    },
+    {
+      "ms": 154.345,
+      "name": "structuredClone",
+      "line": 113,
+      "parent": ""
+    },
+    {
+      "ms": 144.806,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 142.987,
+      "name": "validatePhysicalDesign",
+      "line": 22214,
+      "parent": "validateBlueprint2"
+    },
+    {
+      "ms": 142.147,
+      "name": "interiorInput",
+      "line": 20991,
+      "parent": "checkCompartmentPlan"
+    },
+    {
+      "ms": 133.128,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 131.521,
+      "name": "clipCell",
+      "line": 15012,
+      "parent": "subtractCell"
+    },
+    {
+      "ms": 129.653,
+      "name": "checkCompartmentPlan",
+      "line": 24578,
+      "parent": ""
+    },
+    {
+      "ms": 128.222,
+      "name": "interiorInput",
+      "line": 20991,
+      "parent": "interiorSignature"
+    },
+    {
+      "ms": 124.352,
+      "name": "mergeConvexCells",
+      "line": 15189,
+      "parent": "addPhysicalDesign"
+    },
+    {
+      "ms": 123.335,
+      "name": "",
+      "line": 16672,
+      "parent": ""
+    },
+    {
+      "ms": 111.563,
+      "name": "",
+      "line": 21842,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 103.039,
+      "name": "subtractCell",
+      "line": 15039,
+      "parent": ""
+    },
+    {
+      "ms": 97.966,
+      "name": "clipCell",
+      "line": 15012,
+      "parent": "intersectCells"
+    },
+    {
+      "ms": 96.217,
+      "name": "subtractCell",
+      "line": 15039,
+      "parent": ""
+    },
+    {
+      "ms": 82.808,
+      "name": "",
+      "line": 14925,
+      "parent": "clipHalfSpace"
+    },
+    {
+      "ms": 70.077,
+      "name": "solidContains",
+      "line": 18236,
+      "parent": ""
+    },
+    {
+      "ms": 68.515,
+      "name": "clipHalfSpace",
+      "line": 14917,
+      "parent": "clipCell"
+    },
+    {
+      "ms": 65.884,
+      "name": "",
+      "line": 14925,
+      "parent": "clipHalfSpace"
+    },
+    {
+      "ms": 65.512,
+      "name": "visit",
+      "line": 15262,
+      "parent": "visit"
+    },
+    {
+      "ms": 62.939,
+      "name": "clipHalfSpace",
+      "line": 14917,
+      "parent": "clipCell"
+    },
+    {
+      "ms": 61.131,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 58.479,
+      "name": "visit",
+      "line": 15262,
+      "parent": "visit"
+    },
+    {
+      "ms": 55.301,
+      "name": "clipCell",
+      "line": 15012,
+      "parent": "subtractCell"
+    },
+    {
+      "ms": 53.348,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 52.857,
+      "name": "",
+      "line": 23552,
+      "parent": "obstacles"
+    },
+    {
+      "ms": 52.215,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 51.884,
+      "name": "connectedVoidCells",
+      "line": 15955,
+      "parent": "checkCompartmentPlan"
+    }
+  ],
+  "inclusive": [
+    {
+      "ms": 11815.777,
+      "name": "(root)",
+      "line": 0
+    },
+    {
+      "ms": 10937.004,
+      "name": "",
+      "line": 0,
+      "parent": "(root)"
+    },
+    {
+      "ms": 10917.101,
+      "name": "",
+      "line": 28404,
+      "parent": "capturePhysicalGeneration"
+    },
+    {
+      "ms": 10917.101,
+      "name": "capturePhysicalGeneration",
+      "line": 18733,
+      "parent": "generateProcurementBlueprint"
+    },
+    {
+      "ms": 10917.101,
+      "name": "generateProcurementBlueprint",
+      "line": 28403,
+      "parent": ""
+    },
+    {
+      "ms": 7928.271,
+      "name": "timedPhysical",
+      "line": 18724,
+      "parent": ""
+    },
+    {
+      "ms": 4293.462,
+      "name": "validateBlueprint2",
+      "line": 26459,
+      "parent": ""
+    },
+    {
+      "ms": 4293.462,
+      "name": "",
+      "line": 28475,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 3517.273,
+      "name": "",
+      "line": 24576,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 3517.273,
+      "name": "timedPhysical",
+      "line": 18724,
+      "parent": "validateCompartmentPlan"
+    },
+    {
+      "ms": 3517.273,
+      "name": "validateCompartmentPlan",
+      "line": 24575,
+      "parent": "validateBlueprint2"
+    },
+    {
+      "ms": 3511.01,
+      "name": "checkCompartmentPlan",
+      "line": 24578,
+      "parent": ""
+    },
+    {
+      "ms": 2431.589,
+      "name": "",
+      "line": 28457,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 2420.42,
+      "name": "addPhysicalDesign",
+      "line": 21949,
+      "parent": ""
+    },
+    {
+      "ms": 2280.045,
+      "name": "",
+      "line": 21014,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 2280.045,
+      "name": "timedPhysical",
+      "line": 18724,
+      "parent": "buildCompartmentPlan"
+    },
+    {
+      "ms": 2280.045,
+      "name": "buildCompartmentPlan",
+      "line": 21013,
+      "parent": ""
+    },
+    {
+      "ms": 1945.62,
+      "name": "timedPhysical",
+      "line": 18724,
+      "parent": ""
+    },
+    {
+      "ms": 1944.459,
+      "name": "",
+      "line": 21030,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 1784.03,
+      "name": "timedPhysical",
+      "line": 18724,
+      "parent": ""
+    },
+    {
+      "ms": 1499.527,
+      "name": "connectedVoidCells",
+      "line": 15955,
+      "parent": "checkCompartmentPlan"
+    },
+    {
+      "ms": 1240.007,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1240.007,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1240.007,
+      "name": "visit",
+      "line": 15472,
+      "parent": ""
+    },
+    {
+      "ms": 1240.007,
+      "name": "",
+      "line": 15470,
+      "parent": "connectedVoidCells"
+    },
+    {
+      "ms": 1237.851,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1233.504,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1223.457,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1213.572,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1189.111,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1169.297,
+      "name": "",
+      "line": 21076,
+      "parent": "timedPhysical"
+    },
+    {
+      "ms": 1135.763,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1083.548,
+      "name": "visit",
+      "line": 15472,
+      "parent": "visit"
+    },
+    {
+      "ms": 1036.063,
+      "name": "emptyVolume",
+      "line": 15850,
+      "parent": "checkCompartmentPlan"
+    },
+    {
+      "ms": 1014.214,
+      "name": "",
+      "line": 22125,
+      "parent": "addPhysicalDesign"
+    }
+  ],
+  "stages": {
+    "totalMs": 11796.308072,
+    "stages": {
+      "Procurement hull": {
+        "ms": 22.686793999999992,
+        "calls": 1
+      },
+      "Procurement structural armor": {
+        "ms": 17.239029000000016,
+        "calls": 1
+      },
+      "Procurement armor coverage": {
+        "ms": 29.842557,
+        "calls": 1
+      },
+      "Procurement core systems": {
+        "ms": 19.851079,
+        "calls": 1
+      },
+      "Procurement exterior details": {
+        "ms": 260.535163,
+        "calls": 1
+      },
+      "Procurement meso": {
+        "ms": 945.336343,
+        "calls": 1
+      },
+      "Structural cache miss": {
+        "ms": 0,
+        "calls": 1
+      },
+      "Structural joints": {
+        "ms": 8.147270000000162,
+        "calls": 1
+      },
+      "Structural graph construction": {
+        "ms": 0.9361999999998716,
+        "calls": 1
+      },
+      "Structural material union": {
+        "ms": 62.56517000000008,
+        "calls": 1
+      },
+      "Structural generation": {
+        "ms": 105.05773900000008,
+        "calls": 1
+      },
+      "Cache key": {
+        "ms": 2.4696700000001783,
+        "calls": 1
+      },
+      "Source geometry": {
+        "ms": 54.995451,
+        "calls": 1
+      },
+      "Design policy": {
+        "ms": 1.879149999999754,
+        "calls": 2
+      },
+      "Outer area union": {
+        "ms": 169.631372000003,
+        "calls": 2364
+      },
+      "Layer integration": {
+        "ms": 87.47941400000241,
+        "calls": 9575
+      },
+      "ARMOR physical construction": {
+        "ms": 2139.931251000001,
+        "calls": 49
+      },
+      "HULL physical construction": {
+        "ms": 190.39338000000043,
+        "calls": 1
+      },
+      "Mass ledger": {
+        "ms": 0.5738659999997253,
+        "calls": 1
+      },
+      "Cache store": {
+        "ms": 158.81285200000002,
+        "calls": 1
+      },
+      "Procurement physical build": {
+        "ms": 2666.6875779999996,
+        "calls": 1
+      },
+      "Hull support graph and joints": {
+        "ms": 9.403091000000131,
+        "calls": 1
+      },
+      "Final structural connectivity": {
+        "ms": 0.24434999999994034,
+        "calls": 1
+      },
+      "Hull skin support ties": {
+        "ms": 123.2930150000002,
+        "calls": 1
+      },
+      "Structural skin integration": {
+        "ms": 380.9360659999993,
+        "calls": 1
+      },
+      "Interior cache miss": {
+        "ms": 0,
+        "calls": 1
+      },
+      "Interior exterior boundary audit": {
+        "ms": 114.57264599999962,
+        "calls": 1
+      },
+      "Interior volume accounting": {
+        "ms": 512.1562690000001,
+        "calls": 3
+      },
+      "Interior void connectivity": {
+        "ms": 1239.5741349999998,
+        "calls": 3
+      },
+      "Interior bulkhead and openings": {
+        "ms": 62.788493000000926,
+        "calls": 2
+      },
+      "Interior extraction and partition": {
+        "ms": 2104.724865,
+        "calls": 1
+      },
+      "Interior module interfaces": {
+        "ms": 0.3380889999998544,
+        "calls": 1
+      },
+      "Interior graph construction": {
+        "ms": 0.25757900000007794,
+        "calls": 1
+      },
+      "Interior isolation analysis": {
+        "ms": 0.5991430000003675,
+        "calls": 1
+      },
+      "Interior mass accounting": {
+        "ms": 0.05900699999983772,
+        "calls": 1
+      },
+      "Interior total": {
+        "ms": 2445.880464,
+        "calls": 1
+      },
+      "Procurement requirement verification": {
+        "ms": 1.645715999999993,
+        "calls": 1
+      },
+      "Interior geometry validation": {
+        "ms": 3690.7859940000008,
+        "calls": 1
+      },
+      "Procurement final validation": {
+        "ms": 4586.460961,
+        "calls": 1
+      }
+    },
+    "cache": {
+      "hits": 0,
+      "misses": 1
+    }
+  },
+  "memory": {
+    "rss": 669179904,
+    "heapTotal": 495079424,
+    "heapUsed": 367593008,
+    "external": 4247339,
+    "arrayBuffers": 896324
+  }
+}

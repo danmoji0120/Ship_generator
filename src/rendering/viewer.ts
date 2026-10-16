@@ -1,3 +1,4 @@
+import {releaseInteriorQueries} from '../interior/query';
 import {INTERIOR_VIEWS,renderInterior} from './interior';
 import type {InteriorInstanceState} from '../interior/types';
 import {STRUCTURAL_VIEWS,structuralHighlight} from './structure';
@@ -124,7 +125,7 @@ export class ShipViewer {
   show(b: AnyShipBlueprint, reset = true) {
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
-    if(this.blueprint!==b){this.interiorState=undefined;this.interiorSelection=undefined;}
+    if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);this.interiorState=undefined;this.interiorSelection=undefined;}
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -271,11 +272,15 @@ export class ShipViewer {
     };
   }
   dispose() {
+    if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();if(this.mountPicking)disposeShip(this.mountPicking);
     this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();
-    if (this.ship) disposeShip(this.ship);
+    if (this.ship) { this.scene.remove(this.ship); disposeShip(this.ship); this.ship=undefined; }
+    this.blueprint=undefined;this.mountPicking=undefined;this.interiorState=undefined;this.interiorSelection=undefined;
+    this.armorShadowLight?.shadow.dispose();this.scene.clear();
     this.renderer.dispose();
+    this.renderer.domElement.remove();
   }
 }

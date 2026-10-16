@@ -1,0 +1,286 @@
+{
+  "width": 390,
+  "scrollWidth": 420,
+  "elements": [
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 458.1875,
+      "width": 51.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 557.71875,
+      "width": 96.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 604.734375,
+      "width": 44.015625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 674.765625,
+      "width": 67.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 775.8125,
+      "width": 98.046875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 859.34375,
+      "width": 80.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 947.703125,
+      "width": 85.359375
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1041.234375,
+      "width": 90.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1137.28125,
+      "width": 93.046875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1227.8125,
+      "width": 87.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1301.34375,
+      "width": 70.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1365.875,
+      "width": 61.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1419.40625,
+      "width": 50.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1476.921875,
+      "width": 54.515625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1545.953125,
+      "width": 66.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1632.984375,
+      "width": 84.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1696.515625,
+      "width": 60.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1742.015625,
+      "width": 42.5
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1806.046875,
+      "width": 61.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1863.5625,
+      "width": 54.515625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 1950.59375,
+      "width": 84.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2026.125,
+      "width": 72.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2100.65625,
+      "width": 71.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2191.1875,
+      "width": 87.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2283.234375,
+      "width": 89.046875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2363.28125,
+      "width": 77.046875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2470.3125,
+      "width": 104.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2587.359375,
+      "width": 114.046875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2697.921875,
+      "width": 107.5625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2763.953125,
+      "width": 63.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2857.46875,
+      "width": 90.515625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 2916.484375,
+      "width": 56.015625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3000.359375,
+      "width": 80.875
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3083.390625,
+      "width": 80.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3169.921875,
+      "width": 83.53125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3245.953125,
+      "width": 73.03125
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3344.015625,
+      "width": 95.0625
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "",
+      "right": 3444.0625,
+      "width": 97.046875
+    },
+    {
+      "tag": "LABEL",
+      "id": "",
+      "cls": "",
+      "right": 420,
+      "width": 390
+    },
+    {
+      "tag": "SELECT",
+      "id": "interior-selection",
+      "cls": "",
+      "right": 420,
+      "width": 390
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {classifyVoidComponents,recoverVoidCompartment} from './volume';
 import {connectedVoidCells} from './connectivity';
 import type { ShipBlueprint, Vec3 } from '../blueprint/types';
 import type { ConvexCell } from '../physical/types';
@@ -15,12 +16,13 @@ import { analyzeInterior } from './graph';
 import { context, emptyVolume, carve, slice, polygonSlice, freePolygon, clipPolygonToCell, polygonPrism, axisVector, storedSolid, cellCentroid, inside, paddedBounds, exteriorAudit, characteristicWidth } from './geometry';
 let cached: {
     key: string;
-    plan: CompartmentPlan;
+    plan: string;
 } | undefined;
 export const clearInteriorCache = () => { cached = undefined; };
-export const interiorCacheBytes = () => cached ? 2 * (cached.key.length + JSON.stringify(cached.plan).length) : 0;
-export const interiorInput = (b: ShipBlueprint) => JSON.stringify([2, b.structuralFrame, b.physicalDesign?.surfaces, b.procurement?.order, b.structuralVolumes, b.prefabPlacements?.map(p => [p.id, p.assembly?.parts.map(p => [p.id, p.solid])])]);
-function signature(text: string) { let a = 2166136261, b = 2246822507; for (let i = 0; i < text.length; i++) {
+export const interiorCacheBytes = () => cached ? 2 * (cached.key.length + cached.plan.length) : 0;
+const legacyInteriorInput = (b: ShipBlueprint) => JSON.stringify([2, b.structuralFrame, b.physicalDesign?.surfaces, b.procurement?.order, b.structuralVolumes, b.prefabPlacements?.map(p => [p.id, p.assembly?.parts.map(p => [p.id, p.solid])])]);
+export const interiorInput=(b:ShipBlueprint)=>b.generatorVersion!=='1.8.6.2.1'?legacyInteriorInput(b):JSON.stringify([3,b.schemaVersion,b.generatorVersion,b.architecture.grammar,b.order.length,b.structuralFrame?.members.map(m=>[m.id,m.hostIds,m.envelope]),b.structuralFrame?.volumeFrames,b.physicalDesign?.surfaces.map(s=>[s.id,s.kind,s.materialId,s.geometryReference.parentStructureId,s.pieces.map(p=>p.solid)]),b.procurement?.order,b.structuralVolumes,b.prefabPlacements?.map(p=>[p.id,p.assembly?.parts.map(p=>[p.id,p.solid])])]);
+export function signature(text: string) { let a = 2166136261, b = 2246822507; for (let i = 0; i < text.length; i++) {
     const c = text.charCodeAt(i);
     a = Math.imul(a ^ c, 16777619);
     b = Math.imul(b ^ c, 3266489909);
@@ -37,14 +39,14 @@ export function buildCompartmentPlan(b: ShipBlueprint) {
         const key = interiorInput(b);
         if (cached?.key === key) {
             recordPhysicalStage('Interior cache hit', 0);
-            b.compartmentPlan = structuredClone(cached.plan);
+            b.compartmentPlan = JSON.parse(cached.plan);
             refreshPhysicalMass(b);
             updateInteriorDerivedData(b);
             return b;
         }
         recordPhysicalStage('Interior cache miss', 0);
-        const p: CompartmentPlan = { schemaVersion: 1, version: '1.8.6.2', sourceSignature: signature(key), architecture: b.architecture.grammar, compartments: [], boundaries: [], bulkheads: [], openings: [], occupancy: [], unresolvedVoidPockets: [], adjacency: [], accessGraph: [], pressureGraphDefinition: [], exteriorNode: 'EXTERIOR', analysis: null as any, budgetAccounting: null as any, spatialAccounting: { compartmentVoidM3: 0, openBulkheadPortalVoidM3: 0, note: 'Room CSG ends at wall faces. Open bulkhead aperture tubes are separate portal space; free module interface markers are not counted again.' }, regions: [], massAccounting: { bulkheadMassKg: 0, closureMassKg: 0, materialVolumeM3: 0, remainingEstimateTreatment: 'Retain the prior unresolved propulsion/support and primary-frame accounting unchanged; no undocumented bulkhead estimate is deducted.', source: 'GEOMETRY_DERIVED_FINITE_UNION' }, policy: policy(b), approximation: { model: 'FACETED_HULL_CSG', toleranceM: 1e-7, volumeRelativeTolerance: 1e-7, hullModelLimitations: [], sealModel: 'IDEAL_FINITE_CONTACT_NOT_ENGINEERING_CERTIFICATION' }, validationWarnings: [] };
-        const ctx = context(b);
+        const p: CompartmentPlan = { schemaVersion: 1, version: b.generatorVersion==='1.8.6.2.1'?'1.8.6.2.1':'1.8.6.2', sourceSignature: signature(key), architecture: b.architecture.grammar, compartments: [], boundaries: [], bulkheads: [], openings: [], occupancy: [], unresolvedVoidPockets: [], adjacency: [], accessGraph: [], pressureGraphDefinition: [], exteriorNode: 'EXTERIOR', analysis: null as any, budgetAccounting: null as any, spatialAccounting: { compartmentVoidM3: 0, openBulkheadPortalVoidM3: 0, note: 'Room CSG ends at wall faces. Open bulkhead aperture tubes are separate portal space; free module interface markers are not counted again.' }, regions: [], massAccounting: { bulkheadMassKg: 0, closureMassKg: 0, materialVolumeM3: 0, remainingEstimateTreatment: 'Retain the prior unresolved propulsion/support and primary-frame accounting unchanged; no undocumented bulkhead estimate is deducted.', source: 'GEOMETRY_DERIVED_FINITE_UNION' }, policy: policy(b), approximation: { model: 'FACETED_HULL_CSG', toleranceM: 1e-7, volumeRelativeTolerance: 1e-7, hullModelLimitations: [], sealModel: 'IDEAL_FINITE_CONTACT_NOT_ENGINEERING_CERTIFICATION' }, validationWarnings: [] };
+        const ctx = context(b,undefined,key);
         p.occupancy = ctx.inventory;
         const sources = physicalSources(b).filter(s => s.kind === 'HULL'), reservedUnknown=sources.filter(s=>b.structuralVolumes.find(v=>v.id===s.parent)?.purpose==='armor').flatMap(s=>s.cells.map(c=>c.cell)), priorHosts: ConvexCell[] = [], allHosts = sources.flatMap(s => s.cells.map(c => ({ ...c, host: s.id }))), hostNear = boundsIndex(allHosts);
         timedPhysical('Interior extraction and partition', () => {
@@ -83,7 +85,7 @@ export function buildCompartmentPlan(b: ShipBlueprint) {
                         continue;
                     }
                     const id = `comp/${host.id}/${i}`;
-                    const groups=timedPhysical('Interior void connectivity',()=>connectedVoidCells(carve(cells,ctx))),main=groups[0];
+                    const voidCells=timedPhysical('Interior solid exclusion',()=>carve(cells,ctx)),groups=timedPhysical('Interior void connectivity',()=>connectedVoidCells(voidCells)),main=groups[0];
                     if(!main){p.validationWarnings.push('No connected void in '+id);continue;}
                     const connectedSolids:ReturnType<typeof storedSolid>[]=[],failedCells:ConvexCell[]=[];
                     for(const cell of main.cells){try{connectedSolids.push(storedSolid(cell));}catch{failedCells.push(cell);}}
@@ -91,12 +93,24 @@ export function buildCompartmentPlan(b: ShipBlueprint) {
                     if(failedVolume>Math.max(1e-6,main.volumeM3*1e-10))throw Error('INTERIOR_CONNECTED_GEOMETRY_UNRESOLVED '+id);
                     const connectedCells=connectedSolids.map(solidCell),connectedVolume=connectedCells.reduce((n,c)=>n+cellVolume(c),0),unresolvedVolume=groups.slice(1).reduce((n,g)=>n+g.volumeM3,0)+failedVolume,largeUnresolved=unresolvedVolume>Math.max(1e-6,space.volumeM3*1e-10),voidCentroid=mul(connectedCells.reduce((m,c)=>add(m,mul(cellCentroid(c),cellVolume(c))),{x:0,y:0,z:0}),1/connectedVolume);
                     if(Math.abs(space.volumeM3-connectedVolume-unresolvedVolume)>Math.max(1e-5,space.volumeM3*1e-7))throw Error('INTERIOR_VOID_CONSERVATION_FAILED '+id);
-                    for(const [j,group]of groups.slice(1).entries())p.unresolvedVoidPockets.push({id:'unresolved/'+id+'/'+j,candidateCompartmentId:id,volumeM3:group.volumeM3,bounds:boundsOf(group.cells.flatMap(c=>c.faces.flat())),reason:'Disconnected finite void component; never shares the main chamber access/pressure node. Sub-resolution geometry is not promoted to a usable room.'});
+                    const classified=p.version==='1.8.6.2.1'?timedPhysical('Interior residual classification',()=>classifyVoidComponents(groups,axis,[a,z])):undefined;
+                    for(const [j,group]of groups.slice(1).entries()){
+                     const info=classified?.[j+1];
+                     p.unresolvedVoidPockets.push({id:'unresolved/'+id+'/'+j,candidateCompartmentId:id,volumeM3:group.volumeM3,bounds:boundsOf(group.cells.flatMap(c=>c.faces.flat())),reason:info?.reason??'Disconnected finite void component; never shares the main chamber access/pressure node. Sub-resolution geometry is not promoted to a usable room.',...(info?{classification:info.classification==='RECOVERABLE'?'USABLE_RESIDUAL' as const:info.classification as 'USABLE_RESIDUAL'|'NONALLOCATABLE',cells:group.cells.map(storedSolid),...(info.witness?{clearanceWitness:info.witness}:{})}:{})});
+                    }
                     if(failedVolume)p.unresolvedVoidPockets.push({id:'unresolved/'+id+'/triangulation',candidateCompartmentId:id,volumeM3:failedVolume,bounds:boundsOf(failedCells.flatMap(c=>c.faces.flat())),reason:'Sub-resolution void boundary triangulation unresolved; not registered as valid chamber geometry.'});
                     const nearVoid=boundsIndex(connectedCells.map(cell=>({cell,bounds:paddedBounds(cell.faces.flat())}))),patches=exposed.map(poly=>polygonSlice(poly,axis,a,z)).filter(poly=>poly.length>=3&&area(poly)>1e-7),gapCandidates=gaps.map(poly=>polygonSlice(poly,axis,a,z)).filter(poly=>poly.length>=3&&area(poly)>1e-6).flatMap(poly=>nearVoid(paddedBounds(poly)).map(item=>clipPolygonToCell(poly,item.cell)).filter(poly=>poly.length>=3&&area(poly)>1e-6)),open=gapCandidates.filter(poly=>characteristicWidth(poly)>1e-5),uncertain=gapCandidates.filter(poly=>characteristicWidth(poly)<=1e-5);
                     const c: InteriorCompartment = { id, parentStructuralVolumeRef: host.id, architectureRegionRef: host.id, extractionAudit:{candidateDomainVolumeM3:space.domainVolumeM3,excludedSolidVolumeM3:space.occupiedVolumeM3,unresolvedVoidVolumeM3:unresolvedVolume,significantOtherComponents:groups.filter(g=>g.volumeM3>1e-6).length-1},physicalVolume: { model: 'FINITE_CONNECTED_CSG_COMPONENT', domains: cells.map(storedSolid), connectedCells: connectedSolids, occupiedRefs: space.refs }, volumeM3: connectedVolume, occupiedVolumeM3: space.occupiedVolumeM3, domainVolumeM3: space.domainVolumeM3, centroid: voidCentroid, localBounds: boundsOf(cells.flatMap(c => c.faces.flat())), worldTransformReference: 'SHIP_LOCAL_RIGID_TRANSFORM', boundaryReferences: [], adjacentCompartmentIds: [], openingReferences: [], structuralFrameReferences: b.structuralFrame!.members.filter(m => m.hostIds.includes(host.id)).map(m => m.id), hullShellReferences: b.physicalDesign!.surfaces.filter(s => s.kind === 'HULL' && s.geometryReference.parentStructureId === host.id).map(s => s.id), pressureCapability: open.length ? 'EXPOSED' : uncertain.length||largeUnresolved||touchesUnknown ? 'UNPRESSURIZED' : 'PRESSURIZABLE', boundaryCertainty: open.length ? 'OPEN_TO_EXTERIOR' : uncertain.length||largeUnresolved||touchesUnknown ? 'UNRESOLVED' : 'FINITE_MATERIAL_CLOSURE', grammar: template, partitionAxis: axis, partitionRange: [a, z], exteriorPatches: patches, unresolvedBoundaryReasons: touchesUnknown?['Candidate intersects unclassified armor-purpose stock. Its reserved envelope is excluded; no sealed interface or material mass is invented.']:largeUnresolved?['Significant additional void component was not promoted to a connected pressure chamber; explicit unresolved space inventory retained']:uncertain.length ? [`Finite surface audit leaves ${uncertain.length} strips with characteristic width <=10µm; closure is numerically unresolved, not certified sealed and not invented as a macroscopic hole`] : [], futureSystemPlacement: { status: 'SPACE_QUERY_ONLY_NO_SYSTEMS_GENERATED', requireFiniteCsgCollision: true, bulkheadRefs: [] } };
                     p.compartments.push(c);
                     local.push(c);
+                    if(classified&&(touchesUnknown||uncertain.length||open.length))for(const r of p.unresolvedVoidPockets.filter(r=>r.candidateCompartmentId===id))r.classification='UNRESOLVED';
+                    if(classified)for(const [j,info]of classified.slice(1).entries())if(info.classification==='RECOVERABLE'&&!touchesUnknown&&!uncertain.length&&!open.length){
+                     const nearRecovery=boundsIndex(info.cells.map(cell=>({cell,bounds:paddedBounds(cell.faces.flat())}))),recoveryGaps=gaps.map(poly=>polygonSlice(poly,axis,a,z)).filter(poly=>poly.length>=3).flatMap(poly=>nearRecovery(paddedBounds(poly)).map(item=>clipPolygonToCell(poly,item.cell))).filter(poly=>poly.length>=3&&area(poly)>1e-6);
+                     if(recoveryGaps.length){const r=p.unresolvedVoidPockets.find(r=>r.id==='unresolved/'+id+'/'+j)!;r.classification='UNRESOLVED';r.reason='Residual reaches an actual exterior gap or unresolved seam; not promoted to a sealed chamber';continue;}
+                     const rid=id+'/recovered/'+j,recovered=recoverVoidCompartment(c,info.cells,rid);
+                     recovered.exteriorPatches=patches.flatMap(poly=>nearRecovery(paddedBounds(poly)).map(item=>clipPolygonToCell(poly,item.cell))).filter(poly=>poly.length>=3&&area(poly)>1e-7);
+                     p.compartments.push(recovered);const pocket=p.unresolvedVoidPockets.find(r=>r.id==='unresolved/'+id+'/'+j)!;pocket.classification='ASSIGNED_RECOVERED';pocket.recoveredCompartmentId=rid;
+                    }
                     for (let j = 0; j < open.length; j++) {
                         const boundaryId = `boundary/${id}/exterior/${j}`, openingId = `opening/${id}/exterior/${j}`, n = faceNormal(open[j]);
                         p.boundaries.push({ id: boundaryId, kind: 'EXTERIOR_GAP', compartmentIds: [id, 'EXTERIOR'], polygons: [open[j]], normal: n, openingRefs: [openingId] });
@@ -172,7 +186,7 @@ export function buildCompartmentPlan(b: ShipBlueprint) {
         b.compartmentPlan = p;
         refreshPhysicalMass(b);
         updateInteriorDerivedData(b);
-        cached = { key, plan: structuredClone(p) };
+        cached = { key, plan: JSON.stringify(p) };
         return b;
     });
 }
@@ -238,5 +252,12 @@ function makeBulkhead(p: CompartmentPlan, b: ShipBlueprint, ctx: ReturnType<type
     else
         p.validationWarnings.push((openingAllowed?'No finite unobstructed aperture fits':'Critical protection boundary intentionally has no passage')+'; boundary is not traversable: '+id);
 }
-export function updateInteriorSpaceAccounting(p: CompartmentPlan) { p.spatialAccounting = { compartmentVoidM3: p.compartments.reduce((n, c) => n + c.volumeM3, 0), openBulkheadPortalVoidM3: p.openings.filter(o => o.defaultState === 'OPEN' && p.boundaries.find(w => w.id === o.boundaryReference)?.kind === 'BULKHEAD').reduce((n, o) => n + o.aperture.reduce((n, s) => n + cellVolume(solidCell(s)), 0), 0), note: 'Room CSG ends at wall faces. Open bulkhead aperture tubes are separate portal space; free module interface markers are not counted again.' }; }
+export function updateInteriorSpaceAccounting(p: CompartmentPlan) {
+ if(p.version==='1.8.6.2.1'){
+  const main=p.compartments.filter(c=>!c.recoveryOf),sum=(cs:InteriorCompartment[])=>cs.reduce((n,c)=>n+c.volumeM3,0),assigned=sum(p.compartments.filter(c=>c.boundaryCertainty==='FINITE_MATERIAL_CLOSURE')),unresolved=sum(p.compartments.filter(c=>c.boundaryCertainty==='UNRESOLVED')),exterior=sum(p.compartments.filter(c=>c.boundaryCertainty==='OPEN_TO_EXTERIOR'));
+  const residual=(kind:string)=>p.unresolvedVoidPockets.filter(r=>r.classification===kind).reduce((n,r)=>n+r.volumeM3,0),usable=residual('USABLE_RESIDUAL'),nonallocatable=residual('NONALLOCATABLE'),failed=p.unresolvedVoidPockets.filter(r=>!r.classification).reduce((n,r)=>n+r.volumeM3,0);
+  const domain=main.reduce((n,c)=>n+c.domainVolumeM3,0),solid=main.reduce((n,c)=>n+c.occupiedVolumeM3,0),allResidual=p.unresolvedVoidPockets.reduce((n,r)=>n+r.volumeM3,0),mainVolume=sum(main);
+  p.volumeAudit={scope:'EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS',candidateDomainM3:domain,validInteriorM3:assigned+usable+nonallocatable,assignedM3:assigned,geometricAssignedM3:sum(p.compartments),usableResidualM3:usable,nonallocatableM3:nonallocatable,unresolvedCandidateM3:unresolved+failed,solidOccupiedM3:solid,exteriorConnectedM3:exterior,overlapVolumeM3:0,conservationErrorM3:domain-solid-mainVolume-allResidual,recoveredM3:sum(p.compartments.filter(c=>!!c.recoveryOf)),unquantifiedRegionIds:p.regions.filter(r=>r.state==='UNRESOLVED').map(r=>r.volumeId),confidence:'FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS',note:'Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability.'};
+ }
+ p.spatialAccounting = { compartmentVoidM3: p.compartments.reduce((n, c) => n + c.volumeM3, 0), openBulkheadPortalVoidM3: p.openings.filter(o => o.defaultState === 'OPEN' && p.boundaries.find(w => w.id === o.boundaryReference)?.kind === 'BULKHEAD').reduce((n, o) => n + o.aperture.reduce((n, s) => n + cellVolume(solidCell(s)), 0), 0), note: 'Room CSG ends at wall faces. Open bulkhead aperture tubes are separate portal space; free module interface markers are not counted again.' }; }
 export function updateInteriorDerivedData(b: ShipBlueprint) { for(const w of b.compartmentPlan!.bulkheads){w.pressureTight=w.openingIds.every(id=>{const o=b.compartmentPlan!.openings.find(o=>o.id===id)!;return !!o.closure&&o.pressureSealingCapability;});w.roles=['SEPARATION',...(w.pressureTight?['PRESSURE_BOUNDARY' as const]:[]),...(w.protective?['INTERNAL_PROTECTION' as const]:[]),...(w.loadBearing?['STRUCTURAL_SUPPORT' as const]:[])];} const p = b.compartmentPlan!, d = b.physicalDesign!, m = d.mass; updateInteriorSpaceAccounting(p); d.policy.future.status = 'FRAME_COMPARTMENTS_APPLIED_SYSTEMS_NOT_GENERATED'; const known = m.hullShellMassKg + (m.actualFrameMassKg ?? 0) + (m.actualStructuralConnectorMassKg ?? 0) + p.massAccounting.bulkheadMassKg + p.massAccounting.closureMassKg, remaining = d.policy.allocationsKg.structure - known; p.budgetAccounting = { structureAllowanceKg: d.policy.allocationsKg.structure, knownStructureUseKg: known, remainingStructureAllowanceKg: remaining, unfundedReservationKg: Math.max(0, -remaining), note: 'New interior material consumes structural allowance and final estimated base mass/cost. Hull/armor are retained; no target value is copied into actual mass. Hard maximum and cost are checked at delivery. Unresolved service/fitting estimates remain unchanged.' }; }

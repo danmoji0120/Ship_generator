@@ -1,0 +1,24 @@
+{
+  "version": "1.8.6.0.2",
+  "shipyardId": "vesper",
+  "shipClass": "Frigate",
+  "lengthM": 200,
+  "seed": 11,
+  "targetMassKg": 56405000,
+  "primaryPriority": "BALANCED",
+  "architecture": {
+    "mode": "REQUIRE",
+    "grammar": "CORE_AND_NACELLES"
+  },
+  "mainArmor": {
+    "mode": "AUTO"
+  },
+  "auxiliaryArmor": {
+    "mode": "AUTO"
+  },
+  "hull": {
+    "mode": "AUTO"
+  },
+  "armorDistribution": "BALANCED",
+  "armorZoneRequirements": []
+}

@@ -1044,3 +1044,6 @@ pre {
 .viewer-panel>.detail-control:has(#surface-finish){left:220px}
 @media(max-width:600px){.viewer-panel>.detail-control{font-size:10px;left:8px}.viewer-panel>.detail-control:has(#surface-finish){left:180px}.viewer-panel>.detail-control select{font-size:10px}}
 @media(max-width:600px){.free-tools label{max-width:100%;flex-wrap:wrap}.free-tools select{min-width:0;max-width:100%}}
+/* Long physical IDs stay inside the Inspector, including expanded mobile panels. */
+.physical-inspector label:has(select){display:block;min-width:0;max-width:100%}
+.physical-inspector select{box-sizing:border-box;width:100%;min-width:0;max-width:100%}

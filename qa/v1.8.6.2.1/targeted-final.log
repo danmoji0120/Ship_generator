@@ -1,0 +1,73 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.2.1
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1394ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  334ms
+ ❯ tests/interior.test.ts (20 tests | 1 failed) 178262ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8219ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8235ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6796ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  9902ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  12521ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  13137ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8304ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6960ms
+   ✓ A-B-C actual portals, sealed door, exterior vacuum paths and disabled finite wall remain distinct topologies 2ms
+   ✓ temporary breach/open/removed-wall analysis never edits design or another instance 283ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  696ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  913ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  1298ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  18784ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  6593ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  8387ms
+   × default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly 60537ms
+     → Test timed out in 60000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  6247ms
+   ✓ an open passage cannot become sealed without a real closure, even in a temporary instance 1ms
+   ✓ a disconnected microscopic outer pocket never exposes the entire connected main chamber  449ms
+ ✓ tests/free-mount.test.ts (18 tests) 13540ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  11286ms
+   ✓ mirror and 4-row battery are atomic; rejects partial overlap  340ms
+ ✓ tests/interior-stability.test.ts (13 tests) 160709ms
+   ✓ actual solid cage leaves an independent recoverable cavity; recovery adds no fictitious access or pressure edge  467ms
+   ✓ new BALANCED category ledger, finite geometry, graph and unchanged mass  8723ms
+   ✓ new BLOCK_ASSEMBLY category ledger, finite geometry, graph and unchanged mass  12289ms
+   ✓ new SPINE_AND_MODULES category ledger, finite geometry, graph and unchanged mass  11034ms
+   ✓ new TRUSS_POD category ledger, finite geometry, graph and unchanged mass  18670ms
+   ✓ new TWIN_HULL category ledger, finite geometry, graph and unchanged mass  25920ms
+   ✓ new CORE_AND_NACELLES category ledger, finite geometry, graph and unchanged mass  24703ms
+   ✓ new STACKED_BLOCKS category ledger, finite geometry, graph and unchanged mass  19174ms
+   ✓ new HYBRID category ledger, finite geometry, graph and unchanged mass  11277ms
+   ✓ small/medium/large OBB candidate search checks actual continuous space, clearance and confidence deterministically  6253ms
+   ✓ category audit corruption is rejected and edited source geometry invalidates exact content caches  22182ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/interior.test.ts > default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly
+Error: Test timed out in 60000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/interior.test.ts:82:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:635:17
+ ❯ processTimers node:internal/timers:571:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 66 passed (67)
+     Errors  1 error
+   Start at  17:33:32
+   Duration  359.36s (transform 1.72s, setup 0ms, collect 3.59s, tests 353.91s, environment 1ms, prepare 583ms)

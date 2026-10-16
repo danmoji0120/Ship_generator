@@ -7,12 +7,8 @@ import { createInteriorInstanceState } from '../interior/types';
 import { solidCell } from '../physical/convex';
 import { analyzeInterior } from '../interior/graph';
 export const INTERIOR_VIEWS = ['Compartments', 'Bulkheads', 'Openings', 'Compartment Connectivity', 'Isolation', 'Compartment Mass'] as const;
-let geometryCache: {
-    key: string;
-    cells: Map<string, PanelSolid[]>;
-} | undefined;
-function roomSolids(b: ShipBlueprint) { const p = b.compartmentPlan!, key = p.sourceSignature + JSON.stringify(p.compartments.map(c => [c.id, c.physicalVolume])); if (geometryCache?.key === key)
-    return geometryCache.cells; const cells = new Map(p.compartments.map(c => [c.id,c.physicalVolume.connectedCells])); geometryCache = { key, cells }; return cells; }
+// No renderer cache retains an old ship's CSG or a second JSON identity string.
+function roomSolids(b:ShipBlueprint){return new Map(b.compartmentPlan!.compartments.map(c=>[c.id,c.physicalVolume.connectedCells]));}
 function mesh(parts: {
     id: string;
     solids: PanelSolid[];
@@ -38,7 +34,11 @@ export function renderInterior(b: ShipBlueprint, mode: string, state: InteriorIn
     const analysis = analyzeInterior(p, state), exposed = new Set(analysis.exteriorConnectedCompartmentIds), unknown = new Set(analysis.uncertainCompartmentIds);
     if (['Compartments', 'Compartment Connectivity', 'Isolation'].includes(mode)) {
         const solids = roomSolids(b);
-        root.add(mesh(p.compartments.map((c, i) => ({ id: c.id, solids: solids.get(c.id)!, color: new THREE.Color(c.id === selected ? 0xffffff : mode === 'Isolation' ? exposed.has(c.id) ? 0xff694b : unknown.has(c.id) ? 0xf2be63 : 0x69d9b3 : new THREE.Color().setHSL(i * .173 % 1, .58, .53)) })), Math.min(.5, Math.max(.04, hullOpacity))));
+        root.add(mesh(p.compartments.map((c, i) => ({ id: c.id, solids: solids.get(c.id)!, color: new THREE.Color(c.id === selected ? 0xffffff : mode === 'Isolation' ? exposed.has(c.id) ? 0xff694b : unknown.has(c.id) ? 0xf2be63 : 0x69d9b3 : c.boundaryCertainty==='UNRESOLVED'?0xf2be63:new THREE.Color().setHSL(i * .173 % 1, .58, .53)) })), Math.min(.5, Math.max(.04, hullOpacity))));
+    }
+    if(mode==='Compartments'||mode==='Isolation'){
+      const residual=p.unresolvedVoidPockets.filter(r=>r.cells?.length&&r.classification!=='ASSIGNED_RECOVERED');
+      if(residual.length)root.add(mesh(residual.map(r=>({id:r.id,solids:r.cells!,color:new THREE.Color(r.classification==='NONALLOCATABLE'?0xcc76e8:r.classification==='USABLE_RESIDUAL'?0x67dcff:0xff9e52)})),.65));
     }
     const max = Math.max(1, ...p.bulkheads.map(w => w.massKg));
     root.add(mesh(p.bulkheads.filter(w => !state.disabledBulkheadIds.includes(w.id)).map(w => ({ id: w.id, solids: w.pieces, color: w.id === selected || w.adjacentCompartmentIds.includes(selected ?? '') ? new THREE.Color(0xffe5a4) : mode === 'Compartment Mass' ? new THREE.Color().setHSL(.6 - .6 * Math.log1p(w.massKg) / Math.log1p(max), .7, .55) : new THREE.Color(w.materialId==='TITANIUM_STRUCTURAL_ALLOY'?0x69c4cf:w.materialId==='LIGHT_STRUCTURAL_ALLOY'?0x849ccf:0x9a9d9a).multiplyScalar(.7+Math.min(.5,w.thicknessMm/180)) })), ['Compartments', 'Isolation', 'Compartment Connectivity'].includes(mode) ? .32 : 1));

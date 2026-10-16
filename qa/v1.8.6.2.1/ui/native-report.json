@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "BALANCED actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "BALANCED same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "BLOCK_ASSEMBLY actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "BLOCK_ASSEMBLY same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "SPINE_AND_MODULES actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "SPINE_AND_MODULES same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "TRUSS_POD actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "TRUSS_POD same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "TWIN_HULL actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "TWIN_HULL same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "CORE_AND_NACELLES actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "CORE_AND_NACELLES same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "STACKED_BLOCKS actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "STACKED_BLOCKS same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "HYBRID actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "HYBRID same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "Residual and unresolved diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Placement diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Legacy .2 interior import is exact, not automatically upgraded",
+      "passed": true
+    },
+    {
+      "name": "Narrow layout",
+      "passed": true
+    },
+    {
+      "name": "Console errors zero",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "method": "Full exports compared as bytes for repeat determinism. Only one parsed QA export retained at a time; explicit Node GC between cases and Chrome GC after complete case. Cross-runtime mass differences are recorded separately, not treated as equal. Shared cgroup limit 8GiB.",
+  "evidence": {
+    "generationMatrix": "../native-ui-bounded.log",
+    "diagnosticTail": "../native-ui-complete.log",
+    "matrixRegeneratedDuringTail": false
+  }
+}

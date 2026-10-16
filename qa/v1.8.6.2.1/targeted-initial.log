@@ -1,0 +1,35 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.2.1
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1361ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  318ms
+ ✓ tests/interior.test.ts (20 tests) 135612ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  5026ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  7104ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6439ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  10382ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  14318ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  16617ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8381ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  7202ms
+   ✓ temporary breach/open/removed-wall analysis never edits design or another instance  357ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  765ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  895ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  1278ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  12333ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  6429ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  7338ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  28219ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2291ms
+ ✓ tests/free-mount.test.ts (18 tests) 5543ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4403ms
+
+⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯
+Error: Channel closed
+ ❯ target.send node:internal/child_process:794:16
+ ❯ ProcessWorker.send ../shipyard-v1.8.6.0/node_modules/tinypool/dist/index.js:140:41
+ ❯ MessagePort.<anonymous> ../shipyard-v1.8.6.0/node_modules/tinypool/dist/index.js:149:62
+ ❯ [nodejs.internal.kHybridDispatch] node:internal/event_target:856:20
+ ❯ MessagePort.<anonymous> node:internal/per_context/messageport:23:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'ERR_IPC_CHANNEL_CLOSED' }

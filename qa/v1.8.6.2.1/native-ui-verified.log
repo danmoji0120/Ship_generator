@@ -1,0 +1,23 @@
+PASS BALANCED Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS BLOCK_ASSEMBLY Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS SPINE_AND_MODULES Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS TRUSS_POD Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS TWIN_HULL Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS CORE_AND_NACELLES Production Generate, finite physical data and exact IDs/topology, no weapons
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForEvent: Page crashed
+=========================== logs ===========================
+waiting for event "download"
+============================================================
+    at current (/workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:15:46)
+    at /workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:27:95
+
+Node.js v24.19.0

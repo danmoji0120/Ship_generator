@@ -1,0 +1,959 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Narrow layout\n    at check (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:3:25)\n    at file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:22:53",
+  "checks": [
+    {
+      "name": "BALANCED actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "BALANCED same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "BLOCK_ASSEMBLY actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "BLOCK_ASSEMBLY same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "SPINE_AND_MODULES actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "SPINE_AND_MODULES same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "TRUSS_POD actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "TRUSS_POD same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "TWIN_HULL actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "TWIN_HULL same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "CORE_AND_NACELLES actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "CORE_AND_NACELLES same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "STACKED_BLOCKS actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "STACKED_BLOCKS same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "HYBRID actual Production Generate: finite audit, unarmed, engines, mandatory requirements",
+      "passed": true
+    },
+    {
+      "name": "HYBRID same-browser repeated exported JSON exactly equal",
+      "passed": true
+    },
+    {
+      "name": "Residual and unresolved diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Residual and unresolved diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Placement diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Legacy .2 interior import is exact, not automatically upgraded",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "rows": [
+    {
+      "id": "BALANCED",
+      "digest": "7258eaa509e03c10f736fcea569e418e06c0b6bae03277a1cba4e8f3108c3fe8",
+      "normalizedHash": "ced4f8746b2f39e45fe58b3104b94788409ac933133999ad753a7815cfe6b1f2",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/citadel/0",
+        "comp/citadel/1",
+        "comp/citadel/2"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/citadel/0/comp/citadel/1",
+          "from": "comp/citadel/0",
+          "to": "comp/citadel/1",
+          "boundaryRef": "boundary/comp/citadel/0/comp/citadel/1",
+          "openingRef": "opening/bulkhead/comp/citadel/0/comp/citadel/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/citadel/1/comp/citadel/2",
+          "from": "comp/citadel/1",
+          "to": "comp/citadel/2",
+          "boundaryRef": "boundary/comp/citadel/1/comp/citadel/2",
+          "openingRef": "opening/bulkhead/comp/citadel/1/comp/citadel/2"
+        }
+      ],
+      "unarmed": true,
+      "engines": 2,
+      "baseMassKg": 628103584.6566122,
+      "maximum": 5000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 9910344.967566425,
+        "validInteriorM3": 9900977.37141145,
+        "assignedM3": 9900977.371411417,
+        "geometricAssignedM3": 9900977.371411417,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 3.3433087673428665e-8,
+        "unresolvedCandidateM3": 0.00010751231642053892,
+        "solidOccupiedM3": 9367.596302346445,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -0.0002548847061026795,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 3,
+      "bulkheads": 2,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 628103584.6566122,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 788402796,
+        "node": {
+          "rss": 237240320,
+          "heapTotal": 117403648,
+          "heapUsed": 44988400,
+          "external": 4206606,
+          "arrayBuffers": 280894
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 320331016,
+        "node": {
+          "rss": 239067136,
+          "heapTotal": 49508352,
+          "heapUsed": 45112896,
+          "external": 4170867,
+          "arrayBuffers": 214908
+        }
+      }
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "digest": "e3f12b902a55cebfd5eb120c9a5aa6d18cdb3c9079a37533a97a8307617629ff",
+      "normalizedHash": "22647e74cf9e008e71b9ff9f6917935e0458009df0cf0f9bc24d55882c6477dd",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/combat-core/0",
+        "comp/combat-core/1",
+        "comp/drive-block/0",
+        "comp/drive-block/1",
+        "comp/magazine--1/0",
+        "comp/magazine--1/1",
+        "comp/magazine-1/0",
+        "comp/magazine-1/1"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/combat-core/0/comp/combat-core/1",
+          "from": "comp/combat-core/0",
+          "to": "comp/combat-core/1",
+          "boundaryRef": "boundary/comp/combat-core/0/comp/combat-core/1",
+          "openingRef": "opening/bulkhead/comp/combat-core/0/comp/combat-core/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/drive-block/0/comp/drive-block/1",
+          "from": "comp/drive-block/0",
+          "to": "comp/drive-block/1",
+          "boundaryRef": "boundary/comp/drive-block/0/comp/drive-block/1",
+          "openingRef": "opening/bulkhead/comp/drive-block/0/comp/drive-block/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/magazine--1/0/comp/magazine--1/1",
+          "from": "comp/magazine--1/0",
+          "to": "comp/magazine--1/1",
+          "boundaryRef": "boundary/comp/magazine--1/0/comp/magazine--1/1",
+          "openingRef": "opening/bulkhead/comp/magazine--1/0/comp/magazine--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/magazine-1/0/comp/magazine-1/1",
+          "from": "comp/magazine-1/0",
+          "to": "comp/magazine-1/1",
+          "boundaryRef": "boundary/comp/magazine-1/0/comp/magazine-1/1",
+          "openingRef": "opening/bulkhead/comp/magazine-1/0/comp/magazine-1/1"
+        }
+      ],
+      "unarmed": true,
+      "engines": 2,
+      "baseMassKg": 1003069874.4130862,
+      "maximum": 10000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 2399830.557005098,
+        "validInteriorM3": 2263969.7293497813,
+        "assignedM3": 2263969.4403403057,
+        "geometricAssignedM3": 2370382.8856216865,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 0.28900947559178525,
+        "unresolvedCandidateM3": 106413.44528138055,
+        "solidOccupiedM3": 29447.382374019395,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -8.333028012064148e-8,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [
+          "fore-armor"
+        ],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 8,
+      "bulkheads": 4,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 1003069874.4130862,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 1113333464,
+        "node": {
+          "rss": 398290944,
+          "heapTotal": 182415360,
+          "heapUsed": 41818600,
+          "external": 192214193,
+          "arrayBuffers": 449136
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 885086192,
+        "node": {
+          "rss": 358469632,
+          "heapTotal": 50819072,
+          "heapUsed": 41937416,
+          "external": 4333169,
+          "arrayBuffers": 383129
+        }
+      }
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "digest": "3d5ebb7b0383c827ec8506fc492f837ae47abe9e6ad7b40ca21db0f2f7fce7be",
+      "normalizedHash": "fa89f7eeff659e9dd554570aaa491806cedd47b64cfdf52d52390fb4dc4ff89e",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/breech--1/0",
+        "comp/breech--1/1",
+        "comp/drive--1/0",
+        "comp/drive--1/1",
+        "comp/breech-1/0",
+        "comp/breech-1/1",
+        "comp/drive-1/0",
+        "comp/drive-1/1"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/breech--1/0/comp/breech--1/1",
+          "from": "comp/breech--1/0",
+          "to": "comp/breech--1/1",
+          "boundaryRef": "boundary/comp/breech--1/0/comp/breech--1/1",
+          "openingRef": "opening/bulkhead/comp/breech--1/0/comp/breech--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/drive--1/0/comp/drive--1/1",
+          "from": "comp/drive--1/0",
+          "to": "comp/drive--1/1",
+          "boundaryRef": "boundary/comp/drive--1/0/comp/drive--1/1",
+          "openingRef": "opening/bulkhead/comp/drive--1/0/comp/drive--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/breech-1/0/comp/breech-1/1",
+          "from": "comp/breech-1/0",
+          "to": "comp/breech-1/1",
+          "boundaryRef": "boundary/comp/breech-1/0/comp/breech-1/1",
+          "openingRef": "opening/bulkhead/comp/breech-1/0/comp/breech-1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/drive-1/0/comp/drive-1/1",
+          "from": "comp/drive-1/0",
+          "to": "comp/drive-1/1",
+          "boundaryRef": "boundary/comp/drive-1/0/comp/drive-1/1",
+          "openingRef": "opening/bulkhead/comp/drive-1/0/comp/drive-1/1"
+        }
+      ],
+      "unarmed": true,
+      "engines": 2,
+      "baseMassKg": 247345491.7012234,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 443880.2974425494,
+        "validInteriorM3": 348442.8394259011,
+        "assignedM3": 348442.8394257917,
+        "geometricAssignedM3": 428039.2655307464,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 1.0945488814046238e-7,
+        "unresolvedCandidateM3": 79596.42610495468,
+        "solidOccupiedM3": 15841.031942912321,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -0.000031265769157737515,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [
+          "axial-spine",
+          "axis-reinforcement"
+        ],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 8,
+      "bulkheads": 4,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 247319657.1958718,
+      "crossRuntimeMassDeltaKg": 25834.50535160303,
+      "firstMemory": {
+        "browserJsHeapUsed": 1921199920,
+        "node": {
+          "rss": 360689664,
+          "heapTotal": 48721920,
+          "heapUsed": 42087648,
+          "external": 4323926,
+          "arrayBuffers": 373886
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 619818228,
+        "node": {
+          "rss": 360742912,
+          "heapTotal": 48721920,
+          "heapUsed": 42133152,
+          "external": 4323474,
+          "arrayBuffers": 373434
+        }
+      }
+    },
+    {
+      "id": "TRUSS_POD",
+      "digest": "1add1abd7ac6fec8785b07523d17b32f6781c34bdde6e9f95c97beba66a2cf73",
+      "normalizedHash": "5c47dbfa76e4cd3f1aa1e39a12d9fb8877a436f166a7312236d4a59dd7048938",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/pressure-core/0",
+        "comp/pressure-core/1",
+        "comp/sensor-forebody/0",
+        "comp/sensor-forebody/1",
+        "comp/weapon-pod--1/0",
+        "comp/weapon-pod--1/1",
+        "comp/engine-pod--1/0",
+        "comp/engine-pod--1/1",
+        "comp/weapon-pod-1/0",
+        "comp/weapon-pod-1/1",
+        "comp/engine-pod-1/0",
+        "comp/engine-pod-1/1"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/pressure-core/0/comp/pressure-core/1",
+          "from": "comp/pressure-core/0",
+          "to": "comp/pressure-core/1",
+          "boundaryRef": "boundary/comp/pressure-core/0/comp/pressure-core/1",
+          "openingRef": "opening/bulkhead/comp/pressure-core/0/comp/pressure-core/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/sensor-forebody/0/comp/sensor-forebody/1",
+          "from": "comp/sensor-forebody/0",
+          "to": "comp/sensor-forebody/1",
+          "boundaryRef": "boundary/comp/sensor-forebody/0/comp/sensor-forebody/1",
+          "openingRef": "opening/bulkhead/comp/sensor-forebody/0/comp/sensor-forebody/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/weapon-pod--1/0/comp/weapon-pod--1/1",
+          "from": "comp/weapon-pod--1/0",
+          "to": "comp/weapon-pod--1/1",
+          "boundaryRef": "boundary/comp/weapon-pod--1/0/comp/weapon-pod--1/1",
+          "openingRef": "opening/bulkhead/comp/weapon-pod--1/0/comp/weapon-pod--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/engine-pod--1/0/comp/engine-pod--1/1",
+          "from": "comp/engine-pod--1/0",
+          "to": "comp/engine-pod--1/1",
+          "boundaryRef": "boundary/comp/engine-pod--1/0/comp/engine-pod--1/1",
+          "openingRef": "opening/bulkhead/comp/engine-pod--1/0/comp/engine-pod--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/weapon-pod-1/0/comp/weapon-pod-1/1",
+          "from": "comp/weapon-pod-1/0",
+          "to": "comp/weapon-pod-1/1",
+          "boundaryRef": "boundary/comp/weapon-pod-1/0/comp/weapon-pod-1/1",
+          "openingRef": "opening/bulkhead/comp/weapon-pod-1/0/comp/weapon-pod-1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/engine-pod-1/0/comp/engine-pod-1/1",
+          "from": "comp/engine-pod-1/0",
+          "to": "comp/engine-pod-1/1",
+          "boundaryRef": "boundary/comp/engine-pod-1/0/comp/engine-pod-1/1",
+          "openingRef": "opening/bulkhead/comp/engine-pod-1/0/comp/engine-pod-1/1"
+        },
+        {
+          "id": "edge/passage/0/3",
+          "from": "comp/pressure-core/0",
+          "to": "comp/sensor-forebody/1",
+          "boundaryRef": "interface/0/3",
+          "openingRef": "passage/0/3"
+        }
+      ],
+      "unarmed": true,
+      "engines": 2,
+      "baseMassKg": 240528862.70754644,
+      "maximum": 10000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 765089.183478303,
+        "validInteriorM3": 683390.5416325042,
+        "assignedM3": 683390.5416323201,
+        "geometricAssignedM3": 754462.0119981095,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 1.8407525130949607e-7,
+        "unresolvedCandidateM3": 71071.47036578938,
+        "solidOccupiedM3": 10627.17148563371,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -0.000005647450713668644,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 12,
+      "bulkheads": 6,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 240528862.70754644,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 515162272,
+        "node": {
+          "rss": 373080064,
+          "heapTotal": 48721920,
+          "heapUsed": 42186392,
+          "external": 4334142,
+          "arrayBuffers": 384102
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 1473414716,
+        "node": {
+          "rss": 442626048,
+          "heapTotal": 48721920,
+          "heapUsed": 42220152,
+          "external": 192768320,
+          "arrayBuffers": 384911
+        }
+      }
+    },
+    {
+      "id": "TWIN_HULL",
+      "digest": "64c1b70ce9a4b8ebb5d0a8e2f0bf9670469f16b1c042afdadbdb93f4f6baef6c",
+      "normalizedHash": "0d77712d670e4c4334177d2147d53b3078398f96b79e87a4b2c331bcb0ac4924",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/central-bridge/0",
+        "comp/central-bridge/1",
+        "comp/independent-hull--1/0",
+        "comp/independent-hull--1/1",
+        "comp/independent-hull--1/2",
+        "comp/independent-hull-1/0",
+        "comp/independent-hull-1/1",
+        "comp/independent-hull-1/2"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/central-bridge/0/comp/central-bridge/1",
+          "from": "comp/central-bridge/0",
+          "to": "comp/central-bridge/1",
+          "boundaryRef": "boundary/comp/central-bridge/0/comp/central-bridge/1",
+          "openingRef": "opening/bulkhead/comp/central-bridge/0/comp/central-bridge/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/independent-hull--1/0/comp/independent-hull--1/1",
+          "from": "comp/independent-hull--1/0",
+          "to": "comp/independent-hull--1/1",
+          "boundaryRef": "boundary/comp/independent-hull--1/0/comp/independent-hull--1/1",
+          "openingRef": "opening/bulkhead/comp/independent-hull--1/0/comp/independent-hull--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/independent-hull--1/1/comp/independent-hull--1/2",
+          "from": "comp/independent-hull--1/1",
+          "to": "comp/independent-hull--1/2",
+          "boundaryRef": "boundary/comp/independent-hull--1/1/comp/independent-hull--1/2",
+          "openingRef": "opening/bulkhead/comp/independent-hull--1/1/comp/independent-hull--1/2"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/independent-hull-1/0/comp/independent-hull-1/1",
+          "from": "comp/independent-hull-1/0",
+          "to": "comp/independent-hull-1/1",
+          "boundaryRef": "boundary/comp/independent-hull-1/0/comp/independent-hull-1/1",
+          "openingRef": "opening/bulkhead/comp/independent-hull-1/0/comp/independent-hull-1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/independent-hull-1/1/comp/independent-hull-1/2",
+          "from": "comp/independent-hull-1/1",
+          "to": "comp/independent-hull-1/2",
+          "boundaryRef": "boundary/comp/independent-hull-1/1/comp/independent-hull-1/2",
+          "openingRef": "opening/bulkhead/comp/independent-hull-1/1/comp/independent-hull-1/2"
+        }
+      ],
+      "unarmed": true,
+      "engines": 4,
+      "baseMassKg": 542525923.7397575,
+      "maximum": 10000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 2067480.1257918363,
+        "validInteriorM3": 2052975.8105779456,
+        "assignedM3": 2052975.8105714386,
+        "geometricAssignedM3": 2052975.8105714386,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 0.000006506946051667461,
+        "unresolvedCandidateM3": 0,
+        "solidOccupiedM3": 14504.315213123493,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": 7.671489173667341e-7,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 8,
+      "bulkheads": 5,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 542525923.7397575,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 525565828,
+        "node": {
+          "rss": 374358016,
+          "heapTotal": 48721920,
+          "heapUsed": 42291792,
+          "external": 4410335,
+          "arrayBuffers": 460295
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 1255571652,
+        "node": {
+          "rss": 374280192,
+          "heapTotal": 48984064,
+          "heapUsed": 42328984,
+          "external": 4345009,
+          "arrayBuffers": 394969
+        }
+      }
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "digest": "6b548df1cdb823edfdfb9aa32fed875ddd14b478b590128ccbdb4d646daba53c",
+      "normalizedHash": "c7768778636d87fcc1a49ecec0570ceae1d91ee8fa621d96f787089aa75cfeee",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/command-core/0",
+        "comp/command-core/1",
+        "comp/lateral-drive--1/0",
+        "comp/lateral-drive--1/1",
+        "comp/vertical-drive--1/0",
+        "comp/vertical-drive--1/1",
+        "comp/lateral-drive-1/0",
+        "comp/lateral-drive-1/1",
+        "comp/vertical-drive-1/0",
+        "comp/vertical-drive-1/1"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/command-core/0/comp/command-core/1",
+          "from": "comp/command-core/0",
+          "to": "comp/command-core/1",
+          "boundaryRef": "boundary/comp/command-core/0/comp/command-core/1",
+          "openingRef": "opening/bulkhead/comp/command-core/0/comp/command-core/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/lateral-drive--1/0/comp/lateral-drive--1/1",
+          "from": "comp/lateral-drive--1/0",
+          "to": "comp/lateral-drive--1/1",
+          "boundaryRef": "boundary/comp/lateral-drive--1/0/comp/lateral-drive--1/1",
+          "openingRef": "opening/bulkhead/comp/lateral-drive--1/0/comp/lateral-drive--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/vertical-drive--1/0/comp/vertical-drive--1/1",
+          "from": "comp/vertical-drive--1/0",
+          "to": "comp/vertical-drive--1/1",
+          "boundaryRef": "boundary/comp/vertical-drive--1/0/comp/vertical-drive--1/1",
+          "openingRef": "opening/bulkhead/comp/vertical-drive--1/0/comp/vertical-drive--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/lateral-drive-1/0/comp/lateral-drive-1/1",
+          "from": "comp/lateral-drive-1/0",
+          "to": "comp/lateral-drive-1/1",
+          "boundaryRef": "boundary/comp/lateral-drive-1/0/comp/lateral-drive-1/1",
+          "openingRef": "opening/bulkhead/comp/lateral-drive-1/0/comp/lateral-drive-1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/vertical-drive-1/0/comp/vertical-drive-1/1",
+          "from": "comp/vertical-drive-1/0",
+          "to": "comp/vertical-drive-1/1",
+          "boundaryRef": "boundary/comp/vertical-drive-1/0/comp/vertical-drive-1/1",
+          "openingRef": "opening/bulkhead/comp/vertical-drive-1/0/comp/vertical-drive-1/1"
+        }
+      ],
+      "unarmed": true,
+      "engines": 4,
+      "baseMassKg": 342352407.451026,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 144113.493232003,
+        "validInteriorM3": 127348.68416529377,
+        "assignedM3": 127348.68416501685,
+        "geometricAssignedM3": 139989.16744076993,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 2.769239157238472e-7,
+        "unresolvedCandidateM3": 12640.483275753091,
+        "solidOccupiedM3": 4124.326267042606,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -0.00047610884916566865,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 10,
+      "bulkheads": 5,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 342352407.451026,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 1456989292,
+        "node": {
+          "rss": 417542144,
+          "heapTotal": 181104640,
+          "heapUsed": 42369744,
+          "external": 4339244,
+          "arrayBuffers": 389204
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 1033908844,
+        "node": {
+          "rss": 417558528,
+          "heapTotal": 51343360,
+          "heapUsed": 42413936,
+          "external": 4339696,
+          "arrayBuffers": 389656
+        }
+      }
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "digest": "6d51a20bf60d0626f6080c82c239ccf9dfe0fa122b844b22da96352c01399743",
+      "normalizedHash": "f49540b326032875bdc93250c78985c80502e772deee568ed1042f86d8a5c5d1",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/armored-keel/0",
+        "comp/armored-keel/1",
+        "comp/magazine-deck/0",
+        "comp/command-deck/0"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/armored-keel/0/comp/armored-keel/1",
+          "from": "comp/armored-keel/0",
+          "to": "comp/armored-keel/1",
+          "boundaryRef": "boundary/comp/armored-keel/0/comp/armored-keel/1",
+          "openingRef": "opening/bulkhead/comp/armored-keel/0/comp/armored-keel/1"
+        },
+        {
+          "id": "edge/passage/1/2",
+          "from": "comp/armored-keel/1",
+          "to": "comp/magazine-deck/0",
+          "boundaryRef": "interface/1/2",
+          "openingRef": "passage/1/2"
+        },
+        {
+          "id": "edge/passage/2/3",
+          "from": "comp/magazine-deck/0",
+          "to": "comp/command-deck/0",
+          "boundaryRef": "interface/2/3",
+          "openingRef": "passage/2/3"
+        }
+      ],
+      "unarmed": true,
+      "engines": 1,
+      "baseMassKg": 226502358.71543053,
+      "maximum": 10000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 2226034.9777604095,
+        "validInteriorM3": 2215728.6699218457,
+        "assignedM3": 2215728.669921718,
+        "geometricAssignedM3": 2215728.669921718,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 1.276336754104946e-7,
+        "unresolvedCandidateM3": 0,
+        "solidOccupiedM3": 10306.307839127769,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -5.639583016178462e-7,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 4,
+      "bulkheads": 1,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 226502358.71543053,
+      "crossRuntimeMassDeltaKg": 0,
+      "firstMemory": {
+        "browserJsHeapUsed": 767035256,
+        "node": {
+          "rss": 432185344,
+          "heapTotal": 183988224,
+          "heapUsed": 42485616,
+          "external": 4401783,
+          "arrayBuffers": 451743
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 305494080,
+        "node": {
+          "rss": 432324608,
+          "heapTotal": 48197632,
+          "heapUsed": 42501976,
+          "external": 4335792,
+          "arrayBuffers": 385752
+        }
+      }
+    },
+    {
+      "id": "HYBRID",
+      "digest": "61d08d3f08fe20c5e4a0bf27149050814bab39691f615118aee6121dd97552bc",
+      "normalizedHash": "d03bb42c846b440c85e8a2c670411672eba0295ef17b2b0c26a7f3b57b0bf052",
+      "version": "1.8.6.2.1",
+      "ids": [
+        "comp/breech--1/0",
+        "comp/breech--1/1",
+        "comp/drive--1/0",
+        "comp/drive--1/1",
+        "comp/breech-1/0",
+        "comp/breech-1/1",
+        "comp/drive-1/0",
+        "comp/drive-1/1"
+      ],
+      "graph": [
+        {
+          "id": "edge/opening/bulkhead/comp/breech--1/0/comp/breech--1/1",
+          "from": "comp/breech--1/0",
+          "to": "comp/breech--1/1",
+          "boundaryRef": "boundary/comp/breech--1/0/comp/breech--1/1",
+          "openingRef": "opening/bulkhead/comp/breech--1/0/comp/breech--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/drive--1/0/comp/drive--1/1",
+          "from": "comp/drive--1/0",
+          "to": "comp/drive--1/1",
+          "boundaryRef": "boundary/comp/drive--1/0/comp/drive--1/1",
+          "openingRef": "opening/bulkhead/comp/drive--1/0/comp/drive--1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/breech-1/0/comp/breech-1/1",
+          "from": "comp/breech-1/0",
+          "to": "comp/breech-1/1",
+          "boundaryRef": "boundary/comp/breech-1/0/comp/breech-1/1",
+          "openingRef": "opening/bulkhead/comp/breech-1/0/comp/breech-1/1"
+        },
+        {
+          "id": "edge/opening/bulkhead/comp/drive-1/0/comp/drive-1/1",
+          "from": "comp/drive-1/0",
+          "to": "comp/drive-1/1",
+          "boundaryRef": "boundary/comp/drive-1/0/comp/drive-1/1",
+          "openingRef": "opening/bulkhead/comp/drive-1/0/comp/drive-1/1"
+        },
+        {
+          "id": "edge/passage/1/2",
+          "from": "comp/breech--1/1",
+          "to": "comp/drive--1/0",
+          "boundaryRef": "interface/1/2",
+          "openingRef": "passage/1/2"
+        },
+        {
+          "id": "edge/passage/5/6",
+          "from": "comp/breech-1/1",
+          "to": "comp/drive-1/0",
+          "boundaryRef": "interface/5/6",
+          "openingRef": "passage/5/6"
+        }
+      ],
+      "unarmed": true,
+      "engines": 2,
+      "baseMassKg": 282591477.62647414,
+      "maximum": 10000000000,
+      "audit": {
+        "scope": "EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS",
+        "candidateDomainM3": 438015.62609184853,
+        "validInteriorM3": 233905.05917587533,
+        "assignedM3": 233905.05900898142,
+        "geometricAssignedM3": 414596.63933723536,
+        "usableResidualM3": 0,
+        "nonallocatableM3": 0.0001668939109757045,
+        "unresolvedCandidateM3": 180691.58032825397,
+        "solidOccupiedM3": 23418.98668394961,
+        "exteriorConnectedM3": 0,
+        "overlapVolumeM3": 0,
+        "conservationErrorM3": -0.00009625493061578524,
+        "recoveredM3": 0,
+        "unquantifiedRegionIds": [
+          "axial-spine",
+          "axis-reinforcement"
+        ],
+        "confidence": "FINITE_CSG_WITH_EXPLICIT_UNRESOLVED_REGIONS",
+        "note": "Valid=confirmed assigned + usable residual + nonallocatable. Unresolved chamber volume is separate, never certified valid. Solid counts union in exclusive bay domains. Partition slabs/portal tubes and unquantified hollow status of reserved stock are outside this denominator. Recovered pockets are counted once as assigned; partition-free residuals remain distinct. Clearance uses a conservative .5m cube witness, not total-volume suitability."
+      },
+      "compartments": 8,
+      "bulkheads": 4,
+      "requirements": [
+        {
+          "id": "unarmed-delivery",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "base-mass",
+          "status": "SATISFIED"
+        },
+        {
+          "id": "structural-connectivity",
+          "status": "SATISFIED"
+        }
+      ],
+      "nodeReferenceBaseMassKg": 282591475.2031888,
+      "crossRuntimeMassDeltaKg": 2.4232853651046753,
+      "firstMemory": {
+        "browserJsHeapUsed": 375113392,
+        "node": {
+          "rss": 433438720,
+          "heapTotal": 182677504,
+          "heapUsed": 42508864,
+          "external": 4339012,
+          "arrayBuffers": 388972
+        }
+      },
+      "afterRepeatMemory": {
+        "browserJsHeapUsed": 643260436,
+        "node": {
+          "rss": 433434624,
+          "heapTotal": 49246208,
+          "heapUsed": 42525160,
+          "external": 4338560,
+          "arrayBuffers": 388520
+        }
+      }
+    }
+  ]
+}

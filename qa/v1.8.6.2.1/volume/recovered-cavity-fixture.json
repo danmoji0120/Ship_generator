@@ -1,0 +1,23 @@
+{
+  "data": {
+    "domainM3": 8000.000000000001,
+    "emptyM3": 7943.999999999999,
+    "groups": [
+      7935.999999999999,
+      7.999999999999999
+    ],
+    "classification": "RECOVERABLE",
+    "recoveredId": "closed-cavity-fixture",
+    "recoveredM3": 8,
+    "openingReferences": [],
+    "clearanceWitness": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "actualWallCount": 6,
+    "renderedWallCount": 4,
+    "fixtureOnly": true
+  },
+  "errors": []
+}

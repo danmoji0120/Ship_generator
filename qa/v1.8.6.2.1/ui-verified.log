@@ -1,0 +1,37 @@
+PASS Production default generates a real frame and unarmed base
+PASS Production has no development API
+PASS Frame Blueprint import exact
+PASS Editing inputs does not regenerate
+PASS Compartments view responds
+PASS Bulkheads view responds
+PASS Openings view responds
+PASS Compartment Connectivity view responds
+PASS Isolation view responds
+PASS Compartment Mass view responds
+PASS Compartment Inspector shows actual CSG volume, pressure capability and frame references
+PASS Real boundary hypothesis updates vacuum exposure
+PASS Interior hypothesis does not mutate exported design
+PASS Interior Ray query returns real finite space and boundary intervals
+PASS Member Inspector reads geometry/material/mass/node references
+PASS Disabled member analysis reports components
+PASS Debug analysis never changes stored design
+PASS On-demand finite structural Ray Query hits actual member
+PASS Actual structural floor rejects impossible cap
+PASS Rejected design retains previous exact ship
+PASS Real Production surface picking installs external gun with internal frame present
+PASS Mounted mass rises, frame/base remain unchanged
+PASS External equipment removal preserves frame
+PASS Undo restores exact equipment and frame
+PASS Redo removes equipment
+PASS Equipped frame Blueprint export/import exact
+PASS Prior frame Blueprint remains exact, with no automatic interior
+PASS Historical weapons/geometry/materials preserved with no automatic frame
+PASS Legacy frame Inspector explicitly absent
+PASS Legacy Frame request preserves original rendering without inserting data
+PASS Residual categories and unknown boundaries have real Inspector output
+PASS Future placement query reports actual fixture and candidate test count
+PASS Real Production surface picking installs external missile with compartments present
+PASS Missile mass charged without changing internal space or base cap
+PASS V1.8.6.2 saved interior is exact and receives no automatic volume audit
+PASS Narrow layout has no page overflow
+PASS Console/page errors zero

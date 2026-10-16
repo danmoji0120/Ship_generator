@@ -1,0 +1,24 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: .compartmentPlan.compartments.2.physicalVolume.connectedCells.1042.vertices.14.z: 221.1153937888697 vs 234.90553000000003
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:9:176)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201)
+    at walk (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-compare.mjs:10:201) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

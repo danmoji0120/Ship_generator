@@ -1,0 +1,14 @@
+{
+  "before": [
+    "function",
+    "function",
+    "function"
+  ],
+  "after": [
+    true,
+    true,
+    true
+  ],
+  "errors": [],
+  "scope": "Actual Production native → historical armed Blueprint switch. Old frame and compartment callback references are removed, current physical data remains usable."
+}

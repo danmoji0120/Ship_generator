@@ -1,0 +1,197 @@
+{
+  "order": {
+    "version": "1.8.6.0.2",
+    "shipyardId": "aegis",
+    "shipClass": "Frigate",
+    "lengthM": 100,
+    "seed": 19,
+    "targetMassKg": 30000000,
+    "primaryPriority": "BALANCED",
+    "architecture": {
+      "mode": "REQUIRE",
+      "grammar": "MONOLITHIC"
+    },
+    "mainArmor": {
+      "mode": "AUTO"
+    },
+    "auxiliaryArmor": {
+      "mode": "AUTO"
+    },
+    "hull": {
+      "mode": "AUTO"
+    },
+    "armorDistribution": "BALANCED",
+    "armorZoneRequirements": [],
+    "maximumBaseMassKg": 200000000
+  },
+  "importMs": 23.753457999999995,
+  "profiling": false,
+  "rows": [
+    {
+      "stage": "COLD",
+      "ms": 7916.193911,
+      "cpuMs": 10331.332,
+      "serializationMs": 219.47505700000056,
+      "before": {
+        "rss": 40132608,
+        "heapTotal": 12054528,
+        "heapUsed": 6353904,
+        "external": 3933602,
+        "arrayBuffers": 143615,
+        "peakRssBytes": 41549824
+      },
+      "during": {
+        "rss": 668393472,
+        "heapTotal": 569790464,
+        "heapUsed": 496237368,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 668393472
+      },
+      "retainedAfterGc": {
+        "rss": 638496768,
+        "heapTotal": 441638912,
+        "heapUsed": 154557736,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 735715328
+      },
+      "compartments": 3,
+      "roomCells": 2888,
+      "interiorCacheBytes": 40865508,
+      "validationCacheBytes": 40865582,
+      "deterministic": true
+    },
+    {
+      "stage": "WARM_HIT",
+      "ms": 1647.4998450000003,
+      "cpuMs": 2010.743,
+      "serializationMs": 194.68765600000006,
+      "before": {
+        "rss": 637513728,
+        "heapTotal": 331538432,
+        "heapUsed": 154367448,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 735715328
+      },
+      "during": {
+        "rss": 733171712,
+        "heapTotal": 443637760,
+        "heapUsed": 360354816,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 735715328
+      },
+      "retainedAfterGc": {
+        "rss": 638541824,
+        "heapTotal": 371646464,
+        "heapUsed": 163279496,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 802377728
+      },
+      "compartments": 3,
+      "roomCells": 2888,
+      "interiorCacheBytes": 40865508,
+      "validationCacheBytes": 40865582,
+      "deterministic": true
+    },
+    {
+      "stage": "WARM_MISS",
+      "ms": 7457.680090999998,
+      "cpuMs": 9384.157,
+      "serializationMs": 198.1409160000003,
+      "before": {
+        "rss": 569298944,
+        "heapTotal": 221401088,
+        "heapUsed": 54441832,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 802377728
+      },
+      "during": {
+        "rss": 754593792,
+        "heapTotal": 535863296,
+        "heapUsed": 357743672,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 802377728
+      },
+      "retainedAfterGc": {
+        "rss": 719171584,
+        "heapTotal": 440852480,
+        "heapUsed": 164189960,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 853897216
+      },
+      "compartments": 3,
+      "roomCells": 2888,
+      "interiorCacheBytes": 40865508,
+      "validationCacheBytes": 40865582,
+      "deterministic": true
+    },
+    {
+      "stage": "CHANGED_DESIGN",
+      "ms": 7376.930714000002,
+      "cpuMs": 8757.756,
+      "serializationMs": 219.14900299999863,
+      "before": {
+        "rss": 718573568,
+        "heapTotal": 354082816,
+        "heapUsed": 155084840,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 853897216
+      },
+      "during": {
+        "rss": 857825280,
+        "heapTotal": 722599936,
+        "heapUsed": 614786096,
+        "external": 3933658,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 857825280
+      },
+      "retainedAfterGc": {
+        "rss": 756244480,
+        "heapTotal": 503701504,
+        "heapUsed": 162870008,
+        "external": 3930113,
+        "arrayBuffers": 143631,
+        "peakRssBytes": 920604672
+      },
+      "compartments": 3,
+      "roomCells": 2799,
+      "interiorCacheBytes": 39063080,
+      "validationCacheBytes": 39063154,
+      "deterministic": true
+    }
+  ],
+  "query": {
+    "preparationMs": 491.97047100000054,
+    "rayMs": 4.235533000002761,
+    "hits": 1,
+    "cellCount": 11561,
+    "placementMs": 4.510307000000466,
+    "candidates": 3
+  },
+  "finalMemory": {
+    "rss": 790425600,
+    "heapTotal": 450523136,
+    "heapUsed": 175460248,
+    "external": 3930113,
+    "arrayBuffers": 143631,
+    "peakRssBytes": 920604672
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "os": "6.18.44",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpus": 3,
+    "platform": "linux",
+    "execArgv": [
+      "--expose-gc"
+    ]
+  }
+}

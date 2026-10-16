@@ -7,6 +7,7 @@ import type { ShipViewer } from "../rendering/viewer";
 const el = (id: string) => document.getElementById(id)!;
 export function showPhysicalInspector(b: AnyShipBlueprint) {
   const d = b.schemaVersion === 2 ? b.physicalDesign : undefined;
+  el('physical-selection').onchange=null;
   el("migrate-physical").hidden = !!d || b.schemaVersion !== 2;
   el("physical-summary").textContent = d
     ? `PHYSICAL V1.8.6.0 · ${d.surfaces.filter((s) => s.kind === "ARMOR").length} armor plates · ${d.surfaces.filter((s) => s.kind === "HULL").length} hull shells · ${d.provenance}`

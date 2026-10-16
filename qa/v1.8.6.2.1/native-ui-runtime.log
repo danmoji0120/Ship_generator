@@ -1,0 +1,22 @@
+PASS BALANCED Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+PASS BLOCK_ASSEMBLY Production Generate, finite physical data and exact IDs/topology, no weapons
+PASS Same-browser same-order JSON exactly deterministic
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(generated.physicalDesign.mass.ledger.baseEstimatedDryMassKg<=generated.procurement.order.maximumBaseMassKg)
+
+    at file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:25:278 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

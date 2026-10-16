@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "Production default generates a real frame and unarmed base",
+      "passed": true
+    },
+    {
+      "name": "Production has no development API",
+      "passed": true
+    },
+    {
+      "name": "Frame Blueprint import exact",
+      "passed": true
+    },
+    {
+      "name": "Editing inputs does not regenerate",
+      "passed": true
+    },
+    {
+      "name": "Compartments view responds",
+      "passed": true
+    },
+    {
+      "name": "Bulkheads view responds",
+      "passed": true
+    },
+    {
+      "name": "Openings view responds",
+      "passed": true
+    },
+    {
+      "name": "Compartment Connectivity view responds",
+      "passed": true
+    },
+    {
+      "name": "Isolation view responds",
+      "passed": true
+    },
+    {
+      "name": "Compartment Mass view responds",
+      "passed": true
+    },
+    {
+      "name": "Compartment Inspector shows actual CSG volume, pressure capability and frame references",
+      "passed": true
+    },
+    {
+      "name": "Real boundary hypothesis updates vacuum exposure",
+      "passed": true
+    },
+    {
+      "name": "Interior hypothesis does not mutate exported design",
+      "passed": true
+    },
+    {
+      "name": "Interior Ray query returns real finite space and boundary intervals",
+      "passed": true
+    },
+    {
+      "name": "Member Inspector reads geometry/material/mass/node references",
+      "passed": true
+    },
+    {
+      "name": "Disabled member analysis reports components",
+      "passed": true
+    },
+    {
+      "name": "Debug analysis never changes stored design",
+      "passed": true
+    },
+    {
+      "name": "On-demand finite structural Ray Query hits actual member",
+      "passed": true
+    },
+    {
+      "name": "Actual structural floor rejects impossible cap",
+      "passed": true
+    },
+    {
+      "name": "Rejected design retains previous exact ship",
+      "passed": true
+    },
+    {
+      "name": "Real Production surface picking installs external gun with internal frame present",
+      "passed": true
+    },
+    {
+      "name": "Mounted mass rises, frame/base remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "External equipment removal preserves frame",
+      "passed": true
+    },
+    {
+      "name": "Undo restores exact equipment and frame",
+      "passed": true
+    },
+    {
+      "name": "Redo removes equipment",
+      "passed": true
+    },
+    {
+      "name": "Equipped frame Blueprint export/import exact",
+      "passed": true
+    },
+    {
+      "name": "Prior frame Blueprint remains exact, with no automatic interior",
+      "passed": true
+    },
+    {
+      "name": "Historical weapons/geometry/materials preserved with no automatic frame",
+      "passed": true
+    },
+    {
+      "name": "Legacy frame Inspector explicitly absent",
+      "passed": true
+    },
+    {
+      "name": "Legacy Frame request preserves original rendering without inserting data",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: BALANCED Production Generate, exact native fixture, no weapons, finite category audit\n    at check (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-ui.mjs:13:31)\n    at file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-ui.mjs:124:9"
+}

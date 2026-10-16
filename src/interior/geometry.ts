@@ -17,7 +17,13 @@ export const paddedBounds = (points: Vec3[]) => { const b = boundsOf(points); fo
 export const inclusiveClip = (poly: Vec3[], n: Vec3, d: number, positive = false) => poly.every(v => Math.abs(dot(v, n) - d) < 1e-7) ? poly : clipHalfSpace(poly, n, d, positive);
 export function polygonSlice(p: Vec3[], axis: 'y' | 'z', lo: number, hi: number) { let q = inclusiveClip(p, axisVector(axis), hi); q = inclusiveClip(q, axisVector(axis), lo, true); return q; }
 export const inside = (p: Vec3, c: ConvexCell, tolerance = 1e-7) => planes(c).every(n => dot(n.n, p) <= n.d + tolerance);
-export function context(b: ShipBlueprint, refs?: OccupancyRef[]) {
+const sharedContexts=new WeakMap<ShipBlueprint,{key:string;ctx:ReturnType<typeof createContext>}>();
+export const releaseInteriorContext=(b:ShipBlueprint)=>sharedContexts.delete(b);
+export function context(b: ShipBlueprint, refs?: OccupancyRef[], exactInputKey?:string) {
+    const prior=sharedContexts.get(b);if(!refs&&exactInputKey&&prior?.key===exactInputKey)return prior.ctx;
+    const result=createContext(b,refs);if(!refs&&exactInputKey)sharedContexts.set(b,{key:exactInputKey,ctx:result});return result;
+}
+function createContext(b:ShipBlueprint,refs?:OccupancyRef[]){
     const inventory: OccupancyRef[] = refs ?? [
         ...(b.physicalDesign?.surfaces.flatMap(s => s.pieces.map((_, i) => ({ id: `skin/${s.id}/${i}`, kind: 'SKIN' as const, ownerId: s.id, index: i }))) ?? []),
         // Union(envelope + skin) equals Union(exclusive frame pieces + skin). Reusing envelopes
@@ -33,11 +39,21 @@ export function context(b: ShipBlueprint, refs?: OccupancyRef[]) {
         cache.set(item, c);
     } return c; };
     const byId = new Map(items.map(i => [i.ref.id, i]));
-    return { inventory, items, near, cells, byId };
+    const result={inventory,items,near,cells,byId};
+    return result;
 }
 export type InteriorContext = ReturnType<typeof context>;
 /** Finite union material intersection, with stable ownership, no shell/frame double count. */
-export function emptyVolume(domains: ConvexCell[], ctx: InteriorContext) {
+const volumeMemo=new WeakMap<InteriorContext,Map<string,ReturnType<typeof calculateEmptyVolume>>>();
+/** Exact convex point sets identify the same finite domains irrespective of face triangulation.
+ * Cache is context-owned (exact source input) and bounded; edited points cannot hit. */
+export function emptyVolume(domains:ConvexCell[],ctx:InteriorContext){
+ let memo=volumeMemo.get(ctx);if(!memo){memo=new Map();volumeMemo.set(ctx,memo);}
+ const key=JSON.stringify(domains.map(c=>[...new Set(c.faces.flat().map(p=>[p.x,p.y,p.z].join(',')))].sort()));
+ const old=memo.get(key);if(old)return {...old,centroid:{...old.centroid},refs:[...old.refs]};
+ const result=calculateEmptyVolume(domains,ctx);if(memo.size>=128)memo.delete(memo.keys().next().value!);memo.set(key,result);return {...result,centroid:{...result.centroid},refs:[...result.refs]};
+}
+function calculateEmptyVolume(domains: ConvexCell[], ctx: InteriorContext) {
     let domainVolume = 0, occupied = 0;
     const refs = new Set<string>();
     let moment = { x: 0, y: 0, z: 0 };

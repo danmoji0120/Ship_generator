@@ -1,0 +1,27 @@
+{
+  "method": "Same container, fresh Node processes ×3 per version, same old harness and full old fixture input retained for comparable RSS. No concurrent tests/browser. Module import separate, generation excludes import/startup; explicit query follows repeat. p95 with n=3 is sample max. Separate --expose-gc order-only conditions probe cold/warm hit/all target caches cleared/changed seed, CPU/heap/serialization/query; not pooled with the three-sample timings. Extra architecture n=1 each and small instrumentation-off samples, not a statistical overhead isolation.",
+  "rows": [
+    {
+      "phase": "before",
+      "n": 3,
+      "coldMedianMs": 10367.170172999999,
+      "coldP95Ms": 12137.004550000001,
+      "warmMedianMs": 2560.8336880000006,
+      "warmP95Ms": 2612.3308439999983,
+      "peakRssBytes": 1260503040,
+      "interiorCacheBytes": 48280290,
+      "validationCacheBytes": 48280370
+    },
+    {
+      "phase": "after",
+      "n": 3,
+      "coldMedianMs": 8430.085899000002,
+      "coldP95Ms": 8475.005212,
+      "warmMedianMs": 2361.2125289999985,
+      "warmP95Ms": 2374.809113000001,
+      "peakRssBytes": 1071628288,
+      "interiorCacheBytes": 42899676,
+      "validationCacheBytes": 42899756
+    }
+  ]
+}

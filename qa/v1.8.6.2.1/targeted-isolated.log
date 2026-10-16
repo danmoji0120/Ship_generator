@@ -1,0 +1,39 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.2.1
+
+ ✓ tests/interior.test.ts (20 tests) 123131ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  4436ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6549ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6644ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  10343ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  11883ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  13070ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8725ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6837ms
+   ✓ temporary breach/open/removed-wall analysis never edits design or another instance  311ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  688ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  814ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  1221ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  12340ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  6507ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  6899ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  23420ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2212ms
+ ✓ tests/interior-stability.test.ts (13 tests) 64386ms
+   ✓ new BALANCED category ledger, finite geometry, graph and unchanged mass  3805ms
+   ✓ new BLOCK_ASSEMBLY category ledger, finite geometry, graph and unchanged mass  5239ms
+   ✓ new SPINE_AND_MODULES category ledger, finite geometry, graph and unchanged mass  4931ms
+   ✓ new TRUSS_POD category ledger, finite geometry, graph and unchanged mass  7692ms
+   ✓ new TWIN_HULL category ledger, finite geometry, graph and unchanged mass  10866ms
+   ✓ new CORE_AND_NACELLES category ledger, finite geometry, graph and unchanged mass  9385ms
+   ✓ new STACKED_BLOCKS category ledger, finite geometry, graph and unchanged mass  7646ms
+   ✓ new HYBRID category ledger, finite geometry, graph and unchanged mass  4715ms
+   ✓ small/medium/large OBB candidate search checks actual continuous space, clearance and confidence deterministically  1738ms
+   ✓ category audit corruption is rejected and edited source geometry invalidates exact content caches  8136ms
+ ✓ tests/free-mount.test.ts (18 tests) 5608ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4495ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 866ms
+
+ Test Files  4 passed (4)
+      Tests  67 passed (67)
+   Start at  17:42:46
+   Duration  196.58s (transform 1.02s, setup 0ms, collect 1.75s, tests 193.99s, environment 1ms, prepare 214ms)

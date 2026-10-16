@@ -2,8 +2,8 @@ import {timedPhysical,recordPhysicalStage} from '../physical/diagnostics';
 import {connectedVoidCells} from './connectivity';
 import type { ShipBlueprint } from '../blueprint/types';
 import type { CompartmentPlan } from './types';
-import { interiorSignature,interiorInput } from './build';
-import { context, emptyVolume, carve, inside, polygonPrism, exteriorAudit, polygonSlice, characteristicWidth,clipPolygonToCell,paddedBounds } from './geometry';
+import { signature,interiorInput,updateInteriorSpaceAccounting } from './build';
+import { context, releaseInteriorContext, emptyVolume, carve, inside, polygonPrism, exteriorAudit, polygonSlice, characteristicWidth,clipPolygonToCell,paddedBounds } from './geometry';
 import { physicalSources } from '../physical/geometry';
 import { solidCell, cellVolume, planes, subtractCell, intersectCells, cellBounds } from '../physical/convex';
 import { closureResidual, structuralMaterialVolume } from '../structure/geometry';
@@ -14,6 +14,7 @@ import { area } from '../generation/armor/panels';
 import { analyzeInterior } from './graph';
 import type { PanelSolid } from '../generation/armor/types';
 let lastSuccessfulKey:string|undefined;
+export const clearInteriorValidationCache=()=>{lastSuccessfulKey=undefined;};
 export const interiorValidationCacheBytes=()=>lastSuccessfulKey?lastSuccessfulKey.length*2:0;
 const cache = new WeakMap<CompartmentPlan, {
     key: string;
@@ -25,19 +26,18 @@ export function validateCompartmentPlan(b:ShipBlueprint):string[]{return timedPh
 function checkCompartmentPlan(b: ShipBlueprint): string[] {
     const p = b.compartmentPlan;
     if (!p)
-        return b.generatorVersion === '1.8.6.2' ? ['Required compartment plan absent'] : [];
-    const signature = interiorSignature(b), key = JSON.stringify([p,b.physicalDesign?.mass.actualBulkheadMassKg,b.physicalDesign?.mass.actualClosureMassKg]) + interiorInput(b), found = cache.get(p);
-    if (found?.key === key)
-        return [...found.issues];
-    if(lastSuccessfulKey===key){recordPhysicalStage('Interior validation cache hit',0);return [];}
+        return ['1.8.6.2','1.8.6.2.1'].includes(b.generatorVersion) ? ['Required compartment plan absent'] : [];
+    const input=interiorInput(b), sourceSignature = signature(input), key = JSON.stringify([p,b.physicalDesign?.mass.actualBulkheadMassKg,b.physicalDesign?.mass.actualClosureMassKg]) + input, found = cache.get(p);
+    if (found?.key === key){releaseInteriorContext(b);return [...found.issues];}
+    if(lastSuccessfulKey===key){releaseInteriorContext(b);recordPhysicalStage('Interior validation cache hit',0);return [];}
     const issues: string[] = [];
     try {
-        if (p.schemaVersion !== 1 || p.version !== '1.8.6.2' || p.architecture !== b.architecture.grammar || p.sourceSignature !== signature)
+        if (p.schemaVersion !== 1 || !['1.8.6.2','1.8.6.2.1'].includes(p.version) || p.version!==b.generatorVersion || p.architecture !== b.architecture.grammar || p.sourceSignature !== sourceSignature)
             throw Error('Interior source/version/geometry signature differs');
         for (const list of [p.compartments, p.bulkheads, p.boundaries, p.openings])
             if (new Set(list.map(x => x.id)).size !== list.length)
                 throw Error('Interior IDs duplicated');
-        const ctx = context(b), refs = new Set(ctx.inventory.map(r => r.id));
+        const ctx = context(b,undefined,input), refs = new Set(ctx.inventory.map(r => r.id));
         if (JSON.stringify(ctx.inventory) !== JSON.stringify(p.occupancy))
             throw Error('Interior occupancy inventory differs');
         const sources = physicalSources(b).filter(s => s.kind === 'HULL'), host = new Map(sources.map(s => [s.parent, s.cells.map(c => c.cell)]));
@@ -62,6 +62,7 @@ function checkCompartmentPlan(b: ShipBlueprint): string[] {
                 throw Error('Interior compartment has no closed Hull authority ' + c.id);
             if (c.physicalVolume.occupiedRefs.some(id => !refs.has(id)))
                 throw Error('Unknown compartment occupancy reference');
+            if(!close(volume(c.physicalVolume.domains),c.domainVolumeM3))throw Error('Invalid finite candidate domain geometry/volume');
             const ds = c.physicalVolume.domains.map(solidCell);
             for (const d of ds) {
                 let outside = [d];
@@ -91,11 +92,12 @@ function checkCompartmentPlan(b: ShipBlueprint): string[] {
                 throw Error('Interior structure/skin reference invalid');
         }
         // Domain overlap implies empty-space double counting even before solid subtraction.
-        const domains = p.compartments.flatMap(c => c.physicalVolume.domains.map(s => ({ id: c.id, cell: solidCell(s), bounds: boundsOf(s.vertices) }))), nearDomains = boundsIndex(domains);
+        const recoveredParents=new Set(p.compartments.filter(c=>c.recoveryOf).map(c=>c.recoveryOf));
+        const domains = p.compartments.flatMap(c => (c.recoveryOf||recoveredParents.has(c.id)?c.physicalVolume.connectedCells:c.physicalVolume.domains).map((s,i) => ({ id: c.id, cell: solidCell(s), bounds: boundsOf(s.vertices) }))).map((d,i)=>({...d,i})), nearDomains = boundsIndex(domains);
         let overlap = 0;
         for (let i = 0; i < domains.length; i++)
             for (const d of nearDomains(domains[i].bounds)) {
-                if (domains.indexOf(d) <= i)
+                if (d.i <= i)
                     continue;
                 const hit = intersectCells(domains[i].cell, d.cell);
                 if (hit)
@@ -168,6 +170,19 @@ function checkCompartmentPlan(b: ShipBlueprint): string[] {
         }
         if (!close(p.spatialAccounting.compartmentVoidM3, p.compartments.reduce((n, c) => n + c.volumeM3, 0)))
             throw Error('Interior space allocation differs');
+        if(p.version==='1.8.6.2.1'){
+         const derived={...p};updateInteriorSpaceAccounting(derived);
+         if(JSON.stringify(derived.volumeAudit)!==JSON.stringify(p.volumeAudit))throw Error('Interior category volume audit differs');
+         const audit=p.volumeAudit!;if(Math.abs(audit.conservationErrorM3)>Math.max(1e-5,audit.candidateDomainM3*1e-7)||Math.abs(audit.validInteriorM3-audit.assignedM3-audit.usableResidualM3-audit.nonallocatableM3)>1e-5)throw Error('Interior category conservation failed');
+         const parentVoidNear=new Map(p.compartments.map(c=>[c.id,boundsIndex(c.physicalVolume.connectedCells.map(s=>({cell:solidCell(s),bounds:boundsOf(s.vertices)})))]));
+         const residualCells=p.unresolvedVoidPockets.flatMap(r=>(r.cells??[]).map(s=>({r,cell:solidCell(s),bounds:boundsOf(s.vertices)}))).map((x,i)=>({...x,i})),nearResidual=boundsIndex(residualCells);
+         for(const item of residualCells){const parent=compartments.get(item.r.candidateCompartmentId);if(!parent)throw Error('Residual parent absent');let outside=[item.cell];for(const s of parent.physicalVolume.domains)outside=outside.flatMap(c=>subtractCell(c,solidCell(s)));if(outside.reduce((n,c)=>n+cellVolume(c),0)>1e-6)throw Error('Residual outside actual candidate domain');
+          for(const s of parentVoidNear.get(parent.id)!(item.bounds)){const hit=intersectCells(item.cell,s.cell);if(hit&&cellVolume(hit)>1e-6)throw Error('Assigned and residual space overlap');}
+          for(const other of nearResidual(item.bounds))if(other.i<item.i){const hit=intersectCells(item.cell,other.cell);if(hit&&cellVolume(hit)>1e-6)throw Error('Residual categories overlap');}
+         }
+         for(const r of p.unresolvedVoidPockets){if(r.cells){if(!close(volume(r.cells),r.volumeM3))throw Error('Residual finite volume differs');const cells=r.cells.map(solidCell);if(connectedVoidCells(cells).filter(g=>g.volumeM3>1e-6).length>1)throw Error('Residual component is disconnected');if(emptyVolume(cells,ctx).occupiedVolumeM3>Math.max(1e-6,r.volumeM3*1e-7))throw Error('Residual intersects actual solid stock');}if(r.classification==='ASSIGNED_RECOVERED'&&!p.compartments.some(c=>c.id===r.recoveredCompartmentId&&c.recoveryOf===r.candidateCompartmentId&&close(c.volumeM3,r.volumeM3)))throw Error('Recovered void reference invalid');}
+
+        }
         const mass = p.massAccounting, bv = p.bulkheads.reduce((n, w) => n + w.massKg, 0), dv = p.openings.reduce((n, o) => n + (o.closure?.massKg ?? 0), 0);
         if (!close(bv, mass.bulkheadMassKg) || !close(dv, mass.closureMassKg) || !close(bv, b.physicalDesign!.mass.actualBulkheadMassKg!) || !close(dv, b.physicalDesign!.mass.actualClosureMassKg!))
             throw Error('Interior mass ledger differs');
@@ -195,6 +210,7 @@ function checkCompartmentPlan(b: ShipBlueprint): string[] {
     catch (error) {
         issues.push(error instanceof Error ? error.message : String(error));
     }
+    releaseInteriorContext(b);
     if(!issues.length)lastSuccessfulKey=key;
     cache.set(p, { key, issues: [...issues] });
     return issues;

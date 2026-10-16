@@ -1,0 +1,6 @@
+REUSE genuine eight-order generation evidence; finish diagnostic tail only
+PASS Residual and unresolved diagnostics
+PASS Placement diagnostics
+PASS Legacy .2 interior import is exact, not automatically upgraded
+PASS Narrow layout
+PASS Console errors zero

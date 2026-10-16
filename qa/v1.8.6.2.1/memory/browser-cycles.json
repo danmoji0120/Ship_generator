@@ -1,0 +1,97 @@
+{
+  "browserVersion": "151.0.7922.173",
+  "method": "Six alternating saved designs, Debug ON/OFF, real query preparation, ship replacement, explicit query release on swap, WebGL renderer geometry counters and Chrome GC/JSHeapUsedSize. No new generation during cycle measurement; Node RSS is not browser memory; GPU bytes are unavailable.",
+  "rows": [
+    {
+      "cycle": 0,
+      "id": "BALANCED",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 29,
+        "textures": 3
+      },
+      "calls": 29,
+      "jsHeapUsed": 47909320
+    },
+    {
+      "cycle": 1,
+      "id": "TWIN_HULL",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 91,
+        "textures": 3
+      },
+      "calls": 91,
+      "jsHeapUsed": 136393316
+    },
+    {
+      "cycle": 2,
+      "id": "BALANCED",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 29,
+        "textures": 3
+      },
+      "calls": 29,
+      "jsHeapUsed": 48797236
+    },
+    {
+      "cycle": 3,
+      "id": "TWIN_HULL",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 91,
+        "textures": 3
+      },
+      "calls": 91,
+      "jsHeapUsed": 137093788
+    },
+    {
+      "cycle": 4,
+      "id": "BALANCED",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 29,
+        "textures": 3
+      },
+      "calls": 29,
+      "jsHeapUsed": 49133492
+    },
+    {
+      "cycle": 5,
+      "id": "TWIN_HULL",
+      "debug": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "normal": {
+        "geometries": 91,
+        "textures": 3
+      },
+      "calls": 91,
+      "jsHeapUsed": 137248028
+    }
+  ],
+  "disposal": {
+    "blueprintReleased": true,
+    "shipReleased": true,
+    "geometryCount": 0,
+    "sceneChildren": 0
+  },
+  "errors": []
+}

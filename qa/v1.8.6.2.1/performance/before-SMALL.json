@@ -1,0 +1,366 @@
+{
+  "order": {
+    "version": "1.8.6.0.2",
+    "shipyardId": "aegis",
+    "shipClass": "Frigate",
+    "lengthM": 100,
+    "seed": 19,
+    "targetMassKg": 30000000,
+    "primaryPriority": "BALANCED",
+    "architecture": {
+      "mode": "REQUIRE",
+      "grammar": "MONOLITHIC"
+    },
+    "mainArmor": {
+      "mode": "AUTO"
+    },
+    "auxiliaryArmor": {
+      "mode": "AUTO"
+    },
+    "hull": {
+      "mode": "AUTO"
+    },
+    "armorDistribution": "BALANCED",
+    "armorZoneRequirements": [],
+    "maximumBaseMassKg": 200000000
+  },
+  "moduleInitMs": 22.700195,
+  "firstMs": 9942.857958,
+  "repeatMs": [
+    1791.2497629999998
+  ],
+  "deterministic": true,
+  "profile": {
+    "totalMs": 9942.667938,
+    "stages": {
+      "Procurement hull": {
+        "ms": 13.58661399999999,
+        "calls": 1
+      },
+      "Procurement structural armor": {
+        "ms": 14.70158699999999,
+        "calls": 1
+      },
+      "Procurement armor coverage": {
+        "ms": 27.826960999999983,
+        "calls": 1
+      },
+      "Procurement core systems": {
+        "ms": 20.950406999999984,
+        "calls": 1
+      },
+      "Procurement exterior details": {
+        "ms": 237.96412,
+        "calls": 1
+      },
+      "Procurement meso": {
+        "ms": 466.40944200000007,
+        "calls": 1
+      },
+      "Structural cache miss": {
+        "ms": 0,
+        "calls": 1
+      },
+      "Structural joints": {
+        "ms": 15.674840999999788,
+        "calls": 1
+      },
+      "Structural graph construction": {
+        "ms": 0.7076730000001135,
+        "calls": 1
+      },
+      "Structural material union": {
+        "ms": 39.54689499999995,
+        "calls": 1
+      },
+      "Structural generation": {
+        "ms": 84.609151,
+        "calls": 1
+      },
+      "Cache key": {
+        "ms": 1.1371259999998529,
+        "calls": 1
+      },
+      "Source geometry": {
+        "ms": 25.80246699999998,
+        "calls": 1
+      },
+      "Design policy": {
+        "ms": 1.344981000000189,
+        "calls": 2
+      },
+      "Outer area union": {
+        "ms": 120.41844799999058,
+        "calls": 2082
+      },
+      "Layer integration": {
+        "ms": 63.093632000016896,
+        "calls": 8732
+      },
+      "ARMOR physical construction": {
+        "ms": 1485.2915049999995,
+        "calls": 31
+      },
+      "HULL physical construction": {
+        "ms": 178.39640499999996,
+        "calls": 1
+      },
+      "Mass ledger": {
+        "ms": 0.5530550000003132,
+        "calls": 1
+      },
+      "Cache store": {
+        "ms": 104.19707900000003,
+        "calls": 1
+      },
+      "Procurement physical build": {
+        "ms": 1924.6583090000001,
+        "calls": 1
+      },
+      "Hull support graph and joints": {
+        "ms": 8.629048000000239,
+        "calls": 1
+      },
+      "Final structural connectivity": {
+        "ms": 0.17114200000014534,
+        "calls": 1
+      },
+      "Hull skin support ties": {
+        "ms": 92.77875999999969,
+        "calls": 1
+      },
+      "Structural skin integration": {
+        "ms": 279.07067400000005,
+        "calls": 1
+      },
+      "Interior cache miss": {
+        "ms": 0,
+        "calls": 1
+      },
+      "Interior exterior boundary audit": {
+        "ms": 85.52429299999994,
+        "calls": 1
+      },
+      "Interior volume accounting": {
+        "ms": 539.5120740000002,
+        "calls": 3
+      },
+      "Interior void connectivity": {
+        "ms": 1202.7192810000001,
+        "calls": 3
+      },
+      "Interior bulkhead and openings": {
+        "ms": 63.98779700000068,
+        "calls": 2
+      },
+      "Interior extraction and partition": {
+        "ms": 2027.845358,
+        "calls": 1
+      },
+      "Interior module interfaces": {
+        "ms": 0.40891300000021147,
+        "calls": 1
+      },
+      "Interior graph construction": {
+        "ms": 0.22237800000038987,
+        "calls": 1
+      },
+      "Interior isolation analysis": {
+        "ms": 0.39604400000007445,
+        "calls": 1
+      },
+      "Interior mass accounting": {
+        "ms": 0.04200200000013865,
+        "calls": 1
+      },
+      "Interior total": {
+        "ms": 2316.2939030000002,
+        "calls": 1
+      },
+      "Procurement requirement verification": {
+        "ms": 1.2865959999999177,
+        "calls": 1
+      },
+      "Interior geometry validation": {
+        "ms": 3756.329692000001,
+        "calls": 1
+      },
+      "Procurement final validation": {
+        "ms": 4382.560380999999,
+        "calls": 1
+      }
+    },
+    "cache": {
+      "hits": 0,
+      "misses": 1
+    }
+  },
+  "architecture": "MONOLITHIC",
+  "compartmentCount": 3,
+  "validInteriorVolumeM3": 73518.91630670309,
+  "pressurizableVolumeM3": 73518.91630670309,
+  "bulkheadCount": 2,
+  "bulkheadMassKg": 299123.7722571832,
+  "closureMassKg": 80.9479439999997,
+  "openingCount": 2,
+  "sealedCount": 1,
+  "isolationGroups": 2,
+  "exposureRatio": 0,
+  "breachExposureRatio": 0.30582175365145736,
+  "boundaryFailureExposureRatio": 1,
+  "materials": [
+    "HIGH_STRENGTH_STRUCTURAL_STEEL",
+    "HIGH_STRENGTH_STRUCTURAL_STEEL"
+  ],
+  "thicknessMm": [
+    20.459999999999997,
+    20.459999999999997
+  ],
+  "regions": [
+    {
+      "volumeId": "citadel",
+      "state": "EXTRACTED",
+      "grammar": "CONTINUOUS_STATION_BAYS",
+      "reason": "Finite Hull CSG minus actual skin/frame/solid-connector/core occupancy"
+    }
+  ],
+  "mass": {
+    "ledger": {
+      "version": 1,
+      "entries": [
+        {
+          "component": "HULL_SHELL",
+          "massKg": 1251936.484055723,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite shell material volumes × constituent kg/m³"
+        },
+        {
+          "component": "ARMOR",
+          "massKg": 5530112.052327573,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again"
+        },
+        {
+          "component": "STRUCTURAL_FRAME",
+          "massKg": 120212.21163961917,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Exclusive finite internal frame material × shared registry density"
+        },
+        {
+          "component": "STRUCTURAL_CONNECTOR",
+          "massKg": 0,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Existing connector/rail material union, alias trusses excluded, skins subtracted"
+        },
+        {
+          "component": "BULKHEAD",
+          "massKg": 299123.7722571832,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Finite boundary material minus actual occupied stock and apertures"
+        },
+        {
+          "component": "DOOR_HATCH",
+          "massKg": 80.9479439999997,
+          "source": "GEOMETRY_DERIVED",
+          "basis": "Real closure material in its sealed default position, no mass assigned to empty apertures"
+        },
+        {
+          "component": "STRUCTURE",
+          "massKg": 0,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Replace the old macro-frame-only 18% proxy by a complete inventory of primary frames for every StructuralVolume and every existing connector; do not retain that same proxy in parallel. Sub-resolution fittings are unquantified, not claimed massless."
+        },
+        {
+          "component": "CORE_EQUIPMENT",
+          "massKg": 13823.679286518764,
+          "source": "ESTIMATED",
+          "basis": "Unique existing assembly-part solid volumes × 160kg/m³ representation density"
+        },
+        {
+          "component": "MOUNTED_EQUIPMENT",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Actually installed saved equipment geometry × 160kg/m³, owned platform excluded"
+        },
+        {
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+          "basis": "Owned platform geometry × 2800kg/m³, counted once"
+        },
+        {
+          "component": "OTHER_ESTIMATED",
+          "massKg": 1828600,
+          "source": "LEGACY_ESTIMATE",
+          "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated"
+        }
+      ],
+      "baseEstimatedDryMassKg": 9043889.147510618,
+      "mountedEstimatedDryMassKg": 9043889.147510618,
+      "targetSemantics": "SOFT_TARGET_WITH_OPTIONAL_MAXIMUM",
+      "maximumAllowedMassKg": 200000000,
+      "baseRemainingKg": 20956110.852489382,
+      "mountedRemainingKg": 20956110.852489382,
+      "baseBudgetViolation": false,
+      "mountedLoadoutOverTarget": false,
+      "operationalConsumables": "NOT_INCLUDED"
+    },
+    "hullShellMassKg": 1251936.484055723,
+    "armorMassKg": 5530112.052327573,
+    "structuralMassEstimateKg": 0,
+    "actualFrameMassKg": 120212.21163961917,
+    "actualStructuralConnectorMassKg": 0,
+    "actualBulkheadMassKg": 299123.7722571832,
+    "actualClosureMassKg": 80.9479439999997,
+    "coreEquipmentMassEstimateKg": 13823.679286518764,
+    "playerMountedEquipmentMassEstimateKg": 0,
+    "unresolvedMassEstimateKg": 1828600,
+    "totalEstimatedDryMassKg": 9043889.147510618,
+    "targetMassKg": 30000000,
+    "remainingMassKg": 20956110.852489382,
+    "armorBudgetRemainingKg": 3579265.148722375,
+    "manufacturingCostIndexKg": 14524205.409641892,
+    "estimatedComponents": [
+      "Replace the old macro-frame-only 18% proxy by a complete inventory of primary frames for every StructuralVolume and every existing connector; do not retain that same proxy in parallel. Sub-resolution fittings are unquantified, not claimed massless.",
+      "Fasteners, local micro-stiffeners, weld filler and engineering margins not quantified.",
+      "Existing 10% unresolved propulsion/service equipment proxy remains; no new tanks/reactors claimed.",
+      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment"
+    ],
+    "legacyMassEstimateReplacedKg": 18286000
+  },
+  "cost": {
+    "model": "MATERIAL_FRAME_INTERIOR_INDEX_V3",
+    "structuralMaterial": 120212.21163961917,
+    "structuralFabrication": 20509.979671960107,
+    "interiorMaterial": 299204.7202011832,
+    "interiorFabrication": 16238.939025103642,
+    "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+    "material": 14524205.409641892,
+    "fabrication": 541673.2241166579,
+    "estimatedStructureAndCore": 27647.358573037527,
+    "yardProcessFactor": 1,
+    "total": 15549691.842869453,
+    "assumptions": [
+      "Interior: actual boundary/closure mass × registry cost; gross area × (6+2×tech) + portal count×250 + section/material variants×500, relative index only.",
+      "Material: actual finite layer mass × shared registry manufacturing cost index.",
+      "Fabrication: surviving area × layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+      "Frame: exclusive material mass × registry cost; fabrication = real member length × section perimeter × technology processing factor + actual joint count × 200 + section variant count × 2000. Relative manufacturing assumptions, not currency.",
+      "Remaining support/core retain estimated cost; no cost for uninstalled weapons."
+    ]
+  },
+  "compromises": [],
+  "queryPreparationMs": 472.5883300000005,
+  "queryCells": 12041,
+  "cacheBytes": 45906342,
+  "validationCacheBytes": 45906416,
+  "memory": {
+    "rss": 787091456,
+    "heapTotal": 677715968,
+    "heapUsed": 590230984,
+    "external": 3867435,
+    "arrayBuffers": 146103
+  },
+  "peakRss": 823070720
+}

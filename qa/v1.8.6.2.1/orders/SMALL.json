@@ -1,0 +1,25 @@
+{
+  "version": "1.8.6.0.2",
+  "shipyardId": "aegis",
+  "shipClass": "Frigate",
+  "lengthM": 100,
+  "seed": 19,
+  "targetMassKg": 30000000,
+  "primaryPriority": "BALANCED",
+  "architecture": {
+    "mode": "REQUIRE",
+    "grammar": "MONOLITHIC"
+  },
+  "mainArmor": {
+    "mode": "AUTO"
+  },
+  "auxiliaryArmor": {
+    "mode": "AUTO"
+  },
+  "hull": {
+    "mode": "AUTO"
+  },
+  "armorDistribution": "BALANCED",
+  "armorZoneRequirements": [],
+  "maximumBaseMassKg": 200000000
+}

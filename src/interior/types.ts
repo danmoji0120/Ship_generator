@@ -11,6 +11,7 @@ export interface OccupancyRef {
 }
 export interface InteriorCompartment {
     id: string;
+    recoveryOf?:string;
     parentStructuralVolumeRef: string;
     architectureRegionRef: string;
     /** Finite positive cells minus the referenced occupied material. These are NOT filled room boxes. */
@@ -122,7 +123,7 @@ export interface IsolationAnalysis {
 }
 export interface CompartmentPlan {
     schemaVersion: 1;
-    version: '1.8.6.2';
+    version: '1.8.6.2'|'1.8.6.2.1';
     sourceSignature: string;
     architecture: ArchitectureGrammar;
     compartments: InteriorCompartment[];
@@ -130,7 +131,7 @@ export interface CompartmentPlan {
     bulkheads: Bulkhead[];
     openings: InteriorOpening[];
     occupancy: OccupancyRef[];
-    unresolvedVoidPockets: {id:string;candidateCompartmentId:string;volumeM3:number;bounds:BoundsData;reason:string}[];
+    unresolvedVoidPockets: {id:string;candidateCompartmentId:string;volumeM3:number;bounds:BoundsData;reason:string;classification?:'USABLE_RESIDUAL'|'NONALLOCATABLE'|'ASSIGNED_RECOVERED'|'UNRESOLVED';cells?:PanelSolid[];clearanceWitness?:Vec3;recoveredCompartmentId?:string}[];
     adjacency: {
         from: string;
         to: string;
@@ -141,6 +142,7 @@ export interface CompartmentPlan {
     pressureGraphDefinition: InteriorGraphEdge[];
     exteriorNode: 'EXTERIOR';
     analysis: IsolationAnalysis;
+    volumeAudit?:{scope:'EXCLUSIVE_EXTRACTED_BAY_DOMAINS_EXCLUDING_PARTITION_SLABS';candidateDomainM3:number;validInteriorM3:number;assignedM3:number;geometricAssignedM3:number;usableResidualM3:number;nonallocatableM3:number;unresolvedCandidateM3:number;solidOccupiedM3:number;exteriorConnectedM3:number;overlapVolumeM3:number;conservationErrorM3:number;recoveredM3:number;unquantifiedRegionIds:string[];confidence:string;note:string};
     spatialAccounting: {
         compartmentVoidM3: number;
         openBulkheadPortalVoidM3: number;

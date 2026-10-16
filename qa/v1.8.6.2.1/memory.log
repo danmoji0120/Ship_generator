@@ -1,0 +1,48 @@
+{
+  cycle: 0,
+  id: 'BALANCED',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 29, textures: 3 },
+  calls: 29,
+  jsHeapUsed: 47909320
+}
+{
+  cycle: 1,
+  id: 'TWIN_HULL',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 91, textures: 3 },
+  calls: 91,
+  jsHeapUsed: 136393316
+}
+{
+  cycle: 2,
+  id: 'BALANCED',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 29, textures: 3 },
+  calls: 29,
+  jsHeapUsed: 48797236
+}
+{
+  cycle: 3,
+  id: 'TWIN_HULL',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 91, textures: 3 },
+  calls: 91,
+  jsHeapUsed: 137093788
+}
+{
+  cycle: 4,
+  id: 'BALANCED',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 29, textures: 3 },
+  calls: 29,
+  jsHeapUsed: 49133492
+}
+{
+  cycle: 5,
+  id: 'TWIN_HULL',
+  debug: { geometries: 6, textures: 1 },
+  normal: { geometries: 91, textures: 3 },
+  calls: 91,
+  jsHeapUsed: 137248028
+}

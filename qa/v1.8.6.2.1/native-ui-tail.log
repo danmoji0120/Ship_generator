@@ -1,0 +1,20 @@
+REUSE genuine eight-order generation evidence; finish diagnostic tail only
+PASS Residual and unresolved diagnostics
+PASS Placement diagnostics
+PASS Legacy .2 interior import is exact, not automatically upgraded
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Narrow layout
+    at check (file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:3:25)
+    at file:///workspace/shipyard-v1.8.6.2.1/tests/interior-stability-native-ui.mjs:22:53 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

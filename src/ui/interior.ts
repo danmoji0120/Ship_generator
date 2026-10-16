@@ -2,11 +2,14 @@ import type { AnyShipBlueprint } from '../blueprint/types';
 import type { ShipViewer } from '../rendering/viewer';
 import { createInteriorInstanceState } from '../interior/types';
 import { analyzeInterior } from '../interior/graph';
+import { physicalDiagnostics } from '../physical/diagnostics';
+import { interiorCacheBytes } from '../interior/build';
 import { prepareInteriorQueries } from '../interior/query';
 const el = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const tonnes = (n: number) => (n / 1000).toLocaleString(undefined, { maximumFractionDigits: 2 }) + ' t';
 export function showInteriorInspector(b: AnyShipBlueprint, viewer?: ShipViewer) {
     const p = b.schemaVersion === 2 ? b.compartmentPlan : undefined;
+    el('interior-selection').onchange=null;
     el('interior-summary').textContent = p ? `INTERIOR · ${p.compartments.length} compartments / ${p.bulkheads.length} bulkheads / ${p.openings.length} portals · ${tonnes(p.massAccounting.bulkheadMassKg + p.massAccounting.closureMassKg)}` : 'LEGACY INTERIOR · 저장된 구획 없음 · 로드 시 자동 삽입하지 않음';
     for (const id of ['interior-info', 'interior-analysis', 'interior-query-result'])
         el(id).textContent = '';
@@ -25,7 +28,7 @@ export function showInteriorInspector(b: AnyShipBlueprint, viewer?: ShipViewer) 
     select.dispatchEvent(new Event('change'));
     el('interior-opening').replaceChildren(...p.openings.filter(o => o.closure).map(o => new Option(`${o.id} · ${o.defaultState}`, o.id)));
     el('interior-wall').append(...p.bulkheads.map(w => new Option(w.id, w.id)));
-    el('interior-analysis').textContent = `Design: ${p.analysis.isolatedGroups.length} disconnected groups (check uncertainty) · exterior ${p.analysis.exteriorConnectedCompartmentIds.length} compartments (${(p.analysis.exposureRatio * 100).toFixed(3)}% volume) · ${p.analysis.uncertainCompartmentIds.length} unresolved\n${p.regions.filter(r => r.state === 'UNRESOLVED').map(r => r.volumeId + ': ' + r.reason).join('\n')}\nStructural allowance remaining ${tonnes(p.budgetAccounting.remainingStructureAllowanceKg)} · ${p.budgetAccounting.note}\nActual walls ${tonnes(p.massAccounting.bulkheadMassKg)} / closures ${tonnes(p.massAccounting.closureMassKg)}\n${p.massAccounting.remainingEstimateTreatment}`;
+    el('interior-analysis').textContent = `${p.volumeAudit?`Residual colors: nonallocatable purple / usable cyan / unresolved amber\nVOLUME AUDIT (m³): confirmed ${p.volumeAudit.validInteriorM3.toFixed(3)} / assigned ${p.volumeAudit.assignedM3.toFixed(3)} / usable residual ${p.volumeAudit.usableResidualM3.toExponential(3)} / nonallocatable ${p.volumeAudit.nonallocatableM3.toExponential(3)} / unresolved ${p.volumeAudit.unresolvedCandidateM3.toFixed(3)} / solid ${p.volumeAudit.solidOccupiedM3.toFixed(3)} / conservation error ${p.volumeAudit.conservationErrorM3.toExponential(3)}\nRecovered ${p.volumeAudit.recoveredM3.toFixed(3)}m³; unresolved boundaries ${p.volumeAudit.unquantifiedRegionIds.join(', ')||'none'}\n${p.volumeAudit.note}\n`:''}Retained interior cache estimate ${(interiorCacheBytes()/1048576).toFixed(2)}MiB (JSON UTF-16 estimate; browser RSS/heap not measured)\n${physicalDiagnostics(b)?JSON.stringify(physicalDiagnostics(b)): 'Performance profile off; no timing is fabricated.'}\nDesign: ${p.analysis.isolatedGroups.length} disconnected groups (check uncertainty) · exterior ${p.analysis.exteriorConnectedCompartmentIds.length} compartments (${(p.analysis.exposureRatio * 100).toFixed(3)}% volume) · ${p.analysis.uncertainCompartmentIds.length} unresolved\n${p.regions.filter(r => r.state === 'UNRESOLVED').map(r => r.volumeId + ': ' + r.reason).join('\n')}\nStructural allowance remaining ${tonnes(p.budgetAccounting.remainingStructureAllowanceKg)} · ${p.budgetAccounting.note}\nActual walls ${tonnes(p.massAccounting.bulkheadMassKg)} / closures ${tonnes(p.massAccounting.closureMassKg)}\n${p.massAccounting.remainingEstimateTreatment}`;
 }
 export function setupInteriorInspector(viewer: ShipViewer | undefined, current: () => AnyShipBlueprint) {
     if (viewer)
@@ -62,7 +65,8 @@ export function setupInteriorInspector(viewer: ShipViewer | undefined, current: 
         const parse = (id: string) => { const v = el<HTMLInputElement>(id).value.split(',').map(Number); if (v.length !== 3 || !v.every(Number.isFinite))
             throw Error('Finite xyz required'); return { x: v[0], y: v[1], z: v[2] }; };
         const q = prepareInteriorQueries(b), r = q.probe(parse('interior-origin'), parse('interior-direction'), Number(el<HTMLInputElement>('interior-distance').value));
-        el('interior-query-result').textContent = `${r.valid ? 'VALID' : 'INVALID'} · ${r.hits.length} finite intervals · ${q.cellCount} cells\n${r.hits.map(h => `${h.kind} ${h.id}\n${h.materialId ?? 'EMPTY SPACE / PORTAL'} ${h.thicknessMm ?? ''} / ${h.state ?? ''}\n${h.entryDistanceM.toFixed(4)} → ${h.exitDistanceM.toFixed(4)}m · LOS ${h.pathLengthM.toFixed(4)}m`).join('\n')}\n${r.warnings.join('\n')}`;
+        const candidates=q.placementCandidates({x:1,y:1,z:2},{clearanceM:.1,limit:3});
+        el('interior-query-result').textContent = `PLACEMENT FIXTURE 1×1×2m + .1m clearance: ${candidates.candidates.length} confirmed candidates / ${candidates.tested} tested (bounded search, not packing proof)\n${candidates.candidates.map(c=>c.compartmentId+' '+JSON.stringify(c.position)+' '+c.confidence).join('\n')}\n${r.valid ? 'VALID' : 'INVALID'} · ${r.hits.length} finite intervals · ${q.cellCount} cells\n${r.hits.map(h => `${h.kind} ${h.id}\n${h.materialId ?? 'EMPTY SPACE / PORTAL'} ${h.thicknessMm ?? ''} / ${h.state ?? ''}\n${h.entryDistanceM.toFixed(4)} → ${h.exitDistanceM.toFixed(4)}m · LOS ${h.pathLengthM.toFixed(4)}m`).join('\n')}\n${r.warnings.join('\n')}`;
     }
     catch (error) {
         el('interior-query-result').textContent = String(error);

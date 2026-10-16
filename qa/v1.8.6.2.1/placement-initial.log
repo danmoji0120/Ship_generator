@@ -1,0 +1,20 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.2.1
+
+ ✓ tests/interior-stability.test.ts > normal-index connectivity retains finite face contacts across normal bin boundaries; edge-only contact does not connect 10ms
+ ✓ tests/interior-stability.test.ts > actual solid cage leaves an independent recoverable cavity; recovery adds no fictitious access or pressure edge 202ms
+ ✓ tests/interior-stability.test.ts > a long thin residual is nonallocatable despite large total volume; partition contact stays unassigned 1ms
+ ↓ tests/interior-stability.test.ts > new BALANCED category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new BLOCK_ASSEMBLY category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new SPINE_AND_MODULES category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new TRUSS_POD category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new TWIN_HULL category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new CORE_AND_NACELLES category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new STACKED_BLOCKS category ledger, finite geometry, graph and unchanged mass
+ ↓ tests/interior-stability.test.ts > new HYBRID category ledger, finite geometry, graph and unchanged mass
+ ✓ tests/interior-stability.test.ts > small/medium/large OBB candidate search checks actual continuous space, clearance and confidence deterministically 1830ms
+ ↓ tests/interior-stability.test.ts > category audit corruption is rejected and edited source geometry invalidates exact content caches
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 9 skipped (13)
+   Start at  17:33:02
+   Duration  2.95s (transform 475ms, setup 0ms, collect 696ms, tests 2.04s, environment 0ms, prepare 62ms)

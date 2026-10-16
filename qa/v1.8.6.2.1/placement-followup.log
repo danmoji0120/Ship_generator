@@ -1,0 +1,9 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.2.1
+
+ ✓ tests/interior-stability.test.ts (13 tests | 12 skipped) 1660ms
+   ✓ small/medium/large OBB candidate search checks actual continuous space, clearance and confidence deterministically  1659ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 12 skipped (13)
+   Start at  18:19:19
+   Duration  2.60s (transform 480ms, setup 0ms, collect 692ms, tests 1.66s, environment 0ms, prepare 67ms)

@@ -1,0 +1,2 @@
+tests/interior-stability.test.ts(20,8): error TS7034: Variable 'blocks' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tests/interior-stability.test.ts(22,39): error TS7005: Variable 'blocks' implicitly has an 'any[]' type.

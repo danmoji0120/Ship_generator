@@ -1,0 +1,16 @@
+START memory.log
+PASS memory.log
+START callbacks.log
+PASS callbacks.log
+START recovery-browser.log
+PASS recovery-browser.log
+START bundle.log
+PASS bundle.log
+START controls.log
+PASS controls.log
+START performance.log
+PASS performance.log
+START profile-before.log
+PASS profile-before.log
+START profile-after.log
+PASS profile-after.log

@@ -8,6 +8,7 @@ const el = (id: string) => document.getElementById(id)!;
 const tonnes = (v: number) => (v / 1000).toLocaleString(undefined, { maximumFractionDigits: 2 }) + ' t';
 export function showStructuralInspector(b: AnyShipBlueprint, viewer?: ShipViewer) {
     const f = b.schemaVersion === 2 ? b.structuralFrame : undefined;
+    el('structural-selection').onchange=null;el('structural-disable').onchange=null;
     el('structural-summary').textContent = f ? `STRUCTURAL FRAME · ${f.members.length} members / ${f.joints.length} joints · ${f.analysis.components.length} component · ${tonnes(f.massAccounting.frameMassKg + f.massAccounting.connectorMassKg)}` : 'LEGACY STRUCTURE · 저장된 골조 없음 · 로드 시 자동 재설계하지 않음';
     el('structural-details').replaceChildren();
     el('structural-selection').replaceChildren();
