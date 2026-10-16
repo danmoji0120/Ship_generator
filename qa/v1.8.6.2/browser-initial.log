@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Error: REQUIRED_STRUCTURAL_CLOSED_CELL_UNAVAILABLE
+    at closedStructuralSolid (http://localhost:5183/src/structure/geometry.ts:135:9)
+    at Array.map (<anonymous>)
+    at http://localhost:5183/src/rendering/interior.ts:11:141
+    at Array.map (<anonymous>)
+    at roomSolids (http://localhost:5183/src/rendering/interior.ts:11:71)
+    at renderInterior (http://localhost:5183/src/rendering/interior.ts:39:20)
+    at ShipViewer.show (http://localhost:5183/src/rendering/viewer.ts:198:100)
+    at ShipViewer.snapshot (http://localhost:5183/src/rendering/viewer.ts:232:10)
+    at window.capture (eval at evaluate (:311:30), <anonymous>:1:632)
+    at eval (eval at evaluate (:311:30), <anonymous>:1:23)
+    at /workspace/shipyard-v1.8.6.2/tests/interior-browser.mjs:18:168 {
+  log: []
+}
+
+Node.js v24.19.0

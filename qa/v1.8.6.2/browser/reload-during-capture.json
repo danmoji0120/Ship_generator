@@ -1,0 +1,5 @@
+{
+  "rows": [],
+  "errors": [],
+  "error": "page.evaluate: TypeError: window.capture is not a function\n    at eval (eval at evaluate (:311:30), <anonymous>:1:28)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/shipyard-v1.8.6.2/tests/interior-browser.mjs:36:53"
+}

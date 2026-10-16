@@ -1,0 +1,5 @@
+{
+  "rows": [],
+  "errors": [],
+  "error": "page.evaluate: Error: REQUIRED_STRUCTURAL_CLOSED_CELL_UNAVAILABLE\n    at closedStructuralSolid (http://localhost:5183/src/structure/geometry.ts:135:9)\n    at Array.map (<anonymous>)\n    at http://localhost:5183/src/rendering/interior.ts:11:141\n    at Array.map (<anonymous>)\n    at roomSolids (http://localhost:5183/src/rendering/interior.ts:11:71)\n    at renderInterior (http://localhost:5183/src/rendering/interior.ts:39:20)\n    at ShipViewer.show (http://localhost:5183/src/rendering/viewer.ts:198:100)\n    at ShipViewer.snapshot (http://localhost:5183/src/rendering/viewer.ts:232:10)\n    at window.capture (eval at evaluate (:311:30), <anonymous>:1:632)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:23)\n    at /workspace/shipyard-v1.8.6.2/tests/interior-browser.mjs:18:168"
+}

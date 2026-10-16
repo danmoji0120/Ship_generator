@@ -98,7 +98,7 @@ export function showProcurementResult(b: AnyShipBlueprint) {
     }
     for(const rejected of d.candidateRejections??[]){const x=document.createElement('p');x.textContent=`Rejected hull candidate ${rejected.architecture}/${rejected.family}: ${rejected.reason}`;details.append(x);}
     const future = document.createElement('p');
-    future.textContent = `Policy ${p.policy.future.status}: frame redundancy ${p.policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${p.policy.future.compartmentSubdivisionPreference.toFixed(2)}. Compartments, systems and endurance performance remain ungenerated.`;
+    future.textContent = `Policy ${p.policy.future.status}: frame redundancy ${p.policy.future.frameRedundancyPreference.toFixed(2)}, subdivision ${p.policy.future.compartmentSubdivisionPreference.toFixed(2)}. ${b.compartmentPlan?'Compartments and finite pressure boundaries generated; functional systems and endurance runtime remain ungenerated.':'Compartments, systems and endurance performance remain ungenerated.'}`;
     details.append(future);
     root.append(details);
 }

@@ -1,0 +1,57 @@
+RUN  v3.2.7 /workspace/shipyard-v1.8.6.2
+
+ ✓ tests/interior.test.ts (20 tests) 154193ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6477ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  10255ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8552ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  13096ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  18625ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  15187ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  12946ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  9200ms
+   ✓ temporary breach/open/removed-wall analysis never edits design or another instance  305ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  795ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  928ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  1348ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  20216ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  8429ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  8999ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  16251ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2320ms
+ ✓ tests/structural-frame.test.ts (22 tests) 50526ms
+   ✓ real BALANCED frame/graph/geometry/material/mass/module and unarmed contract  1719ms
+   ✓ real BLOCK_ASSEMBLY frame/graph/geometry/material/mass/module and unarmed contract  2686ms
+   ✓ real SPINE_AND_MODULES frame/graph/geometry/material/mass/module and unarmed contract  2503ms
+   ✓ real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract  3204ms
+   ✓ real TWIN_HULL frame/graph/geometry/material/mass/module and unarmed contract  3144ms
+   ✓ real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract  4002ms
+   ✓ real STACKED_BLOCKS frame/graph/geometry/material/mass/module and unarmed contract  1631ms
+   ✓ real HYBRID frame/graph/geometry/material/mass/module and unarmed contract  2397ms
+   ✓ four policies change real section/material/mass and ENDURANCE adds physical alternative paths  634ms
+   ✓ cold and cached raw+skin frame results are identical and invalidate on seed, geometry and priorities  1190ms
+   ✓ JSON restore retains complete frame; existing native and armed historical loads never insert new frame  5380ms
+   ✓ frame instance disable analysis changes connectivity without mutating design or another instance  431ms
+   ✓ prepared finite OBB/loft queries retain real entry/exit, material, local/world rotation and point candidates  515ms
+   ✓ independent pair intersections find no double-counted frame material or frame/skin overlap  1745ms
+   ✓ validates missing/floating/edited physical members instead of certifying a synthetic connected graph  1375ms
+   ✓ rejects an impossible base mass with actual frame retained as a mandatory floor  1460ms
+   ✓ native default is deterministic with query/debug data absent from JSON; explicit prior version still replays original  11468ms
+   ✓ new frame has no influence on external fitting, owned platforms, mass, move/delete/undo or old armor probe  5033ms
+ ✓ tests/procurement.test.ts (13 tests) 37417ms
+   ✓ delivers no attack mounts, integrated cannon, combat reservations or empty slots; keeps real core propulsion/navigation  403ms
+   ✓ repeats deterministically with cache hit; export/import retains the native order and actual physical design  2112ms
+   ✓ honors REQUIRE on critical main armor and independent Hull, including actual composite layer accounting  3542ms
+   ✓ records PREFER tech substitution while impossible REQUIRE is rejected before hull construction  3489ms
+   ✓ uses soft target vs hard maximum and refuses hard cost/material/mass violations without changing the source ship  7732ms
+   ✓ audits finite critical facet centers; explicit unsupported full-zone guarantees are not invented  1155ms
+   ✓ preserves historical Blueprint JSON on load and only converts old attack priorities on explicit new-order conversion  4047ms
+   ✓ does not accept native documents with resurrected combat policy or changed REQUIRE/maximum  995ms
+   ✓ replans an invalid SPINE family without forcing another Architecture or reserving a spinal cannon  8892ms
+ ✓ tests/free-mount.test.ts (18 tests) 5594ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4391ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 874ms
+
+ Test Files  5 passed (5)
+      Tests  89 passed (89)
+   Start at  16:25:28
+   Duration  251.60s (transform 945ms, setup 0ms, collect 1.99s, tests 248.61s, environment 1ms, prepare 255ms)

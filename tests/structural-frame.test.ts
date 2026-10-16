@@ -20,7 +20,8 @@ import {buildStructuralFrame,clearStructuralCache} from '../src/structure/build'
 import {integrateStructuralMaterial,clearStructuralIntegrationCache} from '../src/structure/integrate';
 import {validateStructuralFrame} from '../src/structure/validate';
 import {prepareStructuralQueries,structuralRayProbe} from '../src/structure/query';
-import {generateProcurementBlueprint} from '../src/procurement/generate';
+import {generateProcurementBlueprint as generateNativeBlueprint} from '../src/procurement/generate';
+const generateProcurementBlueprint=(o:Parameters<typeof generateNativeBlueprint>[0],options:Parameters<typeof generateNativeBlueprint>[1]={version:'1.8.6.1'})=>generateNativeBlueprint(o,options);
 import {procurementCost} from '../src/procurement/result';
 import {validateBlueprint} from '../src/validation/validate';
 import {armorRayProbe} from '../src/physical/probe';

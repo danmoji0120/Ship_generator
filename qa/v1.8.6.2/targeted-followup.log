@@ -1,0 +1,24 @@
+RUN  v3.2.7 /workspace/shipyard-v1.8.6.2
+
+ ✓ tests/interior.test.ts (20 tests) 152067ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6307ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8601ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8635ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  13687ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  17130ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  15564ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  13432ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  8254ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  765ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  930ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  1214ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  21245ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  9334ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  8990ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  15213ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2278ms
+
+ Test Files  1 passed (1)
+      Tests  20 passed (20)
+   Start at  16:35:35
+   Duration  153.56s (transform 878ms, setup 0ms, collect 1.20s, tests 152.07s, environment 0ms, prepare 79ms)

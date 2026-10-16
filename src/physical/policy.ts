@@ -194,6 +194,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
       d.surfaces.filter((s) => s.kind === "ARMOR").map((s) => s.massKg),
     );
   const frame=b.structuralFrame, actualFrameMassKg=frame?.massAccounting.frameMassKg??0, actualStructuralConnectorMassKg=frame?.massAccounting.connectorMassKg??0;
+  const interior=b.compartmentPlan?.massAccounting, actualBulkheadMassKg=interior?.bulkheadMassKg??0, actualClosureMassKg=interior?.closureMassKg??0;
   const structuralMassEstimateKg = frame?.massAccounting.remainingStructuralEstimateKg ?? legacy * 0.18,
     coreEquipmentMassEstimateKg = coreEquipmentMass(b),
     unresolvedMassEstimateKg = legacy * 0.1,
@@ -202,11 +203,11 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
   const totalEstimatedDryMassKg =
     hullShellMassKg +
     armorMassKg +
-    structuralMassEstimateKg + actualFrameMassKg + actualStructuralConnectorMassKg +
+    structuralMassEstimateKg + actualFrameMassKg + actualStructuralConnectorMassKg + actualBulkheadMassKg + actualClosureMassKg +
     coreEquipmentMassEstimateKg +
     unresolvedMassEstimateKg +
     playerMountedEquipmentMassEstimateKg;
-  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+actualFrameMassKg+actualStructuralConnectorMassKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
+  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+actualFrameMassKg+actualStructuralConnectorMassKg+actualBulkheadMassKg+actualClosureMassKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
   const ledger:NonNullable<PhysicalMass['ledger']>={version:1,entries:[
    {component:'HULL_SHELL',massKg:hullShellMassKg,source:'GEOMETRY_DERIVED',basis:'Finite shell material volumes × constituent kg/m³'},
    {component:'ARMOR',massKg:armorMassKg,source:'GEOMETRY_DERIVED',basis:'Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again'},
@@ -214,6 +215,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     {component:'STRUCTURAL_FRAME' as const,massKg:actualFrameMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Exclusive finite internal frame material × shared registry density'},
     {component:'STRUCTURAL_CONNECTOR' as const,massKg:actualStructuralConnectorMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Existing connector/rail material union, alias trusses excluded, skins subtracted'},
    ]:[]),
+   ...(interior?[{component:'BULKHEAD' as const,massKg:actualBulkheadMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Finite boundary material minus actual occupied stock and apertures'},{component:'DOOR_HATCH' as const,massKg:actualClosureMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Real closure material in its sealed default position, no mass assigned to empty apertures'}]:[]),
    {component:'STRUCTURE',massKg:structuralMassEstimateKg,source:'LEGACY_ESTIMATE',basis:frame?frame.massAccounting.scope:'Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry'},
    {component:'CORE_EQUIPMENT',massKg:coreEquipmentMassEstimateKg,source:'ESTIMATED',basis:'Unique existing assembly-part solid volumes × 160kg/m³ representation density'},
    {component:'MOUNTED_EQUIPMENT',massKg:mounted.equipmentKg,source:'ESTIMATED',basis:'Actually installed saved equipment geometry × 160kg/m³, owned platform excluded'},
@@ -226,6 +228,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     armorMassKg,
     structuralMassEstimateKg,
     ...(frame?{actualFrameMassKg,actualStructuralConnectorMassKg}:{}),
+    ...(interior?{actualBulkheadMassKg,actualClosureMassKg}:{}),
     coreEquipmentMassEstimateKg,
     playerMountedEquipmentMassEstimateKg,
     unresolvedMassEstimateKg,

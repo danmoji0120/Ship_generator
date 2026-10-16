@@ -1,0 +1,1022 @@
+{
+  "rows": [
+    {
+      "id": "BALANCED",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 5511.900000002235,
+        "version": "1.8.6.2",
+        "compartments": 3,
+        "walls": 2,
+        "unarmed": true,
+        "engines": 2
+      },
+      "selection": "bulkhead/comp/citadel/0/comp/citadel/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 1900,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 70250,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 386,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 1856,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 377,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 1856,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 1347,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 70358,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 1346,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 70358,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 345,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 1856,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 316.4746560494957,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 49,
+        "triangles": 23958,
+        "camera": [
+          -513.4029727880365,
+          421.83758428616494,
+          -588.5132221506747
+        ],
+        "radius": 359.2653996505092,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 49,
+        "triangles": 23958,
+        "camera": [
+          -513.4029727880365,
+          421.83758428616494,
+          -588.5132221506747
+        ],
+        "radius": 359.2653996505092,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 12074.199999999255,
+        "version": "1.8.6.2",
+        "compartments": 10,
+        "walls": 5,
+        "unarmed": true,
+        "engines": 2
+      },
+      "selection": "bulkhead/comp/fore-armor/0/comp/fore-armor/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 2597,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 154506,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 245,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 6530,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 263,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 6530,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 1204,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 154866,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 1199,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 154866,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 296,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 6530,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 57,
+        "triangles": 16874,
+        "camera": [
+          -215.9919289480341,
+          176.76227387850386,
+          -248.22744479901633
+        ],
+        "radius": 173.45146864957175,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 57,
+        "triangles": 16874,
+        "camera": [
+          -215.9919289480341,
+          176.76227387850386,
+          -248.22744479901633
+        ],
+        "radius": 173.45146864957175,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 11570.400000002235,
+        "version": "1.8.6.2",
+        "compartments": 10,
+        "walls": 5,
+        "unarmed": true,
+        "engines": 2
+      },
+      "selection": "bulkhead/comp/breech--1/0/comp/breech--1/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 1985,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 125176,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 251,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8388,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 286,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 8388,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 893,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 125536,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 914,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 125536,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 259,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8388,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 136.37298238641526,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "TRUSS_POD",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 135,
+        "triangles": 22780,
+        "camera": [
+          -233.04592488244577,
+          191.97387052641201,
+          -267.1852749255686
+        ],
+        "radius": 199.43394662252757,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 135,
+        "triangles": 22780,
+        "camera": [
+          -233.0459248824458,
+          191.97387052641204,
+          -267.18527492556865
+        ],
+        "radius": 199.43394662252757,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 18527.900000002235,
+        "version": "1.8.6.2",
+        "compartments": 12,
+        "walls": 6,
+        "unarmed": true,
+        "engines": 2
+      },
+      "selection": "bulkhead/comp/pressure-core/0/comp/pressure-core/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 3181,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 230110,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 323,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 11584,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 317,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 11584,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 1228,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 230542,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 1201,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 230542,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 279,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 11584,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "TWIN_HULL",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.91427685318536,
+          237.03908513540077,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 16713.70000000298,
+        "version": "1.8.6.2",
+        "compartments": 8,
+        "walls": 5,
+        "unarmed": true,
+        "engines": 4
+      },
+      "selection": "bulkhead/comp/central-bridge/0/comp/central-bridge/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 4407,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 294180,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 466,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 7484,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 576,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 7484,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 2026,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 294468,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 1871,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 294468,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 420,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 7484,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 247.406105445507,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 67,
+        "triangles": 21702,
+        "camera": [
+          -151.28865144263034,
+          123.70928818922985,
+          -174.13997454532202
+        ],
+        "radius": 129.25630316582445,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 67,
+        "triangles": 21702,
+        "camera": [
+          -151.28865144263034,
+          123.70928818922985,
+          -174.13997454532202
+        ],
+        "radius": 129.25630316582445,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 20900.89999999851,
+        "version": "1.8.6.2",
+        "compartments": 10,
+        "walls": 5,
+        "unarmed": true,
+        "engines": 4
+      },
+      "selection": "bulkhead/comp/command-core/0/comp/command-core/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 2967,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 146570,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 288,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8548,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 289,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 8548,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 878,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 146930,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 835,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 146930,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 273,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8548,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 12314,
+        "camera": [
+          -246.33984236030287,
+          203.51869724208453,
+          -282.0980100006158
+        ],
+        "radius": 204.60214428652552,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 29,
+        "triangles": 12314,
+        "camera": [
+          -246.3398423603029,
+          203.51869724208456,
+          -282.0980100006158
+        ],
+        "radius": 204.60214428652552,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 8377.60000000149,
+        "version": "1.8.6.2",
+        "compartments": 4,
+        "walls": 1,
+        "unarmed": true,
+        "engines": 1
+      },
+      "selection": "bulkhead/comp/armored-keel/0/comp/armored-keel/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 4592,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 193908,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 602,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 2740,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 490,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 2740,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 2032,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 194052,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 2278,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 194052,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 583,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 2740,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "HYBRID",
+      "pixelsEqual": true,
+      "normal": {
+        "drawCalls": 97,
+        "triangles": 18968,
+        "camera": [
+          -212.31962395403002,
+          175.303019423268,
+          -242.50567567928033
+        ],
+        "radius": 185.71114269991648,
+        "geometryFinite": true
+      },
+      "before": {
+        "drawCalls": 97,
+        "triangles": 18968,
+        "camera": [
+          -212.31962395403002,
+          175.303019423268,
+          -242.50567567928033
+        ],
+        "radius": 185.71114269991648,
+        "geometryFinite": true
+      },
+      "generation": {
+        "ms": 11056.599999997765,
+        "version": "1.8.6.2",
+        "compartments": 10,
+        "walls": 5,
+        "unarmed": true,
+        "engines": 2
+      },
+      "selection": "bulkhead/comp/breech--1/0/comp/breech--1/1",
+      "shots": [
+        {
+          "mode": "Compartments",
+          "ms": 2350,
+          "diagnostics": {
+            "drawCalls": 6,
+            "triangles": 145766,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Bulkheads",
+          "ms": 259,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8972,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Openings",
+          "ms": 320,
+          "diagnostics": {
+            "drawCalls": 4,
+            "triangles": 8972,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Connectivity",
+          "ms": 975,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 146126,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Isolation",
+          "ms": 1042,
+          "diagnostics": {
+            "drawCalls": 8,
+            "triangles": 146126,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Compartment Mass",
+          "ms": 289,
+          "diagnostics": {
+            "drawCalls": 3,
+            "triangles": 8972,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 151.8070911780704,
+            "geometryFinite": true
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "8 actual browser generations; 8 exact Normal comparisons; finite CSG and physical boundaries in six debug views"
+}

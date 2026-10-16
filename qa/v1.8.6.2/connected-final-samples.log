@@ -1,0 +1,14 @@
+MONOLITHIC 9550 [] 3 2 2 0.3906277726718573 1
+MONOLITHIC 10611 [] 4 3 3 0.2872248988720784 0.8129035361879797
+MONOLITHIC 10647 [] 2 1 1 1 1
+MONOLITHIC 14857 [] 6 5 5 0.18215095495064715 0.3183974495113224
+MONOLITHIC 8747 [] 2 1 1 1 1
+BLOCK_ASSEMBLY 23454 [] 10 5 5 0.32819940970306377 0.6814021554292288
+file:///workspace/shipyard-v1.8.6.2/tests/interior-harness.mjs:26
+    const row = { order, moduleInitMs, firstMs, repeatMs, deterministic, profile, architecture: b.architecture.grammar, compartmentCount: p.compartments.length, validInteriorVolumeM3: p.compartments.reduce((n, c) => n + c.volumeM3, 0), pressurizableVolumeM3: p.compartments.filter(c => c.pressureCapability === 'PRESSURIZABLE').reduce((n, c) => n + c.volumeM3, 0), bulkheadCount: p.bulkheads.length, bulkheadMassKg: p.massAccounting.bulkheadMassKg, closureMassKg: p.massAccounting.closureMassKg, openingCount: p.openings.length, sealedCount: p.openings.filter(o => o.defaultState === 'SEALED').length, isolationGroups: p.analysis.isolatedGroups.length, exposureRatio: p.analysis.exposureRatio, breachExposureRatio: breach.exposureRatio, boundaryFailureExposureRatio: failure.exposureRatio, materials: p.bulkheads.map(w => w.materialId), thicknessMm: p.bulkheads.map(w => w.thicknessMm), regions: p.regions, mass: b.physicalDesign.mass, cost: b.procurement.cost, compromises: b.procurement.compromises, queryPreparationMs, queryCells: q.cellCount, cacheBytes: api.interiorCacheBytes(), validationCacheBytes:api.interiorValidationCacheBytes(), memory: process.memoryUsage(), peakRss: process.resourceUsage().maxRSS * 1024 };
+
+
+TypeError: api.interiorValidationCacheBytes is not a function
+    at file:///workspace/shipyard-v1.8.6.2/tests/interior-harness.mjs:26:1111
+
+Node.js v24.19.0

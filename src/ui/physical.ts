@@ -35,6 +35,7 @@ export function showPhysicalInspector(b: AnyShipBlueprint) {
   line(
     `Actual frame ${t(m.actualFrameMassKg??0)} / connector ${t(m.actualStructuralConnectorMassKg??0)} · Remaining estimated structure ${t(m.structuralMassEstimateKg)} · Core equipment ${t(m.coreEquipmentMassEstimateKg)} · Player equipment ${t(m.playerMountedEquipmentMassEstimateKg)} · Unresolved ${t(m.unresolvedMassEstimateKg)}`,
   );
+  if(b.schemaVersion===2&&b.compartmentPlan)line(`Actual bulkheads ${t(m.actualBulkheadMassKg??0)} / door-hatch closures ${t(m.actualClosureMassKg??0)} · interior material charged to base mass, not empty-space volume`);
   line(
     `Total estimated dry mass ${t(m.totalEstimatedDryMassKg)} / target ${t(m.targetMassKg)} · remaining ${t(m.remainingMassKg)} · skin material cost ${m.manufacturingCostIndexKg.toLocaleString(undefined, { maximumFractionDigits: 0 })} index·kg (not currency)`,
   );

@@ -1,0 +1,36 @@
+MONOLITHIC 11448 [ 2363 ] 3 2 2 0.3906277726718573 1
+MONOLITHIC 10456 [ 2676 ] 3 2 2 0.3906277726718573 1
+MONOLITHIC 10839 [ 2729 ] 3 2 2 0.3906277726718573 1
+SPINE_AND_MODULES 9751 [ 3236 ] 285 41
+SPINE_AND_MODULES 16710 [ 4540 ] 8 4 4 0.17531083068642137 0.3373610556660615
+CORE_AND_NACELLES 19007 [ 5345 ] 257 32
+CORE_AND_NACELLES 33789 [ 6674 ] 10 5 5 0.2323850632614253 0.4558944041920922
+TRUSS_POD 15156 [ 7492 ] 397 94
+TRUSS_POD 27074 [ 8381 ] 12 6 7 0.21742030365673826 0.41685011103413905
+{
+  "method": "Same container / Node v24, opt-in profiling on both. 470m AEGIS Battleship MONOLITHIC seed7 target3,562,847t maximum5,000,000t: 3 fresh Node processes per version, each followed by one same-process same-order repeat. Before samples recorded at task start; after measured with no tests/browser running. Module import separate; Node startup excluded. With n=3 p95 is max, not a robust tail estimate. Additional 3 architectures n=1 before/after. RSS includes subsequent explicit query preparation and harness data; cache bytes are UTF-16 JSON storage estimates, not measured JS heap or leak certification.",
+  "groups": [
+    {
+      "phase": "before",
+      "n": 3,
+      "coldMedianMs": 4644.824582,
+      "coldP95Ms": 4686.025011,
+      "repeatMedianMs": 1738.9669130000002,
+      "repeatP95Ms": 1897.3285409999999,
+      "moduleMedianMs": 22.744988999999997,
+      "peakRssBytes": 733892608,
+      "deterministic": true
+    },
+    {
+      "phase": "after",
+      "n": 3,
+      "coldMedianMs": 10838.850897,
+      "coldP95Ms": 11447.93624,
+      "repeatMedianMs": 2675.8827349999992,
+      "repeatP95Ms": 2729.2453130000013,
+      "moduleMedianMs": 23.017817,
+      "peakRssBytes": 1186181120,
+      "deterministic": true
+    }
+  ]
+}

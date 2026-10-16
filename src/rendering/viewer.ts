@@ -1,3 +1,5 @@
+import {INTERIOR_VIEWS,renderInterior} from './interior';
+import type {InteriorInstanceState} from '../interior/types';
 import {STRUCTURAL_VIEWS,structuralHighlight} from './structure';
 import {armorRayProbe, type ProbeHit} from "../physical/probe";
 import {renderArmorProbe} from "./physical";
@@ -14,6 +16,10 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  onInteriorSelect?:(id:string)=>void;
+  private interiorSelection?:string;
+  private interiorState?:InteriorInstanceState;
+  private interiorOpacity=.16;
   onStructuralSelect?:(id:string)=>void;
   private structuralSelection?:THREE.Group;
   onArmorProbe?: (result:ReturnType<typeof armorRayProbe>)=>void;
@@ -65,6 +71,7 @@ export class ShipViewer {
       this.setArmorProbeVisual(vec(ray.origin),vec(ray.direction),max,result.hits);this.onArmorProbe?.(result);
     });
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hits=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true);for(const hit of hits){const ranges=hit.object.userData.structuralRanges as {start:number;end:number;id:string}[]|undefined;const selected=ranges?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onStructuralSelect?.(selected.id);break;}}});
+    this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(INTERIOR_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;for(const hit of this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true)){const selected=(hit.object.userData.interiorRanges as {start:number;end:number;id:string}[]|undefined)?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onInteriorSelect?.(selected.id);break;}}});
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     for(const [event,phase]of [['pointermove','move'],['pointerdown','down'],['pointerup','up']] as const)this.renderer.domElement.addEventListener(event,(e:PointerEvent)=>{
       if(!this.freeEditor||!this.ship||e.button>0&&phase!=='move')return;
@@ -117,12 +124,13 @@ export class ShipViewer {
   show(b: AnyShipBlueprint, reset = true) {
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
+    if(this.blueprint!==b){this.interiorState=undefined;this.interiorSelection=undefined;}
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
       disposeShip(this.ship);
     }
-    this.ship = createShip(b, this.mode,this.detailMode);
+    this.ship = b.schemaVersion===2&&b.compartmentPlan&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode)?renderInterior(b,this.mode,this.interiorState,this.interiorOpacity,this.interiorSelection):createShip(b, this.mode,this.detailMode);
     setSurfacePresentation(this.ship,this.finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');
     this.scene.add(this.ship);
     // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
@@ -140,6 +148,8 @@ export class ShipViewer {
     if(this.freeEditor&&b.schemaVersion===2)this.mountPicking=createMountPicking(b);
     if (reset) this.fit(true);
   }
+  selectInterior(id:string){if(this.interiorSelection===id)return;this.interiorSelection=id;if(this.blueprint&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode))this.show(this.blueprint,false);}
+  setInteriorAnalysis(state?:InteriorInstanceState,opacity=this.interiorOpacity){this.interiorState=state;this.interiorOpacity=opacity;if(this.blueprint&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode))this.show(this.blueprint,false);}
   snapshot(b: AnyShipBlueprint, mode: DebugView = "Normal") {
     this.mode = mode;
     this.show(b);

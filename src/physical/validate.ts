@@ -37,6 +37,7 @@ export function validatePhysicalDesign(
         d,
         b.order,
         b.procurement?.order,
+        ...(b.compartmentPlan?[b.compartmentPlan.massAccounting]:[]),
         ...(b.structuralFrame?[b.structuralFrame.massAccounting]:[]),
         b.dimensions,
         b.role,

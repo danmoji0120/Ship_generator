@@ -62,7 +62,9 @@ export interface ProcurementDelivery {
         reason: string;
     }[];
     cost?: {
-        model: 'MATERIAL_AND_FABRICATION_INDEX_V1'|'MATERIAL_FRAME_AND_FABRICATION_INDEX_V2';
+        model: 'MATERIAL_AND_FABRICATION_INDEX_V1'|'MATERIAL_FRAME_AND_FABRICATION_INDEX_V2'|'MATERIAL_FRAME_INTERIOR_INDEX_V3';
+        interiorMaterial?:number;
+        interiorFabrication?:number;
         structuralMaterial?:number;
         structuralFabrication?:number;
         unit: 'RELATIVE_INDEX_NOT_CURRENCY';

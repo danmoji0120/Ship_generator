@@ -1,0 +1,9 @@
+RUN  v3.2.7 /workspace/shipyard-v1.8.6.2
+
+ ✓ tests/interior.test.ts (20 tests | 19 skipped) 1126ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  1124ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 19 skipped (20)
+   Start at  16:57:31
+   Duration  2.75s (transform 987ms, setup 0ms, collect 1.38s, tests 1.13s, environment 0ms, prepare 68ms)

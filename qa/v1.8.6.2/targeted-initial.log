@@ -1,0 +1,71 @@
+RUN  v3.2.7 /workspace/shipyard-v1.8.6.2
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 907ms
+ ✓ tests/structural-frame.test.ts (22 tests) 48768ms
+   ✓ real BALANCED frame/graph/geometry/material/mass/module and unarmed contract  1514ms
+   ✓ real BLOCK_ASSEMBLY frame/graph/geometry/material/mass/module and unarmed contract  2416ms
+   ✓ real SPINE_AND_MODULES frame/graph/geometry/material/mass/module and unarmed contract  2424ms
+   ✓ real TRUSS_POD frame/graph/geometry/material/mass/module and unarmed contract  2936ms
+   ✓ real TWIN_HULL frame/graph/geometry/material/mass/module and unarmed contract  2939ms
+   ✓ real CORE_AND_NACELLES frame/graph/geometry/material/mass/module and unarmed contract  3883ms
+   ✓ real STACKED_BLOCKS frame/graph/geometry/material/mass/module and unarmed contract  1526ms
+   ✓ real HYBRID frame/graph/geometry/material/mass/module and unarmed contract  2377ms
+   ✓ four policies change real section/material/mass and ENDURANCE adds physical alternative paths  601ms
+   ✓ cold and cached raw+skin frame results are identical and invalidate on seed, geometry and priorities  988ms
+   ✓ JSON restore retains complete frame; existing native and armed historical loads never insert new frame  5182ms
+   ✓ frame instance disable analysis changes connectivity without mutating design or another instance  442ms
+   ✓ prepared finite OBB/loft queries retain real entry/exit, material, local/world rotation and point candidates  528ms
+   ✓ independent pair intersections find no double-counted frame material or frame/skin overlap  1701ms
+   ✓ validates missing/floating/edited physical members instead of certifying a synthetic connected graph  1379ms
+   ✓ rejects an impossible base mass with actual frame retained as a mandatory floor  1567ms
+   ✓ native default is deterministic with query/debug data absent from JSON; explicit prior version still replays original  11943ms
+   ✓ new frame has no influence on external fitting, owned platforms, mass, move/delete/undo or old armor probe  4411ms
+ ✓ tests/interior.test.ts (19 tests) 83351ms
+   ✓ finite BALANCED interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  2772ms
+   ✓ finite BLOCK_ASSEMBLY interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  5234ms
+   ✓ finite SPINE_AND_MODULES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  5083ms
+   ✓ finite TRUSS_POD interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6538ms
+   ✓ finite TWIN_HULL interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6595ms
+   ✓ finite CORE_AND_NACELLES interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  9494ms
+   ✓ finite STACKED_BLOCKS interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  6526ms
+   ✓ finite HYBRID interior, solid exclusion, walls, graph, mass and previous frame/skin preservation  5715ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  627ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  773ms
+   ✓ ENDURANCE reduces actual breach and one-boundary-loss volume, MOBILITY saves mass and ECONOMY lowers relative cost  927ms
+   ✓ rejects virtual portal edges, missing closed leaf, invalid thickness, changed mass and moved compartment geometry  6319ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  5253ms
+   ✓ interior cache hit/miss JSON matches and core geometry, seed, material inputs invalidate it  3348ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  15891ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2039ms
+ ✓ tests/free-mount.test.ts (18 tests) 5270ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4134ms
+ ✓ tests/procurement.test.ts (13 tests) 34334ms
+   ✓ delivers no attack mounts, integrated cannon, combat reservations or empty slots; keeps real core propulsion/navigation  346ms
+   ✓ repeats deterministically with cache hit; export/import retains the native order and actual physical design  2099ms
+   ✓ honors REQUIRE on critical main armor and independent Hull, including actual composite layer accounting  3696ms
+   ✓ records PREFER tech substitution while impossible REQUIRE is rejected before hull construction  3560ms
+   ✓ uses soft target vs hard maximum and refuses hard cost/material/mass violations without changing the source ship  7350ms
+   ✓ audits finite critical facet centers; explicit unsupported full-zone guarantees are not invented  859ms
+   ✓ preserves historical Blueprint JSON on load and only converts old attack priorities on explicit new-order conversion  3216ms
+   ✓ does not accept native documents with resurrected combat policy or changed REQUIRE/maximum  833ms
+   ✓ replans an invalid SPINE family without forcing another Architecture or reserving a spinal cannon  8200ms
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout ../shipyard-v1.8.6.0/node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:635:17
+ ❯ processTimers node:internal/timers:571:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  5 passed (5)
+      Tests  88 passed (88)
+     Errors  1 error
+   Start at  16:01:53
+   Duration  175.63s (transform 963ms, setup 0ms, collect 1.96s, tests 172.63s, environment 1ms, prepare 265ms)

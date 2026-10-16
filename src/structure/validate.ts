@@ -21,7 +21,7 @@ const cache = new WeakMap<StructuralFramePlan, {
 export function validateStructuralFrame(b: ShipBlueprint) {
     const f = b.structuralFrame;
     if (!f)
-        return b.generatorVersion === '1.8.6.1' ? ['Required structural frame absent'] : [];
+        return ['1.8.6.1','1.8.6.2'].includes(b.generatorVersion) ? ['Required structural frame absent'] : [];
     const key = JSON.stringify([f, b.structuralVolumes, b.structuralConnectors, b.engines]);
     const cached = cache.get(f);
     if (cached?.key === key)
