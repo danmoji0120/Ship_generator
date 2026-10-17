@@ -1,10 +1,11 @@
+import {functionalInput,cachedFunctionalPlan,storeFunctionalPlan} from './cache';
 import type { ShipBlueprint, Vec3 } from '../blueprint/types';
 import type { EquipmentType, FunctionalEquipment, FunctionalSystemPlan, SystemEdge } from './types';
 import { prepareInteriorQueries, placementBox, releaseInteriorQueries } from '../interior/query';
 import { systemSpecification } from './registry';
 import { evaluateSystemPlan } from './evaluate';
 import { preparePhysicalQueries } from '../physical/probe';
-import { timedPhysical } from '../physical/diagnostics';
+import { timedPhysical,recordPhysicalStage } from '../physical/diagnostics';
 import { refreshPhysicalMass } from '../physical/policy';
 import { boundsOf } from '../generation/integration/contours';
 const distance = (a: Vec3, b: Vec3) => Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z);
@@ -14,6 +15,10 @@ export function buildFunctionalSystems(b: ShipBlueprint) {
     return timedPhysical('Functional systems', () => {
         if (!b.compartmentPlan || !b.procurement || !b.structuralFrame)
             throw Error('REQUIRED_FUNCTIONAL_INTERIOR_ABSENT');
+        const input=timedPhysical('Functional cache identity',()=>functionalInput(b));
+        const cached=cachedFunctionalPlan(input);
+        recordPhysicalStage(cached?'Functional plan cache hit':'Functional plan cache miss',0);
+        if(cached){b.functionalSystems=cached;refreshPhysicalMass(b);b.physicalDesign!.policy.future.status='FRAME_COMPARTMENTS_SYSTEMS_APPLIED';return b;}
         const mode = b.procurement.order.primaryPriority, rooms = b.compartmentPlan.compartments.filter(c => c.boundaryCertainty === 'FINITE_MATERIAL_CLOSURE'), q = timedPhysical('Functional query preparation', () => prepareInteriorQueries(b));
         const maneuverRefs = b.exteriorDetailPlan?.kitPlacements.filter(e => e.kit === 'RCS_CLUSTER').map(e => e.id) ?? [];
         // If there are no distinct RCS in the stored model, attitude authority is a
@@ -102,6 +107,7 @@ export function buildFunctionalSystems(b: ShipBlueprint) {
             const cap = timedPhysical('Functional capability evaluation', () => evaluateSystemPlan(plan));
             if (cap.commandAvailability <= 0 || cap.propulsionAuthority <= 0 || cap.maneuverAuthority <= 0)
                 throw Error('REQUIRED_FUNCTIONAL_CAPABILITY_UNAVAILABLE');
+            storeFunctionalPlan(input,plan);
             b.functionalSystems = plan;
             refreshPhysicalMass(b);
             b.physicalDesign!.policy.future.status = 'FRAME_COMPARTMENTS_SYSTEMS_APPLIED';

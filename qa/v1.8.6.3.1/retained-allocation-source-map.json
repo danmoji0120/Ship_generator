@@ -1,0 +1,17 @@
+[
+  {
+    "file": "viewer-BR2HAUdk.js",
+    "name": "m1",
+    "source": "function m1(n){const e=n.functionalSystems;if(!e)return n.generatorVersion===\"1.8.6.3\"?[\"Required functional system plan absent\"]:[];if(!n.compartmentPlan||!n.procurement)return[\"Functional systems require confirmed interior and native order\"];const t=JSON.stringify(e)+Sc(n)+JSON.stringify([n.compartmentPlan,n.engines,xl(n),n.physicalDesign?.mass.functionalEquipmentMassKg,n.physicalDesign?.mass.unresolvedMassEstimateKg,n.exteriorDetailPlan?.kitPlacements.filter(i=>i.kit===\"RCS_CLUSTER\").map(i=>i"
+  },
+  {
+    "file": "viewer-BR2HAUdk.js",
+    "name": "E1",
+    "source": "function E1(n){const e=n.compartmentPlan;if(!e)return[\"1.8.6.2\",\"1.8.6.2.1\",\"1.8.6.3\"].includes(n.generatorVersion)?[\"Required compartment plan absent\"]:[];const t=Sc(n),i=Uu(t),s=JSON.stringify([e,n.physicalDesign?.mass.actualBulkheadMassKg,n.physicalDesign?.mass.actualClosureMassKg])+t,o=rp.get(e);if(o?.key===s)return ul(n),[...o.issues];if(op===s)return ul(n),Gi(\"Interior validation cache hit\",0),[];const a=[];try{if(e.schemaVersion!==1||![\"1.8.6.2\",\"1.8.6.2.1\",\"1.8.6.3\"].includes(e.version)|"
+  },
+  {
+    "file": "viewer-BR2HAUdk.js",
+    "name": "Va",
+    "source": "function Va(n,e=!1){const t=n.physicalDesign;if(!t)return[];const i=[];let s;try{if(!e&&(s=JSON.stringify([t,n.order,n.procurement?.order,...n.compartmentPlan?[n.compartmentPlan.massAccounting]:[],...n.structuralFrame?[n.structuralFrame.massAccounting]:[],n.dimensions,n.role,n.structuralVolumes,n.productionDesign?.armor??n.structuralArmorPilot?.components,n.productionDesign?.finish,n.prefabPlacements,n.freeMountPlan]),s===Zf))return[];(t.version!==\"1.8.6.0\"||t.materialRegistryVersion!==1||![\"GEN"
+  }
+]

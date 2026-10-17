@@ -1,0 +1,93 @@
+{
+  "method": "Post-GC Chrome heap snapshot node table, self sizes only, not transitive retained sizes. Raw dump excluded from Git. Allocation sampling separately locates source owners.",
+  "counts": {
+    "synthetic": 32,
+    "native": 55725,
+    "string": 2670618,
+    "object shape": 10837,
+    "code": 65343,
+    "array": 174003,
+    "number": 2577218,
+    "symbol": 76,
+    "object": 1155791,
+    "closure": 7422,
+    "concatenated string": 389,
+    "regexp": 3
+  },
+  "selfBytes": {
+    "synthetic": 0,
+    "native": 10738756,
+    "string": 122692671,
+    "object shape": 614860,
+    "code": 8061248,
+    "array": 13341960,
+    "number": 30731040,
+    "symbol": 320,
+    "object": 27050188,
+    "closure": 216860,
+    "concatenated string": 7780,
+    "regexp": 72
+  },
+  "largest": [
+    {
+      "type": "string",
+      "selfBytes": 23307004,
+      "heapObjectId": 8929983,
+      "nameStringIndex": 324931
+    },
+    {
+      "type": "string",
+      "selfBytes": 18901696,
+      "heapObjectId": 13083395,
+      "nameStringIndex": 456456
+    },
+    {
+      "type": "string",
+      "selfBytes": 17562780,
+      "heapObjectId": 12096645,
+      "nameStringIndex": 424934
+    },
+    {
+      "type": "string",
+      "selfBytes": 16486836,
+      "heapObjectId": 13083397,
+      "nameStringIndex": 456457
+    },
+    {
+      "type": "string",
+      "selfBytes": 14825004,
+      "heapObjectId": 5706237,
+      "nameStringIndex": 226561
+    },
+    {
+      "type": "string",
+      "selfBytes": 14621056,
+      "heapObjectId": 12380163,
+      "nameStringIndex": 437396
+    },
+    {
+      "type": "string",
+      "selfBytes": 6624464,
+      "heapObjectId": 5706239,
+      "nameStringIndex": 226562
+    },
+    {
+      "type": "string",
+      "selfBytes": 5726856,
+      "heapObjectId": 13117427,
+      "nameStringIndex": 459303
+    },
+    {
+      "type": "native",
+      "selfBytes": 2329578,
+      "heapObjectId": 12096157,
+      "nameStringIndex": 95041
+    },
+    {
+      "type": "array",
+      "selfBytes": 1048596,
+      "heapObjectId": 12046949,
+      "nameStringIndex": 1
+    }
+  ]
+}

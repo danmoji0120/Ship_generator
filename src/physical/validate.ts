@@ -46,6 +46,7 @@ export function validatePhysicalDesign(
         b.productionDesign?.finish,
         b.prefabPlacements,
         b.freeMountPlan,
+        b.functionalSystems?.equipment.map(e=>[e.id,e.massKg]),
       ]);
       if (cacheKey === lastValidationKey) return [];
     }

@@ -75,6 +75,7 @@ let cache = new WeakMap<PhysicalDesign, {
     handle: PreparedPhysicalQueries;
 }>();
 export function clearPhysicalQueryCache() { cache = new WeakMap(); }
+export function releasePhysicalQueries(b:ShipBlueprint){if(b.physicalDesign)cache.delete(b.physicalDesign);}
 function queryKey(b: ShipBlueprint) { const d = b.physicalDesign!; return JSON.stringify([b.schemaVersion, d.version, d.materialRegistryVersion, d.geometryModel, d.approximation, d.warnings, (b.structuralVolumes ?? []).filter(v => v.type === 'SPINE'), d.surfaces.map(s => [s.id, s.kind, s.materialId, s.thicknessMm, s.facets.map(f => [f.normal, f.planeOffsetM, f.thicknessMm]), s.layerStack.map(l => [l.layerId, l.layerOrder, l.constituentMaterialId, l.thicknessMm]), s.pieces.map(p => [p.facetIndex, p.layerOrder, p.solid])])]); }
 export function preparePhysicalQueries(b: ShipBlueprint): PreparedPhysicalQueries {
     const d = b.physicalDesign;

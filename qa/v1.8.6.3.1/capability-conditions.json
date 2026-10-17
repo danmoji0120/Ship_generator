@@ -1,0 +1,71 @@
+{
+  "method": "100 warmup + 1000 pure evaluations per condition. External load cases are allocator fixtures, not additional installed ship geometry. Real mounting is independently verified in Production UI.",
+  "rows": [
+    {
+      "kind": "NORMAL",
+      "units": 7,
+      "powerEdges": 6,
+      "controlEdges": 4,
+      "loads": 0,
+      "averageMs": 0.028228409999999995,
+      "propulsion": 1,
+      "deficitMW": 0,
+      "reserveMJ": 0
+    },
+    {
+      "kind": "MULTIPLE_OFFLINE",
+      "units": 7,
+      "powerEdges": 6,
+      "controlEdges": 4,
+      "loads": 0,
+      "averageMs": 0.028886114000000022,
+      "propulsion": 0,
+      "deficitMW": 32,
+      "reserveMJ": 0
+    },
+    {
+      "kind": "ENDURANCE",
+      "units": 16,
+      "powerEdges": 28,
+      "controlEdges": 16,
+      "loads": 0,
+      "averageMs": 0.116728929,
+      "propulsion": 1,
+      "deficitMW": 0,
+      "reserveMJ": 360
+    },
+    {
+      "kind": "POWER_DEFICIT",
+      "units": 16,
+      "powerEdges": 28,
+      "controlEdges": 16,
+      "loads": 1,
+      "averageMs": 0.11657932399999982,
+      "propulsion": 1,
+      "deficitMW": 64,
+      "reserveMJ": 360
+    },
+    {
+      "kind": "FINITE_RESERVE",
+      "units": 16,
+      "powerEdges": 28,
+      "controlEdges": 16,
+      "loads": 0,
+      "averageMs": 0.10691254800000001,
+      "propulsion": 1,
+      "deficitMW": 40,
+      "reserveMJ": 360
+    },
+    {
+      "kind": "EXTERNAL_32_SYNTHETIC",
+      "units": 16,
+      "powerEdges": 28,
+      "controlEdges": 16,
+      "loads": 32,
+      "averageMs": 0.23817461999999978,
+      "propulsion": 1,
+      "deficitMW": 6264,
+      "reserveMJ": 360
+    }
+  ]
+}

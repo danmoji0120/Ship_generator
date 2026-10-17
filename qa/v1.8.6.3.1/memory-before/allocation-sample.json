@@ -1,0 +1,242 @@
+[
+  {
+    "function": "Se",
+    "url": "http://localhost:4186/assets/main-Ctb40rsu.js",
+    "line": 165,
+    "bytes": 86472880
+  },
+  {
+    "function": "ft",
+    "url": "http://localhost:4186/assets/main-Ctb40rsu.js",
+    "line": 165,
+    "bytes": 44055408
+  },
+  {
+    "function": "m1",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 18965772
+  },
+  {
+    "function": "E1",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 18901696
+  },
+  {
+    "function": "Va",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 17562292
+  },
+  {
+    "function": "Sc",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 16486836
+  },
+  {
+    "function": "Sc",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 16486836
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/main-Ctb40rsu.js",
+    "line": 104,
+    "bytes": 15703296
+  },
+  {
+    "function": "Sc",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 14825004
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 12426808
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 6624464
+  },
+  {
+    "function": "y1",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 5726856
+  },
+  {
+    "function": "get",
+    "url": "",
+    "line": -1,
+    "bytes": 819864
+  },
+  {
+    "function": "Ln",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 656440
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 590716
+  },
+  {
+    "function": "set",
+    "url": "",
+    "line": -1,
+    "bytes": 590232
+  },
+  {
+    "function": "ot",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 491872
+  },
+  {
+    "function": "Vi",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 459212
+  },
+  {
+    "function": "(V8 API)",
+    "url": "",
+    "line": -1,
+    "bytes": 387080
+  },
+  {
+    "function": "Ys",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 360560
+  },
+  {
+    "function": "filter",
+    "url": "",
+    "line": -1,
+    "bytes": 328308
+  },
+  {
+    "function": "Mi",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 327960
+  },
+  {
+    "function": "de",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 262480
+  },
+  {
+    "function": "Je",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 262380
+  },
+  {
+    "function": "j",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 262380
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 262248
+  },
+  {
+    "function": "en",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 229572
+  },
+  {
+    "function": "get",
+    "url": "",
+    "line": -1,
+    "bytes": 220036
+  },
+  {
+    "function": "xt",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 163980
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 163932
+  },
+  {
+    "function": "map",
+    "url": "",
+    "line": -1,
+    "bytes": 133776
+  },
+  {
+    "function": "flatMap",
+    "url": "",
+    "line": -1,
+    "bytes": 131252
+  },
+  {
+    "function": "Je",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 131220
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 131112
+  },
+  {
+    "function": "",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 131112
+  },
+  {
+    "function": "Wt",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 0,
+    "bytes": 98448
+  },
+  {
+    "function": "Do",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 0,
+    "bytes": 98420
+  },
+  {
+    "function": "ut",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 98400
+  },
+  {
+    "function": "hc",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 98368
+  },
+  {
+    "function": "bt",
+    "url": "http://localhost:4186/assets/viewer-BR2HAUdk.js",
+    "line": 3831,
+    "bytes": 98368
+  }
+]

@@ -74,6 +74,8 @@ export interface FunctionalSystemPlan {
     warnings: string[];
 }
 export interface SystemInstanceState {
+    /** Runtime clock only. Absent historical instance state starts at zero. */
+    elapsedSeconds?: number;
     equipmentStates: Record<string, OperatingState>;
     disabledPowerEdges: string[];
     disabledControlEdges: string[];

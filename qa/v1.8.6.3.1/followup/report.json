@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "New provenance visible from generated ledger",
+    "View JSON remains formatted",
+    "Closing JSON dialog releases formatted DOM text",
+    "Reference-backed Reload and compact Export preserve complete design",
+    "Historical armed Blueprint preserves actual weapons, mass, material and all data",
+    "Legacy system Inspector is cleared",
+    "No console errors"
+  ],
+  "errors": [],
+  "dialogHeap": {
+    "usedSize": 737292228,
+    "totalSize": 790749184,
+    "embedderHeapUsedSize": 2101070424,
+    "backingStorageSize": 71320715
+  },
+  "closedHeap": {
+    "usedSize": 171430164,
+    "totalSize": 172609536,
+    "embedderHeapUsedSize": 3198608,
+    "backingStorageSize": 6467971
+  },
+  "method": "Actual built Production UI controls; parsed JSON SHA-256 ignores export whitespace only."
+}

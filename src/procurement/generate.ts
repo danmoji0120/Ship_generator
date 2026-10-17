@@ -44,7 +44,7 @@ function procurementArchitecture(o: ProcurementOrder) {
 function bounds(b: ShipBlueprint) { return boundsOf([...b.structuralVolumes.flatMap(v => v.geometry.stations.flatMap(s => profileRing(s).map(([x, y]) => ({ x: x + v.position.x, y: y + v.position.y, z: s.z + v.position.z })))), ...b.productionDesign!.armor.flatMap(c => c.solid.vertices), ...b.productionDesign!.finish.flatMap(c => c.solid.vertices), ...b.prefabPlacements!.flatMap(p => p.assembly?.parts.flatMap(p => p.solid.vertices) ?? p.exterior?.rings?.flat() ?? []), ...b.engines.flatMap(e => [{ x: e.position.x - e.nozzleRadius * (e.bellRatio + .12), y: e.position.y - e.nozzleRadius * (e.bellRatio + .12), z: e.position.z }, { x: e.position.x + e.nozzleRadius * (e.bellRatio + .12), y: e.position.y + e.nozzleRadius * (e.bellRatio + .12), z: e.position.z + e.nozzleLength + e.nozzleRadius * .12 }])]); }
 /** Native procurement bypasses combat role requirements, integrated-armament planning
  * and productionWeaponComposition entirely. Shared hull/armor/visual builders remain authoritative. */
-export function generateProcurementBlueprint(input: ProcurementOrder, options:{version?:'1.8.6.0.2'|'1.8.6.1'|'1.8.6.2'|'1.8.6.2.1'|'1.8.6.3'}={}): ShipBlueprint {
+export function generateProcurementBlueprint(input: ProcurementOrder, options:{version?:'1.8.6.0.2'|'1.8.6.1'|'1.8.6.2'|'1.8.6.2.1'|'1.8.6.3'|'1.8.6.3.1'}={}): ShipBlueprint {
     return capturePhysicalGeneration(() => {
         const o = normalizeProcurementOrder(input);
         procurementMaterials(o); // fail impossible technology before geometry
@@ -89,12 +89,12 @@ export function generateProcurementBlueprint(input: ProcurementOrder, options:{v
         applyMaterialAppearance(b);
         applySurfaceAppearance(b);
         const withFrame=options.version!=='1.8.6.0.2';
-        b.generatorVersion = withFrame?(options.version??'1.8.6.3'):'1.8.6.0.2';
+        b.generatorVersion = withFrame?(options.version??'1.8.6.3.1'):'1.8.6.0.2';
         if(withFrame){try{buildStructuralFrame(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
         timedPhysical('Procurement physical build', () => addPhysicalDesign(b));
         if(withFrame){try{integrateStructuralMaterial(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
-        if(['1.8.6.2','1.8.6.2.1','1.8.6.3'].includes(b.generatorVersion)){try{buildCompartmentPlan(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
-        if(b.generatorVersion==='1.8.6.3'){try{buildFunctionalSystems(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
+        if(['1.8.6.2','1.8.6.2.1','1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion)){try{buildCompartmentPlan(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
+        if(['1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion)){try{buildFunctionalSystems(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
         timedPhysical('Procurement requirement verification', () => finishProcurementDelivery(b));
         const issues = timedPhysical('Procurement final validation', () => validateBlueprint(b));
         if (issues.length)

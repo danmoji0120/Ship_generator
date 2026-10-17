@@ -1,0 +1,9 @@
+import{readFile,writeFile}from'node:fs/promises';import{gunzipSync}from'node:zlib';import assert from'node:assert/strict';const api=await import('/tmp/integrity-after.mjs'),rows=[];
+for(const kind of['NORMAL','MULTIPLE_OFFLINE','ENDURANCE','POWER_DEFICIT','FINITE_RESERVE','EXTERNAL_32_SYNTHETIC']){
+ const id=['NORMAL','MULTIPLE_OFFLINE'].includes(kind)?'BALANCED':'ENDURANCE',b=JSON.parse(gunzipSync(await readFile(`qa/v1.8.6.3/fixtures/${id}.json.gz`))),p=b.functionalSystems,s=api.createSystemInstanceState(p);let loads=[];
+ if(['MULTIPLE_OFFLINE','FINITE_RESERVE'].includes(kind))for(const e of p.equipment.filter(e=>['POWER_GENERATOR','POWER_DISTRIBUTION'].includes(e.type)))s.equipmentStates[e.id]='OFFLINE';
+ if(kind==='FINITE_RESERVE')for(const e of p.equipment.filter(e=>e.type==='POWER_DISTRIBUTION'))s.equipmentStates[e.id]='OPERATIONAL';
+ if(kind==='POWER_DEFICIT'||kind==='EXTERNAL_32_SYNTHETIC')loads=Array.from({length:kind==='POWER_DEFICIT'?1:32},(_,i)=>({id:'synthetic-load/'+i,kind:'WEAPON',powerMW:200,channels:12}));
+ const before=JSON.stringify(s);for(let i=0;i<100;i++)api.evaluateSystemPlan(p,s,loads);const start=performance.now();let result;for(let i=0;i<1000;i++)result=api.evaluateSystemPlan(p,s,loads);const averageMs=(performance.now()-start)/1000;assert.equal(JSON.stringify(s),before);rows.push({kind,units:p.equipment.length,powerEdges:p.powerNetwork.length,controlEdges:p.controlNetwork.length,loads:loads.length,averageMs,propulsion:result.propulsionAuthority,deficitMW:result.electricalPowerDeficitMW,reserveMJ:result.backupPowerRemainingMJ});global.gc?.();
+}
+await writeFile('qa/v1.8.6.3.1/capability-conditions.json',JSON.stringify({method:'100 warmup + 1000 pure evaluations per condition. External load cases are allocator fixtures, not additional installed ship geometry. Real mounting is independently verified in Production UI.',rows},null,2));

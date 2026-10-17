@@ -1,3 +1,4 @@
+import {reconcileOwnedMass} from './reconcile';
 import {createProcurementPolicy} from '../procurement/policy';
 import type { ShipBlueprint } from "../blueprint/types";
 import { DOCTRINES, solidVolume } from "../generation/production/doctrine";
@@ -224,6 +225,14 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
    {component:'PLATFORM',massKg:mounted.platformKg,source:'ESTIMATED',basis:'Owned platform geometry × 2800kg/m³, counted once'},
    {component:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,source:'LEGACY_ESTIMATE',basis:b.functionalSystems?b.functionalSystems.massAccounting.basis:'Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated'}
   ],baseEstimatedDryMassKg,mountedEstimatedDryMassKg:totalEstimatedDryMassKg,targetSemantics:b.procurement?'SOFT_TARGET_WITH_OPTIONAL_MAXIMUM':'EXISTING_BASE_DESIGN_LIMIT',maximumAllowedMassKg:b.procurement?.order.maximumBaseMassKg??null,baseRemainingKg:policy.targetMassBudgetKg-baseEstimatedDryMassKg,mountedRemainingKg:policy.targetMassBudgetKg-totalEstimatedDryMassKg,baseBudgetViolation:b.procurement?baseEstimatedDryMassKg>(b.procurement.order.maximumBaseMassKg??Infinity)+1e-3:baseEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,mountedLoadoutOverTarget:totalEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,operationalConsumables:'NOT_INCLUDED'};
+  if(b.generatorVersion==='1.8.6.3.1'){
+    const modeled=ledger.entries.filter(e=>e.source==='GEOMETRY_DERIVED'||e.source==='EQUIPMENT_DEFINED');
+    const refs=(component:string)=>component==='FUNCTIONAL_EQUIPMENT'?b.functionalSystems?.equipment.map(e=>e.id)??[]:component==='HULL_SHELL'||component==='ARMOR'?d.surfaces.filter(s=>s.kind===(component==='ARMOR'?'ARMOR':'HULL')).map(s=>s.id):component==='STRUCTURAL_FRAME'||component==='STRUCTURAL_CONNECTOR'?frame?.members.filter(m=>m.massKg>0&&(component==='STRUCTURAL_CONNECTOR'?m.geometryReference.kind==='EXISTING_CONNECTOR':m.geometryReference.kind!=='EXISTING_CONNECTOR')).map(m=>m.id)??[]:[component];
+    const audited=reconcileOwnedMass(modeled.map(e=>({id:e.component,massKg:e.massKg,ownerRefs:refs(e.component)})),[{id:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,ownerRefs:[],scope:'UNKNOWN_LEGACY'}]);
+    ledger.reconciliation={policyVersion:'1.8.6.3.1',actualModeledBaseKg:audited.actualKg,remainingEstimatedBaseKg:baseEstimatedDryMassKg-audited.actualKg,unknownLegacyServiceKg:unresolvedMassEstimateKg,referenceMassKg:legacy,serviceFormula:'ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10',
+      owners:ledger.entries.map(e=>({component:e.component,ownerRefs:e.component==='OTHER_ESTIMATED'?[]:refs(e.component),classification:e.component==='OTHER_ESTIMATED'?'UNKNOWN_LEGACY':modeled.includes(e)?'MODELED':'ESTIMATED',confidence:modeled.includes(e)?e.source==='EQUIPMENT_DEFINED'?'Game specification dry mass; not measured engineering mass':'Finite modeled material geometry':e.component==='OTHER_ESTIMATED'?'Unitemized legacy proxy; potential scope overlap cannot be quantified':'Representation-density or unresolved structural estimate'})),replacements:audited.replacements,
+      uncertaintyNotes:['The legacy 10% has no itemized service inventory or physical owners. It is UNKNOWN_LEGACY, not verified unrealized equipment. No confirmed replacement or deduction is justified.', 'Existing exterior assembly housings use unique part IDs and representation density. Engine visual hardware and propulsion controllers are distinct owners; full engine material mass is not resolved.', 'Estimated structural and legacy service mass remain uncertain; this is accounted dry mass, not certified exact physical mass.']};
+  }
   return {
     ledger,
     ...(b.functionalSystems?{functionalEquipmentMassKg}:{}),

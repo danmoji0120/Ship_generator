@@ -342,7 +342,7 @@ export function validateArchitecture(b: ShipBlueprint,details?:ValidationDetails
   return errors;
 }
 export function validateBlueprint(b: AnyShipBlueprint,details?:ValidationDetails) {
-  if(b.schemaVersion===2&&['1.8.6.0.2','1.8.6.1','1.8.6.2','1.8.6.2.1','1.8.6.3'].includes(b.generatorVersion)){
+  if(b.schemaVersion===2&&['1.8.6.0.2','1.8.6.1','1.8.6.2','1.8.6.2.1','1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion)){
    if(!b.procurement||!b.physicalDesign?.mass?.ledger)return ['Native procurement/physical mass contract absent'];
    return [...validateArchitecture({...b,generatorVersion:'1.8.5.3.1'},details),...validateFreeMountPlan(b),...validatePhysicalDesign(b),...procurementDesignIssues(b),...validateStructuralFrame(b),...validateCompartmentPlan(b),...validateFunctionalSystems(b)];
   }

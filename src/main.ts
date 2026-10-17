@@ -30,7 +30,7 @@ $("app").innerHTML = layout();
 
 let yardId = "aegis",
   blueprint: AnyShipBlueprint,
-  storedBlueprint: string,
+  storedBlueprint: AnyShipBlueprint,
   viewer: ShipViewer | undefined;
 try {
   viewer = new ShipViewer($("viewer"));
@@ -46,7 +46,7 @@ setupInteriorInspector(viewer,()=>blueprint);
 setupSystemsInspector(viewer,()=>blueprint);
 const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
 const freeEditor=setupFreeEquipment(viewer,()=>blueprint,next=>{
- blueprint=next;storedBlueprint=JSON.stringify(next);$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);
+ blueprint=next;storedBlueprint=next;$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);
 });
 if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
@@ -173,7 +173,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     $("order-status").textContent = "생성 완료 · 현재 주문서가 적용되었습니다";
     $("order-status").classList.remove("stale");
     $("validated").textContent = "✓ BLUEPRINT VALID";
-    storedBlueprint=JSON.stringify(next);
+    storedBlueprint=next;
 }
 $("order-form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -248,11 +248,11 @@ function importBlueprint(text: string) {
 }
 $("import").onclick=()=>$<HTMLInputElement>("import-file").click();
 $("import-file").onchange=async()=>{try{const file=$<HTMLInputElement>("import-file").files?.[0];if(file)importBlueprint(await file.text());}catch(e){$("order-status").textContent=String(e);}finally{$<HTMLInputElement>("import-file").value="";}};
-$("reload").onclick=()=>{try{if(storedBlueprint)importBlueprint(storedBlueprint);}catch(e){$("order-status").textContent=String(e);}};
+$("reload").onclick=()=>{try{if(storedBlueprint)importBlueprint(JSON.stringify(storedBlueprint));}catch(e){$("order-status").textContent=String(e);}};
 $("export").onclick = () => {
   if (!blueprint) return;
   const url = URL.createObjectURL(
-    new Blob([JSON.stringify(blueprint, null, 2)], {
+    new Blob([JSON.stringify(blueprint)], {
       type: "application/json",
     }),
   );
@@ -264,6 +264,7 @@ $("export").onclick = () => {
 };
 $('inspect').onclick=()=>{$('json-content').textContent=JSON.stringify(blueprint,null,2);$<HTMLDialogElement>('json-dialog').showModal();};
 $("close-json").onclick = () => $<HTMLDialogElement>("json-dialog").close();
+$("json-dialog").addEventListener("close",()=>{$("json-content").textContent="Open View JSON to format the current Blueprint.";});
 $("copy-json").onclick = async () => {
   try {
     await navigator.clipboard.writeText(JSON.stringify(blueprint, null, 2));

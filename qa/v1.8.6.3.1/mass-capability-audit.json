@@ -1,0 +1,850 @@
+[
+  {
+    "id": "BALANCED",
+    "equipment": 7,
+    "functionalKg": 24900,
+    "hullKg": 59017366.73231328,
+    "armorKg": 293041272.36377823,
+    "frameKg": 14510041.932047786,
+    "connectorKg": 0,
+    "bulkheadKg": 14171359.734110473,
+    "closureKg": 2377.2583296000053,
+    "coreKg": 1538866.636032879,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 2458223000,
+    "unknownLegacyServiceKg": 245822300,
+    "modeledKg": 380767318.02057934,
+    "estimatedKg": 247361166.63603282,
+    "baseBeforeKg": 628128484.6566122,
+    "baseAfterKg": 628128484.6566122,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.087263643,
+    "failedMs": 0.02422289599999999,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "ARMOR",
+    "equipment": 7,
+    "functionalKg": 24900,
+    "hullKg": 60595712.10406768,
+    "armorKg": 785995002.0521681,
+    "frameKg": 39994641.93554057,
+    "connectorKg": 0,
+    "bulkheadKg": 35715882.17750811,
+    "closureKg": 7347.889382401325,
+    "coreKg": 1538866.63603288,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 4178860000,
+    "unknownLegacyServiceKg": 417886000,
+    "modeledKg": 922333486.1586668,
+    "estimatedKg": 419424866.6360328,
+    "baseBeforeKg": 1341758352.7946997,
+    "baseAfterKg": 1341758352.7946997,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.026376715999999988,
+    "failedMs": 0.02057680299999993,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "MOBILITY",
+    "equipment": 7,
+    "functionalKg": 17928,
+    "hullKg": 18059884.638845857,
+    "armorKg": 242196035.3484407,
+    "frameKg": 2624028.772972986,
+    "connectorKg": 0,
+    "bulkheadKg": 2275546.65211057,
+    "closureKg": 0,
+    "coreKg": 1259605.8849843342,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 2420024000,
+    "unknownLegacyServiceKg": 242002400,
+    "modeledKg": 265173423.41237015,
+    "estimatedKg": 243262005.8849843,
+    "baseBeforeKg": 508435429.29735446,
+    "baseAfterKg": 508435429.29735446,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.031016879000000018,
+    "failedMs": 0.02356240899999989,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "ENDURANCE",
+    "equipment": 16,
+    "functionalKg": 55800,
+    "hullKg": 37338273.68129757,
+    "armorKg": 301515428.62467855,
+    "frameKg": 17507387.762790643,
+    "connectorKg": 0,
+    "bulkheadKg": 21014988.633982178,
+    "closureKg": 6813.797760000009,
+    "coreKg": 2216515.43197195,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 2632303000,
+    "unknownLegacyServiceKg": 263230300,
+    "modeledKg": 377438692.50050896,
+    "estimatedKg": 265446815.43197197,
+    "baseBeforeKg": 642885507.9324809,
+    "baseAfterKg": 642885507.9324809,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.18714261399999987,
+    "failedMs": 0.07318441500000017,
+    "powerEdges": 28,
+    "controlEdges": 16,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/ENERGY_STORAGE",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/ENERGY_STORAGE",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "ECONOMY",
+    "equipment": 7,
+    "functionalKg": 24900,
+    "hullKg": 59017366.732301004,
+    "armorKg": 431140755.49678123,
+    "frameKg": 3526357.96598074,
+    "connectorKg": 0,
+    "bulkheadKg": 2547089.0140527408,
+    "closureKg": 0,
+    "coreKg": 1484381.9147593486,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 2458223000,
+    "unknownLegacyServiceKg": 245822300,
+    "modeledKg": 496256469.20911574,
+    "estimatedKg": 247306681.9147594,
+    "baseBeforeKg": 743563151.1238751,
+    "baseAfterKg": 743563151.1238751,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.03549577799999997,
+    "failedMs": 0.02112562200000002,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "BLOCK_ASSEMBLY",
+    "equipment": 14,
+    "functionalKg": 49800,
+    "hullKg": 62785403.15999944,
+    "armorKg": 463128238.82585907,
+    "frameKg": 36615159.282117896,
+    "connectorKg": 248167388.25386685,
+    "bulkheadKg": 4918287.774757834,
+    "closureKg": 9859.981824001186,
+    "coreKg": 1894337.134661081,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 1855512000,
+    "unknownLegacyServiceKg": 185551200,
+    "modeledKg": 815674137.2784251,
+    "estimatedKg": 187445537.13466108,
+    "baseBeforeKg": 1003119674.4130862,
+    "baseAfterKg": 1003119674.4130862,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.09091557399999965,
+    "failedMs": 0.04106282900000042,
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "SPINE_AND_MODULES",
+    "equipment": 7,
+    "functionalKg": 24900,
+    "hullKg": 2654616.2493920377,
+    "armorKg": 26015655.76771439,
+    "frameKg": 5242507.783399199,
+    "connectorKg": 197279920.95038414,
+    "bulkheadKg": 1143184.4498513525,
+    "closureKg": 4230.182879999242,
+    "coreKg": 232041.8122506627,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 147475000,
+    "unknownLegacyServiceKg": 14747500,
+    "modeledKg": 232365015.38362113,
+    "estimatedKg": 14979541.812250674,
+    "baseBeforeKg": 247344557.1958718,
+    "baseAfterKg": 247344557.1958718,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.025015111000000617,
+    "failedMs": 0.02746733200000017,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "TRUSS_POD",
+    "equipment": 14,
+    "functionalKg": 49800,
+    "hullKg": 4261295.991029497,
+    "armorKg": 46068786.71962665,
+    "frameKg": 6677243.99277073,
+    "connectorKg": 162610904.42507437,
+    "bulkheadKg": 1522897.3595812256,
+    "closureKg": 6345.274319998902,
+    "coreKg": 318088.9451439614,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 190633000,
+    "unknownLegacyServiceKg": 19063300,
+    "modeledKg": 221197273.76240247,
+    "estimatedKg": 19381388.945143968,
+    "baseBeforeKg": 240578662.70754644,
+    "baseAfterKg": 240578662.70754644,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.0681362769999996,
+    "failedMs": 0.03078873399999975,
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "TWIN_HULL",
+    "equipment": 14,
+    "functionalKg": 49800,
+    "hullKg": 22759416.422595203,
+    "armorKg": 194515519.78174478,
+    "frameKg": 14056323.772761846,
+    "connectorKg": 255377234.77515233,
+    "bulkheadKg": 4201119.675557178,
+    "closureKg": 6517.615103998629,
+    "coreKg": 322291.6968422198,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 512875000,
+    "unknownLegacyServiceKg": 51287500,
+    "modeledKg": 490965932.04291534,
+    "estimatedKg": 51609791.69684219,
+    "baseBeforeKg": 542575723.7397575,
+    "baseAfterKg": 542575723.7397575,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.07156506500000069,
+    "failedMs": 0.03565790399999969,
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "CORE_AND_NACELLES",
+    "equipment": 7,
+    "functionalKg": 24900,
+    "hullKg": 1177310.783133063,
+    "armorKg": 13562800.531493712,
+    "frameKg": 1336989.3732990127,
+    "connectorKg": 322197559.9211201,
+    "bulkheadKg": 345759.80144501495,
+    "closureKg": 1984.5302400002117,
+    "coreKg": 154802.51029506518,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 35752000,
+    "unknownLegacyServiceKg": 3575200,
+    "modeledKg": 338647304.9407309,
+    "estimatedKg": 3730002.510295093,
+    "baseBeforeKg": 342377307.451026,
+    "baseAfterKg": 342377307.451026,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.034079326999999465,
+    "failedMs": 0.027431448999999702,
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "STACKED_BLOCKS",
+    "equipment": 14,
+    "functionalKg": 49800,
+    "hullKg": 20299634.60655608,
+    "armorKg": 75832985.5476214,
+    "frameKg": 8633335.017663792,
+    "connectorKg": 51935223.57758999,
+    "bulkheadKg": 12880727.508302638,
+    "closureKg": 755.3897999999567,
+    "coreKg": 143297.06789662404,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 567764000,
+    "unknownLegacyServiceKg": 56776400,
+    "modeledKg": 169632461.6475339,
+    "estimatedKg": 56919697.067896634,
+    "baseBeforeKg": 226552158.71543053,
+    "baseAfterKg": 226552158.71543053,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.05779139800000121,
+    "failedMs": 0.09695938899999965,
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  },
+  {
+    "id": "HYBRID",
+    "equipment": 14,
+    "functionalKg": 49800,
+    "hullKg": 4197081.569574475,
+    "armorKg": 40782974.41628899,
+    "frameKg": 5713752.232816639,
+    "connectorKg": 215710336.12778372,
+    "bulkheadKg": 1127624.4843232948,
+    "closureKg": 4230.182879999766,
+    "coreKg": 210976.1895216758,
+    "structureEstimateKg": 0,
+    "legacyReferenceKg": 148445000,
+    "unknownLegacyServiceKg": 14844500,
+    "modeledKg": 267585799.0136671,
+    "estimatedKg": 15055476.18952167,
+    "baseBeforeKg": 282641275.2031888,
+    "baseAfterKg": 282641275.2031888,
+    "unchangedDesign": true,
+    "replacements": [],
+    "normalMs": 0.1017577710000005,
+    "failedMs": 0.051515316000000894,
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "propulsion": 1,
+    "failures": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/POWER_GENERATOR",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/POWER_DISTRIBUTION",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/COMMAND_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/PROPULSION_CONTROL",
+        "propulsion": 0.5
+      },
+      {
+        "id": "system/1/MANEUVER_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/FIRE_CONTROL",
+        "propulsion": 1
+      },
+      {
+        "id": "system/1/SENSOR_PROCESSING",
+        "propulsion": 1
+      }
+    ]
+  }
+]

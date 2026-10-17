@@ -102,6 +102,17 @@ export interface DesignPolicy {
 }
 export interface MassLedger {
  version:1;
+ reconciliation?:{
+  policyVersion:'1.8.6.3.1';
+  actualModeledBaseKg:number;
+  remainingEstimatedBaseKg:number;
+  unknownLegacyServiceKg:number;
+  referenceMassKg:number;
+  serviceFormula:'ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10';
+  owners:{component:string;ownerRefs:string[];classification:'MODELED'|'ESTIMATED'|'UNKNOWN_LEGACY';confidence:string}[];
+  replacements:{estimateId:string;actualIds:string[];retiredKg:number}[];
+  uncertaintyNotes:string[];
+ };
  entries:{component:'HULL_SHELL'|'ARMOR'|'STRUCTURAL_FRAME'|'STRUCTURAL_CONNECTOR'|'BULKHEAD'|'DOOR_HATCH'|'STRUCTURE'|'CORE_EQUIPMENT'|'MOUNTED_EQUIPMENT'|'PLATFORM'|'OTHER_ESTIMATED'|'FUNCTIONAL_EQUIPMENT';massKg:number;source:'EQUIPMENT_DEFINED'|'GEOMETRY_DERIVED'|'ESTIMATED'|'LEGACY_ESTIMATE';basis:string}[];
  baseEstimatedDryMassKg:number;
  mountedEstimatedDryMassKg:number;

@@ -51,6 +51,9 @@ export function evaluateSystemPlan(plan: FunctionalSystemPlan, state: SystemInst
     const ids = new Set(plan.equipment.map(e => e.id));
     if (external.some(e => !e.id || ids.has(e.id) || e.powerMW !== undefined && (!Number.isFinite(e.powerMW) || e.powerMW < 0) || e.channels !== undefined && (!Number.isFinite(e.channels) || e.channels <= 0)) || new Set(external.map(e => e.id)).size !== external.length)
         throw Error('INVALID_EXTERNAL_OPERATING_SPECIFICATION');
+    const validStates=new Set(['OPERATIONAL','DEGRADED','OFFLINE','DESTROYED']);
+    if(Object.entries(state.equipmentStates).some(([id,value])=>!ids.has(id)||!validStates.has(value))||Object.entries(state.storageMJ).some(([id,value])=>!plan.equipment.some(e=>e.id===id&&e.type==='ENERGY_STORAGE')||!Number.isFinite(value)||value<0)||!Number.isFinite(state.elapsedSeconds??0)||(state.elapsedSeconds??0)<0)
+        throw Error('INVALID_SYSTEM_INSTANCE_STATE');
     const factor = (id: string) => operatingFactor(state.equipmentStates[id]), flow = new Flow(), equip = new Map(plan.equipment.map(e => [e.id, e]));
     let generated = 0, storageAvailable = 0;
     for (const e of plan.equipment) {
@@ -140,8 +143,14 @@ export function evaluateSystemPlan(plan: FunctionalSystemPlan, state: SystemInst
 export function evaluateShipCapabilities(b: ShipBlueprint, state?: SystemInstanceState, loads = installedSystemLoads(b), seconds = 1) { if (!b.functionalSystems)
     throw Error('FUNCTIONAL_SYSTEMS_ABSENT_LEGACY_NOT_REDESIGNED'); const actualIds = new Set((b.freeMountPlan?.entries ?? []).map(e => e.id)); if (loads.some(l => !actualIds.has(l.id)))
     throw Error('EXTERNAL_TARGET_NOT_INSTALLED'); return evaluateSystemPlan(b.functionalSystems, state, loads, seconds); }
-export function advanceSystemState(plan: FunctionalSystemPlan, state: SystemInstanceState, seconds: number, loads: ExternalSystemLoad[] = []) { const result = evaluateSystemPlan(plan, state, loads, seconds), next = structuredClone(state); for (const e of plan.equipment.filter(e => e.type === 'ENERGY_STORAGE'))
+export function advanceSystemState(plan: FunctionalSystemPlan, state: SystemInstanceState, seconds: number, loads: ExternalSystemLoad[] = []) { const result = evaluateSystemPlan(plan, state, loads, seconds), next = structuredClone(state); next.elapsedSeconds=(state.elapsedSeconds??0)+seconds; if(!Number.isFinite(next.elapsedSeconds))throw Error('INVALID_SYSTEM_CLOCK'); for (const e of plan.equipment.filter(e => e.type === 'ENERGY_STORAGE'))
     next.storageMJ[e.id] = Math.max(0, Math.min(e.specification.capacity, (state.storageMJ[e.id] ?? e.specification.capacity) + ((result.storageChargeMW[e.id] ?? 0) - (result.storageDispatchMW[e.id] ?? 0)) * seconds)); return { state: next, capabilities: result }; }
 export function analyzeSystemRedundancy(plan: FunctionalSystemPlan) { const normal = evaluateSystemPlan(plan), keys = ['commandAvailability', 'propulsionControlAvailability', 'maneuverControlAvailability', 'availableFireControlChannels', 'availableSensorProcessingCapacity'] as const; return plan.equipment.map(e => { const state = createSystemInstanceState(plan); state.equipmentStates[e.id] = 'OFFLINE'; const r = evaluateSystemPlan(plan, state); return { equipmentId: e.id, compartmentId: e.compartmentId, lostFunctions: keys.filter(k => r[k] < normal[k] - 1e-6), remaining: { command: r.commandAvailability, propulsion: r.propulsionControlAvailability, maneuver: r.maneuverControlAvailability }, singlePointOfTotalFailure: keys.filter(k => normal[k] > 0 && r[k] === 0) }; }); }
 export function analyzeCompartmentSystemLoss(plan: FunctionalSystemPlan) { return [...new Set(plan.equipment.map(e => e.compartmentId))].map(compartmentId => { const state = createSystemInstanceState(plan); for (const e of plan.equipment.filter(e => e.compartmentId === compartmentId))
     state.equipmentStates[e.id] = 'OFFLINE'; const c = evaluateSystemPlan(plan, state); return { compartmentId, command: c.commandAvailability, propulsion: c.propulsionAuthority, maneuver: c.maneuverAuthority, fireChannels: c.availableFireControlChannels, sensorCapacity: c.availableSensorProcessingCapacity }; }); }
+
+/** An explicit interval guards scheduler retries; evaluation never advances time. */
+export function advanceSystemInterval(plan:FunctionalSystemPlan,state:SystemInstanceState,fromSeconds:number,toSeconds:number,loads:ExternalSystemLoad[]=[]){
+ if(fromSeconds!==(state.elapsedSeconds??0)||!Number.isFinite(toSeconds)||toSeconds<=fromSeconds)throw Error('SYSTEM_INTERVAL_ALREADY_APPLIED_OR_OUT_OF_ORDER');
+ return advanceSystemState(plan,state,toSeconds-fromSeconds,loads);
+}

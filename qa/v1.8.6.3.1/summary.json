@@ -1,0 +1,26 @@
+{
+  "performance": {
+    "before": {
+      "coldMedianMs": 9072.687547000001,
+      "coldP95SampleMaxMs": 10348.038407,
+      "warmMedianMs": 3375.590101,
+      "warmP95SampleMaxMs": 3824.7263219999986,
+      "peakRssMiB": 943.8984375
+    },
+    "after": {
+      "coldMedianMs": 9992.177325999999,
+      "coldP95SampleMaxMs": 10705.641605,
+      "warmMedianMs": 2720.1231449999996,
+      "warmP95SampleMaxMs": 3159.791844000001,
+      "peakRssMiB": 930.2265625
+    }
+  },
+  "massCases": 12,
+  "unchangedMassCases": 12,
+  "nativeArchitectures": 8,
+  "allNativeFieldsPreserved": true,
+  "uniqueTargetedTests": 60,
+  "productionUiChecks": 55,
+  "normalPixelMatches": 8,
+  "remotePush": false
+}

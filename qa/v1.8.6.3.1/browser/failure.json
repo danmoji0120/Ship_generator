@@ -1,0 +1,140 @@
+{
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#generate')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"generate\" type=\"submit\" class=\"primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n    at generate (/workspace/shipyard-v1.8.6.3.1/tests/systems-integrity-browser.mjs:6:138)\n    at async file:///workspace/shipyard-v1.8.6.3.1/tests/systems-integrity-browser.mjs:12:211",
+  "checks": [
+    "BALANCED legacy import does not insert systems",
+    "BALANCED actual browser Generate systems, unarmed, engines, hard cap",
+    "Reactor offline removes generation and authority",
+    "Failure leaves complete exported design unchanged",
+    "Reset restores real functionality",
+    "POWER_DISTRIBUTION live UI capability propagation",
+    "PROPULSION_CONTROL live UI capability propagation",
+    "MANEUVER_CONTROL live UI capability propagation",
+    "COMMAND_CONTROL live UI capability propagation",
+    "FIRE_CONTROL live UI capability propagation",
+    "SENSOR_PROCESSING live UI capability propagation",
+    "Degraded gives partial control",
+    "Same-browser new generation exported bytes deterministic",
+    "BALANCED real failure analysis in Inspector",
+    "BLOCK_ASSEMBLY legacy import does not insert systems",
+    "BLOCK_ASSEMBLY actual browser Generate systems, unarmed, engines, hard cap",
+    "BLOCK_ASSEMBLY real failure analysis in Inspector",
+    "SPINE_AND_MODULES legacy import does not insert systems",
+    "SPINE_AND_MODULES actual browser Generate systems, unarmed, engines, hard cap",
+    "SPINE_AND_MODULES real failure analysis in Inspector",
+    "TRUSS_POD legacy import does not insert systems"
+  ],
+  "errors": [],
+  "rows": [
+    {
+      "id": "BALANCED",
+      "version": "1.8.6.3.1",
+      "count": 7,
+      "massKg": 24900,
+      "hosts": [
+        "citadel"
+      ],
+      "compartments": [
+        "comp/citadel/0",
+        "comp/citadel/1",
+        "comp/citadel/2"
+      ],
+      "normalUnarmed": true,
+      "engines": 2,
+      "baseKg": 628128484.6566122,
+      "maximum": 5000000000,
+      "summary": "Generation 120.00 MW / available 120.00 MW\nConsumed 32.00 MW / deficit 0.00 MW\nCommand 100.0% · Propulsion 100.0% · Maneuver 100.0%\nFire control 8.00 channels · Sensor processing 8.00 channels\nReserve 0.00 MJ · evaluation 0.300 ms\n7 active / 0 unavailable\n\n\nFunctional plan cache 44.5 / 64 MiB (UTF-16 estimate; no whole Blueprint retained).\nLogical routes; no fuel, heat, flight, radar range or live damage simulation.",
+      "memory": [
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Nodes",
+          "value": 4091
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 418872272
+        }
+      ]
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "version": "1.8.6.3.1",
+      "count": 14,
+      "massKg": 49800,
+      "hosts": [
+        "combat-core",
+        "drive-block",
+        "magazine--1",
+        "magazine-1"
+      ],
+      "compartments": [
+        "comp/combat-core/0",
+        "comp/combat-core/1",
+        "comp/drive-block/0",
+        "comp/drive-block/1",
+        "comp/magazine--1/0",
+        "comp/magazine--1/1",
+        "comp/magazine-1/0"
+      ],
+      "normalUnarmed": true,
+      "engines": 2,
+      "baseKg": 1003119674.4130862,
+      "maximum": 10000000000,
+      "summary": "Generation 240.00 MW / available 240.00 MW\nConsumed 64.00 MW / deficit 0.00 MW\nCommand 100.0% · Propulsion 100.0% · Maneuver 100.0%\nFire control 16.00 channels · Sensor processing 16.00 channels\nReserve 0.00 MJ · evaluation 0.300 ms\n14 active / 0 unavailable\n\n\nFunctional plan cache 0.0 / 64 MiB (UTF-16 estimate; no whole Blueprint retained).\nLogical routes; no fuel, heat, flight, radar range or live damage simulation.",
+      "memory": [
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Nodes",
+          "value": 7172
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 1041283440
+        }
+      ]
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "version": "1.8.6.3.1",
+      "count": 7,
+      "massKg": 24900,
+      "hosts": [
+        "breech--1",
+        "breech-1",
+        "drive-1",
+        "drive--1"
+      ],
+      "compartments": [
+        "comp/breech--1/0",
+        "comp/breech--1/1",
+        "comp/breech-1/0",
+        "comp/drive-1/0",
+        "comp/breech-1/1",
+        "comp/drive--1/0"
+      ],
+      "normalUnarmed": true,
+      "engines": 2,
+      "baseKg": 247370391.7012234,
+      "summary": "Generation 120.00 MW / available 120.00 MW\nConsumed 32.00 MW / deficit 0.00 MW\nCommand 100.0% · Propulsion 100.0% · Maneuver 100.0%\nFire control 8.00 channels · Sensor processing 8.00 channels\nReserve 0.00 MJ · evaluation 0.000 ms\n7 active / 0 unavailable\n\n\nFunctional plan cache 0.0 / 64 MiB (UTF-16 estimate; no whole Blueprint retained).\nLogical routes; no fuel, heat, flight, radar range or live damage simulation.",
+      "memory": [
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Nodes",
+          "value": 7393
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 642968396
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,23 @@
+import {functionalInput,FUNCTIONAL_CACHE_LIMIT_BYTES} from './cache';
 import type { ShipBlueprint } from '../blueprint/types';
 import { prepareInteriorQueries, placementBox, releaseInteriorQueries } from '../interior/query';
 import { systemSpecification } from './registry';
 import { equipmentOverlap } from './build';
 import { installedSystemLoads } from './types';
 import { evaluateSystemPlan } from './evaluate';
-import { interiorInput } from '../interior/build';
 import { cellVolume, solidCell } from '../physical/convex';
 // Exact content identities; source mutation always invalidates. One bounded entry.
-let lastKey: string | undefined;
-export const functionalValidationCacheBytes = () => lastKey ? lastKey.length * 2 : 0;
+let lastKey: string[] | undefined;
+export const functionalValidationCacheBytes = () => lastKey ? lastKey.reduce((n,k)=>n+k.length*2,0) : 0;
 export const clearFunctionalValidationCache = () => { lastKey = undefined; };
 export function validateFunctionalSystems(b: ShipBlueprint): string[] {
     const p = b.functionalSystems;
     if (!p)
-        return b.generatorVersion === '1.8.6.3' ? ['Required functional system plan absent'] : [];
+        return ['1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion) ? ['Required functional system plan absent'] : [];
     if (!b.compartmentPlan || !b.procurement)
         return ['Functional systems require confirmed interior and native order'];
-    const key = JSON.stringify(p) + interiorInput(b) + JSON.stringify([b.compartmentPlan, b.engines, installedSystemLoads(b), b.physicalDesign?.mass.functionalEquipmentMassKg, b.physicalDesign?.mass.unresolvedMassEstimateKg, b.exteriorDetailPlan?.kitPlacements.filter(e => e.kit === 'RCS_CLUSTER').map(e => e.id)]);
-    if (lastKey === key) {
+    const key = [JSON.stringify(p), functionalInput(b), JSON.stringify([b.physicalDesign?.mass.functionalEquipmentMassKg,b.physicalDesign?.mass.unresolvedMassEstimateKg,installedSystemLoads(b)])];
+    if (lastKey?.every((v,i)=>v===key[i])) {
         releaseInteriorQueries(b);
         return [];
     }
@@ -61,7 +61,7 @@ export function validateFunctionalSystems(b: ShipBlueprint): string[] {
         const cap = evaluateSystemPlan(p, undefined, installedSystemLoads(b));
         if (cap.commandAvailability <= 0 || cap.propulsionAuthority <= 0 || cap.maneuverAuthority <= 0)
             throw Error('REQUIRED_FUNCTIONAL_CAPABILITY_UNAVAILABLE');
-        lastKey = key;
+        lastKey = key.reduce((n,k)=>n+k.length*2,0)<=FUNCTIONAL_CACHE_LIMIT_BYTES?key:undefined;
         return [];
     }
     catch (error) {

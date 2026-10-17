@@ -1,3 +1,4 @@
+import {releasePhysicalQueries} from '../physical/probe';
 import {SYSTEM_VIEWS,renderSystems} from './systems';
 import type{SystemInstanceState}from'../systems/types';
 import {releaseInteriorQueries} from '../interior/query';
@@ -131,7 +132,7 @@ export class ShipViewer {
   show(b: AnyShipBlueprint, reset = true) {
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
-    if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;}
+    if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;}
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -281,7 +282,7 @@ export class ShipViewer {
     };
   }
   dispose() {
-    if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);
+    if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();if(this.mountPicking)disposeShip(this.mountPicking);
     this.disposed = true;
     this.resizeObserver.disconnect();
