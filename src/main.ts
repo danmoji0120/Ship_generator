@@ -1,3 +1,4 @@
+import {setupDamageLaboratory,showDamageLaboratory} from './ui/damage';
 import {showSystemsInspector,setupSystemsInspector}from'./ui/systems';
 import {showInteriorInspector,setupInteriorInspector} from './ui/interior';
 import {showStructuralInspector,setupStructuralInspector} from './ui/structure';
@@ -44,9 +45,10 @@ setupPhysicalInspector(viewer,()=>blueprint,next=>present(next));
 setupStructuralInspector(viewer,()=>blueprint);
 setupInteriorInspector(viewer,()=>blueprint);
 setupSystemsInspector(viewer,()=>blueprint);
+setupDamageLaboratory(viewer);
 const equipmentPreview=setupEquipmentPreview(viewer,()=>blueprint);
 const freeEditor=setupFreeEquipment(viewer,()=>blueprint,next=>{
- blueprint=next;storedBlueprint=next;$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);
+ blueprint=next;storedBlueprint=next;$('json-content').textContent='Open View JSON to format the current Blueprint.';viewer?.show(next,false);$("order-status").textContent=`Free equipment: ${next.freeMountPlan?.entries.length??0} · base Hull / Armor / Weapons preserved`;showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);showDamageLaboratory(next);
 });
 if(viewer)viewer.onHardpointSelect=id=>selectHardpoint(blueprint,id);
 $<HTMLSelectElement>("detail-mode").onchange=()=>viewer?.setDetailMode($<HTMLSelectElement>("detail-mode").value as DetailMode);
@@ -93,7 +95,7 @@ function present(next: AnyShipBlueprint, start=performance.now()) {
     $("design-rejection").replaceChildren();
     viewer?.show(next);
     blueprint = next;
-    showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);
+    showHardpointInspector(next);showPhysicalInspector(next);showStructuralInspector(next,viewer);showInteriorInspector(next,viewer);showSystemsInspector(next,viewer);showProcurementResult(next);showDamageLaboratory(next);
     equipmentPreview.reset();freeEditor.reset();
     setViewLabel("iso");
     const y = getShipyard(next.shipyardId);

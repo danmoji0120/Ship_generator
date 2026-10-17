@@ -32,6 +32,7 @@ let cache = new WeakMap<StructuralFramePlan, {
     key: string;
     query: ReturnType<typeof buildQuery>;
 }>();
+export const releaseStructuralQueries=(b:ShipBlueprint)=>{if(b.structuralFrame)cache.delete(b.structuralFrame);};
 export const clearStructuralQueryCache = () => { cache = new WeakMap(); };
 export function prepareStructuralQueries(b: ShipBlueprint) {
     const f = b.structuralFrame;

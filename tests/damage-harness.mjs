@@ -1,0 +1,3 @@
+import{build}from'esbuild';import{resolve}from'node:path';
+export async function bundle(root,out,damage=true){await build({stdin:{resolveDir:resolve(root),contents:`export*from'./src/procurement/generate.ts';export*from'./src/physical/diagnostics.ts';${damage?"export*from'./src/damage/flight.ts';export*from'./src/damage/state.ts';export*from'./src/damage/contacts.ts';export*from'./src/damage/registry.ts';export*from'./src/damage/diagnostics.ts';export*from'./tests/damage-fixtures.ts';":''}`},bundle:true,format:'esm',platform:'node',outfile:out});}
+if(process.argv[2]==='build')await bundle(process.argv[3]??'.',process.argv[4]??'/tmp/damage-after.mjs',process.argv[5]!=='base');

@@ -6,8 +6,8 @@ import { solidFromRings, solidTriangles, normal, cross } from '../generation/arm
 import { sub, dot } from '../generation/integration/contours';
 /** SPINE is an axial weapon/support volume, not a specified shell or homogeneous
  * metal body. Trace its actual rendered boundary without inventing armor or mass. */
-export function prepareUnresolvedSpines(b: ShipBlueprint) {
-    return (b.structuralVolumes ?? []).filter(v => v.type === 'SPINE').map(v => {
+export function prepareUnresolvedSpines(b: ShipBlueprint, volumes = (b.structuralVolumes ?? []).filter(v => v.type === 'SPINE')) {
+    return volumes.map(v => {
         const rotation = new Euler(v.rotation.x, v.rotation.y, v.rotation.z);
         const rings = (v.shape ? shapeStations(v.shape) : v.geometry.stations).map(s => profileRing(s).reverse().map(([x, y]) => { const p = new Vector3(x, y, s.z).applyEuler(rotation); return { x: p.x + v.position.x, y: p.y + v.position.y, z: p.z + v.position.z }; }));
         return { id: v.id, purpose: v.purpose, triangles: solidTriangles(solidFromRings(rings)).map(t => ({ points: t, normal: normal(t) })) };

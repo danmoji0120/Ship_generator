@@ -1,0 +1,10 @@
+import {readFile,writeFile}from'node:fs/promises';import{gunzipSync}from'node:zlib';import{createHash}from'node:crypto';import assert from'node:assert/strict';
+const api=await import('/tmp/damage-after.mjs'),rows=[];api.setDamageProfilingEnabled(true);
+const hash=b=>createHash('sha256').update(JSON.stringify(b)).digest('hex');
+for(const id of['BALANCED','BLOCK_ASSEMBLY','SPINE_AND_MODULES','TRUSS_POD','TWIN_HULL','CORE_AND_NACELLES','STACKED_BLOCKS','HYBRID']){
+ let b=JSON.parse(gunzipSync(await readFile(`qa/v1.8.6.3/browser/${id}-generated.json.gz`))),before=hash(b);const start=performance.now(),q=api.prepareDamageQueries(b),prepMs=performance.now()-start,t={blueprint:b,queries:q,motion:{position:{x:0,y:0,z:0},velocity:{x:0,y:0,z:0},quaternion:{x:0,y:0,z:0,w:1}}},e=b.functionalSystems.equipment.find(e=>e.type==='POWER_DISTRIBUTION'),s=api.createDamageInstance(b,'actual/'+id),p=api.launchProjectile(api.PROJECTILES['dev-500'],{...e.position,z:e.position.z-e.sizeM.z/2-.05},{x:0,y:0,z:1},'device/'+id);let timer=performance.now();api.resolveProjectile(t,s,p);const totalMs=performance.now()-timer;
+ assert(s.events.some(x=>x.ownerId===e.id),'Actual distributor hit '+id);assert.equal(s.systems.equipmentStates[e.id],'DESTROYED');assert.equal(before,hash(b));
+ const outside=api.createDamageInstance(b,'outside/'+id),po=api.launchProjectile(api.PROJECTILES['dev-500'],{x:e.position.x,y:e.position.y,z:e.position.z-b.order.length*1.5},{x:0,y:0,z:1},'outside/'+id);timer=performance.now();api.resolveProjectile(t,outside,po);const outsideMs=performance.now()-timer;
+ rows.push({id,prepMs,totalMs,profile:api.damageProfile(p),internalDeviceTest:true,events:s.events,capabilities:api.damageCapabilities(b,s),unchangedBlueprint:true,outside:{totalMs:outsideMs,status:po.status,outcome:po.lastOutcome,events:outside.events,profile:api.damageProfile(po)},memory:process.memoryUsage()});b=null;global.gc?.();console.log(id,totalMs,outside.events.map(e=>e.kind+':'+e.outcome));
+}
+await writeFile('qa/v1.8.6.4/actual-ships.json',JSON.stringify(rows,null,2));

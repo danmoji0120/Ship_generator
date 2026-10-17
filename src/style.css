@@ -1047,3 +1047,8 @@ pre {
 /* Long physical IDs stay inside the Inspector, including expanded mobile panels. */
 .physical-inspector label:has(select){display:block;min-width:0;max-width:100%}
 .physical-inspector select{box-sizing:border-box;width:100%;min-width:0;max-width:100%}
+
+#damage-lab .action-row { display:flex; gap:.35rem; flex-wrap:wrap; margin:.5rem 0; }
+#damage-lab pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+#damage-lab input { min-width:0; }
+#damage-lab select { box-sizing:border-box; min-width:0; max-width:100%; }
