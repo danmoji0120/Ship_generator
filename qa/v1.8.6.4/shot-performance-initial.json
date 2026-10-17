@@ -1,0 +1,450 @@
+{
+  "prepareMs": 892.0830740000001,
+  "before": {
+    "rss": 132419584,
+    "heapTotal": 58191872,
+    "heapUsed": 48061304,
+    "external": 6302668,
+    "arrayBuffers": 2484089
+  },
+  "afterPrepare": {
+    "rss": 377483264,
+    "heapTotal": 280784896,
+    "heapUsed": 192220344,
+    "external": 6343360,
+    "arrayBuffers": 2484089
+  },
+  "rows": [
+    {
+      "i": 0,
+      "ms": 38.549218999999994,
+      "heapDeltaBytes": 11091696,
+      "graphAnalysisMs": 1.0700549999999112,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 29.3553459999996,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 38.35060699999781,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.5570680000000721,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 5.009809000000132,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 378044416,
+        "heapTotal": 273829888,
+        "heapUsed": 115693936,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 1,
+      "ms": 15.805659999999989,
+      "heapDeltaBytes": 6289184,
+      "graphAnalysisMs": 0.25824899999997797,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 11.418880000000172,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 15.67249400000037,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.13265700000010838,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.2018110000003617,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 377896960,
+        "heapTotal": 264130560,
+        "heapUsed": 115718488,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 2,
+      "ms": 42.907363999999916,
+      "heapDeltaBytes": 6170936,
+      "graphAnalysisMs": 0.2615140000000338,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 38.36601900000005,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 42.6787499999964,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.11029600000006212,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.464158999999654,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379174912,
+        "heapTotal": 264654848,
+        "heapUsed": 115721008,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 3,
+      "ms": 8.23784099999989,
+      "heapDeltaBytes": 5458856,
+      "graphAnalysisMs": 0.19615599999997357,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 5.428482999999915,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 8.175515999998424,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.07255099999997583,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.5404439999999795,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264654848,
+        "heapUsed": 115772816,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 4,
+      "ms": 10.615157999999838,
+      "heapDeltaBytes": 7114224,
+      "graphAnalysisMs": 0.20204499999999825,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 7.816776000000118,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.531001000001197,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.07112600000050406,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.1644479999995383,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264916992,
+        "heapUsed": 115716880,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 5,
+      "ms": 25.514290000000074,
+      "heapDeltaBytes": 7051200,
+      "graphAnalysisMs": 0.1757350000000315,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 21.44494900000018,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 25.459100000000035,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.24162600000022394,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.0042759999998907,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264916992,
+        "heapUsed": 115750512,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 6,
+      "ms": 11.687735999999859,
+      "heapDeltaBytes": 5692064,
+      "graphAnalysisMs": 0.2975289999999404,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 7.0233080000004975,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 11.595311000001857,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.09040800000047966,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.3209529999999177,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264916992,
+        "heapUsed": 115746872,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 7,
+      "ms": 18.671734000000015,
+      "heapDeltaBytes": 7095216,
+      "graphAnalysisMs": 0.3021259999995891,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 14.802584000000024,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 18.616563000000042,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.10716200000069875,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.021350999999868,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264654848,
+        "heapUsed": 115747848,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 8,
+      "ms": 36.87880700000005,
+      "heapDeltaBytes": 6738272,
+      "graphAnalysisMs": 0.2808529999997518,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 33.49870800000008,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 36.79630699999734,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.08237399999961781,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.7468880000001263,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379305984,
+        "heapTotal": 264916992,
+        "heapUsed": 115745112,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 9,
+      "ms": 9.97393000000011,
+      "heapDeltaBytes": 6332096,
+      "graphAnalysisMs": 0.18802400000004127,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16798,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 6.5117159999999785,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 9.92577399999982,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.09863999999970474,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.8473089999997683,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379437056,
+        "heapTotal": 264916992,
+        "heapUsed": 115715728,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 10,
+      "ms": 23.12596500000018,
+      "heapDeltaBytes": 7110744,
+      "graphAnalysisMs": 0.2696569999998246,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16829,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 19.11208699999952,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 23.071748999998817,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.10873499999979686,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.0509070000002794,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 379437056,
+        "heapTotal": 264916992,
+        "heapUsed": 115742976,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    },
+    {
+      "i": 11,
+      "ms": 10.94993199999999,
+      "heapDeltaBytes": 7023112,
+      "graphAnalysisMs": 0.18677200000001903,
+      "components": 1,
+      "events": 10,
+      "stateJSONBytes": 16829,
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 7.463612000000012,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.896760999997696,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.13943799999969997,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.879555999999866,
+          "calls": 10
+        }
+      },
+      "postGcMemory": {
+        "rss": 380616704,
+        "heapTotal": 264916992,
+        "heapUsed": 115861704,
+        "external": 6343360,
+        "arrayBuffers": 2484089
+      }
+    }
+  ],
+  "summary": {
+    "n": 12,
+    "median": 18.671734000000015,
+    "p95": 42.907363999999916,
+    "min": 8.23784099999989,
+    "max": 42.907363999999916
+  },
+  "warmedExcludingFirst": {
+    "n": 11,
+    "median": 15.805659999999989,
+    "p95": 42.907363999999916,
+    "min": 8.23784099999989,
+    "max": 42.907363999999916
+  },
+  "afterGc": {
+    "rss": 431788032,
+    "heapTotal": 316026880,
+    "heapUsed": 167038880,
+    "external": 6373567,
+    "arrayBuffers": 2484089
+  },
+  "unchangedDesign": true,
+  "method": "12 actual exterior shots on 12 independent ship instances sharing one immutable prepared query handle; complete finite five-second simulation, not just a material response. Per-shot heap deltas are noisy allocations/GC, not peak memory. Profiles contain nested times and must not be summed."
+}

@@ -1,0 +1,14 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Same-ray repeat bypasses the actual first perforated layer\n    at check (file:///workspace/shipyard-v1.8.6.4/tests/damage-browser.mjs:3:80)\n    at file:///workspace/shipyard-v1.8.6.4/tests/damage-browser.mjs:15:70",
+  "checks": [
+    "Native new unarmed ship generated and laboratory starts OFF",
+    "BALANCED actual physical distributor hit and destroyed",
+    "BALANCED original Blueprint and mass unchanged",
+    "BALANCED independent identical ship B healthy",
+    "BALANCED reset restores function and clears damage",
+    "Actual 105mm thick armor STOP with no equipment damage",
+    "Actual exterior shot crosses armor hull bulkhead and device"
+  ],
+  "errors": [],
+  "rows": []
+}

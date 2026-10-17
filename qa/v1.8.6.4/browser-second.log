@@ -1,0 +1,23 @@
+PASS Native new unarmed ship generated and laboratory starts OFF
+PASS BALANCED actual physical distributor hit and destroyed
+PASS BALANCED original Blueprint and mass unchanged
+PASS BALANCED independent identical ship B healthy
+PASS BALANCED reset restores function and clears damage
+PASS Actual 105mm thick armor STOP with no equipment damage
+PASS Actual exterior shot crosses armor hull bulkhead and device
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Same-ray repeat bypasses the actual first perforated layer
+    at check (file:///workspace/shipyard-v1.8.6.4/tests/damage-browser.mjs:3:80)
+    at file:///workspace/shipyard-v1.8.6.4/tests/damage-browser.mjs:15:70 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

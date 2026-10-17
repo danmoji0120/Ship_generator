@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 895ms
+ ✓ tests/damage.test.ts (11 tests) 4018ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  2793ms
+   ✓ actual finite open/closed/blocked hatch geometry and thin bulkhead paths stay distinct  985ms
+
+ Test Files  2 passed (2)
+      Tests  27 passed (27)
+   Start at  18:56:40
+   Duration  6.17s (transform 565ms, setup 0ms, collect 882ms, tests 4.91s, environment 0ms, prepare 109ms)
+

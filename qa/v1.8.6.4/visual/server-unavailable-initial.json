@@ -1,0 +1,5 @@
+{
+  "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5187/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:5187/\", waiting until \"load\"\u001b[22m\n\n    at session (/workspace/shipyard-v1.8.6.4/tests/damage-visual.mjs:3:553)\n    at async file:///workspace/shipyard-v1.8.6.4/tests/damage-visual.mjs:4:15",
+  "rows": [],
+  "errors": []
+}

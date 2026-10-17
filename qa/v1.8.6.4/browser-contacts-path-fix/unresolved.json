@@ -1,0 +1,161 @@
+{
+  "state": {
+    "schemaVersion": 1,
+    "instanceId": "ship-A",
+    "time": 2.8571428570345316e-8,
+    "revision": 0,
+    "local": [],
+    "equipmentIntegrity": {},
+    "structuralIntegrity": {},
+    "systems": {
+      "equipmentStates": {},
+      "disabledPowerEdges": [],
+      "disabledControlEdges": [],
+      "storageMJ": {}
+    },
+    "interior": {
+      "openingStates": {},
+      "disabledBulkheadIds": [],
+      "hypotheticalHullBreaches": []
+    },
+    "blockedClosurePositions": {},
+    "structure": {
+      "schemaVersion": 1,
+      "disabledMemberIds": [],
+      "disabledJointIds": [],
+      "disabledEdgeIds": []
+    },
+    "events": [
+      {
+        "shotId": "shot/2",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 2.8571428570345316e-8,
+        "exitTime": 2.8571428570345316e-8,
+        "ownerId": "axial-spine",
+        "geometryId": "axial-spine",
+        "layerId": "UNKNOWN",
+        "kind": "UNRESOLVED",
+        "materialId": null,
+        "worldPosition": {
+          "x": 10.568315664434838,
+          "y": 0,
+          "z": 0
+        },
+        "localPosition": {
+          "x": 10.568315664434838,
+          "y": 0,
+          "z": 0
+        },
+        "localExit": {
+          "x": 10.568315664434838,
+          "y": 0,
+          "z": 0
+        },
+        "normal": {
+          "x": 0.9998311364742427,
+          "y": 0,
+          "z": -0.018376575758939865
+        },
+        "relativeVelocity": {
+          "x": -3500,
+          "y": 0,
+          "z": 0
+        },
+        "incidentJ": 6737500000,
+        "residualJ": 6737500000,
+        "outcome": "UNRESOLVED",
+        "incidenceDegrees": 1.0529595023745468,
+        "pathM": 0,
+        "availablePathM": 0,
+        "projectileBefore": {
+          "massKg": 1100,
+          "integrity": 1
+        },
+        "projectileAfter": {
+          "massKg": 1100,
+          "integrity": 1,
+          "relativeSpeedMps": 3500,
+          "localDirection": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "consumedJ": 0,
+        "disabledEdges": [],
+        "warning": "SPINE_MATERIAL_AND_SHELL_THICKNESS_UNSPECIFIED"
+      }
+    ],
+    "nextDamageId": 1
+  },
+  "projectile": {
+    "shotId": "shot/2",
+    "spec": {
+      "projectileId": "dev-500",
+      "provenance": "DEVELOPMENT_PRESET",
+      "ammunitionType": "KINETIC",
+      "caliberMm": 500,
+      "penetratorDiameterMm": 220,
+      "projectileLengthMm": 1800,
+      "projectileMassKg": 1100,
+      "muzzleVelocityMps": 3500,
+      "projectileMaterial": "TUNGSTEN_ALLOY",
+      "penetratorGeometry": "LONG_ROD",
+      "integrityProperties": {
+        "fractureResistance": 1.1,
+        "erosionResistance": 1.8
+      },
+      "collisionProfile": "CENTERLINE_SWEPT_FINITE_VOLUMES"
+    },
+    "position": {
+      "x": 10.568315664434838,
+      "y": 0,
+      "z": 0
+    },
+    "velocity": {
+      "x": -3500,
+      "y": 0,
+      "z": 0
+    },
+    "massKg": 1100,
+    "integrity": 1,
+    "age": 2.8571428570345316e-8,
+    "launchedAt": 0,
+    "status": "UNRESOLVED",
+    "hitCount": 0,
+    "ricochets": 0,
+    "maxFlightSeconds": 5,
+    "trajectory": [
+      {
+        "x": 10.568415664434834,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 10.568315664434838,
+        "y": 0,
+        "z": 0
+      }
+    ],
+    "lastOutcome": "UNRESOLVED"
+  },
+  "motion": {
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "quaternion": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  }
+}

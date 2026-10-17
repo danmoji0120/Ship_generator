@@ -1,0 +1,17 @@
+file:///workspace/shipyard-v1.8.6.4/tests/damage-visual.mjs:6
+ const memory=[],cdp=await now.context().newCDPSession(now);await cdp.send('Performance.enable');for(let cycle=0;cycle<6;cycle++){const id=cycle%2?'TWIN_HULL':'BALANCED';await now.evaluate(p=>window.loadShip(p),`/qa/v1.8.6.3/fixtures/${id}.json.gz`);await now.evaluate(()=>window.capture('Normal');window.damage=await(await fetch('/qa/v1.8.6.4/browser-initial/BALANCED-damage.json')).json();window.v.setDamageVisual(window.damage.state,window.damage.projectile,window.damage.motion);window.v.renderer.render(window.v.scene,window.v.camera));const debug=await now.evaluate(()=>window.v.getDiagnostics());await now.evaluate(()=>window.capture('Normal'));await cdp.send('HeapProfiler.collectGarbage');const metrics=(await cdp.send('Performance.getMetrics')).metrics;memory.push({cycle,id,debug,normal:await now.evaluate(()=>window.v.getDiagnostics()),postGcHeapBytes:metrics.find(m=>m.name==='JSHeapUsedSize').value});}
+                                                                                                                                                                                                                                                                                                        ^
+
+SyntaxError: missing ) after argument list
+    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:89:18)
+    at #translate (node:internal/modules/esm/loader:434:20)
+    at afterLoad (node:internal/modules/esm/loader:502:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:507:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at node:internal/modules/esm/loader:632:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+
+Node.js v24.19.0

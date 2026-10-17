@@ -1,0 +1,11 @@
+[
+  [ 'BALANCED', 120, 120, 1, 0 ],
+  [ 'BLOCK_ASSEMBLY', 240, 240, 1, 0.5 ],
+  [ 'SPINE_AND_MODULES', 120, 120, 1, 0 ],
+  [ 'TRUSS_POD', 240, 240, 1, 0.5 ],
+  [ 'TWIN_HULL', 240, 240, 1, 0.5 ],
+  [ 'CORE_AND_NACELLES', 120, 120, 1, 0 ],
+  [ 'STACKED_BLOCKS', 240, 240, 1, 0 ],
+  [ 'HYBRID', 240, 240, 1, 0.5 ],
+  [ 'ENDURANCE', 264, 264, 1, 1 ]
+]

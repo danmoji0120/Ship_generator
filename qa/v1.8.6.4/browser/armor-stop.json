@@ -1,0 +1,434 @@
+{
+  "state": {
+    "schemaVersion": 1,
+    "instanceId": "ship-A",
+    "time": 0.548725870403,
+    "revision": 2,
+    "local": [
+      {
+        "id": "ship-A/damage/1",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.48861580409243
+        },
+        "normal": {
+          "x": 0.5845613576706951,
+          "y": 0,
+          "z": -0.8113495049103032
+        },
+        "surfaceCoordinates": {
+          "u": 52.295847209505894,
+          "v": 9.231700000000004
+        },
+        "radiusM": 0.07125,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.9,
+        "delamination": 0.27,
+        "severity": 0.8963278609729488,
+        "channel": {
+          "entry": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.48861580409243
+          },
+          "exit": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.35348618197952
+          },
+          "radiusM": 0.07125
+        },
+        "shotId": "shot/2"
+      },
+      {
+        "id": "ship-A/damage/2",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9661999999549,
+          "y": -9.2317,
+          "z": -164.35348608197953
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.37483882328931,
+          "v": 9.2317
+        },
+        "radiusM": 0.03985674831338164,
+        "materialLossM": 0.006112564496677426,
+        "plasticDeformationM": 0.0057284104681979316,
+        "fracture": 0.06284662169017717,
+        "delamination": 0.01885398650705315,
+        "severity": 1,
+        "channel": null,
+        "shotId": "shot/2"
+      }
+    ],
+    "equipmentIntegrity": {},
+    "structuralIntegrity": {},
+    "systems": {
+      "equipmentStates": {},
+      "disabledPowerEdges": [],
+      "disabledControlEdges": [],
+      "storageMJ": {}
+    },
+    "interior": {
+      "openingStates": {},
+      "disabledBulkheadIds": [],
+      "hypotheticalHullBreaches": []
+    },
+    "blockedClosurePositions": {},
+    "structure": {
+      "schemaVersion": 1,
+      "disabledMemberIds": [],
+      "disabledJointIds": [],
+      "disabledEdgeIds": []
+    },
+    "events": [
+      {
+        "shotId": "shot/2",
+        "projectileId": "dev-105",
+        "instanceId": "ship-A",
+        "time": 0.5483334135199119,
+        "exitTime": 0.5485275102882001,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "materialId": "CERAMIC_STRIKE_FACE",
+        "worldPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.48861580409243
+        },
+        "localPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.48861580409243
+        },
+        "localExit": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.35348618197952
+        },
+        "normal": {
+          "x": 0.5845613576706951,
+          "y": 0,
+          "z": -0.8113495049103032
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 1050
+        },
+        "incidentJ": 6615000,
+        "residualJ": 685791.199663944,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.77200798489702,
+        "pathM": 0.13512962211291324,
+        "consumedJ": 5929208.800336056,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/1",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/2",
+        "projectileId": "dev-105",
+        "instanceId": "ship-A",
+        "time": 0.5485275102882001,
+        "exitTime": 0.548725870403,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.9661999999549,
+          "y": -9.2317,
+          "z": -164.35348608197953
+        },
+        "localPosition": {
+          "x": 182.9661999999549,
+          "y": -9.2317,
+          "z": -164.35348608197953
+        },
+        "localExit": {
+          "x": 182.96618468954094,
+          "y": -9.2317,
+          "z": -164.3195273937827
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": -0.15436988406045107,
+          "y": 0,
+          "z": 342.3943188486085
+        },
+        "incidentJ": 685791.1996639436,
+        "residualJ": 0,
+        "outcome": "STOPPED",
+        "incidenceDegrees": 35.74617594927494,
+        "pathM": 0.08105135344176094,
+        "consumedJ": 685791.1996639436,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/2",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      }
+    ],
+    "nextDamageId": 3
+  },
+  "projectile": {
+    "shotId": "shot/2",
+    "spec": {
+      "projectileId": "dev-105",
+      "provenance": "DEVELOPMENT_PRESET",
+      "ammunitionType": "KINETIC",
+      "caliberMm": 105,
+      "penetratorDiameterMm": 75,
+      "projectileLengthMm": 330,
+      "projectileMassKg": 12,
+      "muzzleVelocityMps": 1050,
+      "projectileMaterial": "HARDENED_STEEL",
+      "penetratorGeometry": "CAPPED_OGIVE",
+      "integrityProperties": {
+        "fractureResistance": 1,
+        "erosionResistance": 0.8
+      },
+      "collisionProfile": "CENTERLINE_SWEPT_FINITE_VOLUMES"
+    },
+    "position": {
+      "x": 182.96618468954094,
+      "y": -9.2317,
+      "z": -164.3195273937827
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "massKg": 11.268509256332681,
+    "integrity": 0.36562545010036995,
+    "age": 0.548725870403,
+    "launchedAt": 0,
+    "status": "STOPPED",
+    "hitCount": 2,
+    "ricochets": 0,
+    "maxFlightSeconds": 5,
+    "trajectory": [
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -740.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -722.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -705.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -687.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -670.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -652.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -635.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -617.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -600.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -582.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -565.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -547.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -530.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -512.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -495.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -477.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -460.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -442.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -425.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -407.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -390.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -372.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -355.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -337.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -320.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -302.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -285.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -267.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -250.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -232.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -215.2387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -197.7387
+      },
+      {
+        "x": 182.9662,
+        "y": -9.2317,
+        "z": -180.2387
+      },
+      {
+        "x": 182.96618468954094,
+        "y": -9.2317,
+        "z": -164.3195273937827
+      }
+    ],
+    "lastOutcome": "STOPPED"
+  },
+  "motion": {
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "quaternion": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  }
+}

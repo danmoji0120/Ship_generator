@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/damage.test.ts (8 tests) 3060ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  3026ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  18:54:21
+   Duration  3.96s (transform 475ms, setup 0ms, collect 672ms, tests 3.06s, environment 0ms, prepare 56ms)
+

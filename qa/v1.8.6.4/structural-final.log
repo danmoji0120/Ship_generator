@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/damage.test.ts (14 tests | 12 skipped) 249ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 12 skipped (14)
+   Start at  19:14:57
+   Duration  1.24s (transform 556ms, setup 0ms, collect 785ms, tests 249ms, environment 0ms, prepare 59ms)
+

@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/damage.test.ts (11 tests) 4048ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  2734ms
+   ✓ actual finite open/closed/blocked hatch geometry and thin bulkhead paths stay distinct  1098ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  18:55:24
+   Duration  4.96s (transform 510ms, setup 0ms, collect 711ms, tests 4.05s, environment 0ms, prepare 57ms)
+

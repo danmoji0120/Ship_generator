@@ -1,0 +1,3226 @@
+{
+  "state": {
+    "schemaVersion": 1,
+    "instanceId": "ship-A",
+    "time": 9.999999999999975,
+    "revision": 20,
+    "local": [
+      {
+        "id": "ship-A/damage/1",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.4886158040924
+        },
+        "normal": {
+          "x": 0.5845613576706951,
+          "y": 0,
+          "z": -0.8113495049103032
+        },
+        "surfaceCoordinates": {
+          "u": 52.29584720950591,
+          "v": 9.231700000000004
+        },
+        "radiusM": 0.209,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.9,
+        "delamination": 0.27,
+        "severity": 0.009901444446456853,
+        "channel": {
+          "entry": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.4886158040924
+          },
+          "exit": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.3534861819795
+          },
+          "radiusM": 0.209
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/2",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.96619999997574,
+          "y": -9.2317,
+          "z": -164.3534860819795
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.374838823306234,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.010153859837168894,
+        "channel": {
+          "entry": {
+            "x": 182.96619999997574,
+            "y": -9.2317,
+            "z": -164.3534860819795
+          },
+          "exit": {
+            "x": 182.9661803396861,
+            "y": -9.2317,
+            "z": -164.27242257358117
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/3",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.96618033965783,
+          "y": -9.2317,
+          "z": -164.27242247358117
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.42220952490004,
+          "v": 9.2317
+        },
+        "radiusM": 0.187,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.7,
+        "delamination": 0.21,
+        "severity": 0.001466429830478671,
+        "channel": {
+          "entry": {
+            "x": 182.96618033965783,
+            "y": -9.2317,
+            "z": -164.27242247358117
+          },
+          "exit": {
+            "x": 182.96616505053944,
+            "y": -9.2317,
+            "z": -164.21838174026553
+          },
+          "radiusM": 0.187
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/4",
+        "ownerId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "position": {
+          "x": 182.96102078996904,
+          "y": -9.2317,
+          "z": -153.30396791835412
+        },
+        "normal": {
+          "x": 0.6113687113624119,
+          "y": 0,
+          "z": -0.791345878088124
+        },
+        "surfaceCoordinates": {
+          "u": 51.060200339948864,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.002982602383054209,
+        "channel": {
+          "entry": {
+            "x": 182.96102078996904,
+            "y": -9.2317,
+            "z": -153.30396791835412
+          },
+          "exit": {
+            "x": 182.96100874210995,
+            "y": -9.2317,
+            "z": -153.27840635939998
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/5",
+        "ownerId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "position": {
+          "x": 182.91773306628494,
+          "y": -9.2317,
+          "z": -69.73544366666668
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": 182.91773306628494,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.004378971037032951,
+        "channel": {
+          "entry": {
+            "x": 182.91773306628494,
+            "y": -9.2317,
+            "z": -69.73544366666668
+          },
+          "exit": {
+            "x": 182.91771361312362,
+            "y": -9.2317,
+            "z": -69.69788966666668
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/6",
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "position": {
+          "x": 182.9003815938681,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": 182.9003815938681,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.018136148649508917,
+        "channel": {
+          "entry": {
+            "x": 182.9003815938681,
+            "y": -9.2317,
+            "z": -36.23871865384191
+          },
+          "exit": {
+            "x": 182.8993455837859,
+            "y": -9.2317,
+            "z": -34.2387186538419
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/7",
+        "ownerId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "position": {
+          "x": 182.88092550800977,
+          "y": -9.2317,
+          "z": 1.3209271327575252
+        },
+        "normal": {
+          "x": -0.8149211119637882,
+          "y": -2.5548353619750276e-13,
+          "z": -0.5795718948290218
+        },
+        "surfaceCoordinates": {
+          "u": 104.91619311691252,
+          "v": 9.231700000038272
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.004105263090248723,
+        "channel": {
+          "entry": {
+            "x": 182.88092550800977,
+            "y": -9.2317,
+            "z": 1.3209271327575252
+          },
+          "exit": {
+            "x": 182.88090740899653,
+            "y": -9.2317,
+            "z": 1.3558669727269668
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/8",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.8702006109033,
+          "y": -9.2317,
+          "z": 28.65394516927379
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": 86.41006144806113,
+          "v": 9.2317
+        },
+        "radiusM": 0.187,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.7,
+        "delamination": 0.21,
+        "severity": 0.0020172214499995693,
+        "channel": {
+          "entry": {
+            "x": 182.8702006109033,
+            "y": -9.2317,
+            "z": 28.65394516927379
+          },
+          "exit": {
+            "x": 182.87017183671207,
+            "y": -9.2317,
+            "z": 28.727307916554565
+          },
+          "radiusM": 0.187
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/9",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.870171836728,
+          "y": -9.2317,
+          "z": 28.727308016554563
+        },
+        "normal": {
+          "x": 0.8014241056055867,
+          "y": 0,
+          "z": 0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": -86.3512494840614,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.014010035478487235,
+        "channel": {
+          "entry": {
+            "x": 182.870171836728,
+            "y": -9.2317,
+            "z": 28.727308016554563
+          },
+          "exit": {
+            "x": 182.8701893524902,
+            "y": -9.2317,
+            "z": 28.837270732763432
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/10",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.87018935251794,
+          "y": -9.2317,
+          "z": 28.83727083276343
+        },
+        "normal": {
+          "x": 0.8014241056055867,
+          "y": 0,
+          "z": 0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": -86.2631331085637,
+          "v": 9.2317
+        },
+        "radiusM": 0.209,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.9,
+        "delamination": 0.27,
+        "severity": 0.014240870380696621,
+        "channel": {
+          "entry": {
+            "x": 182.87018935251794,
+            "y": -9.2317,
+            "z": 28.83727083276343
+          },
+          "exit": {
+            "x": 182.8702401706988,
+            "y": -9.2317,
+            "z": 29.020513116193527
+          },
+          "radiusM": 0.209
+        },
+        "shotId": "shot/3"
+      },
+      {
+        "id": "ship-A/damage/11",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.3534861819795
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.374838764869764,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 1.2518782748362128e-8,
+        "channel": {
+          "entry": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.3534861819795
+          },
+          "exit": {
+            "x": 182.9662,
+            "y": -9.2317,
+            "z": -164.3534860819794
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/12",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.96619672236545,
+          "y": -9.2317,
+          "z": -164.2724225696079
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.42222276086825,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.0000014770990952243377,
+        "channel": {
+          "entry": {
+            "x": 182.96619672236545,
+            "y": -9.2317,
+            "z": -164.2724225696079
+          },
+          "exit": {
+            "x": 182.9661967218884,
+            "y": -9.2317,
+            "z": -164.27241077052676
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/13",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9661923531811,
+          "y": -9.2317,
+          "z": -164.2183817325411
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "surfaceCoordinates": {
+          "u": 52.45380940101812,
+          "v": 9.2317
+        },
+        "radiusM": 0.187,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.7,
+        "delamination": 0.21,
+        "severity": 5.317138243924739e-7,
+        "channel": {
+          "entry": {
+            "x": 182.9661923531811,
+            "y": -9.2317,
+            "z": -164.2183817325411
+          },
+          "exit": {
+            "x": 182.96619235159125,
+            "y": -9.2317,
+            "z": -164.21836207039473
+          },
+          "radiusM": 0.187
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/14",
+        "ownerId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "position": {
+          "x": 182.96324470897537,
+          "y": -9.2317,
+          "z": -153.27840530552788
+        },
+        "normal": {
+          "x": 0.6113687113624119,
+          "y": 0,
+          "z": -0.791345878088124
+        },
+        "surfaceCoordinates": {
+          "u": 51.07758841075034,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.0002008887835556051,
+        "channel": {
+          "entry": {
+            "x": 182.96324470897537,
+            "y": -9.2317,
+            "z": -153.27840530552788
+          },
+          "exit": {
+            "x": 182.96324424391855,
+            "y": -9.2317,
+            "z": -153.27667928164828
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/15",
+        "ownerId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "position": {
+          "x": 182.93683219141715,
+          "y": -9.2317,
+          "z": -69.73544366666667
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": 182.93683219141715,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.000001150452809606209,
+        "channel": {
+          "entry": {
+            "x": 182.93683219141715,
+            "y": -9.2317,
+            "z": -69.73544366666667
+          },
+          "exit": {
+            "x": 182.9368321882893,
+            "y": -9.2317,
+            "z": -69.73543377322521
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/16",
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "position": {
+          "x": 182.92624200498847,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": 182.92624200498847,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 1.212666604894365e-7,
+        "channel": {
+          "entry": {
+            "x": 182.92624200498847,
+            "y": -9.2317,
+            "z": -36.23871865384191
+          },
+          "exit": {
+            "x": 182.9262420007533,
+            "y": -9.2317,
+            "z": -36.23870525802077
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/17",
+        "ownerId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "position": {
+          "x": 182.91438217506595,
+          "y": -9.2317,
+          "z": 1.2738845750294843
+        },
+        "normal": {
+          "x": -0.8149211119637882,
+          "y": -2.5548353619750276e-13,
+          "z": -0.5795718948290218
+        },
+        "surfaceCoordinates": {
+          "u": 104.9739196342863,
+          "v": 9.231700000038272
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.004075425013108229,
+        "channel": {
+          "entry": {
+            "x": 182.91438217506595,
+            "y": -9.2317,
+            "z": 1.2738845750294843
+          },
+          "exit": {
+            "x": 182.91437113176679,
+            "y": -9.2317,
+            "z": 1.3088144941411195
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/18",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9091735772459,
+          "y": -9.2317,
+          "z": 28.6017230352492
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": 86.47522311921544,
+          "v": 9.2317
+        },
+        "radiusM": 0.187,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.7,
+        "delamination": 0.21,
+        "severity": 0.001423021376496505,
+        "channel": {
+          "entry": {
+            "x": 182.9091735772459,
+            "y": -9.2317,
+            "z": 28.6017230352492
+          },
+          "exit": {
+            "x": 182.90916362935715,
+            "y": -9.2317,
+            "z": 28.653960451271615
+          },
+          "radiusM": 0.187
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/19",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.9091712378671,
+          "y": -9.2317,
+          "z": 28.675050360994295
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": 86.41645543358949,
+          "v": 9.2317
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.006595147987590095,
+        "channel": {
+          "entry": {
+            "x": 182.9091712378671,
+            "y": -9.2317,
+            "z": 28.675050360994295
+          },
+          "exit": {
+            "x": 182.9091900883795,
+            "y": -9.2317,
+            "z": 28.727301801407815
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/4"
+      },
+      {
+        "id": "ship-A/damage/20",
+        "ownerId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "position": {
+          "x": 182.90921769854785,
+          "y": -9.2317,
+          "z": 28.78497439225226
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "surfaceCoordinates": {
+          "u": 86.32838745312377,
+          "v": 9.2317
+        },
+        "radiusM": 0.209,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.9,
+        "delamination": 0.27,
+        "severity": 0.0039625944738592815,
+        "channel": {
+          "entry": {
+            "x": 182.90921769854785,
+            "y": -9.2317,
+            "z": 28.78497439225226
+          },
+          "exit": {
+            "x": 182.90924272975371,
+            "y": -9.2317,
+            "z": 28.837260002175917
+          },
+          "radiusM": 0.209
+        },
+        "shotId": "shot/4"
+      }
+    ],
+    "equipmentIntegrity": {
+      "system/0/POWER_DISTRIBUTION": 0
+    },
+    "structuralIntegrity": {},
+    "systems": {
+      "equipmentStates": {
+        "system/0/POWER_DISTRIBUTION": "DESTROYED"
+      },
+      "disabledPowerEdges": [],
+      "disabledControlEdges": [],
+      "storageMJ": {}
+    },
+    "interior": {
+      "openingStates": {},
+      "disabledBulkheadIds": [],
+      "hypotheticalHullBreaches": []
+    },
+    "blockedClosurePositions": {},
+    "structure": {
+      "schemaVersion": 1,
+      "disabledMemberIds": [],
+      "disabledJointIds": [],
+      "disabledEdgeIds": []
+    },
+    "events": [
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.16450002405597358,
+        "exitTime": 0.16453871946811027,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "materialId": "CERAMIC_STRIKE_FACE",
+        "worldPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.4886158040924
+        },
+        "localPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.4886158040924
+        },
+        "localExit": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.3534861819795
+        },
+        "normal": {
+          "x": 0.5845613576706951,
+          "y": 0,
+          "z": -0.8113495049103032
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3500
+        },
+        "incidentJ": 6737500000,
+        "residualJ": 6670789018.041997,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.77200798489702,
+        "pathM": 0.13512962211291324,
+        "consumedJ": 66710981.958003044,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/1",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.16453871946811027,
+        "exitTime": 0.16456203631799524,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.96619999997574,
+          "y": -9.2317,
+          "z": -164.3534860819795
+        },
+        "localPosition": {
+          "x": 182.96619999997574,
+          "y": -9.2317,
+          "z": -164.3534860819795
+        },
+        "localExit": {
+          "x": 182.9661803396861,
+          "y": -9.2317,
+          "z": -164.27242257358117
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": -0.8450383660408239,
+          "y": 0,
+          "z": 3484.2708821860624
+        },
+        "incidentJ": 6670789018.041997,
+        "residualJ": 6603054761.349473,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.7581120702025,
+        "pathM": 0.08106351078241936,
+        "consumedJ": 67734256.69252396,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/2",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.16456203631799524,
+        "exitTime": 0.16457761969149917,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "materialId": "FIBER_SPALL_BACKING",
+        "worldPosition": {
+          "x": 182.96618033965783,
+          "y": -9.2317,
+          "z": -164.27242247358117
+        },
+        "localPosition": {
+          "x": 182.96618033965783,
+          "y": -9.2317,
+          "z": -164.27242247358117
+        },
+        "localExit": {
+          "x": 182.96616505053944,
+          "y": -9.2317,
+          "z": -164.21838174026553
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": -0.9814274964680587,
+          "y": 0,
+          "z": 3468.941783260768
+        },
+        "incidentJ": 6603054761.349471,
+        "residualJ": 6593371844.875144,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.75579795444431,
+        "pathM": 0.05404073547842296,
+        "consumedJ": 9682916.474327087,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/3",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.16772593332895253,
+        "exitTime": 0.16773331138021477,
+        "ownerId": "shell/citadel",
+        "geometryId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.96102078996904,
+          "y": -9.2317,
+          "z": -153.30396791835412
+        },
+        "localPosition": {
+          "x": 182.96102078996904,
+          "y": -9.2317,
+          "z": -153.30396791835412
+        },
+        "localExit": {
+          "x": 182.96100874210995,
+          "y": -9.2317,
+          "z": -153.27840635939998
+        },
+        "normal": {
+          "x": 0.6113687113624119,
+          "y": 0,
+          "z": -0.791345878088124
+        },
+        "relativeVelocity": {
+          "x": -1.6339733316503653,
+          "y": 0,
+          "z": 3466.7491802817945
+        },
+        "incidentJ": 6593371844.875144,
+        "residualJ": 6573706438.298257,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 37.66153057947518,
+        "pathM": 0.025561561793390197,
+        "consumedJ": 19665406.57688713,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/4",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.19186241245034383,
+        "exitTime": 0.19187326905470395,
+        "ownerId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "geometryId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.91773306628494,
+          "y": -9.2317,
+          "z": -69.73544366666668
+        },
+        "localPosition": {
+          "x": 182.91773306628494,
+          "y": -9.2317,
+          "z": -69.73544366666668
+        },
+        "localExit": {
+          "x": 182.91771361312362,
+          "y": -9.2317,
+          "z": -69.69788966666668
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": -1.7935055121783092,
+          "y": 0,
+          "z": 3462.3321585799317
+        },
+        "incidentJ": 6573706438.298256,
+        "residualJ": 6544920368.198991,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0.029679499957814402,
+        "pathM": 0.037554005038415994,
+        "consumedJ": 28786070.0992651,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/5",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.2015551537184581,
+        "exitTime": 0.2021361443030092,
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "geometryId": "system/0/POWER_DISTRIBUTION/OBB",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.9003815938681,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "localPosition": {
+          "x": 182.9003815938681,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "localExit": {
+          "x": 182.8993455837859,
+          "y": -9.2317,
+          "z": -34.2387186538419
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": -1.7901493155140724,
+          "y": 0,
+          "z": 3455.853077664209
+        },
+        "incidentJ": 6544920368.198992,
+        "residualJ": 6426220719.502136,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0.029679499970094416,
+        "pathM": 2.0000002683292095,
+        "consumedJ": 118699648.69685555,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/6",
+        "equipmentStateChange": {
+          "from": "OPERATIONAL",
+          "to": "DESTROYED"
+        },
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": -1,
+          "maneuver": -1,
+          "fire": -8,
+          "sensor": -8
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.2125065925692691,
+        "exitTime": 0.21251679121698633,
+        "ownerId": "shell/citadel",
+        "geometryId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.88092550800977,
+          "y": -9.2317,
+          "z": 1.3209271327575252
+        },
+        "localPosition": {
+          "x": 182.88092550800977,
+          "y": -9.2317,
+          "z": 1.3209271327575252
+        },
+        "localExit": {
+          "x": 182.88090740899653,
+          "y": -9.2317,
+          "z": 1.3558669727269668
+        },
+        "normal": {
+          "x": -0.8149211119637882,
+          "y": -2.5548353619750276e-13,
+          "z": -0.5795718948290218
+        },
+        "relativeVelocity": {
+          "x": -1.776208245909426,
+          "y": 0,
+          "z": 3428.940077960971
+        },
+        "incidentJ": 6426220719.502136,
+        "residualJ": 6399839392.7725725,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 54.609241866196285,
+        "pathM": 0.0349398446571314,
+        "consumedJ": 26381326.729563713,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/7",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.22049188201858483,
+        "exitTime": 0.2205133241724951,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "materialId": "FIBER_SPALL_BACKING",
+        "worldPosition": {
+          "x": 182.8702006109033,
+          "y": -9.2317,
+          "z": 28.65394516927379
+        },
+        "localPosition": {
+          "x": 182.8702006109033,
+          "y": -9.2317,
+          "z": 28.65394516927379
+        },
+        "localExit": {
+          "x": 182.87017183671207,
+          "y": -9.2317,
+          "z": 28.727307916554565
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": -1.3425299247800089,
+          "y": 1.3493346137709827e-13,
+          "z": 3422.9175285471742
+        },
+        "incidentJ": 6399839392.772573,
+        "residualJ": 6386929499.47292,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.28878285591492,
+        "pathM": 0.07336275292365357,
+        "consumedJ": 12909893.299653053,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/8",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.2205133241724951,
+        "exitTime": 0.22054557590603524,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.870171836728,
+          "y": -9.2317,
+          "z": 28.727308016554563
+        },
+        "localPosition": {
+          "x": 182.870171836728,
+          "y": -9.2317,
+          "z": 28.727308016554563
+        },
+        "localExit": {
+          "x": 182.8701893524902,
+          "y": -9.2317,
+          "z": 28.837270732763432
+        },
+        "normal": {
+          "x": 0.8014241056055867,
+          "y": 0,
+          "z": 0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": 0.5447552779249084,
+          "y": 1.3476042037593458e-13,
+          "z": 3419.935101163271
+        },
+        "incidentJ": 6386929499.472921,
+        "residualJ": 6297448390.586709,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.25718387902227,
+        "pathM": 0.10996271760389571,
+        "consumedJ": 89481108.88621235,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/9",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/3",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.22054557590603524,
+        "exitTime": 0.22059966117903806,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "materialId": "CERAMIC_STRIKE_FACE",
+        "worldPosition": {
+          "x": 182.87018935251794,
+          "y": -9.2317,
+          "z": 28.83727083276343
+        },
+        "localPosition": {
+          "x": 182.87018935251794,
+          "y": -9.2317,
+          "z": 28.83727083276343
+        },
+        "localExit": {
+          "x": 182.8702401706988,
+          "y": -9.2317,
+          "z": 29.020513116193527
+        },
+        "normal": {
+          "x": 0.8014241056055867,
+          "y": 0,
+          "z": 0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": 0.9426626013566148,
+          "y": 1.339272916300482e-13,
+          "z": 3399.091520124665
+        },
+        "incidentJ": 6297448390.586711,
+        "residualJ": 6207767244.327239,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.250420707506926,
+        "pathM": 0.18324229047674592,
+        "consumedJ": 89681146.2594719,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/10",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.164538632519422,
+        "exitTime": 5.164538633519422,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.3534861819795
+        },
+        "localPosition": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.3534861819795
+        },
+        "localExit": {
+          "x": 182.9662,
+          "y": -9.2317,
+          "z": -164.3534860819794
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3500
+        },
+        "incidentJ": 6737500000,
+        "residualJ": 6737499915.654701,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.77200798489704,
+        "pathM": 1.0000007932831068e-7,
+        "consumedJ": 84.34529876708984,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/11",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.16456179449453,
+        "exitTime": 5.164561797865696,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.96619672236545,
+          "y": -9.2317,
+          "z": -164.2724225696079
+        },
+        "localPosition": {
+          "x": 182.96619672236545,
+          "y": -9.2317,
+          "z": -164.2724225696079
+        },
+        "localExit": {
+          "x": 182.9661967218884,
+          "y": -9.2317,
+          "z": -164.27241077052676
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": -0.1415152201616378,
+          "y": 0,
+          "z": 3499.9999782241157
+        },
+        "incidentJ": 6737499915.6547,
+        "residualJ": 6737489963.699671,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.76969134921184,
+        "pathM": 0.000011799081150495883,
+        "consumedJ": 9951.95502948761,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/12",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.164577234715098,
+        "exitTime": 5.164577240332859,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "materialId": "FIBER_SPALL_BACKING",
+        "worldPosition": {
+          "x": 182.9661923531811,
+          "y": -9.2317,
+          "z": -164.2183817325411
+        },
+        "localPosition": {
+          "x": 182.9661923531811,
+          "y": -9.2317,
+          "z": -164.2183817325411
+        },
+        "localExit": {
+          "x": 182.96619235159125,
+          "y": -9.2317,
+          "z": -164.21836207039473
+        },
+        "normal": {
+          "x": 0.5845613576706948,
+          "y": 0,
+          "z": -0.8113495049103031
+        },
+        "relativeVelocity": {
+          "x": -0.2830045899562454,
+          "y": 0,
+          "z": 3499.997737855809
+        },
+        "incidentJ": 6737489963.699674,
+        "residualJ": 6737486381.283118,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 35.76737513374501,
+        "pathM": 0.000019662146438614858,
+        "consumedJ": 3582.416555404663,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/13",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.167702945076078,
+        "exitTime": 5.167703438247337,
+        "ownerId": "shell/citadel",
+        "geometryId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.96324470897537,
+          "y": -9.2317,
+          "z": -153.27840530552788
+        },
+        "localPosition": {
+          "x": 182.96324470897537,
+          "y": -9.2317,
+          "z": -153.27840530552788
+        },
+        "localExit": {
+          "x": 182.96324424391855,
+          "y": -9.2317,
+          "z": -153.27667928164828
+        },
+        "normal": {
+          "x": 0.6113687113624119,
+          "y": 0,
+          "z": -0.791345878088124
+        },
+        "relativeVelocity": {
+          "x": -0.943032957716359,
+          "y": 0,
+          "z": 3499.996821068034
+        },
+        "incidentJ": 6737486381.283118,
+        "residualJ": 6736132895.83976,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 37.673097966045205,
+        "pathM": 0.0017260239422398627,
+        "consumedJ": 1353485.4433584213,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/14",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.19157443021569,
+        "exitTime": 5.191574433042632,
+        "ownerId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "geometryId": "bulkhead/comp/citadel/0/comp/citadel/1",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.93683219141715,
+          "y": -9.2317,
+          "z": -69.73544366666667
+        },
+        "localPosition": {
+          "x": 182.93683219141715,
+          "y": -9.2317,
+          "z": -69.73544366666667
+        },
+        "localExit": {
+          "x": 182.9368321882893,
+          "y": -9.2317,
+          "z": -69.73543377322521
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": -1.1064497237827544,
+          "y": 0,
+          "z": 3499.696854899727
+        },
+        "incidentJ": 6736132895.839758,
+        "residualJ": 6736125146.236742,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0.01811439673887499,
+        "pathM": 0.000009893441955455273,
+        "consumedJ": 7749.603015899658,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/15",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.201145756743669,
+        "exitTime": 5.2011457605713804,
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "geometryId": "system/0/POWER_DISTRIBUTION/OBB",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.92624200498847,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "localPosition": {
+          "x": 182.92624200498847,
+          "y": -9.2317,
+          "z": -36.23871865384191
+        },
+        "localExit": {
+          "x": 182.9262420007533,
+          "y": -9.2317,
+          "z": -36.23870525802077
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": -1.1064491809096706,
+          "y": 0,
+          "z": 3499.6951378580716
+        },
+        "incidentJ": 6736125146.236742,
+        "residualJ": 6736124329.369341,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0.018114396758995163,
+        "pathM": 0.00001339582180293064,
+        "consumedJ": 816.8674011230469,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/16",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.211864577552679,
+        "exitTime": 5.211874567098226,
+        "ownerId": "shell/citadel",
+        "geometryId": "shell/citadel",
+        "layerId": "shell/citadel/steel",
+        "kind": "HULL",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 182.91438217506595,
+          "y": -9.2317,
+          "z": 1.2738845750294843
+        },
+        "localPosition": {
+          "x": 182.91438217506595,
+          "y": -9.2317,
+          "z": 1.2738845750294843
+        },
+        "localExit": {
+          "x": 182.91437113176679,
+          "y": -9.2317,
+          "z": 1.3088144941411195
+        },
+        "normal": {
+          "x": -0.8149211119637882,
+          "y": -2.5548353619750276e-13,
+          "z": -0.5795718948290218
+        },
+        "relativeVelocity": {
+          "x": -1.1064491236685394,
+          "y": 0,
+          "z": 3499.694956868693
+        },
+        "incidentJ": 6736124329.369342,
+        "residualJ": 6708671759.786023,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 54.597676762971766,
+        "pathM": 0.03492992085733704,
+        "consumedJ": 27452569.58331871,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/17",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.219686826024794,
+        "exitTime": 5.219701782931056,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "materialId": "FIBER_SPALL_BACKING",
+        "worldPosition": {
+          "x": 182.9091735772459,
+          "y": -9.2317,
+          "z": 28.6017230352492
+        },
+        "localPosition": {
+          "x": 182.9091735772459,
+          "y": -9.2317,
+          "z": 28.6017230352492
+        },
+        "localExit": {
+          "x": 182.90916362935715,
+          "y": -9.2317,
+          "z": 28.653960451271615
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": -0.6653075058948447,
+          "y": 1.3766595898479463e-13,
+          "z": 3493.600083874898
+        },
+        "incidentJ": 6708671759.786022,
+        "residualJ": 6699125176.463948,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.27722160358736,
+        "pathM": 0.05223741696963202,
+        "consumedJ": 9546583.322073936,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/18",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.219707823336409,
+        "exitTime": 5.219722810263976,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 182.9091712378671,
+          "y": -9.2317,
+          "z": 28.675050360994295
+        },
+        "localPosition": {
+          "x": 182.9091712378671,
+          "y": -9.2317,
+          "z": 28.675050360994295
+        },
+        "localExit": {
+          "x": 182.9091900883795,
+          "y": -9.2317,
+          "z": 28.727301801407815
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": 1.2595965729634058,
+          "y": 1.3752488521064737e-13,
+          "z": 3491.4560343150065
+        },
+        "incidentJ": 6699125176.463948,
+        "residualJ": 6654943454.537778,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.24564008547792,
+        "pathM": 0.052251443813828444,
+        "consumedJ": 44181721.92617035,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/19",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "shot/4",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 5.219739375776581,
+        "exitTime": 5.219754407531149,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "materialId": "CERAMIC_STRIKE_FACE",
+        "worldPosition": {
+          "x": 182.90921769854785,
+          "y": -9.2317,
+          "z": 28.78497439225226
+        },
+        "localPosition": {
+          "x": 182.90921769854785,
+          "y": -9.2317,
+          "z": 28.78497439225226
+        },
+        "localExit": {
+          "x": 182.90924272975371,
+          "y": -9.2317,
+          "z": 28.837260002175917
+        },
+        "normal": {
+          "x": -0.8014241056055867,
+          "y": 0,
+          "z": -0.5980964829810367
+        },
+        "relativeVelocity": {
+          "x": 1.6667229784694282,
+          "y": 1.371198388701857e-13,
+          "z": 3481.479397512678
+        },
+        "incidentJ": 6654943454.537781,
+        "residualJ": 6628572612.380983,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 53.23888064837291,
+        "pathM": 0.0522856159153739,
+        "consumedJ": 26370842.15679741,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/20",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      }
+    ],
+    "nextDamageId": 21
+  },
+  "projectile": {
+    "shotId": "shot/4",
+    "spec": {
+      "projectileId": "dev-500",
+      "provenance": "DEVELOPMENT_PRESET",
+      "ammunitionType": "KINETIC",
+      "caliberMm": 500,
+      "penetratorDiameterMm": 220,
+      "projectileLengthMm": 1800,
+      "projectileMassKg": 1100,
+      "muzzleVelocityMps": 3500,
+      "projectileMaterial": "TUNGSTEN_ALLOY",
+      "penetratorGeometry": "LONG_ROD",
+      "integrityProperties": {
+        "fractureResistance": 1.1,
+        "erosionResistance": 1.8
+      },
+      "collisionProfile": "CENTERLINE_SWEPT_FINITE_VOLUMES"
+    },
+    "position": {
+      "x": 202.61224635117557,
+      "y": -9.23169999999949,
+      "z": 16641.175928943416
+    },
+    "velocity": {
+      "x": 4.121755512383165,
+      "y": 1.368004869692552e-13,
+      "z": 3475.206105521757
+    },
+    "massKg": 1097.7116406365315,
+    "integrity": 0.9973674112547842,
+    "age": 4.999999999999988,
+    "launchedAt": 4.999999999999988,
+    "status": "EXITED",
+    "hitCount": 10,
+    "ricochets": 0,
+    "maxFlightSeconds": 5,
+    "trajectory": [
+      {
+        "x": 185.09478542354756,
+        "y": -9.231699999999943,
+        "z": 1871.549980475882
+      },
+      {
+        "x": 185.16348134875395,
+        "y": -9.231699999999941,
+        "z": 1929.4700822345778
+      },
+      {
+        "x": 185.23217727396033,
+        "y": -9.23169999999994,
+        "z": 1987.3901839932737
+      },
+      {
+        "x": 185.30087319916672,
+        "y": -9.231699999999938,
+        "z": 2045.3102857519696
+      },
+      {
+        "x": 185.3695691243731,
+        "y": -9.231699999999936,
+        "z": 2103.2303875106654
+      },
+      {
+        "x": 185.43826504957948,
+        "y": -9.231699999999934,
+        "z": 2161.1504892693615
+      },
+      {
+        "x": 185.50696097478587,
+        "y": -9.231699999999933,
+        "z": 2219.0705910280576
+      },
+      {
+        "x": 185.57565689999225,
+        "y": -9.23169999999993,
+        "z": 2276.9906927867537
+      },
+      {
+        "x": 185.64435282519864,
+        "y": -9.231699999999929,
+        "z": 2334.91079454545
+      },
+      {
+        "x": 185.71304875040502,
+        "y": -9.231699999999927,
+        "z": 2392.830896304146
+      },
+      {
+        "x": 185.7817446756114,
+        "y": -9.231699999999925,
+        "z": 2450.750998062842
+      },
+      {
+        "x": 185.8504406008178,
+        "y": -9.231699999999924,
+        "z": 2508.671099821538
+      },
+      {
+        "x": 185.91913652602418,
+        "y": -9.231699999999922,
+        "z": 2566.591201580234
+      },
+      {
+        "x": 185.98783245123056,
+        "y": -9.23169999999992,
+        "z": 2624.5113033389302
+      },
+      {
+        "x": 186.05652837643694,
+        "y": -9.231699999999918,
+        "z": 2682.4314050976263
+      },
+      {
+        "x": 186.12522430164333,
+        "y": -9.231699999999917,
+        "z": 2740.3515068563224
+      },
+      {
+        "x": 186.1939202268497,
+        "y": -9.231699999999915,
+        "z": 2798.2716086150185
+      },
+      {
+        "x": 186.2626161520561,
+        "y": -9.231699999999913,
+        "z": 2856.1917103737146
+      },
+      {
+        "x": 186.33131207726248,
+        "y": -9.231699999999911,
+        "z": 2914.1118121324107
+      },
+      {
+        "x": 186.40000800246887,
+        "y": -9.23169999999991,
+        "z": 2972.031913891107
+      },
+      {
+        "x": 186.46870392767525,
+        "y": -9.231699999999908,
+        "z": 3029.952015649803
+      },
+      {
+        "x": 186.53739985288163,
+        "y": -9.231699999999906,
+        "z": 3087.872117408499
+      },
+      {
+        "x": 186.60609577808802,
+        "y": -9.231699999999904,
+        "z": 3145.792219167195
+      },
+      {
+        "x": 186.6747917032944,
+        "y": -9.231699999999902,
+        "z": 3203.712320925891
+      },
+      {
+        "x": 186.7434876285008,
+        "y": -9.2316999999999,
+        "z": 3261.6324226845873
+      },
+      {
+        "x": 186.81218355370717,
+        "y": -9.231699999999899,
+        "z": 3319.5525244432833
+      },
+      {
+        "x": 186.88087947891356,
+        "y": -9.231699999999897,
+        "z": 3377.4726262019794
+      },
+      {
+        "x": 186.94957540411994,
+        "y": -9.231699999999895,
+        "z": 3435.3927279606755
+      },
+      {
+        "x": 187.01827132932632,
+        "y": -9.231699999999893,
+        "z": 3493.3128297193716
+      },
+      {
+        "x": 187.0869672545327,
+        "y": -9.231699999999892,
+        "z": 3551.2329314780677
+      },
+      {
+        "x": 187.1556631797391,
+        "y": -9.23169999999989,
+        "z": 3609.153033236764
+      },
+      {
+        "x": 187.22435910494548,
+        "y": -9.231699999999888,
+        "z": 3667.07313499546
+      },
+      {
+        "x": 187.29305503015186,
+        "y": -9.231699999999886,
+        "z": 3724.993236754156
+      },
+      {
+        "x": 187.36175095535825,
+        "y": -9.231699999999885,
+        "z": 3782.913338512852
+      },
+      {
+        "x": 187.43044688056463,
+        "y": -9.231699999999883,
+        "z": 3840.833440271548
+      },
+      {
+        "x": 187.49914280577102,
+        "y": -9.231699999999881,
+        "z": 3898.7535420302443
+      },
+      {
+        "x": 187.5678387309774,
+        "y": -9.23169999999988,
+        "z": 3956.6736437889404
+      },
+      {
+        "x": 187.63653465618378,
+        "y": -9.231699999999877,
+        "z": 4014.5937455476364
+      },
+      {
+        "x": 187.70523058139017,
+        "y": -9.231699999999876,
+        "z": 4072.5138473063325
+      },
+      {
+        "x": 187.77392650659655,
+        "y": -9.231699999999874,
+        "z": 4130.433949065028
+      },
+      {
+        "x": 187.84262243180294,
+        "y": -9.231699999999872,
+        "z": 4188.354050823724
+      },
+      {
+        "x": 187.91131835700932,
+        "y": -9.23169999999987,
+        "z": 4246.274152582419
+      },
+      {
+        "x": 187.9800142822157,
+        "y": -9.231699999999869,
+        "z": 4304.194254341115
+      },
+      {
+        "x": 188.0487102074221,
+        "y": -9.231699999999867,
+        "z": 4362.114356099811
+      },
+      {
+        "x": 188.11740613262847,
+        "y": -9.231699999999865,
+        "z": 4420.034457858506
+      },
+      {
+        "x": 188.18610205783486,
+        "y": -9.231699999999863,
+        "z": 4477.954559617202
+      },
+      {
+        "x": 188.25479798304124,
+        "y": -9.231699999999861,
+        "z": 4535.874661375898
+      },
+      {
+        "x": 188.32349390824763,
+        "y": -9.23169999999986,
+        "z": 4593.794763134593
+      },
+      {
+        "x": 188.392189833454,
+        "y": -9.231699999999858,
+        "z": 4651.714864893289
+      },
+      {
+        "x": 188.4608857586604,
+        "y": -9.231699999999856,
+        "z": 4709.6349666519845
+      },
+      {
+        "x": 188.52958168386678,
+        "y": -9.231699999999854,
+        "z": 4767.55506841068
+      },
+      {
+        "x": 188.59827760907316,
+        "y": -9.231699999999853,
+        "z": 4825.475170169376
+      },
+      {
+        "x": 188.66697353427955,
+        "y": -9.23169999999985,
+        "z": 4883.395271928071
+      },
+      {
+        "x": 188.73566945948593,
+        "y": -9.231699999999849,
+        "z": 4941.315373686767
+      },
+      {
+        "x": 188.80436538469232,
+        "y": -9.231699999999847,
+        "z": 4999.235475445463
+      },
+      {
+        "x": 188.8730613098987,
+        "y": -9.231699999999845,
+        "z": 5057.155577204158
+      },
+      {
+        "x": 188.9417572351051,
+        "y": -9.231699999999844,
+        "z": 5115.075678962854
+      },
+      {
+        "x": 189.01045316031147,
+        "y": -9.231699999999842,
+        "z": 5172.99578072155
+      },
+      {
+        "x": 189.07914908551786,
+        "y": -9.23169999999984,
+        "z": 5230.915882480245
+      },
+      {
+        "x": 189.14784501072424,
+        "y": -9.231699999999838,
+        "z": 5288.835984238941
+      },
+      {
+        "x": 189.21654093593062,
+        "y": -9.231699999999837,
+        "z": 5346.756085997637
+      },
+      {
+        "x": 189.285236861137,
+        "y": -9.231699999999835,
+        "z": 5404.676187756332
+      },
+      {
+        "x": 189.3539327863434,
+        "y": -9.231699999999833,
+        "z": 5462.596289515028
+      },
+      {
+        "x": 189.42262871154978,
+        "y": -9.231699999999831,
+        "z": 5520.5163912737235
+      },
+      {
+        "x": 189.49132463675616,
+        "y": -9.23169999999983,
+        "z": 5578.436493032419
+      },
+      {
+        "x": 189.56002056196255,
+        "y": -9.231699999999828,
+        "z": 5636.356594791115
+      },
+      {
+        "x": 189.62871648716893,
+        "y": -9.231699999999826,
+        "z": 5694.27669654981
+      },
+      {
+        "x": 189.69741241237531,
+        "y": -9.231699999999824,
+        "z": 5752.196798308506
+      },
+      {
+        "x": 189.7661083375817,
+        "y": -9.231699999999822,
+        "z": 5810.116900067202
+      },
+      {
+        "x": 189.83480426278808,
+        "y": -9.23169999999982,
+        "z": 5868.037001825897
+      },
+      {
+        "x": 189.90350018799447,
+        "y": -9.231699999999819,
+        "z": 5925.957103584593
+      },
+      {
+        "x": 189.97219611320085,
+        "y": -9.231699999999817,
+        "z": 5983.877205343289
+      },
+      {
+        "x": 190.04089203840724,
+        "y": -9.231699999999815,
+        "z": 6041.797307101984
+      },
+      {
+        "x": 190.10958796361362,
+        "y": -9.231699999999813,
+        "z": 6099.71740886068
+      },
+      {
+        "x": 190.17828388882,
+        "y": -9.231699999999812,
+        "z": 6157.6375106193755
+      },
+      {
+        "x": 190.2469798140264,
+        "y": -9.23169999999981,
+        "z": 6215.557612378071
+      },
+      {
+        "x": 190.31567573923277,
+        "y": -9.231699999999808,
+        "z": 6273.477714136767
+      },
+      {
+        "x": 190.38437166443916,
+        "y": -9.231699999999806,
+        "z": 6331.397815895462
+      },
+      {
+        "x": 190.45306758964554,
+        "y": -9.231699999999805,
+        "z": 6389.317917654158
+      },
+      {
+        "x": 190.52176351485193,
+        "y": -9.231699999999803,
+        "z": 6447.238019412854
+      },
+      {
+        "x": 190.5904594400583,
+        "y": -9.231699999999801,
+        "z": 6505.158121171549
+      },
+      {
+        "x": 190.6591553652647,
+        "y": -9.2316999999998,
+        "z": 6563.078222930245
+      },
+      {
+        "x": 190.72785129047108,
+        "y": -9.231699999999798,
+        "z": 6620.998324688941
+      },
+      {
+        "x": 190.79654721567746,
+        "y": -9.231699999999796,
+        "z": 6678.918426447636
+      },
+      {
+        "x": 190.86524314088385,
+        "y": -9.231699999999794,
+        "z": 6736.838528206332
+      },
+      {
+        "x": 190.93393906609023,
+        "y": -9.231699999999792,
+        "z": 6794.7586299650275
+      },
+      {
+        "x": 191.00263499129662,
+        "y": -9.23169999999979,
+        "z": 6852.678731723723
+      },
+      {
+        "x": 191.071330916503,
+        "y": -9.231699999999789,
+        "z": 6910.598833482419
+      },
+      {
+        "x": 191.14002684170939,
+        "y": -9.231699999999787,
+        "z": 6968.518935241114
+      },
+      {
+        "x": 191.20872276691577,
+        "y": -9.231699999999785,
+        "z": 7026.43903699981
+      },
+      {
+        "x": 191.27741869212215,
+        "y": -9.231699999999783,
+        "z": 7084.359138758506
+      },
+      {
+        "x": 191.34611461732854,
+        "y": -9.231699999999782,
+        "z": 7142.279240517201
+      },
+      {
+        "x": 191.41481054253492,
+        "y": -9.23169999999978,
+        "z": 7200.199342275897
+      },
+      {
+        "x": 191.4835064677413,
+        "y": -9.231699999999778,
+        "z": 7258.119444034593
+      },
+      {
+        "x": 191.5522023929477,
+        "y": -9.231699999999776,
+        "z": 7316.039545793288
+      },
+      {
+        "x": 191.62089831815408,
+        "y": -9.231699999999774,
+        "z": 7373.959647551984
+      },
+      {
+        "x": 191.68959424336046,
+        "y": -9.231699999999773,
+        "z": 7431.8797493106795
+      },
+      {
+        "x": 191.75829016856684,
+        "y": -9.23169999999977,
+        "z": 7489.799851069375
+      },
+      {
+        "x": 191.82698609377323,
+        "y": -9.231699999999769,
+        "z": 7547.719952828071
+      },
+      {
+        "x": 191.8956820189796,
+        "y": -9.231699999999767,
+        "z": 7605.640054586766
+      },
+      {
+        "x": 191.964377944186,
+        "y": -9.231699999999766,
+        "z": 7663.560156345462
+      },
+      {
+        "x": 192.03307386939238,
+        "y": -9.231699999999764,
+        "z": 7721.480258104158
+      },
+      {
+        "x": 192.10176979459877,
+        "y": -9.231699999999762,
+        "z": 7779.400359862853
+      },
+      {
+        "x": 192.17046571980515,
+        "y": -9.23169999999976,
+        "z": 7837.320461621549
+      },
+      {
+        "x": 192.23916164501154,
+        "y": -9.231699999999758,
+        "z": 7895.240563380245
+      },
+      {
+        "x": 192.30785757021792,
+        "y": -9.231699999999757,
+        "z": 7953.16066513894
+      },
+      {
+        "x": 192.3765534954243,
+        "y": -9.231699999999755,
+        "z": 8011.080766897636
+      },
+      {
+        "x": 192.4452494206307,
+        "y": -9.231699999999753,
+        "z": 8069.0008686563315
+      },
+      {
+        "x": 192.51394534583707,
+        "y": -9.231699999999751,
+        "z": 8126.920970415027
+      },
+      {
+        "x": 192.58264127104346,
+        "y": -9.23169999999975,
+        "z": 8184.841072173723
+      },
+      {
+        "x": 192.65133719624984,
+        "y": -9.231699999999748,
+        "z": 8242.761173932418
+      },
+      {
+        "x": 192.72003312145623,
+        "y": -9.231699999999746,
+        "z": 8300.681275691115
+      },
+      {
+        "x": 192.7887290466626,
+        "y": -9.231699999999744,
+        "z": 8358.601377449811
+      },
+      {
+        "x": 192.857424971869,
+        "y": -9.231699999999742,
+        "z": 8416.521479208508
+      },
+      {
+        "x": 192.92612089707538,
+        "y": -9.23169999999974,
+        "z": 8474.441580967205
+      },
+      {
+        "x": 192.99481682228176,
+        "y": -9.231699999999739,
+        "z": 8532.361682725901
+      },
+      {
+        "x": 193.06351274748815,
+        "y": -9.231699999999737,
+        "z": 8590.281784484598
+      },
+      {
+        "x": 193.13220867269453,
+        "y": -9.231699999999735,
+        "z": 8648.201886243294
+      },
+      {
+        "x": 193.20090459790092,
+        "y": -9.231699999999734,
+        "z": 8706.12198800199
+      },
+      {
+        "x": 193.2696005231073,
+        "y": -9.231699999999732,
+        "z": 8764.042089760687
+      },
+      {
+        "x": 193.33829644831368,
+        "y": -9.23169999999973,
+        "z": 8821.962191519384
+      },
+      {
+        "x": 193.40699237352007,
+        "y": -9.231699999999728,
+        "z": 8879.88229327808
+      },
+      {
+        "x": 193.47568829872645,
+        "y": -9.231699999999726,
+        "z": 8937.802395036777
+      },
+      {
+        "x": 193.54438422393284,
+        "y": -9.231699999999725,
+        "z": 8995.722496795473
+      },
+      {
+        "x": 193.61308014913922,
+        "y": -9.231699999999723,
+        "z": 9053.64259855417
+      },
+      {
+        "x": 193.6817760743456,
+        "y": -9.231699999999721,
+        "z": 9111.562700312867
+      },
+      {
+        "x": 193.750471999552,
+        "y": -9.23169999999972,
+        "z": 9169.482802071563
+      },
+      {
+        "x": 193.81916792475837,
+        "y": -9.231699999999718,
+        "z": 9227.40290383026
+      },
+      {
+        "x": 193.88786384996476,
+        "y": -9.231699999999716,
+        "z": 9285.323005588956
+      },
+      {
+        "x": 193.95655977517114,
+        "y": -9.231699999999714,
+        "z": 9343.243107347653
+      },
+      {
+        "x": 194.02525570037753,
+        "y": -9.231699999999712,
+        "z": 9401.16320910635
+      },
+      {
+        "x": 194.0939516255839,
+        "y": -9.23169999999971,
+        "z": 9459.083310865046
+      },
+      {
+        "x": 194.1626475507903,
+        "y": -9.231699999999709,
+        "z": 9517.003412623742
+      },
+      {
+        "x": 194.23134347599668,
+        "y": -9.231699999999707,
+        "z": 9574.923514382439
+      },
+      {
+        "x": 194.30003940120307,
+        "y": -9.231699999999705,
+        "z": 9632.843616141135
+      },
+      {
+        "x": 194.36873532640945,
+        "y": -9.231699999999703,
+        "z": 9690.763717899832
+      },
+      {
+        "x": 194.43743125161583,
+        "y": -9.231699999999702,
+        "z": 9748.683819658529
+      },
+      {
+        "x": 194.50612717682222,
+        "y": -9.2316999999997,
+        "z": 9806.603921417225
+      },
+      {
+        "x": 194.5748231020286,
+        "y": -9.231699999999698,
+        "z": 9864.524023175922
+      },
+      {
+        "x": 194.643519027235,
+        "y": -9.231699999999696,
+        "z": 9922.444124934618
+      },
+      {
+        "x": 194.71221495244137,
+        "y": -9.231699999999694,
+        "z": 9980.364226693315
+      },
+      {
+        "x": 194.78091087764776,
+        "y": -9.231699999999693,
+        "z": 10038.284328452011
+      },
+      {
+        "x": 194.84960680285414,
+        "y": -9.231699999999691,
+        "z": 10096.204430210708
+      },
+      {
+        "x": 194.91830272806052,
+        "y": -9.23169999999969,
+        "z": 10154.124531969404
+      },
+      {
+        "x": 194.9869986532669,
+        "y": -9.231699999999687,
+        "z": 10212.044633728101
+      },
+      {
+        "x": 195.0556945784733,
+        "y": -9.231699999999686,
+        "z": 10269.964735486798
+      },
+      {
+        "x": 195.12439050367968,
+        "y": -9.231699999999684,
+        "z": 10327.884837245494
+      },
+      {
+        "x": 195.19308642888606,
+        "y": -9.231699999999682,
+        "z": 10385.80493900419
+      },
+      {
+        "x": 195.26178235409245,
+        "y": -9.23169999999968,
+        "z": 10443.725040762887
+      },
+      {
+        "x": 195.33047827929883,
+        "y": -9.231699999999678,
+        "z": 10501.645142521584
+      },
+      {
+        "x": 195.39917420450521,
+        "y": -9.231699999999677,
+        "z": 10559.56524428028
+      },
+      {
+        "x": 195.4678701297116,
+        "y": -9.231699999999675,
+        "z": 10617.485346038977
+      },
+      {
+        "x": 195.53656605491798,
+        "y": -9.231699999999673,
+        "z": 10675.405447797673
+      },
+      {
+        "x": 195.60526198012437,
+        "y": -9.231699999999671,
+        "z": 10733.32554955637
+      },
+      {
+        "x": 195.67395790533075,
+        "y": -9.23169999999967,
+        "z": 10791.245651315066
+      },
+      {
+        "x": 195.74265383053714,
+        "y": -9.231699999999668,
+        "z": 10849.165753073763
+      },
+      {
+        "x": 195.81134975574352,
+        "y": -9.231699999999666,
+        "z": 10907.08585483246
+      },
+      {
+        "x": 195.8800456809499,
+        "y": -9.231699999999664,
+        "z": 10965.005956591156
+      },
+      {
+        "x": 195.9487416061563,
+        "y": -9.231699999999663,
+        "z": 11022.926058349853
+      },
+      {
+        "x": 196.01743753136267,
+        "y": -9.23169999999966,
+        "z": 11080.84616010855
+      },
+      {
+        "x": 196.08613345656906,
+        "y": -9.231699999999659,
+        "z": 11138.766261867246
+      },
+      {
+        "x": 196.15482938177544,
+        "y": -9.231699999999657,
+        "z": 11196.686363625942
+      },
+      {
+        "x": 196.22352530698183,
+        "y": -9.231699999999655,
+        "z": 11254.606465384639
+      },
+      {
+        "x": 196.2922212321882,
+        "y": -9.231699999999654,
+        "z": 11312.526567143335
+      },
+      {
+        "x": 196.3609171573946,
+        "y": -9.231699999999652,
+        "z": 11370.446668902032
+      },
+      {
+        "x": 196.42961308260098,
+        "y": -9.23169999999965,
+        "z": 11428.366770660728
+      },
+      {
+        "x": 196.49830900780736,
+        "y": -9.231699999999648,
+        "z": 11486.286872419425
+      },
+      {
+        "x": 196.56700493301375,
+        "y": -9.231699999999647,
+        "z": 11544.206974178122
+      },
+      {
+        "x": 196.63570085822013,
+        "y": -9.231699999999645,
+        "z": 11602.127075936818
+      },
+      {
+        "x": 196.70439678342652,
+        "y": -9.231699999999643,
+        "z": 11660.047177695515
+      },
+      {
+        "x": 196.7730927086329,
+        "y": -9.231699999999641,
+        "z": 11717.967279454211
+      },
+      {
+        "x": 196.8417886338393,
+        "y": -9.23169999999964,
+        "z": 11775.887381212908
+      },
+      {
+        "x": 196.91048455904567,
+        "y": -9.231699999999638,
+        "z": 11833.807482971604
+      },
+      {
+        "x": 196.97918048425205,
+        "y": -9.231699999999636,
+        "z": 11891.7275847303
+      },
+      {
+        "x": 197.04787640945844,
+        "y": -9.231699999999634,
+        "z": 11949.647686488997
+      },
+      {
+        "x": 197.11657233466482,
+        "y": -9.231699999999632,
+        "z": 12007.567788247694
+      },
+      {
+        "x": 197.1852682598712,
+        "y": -9.23169999999963,
+        "z": 12065.48789000639
+      },
+      {
+        "x": 197.2539641850776,
+        "y": -9.231699999999629,
+        "z": 12123.407991765087
+      },
+      {
+        "x": 197.32266011028398,
+        "y": -9.231699999999627,
+        "z": 12181.328093523784
+      },
+      {
+        "x": 197.39135603549036,
+        "y": -9.231699999999625,
+        "z": 12239.24819528248
+      },
+      {
+        "x": 197.46005196069675,
+        "y": -9.231699999999623,
+        "z": 12297.168297041177
+      },
+      {
+        "x": 197.52874788590313,
+        "y": -9.231699999999622,
+        "z": 12355.088398799873
+      },
+      {
+        "x": 197.5974438111095,
+        "y": -9.23169999999962,
+        "z": 12413.00850055857
+      },
+      {
+        "x": 197.6661397363159,
+        "y": -9.231699999999618,
+        "z": 12470.928602317266
+      },
+      {
+        "x": 197.73483566152228,
+        "y": -9.231699999999616,
+        "z": 12528.848704075963
+      },
+      {
+        "x": 197.80353158672867,
+        "y": -9.231699999999615,
+        "z": 12586.76880583466
+      },
+      {
+        "x": 197.87222751193505,
+        "y": -9.231699999999613,
+        "z": 12644.688907593356
+      },
+      {
+        "x": 197.94092343714144,
+        "y": -9.231699999999611,
+        "z": 12702.609009352052
+      },
+      {
+        "x": 198.00961936234782,
+        "y": -9.23169999999961,
+        "z": 12760.529111110749
+      },
+      {
+        "x": 198.0783152875542,
+        "y": -9.231699999999607,
+        "z": 12818.449212869446
+      },
+      {
+        "x": 198.1470112127606,
+        "y": -9.231699999999606,
+        "z": 12876.369314628142
+      },
+      {
+        "x": 198.21570713796697,
+        "y": -9.231699999999604,
+        "z": 12934.289416386839
+      },
+      {
+        "x": 198.28440306317336,
+        "y": -9.231699999999602,
+        "z": 12992.209518145535
+      },
+      {
+        "x": 198.35309898837974,
+        "y": -9.2316999999996,
+        "z": 13050.129619904232
+      },
+      {
+        "x": 198.42179491358613,
+        "y": -9.231699999999599,
+        "z": 13108.049721662928
+      },
+      {
+        "x": 198.4904908387925,
+        "y": -9.231699999999597,
+        "z": 13165.969823421625
+      },
+      {
+        "x": 198.5591867639989,
+        "y": -9.231699999999595,
+        "z": 13223.889925180321
+      },
+      {
+        "x": 198.62788268920528,
+        "y": -9.231699999999593,
+        "z": 13281.810026939018
+      },
+      {
+        "x": 198.69657861441166,
+        "y": -9.231699999999591,
+        "z": 13339.730128697714
+      },
+      {
+        "x": 198.76527453961805,
+        "y": -9.23169999999959,
+        "z": 13397.650230456411
+      },
+      {
+        "x": 198.83397046482443,
+        "y": -9.231699999999588,
+        "z": 13455.570332215108
+      },
+      {
+        "x": 198.90266639003082,
+        "y": -9.231699999999586,
+        "z": 13513.490433973804
+      },
+      {
+        "x": 198.9713623152372,
+        "y": -9.231699999999584,
+        "z": 13571.4105357325
+      },
+      {
+        "x": 199.04005824044359,
+        "y": -9.231699999999583,
+        "z": 13629.330637491197
+      },
+      {
+        "x": 199.10875416564997,
+        "y": -9.23169999999958,
+        "z": 13687.250739249894
+      },
+      {
+        "x": 199.17745009085635,
+        "y": -9.231699999999579,
+        "z": 13745.17084100859
+      },
+      {
+        "x": 199.24614601606274,
+        "y": -9.231699999999577,
+        "z": 13803.090942767287
+      },
+      {
+        "x": 199.31484194126912,
+        "y": -9.231699999999575,
+        "z": 13861.011044525983
+      },
+      {
+        "x": 199.3835378664755,
+        "y": -9.231699999999574,
+        "z": 13918.93114628468
+      },
+      {
+        "x": 199.4522337916819,
+        "y": -9.231699999999572,
+        "z": 13976.851248043376
+      },
+      {
+        "x": 199.52092971688828,
+        "y": -9.23169999999957,
+        "z": 14034.771349802073
+      },
+      {
+        "x": 199.58962564209466,
+        "y": -9.231699999999568,
+        "z": 14092.69145156077
+      },
+      {
+        "x": 199.65832156730104,
+        "y": -9.231699999999567,
+        "z": 14150.611553319466
+      },
+      {
+        "x": 199.72701749250743,
+        "y": -9.231699999999565,
+        "z": 14208.531655078163
+      },
+      {
+        "x": 199.7957134177138,
+        "y": -9.231699999999563,
+        "z": 14266.45175683686
+      },
+      {
+        "x": 199.8644093429202,
+        "y": -9.231699999999561,
+        "z": 14324.371858595556
+      },
+      {
+        "x": 199.93310526812658,
+        "y": -9.23169999999956,
+        "z": 14382.291960354252
+      },
+      {
+        "x": 200.00180119333297,
+        "y": -9.231699999999558,
+        "z": 14440.212062112949
+      },
+      {
+        "x": 200.07049711853935,
+        "y": -9.231699999999556,
+        "z": 14498.132163871645
+      },
+      {
+        "x": 200.13919304374573,
+        "y": -9.231699999999554,
+        "z": 14556.052265630342
+      },
+      {
+        "x": 200.20788896895212,
+        "y": -9.231699999999552,
+        "z": 14613.972367389038
+      },
+      {
+        "x": 200.2765848941585,
+        "y": -9.23169999999955,
+        "z": 14671.892469147735
+      },
+      {
+        "x": 200.3452808193649,
+        "y": -9.231699999999549,
+        "z": 14729.812570906432
+      },
+      {
+        "x": 200.41397674457127,
+        "y": -9.231699999999547,
+        "z": 14787.732672665128
+      },
+      {
+        "x": 200.48267266977766,
+        "y": -9.231699999999545,
+        "z": 14845.652774423825
+      },
+      {
+        "x": 200.55136859498404,
+        "y": -9.231699999999543,
+        "z": 14903.572876182521
+      },
+      {
+        "x": 200.62006452019043,
+        "y": -9.231699999999542,
+        "z": 14961.492977941218
+      },
+      {
+        "x": 200.6887604453968,
+        "y": -9.23169999999954,
+        "z": 15019.413079699914
+      },
+      {
+        "x": 200.7574563706032,
+        "y": -9.231699999999538,
+        "z": 15077.33318145861
+      },
+      {
+        "x": 200.82615229580958,
+        "y": -9.231699999999536,
+        "z": 15135.253283217307
+      },
+      {
+        "x": 200.89484822101596,
+        "y": -9.231699999999535,
+        "z": 15193.173384976004
+      },
+      {
+        "x": 200.96354414622235,
+        "y": -9.231699999999533,
+        "z": 15251.0934867347
+      },
+      {
+        "x": 201.03224007142873,
+        "y": -9.231699999999531,
+        "z": 15309.013588493397
+      },
+      {
+        "x": 201.10093599663512,
+        "y": -9.23169999999953,
+        "z": 15366.933690252094
+      },
+      {
+        "x": 201.1696319218415,
+        "y": -9.231699999999528,
+        "z": 15424.85379201079
+      },
+      {
+        "x": 201.23832784704788,
+        "y": -9.231699999999526,
+        "z": 15482.773893769487
+      },
+      {
+        "x": 201.30702377225427,
+        "y": -9.231699999999524,
+        "z": 15540.693995528183
+      },
+      {
+        "x": 201.37571969746065,
+        "y": -9.231699999999522,
+        "z": 15598.61409728688
+      },
+      {
+        "x": 201.44441562266704,
+        "y": -9.23169999999952,
+        "z": 15656.534199045576
+      },
+      {
+        "x": 201.51311154787342,
+        "y": -9.231699999999519,
+        "z": 15714.454300804273
+      },
+      {
+        "x": 201.5818074730798,
+        "y": -9.231699999999517,
+        "z": 15772.37440256297
+      },
+      {
+        "x": 201.6505033982862,
+        "y": -9.231699999999515,
+        "z": 15830.294504321666
+      },
+      {
+        "x": 201.71919932349257,
+        "y": -9.231699999999513,
+        "z": 15888.214606080363
+      },
+      {
+        "x": 201.78789524869896,
+        "y": -9.231699999999512,
+        "z": 15946.134707839059
+      },
+      {
+        "x": 201.85659117390534,
+        "y": -9.23169999999951,
+        "z": 16004.054809597756
+      },
+      {
+        "x": 201.92528709911173,
+        "y": -9.231699999999508,
+        "z": 16061.974911356452
+      },
+      {
+        "x": 201.9939830243181,
+        "y": -9.231699999999506,
+        "z": 16119.895013115149
+      },
+      {
+        "x": 202.0626789495245,
+        "y": -9.231699999999504,
+        "z": 16177.815114873845
+      },
+      {
+        "x": 202.13137487473088,
+        "y": -9.231699999999503,
+        "z": 16235.735216632542
+      },
+      {
+        "x": 202.20007079993727,
+        "y": -9.2316999999995,
+        "z": 16293.655318391238
+      },
+      {
+        "x": 202.26876672514365,
+        "y": -9.231699999999499,
+        "z": 16351.575420149935
+      },
+      {
+        "x": 202.33746265035003,
+        "y": -9.231699999999497,
+        "z": 16409.49552190863
+      },
+      {
+        "x": 202.40615857555642,
+        "y": -9.231699999999496,
+        "z": 16467.415623667326
+      },
+      {
+        "x": 202.4748545007628,
+        "y": -9.231699999999494,
+        "z": 16525.335725426023
+      },
+      {
+        "x": 202.5435504259692,
+        "y": -9.231699999999492,
+        "z": 16583.25582718472
+      },
+      {
+        "x": 202.61224635117557,
+        "y": -9.23169999999949,
+        "z": 16641.175928943416
+      }
+    ],
+    "approach": {
+      "contact": null,
+      "distance": null,
+      "revision": 20,
+      "motionKey": "{\"position\":{\"x\":0,\"y\":0,\"z\":0},\"velocity\":{\"x\":0,\"y\":0,\"z\":0},\"quaternion\":{\"x\":0,\"y\":0,\"z\":0,\"w\":1}}"
+    },
+    "lastOutcome": "PENETRATED"
+  },
+  "motion": {
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "quaternion": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  }
+}

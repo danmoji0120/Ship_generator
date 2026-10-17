@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1455ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  486ms
+ ✓ tests/free-mount.test.ts (18 tests) 10278ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  8647ms
+
+ Test Files  2 passed (2)
+      Tests  34 passed (34)
+   Start at  19:08:20
+   Duration  15.40s (transform 2.26s, setup 0ms, collect 3.06s, tests 11.73s, environment 0ms, prepare 203ms)
+

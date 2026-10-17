@@ -1,0 +1,284 @@
+{
+  "state": {
+    "schemaVersion": 1,
+    "instanceId": "ship-A",
+    "time": 0.013611819844970306,
+    "revision": 2,
+    "local": [
+      {
+        "id": "ship-A/damage/1",
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "position": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 43.40416203465414
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": -34.0262,
+          "v": 4.157
+        },
+        "radiusM": 0.1265,
+        "materialLossM": 0,
+        "plasticDeformationM": 0,
+        "fracture": 0.15,
+        "delamination": 0.045,
+        "severity": 0.018063451419303482,
+        "channel": {
+          "entry": {
+            "x": -34.0262,
+            "y": -4.157,
+            "z": 43.40416203465414
+          },
+          "exit": {
+            "x": -34.0262,
+            "y": -4.157,
+            "z": 45.40416203465414
+          },
+          "radiusM": 0.1265
+        },
+        "shotId": "shot/8"
+      },
+      {
+        "id": "ship-A/damage/2",
+        "ownerId": "link-1/body",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "FRAME",
+        "position": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 70.53592146085602
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "surfaceCoordinates": {
+          "u": -34.0262,
+          "v": 4.157
+        },
+        "radiusM": 0.12429649988452547,
+        "materialLossM": 1.391778849412027,
+        "plasticDeformationM": 1.21089188432199,
+        "fracture": 0.12996818076841343,
+        "delamination": 0.03899045423052403,
+        "severity": 1,
+        "channel": null,
+        "shotId": "shot/8"
+      }
+    ],
+    "equipmentIntegrity": {
+      "system/0/POWER_DISTRIBUTION": 0
+    },
+    "structuralIntegrity": {
+      "link-1/body": 1
+    },
+    "systems": {
+      "equipmentStates": {
+        "system/0/POWER_DISTRIBUTION": "DESTROYED"
+      },
+      "disabledPowerEdges": [],
+      "disabledControlEdges": [],
+      "storageMJ": {}
+    },
+    "interior": {
+      "openingStates": {},
+      "disabledBulkheadIds": [],
+      "hypotheticalHullBreaches": []
+    },
+    "blockedClosurePositions": {},
+    "structure": {
+      "schemaVersion": 1,
+      "disabledMemberIds": [],
+      "disabledJointIds": [],
+      "disabledEdgeIds": []
+    },
+    "events": [
+      {
+        "shotId": "shot/8",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.000014274867044040969,
+        "exitTime": 0.0005879266047045281,
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "geometryId": "system/0/POWER_DISTRIBUTION/OBB",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 43.40416203465414
+        },
+        "localPosition": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 43.40416203465414
+        },
+        "localExit": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 45.40416203465414
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3500
+        },
+        "incidentJ": 6737500000,
+        "residualJ": 6615797496.062443,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0,
+        "pathM": 2,
+        "consumedJ": 121702503.93755722,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/1",
+        "equipmentStateChange": {
+          "from": "OPERATIONAL",
+          "to": "DESTROYED"
+        },
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": -1,
+          "maneuver": -1,
+          "fire": -8,
+          "sensor": -8
+        }
+      },
+      {
+        "shotId": "shot/8",
+        "projectileId": "dev-500",
+        "instanceId": "ship-A",
+        "time": 0.007824519569623982,
+        "exitTime": 0.013611819844970306,
+        "ownerId": "link-1/body",
+        "geometryId": "link-1/body",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "FRAME",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 70.53592146085602
+        },
+        "localPosition": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 70.53592146085602
+        },
+        "localExit": {
+          "x": -34.0262,
+          "y": -4.157,
+          "z": 80.58519729919139
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3472.87175719736
+        },
+        "incidentJ": 6615797496.062443,
+        "residualJ": 0,
+        "outcome": "STOPPED",
+        "incidenceDegrees": 0,
+        "pathM": 11.598157078433559,
+        "consumedJ": 6615797496.062443,
+        "disabledEdges": [],
+        "damageId": "ship-A/damage/2",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      }
+    ],
+    "nextDamageId": 3
+  },
+  "projectile": {
+    "shotId": "shot/8",
+    "spec": {
+      "projectileId": "dev-500",
+      "provenance": "DEVELOPMENT_PRESET",
+      "ammunitionType": "KINETIC",
+      "caliberMm": 500,
+      "penetratorDiameterMm": 220,
+      "projectileLengthMm": 1800,
+      "projectileMassKg": 1100,
+      "muzzleVelocityMps": 3500,
+      "projectileMaterial": "TUNGSTEN_ALLOY",
+      "penetratorGeometry": "LONG_ROD",
+      "integrityProperties": {
+        "fractureResistance": 1.1,
+        "erosionResistance": 1.8
+      },
+      "collisionProfile": "CENTERLINE_SWEPT_FINITE_VOLUMES"
+    },
+    "position": {
+      "x": -34.0262,
+      "y": -4.157,
+      "z": 80.58519729919139
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "massKg": 879.4600178290781,
+    "integrity": 0.8639045331348427,
+    "age": 0.013611819844970306,
+    "launchedAt": 0,
+    "status": "STOPPED",
+    "hitCount": 2,
+    "ricochets": 0,
+    "maxFlightSeconds": 5,
+    "trajectory": [
+      {
+        "x": -34.0262,
+        "y": -4.157,
+        "z": 43.3542
+      },
+      {
+        "x": -34.0262,
+        "y": -4.157,
+        "z": 80.58519729919139
+      }
+    ],
+    "lastOutcome": "STOPPED"
+  },
+  "motion": {
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "quaternion": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  }
+}

@@ -1,0 +1,2568 @@
+{
+  "rows": [
+    {
+      "id": "TRUSS_EXPOSED",
+      "memberId": "link-1/brace-0-0/1",
+      "exposure": "EXISTING_EXPOSED",
+      "origin": {
+        "x": -25.12580333026437,
+        "y": -8.032688611571146,
+        "z": -34.830178690229175
+      },
+      "direction": {
+        "x": -0.8631353349545282,
+        "y": 0.4821175237978101,
+        "z": 0.1502001557922039
+      },
+      "status": "STOPPED",
+      "events": [
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0,
+          "exitTime": 2.8571435649440623e-9,
+          "ownerId": "link-1/shoe-0-0/1",
+          "geometryId": "link-1/shoe-0-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -25.12580333026437,
+            "y": -8.032688611571146,
+            "z": -34.830178690229175
+          },
+          "localPosition": {
+            "x": -25.12580333026437,
+            "y": -8.032688611571146,
+            "z": -34.830178690229175
+          },
+          "localExit": {
+            "x": -25.12581196161772,
+            "y": -8.03268379039591,
+            "z": -34.830177188227616
+          },
+          "normal": {
+            "x": 0.8631353349545282,
+            "y": -0.4821175237978101,
+            "z": -0.1502001557922039
+          },
+          "relativeVelocity": {
+            "x": -3020.9736723408487,
+            "y": 1687.4113332923353,
+            "z": 525.7005452727136
+          },
+          "incidentJ": 6737500000,
+          "residualJ": 6737492165.588076,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 8.537736462515939e-7,
+          "pathM": 0.000009999999999549208,
+          "availablePathM": 0.000009999999997845066,
+          "projectileBefore": {
+            "massKg": 1100,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 1099.9998118736385,
+            "integrity": 0.999999884592504,
+            "relativeSpeedMps": 3499.9982643790236,
+            "localDirection": {
+              "x": -0.8631353349545282,
+              "y": 0.4821175237978101,
+              "z": 0.1502001557922039
+            }
+          },
+          "consumedJ": 7834.411924362183,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/1",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 2.8571435649440623e-9,
+          "exitTime": 0.000032908077671417086,
+          "ownerId": "link-1/brace-0-0/1",
+          "geometryId": "link-1/brace-0-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -25.125812047931255,
+            "y": -8.032683742184156,
+            "z": -34.8301771732076
+          },
+          "localPosition": {
+            "x": -25.125812047931255,
+            "y": -8.032683742184156,
+            "z": -34.8301771732076
+          },
+          "localExit": {
+            "x": -25.224933945623903,
+            "y": -7.977317680879023,
+            "z": -34.81292828549217
+          },
+          "normal": {
+            "x": 0.8631353349545282,
+            "y": -0.48211752379781014,
+            "z": -0.15020015579220392
+          },
+          "relativeVelocity": {
+            "x": -3020.972174265056,
+            "y": 1687.410496519048,
+            "z": 525.7002845821726
+          },
+          "incidentJ": 6737492165.588077,
+          "residualJ": 6647673080.202057,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.11483934636724077,
+          "availablePathM": 0.11483934636724116,
+          "projectileBefore": {
+            "massKg": 1099.9998118736385,
+            "integrity": 0.999999884592504
+          },
+          "projectileAfter": {
+            "massKg": 1097.8393814024244,
+            "integrity": 0.9986745521683034,
+            "relativeSpeedMps": 3480.0094380484434,
+            "localDirection": {
+              "x": -0.8631353349545282,
+              "y": 0.48211752379781014,
+              "z": 0.15020015579220392
+            }
+          },
+          "consumedJ": 89819085.3860197,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.000032908077671417086,
+          "exitTime": 0.0006386145319864329,
+          "ownerId": "link-1/rail-0/1",
+          "geometryId": "link-1/rail-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -25.224934031937437,
+            "y": -7.97731763266727,
+            "z": -34.812928270472156
+          },
+          "localPosition": {
+            "x": -25.224934031937437,
+            "y": -7.97731763266727,
+            "z": -34.812928270472156
+          },
+          "localExit": {
+            "x": -26.948985169189353,
+            "y": -7.014322339192834,
+            "z": -34.512914195132964
+          },
+          "normal": {
+            "x": 0.8631353349545283,
+            "y": -0.48211752379781025,
+            "z": -0.15020015579220394
+          },
+          "relativeVelocity": {
+            "x": -3003.7191119548625,
+            "y": 1677.7735330649243,
+            "z": 522.6979597532162
+          },
+          "incidentJ": 6647673080.202055,
+          "residualJ": 5145525632.157774,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 1.9974285230053088,
+          "availablePathM": 1.997428523005307,
+          "projectileBefore": {
+            "massKg": 1097.8393814024244,
+            "integrity": 0.9986745521683034
+          },
+          "projectileAfter": {
+            "massKg": 1060.336293823732,
+            "integrity": 0.9755660079569285,
+            "relativeSpeedMps": 3115.3586937445993,
+            "localDirection": {
+              "x": -0.8631353349545283,
+              "y": 0.48211752379781025,
+              "z": 0.15020015579220394
+            }
+          },
+          "consumedJ": 1502147448.044281,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.0006386145319864329,
+          "exitTime": 0.003177189474808122,
+          "ownerId": "link-1/brace-0-0/1",
+          "geometryId": "link-1/brace-0-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -26.948985255502887,
+            "y": -7.014322290981081,
+            "z": -34.51291418011295
+          },
+          "localPosition": {
+            "x": -26.948985255502887,
+            "y": -7.014322290981081,
+            "z": -34.51291418011295
+          },
+          "localExit": {
+            "x": -32.371008191877976,
+            "y": -3.9857679424352597,
+            "z": -33.56939042807545
+          },
+          "normal": {
+            "x": 0.8631353349545282,
+            "y": -0.48211752379781025,
+            "z": -0.15020015579220394
+          },
+          "relativeVelocity": {
+            "x": -2688.9761696287464,
+            "y": 1501.969019170127,
+            "z": 467.9273611490358
+          },
+          "incidentJ": 5145525632.157773,
+          "residualJ": 1591146053.5143852,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0.0000012074182697257333,
+          "pathM": 6.281776121076926,
+          "availablePathM": 6.281776121076926,
+          "projectileBefore": {
+            "massKg": 1060.336293823732,
+            "integrity": 0.9755660079569285
+          },
+          "projectileAfter": {
+            "massKg": 946.4207330280957,
+            "integrity": 0.8995164713138424,
+            "relativeSpeedMps": 1833.698365878447,
+            "localDirection": {
+              "x": -0.863135334954528,
+              "y": 0.48211752379781014,
+              "z": 0.15020015579220392
+            }
+          },
+          "consumedJ": 3554379578.643388,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.003177189474808122,
+          "exitTime": 0.003187358149456228,
+          "ownerId": "shell/pressure-core",
+          "geometryId": "shell/pressure-core",
+          "layerId": "shell/pressure-core/alloy",
+          "kind": "HULL",
+          "materialId": "ALUMINUM_STRUCTURAL",
+          "worldPosition": {
+            "x": -32.37100827819151,
+            "y": -3.9857678942235073,
+            "z": -33.56939041305544
+          },
+          "localPosition": {
+            "x": -32.37100827819151,
+            "y": -3.9857678942235073,
+            "z": -33.56939041305544
+          },
+          "localExit": {
+            "x": -32.38709899187798,
+            "y": -3.976780178480104,
+            "z": -33.566590356558336
+          },
+          "normal": {
+            "x": -0.9999999999999999,
+            "y": 0,
+            "z": 0
+          },
+          "relativeVelocity": {
+            "x": -1582.729853238064,
+            "y": 884.0581155494077,
+            "z": 275.4217802308525
+          },
+          "incidentJ": 1591146053.514385,
+          "residualJ": 1589561211.6383202,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 30.329537898017247,
+          "pathM": 0.018642167728325523,
+          "availablePathM": 0.018642167728325273,
+          "projectileBefore": {
+            "massKg": 946.4207330280957,
+            "integrity": 0.8995164713138424
+          },
+          "projectileAfter": {
+            "massKg": 946.3131048465473,
+            "integrity": 0.8994137900595247,
+            "relativeSpeedMps": 1832.8891439889355,
+            "localDirection": {
+              "x": -0.8631481308385116,
+              "y": 0.4820966414660766,
+              "z": 0.15019365005589516
+            }
+          },
+          "consumedJ": 1584841.8760647774,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/5",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.003187358149456228,
+          "exitTime": 0.00464416426640062,
+          "ownerId": "link-1/brace-0-0/1",
+          "geometryId": "link-1/brace-0-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -32.38709907819279,
+            "y": -3.9767801302704395,
+            "z": -33.56659034153897
+          },
+          "localPosition": {
+            "x": -32.38709907819279,
+            "y": -3.9767801302704395,
+            "z": -33.56659034153897
+          },
+          "localExit": {
+            "x": -34.49445122519239,
+            "y": -2.79975459298765,
+            "z": -33.19989672360398
+          },
+          "normal": {
+            "x": 0.8631481308385117,
+            "y": -0.4820966414660767,
+            "z": -0.1501936500558952
+          },
+          "relativeVelocity": {
+            "x": -1582.0548386682492,
+            "y": 883.629700496698,
+            "z": 275.28831068352343
+          },
+          "incidentJ": 1589561211.63832,
+          "residualJ": 1046054869.1331083,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 2.441472178074927,
+          "availablePathM": 2.4414721780749273,
+          "projectileBefore": {
+            "massKg": 946.3131048465473,
+            "integrity": 0.8994137900595247
+          },
+          "projectileAfter": {
+            "massKg": 906.7997772424955,
+            "integrity": 0.8629632471894861,
+            "relativeSpeedMps": 1518.9256921484134,
+            "localDirection": {
+              "x": -0.8631481308385117,
+              "y": 0.4820966414660767,
+              "z": 0.1501936500558952
+            }
+          },
+          "consumedJ": 543506342.5052117,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/6",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.00464416426640062,
+          "exitTime": 0.00477094435352772,
+          "ownerId": "plate/pressure-core/belt--1",
+          "geometryId": "plate/pressure-core/belt--1",
+          "layerId": "plate/pressure-core/belt--1/titanium",
+          "kind": "ARMOR",
+          "materialId": "ARMOR_TITANIUM",
+          "worldPosition": {
+            "x": -34.494451311507206,
+            "y": -2.799754544777986,
+            "z": -33.19989670858461
+          },
+          "localPosition": {
+            "x": -34.494451311507206,
+            "y": -2.799754544777986,
+            "z": -33.19989670858461
+          },
+          "localExit": {
+            "x": -34.65948607143157,
+            "y": -2.70757719926557,
+            "z": -33.171179536996625
+          },
+          "normal": {
+            "x": -0.9999678748447361,
+            "y": 0,
+            "z": -0.008015564765006259
+          },
+          "relativeVelocity": {
+            "x": -1311.0578720604958,
+            "y": 732.2689748212861,
+            "z": 228.1329938674472
+          },
+          "incidentJ": 1046054869.1331085,
+          "residualJ": 1014624104.9990005,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 30.467545049409086,
+          "pathM": 0.19120097006297496,
+          "availablePathM": 0.19120097006297437,
+          "projectileBefore": {
+            "massKg": 906.7997772424955,
+            "integrity": 0.8629632471894861
+          },
+          "projectileAfter": {
+            "massKg": 905.0999635458126,
+            "integrity": 0.8592682929127271,
+            "relativeSpeedMps": 1497.3361577317078,
+            "localDirection": {
+              "x": -0.8631654116642719,
+              "y": 0.4820685916306633,
+              "z": 0.15018437025761525
+            }
+          },
+          "consumedJ": 31430764.134107947,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/7",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "actual-exposed",
+          "projectileId": "dev-500",
+          "instanceId": "exposed/link-1/brace-0-0/1",
+          "time": 0.00477094435352772,
+          "exitTime": 0.014079565824449473,
+          "ownerId": "link-1/brace-0-0/1",
+          "geometryId": "link-1/brace-0-0/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "FRAME",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -34.65948615774811,
+            "y": -2.707577151058711,
+            "z": -33.17117952197819
+          },
+          "localPosition": {
+            "x": -34.65948615774811,
+            "y": -2.707577151058711,
+            "z": -33.17117952197819
+          },
+          "localExit": {
+            "x": -40.67494439413523,
+            "y": 0.6519915258614803,
+            "z": -32.12453447013247
+          },
+          "normal": {
+            "x": 0.863165411664272,
+            "y": -0.4820685916306633,
+            "z": -0.15018437025761527
+          },
+          "relativeVelocity": {
+            "x": -1292.4487809882887,
+            "y": 721.8187327553931,
+            "z": 224.8764879128938
+          },
+          "incidentJ": 1014624104.9990007,
+          "residualJ": 0,
+          "outcome": "STOPPED",
+          "incidenceDegrees": 0.0000012074182697257333,
+          "pathM": 6.969067753524429,
+          "availablePathM": 19.96989000389463,
+          "projectileBefore": {
+            "massKg": 905.0999635458126,
+            "integrity": 0.8592682929127271
+          },
+          "projectileAfter": {
+            "massKg": 595.9784783407351,
+            "integrity": 0.5258278528395445,
+            "relativeSpeedMps": 0,
+            "localDirection": {
+              "x": -0.863165411664272,
+              "y": 0.4820685916306633,
+              "z": 0.15018437025761527
+            }
+          },
+          "consumedJ": 1014624104.9990007,
+          "disabledEdges": [],
+          "damageId": "exposed/link-1/brace-0-0/1/damage/8",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        }
+      ],
+      "failedMembers": [],
+      "failedEdges": [],
+      "componentsBefore": 1,
+      "componentsAfter": 1,
+      "isolated": []
+    },
+    {
+      "id": "TWIN_DISTINCT_SKIN",
+      "hostId": "independent-hull--1",
+      "ownerId": "shell/independent-hull--1",
+      "origin": {
+        "x": -114.39038929138337,
+        "y": -3.5898511654794407,
+        "z": -87.64083459043248
+      },
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "events": [
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898511654794407,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898511654794407,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.5898511654794407,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 3500,
+            "z": 0
+          },
+          "incidentJ": 6737500000,
+          "residualJ": 4547812500,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.654177483853168,
+          "projectileBefore": {
+            "massKg": 1100,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 1089,
+            "integrity": 0.8,
+            "relativeSpeedMps": 2890.0298834566966,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 2189687500,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/1",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589851065479441,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589851065479441,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.589851065479441,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 2890.0298834566966,
+            "z": 0
+          },
+          "incidentJ": 4547812500,
+          "residualJ": 3069773437.5,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.65417738385317,
+          "projectileBefore": {
+            "massKg": 1089,
+            "integrity": 0.8
+          },
+          "projectileAfter": {
+            "massKg": 1078.11,
+            "integrity": 0.6400000000000001,
+            "relativeSpeedMps": 2386.3636363636365,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 1478039062.5,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589850965479441,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589850965479441,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.589850965479441,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 2386.3636363636365,
+            "z": 0
+          },
+          "incidentJ": 3069773437.5,
+          "residualJ": 2072097070.3125002,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.654177283853173,
+          "projectileBefore": {
+            "massKg": 1078.11,
+            "integrity": 0.6400000000000001
+          },
+          "projectileAfter": {
+            "massKg": 1067.3289,
+            "integrity": 0.5120000000000001,
+            "relativeSpeedMps": 1970.474920538657,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 997676367.1874998,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589850865479441,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.589850865479441,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.589850865479441,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1970.474920538657,
+            "z": 0
+          },
+          "incidentJ": 2072097070.3125002,
+          "residualJ": 1398665522.4609377,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.65417718385317,
+          "projectileBefore": {
+            "massKg": 1067.3289,
+            "integrity": 0.5120000000000001
+          },
+          "projectileAfter": {
+            "massKg": 1056.655611,
+            "integrity": 0.40960000000000013,
+            "relativeSpeedMps": 1627.0661157024797,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 673431547.8515625,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898507654794414,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898507654794414,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.5898507654794414,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1627.0661157024797,
+            "z": 0
+          },
+          "incidentJ": 1398665522.460938,
+          "residualJ": 944099227.6611332,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.654177083853174,
+          "projectileBefore": {
+            "massKg": 1056.655611,
+            "integrity": 0.40960000000000013
+          },
+          "projectileAfter": {
+            "massKg": 1046.08905489,
+            "integrity": 0.32768000000000014,
+            "relativeSpeedMps": 1343.5056276399935,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 454566294.7998048,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/5",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull--1",
+          "geometryId": "shell/independent-hull--1",
+          "layerId": "shell/independent-hull--1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898506654794415,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898506654794415,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.5898506654794415,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508946,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1343.5056276399935,
+            "z": 0
+          },
+          "incidentJ": 944099227.661133,
+          "residualJ": 637266978.6712649,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 22.654176983853176,
+          "projectileBefore": {
+            "massKg": 1046.08905489,
+            "integrity": 0.32768000000000014
+          },
+          "projectileAfter": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001,
+            "relativeSpeedMps": 1109.3632607062361,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 306832248.98986816,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/6",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-0",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "RUNTIME_LIMIT",
+          "geometryId": "NONE",
+          "layerId": "UNKNOWN",
+          "kind": "UNRESOLVED",
+          "materialId": null,
+          "worldPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898505654794417,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": -114.39038929138337,
+            "y": -3.5898505654794417,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": -114.39038929138337,
+            "y": -3.5898505654794417,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1109.3632607062361,
+            "z": 0
+          },
+          "incidentJ": 637266978.671265,
+          "residualJ": 637266978.671265,
+          "outcome": "UNRESOLVED",
+          "incidenceDegrees": 0,
+          "pathM": 0,
+          "availablePathM": 0,
+          "projectileBefore": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001
+          },
+          "projectileAfter": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001,
+            "relativeSpeedMps": 1109.3632607062361,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 0,
+          "disabledEdges": [],
+          "warning": "RICOCHET_RECURRENCE_LIMIT"
+        }
+      ],
+      "regionsOnChosenSkin": 6,
+      "otherSkinUnchangedBeforeItsShot": true
+    },
+    {
+      "id": "TWIN_DISTINCT_SKIN",
+      "hostId": "independent-hull-1",
+      "ownerId": "shell/independent-hull-1",
+      "origin": {
+        "x": 93.31220001576985,
+        "y": -4.5466642170366995,
+        "z": -87.64083459043248
+      },
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "events": [
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.5466642170366995,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.5466642170366995,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.5466642170366995,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 3500,
+            "z": 0
+          },
+          "incidentJ": 6737500000,
+          "residualJ": 4547812500,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.83931032722072,
+          "projectileBefore": {
+            "massKg": 1100,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 1089,
+            "integrity": 0.8,
+            "relativeSpeedMps": 2890.0298834566966,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 2189687500,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/7",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546664117036699,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546664117036699,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546664117036699,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 2890.0298834566966,
+            "z": 0
+          },
+          "incidentJ": 4547812500,
+          "residualJ": 3069773437.5,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.839310227220725,
+          "projectileBefore": {
+            "massKg": 1089,
+            "integrity": 0.8
+          },
+          "projectileAfter": {
+            "massKg": 1078.11,
+            "integrity": 0.6400000000000001,
+            "relativeSpeedMps": 2386.3636363636365,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 1478039062.5,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/8",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546664017036699,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546664017036699,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546664017036699,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 2386.3636363636365,
+            "z": 0
+          },
+          "incidentJ": 3069773437.5,
+          "residualJ": 2072097070.3125002,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.83931012722073,
+          "projectileBefore": {
+            "massKg": 1078.11,
+            "integrity": 0.6400000000000001
+          },
+          "projectileAfter": {
+            "massKg": 1067.3289,
+            "integrity": 0.5120000000000001,
+            "relativeSpeedMps": 1970.474920538657,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 997676367.1874998,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/9",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663917036699,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663917036699,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546663917036699,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1970.474920538657,
+            "z": 0
+          },
+          "incidentJ": 2072097070.3125002,
+          "residualJ": 1398665522.4609377,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.839310027220737,
+          "projectileBefore": {
+            "massKg": 1067.3289,
+            "integrity": 0.5120000000000001
+          },
+          "projectileAfter": {
+            "massKg": 1056.655611,
+            "integrity": 0.40960000000000013,
+            "relativeSpeedMps": 1627.0661157024797,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 673431547.8515625,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/10",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663817036698,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663817036698,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546663817036698,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1627.0661157024797,
+            "z": 0
+          },
+          "incidentJ": 1398665522.460938,
+          "residualJ": 944099227.6611332,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.839309927220743,
+          "projectileBefore": {
+            "massKg": 1056.655611,
+            "integrity": 0.40960000000000013
+          },
+          "projectileAfter": {
+            "massKg": 1046.08905489,
+            "integrity": 0.32768000000000014,
+            "relativeSpeedMps": 1343.5056276399935,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 454566294.7998048,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/11",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "shell/independent-hull-1",
+          "geometryId": "shell/independent-hull-1",
+          "layerId": "shell/independent-hull-1/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663717036698,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663717036698,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546663717036698,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": -0.9878151855508945,
+            "y": 0,
+            "z": -0.1556314852305017
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1343.5056276399935,
+            "z": 0
+          },
+          "incidentJ": 944099227.661133,
+          "residualJ": 637266978.6712649,
+          "outcome": "RICOCHET",
+          "incidenceDegrees": 90,
+          "pathM": 0,
+          "availablePathM": 20.83930982722072,
+          "projectileBefore": {
+            "massKg": 1046.08905489,
+            "integrity": 0.32768000000000014
+          },
+          "projectileAfter": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001,
+            "relativeSpeedMps": 1109.3632607062361,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 306832248.98986816,
+          "disabledEdges": [],
+          "damageId": "twin-shared-instance/damage/12",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "twin-1",
+          "projectileId": "dev-500",
+          "instanceId": "twin-shared-instance",
+          "time": 0,
+          "exitTime": 0,
+          "ownerId": "RUNTIME_LIMIT",
+          "geometryId": "NONE",
+          "layerId": "UNKNOWN",
+          "kind": "UNRESOLVED",
+          "materialId": null,
+          "worldPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663617036698,
+            "z": -87.64083459043248
+          },
+          "localPosition": {
+            "x": 93.31220001576985,
+            "y": -4.546663617036698,
+            "z": -87.64083459043248
+          },
+          "localExit": {
+            "x": 93.31220001576985,
+            "y": -4.546663617036698,
+            "z": -87.64083459043248
+          },
+          "normal": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 1109.3632607062361,
+            "z": 0
+          },
+          "incidentJ": 637266978.671265,
+          "residualJ": 637266978.671265,
+          "outcome": "UNRESOLVED",
+          "incidenceDegrees": 0,
+          "pathM": 0,
+          "availablePathM": 0,
+          "projectileBefore": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001
+          },
+          "projectileAfter": {
+            "massKg": 1035.6281643411,
+            "integrity": 0.2621440000000001,
+            "relativeSpeedMps": 1109.3632607062361,
+            "localDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          "consumedJ": 0,
+          "disabledEdges": [],
+          "warning": "RICOCHET_RECURRENCE_LIMIT"
+        }
+      ],
+      "regionsOnChosenSkin": 6,
+      "otherSkinUnchangedBeforeItsShot": null
+    },
+    {
+      "id": "EQUIPMENT_INTENSITY",
+      "type": "POWER_DISTRIBUTION",
+      "preset": "dev-105",
+      "events": [
+        {
+          "shotId": "POWER_DISTRIBUTION",
+          "projectileId": "dev-105",
+          "instanceId": "POWER_DISTRIBUTION",
+          "time": 0.000009523809523807629,
+          "exitTime": 0.0020871987614135483,
+          "ownerId": "system/0/POWER_DISTRIBUTION",
+          "geometryId": "system/0/POWER_DISTRIBUTION/OBB",
+          "layerId": "DEVICE_SMEARED_MASS",
+          "kind": "EQUIPMENT",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": -36.2387186538419
+          },
+          "localPosition": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": -36.2387186538419
+          },
+          "localExit": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": -34.2387186538419
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 1050
+          },
+          "incidentJ": 6615000,
+          "residualJ": 4270878.136830182,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 2,
+          "availablePathM": 2,
+          "projectileBefore": {
+            "massKg": 12,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 11.150743099787686,
+            "integrity": 0.9609354151190754,
+            "relativeSpeedMps": 875.2289663317245,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 2344121.863169818,
+          "disabledEdges": [],
+          "damageId": "POWER_DISTRIBUTION/damage/1",
+          "equipmentStateChange": {
+            "from": "OPERATIONAL",
+            "to": "DEGRADED"
+          },
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_DISTRIBUTION",
+          "projectileId": "dev-105",
+          "instanceId": "POWER_DISTRIBUTION",
+          "time": 0.042579110105277033,
+          "exitTime": 0.04261999434590366,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": 1.200975156443569
+          },
+          "localPosition": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": 1.200975156443569
+          },
+          "localExit": {
+            "x": 182.96623535356431,
+            "y": -9.23165700619594,
+            "z": 1.235889547856658
+          },
+          "normal": {
+            "x": -0.8149211119637882,
+            "y": -2.5548353619750276e-13,
+            "z": -0.5795718948290218
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 875.2289663317245
+          },
+          "incidentJ": 4270878.136830182,
+          "residualJ": 3804864.1604981315,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 54.57956236623112,
+          "pathM": 0.03491439141308916,
+          "availablePathM": 0.03491439141308916,
+          "projectileBefore": {
+            "massKg": 11.150743099787686,
+            "integrity": 0.9609354151190754
+          },
+          "projectileAfter": {
+            "massKg": 10.973778822909145,
+            "integrity": 0.9488076954854155,
+            "relativeSpeedMps": 832.7343407009226,
+            "localDirection": {
+              "x": 0.0002335628302913717,
+              "y": 7.322360033517993e-17,
+              "z": 0.9999999727242018
+            }
+          },
+          "consumedJ": 466013.9763320503,
+          "disabledEdges": [],
+          "damageId": "POWER_DISTRIBUTION/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_DISTRIBUTION",
+          "projectileId": "dev-105",
+          "instanceId": "POWER_DISTRIBUTION",
+          "time": 0.07538054532955762,
+          "exitTime": 0.07547069531292173,
+          "ownerId": "plate/citadel/belt-1",
+          "geometryId": "plate/citadel/belt-1",
+          "layerId": "plate/citadel/belt-1/spall",
+          "kind": "ARMOR",
+          "materialId": "FIBER_SPALL_BACKING",
+          "worldPosition": {
+            "x": 182.97260714281555,
+            "y": -9.231657006195938,
+            "z": 28.516724728122124
+          },
+          "localPosition": {
+            "x": 182.97260714281555,
+            "y": -9.231657006195938,
+            "z": 28.516724728122124
+          },
+          "localExit": {
+            "x": 182.97262426326353,
+            "y": -9.231657006195938,
+            "z": 28.590025978518643
+          },
+          "normal": {
+            "x": -0.8014241056055867,
+            "y": 0,
+            "z": -0.5980964829810367
+          },
+          "relativeVelocity": {
+            "x": 0.19449578949492688,
+            "y": 6.097580654886392e-14,
+            "z": 832.7343179874289
+          },
+          "incidentJ": 3804864.160498132,
+          "residualJ": 3429243.643193112,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 53.252928255506085,
+          "pathM": 0.07330125239586864,
+          "availablePathM": 0.07330125239586849,
+          "projectileBefore": {
+            "massKg": 10.973778822909145,
+            "integrity": 0.9488076954854155
+          },
+          "projectileAfter": {
+            "massKg": 10.893432804589544,
+            "integrity": 0.9208173117870826,
+            "relativeSpeedMps": 793.4723353403868,
+            "localDirection": {
+              "x": 0.0012569719264342218,
+              "y": 7.316760931255296e-17,
+              "z": 0.9999992100104762
+            }
+          },
+          "consumedJ": 375620.5173050198,
+          "disabledEdges": [],
+          "damageId": "POWER_DISTRIBUTION/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_DISTRIBUTION",
+          "projectileId": "dev-105",
+          "instanceId": "POWER_DISTRIBUTION",
+          "time": 0.07547069531292173,
+          "exitTime": 0.07566078158311582,
+          "ownerId": "plate/citadel/belt-1",
+          "geometryId": "plate/citadel/belt-1",
+          "layerId": "plate/citadel/belt-1/support",
+          "kind": "ARMOR",
+          "materialId": "STEEL_BACKING",
+          "worldPosition": {
+            "x": 182.97262426338924,
+            "y": -9.231657006195938,
+            "z": 28.590026078518562
+          },
+          "localPosition": {
+            "x": 182.97262426338924,
+            "y": -9.231657006195938,
+            "z": 28.590026078518562
+          },
+          "localExit": {
+            "x": 182.972762280586,
+            "y": -9.231657006195938,
+            "z": 28.699827327731498
+          },
+          "normal": {
+            "x": 0.8014241056055867,
+            "y": 0,
+            "z": 0.5980964829810367
+          },
+          "relativeVelocity": {
+            "x": 0.9973724499250669,
+            "y": 5.805647383250443e-14,
+            "z": 793.4717085055545
+          },
+          "incidentJ": 3429243.6431931118,
+          "residualJ": 677411.7411676558,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 53.19429121473864,
+          "pathM": 0.10980133595484078,
+          "availablePathM": 0.10980133595484226,
+          "projectileBefore": {
+            "massKg": 10.893432804589544,
+            "integrity": 0.9208173117870826
+          },
+          "projectileAfter": {
+            "massKg": 10.349744861372164,
+            "integrity": 0.8194306566758203,
+            "relativeSpeedMps": 361.806642386224,
+            "localDirection": {
+              "x": 0.0014757903662141994,
+              "y": 7.315562773556722e-17,
+              "z": 0.9999989110208044
+            }
+          },
+          "consumedJ": 2751831.902025456,
+          "disabledEdges": [],
+          "damageId": "POWER_DISTRIBUTION/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_DISTRIBUTION",
+          "projectileId": "dev-105",
+          "instanceId": "POWER_DISTRIBUTION",
+          "time": 0.07566078158311582,
+          "exitTime": 0.07574520365613331,
+          "ownerId": "plate/citadel/belt-1",
+          "geometryId": "plate/citadel/belt-1",
+          "layerId": "plate/citadel/belt-1/ceramic",
+          "kind": "ARMOR",
+          "materialId": "CERAMIC_STRIKE_FACE",
+          "worldPosition": {
+            "x": 182.97276228073358,
+            "y": -9.231657006195938,
+            "z": 28.69982742773139
+          },
+          "localPosition": {
+            "x": 182.97276228073358,
+            "y": -9.231657006195938,
+            "z": 28.69982742773139
+          },
+          "localExit": {
+            "x": 182.97278481934848,
+            "y": -9.231657006195938,
+            "z": 28.715099644491115
+          },
+          "normal": {
+            "x": 0.8014241056055867,
+            "y": 0,
+            "z": 0.5980964829810367
+          },
+          "relativeVelocity": {
+            "x": 0.5339507572658954,
+            "y": 2.6468192042662097e-14,
+            "z": 361.8062483863176
+          },
+          "incidentJ": 677411.7411676556,
+          "residualJ": 0,
+          "outcome": "STOPPED",
+          "incidenceDegrees": 53.18175382993097,
+          "pathM": 0.015272233390870539,
+          "availablePathM": 0.18294879603264053,
+          "projectileBefore": {
+            "massKg": 10.349744861372164,
+            "integrity": 0.8194306566758203
+          },
+          "projectileAfter": {
+            "massKg": 9.998898610229967,
+            "integrity": 0,
+            "relativeSpeedMps": 0,
+            "localDirection": {
+              "x": 0.0014757903662141996,
+              "y": 7.315562773556723e-17,
+              "z": 0.9999989110208045
+            }
+          },
+          "consumedJ": 677411.7411676556,
+          "disabledEdges": [],
+          "damageId": "POWER_DISTRIBUTION/damage/5",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        }
+      ],
+      "integrity": 0.5737960248782149,
+      "deviceState": "DEGRADED",
+      "before": {
+        "availableElectricalPowerMW": 120,
+        "generatedPowerMW": 120,
+        "consumedElectricalPowerMW": 32,
+        "electricalPowerDeficitMW": 0,
+        "commandAvailability": 1,
+        "propulsionControlAvailability": 1,
+        "maneuverControlAvailability": 1,
+        "fireControlAvailability": 1,
+        "sensorProcessingAvailability": 1,
+        "propulsionAuthority": 1,
+        "maneuverAuthority": 1,
+        "availableFireControlChannels": 8,
+        "availableSensorProcessingCapacity": 8,
+        "activeSystemCount": 7,
+        "offlineSystemCount": 0,
+        "backupPowerRemainingMJ": 0,
+        "equipment": [
+          {
+            "id": "system/0/POWER_GENERATOR",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 32,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/POWER_DISTRIBUTION",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 32,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/COMMAND_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 2,
+            "suppliedMW": 2,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/PROPULSION_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 15,
+            "suppliedMW": 15,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/MANEUVER_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 6,
+            "suppliedMW": 6,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/FIRE_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 5,
+            "suppliedMW": 5,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/SENSOR_PROCESSING",
+            "state": "OPERATIONAL",
+            "demandMW": 4,
+            "suppliedMW": 4,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          }
+        ],
+        "externalLoads": [],
+        "storageDispatchMW": {},
+        "storageChargeMW": {},
+        "edgeFlowsMW": {
+          "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+          "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+          "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+          "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+          "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+          "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+        },
+        "criticalFailureWarnings": []
+      },
+      "after": {
+        "availableElectricalPowerMW": 120,
+        "generatedPowerMW": 120,
+        "consumedElectricalPowerMW": 32,
+        "electricalPowerDeficitMW": 0,
+        "commandAvailability": 1,
+        "propulsionControlAvailability": 1,
+        "maneuverControlAvailability": 1,
+        "fireControlAvailability": 1,
+        "sensorProcessingAvailability": 1,
+        "propulsionAuthority": 1,
+        "maneuverAuthority": 1,
+        "availableFireControlChannels": 8,
+        "availableSensorProcessingCapacity": 8,
+        "activeSystemCount": 7,
+        "offlineSystemCount": 0,
+        "backupPowerRemainingMJ": 0,
+        "equipment": [
+          {
+            "id": "system/0/POWER_GENERATOR",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 32,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/POWER_DISTRIBUTION",
+            "state": "DEGRADED",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 32,
+            "powerFraction": 0.5,
+            "functionalFraction": 0.5
+          },
+          {
+            "id": "system/0/COMMAND_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 2,
+            "suppliedMW": 2,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/PROPULSION_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 15,
+            "suppliedMW": 15,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/MANEUVER_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 6,
+            "suppliedMW": 6,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/FIRE_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 5,
+            "suppliedMW": 5,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/SENSOR_PROCESSING",
+            "state": "OPERATIONAL",
+            "demandMW": 4,
+            "suppliedMW": 4,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          }
+        ],
+        "externalLoads": [],
+        "storageDispatchMW": {},
+        "storageChargeMW": {},
+        "edgeFlowsMW": {
+          "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+          "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+          "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+          "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+          "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+          "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+        },
+        "criticalFailureWarnings": []
+      }
+    },
+    {
+      "id": "EQUIPMENT_INTENSITY",
+      "type": "POWER_GENERATOR",
+      "preset": "dev-500",
+      "events": [
+        {
+          "shotId": "POWER_GENERATOR",
+          "projectileId": "dev-500",
+          "instanceId": "POWER_GENERATOR",
+          "time": 0.000002857142857144319,
+          "exitTime": 0.0014405688352456029,
+          "ownerId": "system/0/POWER_GENERATOR",
+          "geometryId": "system/0/POWER_GENERATOR/OBB",
+          "layerId": "DEVICE_SMEARED_MASS",
+          "kind": "EQUIPMENT",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -98.86558068216081
+          },
+          "localPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -98.86558068216081
+          },
+          "localExit": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -93.86558068216081
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 3500
+          },
+          "incidentJ": 6737500000,
+          "residualJ": 6538638930.08615,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 5,
+          "availablePathM": 5,
+          "projectileBefore": {
+            "massKg": 1100,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 1095.20697167756,
+            "integrity": 0.9970596816287917,
+            "relativeSpeedMps": 3455.497442875409,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 198861069.91384983,
+          "disabledEdges": [],
+          "damageId": "POWER_GENERATOR/damage/1",
+          "equipmentStateChange": {
+            "from": "OPERATIONAL",
+            "to": "DESTROYED"
+          },
+          "capabilityDelta": {
+            "powerMW": -120,
+            "propulsion": -1,
+            "maneuver": -1,
+            "fire": -8,
+            "sensor": -8
+          }
+        },
+        {
+          "shotId": "POWER_GENERATOR",
+          "projectileId": "dev-500",
+          "instanceId": "POWER_GENERATOR",
+          "time": 0.008423684092716271,
+          "exitTime": 0.008434562186639688,
+          "ownerId": "bulkhead/comp/citadel/0/comp/citadel/1",
+          "geometryId": "bulkhead/comp/citadel/0/comp/citadel/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "BULKHEAD",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -69.73544366666667
+          },
+          "localPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -69.73544366666667
+          },
+          "localExit": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": -69.69788966666667
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 3455.497442875409
+          },
+          "incidentJ": 6538638930.086149,
+          "residualJ": 6509968056.600129,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.03755400000000009,
+          "availablePathM": 0.03755400000000009,
+          "projectileBefore": {
+            "massKg": 1095.20697167756,
+            "integrity": 0.9970596816287917
+          },
+          "projectileAfter": {
+            "massKg": 1094.5035603256583,
+            "integrity": 0.9966239021351462,
+            "relativeSpeedMps": 3449.020989192932,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 28670873.48602009,
+          "disabledEdges": [],
+          "damageId": "POWER_GENERATOR/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_GENERATOR",
+          "projectileId": "dev-500",
+          "instanceId": "POWER_GENERATOR",
+          "time": 0.04885060478832644,
+          "exitTime": 0.04886150331702171,
+          "ownerId": "bulkhead/comp/citadel/1/comp/citadel/2",
+          "geometryId": "bulkhead/comp/citadel/1/comp/citadel/2",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "BULKHEAD",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 69.69788966666667
+          },
+          "localPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 69.69788966666667
+          },
+          "localExit": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 69.73544366666667
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 3449.020989192932
+          },
+          "incidentJ": 6509968056.600128,
+          "residualJ": 6481403235.029495,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 8.537736462515939e-7,
+          "pathM": 0.03755400000000009,
+          "availablePathM": 0.03755400000000009,
+          "projectileBefore": {
+            "massKg": 1094.5035603256583,
+            "integrity": 0.9966239021351462
+          },
+          "projectileAfter": {
+            "massKg": 1093.8006007491222,
+            "integrity": 0.9961877709058724,
+            "relativeSpeedMps": 3442.551451462035,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 28564821.570632935,
+          "disabledEdges": [],
+          "damageId": "POWER_GENERATOR/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "POWER_GENERATOR",
+          "projectileId": "dev-500",
+          "instanceId": "POWER_GENERATOR",
+          "time": 0.09686204104701115,
+          "exitTime": 0.09686792204414559,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 234.97976459999998
+          },
+          "localPosition": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 234.97976459999998
+          },
+          "localExit": {
+            "x": 46.30846232739787,
+            "y": -11.765145368696185,
+            "z": 234.99999999999997
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 3442.551451462035
+          },
+          "incidentJ": 6481403235.029496,
+          "residualJ": 6466064605.455346,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.020235399999990022,
+          "availablePathM": 0.020235399999990022,
+          "projectileBefore": {
+            "massKg": 1093.8006007491222,
+            "integrity": 0.9961877709058724
+          },
+          "projectileAfter": {
+            "massKg": 1093.4220649811273,
+            "integrity": 0.9959525783956298,
+            "relativeSpeedMps": 3439.070673977501,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 15338629.574150085,
+          "disabledEdges": [],
+          "damageId": "POWER_GENERATOR/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        }
+      ],
+      "integrity": 0,
+      "deviceState": "DESTROYED",
+      "before": {
+        "availableElectricalPowerMW": 120,
+        "generatedPowerMW": 120,
+        "consumedElectricalPowerMW": 32,
+        "electricalPowerDeficitMW": 0,
+        "commandAvailability": 1,
+        "propulsionControlAvailability": 1,
+        "maneuverControlAvailability": 1,
+        "fireControlAvailability": 1,
+        "sensorProcessingAvailability": 1,
+        "propulsionAuthority": 1,
+        "maneuverAuthority": 1,
+        "availableFireControlChannels": 8,
+        "availableSensorProcessingCapacity": 8,
+        "activeSystemCount": 7,
+        "offlineSystemCount": 0,
+        "backupPowerRemainingMJ": 0,
+        "equipment": [
+          {
+            "id": "system/0/POWER_GENERATOR",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 32,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/POWER_DISTRIBUTION",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 32,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/COMMAND_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 2,
+            "suppliedMW": 2,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/PROPULSION_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 15,
+            "suppliedMW": 15,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/MANEUVER_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 6,
+            "suppliedMW": 6,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/FIRE_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 5,
+            "suppliedMW": 5,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/SENSOR_PROCESSING",
+            "state": "OPERATIONAL",
+            "demandMW": 4,
+            "suppliedMW": 4,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          }
+        ],
+        "externalLoads": [],
+        "storageDispatchMW": {},
+        "storageChargeMW": {},
+        "edgeFlowsMW": {
+          "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+          "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+          "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+          "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+          "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+          "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+        },
+        "criticalFailureWarnings": []
+      },
+      "after": {
+        "availableElectricalPowerMW": 0,
+        "generatedPowerMW": 0,
+        "consumedElectricalPowerMW": 0,
+        "electricalPowerDeficitMW": 32,
+        "commandAvailability": 0,
+        "propulsionControlAvailability": 0,
+        "maneuverControlAvailability": 0,
+        "fireControlAvailability": 0,
+        "sensorProcessingAvailability": 0,
+        "propulsionAuthority": 0,
+        "maneuverAuthority": 0,
+        "availableFireControlChannels": 0,
+        "availableSensorProcessingCapacity": 0,
+        "activeSystemCount": 1,
+        "offlineSystemCount": 6,
+        "backupPowerRemainingMJ": 0,
+        "equipment": [
+          {
+            "id": "system/0/POWER_GENERATOR",
+            "state": "DESTROYED",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          },
+          {
+            "id": "system/0/POWER_DISTRIBUTION",
+            "state": "OPERATIONAL",
+            "demandMW": 0,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 1,
+            "functionalFraction": 1
+          },
+          {
+            "id": "system/0/COMMAND_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 2,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          },
+          {
+            "id": "system/0/PROPULSION_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 15,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          },
+          {
+            "id": "system/0/MANEUVER_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 6,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          },
+          {
+            "id": "system/0/FIRE_CONTROL",
+            "state": "OPERATIONAL",
+            "demandMW": 5,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          },
+          {
+            "id": "system/0/SENSOR_PROCESSING",
+            "state": "OPERATIONAL",
+            "demandMW": 4,
+            "suppliedMW": 0,
+            "outputMW": 0,
+            "throughputMW": 0,
+            "powerFraction": 0,
+            "functionalFraction": 0
+          }
+        ],
+        "externalLoads": [],
+        "storageDispatchMW": {},
+        "storageChargeMW": {},
+        "edgeFlowsMW": {
+          "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+          "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+          "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+          "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+          "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+          "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0
+        },
+        "criticalFailureWarnings": [
+          "COMMAND_UNAVAILABLE",
+          "PROPULSION_CONTROL_UNAVAILABLE",
+          "MANEUVER_CONTROL_UNAVAILABLE",
+          "POWER_DEFICIT"
+        ]
+      }
+    }
+  ],
+  "method": "Limited actual archived-ship paths. Truss start just before an actual exposed member; twin starts just outside two distinct actual hull skins. These isolate structure/skin geometry and do not demonstrate exterior armor penetration."
+}

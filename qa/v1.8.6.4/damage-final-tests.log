@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.4
+
+ ✓ tests/damage.test.ts (14 tests) 6270ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  3046ms
+   ✓ actual finite open/closed/blocked hatch geometry and thin bulkhead paths stay distinct  1029ms
+   ✓ actual unresolved SPINE boundary returns UNRESOLVED rather than invented armor or empty space  1963ms
+
+ Test Files  1 passed (1)
+      Tests  14 passed (14)
+   Start at  19:20:43
+   Duration  7.19s (transform 497ms, setup 0ms, collect 691ms, tests 6.27s, environment 0ms, prepare 59ms)
+

@@ -1,0 +1,5 @@
+PASS FRAME is an actual generated-ship contact
+PASS BULKHEAD is an actual generated-ship contact
+PASS EQUIPMENT is an actual generated-ship contact
+PASS Actual unresolved SPINE produces no invented material damage
+PASS No console/page errors

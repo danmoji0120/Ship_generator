@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "FRAME is an actual generated-ship contact",
+    "BULKHEAD is an actual generated-ship contact",
+    "EQUIPMENT is an actual generated-ship contact",
+    "Actual unresolved SPINE produces no invented material damage",
+    "No console/page errors"
+  ],
+  "errors": []
+}

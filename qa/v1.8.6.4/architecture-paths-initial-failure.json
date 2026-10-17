@@ -1,0 +1,4 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Actual exposed truss path exists\n    at file:///workspace/shipyard-v1.8.6.4/tests/damage-paths.mjs:7:2",
+  "rows": []
+}

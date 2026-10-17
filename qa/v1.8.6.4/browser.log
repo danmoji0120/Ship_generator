@@ -1,0 +1,52 @@
+PASS Native new unarmed ship generated and laboratory starts OFF
+PASS BALANCED actual physical distributor hit and destroyed
+PASS BALANCED original Blueprint and mass unchanged
+PASS BALANCED independent identical ship B healthy
+PASS BALANCED reset restores function and clears damage
+PASS Actual 105mm thick armor STOP with no equipment damage
+PASS Actual exterior shot crosses armor hull bulkhead and device
+PASS Same-ray repeat bypasses the actual first perforated layer
+PASS Actual off-target MISS has zero events and zero damage
+PASS Finite flight can be paused before impact
+PASS Explicit step advances exactly 1/60 second
+PASS BALANCED Normal closes laboratory overlays
+PASS BLOCK_ASSEMBLY actual physical distributor hit and destroyed
+PASS BLOCK_ASSEMBLY original Blueprint and mass unchanged
+PASS BLOCK_ASSEMBLY independent identical ship B healthy
+PASS BLOCK_ASSEMBLY reset restores function and clears damage
+PASS BLOCK_ASSEMBLY Normal closes laboratory overlays
+PASS SPINE_AND_MODULES actual physical distributor hit and destroyed
+PASS SPINE_AND_MODULES original Blueprint and mass unchanged
+PASS SPINE_AND_MODULES independent identical ship B healthy
+PASS SPINE_AND_MODULES reset restores function and clears damage
+PASS SPINE_AND_MODULES Normal closes laboratory overlays
+PASS TRUSS_POD actual physical distributor hit and destroyed
+PASS TRUSS_POD original Blueprint and mass unchanged
+PASS TRUSS_POD independent identical ship B healthy
+PASS TRUSS_POD reset restores function and clears damage
+PASS TRUSS_POD Normal closes laboratory overlays
+PASS TWIN_HULL actual physical distributor hit and destroyed
+PASS TWIN_HULL original Blueprint and mass unchanged
+PASS TWIN_HULL independent identical ship B healthy
+PASS TWIN_HULL reset restores function and clears damage
+PASS TWIN_HULL Normal closes laboratory overlays
+PASS CORE_AND_NACELLES actual physical distributor hit and destroyed
+PASS CORE_AND_NACELLES original Blueprint and mass unchanged
+PASS CORE_AND_NACELLES independent identical ship B healthy
+PASS CORE_AND_NACELLES reset restores function and clears damage
+PASS CORE_AND_NACELLES Normal closes laboratory overlays
+PASS STACKED_BLOCKS actual physical distributor hit and destroyed
+PASS STACKED_BLOCKS original Blueprint and mass unchanged
+PASS STACKED_BLOCKS independent identical ship B healthy
+PASS STACKED_BLOCKS reset restores function and clears damage
+PASS STACKED_BLOCKS Normal closes laboratory overlays
+PASS HYBRID actual physical distributor hit and destroyed
+PASS HYBRID original Blueprint and mass unchanged
+PASS HYBRID independent identical ship B healthy
+PASS HYBRID reset restores function and clears damage
+PASS HYBRID Normal closes laboratory overlays
+PASS ENDURANCE real spare network survives distributor destruction
+PASS Impact/capability evaluation never double-spends reserve
+PASS Historical armed load and save preserves whole stored design
+PASS 390px UI no horizontal overflow
+PASS No console/page errors

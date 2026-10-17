@@ -1,0 +1,155 @@
+{
+  "checks": [
+    "Native new unarmed ship generated and laboratory starts OFF",
+    "BALANCED actual physical distributor hit and destroyed",
+    "BALANCED original Blueprint and mass unchanged",
+    "BALANCED independent identical ship B healthy",
+    "BALANCED reset restores function and clears damage",
+    "Actual 105mm thick armor STOP with no equipment damage",
+    "Actual exterior shot crosses armor hull bulkhead and device",
+    "Same-ray repeat bypasses the actual first perforated layer",
+    "Actual off-target MISS has zero events and zero damage",
+    "Finite flight can be paused before impact",
+    "Explicit step advances exactly 1/60 second",
+    "BALANCED Normal closes laboratory overlays",
+    "BLOCK_ASSEMBLY actual physical distributor hit and destroyed",
+    "BLOCK_ASSEMBLY original Blueprint and mass unchanged",
+    "BLOCK_ASSEMBLY independent identical ship B healthy",
+    "BLOCK_ASSEMBLY reset restores function and clears damage",
+    "BLOCK_ASSEMBLY Normal closes laboratory overlays",
+    "SPINE_AND_MODULES actual physical distributor hit and destroyed",
+    "SPINE_AND_MODULES original Blueprint and mass unchanged",
+    "SPINE_AND_MODULES independent identical ship B healthy",
+    "SPINE_AND_MODULES reset restores function and clears damage",
+    "SPINE_AND_MODULES Normal closes laboratory overlays",
+    "TRUSS_POD actual physical distributor hit and destroyed",
+    "TRUSS_POD original Blueprint and mass unchanged",
+    "TRUSS_POD independent identical ship B healthy",
+    "TRUSS_POD reset restores function and clears damage",
+    "TRUSS_POD Normal closes laboratory overlays",
+    "TWIN_HULL actual physical distributor hit and destroyed",
+    "TWIN_HULL original Blueprint and mass unchanged",
+    "TWIN_HULL independent identical ship B healthy",
+    "TWIN_HULL reset restores function and clears damage",
+    "TWIN_HULL Normal closes laboratory overlays",
+    "CORE_AND_NACELLES actual physical distributor hit and destroyed",
+    "CORE_AND_NACELLES original Blueprint and mass unchanged",
+    "CORE_AND_NACELLES independent identical ship B healthy",
+    "CORE_AND_NACELLES reset restores function and clears damage",
+    "CORE_AND_NACELLES Normal closes laboratory overlays",
+    "STACKED_BLOCKS actual physical distributor hit and destroyed",
+    "STACKED_BLOCKS original Blueprint and mass unchanged",
+    "STACKED_BLOCKS independent identical ship B healthy",
+    "STACKED_BLOCKS reset restores function and clears damage",
+    "STACKED_BLOCKS Normal closes laboratory overlays",
+    "HYBRID actual physical distributor hit and destroyed",
+    "HYBRID original Blueprint and mass unchanged",
+    "HYBRID independent identical ship B healthy",
+    "HYBRID reset restores function and clears damage",
+    "HYBRID Normal closes laboratory overlays",
+    "ENDURANCE real spare network survives distributor destruction",
+    "Impact/capability evaluation never double-spends reserve",
+    "Historical armed load and save preserves whole stored design",
+    "390px UI no horizontal overflow",
+    "No console/page errors"
+  ],
+  "errors": [],
+  "rows": [
+    {
+      "id": "BALANCED",
+      "memory": {
+        "usedSize": 173276116,
+        "totalSize": 175755264,
+        "embedderHeapUsedSize": 3568104,
+        "backingStorageSize": 6503436
+      },
+      "events": 5,
+      "local": 5,
+      "capability": "Before → After\nPower 120.00 → 120.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 8 → 8 · Sensor 8 → 8\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "memory": {
+        "usedSize": 227506040,
+        "totalSize": 229187584,
+        "embedderHeapUsedSize": 3874800,
+        "backingStorageSize": 10166131
+      },
+      "events": 7,
+      "local": 7,
+      "capability": "Before → After\nPower 240.00 → 240.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 16 → 16 · Sensor 16 → 16\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "memory": {
+        "usedSize": 223055224,
+        "totalSize": 225292288,
+        "embedderHeapUsedSize": 4132456,
+        "backingStorageSize": 6893695
+      },
+      "events": 2,
+      "local": 2,
+      "capability": "Before → After\nPower 120.00 → 120.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 8 → 8 · Sensor 8 → 8\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "TRUSS_POD",
+      "memory": {
+        "usedSize": 282352020,
+        "totalSize": 284389376,
+        "embedderHeapUsedSize": 4339856,
+        "backingStorageSize": 7817492
+      },
+      "events": 2,
+      "local": 2,
+      "capability": "Before → After\nPower 240.00 → 240.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 16 → 16 · Sensor 16 → 16\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "TWIN_HULL",
+      "memory": {
+        "usedSize": 287842648,
+        "totalSize": 289976320,
+        "embedderHeapUsedSize": 4389064,
+        "backingStorageSize": 7548193
+      },
+      "events": 6,
+      "local": 5,
+      "capability": "Before → After\nPower 240.00 → 240.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 16 → 16 · Sensor 16 → 16\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "memory": {
+        "usedSize": 318869244,
+        "totalSize": 321196032,
+        "embedderHeapUsedSize": 4436760,
+        "backingStorageSize": 8177326
+      },
+      "events": 5,
+      "local": 5,
+      "capability": "Before → After\nPower 120.00 → 120.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 8 → 8 · Sensor 8 → 8\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "memory": {
+        "usedSize": 201069324,
+        "totalSize": 203194368,
+        "embedderHeapUsedSize": 3835280,
+        "backingStorageSize": 5358894
+      },
+      "events": 5,
+      "local": 5,
+      "capability": "Before → After\nPower 240.00 → 240.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 16 → 16 · Sensor 16 → 16\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    },
+    {
+      "id": "HYBRID",
+      "memory": {
+        "usedSize": 230911104,
+        "totalSize": 232984576,
+        "embedderHeapUsedSize": 4216312,
+        "backingStorageSize": 7320757
+      },
+      "events": 5,
+      "local": 5,
+      "capability": "Before → After\nPower 240.00 → 240.00 MW\nPropulsion 100.0 → 100.0% · Maneuver 100.0 → 100.0%\nFire 16 → 16 · Sensor 16 → 16\n\nReserve 0.0 MJ (evaluation does not advance energy)"
+    }
+  ]
+}

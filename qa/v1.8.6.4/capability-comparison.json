@@ -1,0 +1,3366 @@
+[
+  {
+    "id": "BALANCED",
+    "before": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 7,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 0,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 0,
+      "propulsionControlAvailability": 0,
+      "maneuverControlAvailability": 0,
+      "fireControlAvailability": 0,
+      "sensorProcessingAvailability": 0,
+      "propulsionAuthority": 0,
+      "maneuverAuthority": 0,
+      "availableFireControlChannels": 0,
+      "availableSensorProcessingCapacity": 0,
+      "activeSystemCount": 1,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0
+      },
+      "criticalFailureWarnings": [
+        "COMMAND_UNAVAILABLE",
+        "PROPULSION_CONTROL_UNAVAILABLE",
+        "MANEUVER_CONTROL_UNAVAILABLE",
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "BLOCK_ASSEMBLY",
+    "before": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 14,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 0.5,
+      "maneuverControlAvailability": 0.4444444444444444,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 0.5,
+      "maneuverAuthority": 0.4444444444444444,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 8,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": [
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "SPINE_AND_MODULES",
+    "before": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 7,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 0,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 0,
+      "propulsionControlAvailability": 0,
+      "maneuverControlAvailability": 0,
+      "fireControlAvailability": 0,
+      "sensorProcessingAvailability": 0,
+      "propulsionAuthority": 0,
+      "maneuverAuthority": 0,
+      "availableFireControlChannels": 0,
+      "availableSensorProcessingCapacity": 0,
+      "activeSystemCount": 1,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0
+      },
+      "criticalFailureWarnings": [
+        "COMMAND_UNAVAILABLE",
+        "PROPULSION_CONTROL_UNAVAILABLE",
+        "MANEUVER_CONTROL_UNAVAILABLE",
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "TRUSS_POD",
+    "before": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 14,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 0.5,
+      "maneuverControlAvailability": 0.5,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 0.5,
+      "maneuverAuthority": 0.5,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 8,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": [
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "TWIN_HULL",
+    "before": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 14,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 26,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 0.5,
+      "maneuverControlAvailability": 0.5,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 0.5,
+      "maneuverAuthority": 0.5,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 8,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": [
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "CORE_AND_NACELLES",
+    "before": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 7,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 120,
+      "generatedPowerMW": 120,
+      "consumedElectricalPowerMW": 0,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 0,
+      "propulsionControlAvailability": 0,
+      "maneuverControlAvailability": 0,
+      "fireControlAvailability": 0,
+      "sensorProcessingAvailability": 0,
+      "propulsionAuthority": 0,
+      "maneuverAuthority": 0,
+      "availableFireControlChannels": 0,
+      "availableSensorProcessingCapacity": 0,
+      "activeSystemCount": 1,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0
+      },
+      "criticalFailureWarnings": [
+        "COMMAND_UNAVAILABLE",
+        "PROPULSION_CONTROL_UNAVAILABLE",
+        "MANEUVER_CONTROL_UNAVAILABLE",
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "STACKED_BLOCKS",
+    "before": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 14,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 0,
+      "maneuverControlAvailability": 0.5,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 0,
+      "maneuverAuthority": 0.5,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 8,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": [
+        "PROPULSION_CONTROL_UNAVAILABLE",
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "HYBRID",
+    "before": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 14,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 240,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 32,
+      "electricalPowerDeficitMW": 32,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 0.5,
+      "maneuverControlAvailability": 0.4444444444444444,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 0.5,
+      "maneuverAuthority": 0.4444444444444444,
+      "availableFireControlChannels": 8,
+      "availableSensorProcessingCapacity": 8,
+      "activeSystemCount": 8,
+      "offlineSystemCount": 6,
+      "backupPowerRemainingMJ": 0,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 32,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 32,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {},
+      "storageChargeMW": {},
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 32,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": [
+        "POWER_DEFICIT"
+      ]
+    }
+  },
+  {
+    "id": "ENDURANCE",
+    "before": {
+      "availableElectricalPowerMW": 264,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 16,
+      "offlineSystemCount": 0,
+      "backupPowerRemainingMJ": 360,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 64,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 64,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/ENERGY_STORAGE",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/ENERGY_STORAGE",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {
+        "system/0/ENERGY_STORAGE": 0,
+        "system/1/ENERGY_STORAGE": 0
+      },
+      "storageChargeMW": {
+        "system/0/ENERGY_STORAGE": 0,
+        "system/1/ENERGY_STORAGE": 0
+      },
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 64,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4,
+        "power/system/0/POWER_DISTRIBUTION/system/0/ENERGY_STORAGE": 0,
+        "power/system/0/ENERGY_STORAGE/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/1/ENERGY_STORAGE": 0,
+        "power/system/1/ENERGY_STORAGE/system/1/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/POWER_DISTRIBUTION": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/0/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/0/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/0/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/0/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0
+      },
+      "criticalFailureWarnings": []
+    },
+    "after": {
+      "availableElectricalPowerMW": 264,
+      "generatedPowerMW": 240,
+      "consumedElectricalPowerMW": 64,
+      "electricalPowerDeficitMW": 0,
+      "commandAvailability": 1,
+      "propulsionControlAvailability": 1,
+      "maneuverControlAvailability": 1,
+      "fireControlAvailability": 1,
+      "sensorProcessingAvailability": 1,
+      "propulsionAuthority": 1,
+      "maneuverAuthority": 1,
+      "availableFireControlChannels": 16,
+      "availableSensorProcessingCapacity": 16,
+      "activeSystemCount": 15,
+      "offlineSystemCount": 1,
+      "backupPowerRemainingMJ": 360,
+      "equipment": [
+        {
+          "id": "system/0/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/POWER_DISTRIBUTION",
+          "state": "DESTROYED",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 0,
+          "functionalFraction": 0
+        },
+        {
+          "id": "system/0/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/0/ENERGY_STORAGE",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_GENERATOR",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 64,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/POWER_DISTRIBUTION",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 64,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/COMMAND_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 2,
+          "suppliedMW": 2,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/PROPULSION_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 15,
+          "suppliedMW": 15,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/MANEUVER_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 6,
+          "suppliedMW": 6,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/FIRE_CONTROL",
+          "state": "OPERATIONAL",
+          "demandMW": 5,
+          "suppliedMW": 5,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/SENSOR_PROCESSING",
+          "state": "OPERATIONAL",
+          "demandMW": 4,
+          "suppliedMW": 4,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        },
+        {
+          "id": "system/1/ENERGY_STORAGE",
+          "state": "OPERATIONAL",
+          "demandMW": 0,
+          "suppliedMW": 0,
+          "outputMW": 0,
+          "throughputMW": 0,
+          "powerFraction": 1,
+          "functionalFraction": 1
+        }
+      ],
+      "externalLoads": [],
+      "storageDispatchMW": {
+        "system/0/ENERGY_STORAGE": 0,
+        "system/1/ENERGY_STORAGE": 0
+      },
+      "storageChargeMW": {
+        "system/0/ENERGY_STORAGE": 0,
+        "system/1/ENERGY_STORAGE": 0
+      },
+      "edgeFlowsMW": {
+        "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/0/ENERGY_STORAGE": 0,
+        "power/system/0/ENERGY_STORAGE/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/1/POWER_GENERATOR/system/1/POWER_DISTRIBUTION": 64,
+        "power/system/1/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 4,
+        "power/system/1/POWER_DISTRIBUTION/system/1/ENERGY_STORAGE": 0,
+        "power/system/1/ENERGY_STORAGE/system/1/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/POWER_DISTRIBUTION": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/POWER_DISTRIBUTION": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/COMMAND_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/PROPULSION_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/MANEUVER_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/FIRE_CONTROL": 0,
+        "power/system/0/POWER_DISTRIBUTION/system/1/SENSOR_PROCESSING": 0,
+        "power/system/1/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+        "power/system/1/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+        "power/system/1/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+        "power/system/1/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+        "power/system/1/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+      },
+      "criticalFailureWarnings": []
+    },
+    "events": [
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.000002857142857144319,
+        "exitTime": 0.0005765088805176315,
+        "ownerId": "system/0/POWER_DISTRIBUTION",
+        "geometryId": "system/0/POWER_DISTRIBUTION/OBB",
+        "layerId": "DEVICE_SMEARED_MASS",
+        "kind": "EQUIPMENT",
+        "materialId": "STEEL_STRUCTURAL",
+        "worldPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -125.1360797041548
+        },
+        "localPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -125.1360797041548
+        },
+        "localExit": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -123.1360797041548
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3500
+        },
+        "incidentJ": 6737500000,
+        "residualJ": 6615797496.062443,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0,
+        "pathM": 2,
+        "availablePathM": 2,
+        "projectileBefore": {
+          "massKg": 1100,
+          "integrity": 1
+        },
+        "projectileAfter": {
+          "massKg": 1097.0709271362866,
+          "integrity": 0.9982031387731505,
+          "relativeSpeedMps": 3472.87175719736,
+          "localDirection": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        "consumedJ": 121702503.93755722,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/1",
+        "equipmentStateChange": {
+          "from": "OPERATIONAL",
+          "to": "DESTROYED"
+        },
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.008960723628387486,
+        "exitTime": 0.008971543089492212,
+        "ownerId": "bulkhead/comp/citadel/1/comp/citadel/2",
+        "geometryId": "bulkhead/comp/citadel/1/comp/citadel/2",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "materialId": "TITANIUM_STRUCTURAL",
+        "worldPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -94.018777
+        },
+        "localPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -94.018777
+        },
+        "localExit": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -93.981223
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -0.9999999999999999
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3472.87175719736
+        },
+        "incidentJ": 6615797496.062443,
+        "residualJ": 6598866125.51289,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0,
+        "pathM": 0.03755400000000009,
+        "availablePathM": 0.037553999999996535,
+        "projectileBefore": {
+          "massKg": 1097.0709271362866,
+          "integrity": 0.9982031387731505
+        },
+        "projectileAfter": {
+          "massKg": 1096.6670114343488,
+          "integrity": 0.9979480855056717,
+          "relativeSpeedMps": 3469.0636380119845,
+          "localDirection": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        "consumedJ": 16931370.549552917,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/2",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.03605736673089622,
+        "exitTime": 0.036068198071961134,
+        "ownerId": "bulkhead/comp/citadel/2/comp/citadel/3",
+        "geometryId": "bulkhead/comp/citadel/2/comp/citadel/3",
+        "layerId": "STRUCTURAL_MATERIAL",
+        "kind": "BULKHEAD",
+        "materialId": "TITANIUM_STRUCTURAL",
+        "worldPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -0.018777000000000044
+        },
+        "localPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": -0.018777000000000044
+        },
+        "localExit": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": 0.018777000000000044
+        },
+        "normal": {
+          "x": 0,
+          "y": 0,
+          "z": -0.9999999999999999
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3469.0636380119845
+        },
+        "incidentJ": 6598866125.51289,
+        "residualJ": 6581970696.679557,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 0,
+        "pathM": 0.03755400000000009,
+        "availablePathM": 0.03755400000000009,
+        "projectileBefore": {
+          "massKg": 1096.6670114343488,
+          "integrity": 0.9979480855056717
+        },
+        "projectileAfter": {
+          "massKg": 1096.2632444446683,
+          "integrity": 0.9976929018825996,
+          "relativeSpeedMps": 3465.2577493243857,
+          "localDirection": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        "consumedJ": 16895428.833333015,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/3",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.045476258385175806,
+        "exitTime": 0.045487195507156054,
+        "ownerId": "shell/citadel",
+        "geometryId": "shell/citadel",
+        "layerId": "shell/citadel/alloy",
+        "kind": "HULL",
+        "materialId": "TITANIUM_STRUCTURAL",
+        "worldPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": 32.620131006478346
+        },
+        "localPosition": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": 32.620131006478346
+        },
+        "localExit": {
+          "x": 160.61882341077205,
+          "y": 13.17955199447755,
+          "z": 32.65800982737331
+        },
+        "normal": {
+          "x": -0.8149211119639657,
+          "y": 0,
+          "z": -0.5795718948287726
+        },
+        "relativeVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 3465.2577493243857
+        },
+        "incidentJ": 6581970696.679557,
+        "residualJ": 6564864616.233456,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 54.579562366248645,
+        "pathM": 0.03787882089496719,
+        "availablePathM": 0.03787882089496719,
+        "projectileBefore": {
+          "massKg": 1096.2632444446683,
+          "integrity": 0.9976929018825996
+        },
+        "projectileAfter": {
+          "massKg": 1095.8561350418247,
+          "integrity": 0.9974335975683499,
+          "relativeSpeedMps": 3461.394611939202,
+          "localDirection": {
+            "x": 0.0001256145469256932,
+            "y": 0,
+            "z": 0.9999999921104927
+          }
+        },
+        "consumedJ": 17106080.44610119,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/4",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.05421360380855812,
+        "exitTime": 0.05424024316292955,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/spall",
+        "kind": "ARMOR",
+        "materialId": "FIBER_SPALL_BACKING",
+        "worldPosition": {
+          "x": 160.62261766634253,
+          "y": 13.17955199447755,
+          "z": 62.86355236512112
+        },
+        "localPosition": {
+          "x": 160.62261766634253,
+          "y": 13.17955199447755,
+          "z": 62.86355236512112
+        },
+        "localExit": {
+          "x": 160.62262924282578,
+          "y": 13.17955199447755,
+          "z": 62.955711143220405
+        },
+        "normal": {
+          "x": -0.8795792569993871,
+          "y": 0,
+          "z": -0.47575238376324097
+        },
+        "relativeVelocity": {
+          "x": 0.4348015159097785,
+          "y": 0,
+          "z": 3461.394584630504
+        },
+        "incidentJ": 6564864616.233454,
+        "residualJ": 6548211251.203924,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 61.584453848021305,
+        "pathM": 0.09215877882636965,
+        "availablePathM": 0.09215877882636647,
+        "projectileBefore": {
+          "massKg": 1095.8561350418247,
+          "integrity": 0.9974335975683499
+        },
+        "projectileAfter": {
+          "massKg": 1095.4765870756448,
+          "integrity": 0.996828042798243,
+          "relativeSpeedMps": 3457.600311240807,
+          "localDirection": {
+            "x": 0.000914080850123682,
+            "y": 0,
+            "z": 0.9999995822280124
+          }
+        },
+        "consumedJ": 16653365.029529572,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/5",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.05424024316292955,
+        "exitTime": 0.05428031968281118,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/support",
+        "kind": "ARMOR",
+        "materialId": "STEEL_BACKING",
+        "worldPosition": {
+          "x": 160.62262924291718,
+          "y": 13.17955199447755,
+          "z": 62.955711243220364
+        },
+        "localPosition": {
+          "x": 160.62262924291718,
+          "y": 13.17955199447755,
+          "z": 62.955711243220364
+        },
+        "localExit": {
+          "x": 160.62275541985048,
+          "y": 13.17955199447755,
+          "z": 63.09374813630259
+        },
+        "normal": {
+          "x": 0.8795792569993872,
+          "y": 0,
+          "z": 0.475752383763241
+        },
+        "relativeVelocity": {
+          "x": 3.1605262318869043,
+          "y": 0,
+          "z": 3457.598866752253
+        },
+        "incidentJ": 6548211251.203923,
+        "residualJ": 6432882016.250506,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 61.53927804928538,
+        "pathM": 0.13803695075019415,
+        "availablePathM": 0.13803695075019187,
+        "projectileBefore": {
+          "massKg": 1095.4765870756448,
+          "integrity": 0.996828042798243
+        },
+        "projectileAfter": {
+          "massKg": 1092.8904268481274,
+          "integrity": 0.995049115738403,
+          "relativeSpeedMps": 3431.0692218368745,
+          "localDirection": {
+            "x": 0.0010827989122601694,
+            "y": 0,
+            "z": 0.999999413773086
+          }
+        },
+        "consumedJ": 115329234.95341682,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/6",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      },
+      {
+        "shotId": "endurance",
+        "projectileId": "dev-500",
+        "instanceId": "endurance",
+        "time": 0.05428031968281118,
+        "exitTime": 0.05434763103100632,
+        "ownerId": "plate/citadel/belt-1",
+        "geometryId": "plate/citadel/belt-1",
+        "layerId": "plate/citadel/belt-1/ceramic",
+        "kind": "ARMOR",
+        "materialId": "CERAMIC_STRIKE_FACE",
+        "worldPosition": {
+          "x": 160.62275541995876,
+          "y": 13.17955199447755,
+          "z": 63.09374823630253
+        },
+        "localPosition": {
+          "x": 160.62275541995876,
+          "y": 13.17955199447755,
+          "z": 63.09374823630253
+        },
+        "localExit": {
+          "x": 160.62300445295676,
+          "y": 13.17955199447755,
+          "z": 63.323738171831884
+        },
+        "normal": {
+          "x": 0.8795792569993872,
+          "y": 0,
+          "z": 0.475752383763241
+        },
+        "relativeVelocity": {
+          "x": 3.7151580212943136,
+          "y": 0,
+          "z": 3431.067210451753
+        },
+        "incidentJ": 6432882016.250505,
+        "residualJ": 6316242732.5506735,
+        "outcome": "PENETRATED",
+        "incidenceDegrees": 61.52961121156753,
+        "pathM": 0.2299900703557225,
+        "availablePathM": 0.2299900703557193,
+        "projectileBefore": {
+          "massKg": 1092.8904268481274,
+          "integrity": 0.995049115738403
+        },
+        "projectileAfter": {
+          "massKg": 1091.138068182075,
+          "integrity": 0.9895107631360381,
+          "relativeSpeedMps": 3402.5502649977707,
+          "localDirection": {
+            "x": 0.002094264179146467,
+            "y": 0,
+            "z": 0.9999978070263694
+          }
+        },
+        "consumedJ": 116639283.69983196,
+        "disabledEdges": [],
+        "damageId": "endurance/damage/7",
+        "capabilityDelta": {
+          "powerMW": 0,
+          "propulsion": 0,
+          "maneuver": 0,
+          "fire": 0,
+          "sensor": 0
+        }
+      }
+    ],
+    "storageMJ": {
+      "system/0/ENERGY_STORAGE": 180,
+      "system/1/ENERGY_STORAGE": 180
+    }
+  }
+]

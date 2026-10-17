@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "dev-105 exposes explicit nonzero mass and velocity",
+    "dev-210 exposes explicit nonzero mass and velocity",
+    "dev-406 exposes explicit nonzero mass and velocity",
+    "dev-500 exposes explicit nonzero mass and velocity",
+    "Final UI finite exterior shot penetrates and changes actual device state",
+    "Export excludes transient query cache",
+    "Selected contact inspector shows the actual first damage ID",
+    "Camera ray uses actual current camera direction",
+    "Moving target can leave the uncorrected shot line and MISS",
+    "Blocked aperture keeps explicit real leaf position",
+    "Expanded contact controls fit 390px width",
+    "Normal hides final laboratory overlays",
+    "No page/console errors"
+  ],
+  "errors": []
+}
