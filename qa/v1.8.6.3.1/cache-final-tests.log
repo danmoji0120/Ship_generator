@@ -1,0 +1,27 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ❯ tests/systems-integrity.test.ts (6 tests | 1 failed | 4 skipped) 13073ms
+   ↓ itemized replacement retires the exact estimate once; unknown and unrealized service scopes remain
+   ↓ new provenance reconciles modeled and uncertain base without inventing a legacy deduction; one unit mass once
+   ↓ all four policies keep exact old mass and geometry; new ledger max check uses accounted base
+   ✓ bounded functional plan cache is output-independent and invalidates finite room and source mutations  6594ms
+   ↓ sequential failures/reset are pure and instance-isolated; interval retries cannot spend energy twice
+   × source keys invalidate edited seed, priority, materials, finite cells and RCS; no ghost redundancy 6478ms
+     → expected [ 'maneuverControlAvailability', …(2) ] to include 'propulsionControlAvailability'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/systems-integrity.test.ts > source keys invalidate edited seed, priority, materials, finite cells and RCS; no ghost redundancy
+AssertionError: expected [ 'maneuverControlAvailability', …(2) ] to include 'propulsionControlAvailability'
+ ❯ tests/systems-integrity.test.ts:117:198
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 4 skipped (6)
+   Start at  18:06:11
+   Duration  15.13s (transform 1.18s, setup 0ms, collect 1.62s, tests 13.07s, environment 0ms, prepare 179ms)
+

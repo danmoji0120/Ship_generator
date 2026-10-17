@@ -2,7 +2,7 @@
 
 검증 시각: 2026-10-17T18:22:31.901606+00:00
 
-Branch: `feature/v1.8.6.3.1` · Base: `5c9ff588c0e8d7166afd69fe78abf9603a41d94b`. 독립 Worktree `/workspace/shipyard-v1.8.6.3.1`. 최종 로컬 Commit SHA는 완료 응답과 이 브랜치의 `git log -1`에 기록한다. 원격 Push·History Rewrite 없음. 기존 Worktree·QA·combat-demo 변경 없음.
+Branch: `feature/v1.8.6.3.1` · Base: `5c9ff588c0e8d7166afd69fe78abf9603a41d94b`. 독립 Worktree `/workspace/shipyard-v1.8.6.3.1`. 구현 로컬 Commit: `83f9dfa396d655aa3d2a59d0f39d7af188c636e5`. QA 로그 보존 Commit을 추가하며 최종 HEAD는 완료 응답에 기록한다. 원격 Push·History Rewrite 없음. 기존 Worktree·QA·combat-demo 변경 없음.
 
 ## 결과와 한계
 

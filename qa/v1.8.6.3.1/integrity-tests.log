@@ -1,0 +1,33 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ❯ tests/systems-integrity.test.ts (5 tests | 1 failed) 4014ms
+   ✓ itemized replacement retires the exact estimate once; unknown and unrealized service scopes remain 3ms
+   ✓ new provenance reconciles modeled and uncertain base without inventing a legacy deduction; one unit mass once 210ms
+   ✓ all four policies keep exact old mass and geometry; new ledger max check uses accounted base  1101ms
+   × bounded functional plan cache is output-independent and invalidates finite room and source mutations 2466ms
+     → expected [Function] to throw an error
+   ✓ sequential failures/reset are pure and instance-isolated; interval retries cannot spend energy twice 233ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/systems-integrity.test.ts > bounded functional plan cache is output-independent and invalidates finite room and source mutations
+AssertionError: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ tests/systems-integrity.test.ts:35:211
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  18:02:20
+   Duration  4.87s (transform 484ms, setup 0ms, collect 646ms, tests 4.01s, environment 0ms, prepare 64ms)
+

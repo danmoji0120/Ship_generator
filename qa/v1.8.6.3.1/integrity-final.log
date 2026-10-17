@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ✓ tests/systems-integrity.test.ts (6 tests) 7238ms
+   ✓ all four policies keep exact old mass and geometry; new ledger max check uses accounted base  1135ms
+   ✓ bounded functional plan cache is output-independent and invalidates finite room and source mutations  2763ms
+   ✓ source keys invalidate edited seed, priority, materials, finite cells and RCS; no ghost redundancy  2798ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  18:22:30
+   Duration  8.12s (transform 467ms, setup 0ms, collect 651ms, tests 7.24s, environment 0ms, prepare 60ms)
+

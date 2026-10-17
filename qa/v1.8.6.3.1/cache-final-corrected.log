@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ✓ tests/systems-integrity.test.ts (6 tests | 5 skipped) 5781ms
+   ✓ source keys invalidate edited seed, priority, materials, finite cells and RCS; no ghost redundancy  5780ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  18:07:19
+   Duration  7.30s (transform 856ms, setup 0ms, collect 1.22s, tests 5.78s, environment 0ms, prepare 83ms)
+

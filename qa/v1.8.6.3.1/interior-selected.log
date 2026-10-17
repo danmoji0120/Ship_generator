@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ✓ tests/interior.test.ts (20 tests | 17 skipped) 60610ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  10326ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  46083ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  4199ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 17 skipped (20)
+   Start at  18:05:33
+   Duration  64.41s (transform 2.23s, setup 0ms, collect 3.28s, tests 60.61s, environment 0ms, prepare 126ms)
+

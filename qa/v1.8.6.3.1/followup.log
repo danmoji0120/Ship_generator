@@ -1,0 +1,7 @@
+PASS New provenance visible from generated ledger
+PASS View JSON remains formatted
+PASS Closing JSON dialog releases formatted DOM text
+PASS Reference-backed Reload and compact Export preserve complete design
+PASS Historical armed Blueprint preserves actual weapons, mass, material and all data
+PASS Legacy system Inspector is cleared
+PASS No console errors

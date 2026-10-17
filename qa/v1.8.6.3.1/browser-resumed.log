@@ -1,0 +1,28 @@
+PASS TRUSS_POD legacy import does not insert systems
+PASS TRUSS_POD actual browser Generate systems, unarmed, engines, hard cap
+PASS TRUSS_POD real failure analysis in Inspector
+PASS TWIN_HULL legacy import does not insert systems
+PASS TWIN_HULL actual browser Generate systems, unarmed, engines, hard cap
+PASS TWIN_HULL real failure analysis in Inspector
+PASS CORE_AND_NACELLES legacy import does not insert systems
+PASS CORE_AND_NACELLES actual browser Generate systems, unarmed, engines, hard cap
+PASS CORE_AND_NACELLES real failure analysis in Inspector
+PASS STACKED_BLOCKS legacy import does not insert systems
+PASS STACKED_BLOCKS actual browser Generate systems, unarmed, engines, hard cap
+PASS STACKED_BLOCKS real failure analysis in Inspector
+PASS HYBRID legacy import does not insert systems
+PASS HYBRID actual browser Generate systems, unarmed, engines, hard cap
+PASS HYBRID real failure analysis in Inspector
+PASS Full new save/load preserved
+PASS Editing order does not regenerate
+PASS Hard reject preserves preceding complete ship
+PASS Actual free gun installation with internal systems
+PASS Mounted gun updates dynamic controls and explicit unknown power
+PASS Explicit fixture power deficit displayed without rejecting mount
+PASS Fire-control loss affects installed gun without removing it
+PASS Remove external equipment recomputes demand
+PASS Undo restores operating demand
+PASS Endurance independent source keeps full essential control
+PASS Reserve advance consumes finite energy
+PASS 390px no overflow
+PASS No console/page errors

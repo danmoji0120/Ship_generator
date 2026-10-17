@@ -1,0 +1,35 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1030ms
+ ✓ tests/systems.test.ts (17 tests) 89436ms
+   ✓ BALANCED real confirmed OBBs, connected networks, mass and preserved compartments/frame  2124ms
+   ✓ BLOCK_ASSEMBLY real confirmed OBBs, connected networks, mass and preserved compartments/frame  3960ms
+   ✓ SPINE_AND_MODULES real confirmed OBBs, connected networks, mass and preserved compartments/frame  3628ms
+   ✓ TRUSS_POD real confirmed OBBs, connected networks, mass and preserved compartments/frame  7920ms
+   ✓ TWIN_HULL real confirmed OBBs, connected networks, mass and preserved compartments/frame  8242ms
+   ✓ CORE_AND_NACELLES real confirmed OBBs, connected networks, mass and preserved compartments/frame  8464ms
+   ✓ STACKED_BLOCKS real confirmed OBBs, connected networks, mass and preserved compartments/frame  3957ms
+   ✓ HYBRID real confirmed OBBs, connected networks, mass and preserved compartments/frame  4213ms
+   ✓ actual reactor/distribution/control failure propagation, reset and independent instances never mutate design  682ms
+   ✓ cyclic and alternate power routes respect generator, bus and edge capacities; deterministic load priority  320ms
+   ✓ finite storage drains in MJ, cannot supply infinite MW, stops empty and recharges through a real path  320ms
+   ✓ endurance maintains all essential functions after any individual generator/bus/command loss and records real compartment separation  306ms
+   ✓ removed edges, degraded operation and zero-power specification are evaluated; ghost refs fail validation  9267ms
+   ✓ external mounting stays possible with power/control offline; mass, actual channels, legacy unknown demand and save/load survive  2205ms
+   ✓ legacy saves are not redesigned; new native generation deterministic, unarmed and hard maximum enforced  33565ms
+ ✓ tests/free-mount.test.ts (18 tests) 8378ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  6300ms
+   ✓ mirror and 4-row battery are atomic; rejects partial overlap  301ms
+   ✓ all five adaptive support recipes build on actual clear surfaces without internal assumptions  316ms
+ ✓ tests/systems-integrity.test.ts (5 tests) 6441ms
+   ✓ new provenance reconciles modeled and uncertain base without inventing a legacy deduction; one unit mass once  428ms
+   ✓ all four policies keep exact old mass and geometry; new ledger max check uses accounted base  1678ms
+   ✓ bounded functional plan cache is output-independent and invalidates finite room and source mutations  3803ms
+   ✓ sequential failures/reset are pure and instance-isolated; interval retries cannot spend energy twice  527ms
+
+ Test Files  4 passed (4)
+      Tests  56 passed (56)
+   Start at  18:02:53
+   Duration  108.54s (transform 1.14s, setup 0ms, collect 2.20s, tests 105.29s, environment 1ms, prepare 290ms)
+

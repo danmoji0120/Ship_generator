@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3.1
+
+ ✓ tests/systems-integrity.test.ts (6 tests | 5 skipped) 5ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  18:23:42
+   Duration  939ms (transform 494ms, setup 0ms, collect 716ms, tests 5ms, environment 0ms, prepare 56ms)
+
