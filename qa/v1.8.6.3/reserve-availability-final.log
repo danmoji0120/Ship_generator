@@ -1,0 +1,9 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/systems.test.ts (17 tests | 16 skipped) 375ms
+   ✓ finite storage drains in MJ, cannot supply infinite MW, stops empty and recharges through a real path  374ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  15:44:29
+   Duration  2.00s (transform 1.00s, setup 0ms, collect 1.41s, tests 375ms, environment 0ms, prepare 57ms)

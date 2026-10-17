@@ -1,0 +1,38 @@
+[
+  {
+    "file": "src/systems/types.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/systems/registry.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/systems/build.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/systems/evaluate.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/systems/validate.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/systems/query.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/rendering/systems.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "src/ui/systems.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  },
+  {
+    "file": "tests/systems.test.ts",
+    "identicalEmittedJavaScriptSyntaxTree": true
+  }
+]

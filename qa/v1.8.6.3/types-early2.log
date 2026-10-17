@@ -1,0 +1,6 @@
+src/systems/build.ts(16,43): error TS2551: Property 'placements' does not exist on type 'ExteriorDetailPlan'. Did you mean 'kitPlacements'?
+src/systems/build.ts(16,61): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/systems/build.ts(16,91): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/systems/validate.ts(17,132): error TS2551: Property 'placements' does not exist on type 'ExteriorDetailPlan'. Did you mean 'kitPlacements'?
+src/systems/validate.ts(17,150): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/systems/validate.ts(17,180): error TS7006: Parameter 'e' implicitly has an 'any' type.

@@ -1,0 +1,176 @@
+{
+  "rows": [],
+  "memory": [
+    {
+      "cycle": 0,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 31224368
+    },
+    {
+      "cycle": 1,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 80954384
+    },
+    {
+      "cycle": 2,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 31686808
+    },
+    {
+      "cycle": 3,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 81267248
+    },
+    {
+      "cycle": 4,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 31943500
+    },
+    {
+      "cycle": 5,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 81413856
+    }
+  ],
+  "disposed": {
+    "blueprintReleased": true,
+    "shipReleased": true,
+    "sceneChildren": 0,
+    "geometryCount": 0,
+    "textureCount": 0
+  },
+  "errors": [],
+  "method": "Same seed/order fixed Node fixtures in actual old/new ShipViewer; pixel comparison excludes UI/version labels. Separate Production browser script covers native generation."
+}

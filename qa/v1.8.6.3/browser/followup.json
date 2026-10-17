@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Internal Systems accurate current legend",
+    "Power Network accurate current legend",
+    "Control Network accurate current legend",
+    "System Redundancy accurate current legend",
+    "Equipment Mass accurate current legend",
+    "Production click selects real focused equipment mesh",
+    "Actual finite equipment layer reported in Interior Ray Inspector",
+    "No followup console errors"
+  ],
+  "errors": [],
+  "scope": "Label correction and separate finite equipment occupancy/query UI. Eight full native generations retained in report.json; not repeated for label-only correction."
+}

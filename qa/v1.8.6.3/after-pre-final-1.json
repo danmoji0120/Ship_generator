@@ -1,0 +1,347 @@
+{
+  "rows": [
+    {
+      "stage": "COLD",
+      "ms": 8760.216552999998,
+      "profile": {
+        "totalMs": 8759.925775,
+        "stages": {
+          "Procurement hull": {
+            "ms": 15.621892000000003,
+            "calls": 1
+          },
+          "Procurement structural armor": {
+            "ms": 13.806893999999986,
+            "calls": 1
+          },
+          "Procurement armor coverage": {
+            "ms": 30.204626999999988,
+            "calls": 1
+          },
+          "Procurement core systems": {
+            "ms": 20.66493299999999,
+            "calls": 1
+          },
+          "Procurement exterior details": {
+            "ms": 225.134502,
+            "calls": 1
+          },
+          "Procurement meso": {
+            "ms": 767.014711,
+            "calls": 1
+          },
+          "Structural cache miss": {
+            "ms": 0,
+            "calls": 1
+          },
+          "Structural joints": {
+            "ms": 6.630435000000034,
+            "calls": 1
+          },
+          "Structural graph construction": {
+            "ms": 0.7221999999999298,
+            "calls": 1
+          },
+          "Structural material union": {
+            "ms": 37.494978000000174,
+            "calls": 1
+          },
+          "Structural generation": {
+            "ms": 69.80631400000016,
+            "calls": 1
+          },
+          "Cache key": {
+            "ms": 1.2621149999999943,
+            "calls": 1
+          },
+          "Source geometry": {
+            "ms": 37.13041700000008,
+            "calls": 1
+          },
+          "Design policy": {
+            "ms": 1.573464999999942,
+            "calls": 2
+          },
+          "Outer area union": {
+            "ms": 138.008400000007,
+            "calls": 2364
+          },
+          "Layer integration": {
+            "ms": 66.99214300001768,
+            "calls": 9575
+          },
+          "ARMOR physical construction": {
+            "ms": 1580.7245100000007,
+            "calls": 49
+          },
+          "HULL physical construction": {
+            "ms": 218.9961290000001,
+            "calls": 1
+          },
+          "Mass ledger": {
+            "ms": 0.49398599999994985,
+            "calls": 1
+          },
+          "Cache store": {
+            "ms": 110.50214899999992,
+            "calls": 1
+          },
+          "Procurement physical build": {
+            "ms": 2066.0094499999996,
+            "calls": 1
+          },
+          "Hull support graph and joints": {
+            "ms": 12.541383000000224,
+            "calls": 1
+          },
+          "Final structural connectivity": {
+            "ms": 0.2762760000000526,
+            "calls": 1
+          },
+          "Hull skin support ties": {
+            "ms": 80.71364400000039,
+            "calls": 1
+          },
+          "Structural skin integration": {
+            "ms": 291.3318320000003,
+            "calls": 1
+          },
+          "Interior cache miss": {
+            "ms": 0,
+            "calls": 1
+          },
+          "Interior exterior boundary audit": {
+            "ms": 92.889275,
+            "calls": 1
+          },
+          "Interior volume accounting": {
+            "ms": 456.5851370000005,
+            "calls": 3
+          },
+          "Interior solid exclusion": {
+            "ms": 543.7606109999997,
+            "calls": 3
+          },
+          "Interior void connectivity": {
+            "ms": 133.24173900000005,
+            "calls": 3
+          },
+          "Interior residual classification": {
+            "ms": 112.71041200000036,
+            "calls": 3
+          },
+          "Interior bulkhead and openings": {
+            "ms": 43.566203000000314,
+            "calls": 2
+          },
+          "Interior extraction and partition": {
+            "ms": 1511.0721889999995,
+            "calls": 1
+          },
+          "Interior module interfaces": {
+            "ms": 0.28687300000001414,
+            "calls": 1
+          },
+          "Interior graph construction": {
+            "ms": 0.15727699999933975,
+            "calls": 1
+          },
+          "Interior isolation analysis": {
+            "ms": 0.44576299999971525,
+            "calls": 1
+          },
+          "Interior mass accounting": {
+            "ms": 0.04177299999992101,
+            "calls": 1
+          },
+          "Interior total": {
+            "ms": 1752.9164719999999,
+            "calls": 1
+          },
+          "Functional query preparation": {
+            "ms": 416.74713299999985,
+            "calls": 1
+          },
+          "Functional protection query preparation": {
+            "ms": 446.50426100000004,
+            "calls": 1
+          },
+          "Functional placement": {
+            "ms": 15.249918999999863,
+            "calls": 1
+          },
+          "Functional network construction": {
+            "ms": 0.4358069999998406,
+            "calls": 1
+          },
+          "Functional capability evaluation": {
+            "ms": 1.1606910000000425,
+            "calls": 1
+          },
+          "Functional systems": {
+            "ms": 880.6919689999995,
+            "calls": 1
+          },
+          "Procurement requirement verification": {
+            "ms": 1.0909369999999399,
+            "calls": 1
+          },
+          "Interior geometry validation": {
+            "ms": 1503.442414000001,
+            "calls": 1
+          },
+          "Procurement final validation": {
+            "ms": 2406.853019,
+            "calls": 1
+          }
+        },
+        "cache": {
+          "hits": 0,
+          "misses": 1
+        }
+      },
+      "memory": {
+        "rss": 737157120,
+        "heapTotal": 542027776,
+        "heapUsed": 237944712,
+        "external": 3954335,
+        "arrayBuffers": 144091
+      },
+      "maxRSS": 788037632
+    },
+    {
+      "stage": "WARM_HIT",
+      "ms": 2962.3179980000004,
+      "profile": {
+        "totalMs": 2962.283837000001,
+        "stages": {
+          "Procurement hull": {
+            "ms": 5.200847000000067,
+            "calls": 1
+          },
+          "Procurement structural armor": {
+            "ms": 8.687519000000975,
+            "calls": 1
+          },
+          "Procurement armor coverage": {
+            "ms": 17.369539999999688,
+            "calls": 1
+          },
+          "Procurement core systems": {
+            "ms": 21.78619400000025,
+            "calls": 1
+          },
+          "Procurement exterior details": {
+            "ms": 175.9307689999987,
+            "calls": 1
+          },
+          "Procurement meso": {
+            "ms": 768.7337859999989,
+            "calls": 1
+          },
+          "Structural cache hit": {
+            "ms": 0,
+            "calls": 1
+          },
+          "Structural cache clone": {
+            "ms": 6.047985999999582,
+            "calls": 1
+          },
+          "Structural generation": {
+            "ms": 6.301008000000365,
+            "calls": 1
+          },
+          "Cache key": {
+            "ms": 1.3973790000000008,
+            "calls": 1
+          },
+          "Cache clone": {
+            "ms": 147.29127300000073,
+            "calls": 1
+          },
+          "Procurement physical build": {
+            "ms": 148.7897840000005,
+            "calls": 1
+          },
+          "Structural skin integration": {
+            "ms": 96.91706199999862,
+            "calls": 1
+          },
+          "Interior cache hit": {
+            "ms": 0,
+            "calls": 1
+          },
+          "Interior total": {
+            "ms": 98.41292299999986,
+            "calls": 1
+          },
+          "Functional query preparation": {
+            "ms": 433.0141829999993,
+            "calls": 1
+          },
+          "Functional protection query preparation": {
+            "ms": 294.462587,
+            "calls": 1
+          },
+          "Functional placement": {
+            "ms": 12.91570799999863,
+            "calls": 1
+          },
+          "Functional network construction": {
+            "ms": 0.07746700000097917,
+            "calls": 1
+          },
+          "Functional capability evaluation": {
+            "ms": 0.2202419999994163,
+            "calls": 1
+          },
+          "Functional systems": {
+            "ms": 741.0474049999993,
+            "calls": 1
+          },
+          "Procurement requirement verification": {
+            "ms": 0.3502279999993334,
+            "calls": 1
+          },
+          "Interior validation cache hit": {
+            "ms": 0,
+            "calls": 1
+          },
+          "Interior geometry validation": {
+            "ms": 145.48279399999956,
+            "calls": 1
+          },
+          "Procurement final validation": {
+            "ms": 680.1573399999997,
+            "calls": 1
+          }
+        },
+        "cache": {
+          "hits": 1,
+          "misses": 0
+        }
+      },
+      "memory": {
+        "rss": 737579008,
+        "heapTotal": 485687296,
+        "heapUsed": 237191632,
+        "external": 3953899,
+        "arrayBuffers": 143615
+      },
+      "maxRSS": 817590272
+    }
+  ],
+  "importMs": 27.045950999999995,
+  "evalMs": 0.02647046000000046,
+  "failMs": 0.020807576999999584,
+  "peakRssBytes": 817590272,
+  "functionalValidationCacheEstimatedBytes": 42954444,
+  "equipmentCount": 7,
+  "powerEdges": 6,
+  "controlEdges": 4,
+  "stateBytes": 246,
+  "planEstimatedUtf16Bytes": 53992,
+  "node": "v24.19.0",
+  "cpuQuota": "200000 100000\n",
+  "memoryLimit": "8589934592\n"
+}

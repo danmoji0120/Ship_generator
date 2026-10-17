@@ -1,0 +1,10 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/systems.test.ts (17 tests | 12 skipped) 4105ms
+   ✓ cyclic and alternate power routes respect generator, bus and edge capacities; deterministic load priority  384ms
+   ✓ removed edges, degraded operation and zero-power specification are evaluated; ghost refs fail validation  2938ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 12 skipped (17)
+   Start at  15:39:13
+   Duration  5.53s (transform 864ms, setup 0ms, collect 1.21s, tests 4.11s, environment 0ms, prepare 53ms)

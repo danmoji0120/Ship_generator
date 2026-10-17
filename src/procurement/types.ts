@@ -63,6 +63,7 @@ export interface ProcurementDelivery {
     }[];
     cost?: {
         model: 'MATERIAL_AND_FABRICATION_INDEX_V1'|'MATERIAL_FRAME_AND_FABRICATION_INDEX_V2'|'MATERIAL_FRAME_INTERIOR_INDEX_V3';
+        functionalEquipment?:number;
         interiorMaterial?:number;
         interiorFabrication?:number;
         structuralMaterial?:number;

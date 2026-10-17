@@ -1,0 +1,3094 @@
+[
+  {
+    "id": "BALANCED",
+    "ms": 1063.2088629999998,
+    "count": 7,
+    "massKg": 24900,
+    "totalBaseMassKg": 628128484.6566122,
+    "cost": 807769439.9341878,
+    "compartments": [
+      "comp/citadel/0",
+      "comp/citadel/1",
+      "comp/citadel/2"
+    ],
+    "hosts": [
+      "citadel"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 120,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 12253.523562065313,
+    "remainingEstimateKg": 245822300,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "ARMOR",
+    "ms": 928.3078270000001,
+    "count": 7,
+    "massKg": 24900,
+    "totalBaseMassKg": 1341758352.7946997,
+    "cost": 3368547418.7807765,
+    "compartments": [
+      "comp/citadel/2",
+      "comp/citadel/0"
+    ],
+    "hosts": [
+      "citadel"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 120,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 14515.367282745676,
+    "remainingEstimateKg": 417886000,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "MOBILITY",
+    "ms": 963.1392040000001,
+    "count": 7,
+    "massKg": 17928,
+    "totalBaseMassKg": 508435429.29735446,
+    "cost": 815968291.0189247,
+    "compartments": [
+      "comp/citadel/0",
+      "comp/citadel/1"
+    ],
+    "hosts": [
+      "citadel"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 120,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 7185.454552912923,
+    "remainingEstimateKg": 242002400,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "ENDURANCE",
+    "ms": 1263.2462429999996,
+    "count": 16,
+    "massKg": 55800,
+    "totalBaseMassKg": 642885507.9324809,
+    "cost": 971112136.1381963,
+    "compartments": [
+      "comp/citadel/0",
+      "comp/citadel/1",
+      "comp/citadel/2",
+      "comp/citadel/5",
+      "comp/citadel/3",
+      "comp/citadel/4"
+    ],
+    "hosts": [
+      "citadel"
+    ],
+    "powerEdges": 28,
+    "controlEdges": 16,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 20243.619973270528,
+    "remainingEstimateKg": 263230300,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/3",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/4",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/ENERGY_STORAGE",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/ENERGY_STORAGE",
+        "compartmentId": "comp/citadel/5",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "ECONOMY",
+    "ms": 771.359011999999,
+    "count": 7,
+    "massKg": 24900,
+    "totalBaseMassKg": 743563151.1238751,
+    "cost": 510567405.9702094,
+    "compartments": [
+      "comp/citadel/0",
+      "comp/citadel/1"
+    ],
+    "hosts": [
+      "citadel"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 80,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 7965.529619662096,
+    "remainingEstimateKg": 245822300,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 80,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 80,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 80,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 80,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 80,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 80,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "BLOCK_ASSEMBLY",
+    "ms": 1974.314171,
+    "count": 14,
+    "massKg": 49800,
+    "totalBaseMassKg": 1003119674.4130862,
+    "cost": 716463860.5128533,
+    "compartments": [
+      "comp/combat-core/0",
+      "comp/combat-core/1",
+      "comp/drive-block/0",
+      "comp/drive-block/1",
+      "comp/magazine--1/0",
+      "comp/magazine--1/1",
+      "comp/magazine-1/0"
+    ],
+    "hosts": [
+      "combat-core",
+      "drive-block",
+      "magazine--1",
+      "magazine-1"
+    ],
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 18102.814023072795,
+    "remainingEstimateKg": 185551200,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0.4444444444444444,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/combat-core/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/combat-core/1",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/drive-block/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/drive-block/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/magazine--1/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/magazine--1/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/magazine-1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/drive-block/1",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/magazine-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/combat-core/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/combat-core/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/drive-block/1",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/drive-block/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/drive-block/1",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "SPINE_AND_MODULES",
+    "ms": 1739.58482,
+    "count": 7,
+    "massKg": 24900,
+    "totalBaseMassKg": 247344557.1958718,
+    "cost": 334929763.99931574,
+    "compartments": [
+      "comp/breech--1/0",
+      "comp/breech--1/1",
+      "comp/breech-1/0",
+      "comp/drive-1/0",
+      "comp/breech-1/1",
+      "comp/drive--1/0"
+    ],
+    "hosts": [
+      "breech--1",
+      "breech-1",
+      "drive-1",
+      "drive--1"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 120,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 7648.214588420307,
+    "remainingEstimateKg": 14747500,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/breech--1/1",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/breech-1/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/drive-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/breech-1/1",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/drive--1/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "TRUSS_POD",
+    "ms": 2384.488025999999,
+    "count": 14,
+    "massKg": 49800,
+    "totalBaseMassKg": 240578662.70754644,
+    "cost": 373607360.97772944,
+    "compartments": [
+      "comp/engine-pod--1/0",
+      "comp/engine-pod--1/1",
+      "comp/engine-pod-1/0",
+      "comp/pressure-core/0",
+      "comp/pressure-core/1",
+      "comp/sensor-forebody/0",
+      "comp/weapon-pod-1/0",
+      "comp/weapon-pod--1/0"
+    ],
+    "hosts": [
+      "engine-pod--1",
+      "engine-pod-1",
+      "pressure-core",
+      "sensor-forebody",
+      "weapon-pod-1",
+      "weapon-pod--1"
+    ],
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 20374.361829981404,
+    "remainingEstimateKg": 19063300,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0.5,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/engine-pod--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/engine-pod--1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/engine-pod-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/engine-pod--1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/pressure-core/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/pressure-core/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/sensor-forebody/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/weapon-pod-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/sensor-forebody/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/weapon-pod--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/weapon-pod-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/engine-pod-1/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/engine-pod--1/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/engine-pod--1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "TWIN_HULL",
+    "ms": 2547.658041999999,
+    "count": 14,
+    "massKg": 49800,
+    "totalBaseMassKg": 542575723.7397575,
+    "cost": 426824255.2392005,
+    "compartments": [
+      "comp/independent-hull--1/0",
+      "comp/independent-hull-1/2",
+      "comp/independent-hull-1/1"
+    ],
+    "hosts": [
+      "independent-hull--1",
+      "independent-hull-1"
+    ],
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 29568.572100032245,
+    "remainingEstimateKg": 51287500,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0.5,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/independent-hull--1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/independent-hull-1/2",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/independent-hull-1/2",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/independent-hull-1/2",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/independent-hull-1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/independent-hull-1/2",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/independent-hull-1/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/independent-hull-1/2",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "CORE_AND_NACELLES",
+    "ms": 2963.7686319999993,
+    "count": 7,
+    "massKg": 24900,
+    "totalBaseMassKg": 342377307.451026,
+    "cost": 417330378.2090618,
+    "compartments": [
+      "comp/command-core/0",
+      "comp/command-core/1",
+      "comp/lateral-drive--1/0",
+      "comp/vertical-drive--1/1",
+      "comp/lateral-drive--1/1",
+      "comp/lateral-drive-1/0",
+      "comp/lateral-drive-1/1"
+    ],
+    "hosts": [
+      "command-core",
+      "lateral-drive--1",
+      "vertical-drive--1",
+      "lateral-drive-1"
+    ],
+    "powerEdges": 6,
+    "controlEdges": 4,
+    "generationMW": 120,
+    "demandMW": 32,
+    "capacityMW": 100,
+    "armorPathMm": 7403.989662931096,
+    "remainingEstimateKg": 3575200,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 0,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "COMMAND_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 0,
+        "propulsion": 0,
+        "maneuver": 0,
+        "fire": 0,
+        "sensor": 0
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 8
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0,
+        "fire": 8,
+        "sensor": 8
+      },
+      "FIRE_CONTROL": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 0,
+        "sensor": 8
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 120,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 0
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/command-core/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/command-core/1",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/lateral-drive--1/0",
+        "lostFunctions": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 0,
+          "propulsion": 0,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "commandAvailability",
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/vertical-drive--1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/lateral-drive--1/1",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0
+        },
+        "singlePointOfTotalFailure": [
+          "maneuverControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/lateral-drive-1/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableFireControlChannels"
+        ]
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/lateral-drive-1/1",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "availableSensorProcessingCapacity"
+        ]
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "STACKED_BLOCKS",
+    "ms": 1342.3588569999993,
+    "count": 14,
+    "massKg": 49800,
+    "totalBaseMassKg": 226552158.71543053,
+    "cost": 284290334.7148815,
+    "compartments": [
+      "comp/armored-keel/0",
+      "comp/armored-keel/1",
+      "comp/command-deck/0",
+      "comp/magazine-deck/0"
+    ],
+    "hosts": [
+      "armored-keel",
+      "command-deck",
+      "magazine-deck"
+    ],
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 23875.09299172586,
+    "remainingEstimateKg": 56776400,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 0.5,
+        "fire": 8,
+        "sensor": 8
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0.5,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/armored-keel/1",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/command-deck/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/magazine-deck/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": [
+          "propulsionControlAvailability"
+        ]
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/armored-keel/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/command-deck/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/armored-keel/1",
+        "lostFunctions": [
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/magazine-deck/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/armored-keel/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  },
+  {
+    "id": "HYBRID",
+    "ms": 1594.3190250000043,
+    "count": 14,
+    "massKg": 49800,
+    "totalBaseMassKg": 282641275.2031888,
+    "cost": 714010448.9936496,
+    "compartments": [
+      "comp/breech--1/0",
+      "comp/breech-1/0",
+      "comp/drive--1/0",
+      "comp/drive-1/1",
+      "comp/drive-1/0"
+    ],
+    "hosts": [
+      "breech--1",
+      "breech-1",
+      "drive--1",
+      "drive-1"
+    ],
+    "powerEdges": 12,
+    "controlEdges": 8,
+    "generationMW": 240,
+    "demandMW": 64,
+    "capacityMW": 200,
+    "armorPathMm": 15555.801314154833,
+    "remainingEstimateKg": 14844500,
+    "failures": {
+      "POWER_GENERATOR": {
+        "generation": 120,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "POWER_DISTRIBUTION": {
+        "generation": 240,
+        "deficit": 32,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "COMMAND_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 0.4444444444444444,
+        "fire": 8,
+        "sensor": 8
+      },
+      "PROPULSION_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 0.5,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 16
+      },
+      "MANEUVER_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 0.4444444444444444,
+        "fire": 16,
+        "sensor": 16
+      },
+      "FIRE_CONTROL": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 8,
+        "sensor": 16
+      },
+      "SENSOR_PROCESSING": {
+        "generation": 240,
+        "deficit": 0,
+        "command": 1,
+        "propulsion": 1,
+        "maneuver": 1,
+        "fire": 16,
+        "sensor": 8
+      }
+    },
+    "analysis": [
+      {
+        "equipmentId": "system/0/POWER_GENERATOR",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/POWER_DISTRIBUTION",
+        "compartmentId": "comp/breech-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/COMMAND_CONTROL",
+        "compartmentId": "comp/drive--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/PROPULSION_CONTROL",
+        "compartmentId": "comp/drive-1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/MANEUVER_CONTROL",
+        "compartmentId": "comp/drive-1/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.4444444444444444
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/FIRE_CONTROL",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/0/SENSOR_PROCESSING",
+        "compartmentId": "comp/breech-1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_GENERATOR",
+        "compartmentId": "comp/drive-1/1",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/POWER_DISTRIBUTION",
+        "compartmentId": "comp/drive--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/COMMAND_CONTROL",
+        "compartmentId": "comp/breech-1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability",
+          "maneuverControlAvailability",
+          "availableFireControlChannels",
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/PROPULSION_CONTROL",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "propulsionControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 0.5,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/MANEUVER_CONTROL",
+        "compartmentId": "comp/breech--1/0",
+        "lostFunctions": [
+          "maneuverControlAvailability"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 0.5555555555555556
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/FIRE_CONTROL",
+        "compartmentId": "comp/drive-1/1",
+        "lostFunctions": [
+          "availableFireControlChannels"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      },
+      {
+        "equipmentId": "system/1/SENSOR_PROCESSING",
+        "compartmentId": "comp/drive--1/0",
+        "lostFunctions": [
+          "availableSensorProcessingCapacity"
+        ],
+        "remaining": {
+          "command": 1,
+          "propulsion": 1,
+          "maneuver": 1
+        },
+        "singlePointOfTotalFailure": []
+      }
+    ],
+    "preserved": true
+  }
+]

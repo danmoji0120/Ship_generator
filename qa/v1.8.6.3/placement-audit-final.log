@@ -1,0 +1,66 @@
+PASS BALANCED 1063ms 7 [ 'comp/citadel/0', 'comp/citadel/1', 'comp/citadel/2' ]
+PASS ARMOR 928ms 7 [ 'comp/citadel/2', 'comp/citadel/0' ]
+PASS MOBILITY 963ms 7 [ 'comp/citadel/0', 'comp/citadel/1' ]
+PASS ENDURANCE 1263ms 16 [
+  'comp/citadel/0',
+  'comp/citadel/1',
+  'comp/citadel/2',
+  'comp/citadel/5',
+  'comp/citadel/3',
+  'comp/citadel/4'
+]
+PASS ECONOMY 771ms 7 [ 'comp/citadel/0', 'comp/citadel/1' ]
+PASS BLOCK_ASSEMBLY 1974ms 14 [
+  'comp/combat-core/0',
+  'comp/combat-core/1',
+  'comp/drive-block/0',
+  'comp/drive-block/1',
+  'comp/magazine--1/0',
+  'comp/magazine--1/1',
+  'comp/magazine-1/0'
+]
+PASS SPINE_AND_MODULES 1740ms 7 [
+  'comp/breech--1/0',
+  'comp/breech--1/1',
+  'comp/breech-1/0',
+  'comp/drive-1/0',
+  'comp/breech-1/1',
+  'comp/drive--1/0'
+]
+PASS TRUSS_POD 2384ms 14 [
+  'comp/engine-pod--1/0',
+  'comp/engine-pod--1/1',
+  'comp/engine-pod-1/0',
+  'comp/pressure-core/0',
+  'comp/pressure-core/1',
+  'comp/sensor-forebody/0',
+  'comp/weapon-pod-1/0',
+  'comp/weapon-pod--1/0'
+]
+PASS TWIN_HULL 2548ms 14 [
+  'comp/independent-hull--1/0',
+  'comp/independent-hull-1/2',
+  'comp/independent-hull-1/1'
+]
+PASS CORE_AND_NACELLES 2964ms 7 [
+  'comp/command-core/0',
+  'comp/command-core/1',
+  'comp/lateral-drive--1/0',
+  'comp/vertical-drive--1/1',
+  'comp/lateral-drive--1/1',
+  'comp/lateral-drive-1/0',
+  'comp/lateral-drive-1/1'
+]
+PASS STACKED_BLOCKS 1342ms 14 [
+  'comp/armored-keel/0',
+  'comp/armored-keel/1',
+  'comp/command-deck/0',
+  'comp/magazine-deck/0'
+]
+PASS HYBRID 1594ms 14 [
+  'comp/breech--1/0',
+  'comp/breech-1/0',
+  'comp/drive--1/0',
+  'comp/drive-1/1',
+  'comp/drive-1/0'
+]

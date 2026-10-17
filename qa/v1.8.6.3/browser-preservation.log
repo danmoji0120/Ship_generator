@@ -1,0 +1,144 @@
+BALANCED {
+  id: 'BALANCED',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 24900,
+  expectedSystemKg: 24900,
+  massDeltaExact: true,
+  orderEqual: true
+}
+BLOCK_ASSEMBLY {
+  id: 'BLOCK_ASSEMBLY',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 49800,
+  expectedSystemKg: 49800,
+  massDeltaExact: true,
+  orderEqual: true
+}
+SPINE_AND_MODULES {
+  id: 'SPINE_AND_MODULES',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 24900,
+  expectedSystemKg: 24900,
+  massDeltaExact: true,
+  orderEqual: true
+}
+TRUSS_POD {
+  id: 'TRUSS_POD',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 49800,
+  expectedSystemKg: 49800,
+  massDeltaExact: true,
+  orderEqual: true
+}
+TWIN_HULL {
+  id: 'TWIN_HULL',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 49800,
+  expectedSystemKg: 49800,
+  massDeltaExact: true,
+  orderEqual: true
+}
+CORE_AND_NACELLES {
+  id: 'CORE_AND_NACELLES',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 24900,
+  expectedSystemKg: 24900,
+  massDeltaExact: true,
+  orderEqual: true
+}
+STACKED_BLOCKS {
+  id: 'STACKED_BLOCKS',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 49800,
+  expectedSystemKg: 49800,
+  massDeltaExact: true,
+  orderEqual: true
+}
+HYBRID {
+  id: 'HYBRID',
+  preserved: {
+    structuralVolumes: true,
+    structuralConnectors: true,
+    structuralFrame: true,
+    compartmentPlan: true,
+    engines: true,
+    prefabPlacements: true,
+    exteriorDetailPlan: true,
+    productionDesign: true,
+    skin: true
+  },
+  massDeltaKg: 49800,
+  expectedSystemKg: 49800,
+  massDeltaExact: true,
+  orderEqual: true
+}

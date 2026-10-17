@@ -1,0 +1,13 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/interior.test.ts (20 tests | 15 skipped) 38871ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  728ms
+   ✓ future system placement queries reject real frame occupancy, walls and outside-Hull candidates  773ms
+   ✓ JSON roundtrip and legacy import preserve all data without automatic interior insertion  6808ms
+   ✓ default native generation is deterministic, strict base cap rejects actual interior mass, previous contract replays exactly  28426ms
+   ✓ external free mounting ignores interior geometry and keeps interior/base design through install/delete/undo  2134ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 15 skipped (20)
+   Start at  15:24:45
+   Duration  40.23s (transform 826ms, setup 0ms, collect 1.13s, tests 38.87s, environment 0ms, prepare 64ms)

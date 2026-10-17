@@ -1,0 +1,1701 @@
+{
+  "durationMs": 880.8288020000001,
+  "plan": {
+    "schemaVersion": 1,
+    "version": "1.8.6.3",
+    "registryVersion": 1,
+    "equipment": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "type": "POWER_GENERATOR",
+        "compartmentId": "comp/citadel/0",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 46.30846232739787,
+          "y": -11.765145368696185,
+          "z": -96.36558068216081
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 3,
+          "y": 3,
+          "z": 5
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 44.80846232739787,
+              "y": -13.265145368696185,
+              "z": -98.86558068216081
+            },
+            {
+              "x": 47.80846232739787,
+              "y": -13.265145368696185,
+              "z": -98.86558068216081
+            },
+            {
+              "x": 44.80846232739787,
+              "y": -10.265145368696185,
+              "z": -98.86558068216081
+            },
+            {
+              "x": 47.80846232739787,
+              "y": -10.265145368696185,
+              "z": -98.86558068216081
+            },
+            {
+              "x": 44.80846232739787,
+              "y": -13.265145368696185,
+              "z": -93.86558068216081
+            },
+            {
+              "x": 47.80846232739787,
+              "y": -13.265145368696185,
+              "z": -93.86558068216081
+            },
+            {
+              "x": 44.80846232739787,
+              "y": -10.265145368696185,
+              "z": -93.86558068216081
+            },
+            {
+              "x": 47.80846232739787,
+              "y": -10.265145368696185,
+              "z": -93.86558068216081
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/POWER_GENERATOR/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 18000,
+        "costIndex": 8,
+        "specification": {
+          "type": "POWER_GENERATOR",
+          "sizeM": {
+            "x": 3,
+            "y": 3,
+            "z": 5
+          },
+          "massKg": 18000,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 0,
+          "capacity": 120,
+          "capacityUnit": "MW",
+          "priority": 0,
+          "costIndex": 8,
+          "description": "SF generator; fuel/cooling/heat rejection reserved for future models"
+        },
+        "supportedEquipmentRefs": [],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "type": "POWER_DISTRIBUTION",
+        "compartmentId": "comp/citadel/1",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 182.96623535356431,
+          "y": -9.23165700619594,
+          "z": -35.2387186538419
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 182.36623535356432,
+              "y": -9.98165700619594,
+              "z": -36.2387186538419
+            },
+            {
+              "x": 183.5662353535643,
+              "y": -9.98165700619594,
+              "z": -36.2387186538419
+            },
+            {
+              "x": 182.36623535356432,
+              "y": -8.48165700619594,
+              "z": -36.2387186538419
+            },
+            {
+              "x": 183.5662353535643,
+              "y": -8.48165700619594,
+              "z": -36.2387186538419
+            },
+            {
+              "x": 182.36623535356432,
+              "y": -9.98165700619594,
+              "z": -34.2387186538419
+            },
+            {
+              "x": 183.5662353535643,
+              "y": -9.98165700619594,
+              "z": -34.2387186538419
+            },
+            {
+              "x": 182.36623535356432,
+              "y": -8.48165700619594,
+              "z": -34.2387186538419
+            },
+            {
+              "x": 183.5662353535643,
+              "y": -8.48165700619594,
+              "z": -34.2387186538419
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/POWER_DISTRIBUTION/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 2200,
+        "costIndex": 4,
+        "specification": {
+          "type": "POWER_DISTRIBUTION",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 2200,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 0,
+          "capacity": 100,
+          "capacityUnit": "MW",
+          "priority": 0,
+          "costIndex": 4,
+          "description": "Finite input/output throughput; no power generation"
+        },
+        "supportedEquipmentRefs": [],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "type": "COMMAND_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 28.376660220774134,
+          "y": -11.794916951356143,
+          "z": 91.64638399478403
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 27.776660220774133,
+              "y": -12.544916951356143,
+              "z": 90.64638399478403
+            },
+            {
+              "x": 28.976660220774136,
+              "y": -12.544916951356143,
+              "z": 90.64638399478403
+            },
+            {
+              "x": 27.776660220774133,
+              "y": -11.044916951356143,
+              "z": 90.64638399478403
+            },
+            {
+              "x": 28.976660220774136,
+              "y": -11.044916951356143,
+              "z": 90.64638399478403
+            },
+            {
+              "x": 27.776660220774133,
+              "y": -12.544916951356143,
+              "z": 92.64638399478403
+            },
+            {
+              "x": 28.976660220774136,
+              "y": -12.544916951356143,
+              "z": 92.64638399478403
+            },
+            {
+              "x": 27.776660220774133,
+              "y": -11.044916951356143,
+              "z": 92.64638399478403
+            },
+            {
+              "x": 28.976660220774136,
+              "y": -11.044916951356143,
+              "z": 92.64638399478403
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/COMMAND_CONTROL/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 1000,
+        "costIndex": 5,
+        "specification": {
+          "type": "COMMAND_CONTROL",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 1000,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 2,
+          "capacity": 1,
+          "capacityUnit": "AUTHORITY",
+          "priority": 0,
+          "costIndex": 5,
+          "description": "Powered command source"
+        },
+        "supportedEquipmentRefs": [],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "type": "PROPULSION_CONTROL",
+        "compartmentId": "comp/citadel/2",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 26.576660220774134,
+          "y": -11.794916951356143,
+          "z": 86.44638399478403
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 25.976660220774132,
+              "y": -12.544916951356143,
+              "z": 85.44638399478403
+            },
+            {
+              "x": 27.176660220774135,
+              "y": -12.544916951356143,
+              "z": 85.44638399478403
+            },
+            {
+              "x": 25.976660220774132,
+              "y": -11.044916951356143,
+              "z": 85.44638399478403
+            },
+            {
+              "x": 27.176660220774135,
+              "y": -11.044916951356143,
+              "z": 85.44638399478403
+            },
+            {
+              "x": 25.976660220774132,
+              "y": -12.544916951356143,
+              "z": 87.44638399478403
+            },
+            {
+              "x": 27.176660220774135,
+              "y": -12.544916951356143,
+              "z": 87.44638399478403
+            },
+            {
+              "x": 25.976660220774132,
+              "y": -11.044916951356143,
+              "z": 87.44638399478403
+            },
+            {
+              "x": 27.176660220774135,
+              "y": -11.044916951356143,
+              "z": 87.44638399478403
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/PROPULSION_CONTROL/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 1300,
+        "costIndex": 5,
+        "specification": {
+          "type": "PROPULSION_CONTROL",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 1300,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 15,
+          "capacity": 1,
+          "capacityUnit": "AUTHORITY",
+          "priority": 1,
+          "costIndex": 5,
+          "description": "Authority for referenced existing engines; no new thrust model"
+        },
+        "supportedEquipmentRefs": [
+          "engine-0",
+          "engine-1"
+        ],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "type": "MANEUVER_CONTROL",
+        "compartmentId": "comp/citadel/0",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 44.50846232739787,
+          "y": -11.765145368696185,
+          "z": -101.56558068216081
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 43.90846232739787,
+              "y": -12.515145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 45.10846232739787,
+              "y": -12.515145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 43.90846232739787,
+              "y": -11.015145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 45.10846232739787,
+              "y": -11.015145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 43.90846232739787,
+              "y": -12.515145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 45.10846232739787,
+              "y": -12.515145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 43.90846232739787,
+              "y": -11.015145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 45.10846232739787,
+              "y": -11.015145368696185,
+              "z": -100.56558068216081
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/MANEUVER_CONTROL/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 800,
+        "costIndex": 5,
+        "specification": {
+          "type": "MANEUVER_CONTROL",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 800,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 6,
+          "capacity": 1,
+          "capacityUnit": "AUTHORITY",
+          "priority": 2,
+          "costIndex": 5,
+          "description": "Authority for existing visual RCS; not 6DOF performance"
+        },
+        "supportedEquipmentRefs": [
+          "engine-0",
+          "engine-1"
+        ],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "type": "FIRE_CONTROL",
+        "compartmentId": "comp/citadel/1",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 181.1662353535643,
+          "y": -9.23165700619594,
+          "z": -40.4387186538419
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 180.5662353535643,
+              "y": -9.98165700619594,
+              "z": -41.4387186538419
+            },
+            {
+              "x": 181.7662353535643,
+              "y": -9.98165700619594,
+              "z": -41.4387186538419
+            },
+            {
+              "x": 180.5662353535643,
+              "y": -8.48165700619594,
+              "z": -41.4387186538419
+            },
+            {
+              "x": 181.7662353535643,
+              "y": -8.48165700619594,
+              "z": -41.4387186538419
+            },
+            {
+              "x": 180.5662353535643,
+              "y": -9.98165700619594,
+              "z": -39.4387186538419
+            },
+            {
+              "x": 181.7662353535643,
+              "y": -9.98165700619594,
+              "z": -39.4387186538419
+            },
+            {
+              "x": 180.5662353535643,
+              "y": -8.48165700619594,
+              "z": -39.4387186538419
+            },
+            {
+              "x": 181.7662353535643,
+              "y": -8.48165700619594,
+              "z": -39.4387186538419
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/FIRE_CONTROL/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 900,
+        "costIndex": 6,
+        "specification": {
+          "type": "FIRE_CONTROL",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 900,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 5,
+          "capacity": 8,
+          "capacityUnit": "CHANNELS",
+          "priority": 3,
+          "costIndex": 6,
+          "description": "Channels for actual installed weapons; no automatic weapon installation"
+        },
+        "supportedEquipmentRefs": [],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "type": "SENSOR_PROCESSING",
+        "compartmentId": "comp/citadel/0",
+        "parentStructuralVolumeRef": "citadel",
+        "position": {
+          "x": 46.30846232739787,
+          "y": -11.765145368696185,
+          "z": -101.56558068216081
+        },
+        "quaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "sizeM": {
+          "x": 1.2,
+          "y": 1.5,
+          "z": 2
+        },
+        "clearanceM": 0.2,
+        "solid": {
+          "vertices": [
+            {
+              "x": 45.70846232739787,
+              "y": -12.515145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 46.90846232739787,
+              "y": -12.515145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 45.70846232739787,
+              "y": -11.015145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 46.90846232739787,
+              "y": -11.015145368696185,
+              "z": -102.56558068216081
+            },
+            {
+              "x": 45.70846232739787,
+              "y": -12.515145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 46.90846232739787,
+              "y": -12.515145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 45.70846232739787,
+              "y": -11.015145368696185,
+              "z": -100.56558068216081
+            },
+            {
+              "x": 46.90846232739787,
+              "y": -11.015145368696185,
+              "z": -100.56558068216081
+            }
+          ],
+          "indices": [
+            0,
+            2,
+            3,
+            0,
+            3,
+            1,
+            4,
+            5,
+            7,
+            4,
+            7,
+            6,
+            0,
+            1,
+            5,
+            0,
+            5,
+            4,
+            2,
+            6,
+            7,
+            2,
+            7,
+            3,
+            0,
+            4,
+            6,
+            0,
+            6,
+            2,
+            1,
+            3,
+            7,
+            1,
+            7,
+            5
+          ]
+        },
+        "geometryReference": "system/0/SENSOR_PROCESSING/OBB",
+        "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+        "massKg": 700,
+        "costIndex": 6,
+        "specification": {
+          "type": "SENSOR_PROCESSING",
+          "sizeM": {
+            "x": 1.2,
+            "y": 1.5,
+            "z": 2
+          },
+          "massKg": 700,
+          "materialId": "HIGH_STRENGTH_STRUCTURAL_STEEL",
+          "massBasis": "SPECIFICATION_DRY_MASS_NOT_HOMOGENEOUS_VOLUME",
+          "demandMW": 4,
+          "capacity": 8,
+          "capacityUnit": "CHANNELS",
+          "priority": 4,
+          "costIndex": 6,
+          "description": "Processing only; no detection range or automatic combat sensor"
+        },
+        "supportedEquipmentRefs": [],
+        "structuralReferences": [
+          "citadel/long-1-1",
+          "citadel/long-5-1",
+          "citadel/long-1-2",
+          "citadel/long-5-2",
+          "citadel/long-1-3",
+          "citadel/long-5-3",
+          "citadel/long-1-4",
+          "citadel/long-5-4",
+          "citadel/long-1-5",
+          "citadel/long-5-5",
+          "citadel/long-1-6",
+          "citadel/long-5-6",
+          "citadel/long-1-7",
+          "citadel/long-5-7",
+          "citadel/long-1-8",
+          "citadel/long-5-8",
+          "citadel/long-1-9",
+          "citadel/long-5-9",
+          "citadel/long-1-10",
+          "citadel/long-5-10",
+          "citadel/long-1-11",
+          "citadel/long-5-11",
+          "citadel/long-1-12",
+          "citadel/long-5-12",
+          "citadel/frame-0-0",
+          "citadel/frame-0-1",
+          "citadel/frame-0-2",
+          "citadel/frame-0-3",
+          "citadel/frame-0-4",
+          "citadel/frame-0-5",
+          "citadel/frame-0-6",
+          "citadel/frame-0-7",
+          "citadel/frame-4-0",
+          "citadel/frame-4-1",
+          "citadel/frame-4-2",
+          "citadel/frame-4-3",
+          "citadel/frame-4-4",
+          "citadel/frame-4-5",
+          "citadel/frame-4-6",
+          "citadel/frame-4-7",
+          "citadel/frame-8-0",
+          "citadel/frame-8-1",
+          "citadel/frame-8-2",
+          "citadel/frame-8-3",
+          "citadel/frame-8-4",
+          "citadel/frame-8-5",
+          "citadel/frame-8-6",
+          "citadel/frame-8-7",
+          "citadel/frame-12-0",
+          "citadel/frame-12-1",
+          "citadel/frame-12-2",
+          "citadel/frame-12-3",
+          "citadel/frame-12-4",
+          "citadel/frame-12-5",
+          "citadel/frame-12-6",
+          "citadel/frame-12-7",
+          "engine-support/engine-0/0",
+          "engine-support/engine-1/0",
+          "skin-tie/citadel/0/0/0",
+          "skin-tie/citadel/0/1/0",
+          "skin-tie/citadel/0/2/0",
+          "skin-tie/citadel/0/3/0",
+          "skin-tie/citadel/1/0/0",
+          "skin-tie/citadel/1/1/0",
+          "skin-tie/citadel/1/2/0",
+          "skin-tie/citadel/1/3/0",
+          "skin-tie/citadel/2/0/0",
+          "skin-tie/citadel/2/1/0",
+          "skin-tie/citadel/2/2/0",
+          "skin-tie/citadel/2/3/0",
+          "skin-tie/citadel/3/0/0",
+          "skin-tie/citadel/3/1/0",
+          "skin-tie/citadel/3/2/0",
+          "skin-tie/citadel/3/3/0"
+        ],
+        "protection": {
+          "armorSurfaceIds": [],
+          "sampledArmorPathMm": 0,
+          "method": "SIX_AXIS_FINITE_SURFACE_INTERSECTIONS_NOT_SURVIVAL_PROBABILITY"
+        },
+        "redundancyGroup": "plant/0",
+        "initialState": "OPERATIONAL"
+      }
+    ],
+    "powerNetwork": [
+      {
+        "id": "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION",
+        "from": "system/0/POWER_GENERATOR",
+        "to": "system/0/POWER_DISTRIBUTION",
+        "capacityMW": 120,
+        "compartmentRefs": [
+          "comp/citadel/0",
+          "comp/citadel/1"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL",
+        "from": "system/0/POWER_DISTRIBUTION",
+        "to": "system/0/COMMAND_CONTROL",
+        "capacityMW": 100,
+        "compartmentRefs": [
+          "comp/citadel/1",
+          "comp/citadel/2"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL",
+        "from": "system/0/POWER_DISTRIBUTION",
+        "to": "system/0/PROPULSION_CONTROL",
+        "capacityMW": 100,
+        "compartmentRefs": [
+          "comp/citadel/1",
+          "comp/citadel/2"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL",
+        "from": "system/0/POWER_DISTRIBUTION",
+        "to": "system/0/MANEUVER_CONTROL",
+        "capacityMW": 100,
+        "compartmentRefs": [
+          "comp/citadel/1",
+          "comp/citadel/0"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL",
+        "from": "system/0/POWER_DISTRIBUTION",
+        "to": "system/0/FIRE_CONTROL",
+        "capacityMW": 100,
+        "compartmentRefs": [
+          "comp/citadel/1"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING",
+        "from": "system/0/POWER_DISTRIBUTION",
+        "to": "system/0/SENSOR_PROCESSING",
+        "capacityMW": 100,
+        "compartmentRefs": [
+          "comp/citadel/1",
+          "comp/citadel/0"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      }
+    ],
+    "controlNetwork": [
+      {
+        "id": "control/system/0/COMMAND_CONTROL/system/0/PROPULSION_CONTROL",
+        "from": "system/0/COMMAND_CONTROL",
+        "to": "system/0/PROPULSION_CONTROL",
+        "compartmentRefs": [
+          "comp/citadel/2"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "control/system/0/COMMAND_CONTROL/system/0/MANEUVER_CONTROL",
+        "from": "system/0/COMMAND_CONTROL",
+        "to": "system/0/MANEUVER_CONTROL",
+        "compartmentRefs": [
+          "comp/citadel/2",
+          "comp/citadel/0"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "control/system/0/COMMAND_CONTROL/system/0/FIRE_CONTROL",
+        "from": "system/0/COMMAND_CONTROL",
+        "to": "system/0/FIRE_CONTROL",
+        "compartmentRefs": [
+          "comp/citadel/2",
+          "comp/citadel/1"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      },
+      {
+        "id": "control/system/0/COMMAND_CONTROL/system/0/SENSOR_PROCESSING",
+        "from": "system/0/COMMAND_CONTROL",
+        "to": "system/0/SENSOR_PROCESSING",
+        "compartmentRefs": [
+          "comp/citadel/2",
+          "comp/citadel/0"
+        ],
+        "routing": "LOGICAL_NOT_VERIFIED_CABLE_ROUTE"
+      }
+    ],
+    "engineRefs": [
+      "engine-0",
+      "engine-1"
+    ],
+    "maneuverRefs": [
+      "engine-0",
+      "engine-1"
+    ],
+    "architecturePolicy": "CONTINUOUS_BAY_PROTECTED_CORE",
+    "massAccounting": {
+      "equipmentKg": 24900,
+      "retiredServiceEstimateKg": 0,
+      "remainingServiceEstimateKg": 245822300,
+      "basis": "New specification masses separate from existing exterior housing estimates. Unresolved 10% service proxy has no itemized scope; retained as conservative unallocated estimate, potentially overlapping. No arbitrary deduction claimed."
+    },
+    "warnings": [
+      "Logical power/control routes, not verified physical cables. No fuel, heat, thrust, radar range or live damage simulation.",
+      "No discrete RCS identified; maneuver authority is the control interface to existing engine references, not verified torque."
+    ]
+  },
+  "capabilities": {
+    "availableElectricalPowerMW": 120,
+    "generatedPowerMW": 120,
+    "consumedElectricalPowerMW": 32,
+    "electricalPowerDeficitMW": 0,
+    "commandAvailability": 1,
+    "propulsionControlAvailability": 1,
+    "maneuverControlAvailability": 1,
+    "fireControlAvailability": 1,
+    "sensorProcessingAvailability": 1,
+    "propulsionAuthority": 1,
+    "maneuverAuthority": 1,
+    "availableFireControlChannels": 8,
+    "availableSensorProcessingCapacity": 8,
+    "activeSystemCount": 7,
+    "offlineSystemCount": 0,
+    "backupPowerRemainingMJ": 0,
+    "equipment": [
+      {
+        "id": "system/0/POWER_GENERATOR",
+        "state": "OPERATIONAL",
+        "demandMW": 0,
+        "suppliedMW": 0,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/POWER_DISTRIBUTION",
+        "state": "OPERATIONAL",
+        "demandMW": 0,
+        "suppliedMW": 0,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/COMMAND_CONTROL",
+        "state": "OPERATIONAL",
+        "demandMW": 2,
+        "suppliedMW": 2,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/PROPULSION_CONTROL",
+        "state": "OPERATIONAL",
+        "demandMW": 15,
+        "suppliedMW": 15,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/MANEUVER_CONTROL",
+        "state": "OPERATIONAL",
+        "demandMW": 6,
+        "suppliedMW": 6,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/FIRE_CONTROL",
+        "state": "OPERATIONAL",
+        "demandMW": 5,
+        "suppliedMW": 5,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      },
+      {
+        "id": "system/0/SENSOR_PROCESSING",
+        "state": "OPERATIONAL",
+        "demandMW": 4,
+        "suppliedMW": 4,
+        "powerFraction": 1,
+        "functionalFraction": 1
+      }
+    ],
+    "externalLoads": [],
+    "storageDispatchMW": {},
+    "storageChargeMW": {},
+    "edgeFlowsMW": {
+      "power/system/0/POWER_GENERATOR/system/0/POWER_DISTRIBUTION": 32,
+      "power/system/0/POWER_DISTRIBUTION/system/0/COMMAND_CONTROL": 2,
+      "power/system/0/POWER_DISTRIBUTION/system/0/PROPULSION_CONTROL": 15,
+      "power/system/0/POWER_DISTRIBUTION/system/0/MANEUVER_CONTROL": 6,
+      "power/system/0/POWER_DISTRIBUTION/system/0/FIRE_CONTROL": 5,
+      "power/system/0/POWER_DISTRIBUTION/system/0/SENSOR_PROCESSING": 4
+    },
+    "criticalFailureWarnings": []
+  }
+}

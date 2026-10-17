@@ -1,0 +1,805 @@
+{
+  "rows": [
+    {
+      "id": "BALANCED",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 29,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 300.51587464281454,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 300.51587464281454,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 300.51587464281454,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 300.51587464281454,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -424.0744725209828,
+              346.3507107685077,
+              -485.6555283802803
+            ],
+            "radius": 300.51587464281454,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 49,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -513.4029727880365,
+              421.83758428616494,
+              -588.5132221506747
+            ],
+            "radius": 332.8390107657703,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 57,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -215.9919289480341,
+              176.76227387850386,
+              -248.22744479901633
+            ],
+            "radius": 162.84049811077566,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "TRUSS_POD",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 135,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -233.04592488244577,
+              191.97387052641201,
+              -267.1852749255686
+            ],
+            "radius": 191.90730027847684,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "TWIN_HULL",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 91,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 246.28286592048,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 246.28286592048,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 246.28286592048,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 246.28286592048,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -290.91427685318536,
+              237.03908513540077,
+              -332.22128298103644
+            ],
+            "radius": 246.28286592048,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 67,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 16,
+            "triangles": 84,
+            "camera": [
+              -151.28865144263034,
+              123.70928818922985,
+              -174.13997454532202
+            ],
+            "radius": 123.0917068707726,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 29,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -246.33984236030287,
+              203.51869724208453,
+              -282.0980100006158
+            ],
+            "radius": 189.04548816602826,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    },
+    {
+      "id": "HYBRID",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 97,
+      "shots": [
+        {
+          "mode": "Internal Systems",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Power Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Control Network",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "System Redundancy",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          }
+        },
+        {
+          "mode": "Equipment Mass",
+          "diagnostics": {
+            "drawCalls": 30,
+            "triangles": 168,
+            "camera": [
+              -212.31962395403002,
+              175.303019423268,
+              -242.50567567928033
+            ],
+            "radius": 175.96826541154226,
+            "geometryFinite": true
+          }
+        }
+      ],
+      "picking": true
+    }
+  ],
+  "memory": [
+    {
+      "cycle": 0,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32681044
+    },
+    {
+      "cycle": 1,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82213072
+    },
+    {
+      "cycle": 2,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32726164
+    },
+    {
+      "cycle": 3,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82231640
+    },
+    {
+      "cycle": 4,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 16,
+        "triangles": 84,
+        "camera": [
+          -187.27347310347892,
+          152.12993011916046,
+          -216.75170498087834
+        ],
+        "radius": 300.51587464281454,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32741804
+    },
+    {
+      "cycle": 5,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 30,
+        "triangles": 168,
+        "camera": [
+          -192.02446334248947,
+          156.10262598192827,
+          -222.25053627602944
+        ],
+        "radius": 246.28286592048,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82289816
+    }
+  ],
+  "disposed": {
+    "drawCalls": 91,
+    "triangles": 19984,
+    "camera": [
+      -290.9142768531854,
+      237.0390851354008,
+      -332.22128298103644
+    ],
+    "radius": 260.3730122364334,
+    "geometryFinite": false
+  },
+  "errors": [],
+  "method": "Same seed/order fixed Node fixtures in actual old/new ShipViewer; pixel comparison excludes UI/version labels. Separate Production browser script covers native generation."
+}

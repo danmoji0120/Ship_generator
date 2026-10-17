@@ -1,0 +1,8 @@
+PASS Internal Systems accurate current legend
+PASS Power Network accurate current legend
+PASS Control Network accurate current legend
+PASS System Redundancy accurate current legend
+PASS Equipment Mass accurate current legend
+PASS Production click selects real focused equipment mesh
+PASS Actual finite equipment layer reported in Interior Ray Inspector
+PASS No followup console errors

@@ -1,0 +1,9 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/systems.test.ts (17 tests | 16 skipped) 5572ms
+   ✓ removed edges, degraded operation and zero-power specification are evaluated; ghost refs fail validation  5571ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  15:48:00
+   Duration  7.29s (transform 1.01s, setup 0ms, collect 1.44s, tests 5.57s, environment 0ms, prepare 68ms)

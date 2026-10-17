@@ -1,3 +1,5 @@
+import {SYSTEM_VIEWS,renderSystems} from './systems';
+import type{SystemInstanceState}from'../systems/types';
 import {releaseInteriorQueries} from '../interior/query';
 import {INTERIOR_VIEWS,renderInterior} from './interior';
 import type {InteriorInstanceState} from '../interior/types';
@@ -17,6 +19,9 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  onSystemSelect?:(id:string)=>void;
+  private systemState?:SystemInstanceState;
+  private systemSelection?:string;
   onInteriorSelect?:(id:string)=>void;
   private interiorSelection?:string;
   private interiorState?:InteriorInstanceState;
@@ -72,6 +77,7 @@ export class ShipViewer {
       this.setArmorProbeVisual(vec(ray.origin),vec(ray.direction),max,result.hits);this.onArmorProbe?.(result);
     });
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hits=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true);for(const hit of hits){const ranges=hit.object.userData.structuralRanges as {start:number;end:number;id:string}[]|undefined;const selected=ranges?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onStructuralSelect?.(selected.id);break;}}});
+    this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(SYSTEM_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hit=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true).find(h=>h.object.userData.systemId);if(hit)this.onSystemSelect?.(hit.object.userData.systemId);});
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(INTERIOR_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;for(const hit of this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true)){const selected=(hit.object.userData.interiorRanges as {start:number;end:number;id:string}[]|undefined)?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onInteriorSelect?.(selected.id);break;}}});
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     for(const [event,phase]of [['pointermove','move'],['pointerdown','down'],['pointerup','up']] as const)this.renderer.domElement.addEventListener(event,(e:PointerEvent)=>{
@@ -125,13 +131,13 @@ export class ShipViewer {
   show(b: AnyShipBlueprint, reset = true) {
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
-    if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);this.interiorState=undefined;this.interiorSelection=undefined;}
+    if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2)releaseInteriorQueries(this.blueprint);this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;}
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
       disposeShip(this.ship);
     }
-    this.ship = b.schemaVersion===2&&b.compartmentPlan&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode)?renderInterior(b,this.mode,this.interiorState,this.interiorOpacity,this.interiorSelection):createShip(b, this.mode,this.detailMode);
+    this.ship = b.schemaVersion===2&&b.functionalSystems&&(SYSTEM_VIEWS as readonly string[]).includes(this.mode)?renderSystems(b,this.mode,this.systemState,this.systemSelection):b.schemaVersion===2&&b.compartmentPlan&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode)?renderInterior(b,this.mode,this.interiorState,this.interiorOpacity,this.interiorSelection):createShip(b, this.mode,this.detailMode);
     setSurfacePresentation(this.ship,this.finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');
     this.scene.add(this.ship);
     // Only new stored armor opts into its contact shadows. Historical Blueprint rendering is unchanged.
@@ -149,6 +155,8 @@ export class ShipViewer {
     if(this.freeEditor&&b.schemaVersion===2)this.mountPicking=createMountPicking(b);
     if (reset) this.fit(true);
   }
+  focusSystem(id:string){if(this.blueprint?.schemaVersion!==2)return;const e=this.blueprint.functionalSystems?.equipment.find(e=>e.id===id);if(!e||!this.ship)return;const p=new THREE.Vector3(e.position.x,e.position.y,e.position.z).applyMatrix4(this.ship.matrixWorld),direction=this.camera.position.clone().sub(this.controls.target).normalize();this.controls.target.copy(p);this.camera.position.copy(p).addScaledVector(direction,Math.max(e.sizeM.x,e.sizeM.y,e.sizeM.z)*6);this.controls.minDistance=.1;this.camera.near=.05;this.camera.updateProjectionMatrix();this.controls.update();}
+  setSystemAnalysis(state?:SystemInstanceState,id?:string){this.systemState=state;this.systemSelection=id;if(this.blueprint&&(SYSTEM_VIEWS as readonly string[]).includes(this.mode))this.show(this.blueprint,false);}
   selectInterior(id:string){if(this.interiorSelection===id)return;this.interiorSelection=id;if(this.blueprint&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode))this.show(this.blueprint,false);}
   setInteriorAnalysis(state?:InteriorInstanceState,opacity=this.interiorOpacity){this.interiorState=state;this.interiorOpacity=opacity;if(this.blueprint&&(INTERIOR_VIEWS as readonly string[]).includes(this.mode))this.show(this.blueprint,false);}
   snapshot(b: AnyShipBlueprint, mode: DebugView = "Normal") {
@@ -172,6 +180,7 @@ export class ShipViewer {
   }
   setMode(mode: DebugView) {
     this.mode = mode;
+    if(!this.freeEditor&&!(SYSTEM_VIEWS as readonly string[]).includes(mode))this.controls.minDistance=this.radius*1.08;
     const plan=this.previewPlan,debug=this.previewDebug;
     if (this.blueprint) this.show(this.blueprint, false);
     if(plan)this.setEquipmentPreview(plan,debug);
@@ -278,7 +287,7 @@ export class ShipViewer {
     this.resizeObserver.disconnect();
     this.controls.dispose();
     if (this.ship) { this.scene.remove(this.ship); disposeShip(this.ship); this.ship=undefined; }
-    this.blueprint=undefined;this.mountPicking=undefined;this.interiorState=undefined;this.interiorSelection=undefined;
+    this.blueprint=undefined;this.mountPicking=undefined;this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;
     this.armorShadowLight?.shadow.dispose();this.scene.clear();
     this.renderer.dispose();
     this.renderer.domElement.remove();

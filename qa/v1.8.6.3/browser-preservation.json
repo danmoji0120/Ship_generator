@@ -1,0 +1,149 @@
+{
+  "rows": [
+    {
+      "id": "BALANCED",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 24900,
+      "expectedSystemKg": 24900,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 49800,
+      "expectedSystemKg": 49800,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 24900,
+      "expectedSystemKg": 24900,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "TRUSS_POD",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 49800,
+      "expectedSystemKg": 49800,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "TWIN_HULL",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 49800,
+      "expectedSystemKg": 49800,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 24900,
+      "expectedSystemKg": 24900,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 49800,
+      "expectedSystemKg": 49800,
+      "massDeltaExact": true,
+      "orderEqual": true
+    },
+    {
+      "id": "HYBRID",
+      "preserved": {
+        "structuralVolumes": true,
+        "structuralConnectors": true,
+        "structuralFrame": true,
+        "compartmentPlan": true,
+        "engines": true,
+        "prefabPlacements": true,
+        "exteriorDetailPlan": true,
+        "productionDesign": true,
+        "skin": true
+      },
+      "massDeltaKg": 49800,
+      "expectedSystemKg": 49800,
+      "massDeltaExact": true,
+      "orderEqual": true
+    }
+  ],
+  "note": "Archived .2.1 actual Production Chromium exports versus .3 actual Production Chromium exports, same orders. Cross-Node comparisons are separate."
+}

@@ -200,14 +200,15 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     unresolvedMassEstimateKg = legacy * 0.1,
     mounted = mountedMassComponents(b),
     playerMountedEquipmentMassEstimateKg = mounted.equipmentKg+mounted.platformKg;
+  const functionalEquipmentMassKg=b.functionalSystems?.equipment.reduce((n,e)=>n+e.massKg,0)??0;
   const totalEstimatedDryMassKg =
     hullShellMassKg +
     armorMassKg +
     structuralMassEstimateKg + actualFrameMassKg + actualStructuralConnectorMassKg + actualBulkheadMassKg + actualClosureMassKg +
-    coreEquipmentMassEstimateKg +
+    coreEquipmentMassEstimateKg + functionalEquipmentMassKg +
     unresolvedMassEstimateKg +
     playerMountedEquipmentMassEstimateKg;
-  const baseEstimatedDryMassKg=hullShellMassKg+armorMassKg+structuralMassEstimateKg+actualFrameMassKg+actualStructuralConnectorMassKg+actualBulkheadMassKg+actualClosureMassKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
+  const baseEstimatedDryMassKg=functionalEquipmentMassKg+hullShellMassKg+armorMassKg+structuralMassEstimateKg+actualFrameMassKg+actualStructuralConnectorMassKg+actualBulkheadMassKg+actualClosureMassKg+coreEquipmentMassEstimateKg+unresolvedMassEstimateKg;
   const ledger:NonNullable<PhysicalMass['ledger']>={version:1,entries:[
    {component:'HULL_SHELL',massKg:hullShellMassKg,source:'GEOMETRY_DERIVED',basis:'Finite shell material volumes × constituent kg/m³'},
    {component:'ARMOR',massKg:armorMassKg,source:'GEOMETRY_DERIVED',basis:'Sum of finite layer volumes × constituent kg/m³; rendered housings not counted again'},
@@ -217,13 +218,15 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
    ]:[]),
    ...(interior?[{component:'BULKHEAD' as const,massKg:actualBulkheadMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Finite boundary material minus actual occupied stock and apertures'},{component:'DOOR_HATCH' as const,massKg:actualClosureMassKg,source:'GEOMETRY_DERIVED' as const,basis:'Real closure material in its sealed default position, no mass assigned to empty apertures'}]:[]),
    {component:'STRUCTURE',massKg:structuralMassEstimateKg,source:'LEGACY_ESTIMATE',basis:frame?frame.massAccounting.scope:'Unresolved frame proxy: 18% of legacy volume-based reference; not measured frame geometry'},
+   ...(b.functionalSystems?[{component:'FUNCTIONAL_EQUIPMENT' as const,massKg:functionalEquipmentMassKg,source:'EQUIPMENT_DEFINED' as const,basis:b.functionalSystems.massAccounting.basis}]:[]),
    {component:'CORE_EQUIPMENT',massKg:coreEquipmentMassEstimateKg,source:'ESTIMATED',basis:'Unique existing assembly-part solid volumes × 160kg/m³ representation density'},
    {component:'MOUNTED_EQUIPMENT',massKg:mounted.equipmentKg,source:'ESTIMATED',basis:'Actually installed saved equipment geometry × 160kg/m³, owned platform excluded'},
    {component:'PLATFORM',massKg:mounted.platformKg,source:'ESTIMATED',basis:'Owned platform geometry × 2800kg/m³, counted once'},
-   {component:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,source:'LEGACY_ESTIMATE',basis:'Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated'}
+   {component:'OTHER_ESTIMATED',massKg:unresolvedMassEstimateKg,source:'LEGACY_ESTIMATE',basis:b.functionalSystems?b.functionalSystems.massAccounting.basis:'Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated'}
   ],baseEstimatedDryMassKg,mountedEstimatedDryMassKg:totalEstimatedDryMassKg,targetSemantics:b.procurement?'SOFT_TARGET_WITH_OPTIONAL_MAXIMUM':'EXISTING_BASE_DESIGN_LIMIT',maximumAllowedMassKg:b.procurement?.order.maximumBaseMassKg??null,baseRemainingKg:policy.targetMassBudgetKg-baseEstimatedDryMassKg,mountedRemainingKg:policy.targetMassBudgetKg-totalEstimatedDryMassKg,baseBudgetViolation:b.procurement?baseEstimatedDryMassKg>(b.procurement.order.maximumBaseMassKg??Infinity)+1e-3:baseEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,mountedLoadoutOverTarget:totalEstimatedDryMassKg>policy.targetMassBudgetKg+1e-3,operationalConsumables:'NOT_INCLUDED'};
   return {
     ledger,
+    ...(b.functionalSystems?{functionalEquipmentMassKg}:{}),
     hullShellMassKg,
     armorMassKg,
     structuralMassEstimateKg,
@@ -248,7 +251,7 @@ export function finishPhysicalMass(b: ShipBlueprint): PhysicalMass {
     ),
     estimatedComponents: [
       ...(frame?[frame.massAccounting.scope,...frame.massAccounting.unquantified]:["Structural frame estimate: 18% of historical volume-based target; no new frame generated"]),
-      "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
+      b.functionalSystems?b.functionalSystems.massAccounting.basis:"Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
       "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
       "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment",
     ],

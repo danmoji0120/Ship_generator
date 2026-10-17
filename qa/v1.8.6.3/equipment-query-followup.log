@@ -1,0 +1,8 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/systems.test.ts (17 tests | 16 skipped) 220ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  15:35:07
+   Duration  1.62s (transform 866ms, setup 0ms, collect 1.19s, tests 220ms, environment 0ms, prepare 61ms)

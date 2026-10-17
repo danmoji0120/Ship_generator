@@ -1,0 +1,84 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 906ms
+ ✓ tests/free-mount.test.ts (18 tests) 5272ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4188ms
+ ❯ tests/systems.test.ts (17 tests | 8 failed) 53674ms
+   ✓ eight typed registry specifications: independent immutable templates and explicit game units/mass provenance 2ms
+   × BALANCED real confirmed OBBs, connected networks, mass and preserved compartments/frame 1861ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × BLOCK_ASSEMBLY real confirmed OBBs, connected networks, mass and preserved compartments/frame 3469ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × SPINE_AND_MODULES real confirmed OBBs, connected networks, mass and preserved compartments/frame 3168ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × TRUSS_POD real confirmed OBBs, connected networks, mass and preserved compartments/frame 5044ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × TWIN_HULL real confirmed OBBs, connected networks, mass and preserved compartments/frame 4964ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × CORE_AND_NACELLES real confirmed OBBs, connected networks, mass and preserved compartments/frame 5520ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × STACKED_BLOCKS real confirmed OBBs, connected networks, mass and preserved compartments/frame 2690ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   × HYBRID real confirmed OBBs, connected networks, mass and preserved compartments/frame 3150ms
+     → expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+   ✓ actual reactor/distribution/control failure propagation, reset and independent instances never mutate design  542ms
+   ✓ cyclic and alternate power routes respect generator, bus and edge capacities; deterministic load priority 222ms
+   ✓ finite storage drains in MJ, cannot supply infinite MW, stops empty and recharges through a real path 224ms
+   ✓ endurance maintains all essential functions after any individual generator/bus/command loss and records real compartment separation 225ms
+   ✓ removed edges, degraded operation and zero-power specification are evaluated; ghost refs fail validation  688ms
+   ✓ external mounting stays possible with power/control offline; mass, actual channels, legacy unknown demand and save/load survive  1193ms
+   ✓ legacy saves are not redesigned; new native generation deterministic, unarmed and hard maximum enforced  20393ms
+   ✓ finite equipment targeting returns actual entry/exit and an independent snapshot  317ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/systems.test.ts > BALANCED real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > BLOCK_ASSEMBLY real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > SPINE_AND_MODULES real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > TRUSS_POD real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > TWIN_HULL real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > CORE_AND_NACELLES real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > STACKED_BLOCKS real confirmed OBBs, connected networks, mass and preserved compartments/frame
+ FAIL  tests/systems.test.ts > HYBRID real confirmed OBBs, connected networks, mass and preserved compartments/frame
+AssertionError: expected { Object (ledger, functionalEquipmentMassKg, ...) } to deeply equal { Object (ledger, functionalEquipmentMassKg, ...) }
+
+- Expected
++ Received
+
+@@ -8,11 +8,11 @@
+    "coreEquipmentMassEstimateKg": 1538866.636032879,
+    "estimatedComponents": [
+      "Replace the old macro-frame-only 18% proxy by a complete inventory of primary frames for every StructuralVolume and every existing connector; do not retain that same proxy in parallel. Sub-resolution fittings are unquantified, not claimed massless.",
+      "Fasteners, local micro-stiffeners, weld filler and engineering margins not quantified.",
+      "Existing 10% unresolved propulsion/service equipment proxy remains; no new tanks/reactors claimed.",
+-     "Unresolved propulsion/support estimate: 10% of historical target; not simulated tank/reactor systems",
++     "New specification masses separate from existing exterior housing estimates. Unresolved 10% service proxy has no itemized scope; retained as conservative unallocated estimate, potentially overlapping. No arbitrary deduction claimed.",
+      "Core/player equipment: existing visual solid volume × 160kg/m³ average representation density; player support platform × 2800kg/m³; estimates, not load simulation",
+      "Dry mass excludes operational propellant/ammunition; future reserves are allowances, not installed equipment",
+    ],
+    "functionalEquipmentMassKg": 24900,
+    "hullShellMassKg": 59017366.73231328,
+@@ -86,11 +86,11 @@
+          "component": "PLATFORM",
+          "massKg": 0,
+          "source": "ESTIMATED",
+        },
+        {
+-         "basis": "Unresolved propulsion/support proxy: 10% of legacy reference; no tanks/reactors generated",
++         "basis": "New specification masses separate from existing exterior housing estimates. Unresolved 10% service proxy has no itemized scope; retained as conservative unallocated estimate, potentially overlapping. No arbitrary deduction claimed.",
+          "component": "OTHER_ESTIMATED",
+          "massKg": 245822300,
+          "source": "LEGACY_ESTIMATE",
+        },
+      ],
+
+ ❯ tests/systems.test.ts:18:1087
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  8 failed | 43 passed (51)
+   Start at  15:18:44
+   Duration  61.94s (transform 880ms, setup 0ms, collect 1.51s, tests 59.85s, environment 0ms, prepare 143ms)

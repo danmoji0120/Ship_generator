@@ -26,13 +26,13 @@ export function validateCompartmentPlan(b:ShipBlueprint):string[]{return timedPh
 function checkCompartmentPlan(b: ShipBlueprint): string[] {
     const p = b.compartmentPlan;
     if (!p)
-        return ['1.8.6.2','1.8.6.2.1'].includes(b.generatorVersion) ? ['Required compartment plan absent'] : [];
+        return ['1.8.6.2','1.8.6.2.1','1.8.6.3'].includes(b.generatorVersion) ? ['Required compartment plan absent'] : [];
     const input=interiorInput(b), sourceSignature = signature(input), key = JSON.stringify([p,b.physicalDesign?.mass.actualBulkheadMassKg,b.physicalDesign?.mass.actualClosureMassKg]) + input, found = cache.get(p);
     if (found?.key === key){releaseInteriorContext(b);return [...found.issues];}
     if(lastSuccessfulKey===key){releaseInteriorContext(b);recordPhysicalStage('Interior validation cache hit',0);return [];}
     const issues: string[] = [];
     try {
-        if (p.schemaVersion !== 1 || !['1.8.6.2','1.8.6.2.1'].includes(p.version) || p.version!==b.generatorVersion || p.architecture !== b.architecture.grammar || p.sourceSignature !== sourceSignature)
+        if (p.schemaVersion !== 1 || !['1.8.6.2','1.8.6.2.1','1.8.6.3'].includes(p.version) || p.version!==(b.generatorVersion==='1.8.6.3'?'1.8.6.2.1':b.generatorVersion) || p.architecture !== b.architecture.grammar || p.sourceSignature !== sourceSignature)
             throw Error('Interior source/version/geometry signature differs');
         for (const list of [p.compartments, p.bulkheads, p.boundaries, p.openings])
             if (new Set(list.map(x => x.id)).size !== list.length)

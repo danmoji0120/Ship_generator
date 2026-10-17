@@ -1,0 +1,23 @@
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.3
+
+ ✓ tests/systems.test.ts (17 tests) 53588ms
+   ✓ BALANCED real confirmed OBBs, connected networks, mass and preserved compartments/frame  1830ms
+   ✓ BLOCK_ASSEMBLY real confirmed OBBs, connected networks, mass and preserved compartments/frame  3397ms
+   ✓ SPINE_AND_MODULES real confirmed OBBs, connected networks, mass and preserved compartments/frame  3159ms
+   ✓ TRUSS_POD real confirmed OBBs, connected networks, mass and preserved compartments/frame  4739ms
+   ✓ TWIN_HULL real confirmed OBBs, connected networks, mass and preserved compartments/frame  4966ms
+   ✓ CORE_AND_NACELLES real confirmed OBBs, connected networks, mass and preserved compartments/frame  5717ms
+   ✓ STACKED_BLOCKS real confirmed OBBs, connected networks, mass and preserved compartments/frame  2682ms
+   ✓ HYBRID real confirmed OBBs, connected networks, mass and preserved compartments/frame  3109ms
+   ✓ actual reactor/distribution/control failure propagation, reset and independent instances never mutate design  544ms
+   ✓ removed edges, degraded operation and zero-power specification are evaluated; ghost refs fail validation  2861ms
+   ✓ external mounting stays possible with power/control offline; mass, actual channels, legacy unknown demand and save/load survive  1205ms
+   ✓ legacy saves are not redesigned; new native generation deterministic, unarmed and hard maximum enforced  18400ms
+ ✓ tests/free-mount.test.ts (18 tests) 5524ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4493ms
+ ✓ tests/physical-foundation.test.ts (16 tests) 853ms
+
+ Test Files  3 passed (3)
+      Tests  51 passed (51)
+   Start at  15:23:43
+   Duration  61.92s (transform 852ms, setup 0ms, collect 1.41s, tests 59.97s, environment 0ms, prepare 139ms)
