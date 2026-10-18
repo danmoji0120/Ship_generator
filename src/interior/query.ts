@@ -74,7 +74,7 @@ function buildQueries(b: ShipBlueprint) {
          }
          return {candidates,tested,search:'UP_TO_64_ACTUAL_CELL_ANCHORS_PER_CONFIRMED_COMPARTMENT',exhaustive:false as const};
         },
-        probe(origin: Vec3, direction: Vec3, maxDistance: number, state: InteriorInstanceState = createInteriorInstanceState(), transform?: ShipRigidTransform) {
+        probe(origin: Vec3, direction: Vec3, maxDistance: number, state: InteriorInstanceState = createInteriorInstanceState(), transform?: ShipRigidTransform, materialsOnly=false) {
             analyzeInterior(p, state);
             const q = transform?.quaternion, pos = transform?.position;
             if (![origin.x, origin.y, origin.z, direction.x, direction.y, direction.z, maxDistance, ...(q ? [q.x, q.y, q.z, q.w, pos!.x, pos!.y, pos!.z] : [])].every(Number.isFinite) || maxDistance <= 0 || Math.hypot(direction.x, direction.y, direction.z) < 1e-12 || q && Math.abs(Math.hypot(q.x, q.y, q.z, q.w) - 1) > 1e-6)
@@ -103,14 +103,14 @@ function buildQueries(b: ShipBlueprint) {
                             raw.push({ kind, id, materialId, thicknessMm, entryDistanceM: a, exitDistanceM: z, pathLengthM: z - a, entryPoint: world(add(o, mul(d, a))), exitPoint: world(add(o, mul(d, z))), entryNormal: hit.entryNormal && Math.abs(a - hit.entry) < 1e-7 ? worldNormal(hit.entryNormal, rotation) : null, compartmentIds: [...compartmentIds], ...(state ? { state } : {}) });
                 }
             };
-            for (const c of rooms)
+            if(!materialsOnly)for (const c of rooms)
                 push('COMPARTMENT', c.id, null, null, c.cells, [c.id]);
             for (const w of walls)
                 if (!state.disabledBulkheadIds.includes(w.id))
                     push('BULKHEAD', w.id, w.materialId, w.thicknessMm, w.cells, w.adjacentCompartmentIds);
             for (const portal of portals) {
                 const value = state.openingStates[portal.id] ?? portal.defaultState, disabled = state.disabledBulkheadIds.includes(p.boundaries.find(b => b.id === portal.boundaryReference)?.bulkheadRef ?? '');
-                push('OPENING', portal.id, null, null, portal.cells, [portal.fromCompartmentId, portal.toCompartmentId], disabled ? 'BOUNDARY_DISABLED_HYPOTHESIS' : value);
+                if(!materialsOnly)push('OPENING', portal.id, null, null, portal.cells, [portal.fromCompartmentId, portal.toCompartmentId], disabled ? 'BOUNDARY_DISABLED_HYPOTHESIS' : value);
                 if (value !== 'OPEN' && !disabled && portal.closure)
                     push('CLOSURE', portal.closure.id, portal.closure.materialId, portal.closure.thicknessMm, portal.leaf, [portal.fromCompartmentId, portal.toCompartmentId], value);
             }

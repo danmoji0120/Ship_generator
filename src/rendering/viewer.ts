@@ -1,3 +1,5 @@
+import {renderWarhead} from './warheads';
+import type{DetonationWork}from'../warheads/types';
 import {renderDamage} from './damage';
 import type {DamageInstance,ProjectileState,TargetMotion} from '../damage/types';
 import {releasePhysicalQueries} from '../physical/probe';
@@ -45,6 +47,7 @@ export class ShipViewer {
   private controls: OrbitControls;
   private ship?: THREE.Group;
   private damageOverlay?:THREE.Group;
+  private warheadOverlay?:THREE.Group;
   private damageCamera?:{position:THREE.Vector3;target:THREE.Vector3;near:number;far:number;min:number;systems?:SystemInstanceState;systemSelection?:string;interior?:InteriorInstanceState;interiorSelection?:string};
   private equipmentPreview?: THREE.Group;
   private previewPlan?: PreviewPlan;
@@ -137,7 +140,7 @@ export class ShipViewer {
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
     if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;}
-    if(this.blueprint!==b){this.setDamageVisual();this.damageCamera=undefined;}
+    if(this.blueprint!==b){this.setDamageVisual();this.setWarheadVisual();this.damageCamera=undefined;}
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -167,6 +170,7 @@ export class ShipViewer {
     if(this.damageOverlay){this.scene.remove(this.damageOverlay);disposeShip(this.damageOverlay);this.damageOverlay=undefined;}
     if(state&&motion){this.damageOverlay=renderDamage(state,p,motion);this.scene.add(this.damageOverlay);}
   }
+  setWarheadVisual(work?:DetonationWork){if(this.warheadOverlay){this.scene.remove(this.warheadOverlay);disposeShip(this.warheadOverlay);this.warheadOverlay=undefined;}if(work){this.warheadOverlay=renderWarhead(work);this.scene.add(this.warheadOverlay);}}
   setDamagePose(position={x:0,y:0,z:0},quaternion={x:0,y:0,z:0,w:1}){if(this.ship){this.ship.position.set(position.x,position.y,position.z);this.ship.quaternion.set(quaternion.x,quaternion.y,quaternion.z,quaternion.w);this.ship.updateMatrixWorld(true);}}
   focusDamagePoint(p:import('../blueprint/types').Vec3,distance=20,normal?:import('../blueprint/types').Vec3){this.controls.target.set(p.x,p.y,p.z);this.camera.position.copy(this.controls.target).add((normal?new THREE.Vector3(normal.x,normal.y,normal.z):new THREE.Vector3(-.8,.6,-1)).normalize().multiplyScalar(distance));this.camera.near=.01;this.controls.minDistance=.01;this.camera.updateProjectionMatrix();this.controls.update();}
   focusSystem(id:string){if(this.blueprint?.schemaVersion!==2)return;const e=this.blueprint.functionalSystems?.equipment.find(e=>e.id===id);if(!e||!this.ship)return;const p=new THREE.Vector3(e.position.x,e.position.y,e.position.z).applyMatrix4(this.ship.matrixWorld),direction=this.camera.position.clone().sub(this.controls.target).normalize();this.controls.target.copy(p);this.camera.position.copy(p).addScaledVector(direction,Math.max(e.sizeM.x,e.sizeM.y,e.sizeM.z)*6);this.controls.minDistance=.1;this.camera.near=.05;this.camera.updateProjectionMatrix();this.controls.update();}
@@ -297,7 +301,7 @@ export class ShipViewer {
   dispose() {
     if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();if(this.mountPicking)disposeShip(this.mountPicking);
-    this.setDamageVisual();
+    this.setDamageVisual();this.setWarheadVisual();this.damageCamera=undefined;
     this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();

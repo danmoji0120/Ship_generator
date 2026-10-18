@@ -1,0 +1,27 @@
+# Warhead laboratory contract (V1.8.6.5)
+
+This module extends the existing finite ballistic solver. It is a development laboratory, not a guided missile, interception, pressure or real explosive simulation. Presets are invented game test specifications. No explosive chemistry or certified terminal performance is implied.
+
+`beginDetonation(target, instance, event)` validates the actual source location and trigger evidence before accepting the event ID. `workDetonation(work, horizon, boundaryBudget, wallBudgetMs)` incrementally processes the next actual material entry, material exit or expiry across all active carriers. Wall budgets only yield work. `resolveDetonation` drains that same queue. The target owns one shared prepared query handle; no Blueprint copies or per-fragment query preparation occur. `cancelDetonation` explicitly leaves applied damage intact and marks unprocessed work cancelled.
+
+## Physical carriers and angular quality
+
+Fragmentation and directional presets allocate 256kg to **256 real 1kg carriers** at every quality. LOW/MEDIUM/HIGH quantize their directions to64/128/256 equal-solid-angle strata. LOW therefore has4 actual carriers per direction, MEDIUM2, HIGH1. Each carrier independently retains its dimensions, inertia and kinetic response. Multiplicity never makes a single4kg penetrator or multiplies its damage. This fixed population avoids silently discarding75% of mass/energy at LOW and avoids a weighted giant penetrator.
+
+The tradeoff is important: coincident LOW paths concentrate physical repeated hits. Damage and holes can differ materially from HIGH. This is angular quadrature, not guaranteed convergence, an unbiased estimator or a high fidelity fragmentation distribution. All256 physical carriers still require propagation, so CPU cost is not expected to scale4:1. The QA report measures these differences over three seeds. HIGH is the laboratory default after LOW produced large measured footprint differences; LOW/MEDIUM are explicit lower angular fidelity options. Assigned ejection energy is fixed; a scalar ejection-speed adjustment accounts for inherited target-relative source kinetic energy without double counting it. Momentum/recoil and realistic casing breakup are not solved. Body mass not assigned to carriers is explicitly unmodeled.
+
+## Geometry, chronology and damage
+
+All paths use existing finite Armor/Hull/Bulkhead/Closure/Frame/Equipment volumes and existing holes. Raw immutable contact candidates may be cached per job; current physical damage is applied separately. Door states are in the cache key. The laboratory forbids opening changes during a pending burst. Shared material response is evaluated at entry and committed at the actual material exit/stop, ordered across carriers, with stable fragment-ID ties. Earlier completed holes can affect later entries. Coupled evolving fracture while a carrier is already inside material is outside the model. Finite centerline swept queries do not simulate a finite-width projectile grazing beyond its centreline.
+
+Void classification uses confirmed finite compartments, actual structure containment and small finite material probes, never a hull bounding box as proof of a room. Equipment/frame/leaf centres are not void. Unspecified SPINE remains UNRESOLVED. An unresolved path stops without inventing downstream damage; other independent paths continue and produce PARTIAL results.
+
+A future adapter must supply an actual missile position/velocity and trigger evidence. LAB_MANUAL is visibly manual. PROXIMITY uses a named existing structural reference and observed clock; TIMED validates elapsed fuse time. IMPACT requires a recorded real material contact. An already-applied kinetic impact link transfers **zero additional energy**. The current UI restricts that link to KINETIC_IMPACT. There is no guided launch, real proximity seeker, blast pressure, thermal flash or atmospheric blast wave.
+
+## Secondary debris and resource ownership
+
+Secondary carriers are limited **eroded primary-projectile debris**, not calibrated armor spall. Only an actual penetrated brittle material contact can emit them. Their mass is taken from actual parent erosion, and kinetic energy is reallocated from consumed parent energy before local deposition. They retain the actual source exit position, layer, owner, parent contact and budget reference. Generation1, maximum16. Suppressed secondary emissions are counted. No recursive explosion or invisible radius damage occurs.
+
+Limits are explicit:256 primary carriers,16 secondary,512 displayed contact records,16 history records,128 accepted event IDs before reset,1024 raw cached rays, and the existing4096 persistent local-damage regions. Display truncation does not restore armor. Reaching physical state capacity returns UNRESOLVED for remaining affected paths. Completed/cancelled jobs clear their raw cache. Runtime handles, query structures and timings are outside Blueprint. Optional instance history is created only when a detonation is accepted; old kinetic instance JSON remains unchanged.
+
+`renderWarhead` owns its batched marker/arrow/trajectory resources. Turning debug off, replacing the ship or disposing the viewer removes them. Design mass and material registries are never mutated by this module. Mounted equipment may reference an explicit `MountedWarheadBinding`; existing missile equipment is not silently assigned one of the test presets.

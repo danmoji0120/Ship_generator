@@ -11,13 +11,13 @@ export const damageCapabilities=(b:ShipBlueprint,s:DamageInstance)=>b.functional
 export const structuralDamageAnalysis=(b:ShipBlueprint,s:DamageInstance)=>b.structuralFrame?analyzeStructuralInstance(b.structuralFrame,s.structure):undefined;
 const dist=(a:Vec3,b:Vec3)=>Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);
 export function localLoss(s:DamageInstance,c:Contact,p:Vec3){return s.local.filter(r=>r.ownerId===c.ownerId&&r.layerId===c.layerId&&!r.channel&&dist(r.position,p)<r.radiusM).reduce((n,r)=>n+r.materialLossM,0);}
-export function commitDamage(b:ShipBlueprint,s:DamageInstance,c:Contact,r:MaterialResult,entry:Vec3,exit:Vec3,event:DamageEvent){
+export function commitDamage(b:ShipBlueprint,s:DamageInstance,c:Contact,r:MaterialResult,entry:Vec3,exit:Vec3,event:DamageEvent,options?:{deferCapabilities?:boolean}){
  if(r.outcome==='UNRESOLVED')return;
- const before=damageCapabilities(b,s),radius=r.damageRadiusM,normal=c.normal,helper=Math.abs(normal.y)<.9?{x:0,y:1,z:0}:{x:1,y:0,z:0},cross={x:normal.y*helper.z-normal.z*helper.y,y:normal.z*helper.x-normal.x*helper.z,z:normal.x*helper.y-normal.y*helper.x},cl=Math.hypot(cross.x,cross.y,cross.z),u=mul(cross,1/Math.max(cl,1e-9)),v={x:normal.y*u.z-normal.z*u.y,y:normal.z*u.x-normal.x*u.z,z:normal.x*u.y-normal.y*u.x};
- const region:LocalDamage={id:s.instanceId+'/damage/'+s.nextDamageId++,ownerId:c.ownerId,layerId:c.layerId,kind:c.kind,position:{...entry},normal:{...normal},surfaceCoordinates:{u:dot(entry,u),v:dot(entry,v)},radiusM:radius,materialLossM:r.lossM,plasticDeformationM:r.lossM*(1-r.fracture),fracture:r.fracture,delamination:r.fracture*.3,severity:Math.min(1,(r.incidentJ-r.residualJ)/Math.max(1,r.incidentJ)),channel:r.outcome==='PENETRATED'?{entry:{...entry},exit:{...exit},radiusM:radius}:null,shotId:event.shotId};
+ const before=options?.deferCapabilities?undefined:damageCapabilities(b,s),depositedJ=event.localEnergyDepositJ??(r.incidentJ-r.residualJ),radius=r.damageRadiusM,normal=c.normal,helper=Math.abs(normal.y)<.9?{x:0,y:1,z:0}:{x:1,y:0,z:0},cross={x:normal.y*helper.z-normal.z*helper.y,y:normal.z*helper.x-normal.x*helper.z,z:normal.x*helper.y-normal.y*helper.x},cl=Math.hypot(cross.x,cross.y,cross.z),u=mul(cross,1/Math.max(cl,1e-9)),v={x:normal.y*u.z-normal.z*u.y,y:normal.z*u.x-normal.x*u.z,z:normal.x*u.y-normal.y*u.x};
+ const region:LocalDamage={id:s.instanceId+'/damage/'+s.nextDamageId++,ownerId:c.ownerId,layerId:c.layerId,kind:c.kind,position:{...entry},normal:{...normal},surfaceCoordinates:{u:dot(entry,u),v:dot(entry,v)},radiusM:radius,materialLossM:r.lossM,plasticDeformationM:r.lossM*(1-r.fracture),fracture:r.fracture,delamination:r.fracture*.3,severity:Math.min(1,depositedJ/Math.max(1,r.incidentJ)),channel:r.outcome==='PENETRATED'?{entry:{...entry},exit:{...exit},radiusM:radius}:null,shotId:event.shotId};
  s.local.push(region);s.revision++;event.damageId=region.id;
  if(c.kind==='EQUIPMENT'){
-  const loss=Math.min(1,(r.incidentJ-r.residualJ)*.3/Math.max(1,(c.equipmentMassKg??1)*750)),old=s.equipmentIntegrity[c.ownerId]??1,next=Math.max(0,old-loss);s.equipmentIntegrity[c.ownerId]=next;
+  const loss=Math.min(1,depositedJ*.3/Math.max(1,(c.equipmentMassKg??1)*750)),old=s.equipmentIntegrity[c.ownerId]??1,next=Math.max(0,old-loss);s.equipmentIntegrity[c.ownerId]=next;
   const oldState=s.systems.equipmentStates[c.ownerId]??'OPERATIONAL',state=next<=.05?'DESTROYED':next<=.3?'OFFLINE':next<=.8?'DEGRADED':'OPERATIONAL';
   // Damage is monotone; an already disabled device never returns to service implicitly.
   const order={OPERATIONAL:0,DEGRADED:1,OFFLINE:2,DESTROYED:3};if(order[state]>order[oldState]){s.systems.equipmentStates[c.ownerId]=state;event.equipmentStateChange={from:oldState,to:state};}
@@ -34,7 +34,7 @@ export function commitDamage(b:ShipBlueprint,s:DamageInstance,c:Contact,r:Materi
   }
  }
 
- const after=damageCapabilities(b,s);if(before&&after)event.capabilityDelta={powerMW:after.availableElectricalPowerMW-before.availableElectricalPowerMW,propulsion:after.propulsionAuthority-before.propulsionAuthority,maneuver:after.maneuverAuthority-before.maneuverAuthority,fire:after.availableFireControlChannels-before.availableFireControlChannels,sensor:after.availableSensorProcessingCapacity-before.availableSensorProcessingCapacity};
+ const after=options?.deferCapabilities?undefined:damageCapabilities(b,s);if(before&&after)event.capabilityDelta={powerMW:after.availableElectricalPowerMW-before.availableElectricalPowerMW,propulsion:after.propulsionAuthority-before.propulsionAuthority,maneuver:after.maneuverAuthority-before.maneuverAuthority,fire:after.availableFireControlChannels-before.availableFireControlChannels,sensor:after.availableSensorProcessingCapacity-before.availableSensorProcessingCapacity};
 }
 export function appendEvent(s:DamageInstance,event:DamageEvent){s.events.push(event);if(s.events.length>DAMAGE_LIMITS.history)s.events.shift();}
 
