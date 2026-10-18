@@ -1,0 +1,111 @@
+{
+  "rows": [
+    {
+      "phase": "FIRST_VISIBLE_BURST",
+      "gcOutsideMeasuredBurstMs": 0,
+      "wallMs": 3975,
+      "work": {
+        "initializationMs": 9.800000000745058,
+        "queryMs": 270.09999999403954,
+        "materialMs": 0,
+        "damageMs": 0,
+        "capabilityMs": 2.599999999627471,
+        "workMs": 349.4999999962747,
+        "boundaries": 272,
+        "queryCalls": 130,
+        "rawCacheHits": 130
+      },
+      "longTasksMs": [
+        89,
+        222,
+        78,
+        108,
+        170,
+        54,
+        112,
+        226,
+        113,
+        59,
+        101,
+        85,
+        105,
+        175,
+        102,
+        231,
+        148,
+        125,
+        129,
+        147,
+        128,
+        149,
+        133,
+        108,
+        117,
+        140,
+        99
+      ],
+      "memory": {
+        "usedSize": 225704084,
+        "totalSize": 480985088,
+        "embedderHeapUsedSize": 8812448,
+        "backingStorageSize": 7468103
+      }
+    },
+    {
+      "phase": "WARM_SAME_TARGET_AFTER_RESET_GC",
+      "gcOutsideMeasuredBurstMs": 391,
+      "wallMs": 3677,
+      "work": {
+        "initializationMs": 4.799999998882413,
+        "queryMs": 236.60000000149012,
+        "materialMs": 0,
+        "damageMs": 0,
+        "capabilityMs": 6.199999997392297,
+        "workMs": 307.1000000014901,
+        "boundaries": 272,
+        "queryCalls": 130,
+        "rawCacheHits": 130
+      },
+      "longTasksMs": [
+        300,
+        98,
+        110,
+        128,
+        83,
+        173,
+        106,
+        91,
+        130,
+        141,
+        106,
+        131,
+        99,
+        89,
+        65,
+        171,
+        184,
+        124,
+        126,
+        152,
+        86,
+        102,
+        137,
+        170,
+        81,
+        113
+      ],
+      "memory": {
+        "usedSize": 224637400,
+        "totalSize": 233783296,
+        "embedderHeapUsedSize": 7121480,
+        "backingStorageSize": 7424868
+      }
+    }
+  ],
+  "checks": [
+    "Two real UI bursts complete with bounded pending work",
+    "No UI performance page errors"
+  ],
+  "errors": [],
+  "method": "Actual Production interaction, finite physical burst and actual overlays. No export, reset or explicit GC inside burst intervals; warm interval follows explicit GC, same prepared target. Software WebGL, not a hardware-GPU frame-rate guarantee."
+}

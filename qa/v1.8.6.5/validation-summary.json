@@ -1,0 +1,107 @@
+{
+  "baseCommit": "688acee986b56fcbfcad8e698ba1bf8287b8bdc1",
+  "implementationCommit": "1ee3df8",
+  "clarificationCommit": "9ccddd13d32bf18fd5ad659d4badd7e2a8d2c6d5",
+  "branch": "feature/v1.8.6.5",
+  "appVersion": "1.8.6.5",
+  "unchangedGenerationContract": "1.8.6.3.1",
+  "targetedUniqueTests": 63,
+  "fullSuiteRun": false,
+  "combatDemoChanged": false,
+  "browserFunctionalChecks": 96,
+  "browserPerformanceChecks": 2,
+  "normalPixelComparisons": 8,
+  "allNormalPixelsIdentical": true,
+  "consolePageErrors": [],
+  "fourKineticWholeJsonHashesIdentical": true,
+  "actualShips": [
+    {
+      "id": "BALANCED",
+      "seed": 7,
+      "length": 470,
+      "sourceBlueprintSha256": "b3bdb92209bc1564fe574afbc62faba1e277ef0b6e287e07bcbdf7e4cf55249a",
+      "status": "COMPLETE",
+      "unresolved": 0,
+      "damagedOwners": 2
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "seed": 7,
+      "length": 500,
+      "sourceBlueprintSha256": "3d71cbb04d8e32a1cb448338b1d46012b2965c1ebc04c56f71041f015058fcb0",
+      "status": "PARTIAL",
+      "unresolved": 12,
+      "damagedOwners": 25
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "seed": 12,
+      "length": 300,
+      "sourceBlueprintSha256": "009a64923ea4f8fc999b964810a3d8af4dfc48922f161ab5c226f5ad65e2c429",
+      "status": "PARTIAL",
+      "unresolved": 256,
+      "damagedOwners": 0
+    },
+    {
+      "id": "TRUSS_POD",
+      "seed": 7,
+      "length": 300,
+      "sourceBlueprintSha256": "3aa3c5f7c87bd4747f559627b963a2240feb8d24cf9f3a4a30fb98e0a1fac205",
+      "status": "COMPLETE",
+      "unresolved": 0,
+      "damagedOwners": 1
+    },
+    {
+      "id": "TWIN_HULL",
+      "seed": 11,
+      "length": 400,
+      "sourceBlueprintSha256": "15487de942a46467c838a4347f758751312a814becbb2dadca32101825d55bcd",
+      "status": "PARTIAL",
+      "unresolved": 24,
+      "damagedOwners": 6
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "seed": 11,
+      "length": 200,
+      "sourceBlueprintSha256": "31cda928a6ec2632f27df525af637cb7c916acfbbd5e2f9e3a43da6d00789055",
+      "status": "COMPLETE",
+      "unresolved": 0,
+      "damagedOwners": 1
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "seed": 7,
+      "length": 300,
+      "sourceBlueprintSha256": "16348ac4ab73ba3362550b4dd569f65cb48c096d0c5bdf19e3f84bc0f7b40afe",
+      "status": "COMPLETE",
+      "unresolved": 0,
+      "damagedOwners": 13
+    },
+    {
+      "id": "HYBRID",
+      "seed": 11,
+      "length": 300,
+      "sourceBlueprintSha256": "8fe85c7745039d83791d2fa54136e630ec66708fe02e3b6112bdae0cc41c3fe5",
+      "status": "PARTIAL",
+      "unresolved": 4,
+      "damagedOwners": 19
+    }
+  ],
+  "maxRecordedActualEnergyBalanceErrorJ": 0.0000017881393432617188,
+  "viewerDisposed": {
+    "blueprintReleased": true,
+    "shipReleased": true,
+    "sceneChildren": 0,
+    "geometryCount": 0,
+    "textureCount": 0
+  },
+  "knownLimitations": [
+    "LOW angular clustering differs materially from HIGH; no real-world convergence guarantee.",
+    "Unspecified SPINE/exterior material remains unresolved.",
+    "Initial UI long task3070ms observed; subsequent measured maxima231/300ms. Rendering is not constrained by8ms work slice.",
+    "Existing large prepared-query memory and debug marker draw calls remain.",
+    "No guided missile, interception, pressure/thermal blast, calibrated spall or physical ship separation runtime."
+  ],
+  "remotePushPerformed": false
+}

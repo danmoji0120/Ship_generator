@@ -1,0 +1,39 @@
+POWER_GENERATOR PARTIAL {
+  availableElectricalPowerMW: 120,
+  propulsionAuthority: 1,
+  maneuverAuthority: 1,
+  availableFireControlChannels: 8,
+  availableSensorProcessingCapacity: 8
+} {
+  availableElectricalPowerMW: 0,
+  propulsionAuthority: 0,
+  maneuverAuthority: 0,
+  availableFireControlChannels: 0,
+  availableSensorProcessingCapacity: 0
+}
+MANEUVER_CONTROL PARTIAL {
+  availableElectricalPowerMW: 120,
+  propulsionAuthority: 1,
+  maneuverAuthority: 1,
+  availableFireControlChannels: 8,
+  availableSensorProcessingCapacity: 8
+} {
+  availableElectricalPowerMW: 0,
+  propulsionAuthority: 0,
+  maneuverAuthority: 0,
+  availableFireControlChannels: 0,
+  availableSensorProcessingCapacity: 0
+}
+FIRE_CONTROL PARTIAL {
+  availableElectricalPowerMW: 120,
+  propulsionAuthority: 1,
+  maneuverAuthority: 1,
+  availableFireControlChannels: 8,
+  availableSensorProcessingCapacity: 8
+} {
+  availableElectricalPowerMW: 120,
+  propulsionAuthority: 0,
+  maneuverAuthority: 0,
+  availableFireControlChannels: 0,
+  availableSensorProcessingCapacity: 0
+}

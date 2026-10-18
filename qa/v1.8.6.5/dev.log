@@ -1,0 +1,13 @@
+
+> procedural-shipyard@1.8.6.5 dev
+> vite --host 0.0.0.0 --port 5189 --strictPort
+
+
+  VITE v7.3.7  ready in 150 ms
+
+  ➜  Local:   http://localhost:5189/
+  ➜  Network: http://172.26.91.252:5189/
+  ➜  Network: http://172.31.11.78:5189/
+11:54:11 AM [vite] (client) page reload src/ui/warheads.ts
+12:05:46 PM [vite] (client) page reload qa/v1.8.6.5/gallery.html
+12:06:56 PM [vite] (client) page reload src/ui/warheads.ts

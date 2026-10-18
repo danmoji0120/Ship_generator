@@ -1,0 +1,18 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.5
+
+ ✓ tests/warhead.test.ts (14 tests) 15702ms
+   ✓ finite layered armor physically stops weak carriers and allows strong residual states; existing channel and remote position remain local  862ms
+   ✓ direction matters; queue yielding preserves chronological contacts and identical deterministic final state  716ms
+   ✓ detonation context rejects actual solid/false interior and preserves real finite compartment validation  2379ms
+   ✓ internal physical fragments damage real equipment and networks, isolate A/B, preserve finite reserve and leave Blueprint immutable  6817ms
+   ✓ secondaries are bounded eroded carrier debris with actual parent contacts and no new mass/energy  355ms
+   ✓ actual open/closed/blocked hatch geometry controls fragment contacts without a fabricated blocked wall  2027ms
+   ✓ actual thin frame material can fail shared joints/edges; geometry-free graph edges are not hit targets  657ms
+   ✓ proximity and timed adapters validate actual reference distance and an elapsed simulation clock  1577ms
+
+ Test Files  1 passed (1)
+      Tests  14 passed (14)
+   Start at  11:53:19
+   Duration  17.65s (transform 1.17s, setup 0ms, collect 1.56s, tests 15.70s, environment 0ms, prepare 111ms)
+

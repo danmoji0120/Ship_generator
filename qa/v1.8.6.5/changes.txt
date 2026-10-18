@@ -1,0 +1,35 @@
+Implementation commit 1ee3df8
+package-lock.json
+package.json
+src/damage/contacts.ts
+src/damage/flight.ts
+src/damage/state.ts
+src/damage/types.ts
+src/interior/query.ts
+src/rendering/viewer.ts
+src/rendering/warheads.ts
+src/style.css
+src/ui/damage.ts
+src/ui/layout.ts
+src/ui/warheads.ts
+src/warheads/README.md
+src/warheads/context.ts
+src/warheads/engine.ts
+src/warheads/registry.ts
+src/warheads/sampling.ts
+src/warheads/types.ts
+tests/warhead-actual.mjs
+tests/warhead-benchmark.mjs
+tests/warhead-browser-extra.mjs
+tests/warhead-browser-final.mjs
+tests/warhead-browser.mjs
+tests/warhead-functional.mjs
+tests/warhead-harness.mjs
+tests/warhead-kinetic-benchmark.mjs
+tests/warhead-pod-protection.mjs
+tests/warhead-profile-overhead.mjs
+tests/warhead-ui-performance.mjs
+tests/warhead-visual.mjs
+tests/warhead.test.ts
+
+Evidence: qa/v1.8.6.5/ (all files in this version directory)

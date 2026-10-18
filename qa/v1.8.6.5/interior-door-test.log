@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.5
+
+ ✓ tests/interior.test.ts (20 tests | 19 skipped) 681ms
+   ✓ real door aperture is not a solid wall, closure changes finite Ray intersections, and rigid transforms retain intervals  680ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 19 skipped (20)
+   Start at  11:47:49
+   Duration  1.94s (transform 778ms, setup 0ms, collect 1.07s, tests 681ms, environment 0ms, prepare 51ms)
+

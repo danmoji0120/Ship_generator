@@ -1,0 +1,8 @@
+PASS Final default uses 256 distinct directions
+PASS TIMED rejects fuse before actual simulation time
+PASS TIMED accepts observed elapsed laboratory clock
+PASS PROXIMITY rejects out-of-range actual reference
+PASS PROXIMITY accepts actual named reference and clock
+PASS IMPACT adapter has an actual kinetic contact
+PASS IMPACT link transfers zero new energy or physical damage
+PASS Final console and page errors zero

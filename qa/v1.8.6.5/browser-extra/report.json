@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Finite batch can be paused with pending carriers",
+    "Paused burst does not advance physical state",
+    "Step processes bounded work without declaring unfinished batch complete",
+    "Real OPEN aperture no longer collides with closure leaf",
+    "Reversing directional cone changes physical contact set",
+    "Six complete burst/reset cycles keep history empty",
+    "Actual canvas + worker installs gun-105",
+    "Actual canvas + worker installs missile-small",
+    "Mounted mass increases, original base mass unchanged",
+    "Actual equipment deletion",
+    "Undo restores exact installed design",
+    "Redo removes selected equipment",
+    "Installed equipment save/load exact",
+    "Console and page errors zero"
+  ],
+  "errors": []
+}

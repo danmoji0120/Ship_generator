@@ -1,0 +1,37 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.5
+
+ ❯ tests/warhead.test.ts (9 tests | 1 failed) 3677ms
+   ✓ fixed physical population and identical unit fragments conserve total mass/energy at 64/128/256 angular qualities 10ms
+   ✓ vacuum has no radius damage and a finite unobstructed MISS leaves design and instance material untouched 69ms
+   ✓ finite layered armor physically stops weak carriers and allows strong residual states; existing channel and remote position remain local  478ms
+   ✓ direction matters; queue yielding preserves chronological contacts and identical deterministic final state  345ms
+   ✓ unknown materials stay UNRESOLVED per path; pending work is not silently declared complete or replayed 40ms
+   ✓ detonation context rejects actual solid/false interior and preserves real finite compartment validation  1061ms
+   ✓ triggers require evidence and already applied kinetic impact never gets a second energy transfer 4ms
+   × internal physical fragments damage real equipment and networks, isolate A/B, preserve finite reserve and leave Blueprint immutable 1463ms
+     → expected false to be true // Object.is equality
+   ✓ secondaries are bounded eroded carrier debris with actual parent contacts and no new mass/energy 205ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/warhead.test.ts > internal physical fragments damage real equipment and networks, isolate A/B, preserve finite reserve and leave Blueprint immutable
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/warhead.test.ts:39:622
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  11:20:32
+   Duration  4.53s (transform 470ms, setup 0ms, collect 673ms, tests 3.68s, environment 0ms, prepare 50ms)
+

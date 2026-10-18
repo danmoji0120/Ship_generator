@@ -1,0 +1,7 @@
+
+> procedural-shipyard@1.8.6.5 build
+> tsc --noEmit && vite build
+
+tests/warhead.test.ts(67,41): error TS2352: Conversion of type '{ warheadFamily: "UNKNOWN"; warheadSpecId: string; provenance: "FICTIONAL_GAME_TEST_V1"; nominalMassKg: number; casingMassKg: number; fragmentationProfile: { physicalPopulation: number; diameterMm: number; lengthMm: number; material: ProjectileSpec["projectileMaterial"]; }; ... 5 more ...; kineticBody?: ProjectileSp...' to type 'WarheadSpec' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'warheadFamily' are incompatible.
+    Type '"UNKNOWN"' is not comparable to type 'WarheadFamily'.

@@ -1,0 +1,10 @@
+[
+  { profile: false, ms: 202.64306199999987 },
+  { profile: true, ms: 225.28270999999995 },
+  { profile: true, ms: 272.652388 },
+  { profile: false, ms: 290.22920999999997 },
+  { profile: false, ms: 274.54431499999964 },
+  { profile: true, ms: 326.11556299999984 },
+  { profile: true, ms: 286.6101490000001 },
+  { profile: false, ms: 259.7537169999996 }
+]

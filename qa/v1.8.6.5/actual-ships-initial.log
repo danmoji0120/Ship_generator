@@ -1,0 +1,20 @@
+BALANCED EXTERNAL_VACUUM COMPLETE 16 12 0 181.8914339999999
+BLOCK_ASSEMBLY INTERNAL_COMPARTMENT PARTIAL 1212 120 12 948.1480519999996
+SPINE_AND_MODULES EXTERNAL_VACUUM PARTIAL 256 0 256 245.1775120000002
+TRUSS_POD EXTERNAL_VACUUM COMPLETE 256 256 0 388.3768149999996
+TWIN_HULL EXTERNAL_VACUUM PARTIAL 944 16 24 1430.3986449999975
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CORE_AND_NACELLES actual valid scenario
+    at file:///workspace/shipyard-v1.8.6.5/tests/warhead-actual.mjs:24:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

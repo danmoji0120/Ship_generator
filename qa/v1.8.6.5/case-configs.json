@@ -1,0 +1,167 @@
+{
+  "BALANCED": {
+    "scenario": "EXTERNAL_ARMOR_OCCLUSION",
+    "preset": "test-fragmentation",
+    "position": {
+      "x": 182.96623535356431,
+      "y": -9.23165700619594,
+      "z": -411.2387186538419
+    },
+    "direction": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    "context": "EXTERNAL_VACUUM",
+    "contextReasons": [
+      "OUTSIDE_ACTUAL_STRUCTURAL_VOLUMES_AND_MATERIAL"
+    ]
+  },
+  "BLOCK_ASSEMBLY": {
+    "scenario": "ACTUAL_BULKHEAD_AND_APERTURE",
+    "preset": "test-directional",
+    "position": {
+      "x": -6.235012359779044,
+      "y": 3.6684102292632605,
+      "z": 11.169999999999979
+    },
+    "direction": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    "context": "INTERNAL_COMPARTMENT",
+    "compartmentId": "comp/combat-core/0",
+    "contextReasons": [
+      "CONFIRMED_FINITE_COMPARTMENT_VOID"
+    ],
+    "openingId": "opening/bulkhead/comp/combat-core/0/comp/combat-core/1",
+    "closureId": "leaf/opening/bulkhead/comp/combat-core/0/comp/combat-core/1",
+    "boundaryNormal": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    }
+  },
+  "SPINE_AND_MODULES": {
+    "scenario": "ACTUAL_SPINE_UNRESOLVED",
+    "preset": "test-directional",
+    "position": {
+      "x": 10.569315664434832,
+      "y": 0,
+      "z": 0
+    },
+    "direction": {
+      "x": -1,
+      "y": 0,
+      "z": 0
+    },
+    "context": "EXTERNAL_VACUUM",
+    "contextReasons": [
+      "OUTSIDE_ACTUAL_STRUCTURAL_VOLUMES_AND_MATERIAL"
+    ]
+  },
+  "TRUSS_POD": {
+    "scenario": "ACTUAL_EXPOSED_TRUSS",
+    "preset": "test-directional",
+    "position": {
+      "x": -42.73304775493429,
+      "y": 8.208852523362873,
+      "z": -21.04169777391548
+    },
+    "direction": {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    "context": "EXTERNAL_VACUUM",
+    "contextReasons": [
+      "OUTSIDE_ACTUAL_STRUCTURAL_VOLUMES_AND_MATERIAL"
+    ],
+    "ownerId": "link-1/brace-0-1/1"
+  },
+  "TWIN_HULL": {
+    "scenario": "ONE_REAL_TWIN_HULL",
+    "preset": "test-directional",
+    "position": {
+      "x": -114.39038929138337,
+      "y": -19.573747553199276,
+      "z": -87.64083459043248
+    },
+    "direction": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "context": "EXTERNAL_VACUUM",
+    "contextReasons": [
+      "OUTSIDE_ACTUAL_STRUCTURAL_VOLUMES_AND_MATERIAL"
+    ],
+    "ownerId": "shell/independent-hull--1",
+    "otherHullOwnerId": "shell/independent-hull-1"
+  },
+  "CORE_AND_NACELLES": {
+    "scenario": "ACTUAL_SOLID_CONNECTOR",
+    "preset": "test-directional",
+    "position": {
+      "x": -22.68890997104425,
+      "y": 5.590454573557916,
+      "z": -13.984962325620145
+    },
+    "direction": {
+      "x": -0.3746175623410809,
+      "y": 0,
+      "z": 0.927179422757875
+    },
+    "context": "EXTERNAL_VACUUM",
+    "contextReasons": [
+      "OUTSIDE_ACTUAL_STRUCTURAL_VOLUMES_AND_MATERIAL"
+    ],
+    "ownerId": "link-0/body"
+  },
+  "STACKED_BLOCKS": {
+    "scenario": "ACTUAL_BULKHEAD_AND_APERTURE",
+    "preset": "test-directional",
+    "position": {
+      "x": -7.7517508554275665,
+      "y": -10.535603987966162,
+      "z": 1.373685263172393
+    },
+    "direction": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "context": "INTERNAL_COMPARTMENT",
+    "compartmentId": "comp/armored-keel/0",
+    "contextReasons": [
+      "CONFIRMED_FINITE_COMPARTMENT_VOID"
+    ],
+    "openingId": "opening/bulkhead/comp/armored-keel/0/comp/armored-keel/1",
+    "closureId": "leaf/opening/bulkhead/comp/armored-keel/0/comp/armored-keel/1",
+    "boundaryNormal": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    }
+  },
+  "HYBRID": {
+    "scenario": "MANUAL_INTERNAL_MULTIPLE_PATHS",
+    "preset": "test-fragmentation",
+    "position": {
+      "x": 72.89533287140969,
+      "y": 3.6728556793572715,
+      "z": 22.209708662327554
+    },
+    "direction": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    "context": "INTERNAL_COMPARTMENT",
+    "compartmentId": "comp/breech-1/0",
+    "contextReasons": [
+      "CONFIRMED_FINITE_COMPARTMENT_VOID"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+PASS Native unarmed ship, real propulsion, laboratory OFF
+PASS SPINE_AND_MODULES actual context and all primary paths accounted
+PASS SPINE_AND_MODULES conserved energy
+PASS Unknown SPINE paths explicitly unresolved
+PASS SPINE_AND_MODULES whole Blueprint unchanged
+PASS SPINE_AND_MODULES B independent and undamaged
+PASS SPINE_AND_MODULES A damage retained after switch
+PASS SPINE_AND_MODULES reset clears physical damage and event history
+PASS SPINE_AND_MODULES Normal disables laboratory
+PASS Browser console and page errors zero

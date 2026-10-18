@@ -1,0 +1,382 @@
+{
+  "prepareMs": 880.9754140000001,
+  "rows": [
+    {
+      "ms": 20.073949999999968,
+      "hash": "fd48482daa5471a87eab7f2cb6ed336ebb9e1e641cfe2be24ae6c22cfcbe6dc8",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 12.897231999999576,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 19.808415999998033,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.48021299999936673,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 3.1759219999999004,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 5.621883000000025,
+      "hash": "d88166f9e85e51374b06154df24130d468992385162e850016ff74fea5b2164b",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.9868569999998726,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 5.535386000002973,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.11220899999966605,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.7504900000003545,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 5.745689999999968,
+      "hash": "64eb024776c21c6d076f0a866ef4f44ce9a60ed73ead476be4b299e0143b0962",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.951205999999729,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 5.475012000001925,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.06654900000057751,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.6459340000001248,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 43.38132900000005,
+      "hash": "b78e5933af3abd32204072a644a9225d2a0d8f41b30b1713b5731035492e3003",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 39.41643599999975,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 43.311646999999766,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.08792199999948025,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.7101509999995415,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 4.759131999999909,
+      "hash": "629ae85d095b897c3c23290bba33351bf981c9f86f61da838508a90ec3629651",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.8532650000001922,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 4.67621800000029,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.06392700000037621,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.412943999999925,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 10.427097999999887,
+      "hash": "9648780d3129d1639025a67fc942f60d22d2a97d1d2eb0c4e5b58d318a4dbc7d",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 2.302147999999761,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.362001000000873,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.08563000000026477,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 6.36844700000006,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 10.013990999999805,
+      "hash": "9a5be4c961b198e40ab8b48e84930d77f6e0789bd061a801402fd046aa8df5f8",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 6.07948099999976,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 9.877865000001293,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.233393999999862,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.8757299999997485,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 42.17837200000008,
+      "hash": "3cd2d5a9733b3623990fe16db989314eaacddda2f2bb039e47dde903cb80490d",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 2.233398999999963,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 42.075728000002755,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.07914800000048672,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 38.16600700000026,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 10.170256000000109,
+      "hash": "16132b7b3773f7a4618c1b401d64d3dd5a55828485e56822c4221b81765a6f08",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 6.209500999999364,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.101413000003276,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.08428700000013123,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.272448999999824,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 8.63869499999987,
+      "hash": "24aac068f1303efa82b696ab28a20c3aab11778232991a5bdcb15dd7e9a6e26c",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.5781339999994088,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 8.574365999999372,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.059739999999919746,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.3739340000001903,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 10.241303000000016,
+      "hash": "143586935d41d734be173b70d0d7462b84c95092ad83e972764baf6c7a55b030",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 2.1901950000001307,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.172621000000618,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.11541300000021693,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 6.064740999999913,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    {
+      "ms": 10.498700999999983,
+      "hash": "62e3e73b7b9a24cdb488a704c80d6dd319b0b5d9f598374bb6c886b8762b1819",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 2.5882460000000265,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 10.439591000000974,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.0843990000003032,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.0718279999998686,
+          "calls": 10
+        }
+      },
+      "events": 10
+    }
+  ],
+  "golden": {
+    "dev-105": {
+      "ms": 1.2820540000002438,
+      "hash": "f8aae590396b3b85160b50b8d3035314cf6abb7f8b8b99863e3047e0f6352bf2",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 0.6126839999997173,
+          "calls": 2
+        },
+        "Advance total": {
+          "ms": 1.2723669999973026,
+          "calls": 33
+        },
+        "Material response": {
+          "ms": 0.030905999999959022,
+          "calls": 2
+        },
+        "Local damage + capability": {
+          "ms": 0.3557580000001508,
+          "calls": 2
+        }
+      },
+      "events": 2
+    },
+    "dev-210": {
+      "ms": 35.8325890000001,
+      "hash": "e8fab05b846228ed8ee56c3d1d9d386b89b363366dae163f288d7f8464c5fe93",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 33.904767999999876,
+          "calls": 9
+        },
+        "Advance total": {
+          "ms": 35.81804699999975,
+          "calls": 41
+        },
+        "Material response": {
+          "ms": 0.07285899999988033,
+          "calls": 9
+        },
+        "Local damage + capability": {
+          "ms": 1.4370600000002014,
+          "calls": 9
+        }
+      },
+      "events": 9
+    },
+    "dev-406": {
+      "ms": 4.3214200000002165,
+      "hash": "4982462bca32262dc36c7f3f63a36328f5b9643b4d4a40b1c24efdf7944d15a9",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.404859000000215,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 4.272215000000415,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.04985399999986839,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 1.432110999998713,
+          "calls": 10
+        }
+      },
+      "events": 10
+    },
+    "dev-500": {
+      "ms": 5.545207000000119,
+      "hash": "a01f2756dd73e161431ea924fed3fe4c4559c7df9d887145ad6def5a7ee4fc1e",
+      "profile": {
+        "Finite queries + ordered contacts": {
+          "ms": 1.5691569999989952,
+          "calls": 11
+        },
+        "Advance total": {
+          "ms": 5.495251999996981,
+          "calls": 300
+        },
+        "Material response": {
+          "ms": 0.3446780000003855,
+          "calls": 10
+        },
+        "Local damage + capability": {
+          "ms": 2.097856999999749,
+          "calls": 10
+        }
+      },
+      "events": 10
+    }
+  },
+  "memory": {
+    "rss": 385327104,
+    "heapTotal": 265703424,
+    "heapUsed": 128599024,
+    "external": 6099850,
+    "arrayBuffers": 2484089
+  }
+}

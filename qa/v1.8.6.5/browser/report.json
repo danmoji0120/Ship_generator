@@ -1,0 +1,201 @@
+{
+  "checks": [
+    "Native unarmed ship, real propulsion, laboratory OFF",
+    "BALANCED actual context and all primary paths accounted",
+    "BALANCED conserved energy",
+    "BALANCED whole Blueprint unchanged",
+    "BALANCED B independent and undamaged",
+    "BALANCED A damage retained after switch",
+    "BALANCED reset clears physical damage and event history",
+    "Same seed reset reproduces physical state and record",
+    "Quality changes angular count, preserves physical mass/energy",
+    "Manual real internal burst destroys distributor via actual collision",
+    "Solid equipment detonation is rejected",
+    "Rejected event leaves instance undamaged",
+    "Existing kinetic mode physically stops on thick armor",
+    "BALANCED Normal disables laboratory",
+    "BLOCK_ASSEMBLY actual context and all primary paths accounted",
+    "BLOCK_ASSEMBLY conserved energy",
+    "BLOCK_ASSEMBLY real closure struck",
+    "BLOCK_ASSEMBLY whole Blueprint unchanged",
+    "BLOCK_ASSEMBLY B independent and undamaged",
+    "BLOCK_ASSEMBLY A damage retained after switch",
+    "BLOCK_ASSEMBLY reset clears physical damage and event history",
+    "BLOCK_ASSEMBLY Normal disables laboratory",
+    "SPINE_AND_MODULES actual context and all primary paths accounted",
+    "SPINE_AND_MODULES conserved energy",
+    "Unknown SPINE paths explicitly unresolved",
+    "SPINE_AND_MODULES whole Blueprint unchanged",
+    "SPINE_AND_MODULES B independent and undamaged",
+    "SPINE_AND_MODULES A damage retained after switch",
+    "SPINE_AND_MODULES reset clears physical damage and event history",
+    "SPINE_AND_MODULES Normal disables laboratory",
+    "TRUSS_POD actual context and all primary paths accounted",
+    "TRUSS_POD conserved energy",
+    "TRUSS_POD selected real surface hit",
+    "TRUSS_POD whole Blueprint unchanged",
+    "TRUSS_POD B independent and undamaged",
+    "TRUSS_POD A damage retained after switch",
+    "TRUSS_POD reset clears physical damage and event history",
+    "TRUSS_POD Normal disables laboratory",
+    "TWIN_HULL actual context and all primary paths accounted",
+    "TWIN_HULL conserved energy",
+    "TWIN_HULL selected real surface hit",
+    "Twin other physical skin remains undamaged",
+    "TWIN_HULL whole Blueprint unchanged",
+    "TWIN_HULL B independent and undamaged",
+    "TWIN_HULL A damage retained after switch",
+    "TWIN_HULL reset clears physical damage and event history",
+    "TWIN_HULL Normal disables laboratory",
+    "CORE_AND_NACELLES actual context and all primary paths accounted",
+    "CORE_AND_NACELLES conserved energy",
+    "CORE_AND_NACELLES selected real surface hit",
+    "CORE_AND_NACELLES whole Blueprint unchanged",
+    "CORE_AND_NACELLES B independent and undamaged",
+    "CORE_AND_NACELLES A damage retained after switch",
+    "CORE_AND_NACELLES reset clears physical damage and event history",
+    "CORE_AND_NACELLES Normal disables laboratory",
+    "STACKED_BLOCKS actual context and all primary paths accounted",
+    "STACKED_BLOCKS conserved energy",
+    "STACKED_BLOCKS real closure struck",
+    "STACKED_BLOCKS whole Blueprint unchanged",
+    "STACKED_BLOCKS B independent and undamaged",
+    "STACKED_BLOCKS A damage retained after switch",
+    "STACKED_BLOCKS reset clears physical damage and event history",
+    "STACKED_BLOCKS Normal disables laboratory",
+    "HYBRID actual context and all primary paths accounted",
+    "HYBRID conserved energy",
+    "HYBRID whole Blueprint unchanged",
+    "HYBRID B independent and undamaged",
+    "HYBRID A damage retained after switch",
+    "HYBRID reset clears physical damage and event history",
+    "HYBRID Normal disables laboratory",
+    "ENDURANCE actual blast hits distributor; reserve not advanced",
+    "Historical armed Blueprint whole JSON preserved",
+    "Expanded laboratory 390px no page overflow",
+    "Browser console and page errors zero"
+  ],
+  "rows": [
+    {
+      "id": "BALANCED",
+      "wallMs": 56200,
+      "context": "EXTERNAL_VACUUM",
+      "status": "COMPLETE",
+      "contacts": 16,
+      "blocked": 12,
+      "unresolved": 0,
+      "memory": {
+        "usedSize": 173179284,
+        "totalSize": 174444544,
+        "embedderHeapUsedSize": 3932336,
+        "backingStorageSize": 6540841
+      }
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "wallMs": 24719,
+      "context": "INTERNAL_COMPARTMENT",
+      "status": "PARTIAL",
+      "contacts": 1212,
+      "blocked": 120,
+      "unresolved": 12,
+      "memory": {
+        "usedSize": 226901576,
+        "totalSize": 228925440,
+        "embedderHeapUsedSize": 4466528,
+        "backingStorageSize": 10203766
+      }
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "wallMs": 11998,
+      "context": "EXTERNAL_VACUUM",
+      "status": "PARTIAL",
+      "contacts": 256,
+      "blocked": 0,
+      "unresolved": 256,
+      "memory": {
+        "usedSize": 222344512,
+        "totalSize": 223719424,
+        "embedderHeapUsedSize": 4219352,
+        "backingStorageSize": 6931265
+      }
+    },
+    {
+      "id": "TRUSS_POD",
+      "wallMs": 17239,
+      "context": "EXTERNAL_VACUUM",
+      "status": "COMPLETE",
+      "contacts": 256,
+      "blocked": 256,
+      "unresolved": 0,
+      "memory": {
+        "usedSize": 281335488,
+        "totalSize": 283082752,
+        "embedderHeapUsedSize": 5131688,
+        "backingStorageSize": 7855066
+      }
+    },
+    {
+      "id": "TWIN_HULL",
+      "wallMs": 40629,
+      "context": "EXTERNAL_VACUUM",
+      "status": "PARTIAL",
+      "contacts": 944,
+      "blocked": 16,
+      "unresolved": 24,
+      "memory": {
+        "usedSize": 284791368,
+        "totalSize": 286830592,
+        "embedderHeapUsedSize": 4530952,
+        "backingStorageSize": 7585881
+      }
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "wallMs": 18571,
+      "context": "EXTERNAL_VACUUM",
+      "status": "COMPLETE",
+      "contacts": 256,
+      "blocked": 256,
+      "unresolved": 0,
+      "memory": {
+        "usedSize": 317536896,
+        "totalSize": 319102976,
+        "embedderHeapUsedSize": 4835272,
+        "backingStorageSize": 8215080
+      }
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "wallMs": 19106,
+      "context": "INTERNAL_COMPARTMENT",
+      "status": "COMPLETE",
+      "contacts": 1028,
+      "blocked": 64,
+      "unresolved": 0,
+      "memory": {
+        "usedSize": 199667660,
+        "totalSize": 201621504,
+        "embedderHeapUsedSize": 4283432,
+        "backingStorageSize": 5396779
+      }
+    },
+    {
+      "id": "HYBRID",
+      "wallMs": 17857,
+      "context": "INTERNAL_COMPARTMENT",
+      "status": "PARTIAL",
+      "contacts": 884,
+      "blocked": 188,
+      "unresolved": 4,
+      "memory": {
+        "usedSize": 229563480,
+        "totalSize": 231149568,
+        "embedderHeapUsedSize": 4917832,
+        "backingStorageSize": 7358624
+      }
+    }
+  ],
+  "errors": []
+}

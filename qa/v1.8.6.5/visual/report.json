@@ -1,0 +1,217 @@
+{
+  "rows": [
+    {
+      "id": "BALANCED",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 29
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 49
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 57
+    },
+    {
+      "id": "TRUSS_POD",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 135
+    },
+    {
+      "id": "TWIN_HULL",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 91
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 67
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 29
+    },
+    {
+      "id": "HYBRID",
+      "normalPixelsEqual": true,
+      "normalDrawCalls": 97
+    }
+  ],
+  "memory": [
+    {
+      "cycle": 0,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 83,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32319988
+    },
+    {
+      "cycle": 1,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 492,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 81898960
+    },
+    {
+      "cycle": 2,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 83,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32524192
+    },
+    {
+      "cycle": 3,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 492,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82056948
+    },
+    {
+      "cycle": 4,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 83,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32600804
+    },
+    {
+      "cycle": 5,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 492,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82100036
+    }
+  ],
+  "disposed": {
+    "blueprintReleased": true,
+    "shipReleased": true,
+    "sceneChildren": 0,
+    "geometryCount": 0,
+    "textureCount": 0
+  },
+  "errors": [],
+  "method": "Identical archived real .3.1-generated Blueprints in actual .4/.5 ShipViewer; pixel comparison excludes UI/version labels. Actual per-ship exported warhead and local damage overlays are toggled for6 lifecycle cycles; separate Production browser script covers controls."
+}

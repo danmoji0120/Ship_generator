@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "Native unarmed ship, real propulsion, laboratory OFF",
+    "SPINE_AND_MODULES actual context and all primary paths accounted",
+    "SPINE_AND_MODULES conserved energy",
+    "Unknown SPINE paths explicitly unresolved",
+    "SPINE_AND_MODULES whole Blueprint unchanged",
+    "SPINE_AND_MODULES B independent and undamaged",
+    "SPINE_AND_MODULES A damage retained after switch",
+    "SPINE_AND_MODULES reset clears physical damage and event history",
+    "SPINE_AND_MODULES Normal disables laboratory"
+  ],
+  "rows": [
+    {
+      "id": "SPINE_AND_MODULES",
+      "wallMs": 12343,
+      "context": "EXTERNAL_VACUUM",
+      "status": "PARTIAL",
+      "contacts": 256,
+      "blocked": 0,
+      "unresolved": 256,
+      "memory": {
+        "usedSize": 216059320,
+        "totalSize": 229355520,
+        "embedderHeapUsedSize": 3979344,
+        "backingStorageSize": 12505275
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,24 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.5
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 764ms
+ ✓ tests/warhead.test.ts (13 tests) 9025ms
+   ✓ finite layered armor physically stops weak carriers and allows strong residual states; existing channel and remote position remain local  458ms
+   ✓ direction matters; queue yielding preserves chronological contacts and identical deterministic final state  337ms
+   ✓ detonation context rejects actual solid/false interior and preserves real finite compartment validation  1011ms
+   ✓ internal physical fragments damage real equipment and networks, isolate A/B, preserve finite reserve and leave Blueprint immutable  4311ms
+   ✓ actual open/closed/blocked hatch geometry controls fragment contacts without a fabricated blocked wall  1185ms
+   ✓ actual thin frame material can fail shared joints/edges; geometry-free graph edges are not hit targets  425ms
+   ✓ proximity and timed adapters validate actual reference distance and an elapsed simulation clock  905ms
+ ✓ tests/damage.test.ts (14 tests) 5638ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  2710ms
+   ✓ actual finite open/closed/blocked hatch geometry and thin bulkhead paths stay distinct  908ms
+   ✓ actual unresolved SPINE boundary returns UNRESOLVED rather than invented armor or empty space  1770ms
+ ✓ tests/free-mount.test.ts (18 tests) 5196ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  4181ms
+
+ Test Files  4 passed (4)
+      Tests  61 passed (61)
+   Start at  11:47:25
+   Duration  22.94s (transform 925ms, setup 0ms, collect 1.62s, tests 20.62s, environment 1ms, prepare 184ms)
+

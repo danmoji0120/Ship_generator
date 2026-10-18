@@ -1,0 +1,147 @@
+{
+  "checks": [
+    "Final default uses 256 distinct directions",
+    "TIMED rejects fuse before actual simulation time",
+    "TIMED accepts observed elapsed laboratory clock",
+    "PROXIMITY rejects out-of-range actual reference",
+    "PROXIMITY accepts actual named reference and clock",
+    "IMPACT adapter has an actual kinetic contact",
+    "IMPACT link transfers zero new energy or physical damage",
+    "Final console and page errors zero"
+  ],
+  "rows": [
+    {
+      "phase": "Normal idle 1s",
+      "wallMs": 1006,
+      "longTasks": []
+    },
+    {
+      "phase": "Lab idle 1s",
+      "wallMs": 1006,
+      "longTasks": []
+    },
+    {
+      "phase": "Burst interaction until completion; no export/reset/forcedGC",
+      "wallMs": 6708,
+      "longTasks": [
+        {
+          "start": 17286.400000000373,
+          "ms": 3070
+        },
+        {
+          "start": 20357.799999998882,
+          "ms": 154
+        },
+        {
+          "start": 20512.5,
+          "ms": 76
+        },
+        {
+          "start": 20590.5,
+          "ms": 66
+        },
+        {
+          "start": 20657.5,
+          "ms": 97
+        },
+        {
+          "start": 20755.299999998882,
+          "ms": 98
+        },
+        {
+          "start": 20853.699999999255,
+          "ms": 100
+        },
+        {
+          "start": 20954.699999999255,
+          "ms": 143
+        },
+        {
+          "start": 21098.099999999627,
+          "ms": 112
+        },
+        {
+          "start": 21211,
+          "ms": 95
+        },
+        {
+          "start": 21309.299999998882,
+          "ms": 134
+        },
+        {
+          "start": 21443.900000000373,
+          "ms": 103
+        },
+        {
+          "start": 21547.900000000373,
+          "ms": 161
+        },
+        {
+          "start": 21791.299999998882,
+          "ms": 172
+        },
+        {
+          "start": 21963.699999999255,
+          "ms": 96
+        },
+        {
+          "start": 22060.400000000373,
+          "ms": 81
+        },
+        {
+          "start": 22141.400000000373,
+          "ms": 87
+        },
+        {
+          "start": 22229,
+          "ms": 111
+        },
+        {
+          "start": 22344,
+          "ms": 108
+        },
+        {
+          "start": 22453.900000000373,
+          "ms": 245
+        },
+        {
+          "start": 22700.299999998882,
+          "ms": 109
+        },
+        {
+          "start": 22810.799999998882,
+          "ms": 118
+        },
+        {
+          "start": 22930.5,
+          "ms": 131
+        },
+        {
+          "start": 23065.599999999627,
+          "ms": 137
+        },
+        {
+          "start": 23206.5,
+          "ms": 129
+        },
+        {
+          "start": 23340.099999999627,
+          "ms": 126
+        },
+        {
+          "start": 23471.599999999627,
+          "ms": 142
+        },
+        {
+          "start": 23618.900000000373,
+          "ms": 179
+        },
+        {
+          "start": 23804.599999999627,
+          "ms": 112
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

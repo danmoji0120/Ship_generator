@@ -1,0 +1,74 @@
+PASS Native unarmed ship, real propulsion, laboratory OFF
+PASS BALANCED actual context and all primary paths accounted
+PASS BALANCED conserved energy
+PASS BALANCED whole Blueprint unchanged
+PASS BALANCED B independent and undamaged
+PASS BALANCED A damage retained after switch
+PASS BALANCED reset clears physical damage and event history
+PASS Same seed reset reproduces physical state and record
+PASS Quality changes angular count, preserves physical mass/energy
+PASS Manual real internal burst destroys distributor via actual collision
+PASS Solid equipment detonation is rejected
+PASS Rejected event leaves instance undamaged
+PASS Existing kinetic mode physically stops on thick armor
+PASS BALANCED Normal disables laboratory
+PASS BLOCK_ASSEMBLY actual context and all primary paths accounted
+PASS BLOCK_ASSEMBLY conserved energy
+PASS BLOCK_ASSEMBLY real closure struck
+PASS BLOCK_ASSEMBLY whole Blueprint unchanged
+PASS BLOCK_ASSEMBLY B independent and undamaged
+PASS BLOCK_ASSEMBLY A damage retained after switch
+PASS BLOCK_ASSEMBLY reset clears physical damage and event history
+PASS BLOCK_ASSEMBLY Normal disables laboratory
+PASS SPINE_AND_MODULES actual context and all primary paths accounted
+PASS SPINE_AND_MODULES conserved energy
+PASS Unknown SPINE paths explicitly unresolved
+PASS SPINE_AND_MODULES whole Blueprint unchanged
+PASS SPINE_AND_MODULES B independent and undamaged
+PASS SPINE_AND_MODULES A damage retained after switch
+PASS SPINE_AND_MODULES reset clears physical damage and event history
+PASS SPINE_AND_MODULES Normal disables laboratory
+PASS TRUSS_POD actual context and all primary paths accounted
+PASS TRUSS_POD conserved energy
+PASS TRUSS_POD selected real surface hit
+PASS TRUSS_POD whole Blueprint unchanged
+PASS TRUSS_POD B independent and undamaged
+PASS TRUSS_POD A damage retained after switch
+PASS TRUSS_POD reset clears physical damage and event history
+PASS TRUSS_POD Normal disables laboratory
+PASS TWIN_HULL actual context and all primary paths accounted
+PASS TWIN_HULL conserved energy
+PASS TWIN_HULL selected real surface hit
+PASS Twin other physical skin remains undamaged
+PASS TWIN_HULL whole Blueprint unchanged
+PASS TWIN_HULL B independent and undamaged
+PASS TWIN_HULL A damage retained after switch
+PASS TWIN_HULL reset clears physical damage and event history
+PASS TWIN_HULL Normal disables laboratory
+PASS CORE_AND_NACELLES actual context and all primary paths accounted
+PASS CORE_AND_NACELLES conserved energy
+PASS CORE_AND_NACELLES selected real surface hit
+PASS CORE_AND_NACELLES whole Blueprint unchanged
+PASS CORE_AND_NACELLES B independent and undamaged
+PASS CORE_AND_NACELLES A damage retained after switch
+PASS CORE_AND_NACELLES reset clears physical damage and event history
+PASS CORE_AND_NACELLES Normal disables laboratory
+PASS STACKED_BLOCKS actual context and all primary paths accounted
+PASS STACKED_BLOCKS conserved energy
+PASS STACKED_BLOCKS real closure struck
+PASS STACKED_BLOCKS whole Blueprint unchanged
+PASS STACKED_BLOCKS B independent and undamaged
+PASS STACKED_BLOCKS A damage retained after switch
+PASS STACKED_BLOCKS reset clears physical damage and event history
+PASS STACKED_BLOCKS Normal disables laboratory
+PASS HYBRID actual context and all primary paths accounted
+PASS HYBRID conserved energy
+PASS HYBRID whole Blueprint unchanged
+PASS HYBRID B independent and undamaged
+PASS HYBRID A damage retained after switch
+PASS HYBRID reset clears physical damage and event history
+PASS HYBRID Normal disables laboratory
+PASS ENDURANCE actual blast hits distributor; reserve not advanced
+PASS Historical armed Blueprint whole JSON preserved
+PASS Expanded laboratory 390px no page overflow
+PASS Browser console and page errors zero
