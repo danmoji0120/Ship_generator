@@ -41,6 +41,7 @@ export interface DetonationRecord {
   context:ContextResult; warnings:string[]; elapsedSeconds:number;
   generatedAngularSamples:number; generatedPhysicalFragments:number; representedPhysicalFragments:number;
   secondaryFragments:number; secondarySuppressed:number; contactCount:number; blockedFragments:number; penetratedFragments:number;
+  /** Paths encountering a boundary, including unresolved boundaries; not a verified damage count. */
   hitFragments:number; unresolvedFragments:number; resolvedFragments:number; uniqueHitOwners:string[]; damagedObjects:string[];
   traceTruncatedContacts:number; fragments:FragmentSummary[];
   budget:{nominalMassKg:number;casingMassKg:number;unmodeledBodyMassKg:number;primaryMassKg:number;primaryKineticJ:number;
