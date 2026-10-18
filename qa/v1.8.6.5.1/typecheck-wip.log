@@ -1,0 +1,1 @@
+src/rendering/viewer.ts(171,281): error TS2339: Property 'update' does not exist on type 'Group<Object3DEventMap>'.

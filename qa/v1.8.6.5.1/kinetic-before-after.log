@@ -1,0 +1,57 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    [
+-     'ARMOR',
+-     'CERAMIC_STRIKE_FACE',
+-     'PENETRATED'
+-   ],
+-   [
+-     'ARMOR',
+-     'STEEL_BACKING',
+-     'PENETRATED'
+-   ],
+-   [
+-     'ARMOR',
+-     'FIBER_SPALL_BACKING',
+-     'PENETRATED'
+-   ],
+-   [
+      'HULL',
+      'STEEL_STRUCTURAL',
+      'PENETRATED'
+    ],
+-   [
+-     'CLOSURE',
+-     'STEEL_STRUCTURAL',
+-     'PENETRATED'
+-   ],
+-   [
+-     'HULL',
+-     'STEEL_STRUCTURAL',
+-     'PENETRATED'
+-   ]
+  ]
+
+    at file:///workspace/shipyard-v1.8.6.5.1/tests/integrity-kinetic-compare.mjs:3:132 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [ [ 'HULL', 'STEEL_STRUCTURAL', 'PENETRATED' ] ],
+  expected: [
+    [ 'ARMOR', 'CERAMIC_STRIKE_FACE', 'PENETRATED' ],
+    [ 'ARMOR', 'STEEL_BACKING', 'PENETRATED' ],
+    [ 'ARMOR', 'FIBER_SPALL_BACKING', 'PENETRATED' ],
+    [ 'HULL', 'STEEL_STRUCTURAL', 'PENETRATED' ],
+    [ 'CLOSURE', 'STEEL_STRUCTURAL', 'PENETRATED' ],
+    [ 'HULL', 'STEEL_STRUCTURAL', 'PENETRATED' ]
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,66 @@
+LOAD BALANCED
+PASS BALANCED Normal leaves audit idle
+PASS BALANCED actual audit completes
+PASS BALANCED Inspector exposes real source/ray
+PASS BALANCED canvas pick resolves a real patch
+PASS BALANCED audit preserves full Blueprint
+LOAD BLOCK_ASSEMBLY
+PASS BLOCK_ASSEMBLY Normal leaves audit idle
+PASS BLOCK_ASSEMBLY actual audit completes
+PASS BLOCK_ASSEMBLY Inspector exposes real source/ray
+PASS BLOCK_ASSEMBLY canvas pick resolves a real patch
+PASS BLOCK_ASSEMBLY audit preserves full Blueprint
+LOAD SPINE_AND_MODULES
+PASS SPINE_AND_MODULES Normal leaves audit idle
+PASS SPINE_AND_MODULES actual audit completes
+PASS SPINE_AND_MODULES Inspector exposes real source/ray
+PASS SPINE_AND_MODULES canvas pick resolves a real patch
+PASS SPINE_AND_MODULES audit preserves full Blueprint
+LOAD TRUSS_POD
+PASS TRUSS_POD Normal leaves audit idle
+PASS TRUSS_POD actual audit completes
+PASS TRUSS_POD Inspector exposes real source/ray
+PASS TRUSS_POD canvas pick resolves a real patch
+PASS TRUSS_POD audit preserves full Blueprint
+LOAD TWIN_HULL
+PASS TWIN_HULL Normal leaves audit idle
+PASS TWIN_HULL actual audit completes
+PASS TWIN_HULL Inspector exposes real source/ray
+PASS TWIN_HULL canvas pick resolves a real patch
+PASS TWIN_HULL audit preserves full Blueprint
+LOAD CORE_AND_NACELLES
+PASS CORE_AND_NACELLES Normal leaves audit idle
+PASS CORE_AND_NACELLES actual audit completes
+PASS CORE_AND_NACELLES Inspector exposes real source/ray
+PASS CORE_AND_NACELLES canvas pick resolves a real patch
+PASS CORE_AND_NACELLES audit preserves full Blueprint
+LOAD STACKED_BLOCKS
+PASS STACKED_BLOCKS Normal leaves audit idle
+PASS STACKED_BLOCKS actual audit completes
+PASS STACKED_BLOCKS Inspector exposes real source/ray
+PASS STACKED_BLOCKS canvas pick resolves a real patch
+PASS STACKED_BLOCKS audit preserves full Blueprint
+LOAD HYBRID
+PASS HYBRID Normal leaves audit idle
+PASS HYBRID actual audit completes
+PASS HYBRID Inspector exposes real source/ray
+PASS HYBRID canvas pick resolves a real patch
+PASS HYBRID audit preserves full Blueprint
+PASS Authoritative selector defaults HIGH and disabled
+PASS Authoritative actual burst has 256 directions
+PASS Closed trace stays lazy
+PASS LOW display leaves complete damage state identical
+PASS HIGH display leaves complete damage state identical
+PASS Overlay OFF leaves complete damage state identical
+PASS Opened trace formats actual fragments
+PASS Instance B remains undamaged
+PASS Instance A remains damaged
+PASS Reset removes actual local damage
+PASS Actual internal burst damages named distribution equipment
+PASS Laboratory preserves stored Blueprint
+PASS LOW physics requires explicit diagnostic contract
+PASS Returning to authority resets physical quality HIGH
+PASS Normal closes laboratory
+PASS New delivery remains unarmed
+PASS New delivery preserves propulsion
+PASS No browser console / page errors

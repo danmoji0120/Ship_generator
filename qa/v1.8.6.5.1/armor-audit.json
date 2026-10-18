@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "BALANCED",
+    "seed": 7,
+    "shipyard": "aegis",
+    "architecture": "MONOLITHIC",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "sourceSha": "b3bdb92209bc1564fe574afbc62faba1e277ef0b6e287e07bcbdf7e4cf55249a",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 425834.4708738929,
+        "plannedEligibleAreaM2": 220724.00894326327,
+        "intentionalExclusionAreaM2": 150868.5898373823,
+        "physicalCoveredAreaEstimateM2": 219866.51799481272,
+        "physicalUncoveredAreaEstimateM2": 857.4909484509877,
+        "unresolvedAreaM2": 54241.872093243604,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 425834.4708738929,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.9961150988850018,
+        "counts": {
+          "COVERED": 1039,
+          "INTENTIONALLY_EXPOSED": 2284,
+          "MISSING_ARMOR": 208,
+          "UNRESOLVED": 1092,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 293194.9966001855,
+        "plannedEligibleAreaM2": 285306.91061738384,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 285306.91061738384,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 7888.085982802615,
+        "visualMismatchAreaEstimateM2": 0.2573625648455115,
+        "sampledAreaM2": 285306.91061738384,
+        "unsampledAreaM2": 7888.085982802615,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 15375,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 3114,
+          "VISUAL_PHYSICAL_MISMATCH": 2
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 930.508506,
+      "physicalQueryPreparationMs": 394.11353800000006,
+      "queryMs": 596.5807009999739,
+      "queryCount": 20000,
+      "visualQueryMs": 100.78362800001014,
+      "workMs": 1381.4994220000012
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-citadel-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-citadel-4",
+        "parentStructureId": "citadel",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 101.19842599999998,
+            "y": 25.225305769929122,
+            "z": -223.25
+          },
+          {
+            "x": 113.48262799999999,
+            "y": 26.537604914029483,
+            "z": -211.5
+          },
+          {
+            "x": 113.31883864,
+            "y": 26.439384552137508,
+            "z": -211.65666666666667
+          }
+        ],
+        "point": {
+          "x": 109.33329754666666,
+          "y": 26.067431745365372,
+          "z": -215.46888888888887
+        },
+        "normal": {
+          "x": 0.6912193816034299,
+          "y": 0,
+          "z": -0.7226449795686483
+        },
+        "areaM2": 0.6861032437015547,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-citadel-4",
+          "citadel"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 122.92722619508827,
+            "y": 26.067431745365372,
+            "z": -229.6808519093823
+          },
+          "direction": {
+            "x": -0.6912193816034299,
+            "y": 0,
+            "z": 0.7226449795686483
+          },
+          "maxDistanceM": 19.686590680498007
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "BLOCK_ASSEMBLY",
+    "seed": 7,
+    "shipyard": "forge",
+    "architecture": "BLOCK_ASSEMBLY",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "forge",
+      "shipClass": "Battleship",
+      "lengthM": 500,
+      "seed": 7,
+      "targetMassKg": 6074864000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "BLOCK_ASSEMBLY"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 10000000000
+    },
+    "sourceSha": "3d71cbb04d8e32a1cb448338b1d46012b2965c1ebc04c56f71041f015058fcb0",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 461167.24455795006,
+        "plannedEligibleAreaM2": 207435.72093810147,
+        "intentionalExclusionAreaM2": 174154.7885953944,
+        "physicalCoveredAreaEstimateM2": 201984.3982637472,
+        "physicalUncoveredAreaEstimateM2": 5451.322674354018,
+        "unresolvedAreaM2": 79576.73502444846,
+        "visualMismatchAreaEstimateM2": 4728.064358906231,
+        "sampledAreaM2": 461167.24455795006,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.973720424574411,
+        "counts": {
+          "COVERED": 2212,
+          "INTENTIONALLY_EXPOSED": 7496,
+          "MISSING_ARMOR": 307,
+          "UNRESOLVED": 6762,
+          "VISUAL_PHYSICAL_MISMATCH": 100
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 268856.6978127877,
+        "plannedEligibleAreaM2": 48841.82190076984,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 48841.82190076984,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 220014.87591201733,
+        "visualMismatchAreaEstimateM2": 2.051287654782692,
+        "sampledAreaM2": 48841.82190076984,
+        "unsampledAreaM2": 220014.87591201733,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 3106,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 35761,
+          "VISUAL_PHYSICAL_MISMATCH": 17
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 1564.9773109999996,
+      "physicalQueryPreparationMs": 567.4628139999995,
+      "queryMs": 628.92400800001,
+      "queryCount": 20000,
+      "visualQueryMs": 156.32795800000622,
+      "workMs": 1157.862393999987
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-fore-armor-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-fore-armor-4",
+        "parentStructureId": "fore-armor",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 154.80733437571448,
+            "y": 25.44213871699131,
+            "z": -238.90625
+          },
+          {
+            "x": 175.3761410410192,
+            "y": 27.117968213320076,
+            "z": -227.8125
+          },
+          {
+            "x": 175.1018902854818,
+            "y": 27.015395985903705,
+            "z": -227.96041666666667
+          }
+        ],
+        "point": {
+          "x": 168.4284552340718,
+          "y": 26.52516763873836,
+          "z": -231.5597222222222
+        },
+        "normal": {
+          "x": 0.474704731090196,
+          "y": 0,
+          "z": -0.8801451120585653
+        },
+        "areaM2": 0.9374538282541572,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-fore-armor-4",
+          "fore-armor"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 172.84970658467316,
+            "y": 26.52516763873836,
+            "z": -239.75711843623793
+          },
+          "direction": {
+            "x": -0.474704731090196,
+            "y": 0,
+            "z": 0.8801451120585653
+          },
+          "maxDistanceM": 9.333687142842706
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "SPINE_AND_MODULES",
+    "seed": 12,
+    "shipyard": "vesper",
+    "architecture": "SPINE_AND_MODULES",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "vesper",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 12,
+      "targetMassKg": 255967000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "SPINE_AND_MODULES"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": []
+    },
+    "sourceSha": "009a64923ea4f8fc999b964810a3d8af4dfc48922f161ab5c226f5ad65e2c429",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 103951.51234734201,
+        "plannedEligibleAreaM2": 34819.292495959555,
+        "intentionalExclusionAreaM2": 26998.44817403083,
+        "physicalCoveredAreaEstimateM2": 34580.957475008465,
+        "physicalUncoveredAreaEstimateM2": 238.33502095106743,
+        "unresolvedAreaM2": 42133.771677349556,
+        "visualMismatchAreaEstimateM2": 12.500606459807194,
+        "sampledAreaM2": 103951.51234734201,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.9931550871983184,
+        "counts": {
+          "COVERED": 2110,
+          "INTENTIONALLY_EXPOSED": 7449,
+          "MISSING_ARMOR": 304,
+          "UNRESOLVED": 9366,
+          "VISUAL_PHYSICAL_MISMATCH": 35
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 40912.800290969244,
+        "plannedEligibleAreaM2": 873.3289725002958,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 873.3289725002958,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 40039.47131846904,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 873.3289725002958,
+        "unsampledAreaM2": 40039.47131846904,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 736,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 36853,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 1453.7826290000012,
+      "physicalQueryPreparationMs": 565.0969440000008,
+      "queryMs": 325.3745009999857,
+      "queryCount": 20000,
+      "visualQueryMs": 78.00447900008112,
+      "workMs": 648.6316360000328
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-breech--1-4/3256",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-breech--1-4",
+        "parentStructureId": "breech--1",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": -19.077299635255255,
+            "y": 12.259793894587798,
+            "z": -17.148749999999996
+          },
+          {
+            "x": -19.077299635255255,
+            "y": 12.259793894587798,
+            "z": -10.627499999999996
+          },
+          {
+            "x": -19.077299635255255,
+            "y": 12.218291359052506,
+            "z": -10.714449999999996
+          }
+        ],
+        "point": {
+          "x": -19.07729963525525,
+          "y": 12.245959716076033,
+          "z": -12.830233333333329
+        },
+        "normal": {
+          "x": 0.9999999999999999,
+          "y": 0,
+          "z": 0
+        },
+        "areaM2": 0.1353242049297616,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-breech--1-4",
+          "breech--1"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": -17.983602133204364,
+            "y": 12.245959716076033,
+            "z": -12.830233333333329
+          },
+          "direction": {
+            "x": -0.9999999999999999,
+            "y": 0,
+            "z": 0
+          },
+          "maxDistanceM": 1.113697502050886
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "TRUSS_POD",
+    "seed": 7,
+    "shipyard": "vesper",
+    "architecture": "TRUSS_POD",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "vesper",
+      "shipClass": "Frigate",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 683386000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "TRUSS_POD"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 10000000000
+    },
+    "sourceSha": "3aa3c5f7c87bd4747f559627b963a2240feb8d24cf9f3a4a30fb98e0a1fac205",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 123324.95185888428,
+        "plannedEligibleAreaM2": 55889.535978478874,
+        "intentionalExclusionAreaM2": 40331.90511206684,
+        "physicalCoveredAreaEstimateM2": 55250.32444589342,
+        "physicalUncoveredAreaEstimateM2": 639.2115325854642,
+        "unresolvedAreaM2": 27103.51076835235,
+        "visualMismatchAreaEstimateM2": 8.386394317382459,
+        "sampledAreaM2": 105850.32715990156,
+        "unsampledAreaM2": 17474.62469898345,
+        "coverageEstimate": 0.9885629479401727,
+        "counts": {
+          "COVERED": 2958,
+          "INTENTIONALLY_EXPOSED": 8656,
+          "MISSING_ARMOR": 353,
+          "UNRESOLVED": 10801,
+          "VISUAL_PHYSICAL_MISMATCH": 11
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 71054.74578748985,
+        "plannedEligibleAreaM2": 0,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 0,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 71054.74578748985,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 0,
+        "unsampledAreaM2": 71054.74578748985,
+        "coverageEstimate": null,
+        "counts": {
+          "COVERED": 0,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 47947,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 1997.7957339999994,
+      "physicalQueryPreparationMs": 687.6221729999997,
+      "queryMs": 534.3712099999357,
+      "queryCount": 20000,
+      "visualQueryMs": 150.0072809998892,
+      "workMs": 1040.1090460000014
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-pressure-core-4/29",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-pressure-core-4",
+        "parentStructureId": "pressure-core",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 32.38709899187798,
+            "y": 14.12682715913507,
+            "z": -99.75
+          },
+          {
+            "x": 32.38709899187798,
+            "y": 14.12682715913507,
+            "z": -64.875
+          },
+          {
+            "x": 32.38709899187798,
+            "y": 13.93607566539469,
+            "z": -65.34
+          }
+        ],
+        "point": {
+          "x": 32.38709899187798,
+          "y": 14.063243327888276,
+          "z": -76.655
+        },
+        "normal": {
+          "x": 0.9999999999999999,
+          "y": 0,
+          "z": 0
+        },
+        "areaM2": 3.3262291720978885,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-pressure-core-4",
+          "pressure-core"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 34.7349056830008,
+            "y": 14.063243327888276,
+            "z": -76.655
+          },
+          "direction": {
+            "x": -0.9999999999999999,
+            "y": 0,
+            "z": 0
+          },
+          "maxDistanceM": 2.367806691122822
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "TWIN_HULL",
+    "seed": 11,
+    "shipyard": "forge",
+    "architecture": "TWIN_HULL",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "forge",
+      "shipClass": "Frigate",
+      "lengthM": 400,
+      "seed": 11,
+      "targetMassKg": 2581260000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "TWIN_HULL"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 10000000000
+    },
+    "sourceSha": "15487de942a46467c838a4347f758751312a814becbb2dadca32101825d55bcd",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 189149.66800857583,
+        "plannedEligibleAreaM2": 102341.61004035924,
+        "intentionalExclusionAreaM2": 54196.10541373819,
+        "physicalCoveredAreaEstimateM2": 95308.03221962023,
+        "physicalUncoveredAreaEstimateM2": 7033.5778207387975,
+        "unresolvedAreaM2": 32611.952554480526,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 189149.66800857583,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.931273527766807,
+        "counts": {
+          "COVERED": 2578,
+          "INTENTIONALLY_EXPOSED": 5486,
+          "MISSING_ARMOR": 1232,
+          "UNRESOLVED": 7581,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 131477.21832041556,
+        "plannedEligibleAreaM2": 20808.056924153327,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 20808.056924153327,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 110669.16139626216,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 20808.056924153327,
+        "unsampledAreaM2": 110669.16139626216,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 3123,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 34645,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 4442.263901000002,
+      "physicalQueryPreparationMs": 1629.7286319999985,
+      "queryMs": 1138.7910090003643,
+      "queryCount": 20000,
+      "visualQueryMs": 342.5605770000984,
+      "workMs": 2743.349030000016
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-central-bridge-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-central-bridge-4",
+        "parentStructureId": "central-bridge",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 24.159590482424584,
+            "y": 12.624905314473825,
+            "z": -193.2926829268293
+          },
+          {
+            "x": 27.369606001068412,
+            "y": 13.456485904049945,
+            "z": -186.58536585365854
+          },
+          {
+            "x": 27.326805794153163,
+            "y": 13.405542207071642,
+            "z": -186.67479674796746
+          }
+        ],
+        "point": {
+          "x": 26.285334092548716,
+          "y": 13.162311141865136,
+          "z": -188.85094850948508
+        },
+        "normal": {
+          "x": 0.902020694899921,
+          "y": 0,
+          "z": -0.43169279119793474
+        },
+        "areaM2": 0.14818203961879928,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-central-bridge-4",
+          "central-bridge"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 27.760509752455,
+            "y": 13.162311141865136,
+            "z": -189.55694417203787
+          },
+          "direction": {
+            "x": -0.902020694899921,
+            "y": 0,
+            "z": 0.43169279119793474
+          },
+          "maxDistanceM": 1.6554122119891648
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "CORE_AND_NACELLES",
+    "seed": 11,
+    "shipyard": "vesper",
+    "architecture": "CORE_AND_NACELLES",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "vesper",
+      "shipClass": "Frigate",
+      "lengthM": 200,
+      "seed": 11,
+      "targetMassKg": 56405000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "CORE_AND_NACELLES"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": []
+    },
+    "sourceSha": "31cda928a6ec2632f27df525af637cb7c916acfbbd5e2f9e3a43da6d00789055",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 41648.62756174343,
+        "plannedEligibleAreaM2": 20452.371961474768,
+        "intentionalExclusionAreaM2": 10371.81763631968,
+        "physicalCoveredAreaEstimateM2": 20334.059825241908,
+        "physicalUncoveredAreaEstimateM2": 118.31213623284145,
+        "unresolvedAreaM2": 10824.437963948076,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 31924.48262515544,
+        "unsampledAreaM2": 9724.144936587412,
+        "coverageEstimate": 0.9942152364304874,
+        "counts": {
+          "COVERED": 6142,
+          "INTENTIONALLY_EXPOSED": 6534,
+          "MISSING_ARMOR": 690,
+          "UNRESOLVED": 15351,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 26764.16117959073,
+        "plannedEligibleAreaM2": 0,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 0,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 26764.16117959073,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 0,
+        "unsampledAreaM2": 26764.16117959073,
+        "coverageEstimate": null,
+        "counts": {
+          "COVERED": 0,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 65146,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 7185.297011000002,
+      "physicalQueryPreparationMs": 2404.478271,
+      "queryMs": 1078.5185400005357,
+      "queryCount": 20000,
+      "visualQueryMs": 258.92844800023886,
+      "workMs": 2489.9242700000177
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-command-core-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-command-core-4",
+        "parentStructureId": "command-core",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 19.52290139993906,
+            "y": 7.232558453220093,
+            "z": -94.4375
+          },
+          {
+            "x": 19.52290139993906,
+            "y": 7.232558453220093,
+            "z": -88.875
+          },
+          {
+            "x": 19.52290139993906,
+            "y": 7.208115767494001,
+            "z": -88.94916666666666
+          }
+        ],
+        "point": {
+          "x": 19.52290139993906,
+          "y": 7.224410891311395,
+          "z": -90.75388888888888
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "areaM2": 0.0679812196756921,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-command-core-4",
+          "command-core"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 20.881374751132476,
+            "y": 7.224410891311395,
+            "z": -90.75388888888888
+          },
+          "direction": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "maxDistanceM": 1.3784733511934169
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "STACKED_BLOCKS",
+    "seed": 7,
+    "shipyard": "aegis",
+    "architecture": "STACKED_BLOCKS",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Cruiser",
+      "lengthM": 300,
+      "seed": 7,
+      "targetMassKg": 1834194000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "STACKED_BLOCKS"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 10000000000
+    },
+    "sourceSha": "16348ac4ab73ba3362550b4dd569f65cb48c096d0c5bdf19e3f84bc0f7b40afe",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 218819.89050825563,
+        "plannedEligibleAreaM2": 69564.13378941687,
+        "intentionalExclusionAreaM2": 136438.47108762915,
+        "physicalCoveredAreaEstimateM2": 69393.79643125056,
+        "physicalUncoveredAreaEstimateM2": 170.33735816627757,
+        "unresolvedAreaM2": 12817.285631208657,
+        "visualMismatchAreaEstimateM2": 342.0902033004231,
+        "sampledAreaM2": 218819.89050825563,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.9975513623344762,
+        "counts": {
+          "COVERED": 2013,
+          "INTENTIONALLY_EXPOSED": 6314,
+          "MISSING_ARMOR": 114,
+          "UNRESOLVED": 1134,
+          "VISUAL_PHYSICAL_MISMATCH": 35
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 107089.15892078674,
+        "plannedEligibleAreaM2": 83382.76207584755,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 83382.76207576091,
+        "physicalUncoveredAreaEstimateM2": 8.66399222413769e-08,
+        "unresolvedAreaM2": 23706.396844939485,
+        "visualMismatchAreaEstimateM2": 10.563765247705804,
+        "sampledAreaM2": 83382.76207584755,
+        "unsampledAreaM2": 23706.396844939485,
+        "coverageEstimate": 0.9999999999989609,
+        "counts": {
+          "COVERED": 10314,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 2,
+          "UNRESOLVED": 9503,
+          "VISUAL_PHYSICAL_MISMATCH": 74
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 1990.117538999999,
+      "physicalQueryPreparationMs": 859.784544999995,
+      "queryMs": 1057.7288570002493,
+      "queryCount": 20000,
+      "visualQueryMs": 590.5316990001156,
+      "workMs": 2571.8695529999895
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-armored-keel-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-armored-keel-4",
+        "parentStructureId": "armored-keel",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 41.5706408393527,
+            "y": -4.816553081044319,
+            "z": -142.5
+          },
+          {
+            "x": 48.13442623503997,
+            "y": -4.051455721813716,
+            "z": -135
+          },
+          {
+            "x": 48.0469090964308,
+            "y": -4.0776201623701205,
+            "z": -135.10000000000002
+          }
+        ],
+        "point": {
+          "x": 45.917325390274485,
+          "y": -4.3152096550760515,
+          "z": -137.53333333333333
+        },
+        "normal": {
+          "x": 0.7525127767148535,
+          "y": 0,
+          "z": -0.6585776498492041
+        },
+        "areaM2": 0.07954919302009968,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-armored-keel-4",
+          "armored-keel"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 49.54008643791231,
+            "y": -4.3152096550760515,
+            "z": -140.7038701408733
+          },
+          "direction": {
+            "x": -0.7525127767148535,
+            "y": 0,
+            "z": 0.6585776498492041
+          },
+          "maxDistanceM": 4.8342186548024335
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "id": "HYBRID",
+    "seed": 11,
+    "shipyard": "serein",
+    "architecture": "HYBRID",
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "serein",
+      "shipClass": "Frigate",
+      "lengthM": 300,
+      "seed": 11,
+      "targetMassKg": 366196000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "HYBRID"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 10000000000
+    },
+    "sourceSha": "8fe85c7745039d83791d2fa54136e630ec66708fe02e3b6112bdae0cc41c3fe5",
+    "summary": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 100929.63370214132,
+        "plannedEligibleAreaM2": 32218.194420698517,
+        "intentionalExclusionAreaM2": 33823.36131161531,
+        "physicalCoveredAreaEstimateM2": 30515.07799472963,
+        "physicalUncoveredAreaEstimateM2": 1703.1164259688999,
+        "unresolvedAreaM2": 34888.07796982831,
+        "visualMismatchAreaEstimateM2": 1640.7136172567089,
+        "sampledAreaM2": 100929.63370214132,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.9471380548602462,
+        "counts": {
+          "COVERED": 2613,
+          "INTENTIONALLY_EXPOSED": 6965,
+          "MISSING_ARMOR": 190,
+          "UNRESOLVED": 9641,
+          "VISUAL_PHYSICAL_MISMATCH": 36
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 48402.85093933466,
+        "plannedEligibleAreaM2": 1300.567585821856,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 1300.567585821856,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 47102.28335351281,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 1300.567585821856,
+        "unsampledAreaM2": 47102.28335351281,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 555,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 36799,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      }
+    },
+    "diagnostics": {
+      "preparationMs": 2742.0303540000023,
+      "physicalQueryPreparationMs": 987.9280629999994,
+      "queryMs": 931.2052209998437,
+      "queryCount": 20000,
+      "visualQueryMs": 234.26048800041463,
+      "workMs": 2022.078257000001
+    },
+    "totalPatchCount": 20000,
+    "confidence": "Stratified finite-ray area estimate, NOT proof of complete coverage. Edge bands are sampled explicitly. Unsampled/sub-tile holes may remain; no finite error bound claimed. Hull footprint and raised armor skin areas are separate domains and MUST NOT be added.",
+    "examples": [
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-breech--1-4/3130",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-breech--1-4",
+        "parentStructureId": "breech--1",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": -33.7200528117538,
+            "y": 7.428023063743463,
+            "z": -9.5625
+          },
+          {
+            "x": -33.7200528117538,
+            "y": 7.428023063743463,
+            "z": -2.625
+          },
+          {
+            "x": -33.7200528117538,
+            "y": 7.402767785326735,
+            "z": -2.7175
+          }
+        ],
+        "point": {
+          "x": -33.7200528117538,
+          "y": 7.419604637604554,
+          "z": -4.968333333333333
+        },
+        "normal": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "areaM2": 0.08760424700802652,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-breech--1-4",
+          "breech--1"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": -31.784968746433833,
+            "y": 7.419604637604554,
+            "z": -4.968333333333333
+          },
+          "direction": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "maxDistanceM": 1.955084065319969
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      },
+      {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-breech--1-23/3969",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-breech--1-23",
+        "parentStructureId": "breech--1",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": -47.34012764827753,
+            "y": -14.51336666347956,
+            "z": 11.620000000000001
+          },
+          {
+            "x": -33.90287260821721,
+            "y": -7.816261069208455,
+            "z": 38.815
+          },
+          {
+            "x": -47.34012764827753,
+            "y": -14.51336666347956,
+            "z": 38.815
+          }
+        ],
+        "point": {
+          "x": -42.86104263492408,
+          "y": -12.280998132055858,
+          "z": 29.75
+        },
+        "normal": {
+          "x": 0.44606643891146974,
+          "y": -0.8949998503222446,
+          "z": 0
+        },
+        "areaM2": 204.1487217471985,
+        "planned": "REQUIRED",
+        "policy": "BALANCED / retained actual structural armor",
+        "sourceReferences": [
+          "surface-breech--1-23",
+          "breech--1"
+        ],
+        "status": "VISUAL_PHYSICAL_MISMATCH",
+        "visual": {
+          "covered": true,
+          "sourceIds": [
+            "breech--1/belly-starboard"
+          ]
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": -41.57430072407854,
+            "y": -14.862752142558048,
+            "z": 29.75
+          },
+          "direction": {
+            "x": -0.44606643891146974,
+            "y": 0.8949998503222446,
+            "z": 0
+          },
+          "maxDistanceM": 2.904641834937323
+        },
+        "reason": "Stored Normal armor source intersects; finite physical armor does not",
+        "warnings": []
+      }
+    ]
+  }
+]

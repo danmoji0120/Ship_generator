@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Actual canvas + worker installs gun-105",
+    "Actual canvas + worker installs missile-small",
+    "Mounted mass increases, original base mass unchanged",
+    "Actual equipment deletion",
+    "Undo restores exact installed design",
+    "Redo removes selected equipment",
+    "Installed equipment save/load exact",
+    "Legacy armed design remains byte-identical",
+    "Console and page errors zero"
+  ],
+  "errors": []
+}

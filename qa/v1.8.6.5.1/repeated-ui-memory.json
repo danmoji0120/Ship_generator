@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "cycle": 0,
+      "wallMs": 2105,
+      "postResetHeap": {
+        "usedSize": 228113124,
+        "totalSize": 229765120,
+        "embedderHeapUsedSize": 3694984,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    },
+    {
+      "cycle": 1,
+      "wallMs": 1528,
+      "postResetHeap": {
+        "usedSize": 228281180,
+        "totalSize": 230027264,
+        "embedderHeapUsedSize": 3692072,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    },
+    {
+      "cycle": 2,
+      "wallMs": 1428,
+      "postResetHeap": {
+        "usedSize": 228364640,
+        "totalSize": 230289408,
+        "embedderHeapUsedSize": 3645544,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    },
+    {
+      "cycle": 3,
+      "wallMs": 2001,
+      "postResetHeap": {
+        "usedSize": 228400904,
+        "totalSize": 230551552,
+        "embedderHeapUsedSize": 3673784,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    },
+    {
+      "cycle": 4,
+      "wallMs": 1790,
+      "postResetHeap": {
+        "usedSize": 228429872,
+        "totalSize": 230289408,
+        "embedderHeapUsedSize": 3675248,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    },
+    {
+      "cycle": 5,
+      "wallMs": 1981,
+      "postResetHeap": {
+        "usedSize": 228449292,
+        "totalSize": 230551552,
+        "embedderHeapUsedSize": 3693232,
+        "backingStorageSize": 6643699
+      },
+      "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+    }
+  ],
+  "errors": [],
+  "method": "Six real authoritative HIGH Production bursts + actual instance reset + explicit browser GC. Timings are secondary lifecycle observations, not matched Before/After benchmarks."
+}

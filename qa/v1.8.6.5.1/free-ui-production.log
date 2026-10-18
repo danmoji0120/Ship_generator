@@ -1,0 +1,9 @@
+PASS Actual canvas + worker installs gun-105
+PASS Actual canvas + worker installs missile-small
+PASS Mounted mass increases, original base mass unchanged
+PASS Actual equipment deletion
+PASS Undo restores exact installed design
+PASS Redo removes selected equipment
+PASS Installed equipment save/load exact
+PASS Legacy armed design remains byte-identical
+PASS Console and page errors zero

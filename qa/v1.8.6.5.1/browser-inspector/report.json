@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "COVERED actual Inspector data",
+    "Real material and measured thickness in Inspector",
+    "INTENTIONALLY_EXPOSED actual Inspector data",
+    "Actual policy/exclusion reason remains explicit",
+    "UNRESOLVED actual Inspector data",
+    "Production kinetic shot resolves actual finite material",
+    "Kinetic shot keeps design immutable",
+    "No console/page errors"
+  ],
+  "errors": []
+}

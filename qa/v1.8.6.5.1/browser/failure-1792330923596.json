@@ -1,0 +1,6 @@
+{
+  "error": "page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('#integrity-run') to be visible\u001b[22m\n\u001b[2m    129 × locator resolved to hidden <button id=\"integrity-run\">Audit stored design</button>\u001b[22m\n\n    at /workspace/shipyard-v1.8.6.5.1/tests/integrity-browser.mjs:7:57",
+  "checks": [],
+  "rows": [],
+  "errors": []
+}

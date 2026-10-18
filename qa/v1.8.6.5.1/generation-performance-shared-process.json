@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "version": "1.8.6.3.1",
+      "run": 0,
+      "elapsedMs": 8787.838267,
+      "armorKg": 293041272.36377823,
+      "baseKg": 628128484.6566122,
+      "rss": 900759552
+    },
+    {
+      "version": "1.8.6.3.1",
+      "run": 1,
+      "elapsedMs": 2377.479458,
+      "armorKg": 293041272.36377823,
+      "baseKg": 628128484.6566122,
+      "rss": 896200704
+    },
+    {
+      "version": "1.8.6.3.1",
+      "run": 2,
+      "elapsedMs": 2459.4991059999993,
+      "armorKg": 293041272.36377823,
+      "baseKg": 628128484.6566122,
+      "rss": 876429312
+    },
+    {
+      "version": "1.8.6.5.1",
+      "run": 0,
+      "elapsedMs": 9880.361006000001,
+      "armorKg": 294895158.4486725,
+      "baseKg": 629982370.7415197,
+      "rss": 1256431616
+    },
+    {
+      "version": "1.8.6.5.1",
+      "run": 1,
+      "elapsedMs": 2545.1976140000006,
+      "armorKg": 294895158.4486725,
+      "baseKg": 629982370.7415197,
+      "rss": 1317429248
+    },
+    {
+      "version": "1.8.6.5.1",
+      "run": 2,
+      "elapsedMs": 2557.6947709999986,
+      "armorKg": 294895158.4486725,
+      "baseKg": 629982370.7415197,
+      "rss": 1293197312
+    }
+  ],
+  "method": "One isolated fresh Node process; each explicit contract first call then two warm calls, GC outside each interval. First new-version sample shares prior geometry caches; not a fully cold new-process measurement."
+}

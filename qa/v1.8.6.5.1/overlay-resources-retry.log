@@ -1,0 +1,54 @@
+PASS persistent GPU resources / six cycles {
+  baseline: { geometries: 29, textures: 3, programs: 8, drawCalls: 29 },
+  cycles: [
+    {
+      cycle: 0,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    },
+    {
+      cycle: 1,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    },
+    {
+      cycle: 2,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    },
+    {
+      cycle: 3,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    },
+    {
+      cycle: 4,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    },
+    {
+      cycle: 5,
+      peak: [Object],
+      afterQualityToggles: [Object],
+      afterOFF: [Object],
+      reused: true,
+      allocations: 3
+    }
+  ],
+  disposed: { geometries: 0, textures: 0, sceneChildren: 0 }
+}

@@ -1,0 +1,212 @@
+{
+  "pair": [
+    {
+      "phase": "before",
+      "patch": {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-citadel-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-citadel-4",
+        "parentStructureId": "citadel",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 101.19842599999998,
+            "y": 25.225305769929122,
+            "z": -223.25
+          },
+          {
+            "x": 113.48262799999999,
+            "y": 26.537604914029483,
+            "z": -211.5
+          },
+          {
+            "x": 113.31883864,
+            "y": 26.439384552137508,
+            "z": -211.65666666666667
+          }
+        ],
+        "point": {
+          "x": 109.33329754666666,
+          "y": 26.067431745365372,
+          "z": -215.46888888888887
+        },
+        "normal": {
+          "x": 0.6912193816034299,
+          "y": 0,
+          "z": -0.7226449795686483
+        },
+        "areaM2": 0.6861032437015547,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-citadel-4",
+          "citadel"
+        ],
+        "status": "MISSING_ARMOR",
+        "visual": {
+          "covered": false,
+          "sourceIds": []
+        },
+        "physical": {
+          "covered": false,
+          "layers": [],
+          "pieceReferences": [],
+          "hullOnly": true
+        },
+        "ray": {
+          "origin": {
+            "x": 122.92722619508827,
+            "y": 26.067431745365372,
+            "z": -229.6808519093823
+          },
+          "direction": {
+            "x": -0.6912193816034299,
+            "y": 0,
+            "z": 0.7226449795686483
+          },
+          "maxDistanceM": 19.686590680498007
+        },
+        "reason": "Commissioned protection; no finite physical armor or Normal armor on this path",
+        "warnings": []
+      }
+    },
+    {
+      "phase": "after",
+      "patch": {
+        "id": "audit/HULL_TARGET_FOOTPRINT/surface-citadel-4/288",
+        "domain": "HULL_TARGET_FOOTPRINT",
+        "surfaceId": "surface-citadel-4",
+        "parentStructureId": "citadel",
+        "protectionZone": "HULL_TARGET",
+        "polygon": [
+          {
+            "x": 101.19842599999998,
+            "y": 25.225305769929122,
+            "z": -223.25
+          },
+          {
+            "x": 113.48262799999999,
+            "y": 26.537604914029483,
+            "z": -211.5
+          },
+          {
+            "x": 113.31883864,
+            "y": 26.439384552137508,
+            "z": -211.65666666666667
+          }
+        ],
+        "point": {
+          "x": 109.33329754666666,
+          "y": 26.067431745365372,
+          "z": -215.46888888888887
+        },
+        "normal": {
+          "x": 0.6912193816034299,
+          "y": 0,
+          "z": -0.7226449795686483
+        },
+        "areaM2": 0.6861032437015547,
+        "planned": "REQUIRED",
+        "policy": "BALANCED",
+        "sourceReferences": [
+          "surface-citadel-4",
+          "citadel"
+        ],
+        "status": "COVERED",
+        "visual": {
+          "covered": true,
+          "sourceIds": [
+            "seam-citadel-4-right-2"
+          ]
+        },
+        "physical": {
+          "covered": true,
+          "layers": [
+            {
+              "surfaceId": "plate/seam-citadel-4-right-2",
+              "layerId": "plate/seam-citadel-4-right-2/ceramic",
+              "materialId": "CERAMIC_COMPOSITE",
+              "constituentMaterialId": "CERAMIC_STRIKE_FACE",
+              "pathLengthM": 0.2268113982598905,
+              "measuredNormalThicknessMm": 0.043951241164408295,
+              "entryPoint": {
+                "x": 110.59233143371526,
+                "y": 26.067431745365372,
+                "z": -216.78516349257825
+              },
+              "exitPoint": {
+                "x": 110.43555499926944,
+                "y": 26.067431745365372,
+                "z": -216.62125937431676
+              }
+            },
+            {
+              "surfaceId": "plate/seam-citadel-4-right-2",
+              "layerId": "plate/seam-citadel-4-right-2/ceramic",
+              "materialId": "CERAMIC_COMPOSITE",
+              "constituentMaterialId": "CERAMIC_STRIKE_FACE",
+              "pathLengthM": 0.8473069926132055,
+              "measuredNormalThicknessMm": 64.49255999999792,
+              "entryPoint": {
+                "x": 110.43542911881052,
+                "y": 26.067431745365372,
+                "z": -216.62112777082868
+              },
+              "exitPoint": {
+                "x": 109.84975410334815,
+                "y": 26.067431745365372,
+                "z": -216.00882562646333
+              }
+            },
+            {
+              "surfaceId": "plate/seam-citadel-4-right-2",
+              "layerId": "plate/seam-citadel-4-right-2/ceramic",
+              "materialId": "CERAMIC_COMPOSITE",
+              "constituentMaterialId": "CERAMIC_STRIKE_FACE",
+              "pathLengthM": 0.7469484203941157,
+              "measuredNormalThicknessMm": 64.49256000000148,
+              "entryPoint": {
+                "x": 109.84960277190115,
+                "y": 26.067431745365372,
+                "z": -216.0086674148834
+              },
+              "exitPoint": {
+                "x": 109.33329754666667,
+                "y": 26.067431745365372,
+                "z": -215.46888888888887
+              }
+            }
+          ],
+          "pieceReferences": [
+            "plate/seam-citadel-4-right-2/piece/0",
+            "plate/seam-citadel-4-right-2/piece/1",
+            "plate/seam-citadel-4-right-2/piece/6",
+            "plate/seam-citadel-4-right-2/piece/8",
+            "plate/seam-citadel-4-right-2/piece/12"
+          ],
+          "hullOnly": false
+        },
+        "ray": {
+          "origin": {
+            "x": 122.92722619508827,
+            "y": 26.067431745365372,
+            "z": -229.6808519093823
+          },
+          "direction": {
+            "x": -0.6912193816034299,
+            "y": 0,
+            "z": 0.7226449795686483
+          },
+          "maxDistanceM": 19.686590680498007
+        },
+        "reason": "Actual finite armor layer intersection",
+        "warnings": []
+      }
+    }
+  ],
+  "checks": [
+    "Actual same-point Production pair is MISSING → COVERED",
+    "No console/page errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,64 @@
+BALANCED {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":425834.4708738929,"plannedEligibleAreaM2":220724.00894326327,"intentionalExclusionAreaM2":150868.5898373823,"physicalCoveredAreaEstimateM2":219866.51799481272,"physicalUncoveredAreaEstimateM2":857.4909484509877,"unresolvedAreaM2":54241.872093243604,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":425834.4708738929,"unsampledAreaM2":0,"coverageEstimate":0.9961150988850018,"counts":{"COVERED":1039,"INTENTIONALLY_EXPOSED":2284,"MISSING_ARMOR":208,"UNRESOLVED":1092,"VISUAL_PHYSICAL_MISMATCH":0}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":293194.9966001855,"plannedEligibleAreaM2":285306.91061738384,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":285306.91061738384,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":7888.085982802615,"visualMismatchAreaEstimateM2":0.2573625648455115,"sampledAreaM2":285306.91061738384,"unsampledAreaM2":7888.085982802615,"coverageEstimate":1,"counts":{"COVERED":15375,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":3114,"VISUAL_PHYSICAL_MISMATCH":2}}} {
+  preparationMs: 930.508506,
+  physicalQueryPreparationMs: 394.11353800000006,
+  queryMs: 596.5807009999739,
+  queryCount: 20000,
+  visualQueryMs: 100.78362800001014,
+  workMs: 1381.4994220000012
+}
+BLOCK_ASSEMBLY {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":461167.24455795006,"plannedEligibleAreaM2":207435.72093810147,"intentionalExclusionAreaM2":174154.7885953944,"physicalCoveredAreaEstimateM2":201984.3982637472,"physicalUncoveredAreaEstimateM2":5451.322674354018,"unresolvedAreaM2":79576.73502444846,"visualMismatchAreaEstimateM2":4728.064358906231,"sampledAreaM2":461167.24455795006,"unsampledAreaM2":0,"coverageEstimate":0.973720424574411,"counts":{"COVERED":2212,"INTENTIONALLY_EXPOSED":7496,"MISSING_ARMOR":307,"UNRESOLVED":6762,"VISUAL_PHYSICAL_MISMATCH":100}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":268856.6978127877,"plannedEligibleAreaM2":48841.82190076984,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":48841.82190076984,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":220014.87591201733,"visualMismatchAreaEstimateM2":2.051287654782692,"sampledAreaM2":48841.82190076984,"unsampledAreaM2":220014.87591201733,"coverageEstimate":1,"counts":{"COVERED":3106,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":35761,"VISUAL_PHYSICAL_MISMATCH":17}}} {
+  preparationMs: 1564.9773109999996,
+  physicalQueryPreparationMs: 567.4628139999995,
+  queryMs: 628.92400800001,
+  queryCount: 20000,
+  visualQueryMs: 156.32795800000622,
+  workMs: 1157.862393999987
+}
+SPINE_AND_MODULES {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":103951.51234734201,"plannedEligibleAreaM2":34819.292495959555,"intentionalExclusionAreaM2":26998.44817403083,"physicalCoveredAreaEstimateM2":34580.957475008465,"physicalUncoveredAreaEstimateM2":238.33502095106743,"unresolvedAreaM2":42133.771677349556,"visualMismatchAreaEstimateM2":12.500606459807194,"sampledAreaM2":103951.51234734201,"unsampledAreaM2":0,"coverageEstimate":0.9931550871983184,"counts":{"COVERED":2110,"INTENTIONALLY_EXPOSED":7449,"MISSING_ARMOR":304,"UNRESOLVED":9366,"VISUAL_PHYSICAL_MISMATCH":35}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":40912.800290969244,"plannedEligibleAreaM2":873.3289725002958,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":873.3289725002958,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":40039.47131846904,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":873.3289725002958,"unsampledAreaM2":40039.47131846904,"coverageEstimate":1,"counts":{"COVERED":736,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":36853,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 1453.7826290000012,
+  physicalQueryPreparationMs: 565.0969440000008,
+  queryMs: 325.3745009999857,
+  queryCount: 20000,
+  visualQueryMs: 78.00447900008112,
+  workMs: 648.6316360000328
+}
+TRUSS_POD {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":123324.95185888428,"plannedEligibleAreaM2":55889.535978478874,"intentionalExclusionAreaM2":40331.90511206684,"physicalCoveredAreaEstimateM2":55250.32444589342,"physicalUncoveredAreaEstimateM2":639.2115325854642,"unresolvedAreaM2":27103.51076835235,"visualMismatchAreaEstimateM2":8.386394317382459,"sampledAreaM2":105850.32715990156,"unsampledAreaM2":17474.62469898345,"coverageEstimate":0.9885629479401727,"counts":{"COVERED":2958,"INTENTIONALLY_EXPOSED":8656,"MISSING_ARMOR":353,"UNRESOLVED":10801,"VISUAL_PHYSICAL_MISMATCH":11}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":71054.74578748985,"plannedEligibleAreaM2":0,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":0,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":71054.74578748985,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":0,"unsampledAreaM2":71054.74578748985,"coverageEstimate":null,"counts":{"COVERED":0,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":47947,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 1997.7957339999994,
+  physicalQueryPreparationMs: 687.6221729999997,
+  queryMs: 534.3712099999357,
+  queryCount: 20000,
+  visualQueryMs: 150.0072809998892,
+  workMs: 1040.1090460000014
+}
+TWIN_HULL {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":189149.66800857583,"plannedEligibleAreaM2":102341.61004035924,"intentionalExclusionAreaM2":54196.10541373819,"physicalCoveredAreaEstimateM2":95308.03221962023,"physicalUncoveredAreaEstimateM2":7033.5778207387975,"unresolvedAreaM2":32611.952554480526,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":189149.66800857583,"unsampledAreaM2":0,"coverageEstimate":0.931273527766807,"counts":{"COVERED":2578,"INTENTIONALLY_EXPOSED":5486,"MISSING_ARMOR":1232,"UNRESOLVED":7581,"VISUAL_PHYSICAL_MISMATCH":0}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":131477.21832041556,"plannedEligibleAreaM2":20808.056924153327,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":20808.056924153327,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":110669.16139626216,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":20808.056924153327,"unsampledAreaM2":110669.16139626216,"coverageEstimate":1,"counts":{"COVERED":3123,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":34645,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 4442.263901000002,
+  physicalQueryPreparationMs: 1629.7286319999985,
+  queryMs: 1138.7910090003643,
+  queryCount: 20000,
+  visualQueryMs: 342.5605770000984,
+  workMs: 2743.349030000016
+}
+CORE_AND_NACELLES {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":41648.62756174343,"plannedEligibleAreaM2":20452.371961474768,"intentionalExclusionAreaM2":10371.81763631968,"physicalCoveredAreaEstimateM2":20334.059825241908,"physicalUncoveredAreaEstimateM2":118.31213623284145,"unresolvedAreaM2":10824.437963948076,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":31924.48262515544,"unsampledAreaM2":9724.144936587412,"coverageEstimate":0.9942152364304874,"counts":{"COVERED":6142,"INTENTIONALLY_EXPOSED":6534,"MISSING_ARMOR":690,"UNRESOLVED":15351,"VISUAL_PHYSICAL_MISMATCH":0}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":26764.16117959073,"plannedEligibleAreaM2":0,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":0,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":26764.16117959073,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":0,"unsampledAreaM2":26764.16117959073,"coverageEstimate":null,"counts":{"COVERED":0,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":65146,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 7185.297011000002,
+  physicalQueryPreparationMs: 2404.478271,
+  queryMs: 1078.5185400005357,
+  queryCount: 20000,
+  visualQueryMs: 258.92844800023886,
+  workMs: 2489.9242700000177
+}
+STACKED_BLOCKS {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":218819.89050825563,"plannedEligibleAreaM2":69564.13378941687,"intentionalExclusionAreaM2":136438.47108762915,"physicalCoveredAreaEstimateM2":69393.79643125056,"physicalUncoveredAreaEstimateM2":170.33735816627757,"unresolvedAreaM2":12817.285631208657,"visualMismatchAreaEstimateM2":342.0902033004231,"sampledAreaM2":218819.89050825563,"unsampledAreaM2":0,"coverageEstimate":0.9975513623344762,"counts":{"COVERED":2013,"INTENTIONALLY_EXPOSED":6314,"MISSING_ARMOR":114,"UNRESOLVED":1134,"VISUAL_PHYSICAL_MISMATCH":35}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":107089.15892078674,"plannedEligibleAreaM2":83382.76207584755,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":83382.76207576091,"physicalUncoveredAreaEstimateM2":8.66399222413769e-8,"unresolvedAreaM2":23706.396844939485,"visualMismatchAreaEstimateM2":10.563765247705804,"sampledAreaM2":83382.76207584755,"unsampledAreaM2":23706.396844939485,"coverageEstimate":0.9999999999989609,"counts":{"COVERED":10314,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":2,"UNRESOLVED":9503,"VISUAL_PHYSICAL_MISMATCH":74}}} {
+  preparationMs: 1990.117538999999,
+  physicalQueryPreparationMs: 859.784544999995,
+  queryMs: 1057.7288570002493,
+  queryCount: 20000,
+  visualQueryMs: 590.5316990001156,
+  workMs: 2571.8695529999895
+}
+HYBRID {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":100929.63370214132,"plannedEligibleAreaM2":32218.194420698517,"intentionalExclusionAreaM2":33823.36131161531,"physicalCoveredAreaEstimateM2":30515.07799472963,"physicalUncoveredAreaEstimateM2":1703.1164259688999,"unresolvedAreaM2":34888.07796982831,"visualMismatchAreaEstimateM2":1640.7136172567089,"sampledAreaM2":100929.63370214132,"unsampledAreaM2":0,"coverageEstimate":0.9471380548602462,"counts":{"COVERED":2613,"INTENTIONALLY_EXPOSED":6965,"MISSING_ARMOR":190,"UNRESOLVED":9641,"VISUAL_PHYSICAL_MISMATCH":36}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":48402.85093933466,"plannedEligibleAreaM2":1300.567585821856,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":1300.567585821856,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":47102.28335351281,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":1300.567585821856,"unsampledAreaM2":47102.28335351281,"coverageEstimate":1,"counts":{"COVERED":555,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":36799,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 2742.0303540000023,
+  physicalQueryPreparationMs: 987.9280629999994,
+  queryMs: 931.2052209998437,
+  queryCount: 20000,
+  visualQueryMs: 234.26048800041463,
+  workMs: 2022.078257000001
+}

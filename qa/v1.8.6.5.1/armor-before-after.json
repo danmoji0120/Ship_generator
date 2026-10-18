@@ -1,0 +1,1239 @@
+{
+  "localRepair": {
+    "order": {
+      "version": "1.8.6.0.2",
+      "shipyardId": "aegis",
+      "shipClass": "Battleship",
+      "lengthM": 470,
+      "seed": 7,
+      "targetMassKg": 3562847000,
+      "primaryPriority": "BALANCED",
+      "architecture": {
+        "mode": "REQUIRE",
+        "grammar": "MONOLITHIC"
+      },
+      "mainArmor": {
+        "mode": "AUTO"
+      },
+      "auxiliaryArmor": {
+        "mode": "AUTO"
+      },
+      "hull": {
+        "mode": "AUTO"
+      },
+      "armorDistribution": "BALANCED",
+      "armorZoneRequirements": [],
+      "maximumBaseMassKg": 5000000000
+    },
+    "before": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 425834.4708738929,
+        "plannedEligibleAreaM2": 220724.00894326327,
+        "intentionalExclusionAreaM2": 150868.5898373823,
+        "physicalCoveredAreaEstimateM2": 219866.51799481272,
+        "physicalUncoveredAreaEstimateM2": 857.4909484509877,
+        "unresolvedAreaM2": 54241.872093243604,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 425834.4708738929,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 0.9961150988850018,
+        "counts": {
+          "COVERED": 1039,
+          "INTENTIONALLY_EXPOSED": 2284,
+          "MISSING_ARMOR": 208,
+          "UNRESOLVED": 1092,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 293194.9966001855,
+        "plannedEligibleAreaM2": 285306.91061738384,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 285306.91061738384,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 7888.085982802615,
+        "visualMismatchAreaEstimateM2": 0.2573625648455115,
+        "sampledAreaM2": 285306.91061738384,
+        "unsampledAreaM2": 7888.085982802615,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 15375,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 3114,
+          "VISUAL_PHYSICAL_MISMATCH": 2
+        }
+      }
+    },
+    "after": {
+      "HULL_TARGET_FOOTPRINT": {
+        "sourceAreaM2": 425834.4708738929,
+        "plannedEligibleAreaM2": 220724.00894326327,
+        "intentionalExclusionAreaM2": 150868.5898373823,
+        "physicalCoveredAreaEstimateM2": 220724.00894326327,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 54241.872093243604,
+        "visualMismatchAreaEstimateM2": 0,
+        "sampledAreaM2": 425834.4708738929,
+        "unsampledAreaM2": 0,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 1247,
+          "INTENTIONALLY_EXPOSED": 2284,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 1092,
+          "VISUAL_PHYSICAL_MISMATCH": 0
+        }
+      },
+      "ARMOR_SOURCE_SKINS": {
+        "sourceAreaM2": 297120.1091005378,
+        "plannedEligibleAreaM2": 272183.0621217579,
+        "intentionalExclusionAreaM2": 0,
+        "physicalCoveredAreaEstimateM2": 272183.0621217579,
+        "physicalUncoveredAreaEstimateM2": 0,
+        "unresolvedAreaM2": 24937.046978777453,
+        "visualMismatchAreaEstimateM2": 0.2573625648455115,
+        "sampledAreaM2": 272183.0621217579,
+        "unsampledAreaM2": 24937.046978777453,
+        "coverageEstimate": 1,
+        "counts": {
+          "COVERED": 15375,
+          "INTENTIONALLY_EXPOSED": 0,
+          "MISSING_ARMOR": 0,
+          "UNRESOLVED": 6957,
+          "VISUAL_PHYSICAL_MISMATCH": 2
+        }
+      }
+    },
+    "beforeMass": {
+      "armorMassKg": 293041272.36377823,
+      "hullShellMassKg": 59017366.73231328,
+      "structuralMassEstimateKg": 0,
+      "coreEquipmentMassEstimateKg": 1538866.636032879,
+      "totalEstimatedDryMassKg": 628128484.6566122,
+      "ledger": {
+        "baseEstimatedDryMassKg": 628128484.6566122,
+        "mountedEstimatedDryMassKg": 628128484.6566122,
+        "budgetStatus": null,
+        "remainingBudgetKg": null,
+        "reconciliation": {
+          "policyVersion": "1.8.6.3.1",
+          "unknownLegacyServiceKg": 245822300,
+          "referenceMassKg": 2458223000,
+          "actualModeledBaseKg": 380767318.02057934,
+          "remainingEstimatedBaseKg": 247361166.63603282,
+          "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+        }
+      }
+    },
+    "afterMass": {
+      "armorMassKg": 294895158.4486725,
+      "hullShellMassKg": 59017366.73232973,
+      "structuralMassEstimateKg": 0,
+      "coreEquipmentMassEstimateKg": 1538866.636032879,
+      "totalEstimatedDryMassKg": 629982370.7415197,
+      "ledger": {
+        "baseEstimatedDryMassKg": 629982370.7415197,
+        "mountedEstimatedDryMassKg": 629982370.7415197,
+        "budgetStatus": null,
+        "remainingBudgetKg": null,
+        "reconciliation": {
+          "policyVersion": "1.8.6.3.1",
+          "unknownLegacyServiceKg": 245822300,
+          "referenceMassKg": 2458223000,
+          "actualModeledBaseKg": 382621204.10548675,
+          "remainingEstimatedBaseKg": 247361166.63603294,
+          "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+        }
+      }
+    },
+    "beforeCost": {
+      "model": "MATERIAL_FRAME_INTERIOR_INDEX_V3",
+      "structuralMaterial": 14510041.932047786,
+      "structuralFabrication": 97483.86637573982,
+      "interiorMaterial": 14173736.992440073,
+      "interiorFabrication": 393759.12760992744,
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 762316420.405381,
+      "fabrication": 13022364.33826744,
+      "estimatedStructureAndCore": 3077733.272065758,
+      "yardProcessFactor": 1,
+      "functionalEquipment": 177900,
+      "total": 807769439.9341878,
+      "assumptions": [
+        "Functional equipment cost = specified dry kg \u00d7 per-equipment manufacturing index. Relative game design specifications, not material-derived prices.",
+        "Interior: actual boundary/closure mass \u00d7 registry cost; gross area \u00d7 (6+2\u00d7tech) + portal count\u00d7250 + section/material variants\u00d7500, relative index only.",
+        "Material: actual finite layer mass \u00d7 shared registry manufacturing cost index.",
+        "Fabrication: surviving area \u00d7 layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame: exclusive material mass \u00d7 registry cost; fabrication = real member length \u00d7 section perimeter \u00d7 technology processing factor + actual joint count \u00d7 200 + section variant count \u00d7 2000. Relative manufacturing assumptions, not currency.",
+        "Remaining support/core retain estimated cost; no cost for uninstalled weapons."
+      ]
+    },
+    "afterCost": {
+      "model": "MATERIAL_FRAME_INTERIOR_INDEX_V3",
+      "structuralMaterial": 14510041.932047784,
+      "structuralFabrication": 97483.86637573982,
+      "interiorMaterial": 14173736.992436813,
+      "interiorFabrication": 393759.12760992744,
+      "unit": "RELATIVE_INDEX_NOT_CURRENCY",
+      "material": 766765747.0091438,
+      "fabrication": 13091927.44369827,
+      "estimatedStructureAndCore": 3077733.272065758,
+      "yardProcessFactor": 1,
+      "functionalEquipment": 177900,
+      "total": 812288329.6433781,
+      "assumptions": [
+        "Functional equipment cost = specified dry kg \u00d7 per-equipment manufacturing index. Relative game design specifications, not material-derived prices.",
+        "Interior: actual boundary/closure mass \u00d7 registry cost; gross area \u00d7 (6+2\u00d7tech) + portal count\u00d7250 + section/material variants\u00d7500, relative index only.",
+        "Material: actual finite layer mass \u00d7 shared registry manufacturing cost index.",
+        "Fabrication: surviving area \u00d7 layer/technology processing factor; distinct materials, structural modules and real connectors add process complexity.",
+        "Frame: exclusive material mass \u00d7 registry cost; fabrication = real member length \u00d7 section perimeter \u00d7 technology processing factor + actual joint count \u00d7 200 + section variant count \u00d7 2000. Relative manufacturing assumptions, not currency.",
+        "Remaining support/core retain estimated cost; no cost for uninstalled weapons."
+      ]
+    },
+    "sameFiniteRays": 208,
+    "restoredArmorRays": 208,
+    "evidence": "local-repair-evidence.json.gz",
+    "method": "Identical physical ray origins/directions/distances from actual original missing tiles. All historical sources unmodified. No claimed sub-tile completeness."
+  },
+  "newGenerationSurvey": [
+    {
+      "id": "BALANCED",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "aegis",
+        "shipClass": "Battleship",
+        "lengthM": 470,
+        "seed": 7,
+        "targetMassKg": 3562847000,
+        "primaryPriority": "BALANCED",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "MONOLITHIC"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BALANCED",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 5000000000
+      },
+      "architecture": "MONOLITHIC",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 18375.379567,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 425834.4708738929,
+          "plannedEligibleAreaM2": 220724.00894326327,
+          "intentionalExclusionAreaM2": 150868.5898373823,
+          "physicalCoveredAreaEstimateM2": 220608.63613005925,
+          "physicalUncoveredAreaEstimateM2": 115.37281320405143,
+          "unresolvedAreaM2": 54241.872093243604,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 425834.4708738929,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9994772983068023,
+          "counts": {
+            "COVERED": 1139,
+            "INTENTIONALLY_EXPOSED": 2284,
+            "MISSING_ARMOR": 108,
+            "UNRESOLVED": 1092,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 296498.81261413865,
+          "plannedEligibleAreaM2": 272183.0621217578,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 272183.0621217578,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 24315.750492381234,
+          "visualMismatchAreaEstimateM2": 0.2573625648455115,
+          "sampledAreaM2": 272183.0621217578,
+          "unsampledAreaM2": 24315.750492381234,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 15375,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 5420,
+            "VISUAL_PHYSICAL_MISMATCH": 2
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 294623739.67614067,
+        "hullShellMassKg": 59017366.73231048,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 1538866.636032879,
+        "totalEstimatedDryMassKg": 629764094.5554171,
+        "ledger": {
+          "baseEstimatedDryMassKg": 629764094.5554171,
+          "mountedEstimatedDryMassKg": 629764094.5554171,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 245822300,
+            "referenceMassKg": 2458223000,
+            "actualModeledBaseKg": 382402927.9193842,
+            "remainingEstimatedBaseKg": 247361166.63603288,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "vesper",
+        "shipClass": "Battleship",
+        "lengthM": 500,
+        "seed": 7,
+        "targetMassKg": 6074864000,
+        "primaryPriority": "MOBILITY",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "BLOCK_ASSEMBLY"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BALANCED",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 10000000000
+      },
+      "architecture": "BLOCK_ASSEMBLY",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 16272.842962000002,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 388257.2295021774,
+          "plannedEligibleAreaM2": 156797.17636935585,
+          "intentionalExclusionAreaM2": 149258.68125714615,
+          "physicalCoveredAreaEstimateM2": 147790.21030438473,
+          "physicalUncoveredAreaEstimateM2": 9006.96606497093,
+          "unresolvedAreaM2": 82201.37187569657,
+          "visualMismatchAreaEstimateM2": 8838.434251560497,
+          "sampledAreaM2": 388257.2295021774,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9425565799491564,
+          "counts": {
+            "COVERED": 2205,
+            "INTENTIONALLY_EXPOSED": 7372,
+            "MISSING_ARMOR": 199,
+            "UNRESOLVED": 6594,
+            "VISUAL_PHYSICAL_MISMATCH": 526
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 193674.01662917598,
+          "plannedEligibleAreaM2": 33855.00825539926,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 33855.00825539926,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 159819.00837377534,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 33855.00825539926,
+          "unsampledAreaM2": 159819.00837377534,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 3104,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 46848,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 147138876.8679179,
+        "hullShellMassKg": 15618725.048479522,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 712360.0934840774,
+        "totalEstimatedDryMassKg": 336748872.70832944,
+        "ledger": {
+          "baseEstimatedDryMassKg": 336748872.70832944,
+          "mountedEstimatedDryMassKg": 336748872.70832944,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 119008400,
+            "referenceMassKg": 1190084000,
+            "actualModeledBaseKg": 217028112.61484537,
+            "remainingEstimatedBaseKg": 119720760.09348407,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "forge",
+        "shipClass": "Cruiser",
+        "lengthM": 300,
+        "seed": 12,
+        "targetMassKg": 255967000,
+        "primaryPriority": "ENDURANCE",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "SPINE_AND_MODULES"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "CITADEL",
+        "armorZoneRequirements": []
+      },
+      "architecture": "SPINE_AND_MODULES",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 29319.244164000003,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 163181.46648448767,
+          "plannedEligibleAreaM2": 27279.141827597883,
+          "intentionalExclusionAreaM2": 38852.003155915445,
+          "physicalCoveredAreaEstimateM2": 27279.141827597883,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 97050.32150097935,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 114265.1259547437,
+          "unsampledAreaM2": 48916.34052975186,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 1797,
+            "INTENTIONALLY_EXPOSED": 9505,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 20362,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 36313.34461589974,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 36313.34461589974,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 36313.34461589974,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 33538,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 46626897.94298795,
+        "hullShellMassKg": 5235239.293628769,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 385528.9787814742,
+        "totalEstimatedDryMassKg": 970895970.3549591,
+        "ledger": {
+          "baseEstimatedDryMassKg": 970895970.3549591,
+          "mountedEstimatedDryMassKg": 970895970.3549591,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 17701200,
+            "referenceMassKg": 177012000,
+            "actualModeledBaseKg": 952809241.3761777,
+            "remainingEstimatedBaseKg": 18086728.97878146,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "TRUSS_POD",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "serein",
+        "shipClass": "Frigate",
+        "lengthM": 300,
+        "seed": 7,
+        "targetMassKg": 683386000,
+        "primaryPriority": "ECONOMY",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "TRUSS_POD"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BROAD_COVERAGE",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 10000000000
+      },
+      "architecture": "TRUSS_POD",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 37913.11506900001,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 128932.19471981714,
+          "plannedEligibleAreaM2": 85339.14470855561,
+          "intentionalExclusionAreaM2": 17659.368804841637,
+          "physicalCoveredAreaEstimateM2": 85310.78023151758,
+          "physicalUncoveredAreaEstimateM2": 28.364477037996743,
+          "unresolvedAreaM2": 25933.68120641519,
+          "visualMismatchAreaEstimateM2": 15.929306955298134,
+          "sampledAreaM2": 105236.11075967152,
+          "unsampledAreaM2": 23696.0839601475,
+          "coverageEstimate": 0.9996676264200338,
+          "counts": {
+            "COVERED": 8407,
+            "INTENTIONALLY_EXPOSED": 5552,
+            "MISSING_ARMOR": 40,
+            "UNRESOLVED": 10899,
+            "VISUAL_PHYSICAL_MISMATCH": 25
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 119182.02295648186,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 119182.02295648186,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 119182.02295648186,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 112213,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 133073990.21945359,
+        "hullShellMassKg": 12819559.778203037,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 305872.7906953422,
+        "totalEstimatedDryMassKg": 198382730.59413895,
+        "ledger": {
+          "baseEstimatedDryMassKg": 198382730.59413895,
+          "mountedEstimatedDryMassKg": 198382730.59413895,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 18422500,
+            "referenceMassKg": 184225000,
+            "actualModeledBaseKg": 179654357.8034436,
+            "remainingEstimatedBaseKg": 18728372.79069534,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "TWIN_HULL",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "aegis",
+        "shipClass": "Frigate",
+        "lengthM": 400,
+        "seed": 11,
+        "targetMassKg": 2581260000,
+        "primaryPriority": "ARMOR",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "TWIN_HULL"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BROAD_COVERAGE",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 10000000000
+      },
+      "architecture": null,
+      "version": null,
+      "elapsedMs": 13795.474199999997,
+      "summary": null,
+      "rejected": "DesignRejection: INVALID_PHYSICAL_CONVEX_FRAGMENT: Error: INVALID_PHYSICAL_CONVEX_FRAGMENT volume=1.8428161421311966 violation=0.000010677458831764852"
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "vesper",
+        "shipClass": "Frigate",
+        "lengthM": 200,
+        "seed": 11,
+        "targetMassKg": 56405000,
+        "primaryPriority": "MOBILITY",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "CORE_AND_NACELLES"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BALANCED",
+        "armorZoneRequirements": []
+      },
+      "architecture": "CORE_AND_NACELLES",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 46402.35812399999,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 44553.687187959134,
+          "plannedEligibleAreaM2": 18203.03543702173,
+          "intentionalExclusionAreaM2": 14637.305080796525,
+          "physicalCoveredAreaEstimateM2": 17558.952009204237,
+          "physicalUncoveredAreaEstimateM2": 644.0834278175872,
+          "unresolvedAreaM2": 11713.346670143455,
+          "visualMismatchAreaEstimateM2": 0.9074007261523844,
+          "sampledAreaM2": 33871.236681582835,
+          "unsampledAreaM2": 10682.450506378244,
+          "coverageEstimate": 0.9646167019755649,
+          "counts": {
+            "COVERED": 4725,
+            "INTENTIONALLY_EXPOSED": 8127,
+            "MISSING_ARMOR": 1221,
+            "UNRESOLVED": 14833,
+            "VISUAL_PHYSICAL_MISMATCH": 17
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 27204.391680920027,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 27204.391680920027,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 27204.391680920027,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 77184,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 11279546.088491054,
+        "hullShellMassKg": 1090866.2103078666,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 230267.23330472744,
+        "totalEstimatedDryMassKg": 130270312.65231559,
+        "ledger": {
+          "baseEstimatedDryMassKg": 130270312.65231559,
+          "mountedEstimatedDryMassKg": 130270312.65231559,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 3921500,
+            "referenceMassKg": 39215000,
+            "actualModeledBaseKg": 126118545.41901086,
+            "remainingEstimatedBaseKg": 4151767.233304724,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "forge",
+        "shipClass": "Cruiser",
+        "lengthM": 300,
+        "seed": 7,
+        "targetMassKg": 1834194000,
+        "primaryPriority": "ENDURANCE",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "STACKED_BLOCKS"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "CITADEL",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 10000000000
+      },
+      "architecture": "STACKED_BLOCKS",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 39082.10161499999,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 195827.5815660331,
+          "plannedEligibleAreaM2": 37810.56871300792,
+          "intentionalExclusionAreaM2": 145337.27196002714,
+          "physicalCoveredAreaEstimateM2": 37683.35673216169,
+          "physicalUncoveredAreaEstimateM2": 127.21198084623838,
+          "unresolvedAreaM2": 12679.740892998809,
+          "visualMismatchAreaEstimateM2": 127.21198084623838,
+          "sampledAreaM2": 195827.5815660331,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9966355443682479,
+          "counts": {
+            "COVERED": 1038,
+            "INTENTIONALLY_EXPOSED": 8673,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 2030,
+            "VISUAL_PHYSICAL_MISMATCH": 8
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 64862.75678956789,
+          "plannedEligibleAreaM2": 59896.23670779476,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 59896.23670779476,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 4966.520081773292,
+          "visualMismatchAreaEstimateM2": 4.3743988391779185,
+          "sampledAreaM2": 59896.23670779476,
+          "unsampledAreaM2": 4966.520081773292,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 8228,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 3125,
+            "VISUAL_PHYSICAL_MISMATCH": 23
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 80646220.0522416,
+        "hullShellMassKg": 10845220.102534799,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 428109.15304183576,
+        "totalEstimatedDryMassKg": 183697224.67991558,
+        "ledger": {
+          "baseEstimatedDryMassKg": 183697224.67991558,
+          "mountedEstimatedDryMassKg": 183697224.67991558,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 51509800,
+            "referenceMassKg": 515098000,
+            "actualModeledBaseKg": 131759315.52687374,
+            "remainingEstimatedBaseKg": 51937909.15304184,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    },
+    {
+      "id": "HYBRID",
+      "order": {
+        "version": "1.8.6.0.2",
+        "shipyardId": "serein",
+        "shipClass": "Frigate",
+        "lengthM": 300,
+        "seed": 11,
+        "targetMassKg": 366196000,
+        "primaryPriority": "ECONOMY",
+        "architecture": {
+          "mode": "REQUIRE",
+          "grammar": "HYBRID"
+        },
+        "mainArmor": {
+          "mode": "AUTO"
+        },
+        "auxiliaryArmor": {
+          "mode": "AUTO"
+        },
+        "hull": {
+          "mode": "AUTO"
+        },
+        "armorDistribution": "BROAD_COVERAGE",
+        "armorZoneRequirements": [],
+        "maximumBaseMassKg": 10000000000
+      },
+      "architecture": "HYBRID",
+      "version": "1.8.6.5.1",
+      "elapsedMs": 35553.60101700001,
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 100929.63370214132,
+          "plannedEligibleAreaM2": 50832.56711205864,
+          "intentionalExclusionAreaM2": 15208.98862025491,
+          "physicalCoveredAreaEstimateM2": 49997.20464474075,
+          "physicalUncoveredAreaEstimateM2": 835.362467317976,
+          "unresolvedAreaM2": 34888.07796982831,
+          "visualMismatchAreaEstimateM2": 19.22982850814136,
+          "sampledAreaM2": 100929.63370214132,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9835663922800443,
+          "counts": {
+            "COVERED": 5904,
+            "INTENTIONALLY_EXPOSED": 3792,
+            "MISSING_ARMOR": 38,
+            "UNRESOLVED": 9641,
+            "VISUAL_PHYSICAL_MISMATCH": 70
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 69280.50868459536,
+          "plannedEligibleAreaM2": 1204.9908586746956,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 1204.9908586746956,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 68075.51782592278,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 1204.9908586746956,
+          "unsampledAreaM2": 68075.51782592278,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 555,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 88865,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      },
+      "rejected": null,
+      "mass": {
+        "armorMassKg": 77711246.74183927,
+        "hullShellMassKg": 7321575.626912473,
+        "structuralMassEstimateKg": 0,
+        "coreEquipmentMassEstimateKg": 205635.49330627036,
+        "totalEstimatedDryMassKg": 179203078.20715597,
+        "ledger": {
+          "baseEstimatedDryMassKg": 179203078.20715597,
+          "mountedEstimatedDryMassKg": 179203078.20715597,
+          "budgetStatus": null,
+          "remainingBudgetKg": null,
+          "reconciliation": {
+            "policyVersion": "1.8.6.3.1",
+            "unknownLegacyServiceKg": 14844500,
+            "referenceMassKg": 148445000,
+            "actualModeledBaseKg": 164152942.7138497,
+            "remainingEstimatedBaseKg": 15050135.49330628,
+            "serviceFormula": "ROUND_LEGACY_VOLUME_DENSITY_TONNES * 1000 * 0.10"
+          }
+        }
+      }
+    }
+  ],
+  "surveyLimitation": "Initial eight-case broad survey used local-edge repair revision before small-cap follow-up and shared CPU time with other QA. Timing is not a controlled performance comparison. Final local repair is independently reverified above. Existing unresolved/mismatch candidates are not declared fixed.",
+  "finalSurvey": "new-generation-final.json",
+  "newGenerationFinalCounts": [
+    {
+      "id": "BALANCED",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 425834.4708738929,
+          "plannedEligibleAreaM2": 220724.00894326327,
+          "intentionalExclusionAreaM2": 150868.5898373823,
+          "physicalCoveredAreaEstimateM2": 220724.00894326327,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 54241.872093243604,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 425834.4708738929,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 1247,
+            "INTENTIONALLY_EXPOSED": 2284,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 1092,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 297120.1091005378,
+          "plannedEligibleAreaM2": 272183.0621217579,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 272183.0621217579,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 24937.046978777453,
+          "visualMismatchAreaEstimateM2": 0.2573625648455115,
+          "sampledAreaM2": 272183.0621217579,
+          "unsampledAreaM2": 24937.046978777453,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 15375,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 6957,
+            "VISUAL_PHYSICAL_MISMATCH": 2
+          }
+        }
+      }
+    },
+    {
+      "id": "BLOCK_ASSEMBLY",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 388257.2295021774,
+          "plannedEligibleAreaM2": 156797.17636935585,
+          "intentionalExclusionAreaM2": 149258.68125714615,
+          "physicalCoveredAreaEstimateM2": 147928.62497694674,
+          "physicalUncoveredAreaEstimateM2": 8868.551392408961,
+          "unresolvedAreaM2": 82201.37187569657,
+          "visualMismatchAreaEstimateM2": 8838.434251560497,
+          "sampledAreaM2": 388257.2295021774,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9434393424820476,
+          "counts": {
+            "COVERED": 2389,
+            "INTENTIONALLY_EXPOSED": 7372,
+            "MISSING_ARMOR": 15,
+            "UNRESOLVED": 6594,
+            "VISUAL_PHYSICAL_MISMATCH": 526
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 194257.4768974774,
+          "plannedEligibleAreaM2": 33855.00825539926,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 33855.00825539926,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 160402.4686420767,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 33855.00825539926,
+          "unsampledAreaM2": 160402.4686420767,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 3104,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 49060,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "SPINE_AND_MODULES",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 163181.46648448767,
+          "plannedEligibleAreaM2": 27279.141827597883,
+          "intentionalExclusionAreaM2": 38852.003155915445,
+          "physicalCoveredAreaEstimateM2": 27279.141827597883,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 97050.32150097935,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 114265.1259547437,
+          "unsampledAreaM2": 48916.34052975186,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 1797,
+            "INTENTIONALLY_EXPOSED": 9505,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 20362,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 36313.34461589974,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 36313.34461589974,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 36313.34461589974,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 33538,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "TRUSS_POD",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 128932.19471981714,
+          "plannedEligibleAreaM2": 85339.14470855561,
+          "intentionalExclusionAreaM2": 17659.368804841637,
+          "physicalCoveredAreaEstimateM2": 85317.24672922005,
+          "physicalUncoveredAreaEstimateM2": 21.89797933557559,
+          "unresolvedAreaM2": 25933.68120641519,
+          "visualMismatchAreaEstimateM2": 15.929306955298134,
+          "sampledAreaM2": 105236.11075967152,
+          "unsampledAreaM2": 23696.0839601475,
+          "coverageEstimate": 0.9997434005296122,
+          "counts": {
+            "COVERED": 8445,
+            "INTENTIONALLY_EXPOSED": 5552,
+            "MISSING_ARMOR": 2,
+            "UNRESOLVED": 10899,
+            "VISUAL_PHYSICAL_MISMATCH": 25
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 119208.16922914199,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 119208.16922914199,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 119208.16922914199,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 112849,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "TWIN_HULL",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 189149.66800857583,
+          "plannedEligibleAreaM2": 102516.05570817497,
+          "intentionalExclusionAreaM2": 54021.659745922414,
+          "physicalCoveredAreaEstimateM2": 96048.74069274339,
+          "physicalUncoveredAreaEstimateM2": 6467.315015431501,
+          "unresolvedAreaM2": 32611.952554480526,
+          "visualMismatchAreaEstimateM2": 0.492306001020129,
+          "sampledAreaM2": 189149.66800857583,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9369141255898333,
+          "counts": {
+            "COVERED": 3220,
+            "INTENTIONALLY_EXPOSED": 5264,
+            "MISSING_ARMOR": 808,
+            "UNRESOLVED": 7581,
+            "VISUAL_PHYSICAL_MISMATCH": 4
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 142632.0375952299,
+          "plannedEligibleAreaM2": 20808.042030094228,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 20808.042030094228,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 121823.99556513263,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 20808.042030094228,
+          "unsampledAreaM2": 121823.99556513263,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 3123,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 58328,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "CORE_AND_NACELLES",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 44553.687187959134,
+          "plannedEligibleAreaM2": 18203.03543702173,
+          "intentionalExclusionAreaM2": 14637.305080796525,
+          "physicalCoveredAreaEstimateM2": 17567.612343902285,
+          "physicalUncoveredAreaEstimateM2": 635.4230931195094,
+          "unresolvedAreaM2": 11713.346670143455,
+          "visualMismatchAreaEstimateM2": 0.9074007261523844,
+          "sampledAreaM2": 33871.236681582835,
+          "unsampledAreaM2": 10682.450506378244,
+          "coverageEstimate": 0.9650924651925301,
+          "counts": {
+            "COVERED": 4923,
+            "INTENTIONALLY_EXPOSED": 8127,
+            "MISSING_ARMOR": 1023,
+            "UNRESOLVED": 14833,
+            "VISUAL_PHYSICAL_MISMATCH": 17
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 27252.46802501552,
+          "plannedEligibleAreaM2": 0,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 0,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 27252.46802501552,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 0,
+          "unsampledAreaM2": 27252.46802501552,
+          "coverageEstimate": null,
+          "counts": {
+            "COVERED": 0,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 79854,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "STACKED_BLOCKS",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 195827.5815660331,
+          "plannedEligibleAreaM2": 37810.56871300792,
+          "intentionalExclusionAreaM2": 145337.27196002714,
+          "physicalCoveredAreaEstimateM2": 37683.35673216169,
+          "physicalUncoveredAreaEstimateM2": 127.21198084623838,
+          "unresolvedAreaM2": 12679.740892998809,
+          "visualMismatchAreaEstimateM2": 127.21198084623838,
+          "sampledAreaM2": 195827.5815660331,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9966355443682479,
+          "counts": {
+            "COVERED": 1038,
+            "INTENTIONALLY_EXPOSED": 8673,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 2030,
+            "VISUAL_PHYSICAL_MISMATCH": 8
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 64862.75678956789,
+          "plannedEligibleAreaM2": 59896.23670779476,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 59896.23670779476,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 4966.520081773292,
+          "visualMismatchAreaEstimateM2": 4.3743988391779185,
+          "sampledAreaM2": 59896.23670779476,
+          "unsampledAreaM2": 4966.520081773292,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 8228,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 3125,
+            "VISUAL_PHYSICAL_MISMATCH": 23
+          }
+        }
+      }
+    },
+    {
+      "id": "HYBRID",
+      "status": "PASS",
+      "summary": {
+        "HULL_TARGET_FOOTPRINT": {
+          "sourceAreaM2": 100929.63370214132,
+          "plannedEligibleAreaM2": 50832.56711205864,
+          "intentionalExclusionAreaM2": 15208.98862025491,
+          "physicalCoveredAreaEstimateM2": 49999.816383733174,
+          "physicalUncoveredAreaEstimateM2": 832.7507283255726,
+          "unresolvedAreaM2": 34888.07796982831,
+          "visualMismatchAreaEstimateM2": 19.22982850814136,
+          "sampledAreaM2": 100929.63370214132,
+          "unsampledAreaM2": 0,
+          "coverageEstimate": 0.9836177715264763,
+          "counts": {
+            "COVERED": 5932,
+            "INTENTIONALLY_EXPOSED": 3792,
+            "MISSING_ARMOR": 10,
+            "UNRESOLVED": 9641,
+            "VISUAL_PHYSICAL_MISMATCH": 70
+          }
+        },
+        "ARMOR_SOURCE_SKINS": {
+          "sourceAreaM2": 69297.39229092495,
+          "plannedEligibleAreaM2": 1204.9908586746956,
+          "intentionalExclusionAreaM2": 0,
+          "physicalCoveredAreaEstimateM2": 1204.9908586746956,
+          "physicalUncoveredAreaEstimateM2": 0,
+          "unresolvedAreaM2": 68092.40143225233,
+          "visualMismatchAreaEstimateM2": 0,
+          "sampledAreaM2": 1204.9908586746956,
+          "unsampledAreaM2": 68092.40143225233,
+          "coverageEstimate": 1,
+          "counts": {
+            "COVERED": 555,
+            "INTENTIONALLY_EXPOSED": 0,
+            "MISSING_ARMOR": 0,
+            "UNRESOLVED": 89053,
+            "VISUAL_PHYSICAL_MISMATCH": 0
+          }
+        }
+      }
+    }
+  ]
+}

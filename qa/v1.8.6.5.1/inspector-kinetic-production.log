@@ -1,0 +1,21 @@
+PASS COVERED actual Inspector data
+PASS Real material and measured thickness in Inspector
+PASS INTENTIONALLY_EXPOSED actual Inspector data
+PASS Actual policy/exclusion reason remains explicit
+PASS UNRESOLVED actual Inspector data
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Production kinetic shot physically stops on actual armor
+    at check (file:///workspace/shipyard-v1.8.6.5.1/tests/integrity-inspector-kinetic-ui.mjs:3:25)
+    at file:///workspace/shipyard-v1.8.6.5.1/tests/integrity-inspector-kinetic-ui.mjs:12:515 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

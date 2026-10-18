@@ -1,0 +1,38 @@
+REPAIR 208 208 {
+  sourceAreaM2: 425834.4708738929,
+  plannedEligibleAreaM2: 220724.00894326327,
+  intentionalExclusionAreaM2: 150868.5898373823,
+  physicalCoveredAreaEstimateM2: 219866.51799481272,
+  physicalUncoveredAreaEstimateM2: 857.4909484509877,
+  unresolvedAreaM2: 54241.872093243604,
+  visualMismatchAreaEstimateM2: 0,
+  sampledAreaM2: 425834.4708738929,
+  unsampledAreaM2: 0,
+  coverageEstimate: 0.9961150988850018,
+  counts: {
+    COVERED: 1039,
+    INTENTIONALLY_EXPOSED: 2284,
+    MISSING_ARMOR: 208,
+    UNRESOLVED: 1092,
+    VISUAL_PHYSICAL_MISMATCH: 0
+  }
+} {
+  sourceAreaM2: 425834.4708738929,
+  plannedEligibleAreaM2: 220724.00894326327,
+  intentionalExclusionAreaM2: 150868.5898373823,
+  physicalCoveredAreaEstimateM2: 220724.00894326327,
+  physicalUncoveredAreaEstimateM2: 0,
+  unresolvedAreaM2: 54241.872093243604,
+  visualMismatchAreaEstimateM2: 0,
+  sampledAreaM2: 425834.4708738929,
+  unsampledAreaM2: 0,
+  coverageEstimate: 1,
+  counts: {
+    COVERED: 1247,
+    INTENTIONALLY_EXPOSED: 2284,
+    MISSING_ARMOR: 0,
+    UNRESOLVED: 1092,
+    VISUAL_PHYSICAL_MISMATCH: 0
+  }
+}
+Deterministic entire JSON

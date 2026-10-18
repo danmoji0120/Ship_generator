@@ -1,0 +1,8 @@
+BALANCED {"HULL_TARGET_FOOTPRINT":{"sourceAreaM2":425834.4708738929,"plannedEligibleAreaM2":220769.8956885666,"intentionalExclusionAreaM2":150822.7030920789,"physicalCoveredAreaEstimateM2":219866.51799481272,"physicalUncoveredAreaEstimateM2":903.3776937543533,"unresolvedAreaM2":54241.872093243604,"visualMismatchAreaEstimateM2":45.88674530336567,"sampledAreaM2":425834.4708738929,"unsampledAreaM2":0,"coverageEstimate":0.9959080576138503,"counts":{"COVERED":1039,"INTENTIONALLY_EXPOSED":2270,"MISSING_ARMOR":208,"UNRESOLVED":1092,"VISUAL_PHYSICAL_MISMATCH":14}},"ARMOR_SOURCE_SKINS":{"sourceAreaM2":293194.9966001855,"plannedEligibleAreaM2":285306.91061738384,"intentionalExclusionAreaM2":0,"physicalCoveredAreaEstimateM2":285306.91061738384,"physicalUncoveredAreaEstimateM2":0,"unresolvedAreaM2":7888.085982802615,"visualMismatchAreaEstimateM2":0,"sampledAreaM2":285306.91061738384,"unsampledAreaM2":7888.085982802615,"coverageEstimate":1,"counts":{"COVERED":15377,"INTENTIONALLY_EXPOSED":0,"MISSING_ARMOR":0,"UNRESOLVED":3114,"VISUAL_PHYSICAL_MISMATCH":0}}} {
+  preparationMs: 849.968785,
+  physicalQueryPreparationMs: 342.38331600000004,
+  queryMs: 546.3855979999807,
+  queryCount: 20000,
+  visualQueryMs: 53.83709499998645,
+  workMs: 631.202802999999
+}

@@ -1,0 +1,11 @@
+[
+  {
+    phase: 'before',
+    events: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  {
+    phase: 'after',
+    events: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  }
+]
+PASS old/new/Production ordered penetration matches

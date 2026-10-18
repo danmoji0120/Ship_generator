@@ -1,0 +1,16 @@
+PASS COVERED actual Inspector data
+PASS Real material and measured thickness in Inspector
+PASS INTENTIONALLY_EXPOSED actual Inspector data
+PASS Actual policy/exclusion reason remains explicit
+PASS UNRESOLVED actual Inspector data
+DEFAULT_KINETIC EXITED PENETRATED [
+  [ 'ARMOR', 'PENETRATED', 'CERAMIC_STRIKE_FACE' ],
+  [ 'ARMOR', 'PENETRATED', 'STEEL_BACKING' ],
+  [ 'ARMOR', 'PENETRATED', 'FIBER_SPALL_BACKING' ],
+  [ 'HULL', 'PENETRATED', 'STEEL_STRUCTURAL' ],
+  [ 'CLOSURE', 'PENETRATED', 'STEEL_STRUCTURAL' ],
+  [ 'HULL', 'PENETRATED', 'STEEL_STRUCTURAL' ]
+]
+PASS Production kinetic shot resolves actual finite material
+PASS Kinetic shot keeps design immutable
+PASS No console/page errors

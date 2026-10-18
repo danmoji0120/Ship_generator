@@ -5,3 +5,6 @@ generated/*-audit.json.gz
 generated/*.json.gz
 !generated/BALANCED-before.json.gz
 !generated/BALANCED.json.gz
+
+# Final push evidence is local so the report commit does not contain its own hash.
+push-verification.json

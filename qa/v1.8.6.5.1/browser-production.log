@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForSelector: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#integrity-run') to be visible[22m
+[2m    129 × locator resolved to hidden <button id="integrity-run">Audit stored design</button>[22m
+
+    at /workspace/shipyard-v1.8.6.5.1/tests/integrity-browser.mjs:7:57 {
+  log: [
+    "  - waiting for locator('#integrity-run') to be visible",
+    '    129 × locator resolved to hidden <button id="integrity-run">Audit stored design</button>'
+  ]
+}
+
+Node.js v24.19.0

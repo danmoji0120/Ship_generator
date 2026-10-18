@@ -1,0 +1,403 @@
+{
+  "actualBurstReset": {
+    "rows": [
+      {
+        "cycle": 0,
+        "wallMs": 2105,
+        "postResetHeap": {
+          "usedSize": 228113124,
+          "totalSize": 229765120,
+          "embedderHeapUsedSize": 3694984,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      },
+      {
+        "cycle": 1,
+        "wallMs": 1528,
+        "postResetHeap": {
+          "usedSize": 228281180,
+          "totalSize": 230027264,
+          "embedderHeapUsedSize": 3692072,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      },
+      {
+        "cycle": 2,
+        "wallMs": 1428,
+        "postResetHeap": {
+          "usedSize": 228364640,
+          "totalSize": 230289408,
+          "embedderHeapUsedSize": 3645544,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      },
+      {
+        "cycle": 3,
+        "wallMs": 2001,
+        "postResetHeap": {
+          "usedSize": 228400904,
+          "totalSize": 230551552,
+          "embedderHeapUsedSize": 3673784,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      },
+      {
+        "cycle": 4,
+        "wallMs": 1790,
+        "postResetHeap": {
+          "usedSize": 228429872,
+          "totalSize": 230289408,
+          "embedderHeapUsedSize": 3675248,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      },
+      {
+        "cycle": 5,
+        "wallMs": 1981,
+        "postResetHeap": {
+          "usedSize": 228449292,
+          "totalSize": 230551552,
+          "embedderHeapUsedSize": 3693232,
+          "backingStorageSize": 6643699
+        },
+        "result": "READY · manual internal burst does not demonstrate missile armor penetration."
+      }
+    ],
+    "errors": [],
+    "method": "Six real authoritative HIGH Production bursts + actual instance reset + explicit browser GC. Timings are secondary lifecycle observations, not matched Before/After benchmarks."
+  },
+  "resourceLifecycle": {
+    "data": {
+      "baseline": {
+        "geometries": 29,
+        "textures": 3,
+        "programs": 8,
+        "drawCalls": 29
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        },
+        {
+          "cycle": 1,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        },
+        {
+          "cycle": 2,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        },
+        {
+          "cycle": 3,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        },
+        {
+          "cycle": 4,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        },
+        {
+          "cycle": 5,
+          "peak": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 36
+          },
+          "afterQualityToggles": {
+            "geometries": 35,
+            "textures": 3,
+            "programs": 12,
+            "drawCalls": 29
+          },
+          "afterOFF": {
+            "geometries": 29,
+            "textures": 3,
+            "programs": 8,
+            "drawCalls": 29
+          },
+          "reused": true,
+          "allocations": 3
+        }
+      ],
+      "disposed": {
+        "geometries": 0,
+        "textures": 0,
+        "sceneChildren": 0
+      }
+    },
+    "errors": [],
+    "method": "Actual ShipViewer WebGL uploads, six ON / quality LOW-HIGH twelve times / clear retained buffers / OFF cycles. Finite exported actual warhead paths replayed for display only; no simulated damage is recomputed."
+  },
+  "shipReplacement": [
+    {
+      "cycle": 0,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 36,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32406480
+    },
+    {
+      "cycle": 1,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 100,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 81904440
+    },
+    {
+      "cycle": 2,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 36,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32472688
+    },
+    {
+      "cycle": 3,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 100,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 81986168
+    },
+    {
+      "cycle": 4,
+      "id": "BALANCED",
+      "debug": {
+        "drawCalls": 36,
+        "triangles": 17136,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 29,
+        "triangles": 14576,
+        "camera": [
+          -424.0744725209828,
+          346.3507107685077,
+          -485.6555283802803
+        ],
+        "radius": 345.961796171787,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 32526988
+    },
+    {
+      "cycle": 5,
+      "id": "TWIN_HULL",
+      "debug": {
+        "drawCalls": 100,
+        "triangles": 35344,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "normal": {
+        "drawCalls": 91,
+        "triangles": 19984,
+        "camera": [
+          -290.9142768531854,
+          237.0390851354008,
+          -332.22128298103644
+        ],
+        "radius": 260.3730122364334,
+        "geometryFinite": true
+      },
+      "postGcHeapBytes": 82031156
+    }
+  ],
+  "viewerDisposed": {
+    "blueprintReleased": true,
+    "shipReleased": true,
+    "sceneChildren": 0,
+    "geometryCount": 0,
+    "textureCount": 0
+  },
+  "limitations": "Browser JS heap and WebGL object counts are separate from Node RSS; no claim of measuring GPU VRAM. Six cycles cannot prove absence of every leak; small retained JIT/DOM drift is reported."
+}

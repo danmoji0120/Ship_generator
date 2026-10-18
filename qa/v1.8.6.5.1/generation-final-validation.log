@@ -1,0 +1,40 @@
+{
+  id: 'TWIN_HULL',
+  version: '1.8.6.3.1',
+  status: 'PASS',
+  elapsedMs: 37537.938401
+}
+{
+  id: 'TWIN_HULL',
+  version: '1.8.6.5.1',
+  status: 'PASS',
+  elapsedMs: 45389.328704,
+  summary: {
+    HULL_TARGET_FOOTPRINT: {
+      sourceAreaM2: 189149.66800857583,
+      plannedEligibleAreaM2: 102516.05570817497,
+      intentionalExclusionAreaM2: 54021.659745922414,
+      physicalCoveredAreaEstimateM2: 96048.74069274339,
+      physicalUncoveredAreaEstimateM2: 6467.315015431501,
+      unresolvedAreaM2: 32611.952554480526,
+      visualMismatchAreaEstimateM2: 0.492306001020129,
+      sampledAreaM2: 189149.66800857583,
+      unsampledAreaM2: 0,
+      coverageEstimate: 0.9369141255898333,
+      counts: [Object]
+    },
+    ARMOR_SOURCE_SKINS: {
+      sourceAreaM2: 142632.0375952299,
+      plannedEligibleAreaM2: 20808.042030094228,
+      intentionalExclusionAreaM2: 0,
+      physicalCoveredAreaEstimateM2: 20808.042030094228,
+      physicalUncoveredAreaEstimateM2: 0,
+      unresolvedAreaM2: 121823.99556513263,
+      visualMismatchAreaEstimateM2: 0,
+      sampledAreaM2: 20808.042030094228,
+      unsampledAreaM2: 121823.99556513263,
+      coverageEstimate: 1,
+      counts: [Object]
+    }
+  }
+}

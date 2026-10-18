@@ -1,0 +1,28 @@
+
+ RUN  v3.2.7 /workspace/shipyard-v1.8.6.5.1
+
+ ✓ tests/physical-foundation.test.ts (16 tests) 1613ms
+   ✓ physical material, finite layer and accounting foundation > shares one priority interpretation, fixed target mass and competing budgets across armor/mobility/endurance/weapons/sensors  337ms
+ ✓ tests/warhead.test.ts (14 tests) 18913ms
+   ✓ finite layered armor physically stops weak carriers and allows strong residual states; existing channel and remote position remain local  1053ms
+   ✓ direction matters; queue yielding preserves chronological contacts and identical deterministic final state  753ms
+   ✓ detonation context rejects actual solid/false interior and preserves real finite compartment validation  1601ms
+   ✓ internal physical fragments damage real equipment and networks, isolate A/B, preserve finite reserve and leave Blueprint immutable  7478ms
+   ✓ secondaries are bounded eroded carrier debris with actual parent contacts and no new mass/energy  496ms
+   ✓ actual open/closed/blocked hatch geometry controls fragment contacts without a fabricated blocked wall  2983ms
+   ✓ actual thin frame material can fail shared joints/edges; geometry-free graph edges are not hit targets  1300ms
+   ✓ proximity and timed adapters validate actual reference distance and an elapsed simulation clock  2704ms
+ ✓ tests/damage.test.ts (14 tests) 9158ms
+   ✓ actual equipment hits drive existing capabilities, preserve mass/design and isolate two ship instances  5051ms
+   ✓ actual finite open/closed/blocked hatch geometry and thin bulkhead paths stay distinct  1176ms
+   ✓ actual unresolved SPINE boundary returns UNRESOLVED rather than invented armor or empty space  2582ms
+ ✓ tests/free-mount.test.ts (18 tests) 10219ms
+   ✓ generates without empty slots; keeps historical explicit generator and mandatory migration  8176ms
+ ✓ tests/armor-integrity.test.ts (6 tests) 5398ms
+   ✓ authoritative damage and capabilities are byte-identical across visual qualities and overlay updates are reused  1475ms
+   ✓ H/J: actual local repairs add counted material, preserve legacy service estimates and change the first real material contact  3892ms
+
+ Test Files  5 passed (5)
+      Tests  68 passed (68)
+   Start at  13:42:21
+   Duration  51.70s (transform 1.98s, setup 0ms, collect 4.22s, tests 45.30s, environment 1ms, prepare 660ms)

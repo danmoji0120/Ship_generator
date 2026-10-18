@@ -1,0 +1,3 @@
+src/ui/damage.ts(32,569): error TS18048: 'target' is possibly 'undefined'.
+src/ui/damage.ts(32,674): error TS18048: 'target' is possibly 'undefined'.
+src/ui/warheads.ts(37,274): error TS18048: 'work' is possibly 'undefined'.

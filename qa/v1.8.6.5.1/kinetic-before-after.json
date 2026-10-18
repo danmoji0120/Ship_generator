@@ -1,0 +1,827 @@
+{
+  "rows": [
+    {
+      "phase": "before",
+      "status": "EXITED",
+      "outcome": "PENETRATED",
+      "events": [
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.4458802962962963,
+          "exitTime": 0.44594998302480643,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/ceramic",
+          "kind": "ARMOR",
+          "materialId": "CERAMIC_STRIKE_FACE",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.82568888888886
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.82568888888886
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611963288889
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 1050
+          },
+          "incidentJ": 6615000,
+          "residualJ": 3802919.918852721,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.0644925599999624,
+          "availablePathM": 0.0644925599999624,
+          "projectileBefore": {
+            "massKg": 12,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 11.856600214012822,
+            "integrity": 0.8461194997341658,
+            "relativeSpeedMps": 800.9280426495841,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 2812080.081147279,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/1",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.44594998302480643,
+          "exitTime": 0.4460015069943856,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/support",
+          "kind": "ARMOR",
+          "materialId": "STEEL_BACKING",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611962288889
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611962288889
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225007928889
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 800.9280426495841
+          },
+          "incidentJ": 3802919.918852721,
+          "residualJ": 2862817.2111163535,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 8.537736462515939e-7,
+          "pathM": 0.038695436000011796,
+          "availablePathM": 0.038695436000011796,
+          "projectileBefore": {
+            "massKg": 11.856600214012822,
+            "integrity": 0.8461194997341658
+          },
+          "projectileAfter": {
+            "massKg": 11.648056434576887,
+            "integrity": 0.8162023593362238,
+            "relativeSpeedMps": 701.108245161705,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 940102.7077363674,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.4460015069943856,
+          "exitTime": 0.446038653767522,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/spall",
+          "kind": "ARMOR",
+          "materialId": "FIBER_SPALL_BACKING",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225006928889
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225006928889
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.69670376888888
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 701.108245161705
+          },
+          "incidentJ": 2862817.2111163535,
+          "residualJ": 2748150.5979573857,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.025796924000019317,
+          "availablePathM": 0.025796924000019317,
+          "projectileBefore": {
+            "massKg": 11.648056434576887,
+            "integrity": 0.8162023593362238
+          },
+          "projectileAfter": {
+            "massKg": 11.618042830299586,
+            "integrity": 0.8047799001962925,
+            "relativeSpeedMps": 687.8104587753513,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 114666.61315896781,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.44850547241972727,
+          "exitTime": 0.44853540520961843,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -235
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -235
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -234.9797646
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 687.8104587753513
+          },
+          "incidentJ": 2748150.5979573857,
+          "residualJ": 2539491.8934008563,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.020235399999990022,
+          "availablePathM": 0.020235399999990022,
+          "projectileBefore": {
+            "massKg": 11.618042830299586,
+            "integrity": 0.8047799001962925
+          },
+          "projectileAfter": {
+            "massKg": 11.511181128532256,
+            "integrity": 0.7961592908425483,
+            "relativeSpeedMps": 664.2452683085072,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 208658.7045565294,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.6973054435030435,
+          "exitTime": 0.6973639863829584,
+          "ownerId": "leaf/opening/bulkhead/comp/citadel/0/comp/citadel/1",
+          "geometryId": "leaf/opening/bulkhead/comp/citadel/0/comp/citadel/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "CLOSURE",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -69.73544366666674
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -69.73544366666674
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -69.69788966666674
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 664.2452683085072
+          },
+          "incidentJ": 2539491.8934008563,
+          "residualJ": 2165654.848645402,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.03755400000000009,
+          "availablePathM": 0.03755400000000009,
+          "projectileBefore": {
+            "massKg": 11.511181128532256,
+            "integrity": 0.7961592908425483
+          },
+          "projectileAfter": {
+            "massKg": 11.31468526666821,
+            "integrity": 0.7792121618224185,
+            "relativeSpeedMps": 618.7117729091606,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 373837.0447554542,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/5",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 1.1898027397851823,
+          "exitTime": 1.189836130201125,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 234.97976459999995
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 234.97976459999995
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": 234.99999999999994
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 618.7117729091606
+          },
+          "incidentJ": 2165654.8486454026,
+          "residualJ": 1973339.0224205798,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.020235399999990022,
+          "availablePathM": 0.020235399999990022,
+          "projectileBefore": {
+            "massKg": 11.31468526666821,
+            "integrity": 0.7792121618224185
+          },
+          "projectileAfter": {
+            "massKg": 11.210613820193199,
+            "integrity": 0.7689281674835465,
+            "relativeSpeedMps": 593.3366205353573,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 192315.82622482278,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/6",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "status": "EXITED",
+      "outcome": "PENETRATED",
+      "events": [
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.4458802962962963,
+          "exitTime": 0.44594998302480643,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/ceramic",
+          "kind": "ARMOR",
+          "materialId": "CERAMIC_STRIKE_FACE",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.82568888888886
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.82568888888886
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611963288889
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 1050
+          },
+          "incidentJ": 6615000,
+          "residualJ": 3802919.918852721,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.0644925599999624,
+          "availablePathM": 0.0644925599999624,
+          "projectileBefore": {
+            "massKg": 12,
+            "integrity": 1
+          },
+          "projectileAfter": {
+            "massKg": 11.856600214012822,
+            "integrity": 0.8461194997341658,
+            "relativeSpeedMps": 800.9280426495841,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 2812080.081147279,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/1",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.44594998302480643,
+          "exitTime": 0.4460015069943856,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/support",
+          "kind": "ARMOR",
+          "materialId": "STEEL_BACKING",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611962288889
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7611962288889
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225007928889
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 800.9280426495841
+          },
+          "incidentJ": 3802919.918852721,
+          "residualJ": 2862817.2111163535,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 8.537736462515939e-7,
+          "pathM": 0.038695436000011796,
+          "availablePathM": 0.038695436000011796,
+          "projectileBefore": {
+            "massKg": 11.856600214012822,
+            "integrity": 0.8461194997341658
+          },
+          "projectileAfter": {
+            "massKg": 11.648056434576887,
+            "integrity": 0.8162023593362238,
+            "relativeSpeedMps": 701.108245161705,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 940102.7077363674,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/2",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.4460015069943856,
+          "exitTime": 0.446038653767522,
+          "ownerId": "plate/cap-citadel--1",
+          "geometryId": "plate/cap-citadel--1",
+          "layerId": "plate/cap-citadel--1/spall",
+          "kind": "ARMOR",
+          "materialId": "FIBER_SPALL_BACKING",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225006928889
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -236.7225006928889
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -236.69670376888888
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 701.108245161705
+          },
+          "incidentJ": 2862817.2111163535,
+          "residualJ": 2748150.5979573857,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.025796924000019317,
+          "availablePathM": 0.025796924000019317,
+          "projectileBefore": {
+            "massKg": 11.648056434576887,
+            "integrity": 0.8162023593362238
+          },
+          "projectileAfter": {
+            "massKg": 11.618042830299586,
+            "integrity": 0.8047799001962925,
+            "relativeSpeedMps": 687.8104587753513,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 114666.61315896781,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/3",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.44850547241972727,
+          "exitTime": 0.44853540520961843,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -235
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -235
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -234.9797646
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 687.8104587753513
+          },
+          "incidentJ": 2748150.5979573857,
+          "residualJ": 2539491.8934008563,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.020235399999990022,
+          "availablePathM": 0.020235399999990022,
+          "projectileBefore": {
+            "massKg": 11.618042830299586,
+            "integrity": 0.8047799001962925
+          },
+          "projectileAfter": {
+            "massKg": 11.511181128532256,
+            "integrity": 0.7961592908425483,
+            "relativeSpeedMps": 664.2452683085072,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 208658.7045565294,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/4",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 0.6973054435030435,
+          "exitTime": 0.6973639863829584,
+          "ownerId": "leaf/opening/bulkhead/comp/citadel/0/comp/citadel/1",
+          "geometryId": "leaf/opening/bulkhead/comp/citadel/0/comp/citadel/1",
+          "layerId": "STRUCTURAL_MATERIAL",
+          "kind": "CLOSURE",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -69.73544366666674
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": -69.73544366666674
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": -69.69788966666674
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 664.2452683085072
+          },
+          "incidentJ": 2539491.8934008563,
+          "residualJ": 2165654.848645402,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.03755400000000009,
+          "availablePathM": 0.03755400000000009,
+          "projectileBefore": {
+            "massKg": 11.511181128532256,
+            "integrity": 0.7961592908425483
+          },
+          "projectileAfter": {
+            "massKg": 11.31468526666821,
+            "integrity": 0.7792121618224185,
+            "relativeSpeedMps": 618.7117729091606,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 373837.0447554542,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/5",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        },
+        {
+          "shotId": "shot/1",
+          "projectileId": "dev-105",
+          "instanceId": "ship-A",
+          "time": 1.1898027397851823,
+          "exitTime": 1.189836130201125,
+          "ownerId": "shell/citadel",
+          "geometryId": "shell/citadel",
+          "layerId": "shell/citadel/steel",
+          "kind": "HULL",
+          "materialId": "STEEL_STRUCTURAL",
+          "worldPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 234.97976459999995
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 234.97976459999995
+          },
+          "localExit": {
+            "x": 0,
+            "y": 0,
+            "z": 234.99999999999994
+          },
+          "normal": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "relativeVelocity": {
+            "x": 0,
+            "y": 0,
+            "z": 618.7117729091606
+          },
+          "incidentJ": 2165654.8486454026,
+          "residualJ": 1973339.0224205798,
+          "outcome": "PENETRATED",
+          "incidenceDegrees": 0,
+          "pathM": 0.020235399999990022,
+          "availablePathM": 0.020235399999990022,
+          "projectileBefore": {
+            "massKg": 11.31468526666821,
+            "integrity": 0.7792121618224185
+          },
+          "projectileAfter": {
+            "massKg": 11.210613820193199,
+            "integrity": 0.7689281674835465,
+            "relativeSpeedMps": 593.3366205353573,
+            "localDirection": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "consumedJ": 192315.82622482278,
+          "disabledEdges": [],
+          "damageId": "ship-A/damage/6",
+          "capabilityDelta": {
+            "powerMW": 0,
+            "propulsion": 0,
+            "maneuver": 0,
+            "fire": 0,
+            "sensor": 0
+          }
+        }
+      ]
+    }
+  ],
+  "browserStatus": "EXITED",
+  "browserOutcome": "PENETRATED",
+  "orderedMaterialsAndOutcomesEqual": true,
+  "residualEnergyToleranceJ": 0.001,
+  "interpretation": "Initial UI test incorrectly assumed a105mm development round must stop on this default centerline. This default centerline is unchanged by local seam repair; old/new/Production must match. Replay uses the explicit UI launch input, never trajectory[0], because display history is bounded to the latest256 points. Original STOPPED fixtures remain unchanged and passing."
+}

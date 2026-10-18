@@ -1,0 +1,8 @@
+PASS [
+  { cycle: 0, wallMs: 2105, heap: 228113124 },
+  { cycle: 1, wallMs: 1528, heap: 228281180 },
+  { cycle: 2, wallMs: 1428, heap: 228364640 },
+  { cycle: 3, wallMs: 2001, heap: 228400904 },
+  { cycle: 4, wallMs: 1790, heap: 228429872 },
+  { cycle: 5, wallMs: 1981, heap: 228449292 }
+]
