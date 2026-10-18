@@ -1,0 +1,6 @@
+import*as THREE from'three';
+import type{ArmorAudit,IntegrityStatus}from'../armor-integrity/types';
+import{INTEGRITY_COLORS}from'../armor-integrity/audit';
+/** Actual finite sampled tiles. Colors are audit results, not a synthetic protection shell. */
+export function renderArmorIntegrity(audit:ArmorAudit){const root=new THREE.Group();root.name='armor-integrity-owned-overlay';
+ for(const[status,color]of Object.entries(INTEGRITY_COLORS)){const points:number[]=[],ids:string[]=[];for(const p of audit.patches.filter(p=>p.status===status&&p.domain==='HULL_TARGET_FOOTPRINT')){for(let i=1;i<p.polygon.length-1;i++){for(const v of[p.polygon[0],p.polygon[i],p.polygon[i+1]])points.push(v.x+p.normal.x*.025,v.y+p.normal.y*.025,v.z+p.normal.z*.025);ids.push(p.id);}}if(!points.length)continue;const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(points,3));g.computeBoundingSphere();const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color,side:THREE.DoubleSide,transparent:true,opacity:status==='COVERED'?.24:.9,depthTest:true,depthWrite:false}));m.renderOrder=status==='COVERED'?102:103;m.userData.integrityPatchIds=ids;m.userData.integrityStatus=status as IntegrityStatus;root.add(m);}return root;}

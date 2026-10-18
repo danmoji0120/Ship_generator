@@ -68,7 +68,8 @@ export function generateStructuralArmor(b:ShipBlueprint,d:ProductionDesign,candi
 }
 /** Coverage uses the actual exposed station triangles and clipped functional openings. Large
  * face patches only where the structural armor has not already protected the source surface. */
-export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign){
+export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign,options:{closeCommissionedFacetSeams?:boolean}={}){
+ const edgeGap=.008;
  const {surfaces}=extractArmorSurfaces(b),yard=getShipyard(b.shipyardId),l=b.order.length;
  d.coverage={method:'actual-triangle-area / exposed contact samples',directions:Object.fromEntries(directions.map(k=>[k,{exposedM2:0,eligibleM2:0,coveredM2:0,excludedM2:0,ratio:0}]))as ProductionDesign['coverage']['directions'],excluded:[]};
  const thickness=l*(yard.structure==='heavy'?.0038:yard.structure==='clean'?.0015:.0023)*(0.8+b.order.priorities.survivability/180);
@@ -85,12 +86,19 @@ export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign){
   // intervals or internal contacts, never subdivide a broad deck into a decorative tile grid.
   for(let face=0;face<8;face++){
    let run:Vec3[][]=[];let number=0;
-   const flush=()=>{if(run.length<2){run=[];return;}const fake={rings:run}as StructuralArmorComponent,{solid,contacts}=finishingRibbon(fake,face,thickness,.008),n=contacts[Math.floor(contacts.length/2)].normal;
+   const repair=(course:Vec3[][])=>{if(!options.closeCommissionedFacetSeams)return;
+    // Close only the two measured, commissioned facet-edge strips. Keep the original
+    // ribbon and its interior root unchanged; new material starts at the Hull surface.
+    for(const[side,lo,hi]of[['left',0,.009],['right',.991,1]]as const){const rings=course.map(r=>[mix(r[face],r[(face+1)%8],lo),mix(r[face],r[(face+1)%8],hi)]),piece=finishingRibbon({rings}as StructuralArmorComponent,0,thickness,0,0);
+     emit(`seam-${hull.id}-${face}-${side}-${number++}`,hull.id,piece.solid,piece.contacts.map(c=>c.position),piece.contacts[0].normal);
+    }
+   };
+   const flush=()=>{if(run.length<2){run=[];return;}const fake={rings:run}as StructuralArmorComponent,{solid,contacts}=finishingRibbon(fake,face,thickness,edgeGap),n=contacts[Math.floor(contacts.length/2)].normal;
     if(!emit(`skin-${hull.id}-${face}-${number++}`,hull.id,solid,contacts.map(c=>c.position),n)){
      // A local functional opening must not discard the entire flank. Keep long station
      // sections on both sides, and use clipped actual surface polygons only at the opening.
      for(let j=0;j<run.length-1;j++){
-      const pair=[run[j],run[j+1]],r=finishingRibbon({rings:pair}as StructuralArmorComponent,face,thickness,.008);
+      const pair=[run[j],run[j+1]],r=finishingRibbon({rings:pair}as StructuralArmorComponent,face,thickness,edgeGap);
       if(emit(`skin-${hull.id}-${face}-${number++}`,hull.id,r.solid,r.contacts.map(c=>c.position),r.contacts[0].normal))continue;
       const a=pair[0],c=pair[1],triangles=[[a[face],a[(face+1)%8],c[(face+1)%8]],[a[face],c[(face+1)%8],c[face]]];
       for(const surface of surfaces.filter(s=>s.parentStructureId===hull.id&&!s.parentExteriorId))for(const patch of surface.patches){
@@ -99,7 +107,7 @@ export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign){
       }
      }
     }
-    run=[];
+    repair(run);run=[];
    };
    for(let j=0;j<rings.length-1;j++){
     const a=rings[j],c=rings[j+1],poly=[a[face],a[(face+1)%8],c[(face+1)%8],c[face]],n=normal([poly[0],poly[1],poly[3]]),samples=[center(poly),...poly.map(p=>mix(p,center(poly),.05))];
@@ -117,7 +125,7 @@ export function finishArmorCoverage(b:ShipBlueprint,d:ProductionDesign){
    if(d.zones.some(z=>overlappingBounds(boundsOf(cap.solid.vertices),reservationBounds(z)))){
     // Functional cap openings use the existing exact surface-plane clipping, not a flat cover.
     for(const s of surfaces.filter(s=>s.parentStructureId===hull.id&&s.direction===(n.z<0?'fore':'aft')))for(const patch of s.patches.filter(p=>!p.exclusionReason&&Math.abs(p.polygon[0].z-root[0].z)<l*.00001)){
-     if(patch.areaM2<area(root)*.002)continue;emit(`cap-${s.id}-${d.finish.length}`,hull.id,panelSolid(scalePolygon(patch.polygon,.999),s.normal,thickness,l*.0004,.10).solid,patch.polygon,s.normal);
+     if(patch.areaM2<area(root)*.002){if(options.closeCommissionedFacetSeams&&patch.areaM2>1e-8)emit(`cap-repair-${s.id}-${d.finish.length}`,hull.id,panelSolid(patch.polygon,s.normal,thickness,0,.10).solid,patch.polygon,s.normal);continue;}emit(`cap-${s.id}-${d.finish.length}`,hull.id,panelSolid(scalePolygon(patch.polygon,.999),s.normal,thickness,l*.0004,.10).solid,patch.polygon,s.normal);
     }
    }else emit(`cap-${hull.id}-${n.z}`,hull.id,cap.solid,root,n);
   }

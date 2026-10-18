@@ -1,4 +1,5 @@
-import {renderWarhead} from './warheads';
+import{DamageOverlayBatch}from'./damage-batch';
+import {WarheadOverlay,type VisualQuality} from './warheads';
 import type{DetonationWork}from'../warheads/types';
 import {renderDamage} from './damage';
 import type {DamageInstance,ProjectileState,TargetMotion} from '../damage/types';
@@ -22,8 +23,14 @@ import type {DetailMode} from '../generation/details/types';
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import type { AnyShipBlueprint } from "../blueprint/types";
+import{labTimed}from'../ui/lab-performance';
+import type{ArmorAudit}from'../armor-integrity/types';
+import{renderArmorIntegrity}from'./armor-integrity';
 import { createShip, disposeShip, type DebugView } from "./ship";
 export class ShipViewer {
+  private integrityOverlay?:THREE.Group;
+  onIntegritySelect?:(id:string)=>void;
+  setArmorIntegrity(result?:ArmorAudit){if(this.integrityOverlay){this.scene.remove(this.integrityOverlay);disposeShip(this.integrityOverlay);this.integrityOverlay=undefined;}if(result&&this.mode==='Armor Integrity'){this.integrityOverlay=renderArmorIntegrity(result);this.scene.add(this.integrityOverlay);}}
   onSystemSelect?:(id:string)=>void;
   private systemState?:SystemInstanceState;
   private systemSelection?:string;
@@ -47,7 +54,7 @@ export class ShipViewer {
   private controls: OrbitControls;
   private ship?: THREE.Group;
   private damageOverlay?:THREE.Group;
-  private warheadOverlay?:THREE.Group;
+  private warheadOverlay?:WarheadOverlay;
   private damageCamera?:{position:THREE.Vector3;target:THREE.Vector3;near:number;far:number;min:number;systems?:SystemInstanceState;systemSelection?:string;interior?:InteriorInstanceState;interiorSelection?:string};
   private equipmentPreview?: THREE.Group;
   private previewPlan?: PreviewPlan;
@@ -84,6 +91,7 @@ export class ShipViewer {
       const vec=(p:THREE.Vector3)=>({x:p.x,y:p.y,z:p.z}),max=this.blueprint.order.length*8,result=armorRayProbe(this.blueprint,vec(ray.origin),vec(ray.direction),max,{position:vec(position),quaternion});
       this.setArmorProbeVisual(vec(ray.origin),vec(ray.direction),max,result.hits);this.onArmorProbe?.(result);
     });
+    this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||this.mode!=='Armor Integrity'||!this.integrityOverlay||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hit=this.screenRay(e.clientX,e.clientY).intersectObject(this.integrityOverlay,true)[0];if(hit?.faceIndex!=null)this.onIntegritySelect?.(hit.object.userData.integrityPatchIds[hit.faceIndex]);});
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hits=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true);for(const hit of hits){const ranges=hit.object.userData.structuralRanges as {start:number;end:number;id:string}[]|undefined;const selected=ranges?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onStructuralSelect?.(selected.id);break;}}});
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(SYSTEM_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const hit=this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true).find(h=>h.object.userData.systemId);if(hit)this.onSystemSelect?.(hit.object.userData.systemId);});
     this.renderer.domElement.addEventListener('pointerup',e=>{if(this.freeEditor||!this.ship||!(INTERIOR_VIEWS as readonly string[]).includes(this.mode)||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;for(const hit of this.screenRay(e.clientX,e.clientY).intersectObject(this.ship,true)){const selected=(hit.object.userData.interiorRanges as {start:number;end:number;id:string}[]|undefined)?.find(r=>hit.faceIndex!=null&&hit.faceIndex>=r.start&&hit.faceIndex<r.end);if(selected){this.onInteriorSelect?.(selected.id);break;}}});
@@ -133,7 +141,7 @@ export class ShipViewer {
     this.controls.update();
     if(this.freeGhost&&this.ship){this.freeGhost.matrix.copy(this.ship.matrixWorld);this.freeGhost.matrixWorldNeedsUpdate=true;}
     if(this.ship){const pixels=this.radius*2/Math.max(1,this.camera.position.distanceTo(this.controls.target))/Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))*this.container.clientHeight/2;setDetailVisibility(this.ship,this.detailMode,pixels);}
-    this.renderer.render(this.scene, this.camera);
+    labTimed('scene render submission',()=>this.renderer.render(this.scene, this.camera));
   };
   selectStructuralMember(id?:string){if(this.structuralSelection){this.ship?.remove(this.structuralSelection);disposeShip(this.structuralSelection);this.structuralSelection=undefined;}if(id&&this.ship&&this.blueprint?.schemaVersion===2&&(STRUCTURAL_VIEWS as readonly string[]).includes(this.mode)){this.structuralSelection=structuralHighlight(this.blueprint,id);this.ship.add(this.structuralSelection);}}
   show(b: AnyShipBlueprint, reset = true) {
@@ -141,6 +149,7 @@ export class ShipViewer {
     if(this.mountPicking){disposeShip(this.mountPicking);this.mountPicking=undefined;}
     if(this.blueprint!==b){if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}this.interiorState=undefined;this.interiorSelection=undefined;this.systemState=undefined;this.systemSelection=undefined;}
     if(this.blueprint!==b){this.setDamageVisual();this.setWarheadVisual();this.damageCamera=undefined;}
+    if(this.blueprint!==b)this.setArmorIntegrity();
     this.blueprint = b;
     if (this.ship) {
       this.scene.remove(this.ship);
@@ -166,11 +175,13 @@ export class ShipViewer {
   }
   rememberDamageView(){if(!this.damageCamera)this.damageCamera={position:this.camera.position.clone(),target:this.controls.target.clone(),near:this.camera.near,far:this.camera.far,min:this.controls.minDistance,systems:this.systemState,systemSelection:this.systemSelection,interior:this.interiorState,interiorSelection:this.interiorSelection};}
   restoreDamageView(){if(this.damageCamera){const d=this.damageCamera;this.setSystemAnalysis(d.systems,d.systemSelection);this.interiorSelection=d.interiorSelection;this.setInteriorAnalysis(d.interior);this.camera.position.copy(d.position);this.controls.target.copy(d.target);this.camera.near=d.near;this.camera.far=d.far;this.controls.minDistance=d.min;this.camera.updateProjectionMatrix();this.controls.update();this.damageCamera=undefined;}}
-  setDamageVisual(state?:DamageInstance,p?:ProjectileState,motion?:TargetMotion){
-    if(this.damageOverlay){this.scene.remove(this.damageOverlay);disposeShip(this.damageOverlay);this.damageOverlay=undefined;}
+  setDamageVisual(state?:DamageInstance,p?:ProjectileState,motion?:TargetMotion,quality?:VisualQuality){
+    if(state&&motion&&quality){if(!(this.damageOverlay instanceof DamageOverlayBatch)){if(this.damageOverlay){this.scene.remove(this.damageOverlay);disposeShip(this.damageOverlay);}this.damageOverlay=new DamageOverlayBatch();this.scene.add(this.damageOverlay);}(this.damageOverlay as DamageOverlayBatch).update(state,motion,quality);return;}
+    if(this.damageOverlay){if(this.damageOverlay instanceof DamageOverlayBatch)this.damageOverlay.clearData();this.scene.remove(this.damageOverlay);disposeShip(this.damageOverlay);this.damageOverlay=undefined;}
     if(state&&motion){this.damageOverlay=renderDamage(state,p,motion);this.scene.add(this.damageOverlay);}
   }
-  setWarheadVisual(work?:DetonationWork){if(this.warheadOverlay){this.scene.remove(this.warheadOverlay);disposeShip(this.warheadOverlay);this.warheadOverlay=undefined;}if(work){this.warheadOverlay=renderWarhead(work);this.scene.add(this.warheadOverlay);}}
+  setWarheadVisual(work?:DetonationWork,quality:VisualQuality='HIGH'){if(!work){if(this.warheadOverlay){this.warheadOverlay.clearData();this.scene.remove(this.warheadOverlay);disposeShip(this.warheadOverlay);this.warheadOverlay=undefined;}return;}if(!this.warheadOverlay){this.warheadOverlay=new WarheadOverlay();this.scene.add(this.warheadOverlay);}this.warheadOverlay.update(work,quality);}
+  clearWarheadVisual(){this.warheadOverlay?.clearData();}
   setDamagePose(position={x:0,y:0,z:0},quaternion={x:0,y:0,z:0,w:1}){if(this.ship){this.ship.position.set(position.x,position.y,position.z);this.ship.quaternion.set(quaternion.x,quaternion.y,quaternion.z,quaternion.w);this.ship.updateMatrixWorld(true);}}
   focusDamagePoint(p:import('../blueprint/types').Vec3,distance=20,normal?:import('../blueprint/types').Vec3){this.controls.target.set(p.x,p.y,p.z);this.camera.position.copy(this.controls.target).add((normal?new THREE.Vector3(normal.x,normal.y,normal.z):new THREE.Vector3(-.8,.6,-1)).normalize().multiplyScalar(distance));this.camera.near=.01;this.controls.minDistance=.01;this.camera.updateProjectionMatrix();this.controls.update();}
   focusSystem(id:string){if(this.blueprint?.schemaVersion!==2)return;const e=this.blueprint.functionalSystems?.equipment.find(e=>e.id===id);if(!e||!this.ship)return;const p=new THREE.Vector3(e.position.x,e.position.y,e.position.z).applyMatrix4(this.ship.matrixWorld),direction=this.camera.position.clone().sub(this.controls.target).normalize();this.controls.target.copy(p);this.camera.position.copy(p).addScaledVector(direction,Math.max(e.sizeM.x,e.sizeM.y,e.sizeM.z)*6);this.controls.minDistance=.1;this.camera.near=.05;this.camera.updateProjectionMatrix();this.controls.update();}
@@ -180,7 +191,7 @@ export class ShipViewer {
   snapshot(b: AnyShipBlueprint, mode: DebugView = "Normal") {
     this.mode = mode;
     this.show(b);
-    this.renderer.render(this.scene, this.camera);
+    labTimed('scene render submission',()=>this.renderer.render(this.scene, this.camera));
     return this.renderer.domElement.toDataURL("image/png");
   }
   setSurfaceFinish(finish:FinishProfile){this.finish=finish;if(this.ship)setSurfacePresentation(this.ship,finish,this.mode==='Surface Texture'?'TEXTURE':this.mode==='Decal Markings'?'DECAL':'NONE');}
@@ -197,7 +208,7 @@ export class ShipViewer {
     if(plan&&this.blueprint?.schemaVersion===2){this.equipmentPreview=renderEquipmentPreview(plan,this.blueprint,debug);this.scene.add(this.equipmentPreview);}
   }
   setMode(mode: DebugView) {
-    this.mode = mode;
+    this.mode = mode;if(mode!=='Armor Integrity')this.setArmorIntegrity();
     if(!this.freeEditor&&!(SYSTEM_VIEWS as readonly string[]).includes(mode))this.controls.minDistance=this.radius*1.08;
     const plan=this.previewPlan,debug=this.previewDebug;
     if (this.blueprint) this.show(this.blueprint, false);
@@ -302,7 +313,7 @@ export class ShipViewer {
     if(this.blueprint?.schemaVersion===2){releaseInteriorQueries(this.blueprint);releasePhysicalQueries(this.blueprint);}
     this.setEquipmentPreview();this.setFreeGhost();this.clearArmorProbe();this.selectStructuralMember();if(this.mountPicking)disposeShip(this.mountPicking);
     this.setDamageVisual();this.setWarheadVisual();this.damageCamera=undefined;
-    this.disposed = true;
+    this.setArmorIntegrity();this.disposed = true;
     this.resizeObserver.disconnect();
     this.controls.dispose();
     if (this.ship) { this.scene.remove(this.ship); disposeShip(this.ship); this.ship=undefined; }

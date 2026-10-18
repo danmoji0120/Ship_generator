@@ -13,7 +13,7 @@ export const clearFunctionalValidationCache = () => { lastKey = undefined; };
 export function validateFunctionalSystems(b: ShipBlueprint): string[] {
     const p = b.functionalSystems;
     if (!p)
-        return ['1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion) ? ['Required functional system plan absent'] : [];
+        return ['1.8.6.3','1.8.6.3.1','1.8.6.5.1'].includes(b.generatorVersion) ? ['Required functional system plan absent'] : [];
     if (!b.compartmentPlan || !b.procurement)
         return ['Functional systems require confirmed interior and native order'];
     const key = [JSON.stringify(p), functionalInput(b), JSON.stringify([b.physicalDesign?.mass.functionalEquipmentMassKg,b.physicalDesign?.mass.unresolvedMassEstimateKg,installedSystemLoads(b)])];

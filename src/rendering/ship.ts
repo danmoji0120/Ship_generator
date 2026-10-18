@@ -17,7 +17,7 @@ import { loftGeometry, moduleGeometry, beamBetween } from "./geometry";
 import { renderArchitecture } from "./architecture";
 import { renderPrefabs } from "./prefabs";
 import { shipMaterials } from "./materials";
-export type DebugView = typeof SYSTEM_VIEWS[number] | typeof INTERIOR_VIEWS[number] | typeof STRUCTURAL_VIEWS[number] | "Armor Thickness" | "Physical Materials" | "Physical Coverage" | "Armor Ray Probe"
+export type DebugView = typeof SYSTEM_VIEWS[number] | typeof INTERIOR_VIEWS[number] | typeof STRUCTURAL_VIEWS[number] | "Armor Thickness" | "Physical Materials" | "Physical Coverage" | "Armor Ray Probe" | "Armor Integrity"
   | "Meso Structures" | "Without Meso" | "Engine Root Zones" | "Structural Junctions"
   | "Surface Texture" | "Decal Markings"
   | "Normal"
@@ -36,6 +36,7 @@ export function createShip(b: AnyShipBlueprint, mode: DebugView, detailMode:Deta
   if((SYSTEM_VIEWS as readonly string[]).includes(mode))return b.schemaVersion===2&&b.functionalSystems?renderSystems(b,mode):createShip(b,'Normal',detailMode);
   if((INTERIOR_VIEWS as readonly string[]).includes(mode))return b.schemaVersion===2&&b.compartmentPlan?renderInterior(b,mode):createShip(b,'Normal',detailMode);
   if((STRUCTURAL_VIEWS as readonly string[]).includes(mode))return b.schemaVersion===2&&b.structuralFrame?renderStructuralFrame(b,mode):createShip(b,'Normal',detailMode);
+  if(mode==='Armor Integrity'){const r=createShip(b,'Normal',detailMode);r.traverse(n=>{if(n instanceof THREE.Mesh)for(const m of(Array.isArray(n.material)?n.material:[n.material])){m.transparent=true;m.opacity=.12;m.depthWrite=false;}});return r;}
   if(mode==='Armor Ray Probe')return createShip(b,'Normal',detailMode);
   if(['Armor Thickness','Physical Materials','Physical Coverage'].includes(mode))return b.schemaVersion===2&&b.physicalDesign?renderPhysicalDesign(b,mode):createShip(b,'Normal',detailMode);
   if(mode==='Engine Root Zones'||mode==='Structural Junctions'){const root=createShip(b,'Normal',detailMode);if(b.schemaVersion===2)root.add(renderMesoDiagnostics(b,mode==='Structural Junctions'));return root;}

@@ -1,0 +1,7 @@
+# Large reproducible, local-only diagnostic intermediates. Summaries and concrete
+# defect evidence are committed; regenerate these with integrity-audit-actual.mjs.
+*-legacy-audit.json.gz
+generated/*-audit.json.gz
+generated/*.json.gz
+!generated/BALANCED-before.json.gz
+!generated/BALANCED.json.gz

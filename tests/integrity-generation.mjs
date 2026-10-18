@@ -1,0 +1,13 @@
+import{readFile,writeFile,mkdir}from'node:fs/promises';import{gunzipSync,gzipSync}from'node:zlib';import assert from'node:assert/strict';import{createHash}from'node:crypto';
+const a=await import('/tmp/integrity-after.mjs'),out='qa/v1.8.6.5.1',rows=[];await mkdir(`${out}/generated`,{recursive:true});
+const ids=['BALANCED','BLOCK_ASSEMBLY','SPINE_AND_MODULES','TRUSS_POD','TWIN_HULL','CORE_AND_NACELLES','STACKED_BLOCKS','HYBRID'];
+for(const[id,index]of ids.map((id,i)=>[id,i])){const stored=JSON.parse(gunzipSync(await readFile(`qa/v1.8.6.3.1/browser/${id}-generated.json.gz`))),o=structuredClone(stored.procurement.order);
+ const config=[['ARMOR','BROAD_COVERAGE','aegis'],['MOBILITY','BALANCED','vesper'],['ENDURANCE','CITADEL','forge'],['ECONOMY','BROAD_COVERAGE','serein']][index%4];
+ // First pair uses the exact stored order/seed for an independently reproducible correction.
+ if(index){o.primaryPriority=config[0];o.armorDistribution=config[1];o.shipyardId=config[2];} // actual contract checked below
+ let before;const t=performance.now();try{if(!index)before=a.generateProcurementBlueprint(o,{version:'1.8.6.3.1'});const b=a.generateProcurementBlueprint(o),elapsedMs=performance.now()-t,r=a.auditArmorIntegrity(b,{maxSamples:20000});await writeFile(`${out}/generated/${id}.json.gz`,gzipSync(JSON.stringify(b)));await writeFile(`${out}/generated/${id}-audit.json.gz`,gzipSync(JSON.stringify(r)));
+ const result={id,order:o,architecture:b.architecture.grammar,version:b.generatorVersion,elapsedMs,summary:r.summary,mass:b.physicalDesign.mass,procurement:b.procurement,confidence:r.confidence};
+ if(before){const br=a.auditArmorIntegrity(before,{maxSamples:20000}),missing=br.patches.filter(p=>p.status==='MISSING_ARMOR'&&p.domain==='HULL_TARGET_FOOTPRINT'),queries=a.preparePhysicalQueries(b);result.before={summary:br.summary,mass:before.physicalDesign.mass};result.actualSameRays=missing.map(p=>{const q=queries.probe(p.ray.origin,p.ray.direction,p.ray.maxDistanceM);return{point:p.point,ray:p.ray,beforeStatus:p.status,afterArmor:q.hits.filter(h=>h.isArmorLayer),complete:q.complete};});result.fixedSameRayCount=result.actualSameRays.filter(p=>p.afterArmor.length).length;result.originalMissingRayCount=missing.length;await writeFile(`${out}/generated/BALANCED-before.json.gz`,gzipSync(JSON.stringify(before)));}
+ rows.push(result);console.log(id,b.architecture.grammar,elapsedMs,r.summary.HULL_TARGET_FOOTPRINT.counts);}
+ catch(error){rows.push({id,order:o,rejected:String(error),elapsedMs:performance.now()-t});console.log('REJECT',id,String(error));}
+ await writeFile(`${out}/armor-before-after.json`,JSON.stringify(rows,null,2));global.gc?.();}

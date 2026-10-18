@@ -44,7 +44,7 @@ function procurementArchitecture(o: ProcurementOrder) {
 function bounds(b: ShipBlueprint) { return boundsOf([...b.structuralVolumes.flatMap(v => v.geometry.stations.flatMap(s => profileRing(s).map(([x, y]) => ({ x: x + v.position.x, y: y + v.position.y, z: s.z + v.position.z })))), ...b.productionDesign!.armor.flatMap(c => c.solid.vertices), ...b.productionDesign!.finish.flatMap(c => c.solid.vertices), ...b.prefabPlacements!.flatMap(p => p.assembly?.parts.flatMap(p => p.solid.vertices) ?? p.exterior?.rings?.flat() ?? []), ...b.engines.flatMap(e => [{ x: e.position.x - e.nozzleRadius * (e.bellRatio + .12), y: e.position.y - e.nozzleRadius * (e.bellRatio + .12), z: e.position.z }, { x: e.position.x + e.nozzleRadius * (e.bellRatio + .12), y: e.position.y + e.nozzleRadius * (e.bellRatio + .12), z: e.position.z + e.nozzleLength + e.nozzleRadius * .12 }])]); }
 /** Native procurement bypasses combat role requirements, integrated-armament planning
  * and productionWeaponComposition entirely. Shared hull/armor/visual builders remain authoritative. */
-export function generateProcurementBlueprint(input: ProcurementOrder, options:{version?:'1.8.6.0.2'|'1.8.6.1'|'1.8.6.2'|'1.8.6.2.1'|'1.8.6.3'|'1.8.6.3.1'}={}): ShipBlueprint {
+export function generateProcurementBlueprint(input: ProcurementOrder, options:{version?:'1.8.6.0.2'|'1.8.6.1'|'1.8.6.2'|'1.8.6.2.1'|'1.8.6.3'|'1.8.6.3.1'|'1.8.6.5.1'}={}): ShipBlueprint {
     return capturePhysicalGeneration(() => {
         const o = normalizeProcurementOrder(input);
         procurementMaterials(o); // fail impossible technology before geometry
@@ -71,7 +71,7 @@ export function generateProcurementBlueprint(input: ProcurementOrder, options:{v
         const d: ProductionDesign = { status: 'generated', pipelineVersion: '1.8.4', family: b.macroDesign!.family, axisAligned: true, armor: [], finish: [], channels: [], zones: extractArmorSurfaces(b).zones, coverage: null as any, functionalPrefabIds: [], overallBounds: boundsOf([]), decisions: [], attempts: [], stages: [{ stage: 'procurement', input: 'Native four-priority order; no offensive targets or XL reservations', output: 'Shared Hull / Armor / basic propulsion and navigation / player-owned loadout' }], validation: { issues: [], checks: [] } };
         b.productionDesign = d;
         timedPhysical('Procurement structural armor', () => generateStructuralArmor(b, d, 0));
-        timedPhysical('Procurement armor coverage', () => finishArmorCoverage(b, d));
+        timedPhysical('Procurement armor coverage', () => finishArmorCoverage(b, d, {closeCommissionedFacetSeams:!options.version||options.version==='1.8.6.5.1'}));
         // Shared core builder books mass/volume; actual surface contact is geometric.
         // It reports zero abstract surface usage, so no synthetic unlimited allowance is needed.
         const volume = b.structuralVolumes.reduce((n, v) => n + v.dimensions.x * v.dimensions.y * v.dimensions.z, 0), w = procurementWeights(o), resources = (fraction: number) => ({ massTonnes: b.dimensions.estimatedMass * fraction, volumeM3: volume * fraction, surfaceM2: 0 });
@@ -89,12 +89,12 @@ export function generateProcurementBlueprint(input: ProcurementOrder, options:{v
         applyMaterialAppearance(b);
         applySurfaceAppearance(b);
         const withFrame=options.version!=='1.8.6.0.2';
-        b.generatorVersion = withFrame?(options.version??'1.8.6.3.1'):'1.8.6.0.2';
+        b.generatorVersion = withFrame?(options.version??'1.8.6.5.1'):'1.8.6.0.2';
         if(withFrame){try{buildStructuralFrame(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
         timedPhysical('Procurement physical build', () => addPhysicalDesign(b));
         if(withFrame){try{integrateStructuralMaterial(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
-        if(['1.8.6.2','1.8.6.2.1','1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion)){try{buildCompartmentPlan(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
-        if(['1.8.6.3','1.8.6.3.1'].includes(b.generatorVersion)){try{buildFunctionalSystems(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
+        if(['1.8.6.2','1.8.6.2.1','1.8.6.3','1.8.6.3.1','1.8.6.5.1'].includes(b.generatorVersion)){try{buildCompartmentPlan(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
+        if(['1.8.6.3','1.8.6.3.1','1.8.6.5.1'].includes(b.generatorVersion)){try{buildFunctionalSystems(b);}catch(error){const reason=error instanceof Error?error.message:String(error);rejectProcurement(reason.split(' ')[0],reason);}}
         timedPhysical('Procurement requirement verification', () => finishProcurementDelivery(b));
         const issues = timedPhysical('Procurement final validation', () => validateBlueprint(b));
         if (issues.length)
